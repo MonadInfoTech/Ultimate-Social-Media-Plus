@@ -1,5 +1,5 @@
 <!-- Loader Image section  -->
-<div id="sfpageLoad" >  
+<div id="sfpluspageLoad" >  
     
 </div><!-- END Loader Image section  -->
 
@@ -27,17 +27,17 @@
      <div id="accordion">
     <h3><span>1</span>Which icons do you want to show on your site? </h3>
     <!-- step 1 end  here -->
-    <?php include(SFSI_DOCROOT.'/views/sfsi_option_view1.php'); ?>
+    <?php include(SFSI_PLUS_DOCROOT.'/views/sfsi_option_view1.php'); ?>
     <!-- step 1 end here --> 
     
     <!-- step 2 start here -->
     <h3><span>2</span>What do you want the icons to do? </h3>
-    <?php include(SFSI_DOCROOT.'/views/sfsi_option_view2.php'); ?>
+    <?php include(SFSI_PLUS_DOCROOT.'/views/sfsi_option_view2.php'); ?>
     <!-- step 2 END here -->
     
     <!-- step new 3 start here -->
     <h3><span>3</span>Where shall they be displayed? </h3>
-    <?php include(SFSI_DOCROOT.'/views/sfsi_option_view8.php'); ?>
+    <?php include(SFSI_PLUS_DOCROOT.'/views/sfsi_option_view8.php'); ?>
     <!-- step new3 end here -->
    </div>
    
@@ -46,35 +46,35 @@
 	 <div id="accordion1">
 	<!-- step old 3 start here -->
     <h3><span>4</span>What design &amp; animation do you want to give your icons?</h3>
-     <?php include(SFSI_DOCROOT.'/views/sfsi_option_view3.php'); ?>
+     <?php include(SFSI_PLUS_DOCROOT.'/views/sfsi_option_view3.php'); ?>
     <!-- step old 3 END here -->
 
     <!-- step old 4 Start here -->
     <h3><span>5</span>Do you want to display "counts" next to your main icons?</h3>
-     <?php include(SFSI_DOCROOT.'/views/sfsi_option_view4.php'); ?>
+     <?php include(SFSI_PLUS_DOCROOT.'/views/sfsi_option_view4.php'); ?>
     <!-- step old 4 END here -->
 
     <!-- step old 5 Start here -->
     <h3><span>6</span>Any other wishes for your main icons?</h3>
-    <?php include(SFSI_DOCROOT.'/views/sfsi_option_view5.php'); ?>
+    <?php include(SFSI_PLUS_DOCROOT.'/views/sfsi_option_view5.php'); ?>
     <!-- step old 5 END here -->
 
     <!-- step old 6 Start here -->
     <!--<h3><span>7</span>Do you want to display icons at the end of every post?</h3>-->
-     <?php //include(SFSI_DOCROOT.'/views/sfsi_option_view6.php'); ?>
+     <?php //include(SFSI_PLUS_DOCROOT.'/views/sfsi_option_view6.php'); ?>
     <!-- step old 6 END here -->
 
 
     <!-- step old 7 Start here -->
     <h3><span>7</span>Do you want to display a pop-up, asking people to subscribe?</h3>
-     <?php include(SFSI_DOCROOT.'/views/sfsi_option_view7.php'); ?>
+     <?php include(SFSI_PLUS_DOCROOT.'/views/sfsi_option_view7.php'); ?>
     <!-- step old 7 END here -->
 
      </div>
     <div class="tab9">
          <div class="save_button">
-		  <img src="<?php echo SFSI_PLUGURL; ?>images/ajax-loader.gif" class="loader-img" />
-		<a href="javascript:;" id="save_all_settings" title="Save All Settings">Save All Settings</a>
+		  <img src="<?php echo SFSI_PLUS_PLUGURL; ?>images/ajax-loader.gif" class="loader-img" />
+		<a href="javascript:;" id="save_plus_all_settings" title="Save All Settings">Save All Settings</a>
 	 </div>
          <p class="red_txt errorMsg" style="display:none"> </p>
          <p class="green_txt sucMsg" style="display:none"> </p>
@@ -82,6 +82,6 @@
           
     </div>
  <!-- all pops of plugin under sfsi_pop_content.php file --> 
- <?php include(SFSI_DOCROOT.'/views/sfsi_pop_content.php'); ?>
+ <?php include(SFSI_PLUS_DOCROOT.'/views/sfsi_pop_content.php'); ?>
 </div> <!-- START Admin view for plugin-->
 

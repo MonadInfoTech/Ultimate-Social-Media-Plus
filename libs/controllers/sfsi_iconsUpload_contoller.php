@@ -1,7 +1,7 @@
 <?php
 /* upload custom Skins {Monad}*/
-add_action('wp_ajax_UploadSkins','sfsi_UploadSkins');
-function sfsi_UploadSkins()
+add_action('wp_ajax_plus_UploadSkins','sfsi_plus_UploadSkins');
+function sfsi_plus_UploadSkins()
 {
 	//require(ABSPATH.'/wp-load.php');
 	if ( defined('ABSPATH') )
@@ -64,8 +64,8 @@ function sfsi_UploadSkins()
 			$NewIconName = "/custom_icon".$key.'.'.$ImageExt;
 			$iconPath 	= $DestinationDirectory.$NewIconName; //Thumbnail name with destination directory
 			
-			//Create a square Thumbnail right after, this time we are using cropImage() function
-			if(cropImage($CurWidth,$CurHeight,$ThumbSquareSize,$iconPath,$CreatedImage,$Quality,$ImageType))
+			//Create a square Thumbnail right after, this time we are using sfsiplus_cropImage() function
+			if(sfsiplus_cropImage($CurWidth,$CurHeight,$ThumbSquareSize,$iconPath,$CreatedImage,$Quality,$ImageType))
 			{
 				//update database information 
 				$AccressImagePath=$AcceessUrl.$NewIconName;                                        
@@ -82,8 +82,8 @@ function sfsi_UploadSkins()
 }
 
 /* Delete custom Skins {Monad}*/
-add_action('wp_ajax_DeleteSkin','sfsi_DeleteSkin');
-function sfsi_DeleteSkin()
+add_action('wp_ajax_plus_DeleteSkin','sfsi_plus_DeleteSkin');
+function sfsi_plus_DeleteSkin()
 {
 	//require(ABSPATH.'/wp-load.php');
 	if ( defined('ABSPATH') )
@@ -112,8 +112,8 @@ function sfsi_DeleteSkin()
 }
 
 /* add ajax action for custom skin done & save{Monad}*/
-add_action('wp_ajax_Iamdone','sfsi_Iamdone');
-function sfsi_Iamdone()
+add_action('wp_ajax_plus_Iamdone','sfsi_plus_Iamdone');
+function sfsi_plus_Iamdone()
 {
 	 if(get_option("plus_rss_skin"))
 	 {
@@ -208,10 +208,10 @@ function sfsi_Iamdone()
 }
 
 /* add ajax action for custom icons upload {Monad}*/
-add_action('wp_ajax_UploadIcons','sfsi_UploadIcons');
+add_action('wp_ajax_plus_UploadIcons','sfsi_plus_UploadIcons');
 
 /* uplaod custom icon {change by monad}*/
-function sfsi_UploadIcons()
+function sfsi_plus_UploadIcons()
 {
 	if ( defined('ABSPATH') )
      	require_once(ABSPATH . 'wp-load.php');
@@ -278,8 +278,8 @@ function sfsi_UploadIcons()
 		$NewIconName = "plus_custom_icon".$new.'.'.$ImageExt;
         $iconPath 	= $DestinationDirectory.$NewIconName; //Thumbnail name with destination directory
 		
-		//Create a square Thumbnail right after, this time we are using cropImage() function
-		if(cropImage($CurWidth,$CurHeight,$ThumbSquareSize,$iconPath,$CreatedImage,$Quality,$ImageType))
+		//Create a square Thumbnail right after, this time we are using sfsiplus_cropImage() function
+		if(sfsiplus_cropImage($CurWidth,$CurHeight,$ThumbSquareSize,$iconPath,$CreatedImage,$Quality,$ImageType))
 		{
 			 	//update database information 
 				$AccressImagePath=$AcceessUrl.$NewIconName;                                        
@@ -300,9 +300,9 @@ function sfsi_UploadIcons()
 	}
 }
 /* delete uploaded icons */
-add_action('wp_ajax_deleteIcons','sfsi_deleteIcons'); 
+add_action('wp_ajax_plus_deleteIcons','sfsi_plus_deleteIcons'); 
 
-function sfsi_deleteIcons()
+function sfsi_plus_deleteIcons()
 {
    if(isset($_POST['icon_name']) && !empty($_POST['icon_name']))
    {
@@ -311,7 +311,7 @@ function sfsi_deleteIcons()
        $sec_options1= (get_option('sfsi_plus_section1_options',false)) ? unserialize(get_option('sfsi_plus_section1_options',false)) : array() ;
        $sec_options2= (get_option('sfsi_plus_section2_options',false)) ? unserialize(get_option('sfsi_plus_section2_options',false)) : array() ;
        $up_icons= (is_array(unserialize($sec_options1['sfsi_custom_files']))) ? unserialize($sec_options1['sfsi_custom_files']) : array();
-       $icons_links= (is_array(unserialize($sec_options2['sfsi_CustomIcon_links']))) ? unserialize($sec_options2['sfsi_CustomIcon_links']) : array();
+       $icons_links= (is_array(unserialize($sec_options2['sfsi_plus_CustomIcon_links']))) ? unserialize($sec_options2['sfsi_plus_CustomIcon_links']) : array();
        $icon_path=$up_icons[$custom_icon[1]];  
        $path=  pathinfo($icon_path);      
       
@@ -337,7 +337,7 @@ function sfsi_deleteIcons()
 	}        
          /* update database after delete */
 	 $sec_options1['sfsi_custom_files']=serialize($up_icons);
-         $sec_options2['sfsi_CustomIcon_links']=serialize($icons_links);
+         $sec_options2['sfsi_plus_CustomIcon_links']=serialize($icons_links);
          
          end($up_icons);
          $key=(key($up_icons))? key($up_icons) :$custom_icon[1] ;
@@ -354,7 +354,7 @@ function sfsi_deleteIcons()
 
 
 /*  This function will proportionally resize image */
-function resizeImage($CurWidth,$CurHeight,$MaxSize,$DestFolder,$SrcImage,$Quality,$ImageType)
+function sfsiplusresizeImage($CurWidth,$CurHeight,$MaxSize,$DestFolder,$SrcImage,$Quality,$ImageType)
 {
 	/* Check Image size is not 0 */
 	if($CurWidth <= 0 || $CurHeight <= 0) 
@@ -397,7 +397,7 @@ function resizeImage($CurWidth,$CurHeight,$MaxSize,$DestFolder,$SrcImage,$Qualit
 }
 
 /* This function corps image to create exact square images, no matter what its original size! */
-function cropImage($CurWidth,$CurHeight,$iSize,$DestFolder,$SrcImage,$Quality,$ImageType)
+function sfsiplus_cropImage($CurWidth,$CurHeight,$iSize,$DestFolder,$SrcImage,$Quality,$ImageType)
 {	 
 	//Check Image size is not 0
 	if($CurWidth <= 0 || $CurHeight <= 0) 

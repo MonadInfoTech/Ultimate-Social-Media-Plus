@@ -12,7 +12,7 @@ define('rss_readmore_text2', $rss_readmore_text2);
 
 <div class="pop-overlay read-overlay" >
     <div class="pop_up_box sfsi_pop_up"  >
-        <img src="<?php echo SFSI_PLUGURL; ?>images/close.jpg" id="close_popup" class="sfsicloseBtn" />
+        <img src="<?php echo SFSI_PLUS_PLUGURL; ?>images/close.jpg" id="close_popup" class="sfsicloseBtn" />
         <h4 id="readmore_text">Note: Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</h4>
 </div>
 </div>
@@ -22,7 +22,7 @@ define('rss_readmore_text2', $rss_readmore_text2);
      
     <form id="customIconFrm" method="post" action="<?php echo admin_url( 'admin-ajax.php?action=UploadIcons' ); ?>" enctype="multipart/form-data" >
         <div class="pop_up_box upload_pop_up" id="tab1" style="min-height: 100px;">
-            <img src="<?php echo SFSI_PLUGURL; ?>images/close.jpg" id="close_Uploadpopup" class="sfsicloseBtn" />
+            <img src="<?php echo SFSI_PLUS_PLUGURL; ?>images/close.jpg" id="close_Uploadpopup" class="sfsicloseBtn" />
 	    <div class="sfsi_uploader">
             <div class="sfsi_popupcntnr">
             	<h3>Steps:</h3>
@@ -35,7 +35,7 @@ define('rss_readmore_text2', $rss_readmore_text2);
             </div>
         </div>
       
-        <input type="hidden" name="total_cusotm_icons" value="<?php echo $count;?>" id="total_cusotm_icons" class="mediam_txt" />
+        <input type="hidden" name="total_cusotm_icons" value="<?php echo $count;?>" id="plus_total_cusotm_icons" class="mediam_txt" />
         <!--<a href="javascript:;" id="close_Uploadpopup" title="Done">Done</a>-->
 	<label style="color:red" class="uperror"></label>
 	</div>
@@ -54,7 +54,7 @@ define('rss_readmore_text2', $rss_readmore_text2);
 				var url = jQuery(html).attr('src');
 			}
 			tb_remove();
-			sfsi_newcustomicon_upload(url);
+			plus_sfsi_newcustomicon_upload(url);
 		}
 		return false;
 	}
@@ -64,22 +64,22 @@ define('rss_readmore_text2', $rss_readmore_text2);
 
 
 <?php 
-	 $active_theme=$option3['sfsi_actvite_theme'];
-     $icons_baseUrl=SFSI_PLUGURL."/images/icons_theme/".$active_theme."/";
-     $visit_iconsUrl= SFSI_PLUGURL."/images/visit_icons/";
-     $soicalObj=new sfsi_SocialHelper();
-     $twitetr_share=($option2['sfsi_twitter_followUserName']!='') ?  "https://twitter.com/".$option2['sfsi_twitter_followUserName'] : 'http://specificfeeds.com';
-     $twitter_text=($option2['sfsi_twitter_followUserName']!='') ?  $option2['sfsi_twitter_aboutPageText'] : 'Create Your Perfect Newspaper for free';
+	 $active_theme=$option3['sfsi_plus_actvite_theme'];
+     $icons_baseUrl=SFSI_PLUS_PLUGURL."/images/icons_theme/".$active_theme."/";
+     $visit_iconsUrl= SFSI_PLUS_PLUGURL."/images/visit_icons/";
+     $soicalObj=new sfsi_plus_SocialHelper();
+     $twitetr_share=($option2['sfsi_plus_twitter_followUserName']!='') ?  "https://twitter.com/".$option2['sfsi_plus_twitter_followUserName'] : 'http://specificfeeds.com';
+     $twitter_text=($option2['sfsi_plus_twitter_followUserName']!='') ?  $option2['sfsi_plus_twitter_aboutPageText'] : 'Create Your Perfect Newspaper for free';
 ?>
 
 <!-- Facebook  example pop up -->
 <div class="fb-overlay read-overlay fbex-s2" >
     <div class="pop_up_box_ex sfsi_pop_up adPopWidth" >
-        <img src="<?php echo SFSI_PLUGURL; ?>images/close.jpg" id="close_popup" class="sfsicloseBtn" />
+        <img src="<?php echo SFSI_PLUS_PLUGURL; ?>images/close.jpg" id="close_popup" class="sfsicloseBtn" />
 	    <h4 id="readmore_text">Move over the Facebook-icon… </h4>
     
         <div class="adminTooltip" >
-           <a href="javascript:"><img width="51" class="sfsi_wicon" src="<?php echo SFSI_PLUGURL; ?>images/facebook.png" title="facebook" alt="facebook" /></a>
+           <a href="javascript:"><img width="51" class="sfsi_wicon" src="<?php echo SFSI_PLUS_PLUGURL; ?>images/facebook.png" title="facebook" alt="facebook" /></a>
            <div class="sfsi_tool_tip_2 sfsi_tool_tip_2_inr fb_tool_bdr" style="width: 59px;margin-left: -48.5px;">
                <span class="bot_arow bot_fb_arow "></span>
                <div class="sfsi_inside fbb">
@@ -96,7 +96,7 @@ define('rss_readmore_text2', $rss_readmore_text2);
 <!-- adthis example pop up -->
 <div class="pop-overlay read-overlay athis-s1" >
     <div class="pop_up_box sfsi_pop_up adPopWidth"  >
-        <img src="<?php echo SFSI_PLUGURL; ?>images/close.jpg" id="close_popup" class="sfsicloseBtn" />
+        <img src="<?php echo SFSI_PLUS_PLUGURL; ?>images/close.jpg" id="close_popup" class="sfsicloseBtn" />
     	<h4 id="readmore_text">Move over the “+ icon” to see the sharing options</h4>
     	<div style="margin: 0px auto;">
 			<script type="text/javascript">
@@ -105,7 +105,7 @@ define('rss_readmore_text2', $rss_readmore_text2);
 			<a href="http://www.addthis.com/bookmark.php?v=250" class="addthis_button">
             	<img width="51" class="sfsi_wicon" src="<?php echo $icons_baseUrl."/".$active_theme; ?>_share.png" title="share" alt="share" />
             </a>
-    		<?php //echo sfsi_Addthis(1); ?>
+    		<?php //echo sfsi_plus_Addthis(1); ?>
     	</div>
     </div>
 </div><!-- END adthis example pop up -->
@@ -113,8 +113,8 @@ define('rss_readmore_text2', $rss_readmore_text2);
 <?php
 	  $twit_tolCls = "100";
 	  $twt_margin = "63";  
-	  $icons_space = $option5['sfsi_icons_spacing'];  
-	  $twitter_user = $option2['sfsi_twitter_followUserName'];
+	  $icons_space = $option5['sfsi_plus_icons_spacing'];  
+	  $twitter_user = $option2['sfsi_plus_twitter_followUserName'];
 	  $twit_tolCls = round(strlen($twitter_user)*4+100+20); 
       $main_margin = round($icons_space)/2;
       $twt_margin = round($twit_tolCls/2+$main_margin+6);
@@ -122,11 +122,11 @@ define('rss_readmore_text2', $rss_readmore_text2);
 <!-- twiiter example pop-up -->
 <div class="pop-overlay read-overlay twex-s2" >
     <div class="pop_up_box_ex sfsi_pop_up adPopWidth" >
-        <img src="<?php echo SFSI_PLUGURL; ?>images/close.jpg" id="close_popup" class="sfsicloseBtn" />
+        <img src="<?php echo SFSI_PLUS_PLUGURL; ?>images/close.jpg" id="close_popup" class="sfsicloseBtn" />
     	<h4 id="readmore_text">Move over the Twiiter-icon… </h4>
     
         <div class="adminTooltip" >
-        	<a href="javascript:"><img width="51" class="sfsi_wicon" src="<?php echo SFSI_PLUGURL; ?>images/twitter.png" title="Twitter" alt="Twitter" /></a>
+        	<a href="javascript:"><img width="51" class="sfsi_wicon" src="<?php echo SFSI_PLUS_PLUGURL; ?>images/twitter.png" title="Twitter" alt="Twitter" /></a>
             <div class="sfsi_tool_tip_2 sfsi_tool_tip_2_inr twt_tool_bdr" style="width: 59px;margin-left: -48.5px;">
            		<span class="bot_arow bot_twt_arow"></span>
            		<div class="sfsi_inside" >
@@ -140,16 +140,16 @@ define('rss_readmore_text2', $rss_readmore_text2);
 </div><!-- END twiiter example pop-up -->
 
 <?php 
-	$google_url=($option2['sfsi_google_pageURL']!='') ?  $option2['sfsi_google_pageURL'] : 'https://plus.google.com/117732335852724933053' ;
+	$google_url=($option2['sfsi_plus_google_pageURL']!='') ?  $option2['sfsi_plus_google_pageURL'] : 'https://plus.google.com/117732335852724933053' ;
 ?>
 <!-- Goolge+  example pop up -->
 <div class="pop-overlay read-overlay googlex-s2"  style="display: block;z-index: -1;opacity: 0;">
     <div class="pop_up_box_ex sfsi_pop_up adPopWidth" style="display: block;" >
-        <img src="<?php echo SFSI_PLUGURL; ?>images/close.jpg" id="close_popup" class="sfsicloseBtn" />
+        <img src="<?php echo SFSI_PLUS_PLUGURL; ?>images/close.jpg" id="close_popup" class="sfsicloseBtn" />
     	<h4 id="readmore_text">Move over the Google+ icon… </h4>
     
         <div class="adminTooltip" >
-        	<a href="javascript:"><img width="51" class="sfsi_wicon" src="<?php echo SFSI_PLUGURL; ?>images/google_plus.png" title="google+" alt="google"/></a>
+        	<a href="javascript:"><img width="51" class="sfsi_wicon" src="<?php echo SFSI_PLUS_PLUGURL; ?>images/google_plus.png" title="google+" alt="google"/></a>
             <div class="sfsi_tool_tip_2 sfsi_tool_tip_2_inr gpls_tool_bdr" style="display: block;  margin-left: -76.5px; margin-left: -55.5px;">
            		<span class="bot_arow bot_gpls_arow"></span>
            		<div class="sfsi_inside">
@@ -163,17 +163,17 @@ define('rss_readmore_text2', $rss_readmore_text2);
 </div><!-- END Goolge+  example pop up -->
 
 <?php 
-	$youtube_url=($option2['sfsi_youtube_pageUrl']!='') ?  $option2['sfsi_youtube_pageUrl'] : 'http://www.youtube.com/user/SpecificFeeds' ;
-	$youtube_user=($option4['sfsi_youtube_user']!='' && isset($option4['sfsi_youtube_user']))?  $option4['sfsi_youtube_user'] : 'SpecificFeeds' ;
+	$youtube_url=($option2['sfsi_plus_youtube_pageUrl']!='') ?  $option2['sfsi_plus_youtube_pageUrl'] : 'http://www.youtube.com/user/SpecificFeeds' ;
+	$youtube_user=($option4['sfsi_plus_youtube_user']!='' && isset($option4['sfsi_plus_youtube_user']))?  $option4['sfsi_plus_youtube_user'] : 'SpecificFeeds' ;
 ?>
 <!-- You tube  example pop up -->
 <div class="pop-overlay read-overlay ytex-s2" >
     <div class="pop_up_box_ex sfsi_pop_up adPopWidth" >
-        <img src="<?php echo SFSI_PLUGURL; ?>images/close.jpg" id="close_popup" class="sfsicloseBtn" />
+        <img src="<?php echo SFSI_PLUS_PLUGURL; ?>images/close.jpg" id="close_popup" class="sfsicloseBtn" />
     	<h4 id="readmore_text">Move over the YouTube-icon… </h4>
     	
         <div class="adminTooltip" >
-        	<a href="javascript:"><img width="51" class="sfsi_wicon" src="<?php echo SFSI_PLUGURL; ?>images/youtube.png" title="youtube" alt="youtube" /></a>
+        	<a href="javascript:"><img width="51" class="sfsi_wicon" src="<?php echo SFSI_PLUS_PLUGURL; ?>images/youtube.png" title="youtube" alt="youtube" /></a>
         	<div class="sfsi_tool_tip_2 sfsi_tool_tip_2_inr utube_tool_bdr"  style=" margin-left: -67px; width: 96px;" >
            		<span class="bot_arow bot_utube_arow"></span>
            		<div class="sfsi_inside">
@@ -185,16 +185,16 @@ define('rss_readmore_text2', $rss_readmore_text2);
 	</div>
 </div><!-- END You tube  example pop up -->
 <?php 
-$pin_url=($option2['sfsi_pinterest_pageUrl']!='') ?  $option2['sfsi_pinterest_pageUrl'] : 'http://pinterest.com/specificfeeds' ;
+$pin_url=($option2['sfsi_plus_pinterest_pageUrl']!='') ?  $option2['sfsi_plus_pinterest_pageUrl'] : 'http://pinterest.com/specificfeeds' ;
 ?>
 <!-- Pinterest  example pop up -->
 <div class="pop-overlay read-overlay pinex-s2" >
     <div class="pop_up_box_ex sfsi_pop_up adPopWidth" >
-        <img src="<?php echo SFSI_PLUGURL; ?>images/close.jpg" id="close_popup" class="sfsicloseBtn" />
+        <img src="<?php echo SFSI_PLUS_PLUGURL; ?>images/close.jpg" id="close_popup" class="sfsicloseBtn" />
     	<h4 id="readmore_text">Move over the Pinterest-icon… </h4>
     
      	<div class="adminTooltip" >
-        <a href="javascript:"><img width="51" class="sfsi_wicon" src="<?php echo SFSI_PLUGURL; ?>images/pinterest.png" title="pinterest" alt="pinterest" /></a>
+        <a href="javascript:"><img width="51" class="sfsi_wicon" src="<?php echo SFSI_PLUS_PLUGURL; ?>images/pinterest.png" title="pinterest" alt="pinterest" /></a>
         <div class="sfsi_tool_tip_2 sfsi_tool_tip_2_inr printst_tool_bdr"  style=" width: 73px; margin-left: -55.5px;" >
            <span class="bot_arow bot_pintst_arow"></span>
            <div class="sfsi_inside">
@@ -207,17 +207,17 @@ $pin_url=($option2['sfsi_pinterest_pageUrl']!='') ?  $option2['sfsi_pinterest_pa
 </div> <!-- END Pinterest  example pop up -->
 
 <?php 
-	$linnked_share=($option2['sfsi_linkedin_pageURL']!='') ?  $option2['sfsi_linkedin_pageURL'] : 'https://www.linkedin.com/' ;
-	$linkedIncom=($option2['sfsi_linkedin_followCompany']!='') ?  $option2['sfsi_linkedin_followCompany'] : '904740' ;
-	$ln_product=($option2['sfsi_linkedin_recommendProductId']!='') ?  $option2['sfsi_linkedin_recommendProductId'] : '201714' ;
+	$linnked_share=($option2['sfsi_plus_linkedin_pageURL']!='') ?  $option2['sfsi_plus_linkedin_pageURL'] : 'https://www.linkedin.com/' ;
+	$linkedIncom=($option2['sfsi_plus_linkedin_followCompany']!='') ?  $option2['sfsi_plus_linkedin_followCompany'] : '904740' ;
+	$ln_product=($option2['sfsi_plus_linkedin_recommendProductId']!='') ?  $option2['sfsi_plus_linkedin_recommendProductId'] : '201714' ;
 ?>
 <!-- LinkedIn  example pop up -->
 <div class="pop-overlay read-overlay linkex-s2" style="display: block;z-index: -1;opacity: 0;" >
     <div class="pop_up_box_ex sfsi_pop_up adPopWidth" >
-    	<img src="<?php echo SFSI_PLUGURL; ?>images/close.jpg" id="close_popup" class="sfsicloseBtn" />
+    	<img src="<?php echo SFSI_PLUS_PLUGURL; ?>images/close.jpg" id="close_popup" class="sfsicloseBtn" />
     	<h4 id="readmore_text">Move over the LinkedIn-icon… </h4>
         <div class="adminTooltip" >
-        	<a href="javascript:"><img width="51" class="sfsi_wicon" src="<?php echo SFSI_PLUGURL;?>images/linked_in.png" title="LinkedIn" alt="LinkedIn"/></a>
+        	<a href="javascript:"><img width="51" class="sfsi_wicon" src="<?php echo SFSI_PLUS_PLUGURL;?>images/linked_in.png" title="LinkedIn" alt="LinkedIn"/></a>
         	<div class="sfsi_tool_tip_2 sfsi_tool_tip_2_inr linkedin_tool_bdr"  style=" width: 99px; margin-left: -68.5px;">
            		<span class="bot_arow bot_linkedin_arow"></span>
            		<div class="sfsi_inside">
@@ -234,9 +234,9 @@ $pin_url=($option2['sfsi_pinterest_pageUrl']!='') ?  $option2['sfsi_pinterest_pa
 <!-- ADDTHIS ICON POP-UP -->
 <div class="pop-overlay read-overlay share-s2" >
     <div class="pop_up_box sfsi_pop_up adPopWidth" >
-        <img src="<?php echo SFSI_PLUGURL; ?>images/close.jpg" id="close_popup" class="sfsicloseBtn" />
+        <img src="<?php echo SFSI_PLUS_PLUGURL; ?>images/close.jpg" id="close_popup" class="sfsicloseBtn" />
     	<h4 id="readmore_text">Move over the “+ icon” to see the sharing options</h4>
- 	    <div style="float: right;opacity: 1;position: relative;right: 215px;top: 10px;width: 52px; text-align: center;" ><a alt="share"  href="http://www.addthis.com/bookmark.php?v=250"  effect="" class="addthis_button"><img width="51" class="sfsi_wicon" src="<?php echo SFSI_PLUGURL; ?>images/share.png" title="share" alt="share" /></a>
+ 	    <div style="float: right;opacity: 1;position: relative;right: 215px;top: 10px;width: 52px; text-align: center;" ><a alt="share"  href="http://www.addthis.com/bookmark.php?v=250"  effect="" class="addthis_button"><img width="51" class="sfsi_wicon" src="<?php echo SFSI_PLUS_PLUGURL; ?>images/share.png" title="share" alt="share" /></a>
     </div>
   </div>
 </div><!-- END ADDTHIS ICON POP-UP -->
@@ -273,7 +273,7 @@ I want to see how it works</a></div>
 <!--Custom Skin popup {Monad}-->
 <div class="pop-overlay cstmskins-overlay" >
     <div class="cstmskin_popup" >
-        <img src="<?php echo SFSI_PLUGURL; ?>images/close.jpg" id="custmskin_clspop" class="sfsicloseBtn" />
+        <img src="<?php echo SFSI_PLUS_PLUGURL; ?>images/close.jpg" id="custmskin_clspop" class="sfsicloseBtn" />
         
         <div class="cstomskins_wrpr">
             <h3>Upload custom icons</h3>
@@ -297,13 +297,13 @@ I want to see how it works</a></div>
 								$rss_skin = get_option("plus_rss_skin");
 								echo "<img src='".$rss_skin."' width='30px' height='30px' class='imgskin'>";
 								echo '<a href="javascript:" onclick="upload_image(this);" title="plus_rss_skin" class="cstmskin_btn">Update</a>';
-								echo '<a href="javascript:" onclick="deleteskin_icon(this);" title="plus_rss_skin" class="cstmskin_btn">Delete</a>';
+								echo '<a href="javascript:" onclick="sfsiplus_deleteskin_icon(this);" title="plus_rss_skin" class="cstmskin_btn">Delete</a>';
 							}
 							else
 							{
 								echo "<img src='' width='30px' height='30px' class='imgskin skswrpr'>";
 								echo '<a href="javascript:" onclick="upload_image(this);" title="plus_rss_skin" class="cstmskin_btn">Upload</a>';
-								echo '<a href="javascript:" onclick="deleteskin_icon(this);" title="plus_rss_skin" class="cstmskin_btn dlt_btn">Delete</a>';
+								echo '<a href="javascript:" onclick="sfsiplus_deleteskin_icon(this);" title="plus_rss_skin" class="cstmskin_btn dlt_btn">Delete</a>';
 							}
 						?>
                     </div>
@@ -317,13 +317,13 @@ I want to see how it works</a></div>
 								$email_skin = get_option("plus_email_skin");
 								echo "<img src='".$email_skin."' width='30px' height='30px' class='imgskin'>";
 								echo '<a href="javascript:" onclick="upload_image(this);" title="plus_email_skin" class="cstmskin_btn">Update</a>';
-								echo '<a href="javascript:" onclick="deleteskin_icon(this);" title="plus_email_skin" class="cstmskin_btn">Delete</a>';
+								echo '<a href="javascript:" onclick="sfsiplus_deleteskin_icon(this);" title="plus_email_skin" class="cstmskin_btn">Delete</a>';
 							}
 							else
 							{
 								echo "<img src='' width='30px' height='30px' class='imgskin skswrpr'>";
 								echo '<a href="javascript:" onclick="upload_image(this);" title="plus_email_skin" class="cstmskin_btn">Upload</a>';
-								echo '<a href="javascript:" onclick="deleteskin_icon(this);" title="plus_email_skin" class="cstmskin_btn dlt_btn">Delete</a>';
+								echo '<a href="javascript:" onclick="sfsiplus_deleteskin_icon(this);" title="plus_email_skin" class="cstmskin_btn dlt_btn">Delete</a>';
 							}
 						?>
                     </div>
@@ -337,13 +337,13 @@ I want to see how it works</a></div>
 								$facebook_skin = get_option("plus_facebook_skin");
 								echo "<img src='".$facebook_skin."' width='30px' height='30px'  class='imgskin'>";
 								echo '<a href="javascript:" onclick="upload_image(this);" title="plus_facebook_skin" class="cstmskin_btn">Update</a>';
-								echo '<a href="javascript:" onclick="deleteskin_icon(this);" title="plus_facebook_skin" class="cstmskin_btn">Delete</a>';
+								echo '<a href="javascript:" onclick="sfsiplus_deleteskin_icon(this);" title="plus_facebook_skin" class="cstmskin_btn">Delete</a>';
 							}
 							else
 							{
 								echo "<img src='' width='30px' height='30px' class='imgskin skswrpr'>";
 								echo '<a href="javascript:" onclick="upload_image(this);" title="plus_facebook_skin" class="cstmskin_btn">Upload</a>';
-								echo '<a href="javascript:" onclick="deleteskin_icon(this);" title="plus_facebook_skin" class="cstmskin_btn dlt_btn">Delete</a>';
+								echo '<a href="javascript:" onclick="sfsiplus_deleteskin_icon(this);" title="plus_facebook_skin" class="cstmskin_btn dlt_btn">Delete</a>';
 							}
 						?>
                     </div>
@@ -357,13 +357,13 @@ I want to see how it works</a></div>
 								$twitter_skin = get_option("plus_twitter_skin");
 								echo "<img src='".$twitter_skin."' width='30px' height='30px' class='imgskin'>";
 								echo '<a href="javascript:" onclick="upload_image(this);" title="plus_twitter_skin" class="cstmskin_btn">Update</a>';
-								echo '<a href="javascript:" onclick="deleteskin_icon(this);" title="plus_twitter_skin" class="cstmskin_btn">Delete</a>';
+								echo '<a href="javascript:" onclick="sfsiplus_deleteskin_icon(this);" title="plus_twitter_skin" class="cstmskin_btn">Delete</a>';
 							}
 							else
 							{
 								echo "<img src='' width='30px' height='30px' class='imgskin skswrpr'>";
 								echo '<a href="javascript:" onclick="upload_image(this);" title="plus_twitter_skin" class="cstmskin_btn">Upload</a>';
-								echo '<a href="javascript:" onclick="deleteskin_icon(this);" title="plus_twitter_skin" class="cstmskin_btn dlt_btn">Delete</a>';
+								echo '<a href="javascript:" onclick="sfsiplus_deleteskin_icon(this);" title="plus_twitter_skin" class="cstmskin_btn dlt_btn">Delete</a>';
 							}
 						?>
                     </div>
@@ -377,13 +377,13 @@ I want to see how it works</a></div>
 								$google_skin = get_option("plus_google_skin");
 								echo "<img src='".$google_skin."' width='30px' height='30px'  class='imgskin'>";
 								echo '<a href="javascript:" onclick="upload_image(this);" title="plus_google_skin" class="cstmskin_btn">Update</a>';
-								echo '<a href="javascript:" onclick="deleteskin_icon(this);" title="plus_google_skin" class="cstmskin_btn">Delete</a>';
+								echo '<a href="javascript:" onclick="sfsiplus_deleteskin_icon(this);" title="plus_google_skin" class="cstmskin_btn">Delete</a>';
 							}
 							else
 							{
 								echo "<img src='' width='30px' height='30px' class='imgskin skswrpr'>";
 								echo '<a href="javascript:" onclick="upload_image(this);" title="plus_google_skin" class="cstmskin_btn">Upload</a>';
-								echo '<a href="javascript:" onclick="deleteskin_icon(this);" title="plus_google_skin" class="cstmskin_btn dlt_btn">Delete</a>';
+								echo '<a href="javascript:" onclick="sfsiplus_deleteskin_icon(this);" title="plus_google_skin" class="cstmskin_btn dlt_btn">Delete</a>';
 							}
 						?>
                     </div>
@@ -397,13 +397,13 @@ I want to see how it works</a></div>
 								$share_skin = get_option("plus_share_skin");
 								echo "<img src='".$share_skin."' width='30px' height='30px' class='imgskin'>";
 								echo '<a href="javascript:" onclick="upload_image(this);" title="plus_share_skin" class="cstmskin_btn">Update</a>';
-								echo '<a href="javascript:" onclick="deleteskin_icon(this);" title="plus_share_skin" class="cstmskin_btn">Delete</a>';
+								echo '<a href="javascript:" onclick="sfsiplus_deleteskin_icon(this);" title="plus_share_skin" class="cstmskin_btn">Delete</a>';
 							}
 							else
 							{
 								echo "<img src='' width='30px' height='30px' class='imgskin skswrpr'>";
 								echo '<a href="javascript:" onclick="upload_image(this);" title="plus_share_skin" class="cstmskin_btn">Upload</a>';
-								echo '<a href="javascript:" onclick="deleteskin_icon(this);" title="plus_share_skin" class="cstmskin_btn dlt_btn">Delete</a>';
+								echo '<a href="javascript:" onclick="sfsiplus_deleteskin_icon(this);" title="plus_share_skin" class="cstmskin_btn dlt_btn">Delete</a>';
 							}
 						?>
                     </div>
@@ -417,13 +417,13 @@ I want to see how it works</a></div>
 								$youtube_skin = get_option("plus_youtube_skin");
 								echo "<img src='".$youtube_skin."' width='30px' height='30px'  class='imgskin'>";
 								echo '<a href="javascript:" onclick="upload_image(this);" title="plus_youtube_skin" class="cstmskin_btn">Update</a>';
-								echo '<a href="javascript:" onclick="deleteskin_icon(this);" title="plus_youtube_skin" class="cstmskin_btn">Delete</a>';
+								echo '<a href="javascript:" onclick="sfsiplus_deleteskin_icon(this);" title="plus_youtube_skin" class="cstmskin_btn">Delete</a>';
 							}
 							else
 							{
 								echo "<img src='' width='30px' height='30px' class='imgskin skswrpr'>";
 								echo '<a href="javascript:" onclick="upload_image(this);" title="plus_youtube_skin" class="cstmskin_btn">Upload</a>';
-								echo '<a href="javascript:" onclick="deleteskin_icon(this);" title="plus_youtube_skin" class="cstmskin_btn dlt_btn">Delete</a>';
+								echo '<a href="javascript:" onclick="sfsiplus_deleteskin_icon(this);" title="plus_youtube_skin" class="cstmskin_btn dlt_btn">Delete</a>';
 							}
 						?>
                     </div>
@@ -437,13 +437,13 @@ I want to see how it works</a></div>
 								$linkedin_skin = get_option("plus_linkedin_skin");
 								echo "<img src='".$linkedin_skin."' width='30px' height='30px'  class='imgskin'>";
 								echo '<a href="javascript:" onclick="upload_image(this);" title="plus_linkedin_skin" class="cstmskin_btn">Update</a>';
-								echo '<a href="javascript:" onclick="deleteskin_icon(this);" title="plus_linkedin_skin" class="cstmskin_btn">Delete</a>';
+								echo '<a href="javascript:" onclick="sfsiplus_deleteskin_icon(this);" title="plus_linkedin_skin" class="cstmskin_btn">Delete</a>';
 							}
 							else
 							{
 								echo "<img src='' width='30px' height='30px' class='imgskin skswrpr'>";
 								echo '<a href="javascript:" onclick="upload_image(this);" title="plus_linkedin_skin" class="cstmskin_btn">Upload</a>';	
-								echo '<a href="javascript:" onclick="deleteskin_icon(this);" title="plus_linkedin_skin" class="cstmskin_btn dlt_btn">Delete</a>';
+								echo '<a href="javascript:" onclick="sfsiplus_deleteskin_icon(this);" title="plus_linkedin_skin" class="cstmskin_btn dlt_btn">Delete</a>';
 							}
 						?>
                     </div>
@@ -457,13 +457,13 @@ I want to see how it works</a></div>
 								$pintrest_skin = get_option("plus_pintrest_skin");
 								echo "<img src='".$pintrest_skin."' width='30px' height='30px' class='imgskin'>";
 								echo '<a href="javascript:" onclick="upload_image(this);" title="plus_pintrest_skin" class="cstmskin_btn">Update</a>';
-								echo '<a href="javascript:" onclick="deleteskin_icon(this);" title="plus_pintrest_skin" class="cstmskin_btn">Delete</a>';
+								echo '<a href="javascript:" onclick="sfsiplus_deleteskin_icon(this);" title="plus_pintrest_skin" class="cstmskin_btn">Delete</a>';
 							}
 							else
 							{
 								echo "<img src='' width='30px' height='30px' class='imgskin skswrpr'>";
 								echo '<a href="javascript:" onclick="upload_image(this);" title="plus_pintrest_skin" class="cstmskin_btn">Upload</a>';
-								echo '<a href="javascript:" onclick="deleteskin_icon(this);" title="plus_pintrest_skin" class="cstmskin_btn dlt_btn">Delete</a>';
+								echo '<a href="javascript:" onclick="sfsiplus_deleteskin_icon(this);" title="plus_pintrest_skin" class="cstmskin_btn dlt_btn">Delete</a>';
 							}
 						?>
                     </div>
@@ -477,13 +477,13 @@ I want to see how it works</a></div>
 								$instagram_skin = get_option("plus_instagram_skin");
 								echo "<img src='".$instagram_skin."' width='30px' height='30px' class='imgskin'>";
 								echo '<a href="javascript:" onclick="upload_image(this);" title="plus_instagram_skin" class="cstmskin_btn">Update</a>';
-								echo '<a href="javascript:" onclick="deleteskin_icon(this);" title="plus_instagram_skin" class="cstmskin_btn">Delete</a>';
+								echo '<a href="javascript:" onclick="sfsiplus_deleteskin_icon(this);" title="plus_instagram_skin" class="cstmskin_btn">Delete</a>';
 							}
 							else
 							{
 								echo "<img src='' width='30px' height='30px' class='imgskin skswrpr'>";
 								echo '<a href="javascript:" onclick="upload_image(this);" title="plus_instagram_skin" class="cstmskin_btn">Upload</a>';
-								echo '<a href="javascript:" onclick="deleteskin_icon(this);" title="plus_instagram_skin" class="cstmskin_btn dlt_btn">Delete</a>';		
+								echo '<a href="javascript:" onclick="sfsiplus_deleteskin_icon(this);" title="plus_instagram_skin" class="cstmskin_btn dlt_btn">Delete</a>';		
 							}
 						?>
                     </div>
@@ -491,7 +491,7 @@ I want to see how it works</a></div>
                 
             </ul>
             <div class="cstmskins_sbmt">
-            	<a href="javascript:" class="done_btn" onclick="SFSI_done();">I'm done!</a> 
+            	<a href="javascript:" class="done_btn" onclick="SFSI_plus_done();">I'm done!</a> 
             </div>
            
         </div>
@@ -506,7 +506,7 @@ I want to see how it works</a></div>
 					{
 						var url = jQuery(html).attr('src');
 					}
-					sfsi_customskin_upload(title+'='+url, ref);
+					plus_sfsi_customskin_upload(title+'='+url, ref);
 					tb_remove();
 				}
 				return false;
