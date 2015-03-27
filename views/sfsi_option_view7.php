@@ -129,7 +129,8 @@
 	<div class="pop_up_show"><input name="sfsi_plus_Show_popupOn" <?php echo ($option7['sfsi_plus_Show_popupOn']=='blogpage') ?  'checked="true"' : '' ;?> type="radio" value="blogpage" class="styled"/><label>On blog posts only</label></div>
 	<div class="pop_up_show"><input name="sfsi_plus_Show_popupOn" <?php echo ($option7['sfsi_plus_Show_popupOn']=='selectedpage') ?  'checked="true"' : '' ;?>  type="radio" value="selectedpage" class="styled"/><label>On selected pages only</label>
             <div class="field" style="width:50%"><select multiple="multiple" name="sfsi_plus_Show_popupOn_PageIDs" id="sfsi_plus_Show_popupOn_PageIDs" style="width:60%;min-height: 150px;"  >
-             <?php $select=  (isset($option7['sfsi_plus_Show_popupOn_PageIDs'])) ? unserialize($option7['sfsi_plus_Show_popupOn_PageIDs']) :array();   $get_pages = get_pages( array( 
+             <?php $select=  (isset($option7['sfsi_plus_Show_popupOn_PageIDs'])) ? unserialize($option7['sfsi_plus_Show_popupOn_PageIDs']) :array();
+			 $get_pages = get_pages( array( 
             'offset'=> 1,
             'hierarchical'=>1,     
             'sort_order' => 'DESC', 
@@ -142,12 +143,31 @@
             
             foreach( $get_pages as $page )
             {
-                printf(
+                /*printf(
                     '<option value="%s"  %s style="margin-bottom:3px;">%s</option>',
                     $page->ID,
                     in_array( $page->ID, $select) ? 'selected="selected" class="sel-active"' : '',
                     $page->post_title
-                );
+                );*/
+				if(!empty($select))
+				{
+					if( in_array( $page->ID, $select) )
+					{
+						$selected_box = 'selected="selected"';
+						$class = 'class="sel-active"';
+					}
+					else
+					{
+						$selected_box = '';
+						$class = '';
+					}
+				}
+				else
+				{
+					$selected_box = '';
+					$class = '';
+				}
+				echo '<option value="'.$page->ID.'" style="margin-bottom: 3px;" '.$selected_box.' '.$class.'>'.$page->post_title.'</option>';
             }
            
         } ?>   

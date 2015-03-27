@@ -76,7 +76,7 @@ function sfsi_plus_float_widget(s) {
         }), setTimeout(iplus, n)) :window.addEventListener("scroll", iplus, !1);
 		
 	}
-    function eplus()
+    /*function eplus()
 	{
 		var documentheight = SFSI("#sfsi_plus_floater").attr("data-top");
 		var fltrhght = parseInt(SFSI("#sfsi_plus_floater").height());
@@ -90,7 +90,7 @@ function sfsi_plus_float_widget(s) {
 			window.removeEventListener("scroll", iplus);
 			SFSI("#sfsi_plus_floater").css("top",documentheight+"px");
 		}
-	}
+	}*/
 	
 	SFSI( window ).scroll(function() {
 		var documentheight = SFSI("#sfsi_plus_floater").attr("data-top");
