@@ -139,10 +139,10 @@ add_filter( 'the_content', 'sfsi_plus_beforaftereposts' );
 function sfsi_plus_beforaftereposts( $content )
 {
 	$org_content = $content;
+	$icons_before = '';
+	$icons_after = '';
 	if( is_single() )
 	{
-		$icons_before = '';
-		$icons_after = '';
 		$option8=  unserialize(get_option('sfsi_plus_section8_options',false));
 		$lineheight = $option8['sfsi_plus_post_icons_size'];
 		$lineheight = sfsi_plus_getlinhght($lineheight);

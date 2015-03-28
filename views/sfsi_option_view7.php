@@ -24,9 +24,12 @@
 	<?php
 		if(isset($icons) && !empty($icons))
 		{
-			foreach($icons as $icn =>$img)
+			if(is_array($icons))
 			{
-				echo '<li class="custom_section sfsiICON_'.$icn.'"  element-id="'.$icn.'" ><div><img src="'.$img.'" alt="Custom Icon" class="sfcm" /><span class="sfsi_Cdisplay">12k</span></div></li>';
+				foreach($icons as $icn =>$img)
+				{
+					echo '<li class="custom_section sfsiICON_'.$icn.'"  element-id="'.$icn.'" ><div><img src="'.$img.'" alt="Custom Icon" class="sfcm" /><span class="sfsi_Cdisplay">12k</span></div></li>';
+				}
 			}
 		}
 		?>

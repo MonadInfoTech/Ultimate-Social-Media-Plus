@@ -451,7 +451,7 @@ function sfsi_plus_prepairIcons($icon_name,$is_front=0)
 			
 			$visit_icon = $visit_iconsUrl."facebook.png";
 		    $url = ($sfsi_plus_section2_options['sfsi_plus_facebookPage_url']) ? $sfsi_plus_section2_options['sfsi_plus_facebookPage_url']:'javascript:void(0);';
-                    
+            
 			if($sfsi_plus_section2_options['sfsi_plus_facebookLike_option']=="yes" || $sfsi_plus_section2_options['sfsi_plus_facebookShare_option']=="yes" )
 			{
 				 $url=($sfsi_plus_section2_options['sfsi_plus_facebookPage_url']) ? $sfsi_plus_section2_options['sfsi_plus_facebookPage_url']:'javascript:void(0);';

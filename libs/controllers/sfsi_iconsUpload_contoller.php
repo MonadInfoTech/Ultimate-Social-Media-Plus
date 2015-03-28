@@ -7,7 +7,7 @@ function sfsi_plus_UploadSkins()
 	if ( defined('ABSPATH') )
      	require_once(ABSPATH . 'wp-load.php');
     else
-        require_once('../wp-load.php');
+        require_once('../../../../../wp-load.php');
 	extract($_REQUEST);
 	$upload_dir = wp_upload_dir();
 	
@@ -89,7 +89,7 @@ function sfsi_plus_DeleteSkin()
 	if ( defined('ABSPATH') )
      	require_once(ABSPATH . 'wp-load.php');
     else
-        require_once('../wp-load.php');
+        require_once('../../../../../wp-load.php');
 	$upload_dir = wp_upload_dir();
 	
 	if($_REQUEST['action'] == 'DeleteSkin' && isset($_REQUEST['iconname']) && !empty($_REQUEST['iconname']))
@@ -216,7 +216,7 @@ function sfsi_plus_UploadIcons()
 	if ( defined('ABSPATH') )
      	require_once(ABSPATH . 'wp-load.php');
     else
-        require_once('../wp-load.php');
+        require_once('../../../../../wp-load.php');
 	
 	extract($_POST);
 	

@@ -1,5 +1,4 @@
 <?php
-
 function sfsi_plus_activate_plugin()
 {
     /* check for CURL enable at server */
@@ -209,7 +208,7 @@ function sfsi_plus_activate_plugin()
 	add_option('sfsi_plus_footer_sec','no');
 	update_option('sfsi_plus_activate', 1);
 	
-	$get_option2 = unserialize(get_option('sfsi_plus_section2_options',falase));
+	$get_option2 = unserialize(get_option('sfsi_plus_section2_options',false));
 	$get_option2['sfsi_plus_email_url'] = $sffeeds->redirect_url;
 	update_option('sfsi_plus_section2_options', serialize($get_option2));
 	sfsi_plus_setUpfeeds($sffeeds->feed_id);

@@ -82,15 +82,22 @@
         <p class="radio_section fb_url"><input name="sfsi_plus_youtube_page" <?php echo ($option2['sfsi_plus_youtube_page']=='yes') ?  'checked="true"' : '' ;?> type="checkbox" value="yes" class="styled"  /><label>Visit my Youtube page at:</label><input name="sfsi_plus_youtube_pageUrl" type="url" placeholder="http://" value="<?php echo ($option2['sfsi_plus_youtube_pageUrl']!='') ?  $option2['sfsi_plus_youtube_pageUrl'] : '' ;?>" class="add" /></p>
         <p class="radio_section fb_url"><input name="sfsi_plus_youtube_follow" <?php echo ($option2['sfsi_plus_youtube_follow']=='yes') ?  'checked="true"' : '' ;?> type="checkbox" value="yes" class="styled"  /><label>Subscribe to me on Youtube <span>(allows people to subscribe to you directly, without leaving your blog)</span></label></p>
         <!--Adding Code for Channel Id and Channel Name-->
+        <?php
+			if(!isset($option4['sfsi_youtubeusernameorid']))
+			{
+				$sfsi_youtubeusernameorid = '';
+			}
+			else
+			{
+				$sfsi_youtubeusernameorid = $option4['sfsi_youtubeusernameorid'];
+			}
+		?>
         <div class="cstmutbewpr">
             <ul class="enough_waffling">
-               <li onclick="showhideutube(this);"><input name="sfsi_plus_youtubeusernameorid" <?php echo ($option4['sfsi_plus_youtubeusernameorid']=='name') ?  'checked="true"' : '' ;?> type="radio" value="name" class="styled"  /><label>User Name</label></li>
-               <li onclick="showhideutube(this);"><input name="sfsi_plus_youtubeusernameorid" <?php echo ($option4['sfsi_plus_youtubeusernameorid']=='id') ?  'checked="true"' : '' ;?> type="radio" value="id" class="styled"  /><label>Channel Id</label></li>
+               <li onclick="showhideutube(this);"><input name="sfsi_plus_youtubeusernameorid" <?php echo ($sfsi_youtubeusernameorid=='name') ?  'checked="true"' : '' ;?> type="radio" value="name" class="styled"  /><label>User Name</label></li>
+               <li onclick="showhideutube(this);"><input name="sfsi_plus_youtubeusernameorid" <?php echo ($sfsi_youtubeusernameorid=='id') ?  'checked="true"' : '' ;?> type="radio" value="id" class="styled"  /><label>Channel Id</label></li>
             </ul>
             <div class="cstmutbtxtwpr">
-            	<?php
-                $sfsi_plus_youtubeusernameorid = $option4['sfsi_plus_youtubeusernameorid'];
-				?>
             	<div class="cstmutbchnlnmewpr" <?php if($sfsi_plus_youtubeusernameorid != 'id'){echo 'style="display: block;"';}?>>
                 	<p class="extra_pp"><label>UserName:</label><input name="sfsi_plus_ytube_user" type="url" value="<?php echo (isset($option4['sfsi_plus_youtube_user']) && $option4['sfsi_plus_youtube_user']!='') ?  $option4['sfsi_plus_youtube_user'] : '' ;?>" placeholder="Youtube username" class="add" /></p>
                     <div class="utbe_instruction">
