@@ -70,8 +70,8 @@ function DISPLAY_ULTIMATE_PLUS($args = null, $content = null)
 //adding some meta tags for facebook news feed {Monad}
 add_action('wp_head', 'ultimateplusfbmetatags');
 function ultimateplusfbmetatags()
-{
-   $post_id = get_the_ID();
+{	
+	$post_id = get_the_ID();
    $post = get_post( $post_id );
    $attachment_id = get_post_thumbnail_id($post_id);
    $description = $post->post_content;
@@ -84,11 +84,11 @@ function ultimateplusfbmetatags()
 	   $feat_image = wp_get_attachment_url( $attachment_id );
 	   if (preg_match('/https/',$feat_image))
 	   {
-			   echo '<meta property="og:image:secure_url" content="'.$feat_image.'">';
+			   echo '<meta property="og:image:secure_url" content="'.$feat_image.'" data-id="sfsi"/>';
 	   }
 	   else
 	   {
-			   echo '<meta property="og:image" content="'.$feat_image.'">';
+			   echo '<meta property="og:image" content="'.$feat_image.'" data-id="sfsi"/>';
 	   }
 	   $metadata = wp_get_attachment_metadata( $attachment_id );
 	   if(isset($metadata) && !empty($metadata))
@@ -124,12 +124,12 @@ function ultimateplusfbmetatags()
 			$width = '';
 			$height = '';  
 	   }
-	   echo '<meta property="og:image:type" content="'.$image_type.'" />';
-	   echo '<meta property="og:image:width" content="'.$width.'" />';
-	   echo '<meta property="og:image:height" content="'.$height.'" />';
-	   echo '<meta property="og:description" content="'.$description.'"/>';
-	   echo '<meta property="og:title" content="'.$title.'" />';
-	   echo '<meta property="og:url" content="'.$url.'" />';
+	   echo '<meta property="og:image:type" content="'.$image_type.'" data-id="sfsi"/>';
+	   echo '<meta property="og:image:width" content="'.$width.'" data-id="sfsi"/>';
+	   echo '<meta property="og:image:height" content="'.$height.'" data-id="sfsi"/>';
+	   echo '<meta property="og:description" content="'.$description.'" data-id="sfsi"/>';
+	   echo '<meta property="og:title" content="'.$title.'" data-id="sfsi"/>';
+	   echo '<meta property="og:url" content="'.$url.'" data-id="sfsi"/>';
    }
 }
 
