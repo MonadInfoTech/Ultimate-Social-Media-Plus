@@ -1,12 +1,12 @@
 <?php
 /*
-Plugin Name: Ultimate Social Media PLUS and Share Plugin (Facebook, Twitter, Google Plus, Instagram, Pinterest etc.)
+Plugin Name: Ultimate Social Media PLUS
 Plugin URI: http://ultimatelysocial.com
-Description: The FREE plugin allows you to add social media & share icons to your blog (esp. Facebook, Twitter, Email, RSS, Pinterest, Instagram, Google+, LinkedIn, Share-button). It offers a wide range of design options and other features. 
+Description: The best social media plugin on the market. And 100% FREE. Allows you to add social media & share icons to your blog (esp. Facebook, Twitter, Email, RSS, Pinterest, Instagram, Google+, LinkedIn, Share-button). It offers a wide range of design options and other features. 
 Author: UltimatelySocial
 Author URI: http://ultimatelysocial.com
 Version: 1.0
-License: GPLv2 or later
+License: GPLv2
 
 */
 
