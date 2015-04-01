@@ -36,61 +36,61 @@
           
 		  switch ($icn) : 
           case 'rss' :?>
-            	 <li class="rss_section" data-index="<?php echo $index; ?>" id="sfsi_plus_rssIcon_order">
+            	 <li class="sfsiplus_rss_section" data-index="<?php echo $index; ?>" id="sfsi_plus_rssIcon_order">
                 	<a href="#" title="RSS"><img src="<?php echo SFSI_PLUS_PLUGURL; ?>images/rss.png" alt="RSS" /></a>
                  </li>
           <?php break; ?>
           
 		  <?php case 'email' :?>
-          		<li class="email_section " data-index="<?php echo $index; ?>" id="sfsi_plus_emailIcon_order">
+          		<li class="sfsiplus_email_section " data-index="<?php echo $index; ?>" id="sfsi_plus_emailIcon_order">
                 	<a href="#" title="Email"><img src="<?php echo SFSI_PLUS_PLUGURL; ?>images/<?php echo $email_image; ?>" alt="Email" class="icon_img" /></a>
                 </li>
           <?php break; ?>
           
 		  <?php case 'facebook' :?>
-          		<li class="facebook_section " data-index="<?php echo $index; ?>" id="sfsi_plus_facebookIcon_order">
+          		<li class="sfsiplus_facebook_section " data-index="<?php echo $index; ?>" id="sfsi_plus_facebookIcon_order">
                 	<a href="#" title="Facebook"><img src="<?php echo SFSI_PLUS_PLUGURL; ?>images/facebook.png" alt="Facebook" /></a>
                 </li>
           <?php break; ?>
           
           <?php case 'google' :?>
-          		<li class="google_section " data-index="<?php echo $index; ?>" id="sfsi_plus_googleIcon_order">
+          		<li class="sfsiplus_google_section " data-index="<?php echo $index; ?>" id="sfsi_plus_googleIcon_order">
                 	<a href="#" title="Google Plus" ><img src="<?php echo SFSI_PLUS_PLUGURL; ?>images/google_plus.png" alt="Google Plus" /></a>
                 </li>
           <?php break; ?>
           
           <?php case 'twitter' :?>
-          		<li class="twitter_section " data-index="<?php echo $index; ?>" id="sfsi_plus_twitterIcon_order">
+          		<li class="sfsiplus_twitter_section " data-index="<?php echo $index; ?>" id="sfsi_plus_twitterIcon_order">
                 	<a href="#" title="Twitter" ><img src="<?php echo SFSI_PLUS_PLUGURL; ?>images/twitter.png" alt="Twitter" /></a>
                 </li>
           <?php break; ?>
           
           <?php case 'share' : ?>
-          		<li class="share_section " data-index="<?php echo $index; ?>"  id="sfsi_plus_shareIcon_order">
+          		<li class="sfsiplus_share_section " data-index="<?php echo $index; ?>"  id="sfsi_plus_shareIcon_order">
                 	<a href="#" title="Share" ><img src="<?php echo SFSI_PLUS_PLUGURL; ?>images/share.png" alt="Share" /></a>
                 </li>
           <?php break; ?>
           
           <?php case 'youtube' :?>
-          		<li class="youtube_section " data-index="<?php echo $index; ?>" id="sfsi_plus_youtubeIcon_order">
+          		<li class="sfsiplus_youtube_section " data-index="<?php echo $index; ?>" id="sfsi_plus_youtubeIcon_order">
                 	<a href="#" title="YouTube" ><img src="<?php echo SFSI_PLUS_PLUGURL; ?>images/youtube.png" alt="YouTube" /></a>
                 </li>
           <?php break; ?>
           
           <?php case 'pinterest' :?>
-          		<li class="pinterest_section " data-index="<?php echo $index; ?>" id="sfsi_plus_pinterestIcon_order">
+          		<li class="sfsiplus_pinterest_section " data-index="<?php echo $index; ?>" id="sfsi_plus_pinterestIcon_order">
                 	<a href="#" title="Pinterest" ><img src="<?php echo SFSI_PLUS_PLUGURL; ?>images/pinterest.png" alt="Pinterest" /></a>
                 </li>
           <?php break; ?>
           
           <?php case 'linkedin' :?>
-          		<li class="linkedin_section " data-index="<?php echo $index; ?>" id="sfsi_plus_linkedinIcon_order">
+          		<li class="sfsiplus_linkedin_section " data-index="<?php echo $index; ?>" id="sfsi_plus_linkedinIcon_order">
                 	<a href="#" title="Linked In" ><img src="<?php echo SFSI_PLUS_PLUGURL; ?>images/linked_in.png" alt="Linked In" /></a>
                 </li>
           <?php break; ?>
           
           <?php case 'instagram' :?>
-          		<li class="instagram_section " data-index="<?php echo $index; ?>" id="sfsi_plus_instagramIcon_order">
+          		<li class="sfsiplus_instagram_section " data-index="<?php echo $index; ?>" id="sfsi_plus_instagramIcon_order">
                 	<a href="#" title="Instagram" ><img src="<?php echo SFSI_PLUS_PLUGURL; ?>images/instagram.png" alt="Instagram" /></a>
                 </li>
           <?php break; ?>
@@ -124,7 +124,7 @@
     
     <div class="row new_wind">
 	<h4>New window</h4>
-	<div class="row_onl"><p>If user clicks on your icons, do you want to open the page in a new window?</p>
+	<div class="sfsiplus_row_onl"><p>If user clicks on your icons, do you want to open the page in a new window?</p>
 	<ul class="enough_waffling">
 	    <li><input name="sfsi_plus_icons_ClickPageOpen" <?php echo ($option5['sfsi_plus_icons_ClickPageOpen']=='yes') ?  'checked="true"' : '' ;?> type="radio" value="yes" class="styled"  /><label>Yes</label></li>
 	<li><input name="sfsi_plus_icons_ClickPageOpen" <?php echo ($option5['sfsi_plus_icons_ClickPageOpen']=='no') ?  'checked="true"' : '' ;?> type="radio" value="no" class="styled" /><label>No</label></li>
@@ -168,51 +168,51 @@
 here what text will be displayed if a user moves his mouse over the icon:</p>
 	<div class="space">
 	<div class="clear"></div>
-		<div class="mouseover_field rss_section">
+		<div class="mouseover_field sfsiplus_rss_section">
 			<label>RSS:</label><input name="sfsi_plus_rss_MouseOverText" value="<?php echo ($option5['sfsi_plus_rss_MouseOverText']!='') ?  $option5['sfsi_plus_rss_MouseOverText'] : '' ;?>" type="text" />
 		</div>
-		<div class="mouseover_field email_section">
+		<div class="mouseover_field sfsiplus_email_section">
 			<label>Email:</label><input name="sfsi_plus_email_MouseOverText" value="<?php echo ($option5['sfsi_plus_email_MouseOverText']!='') ?  $option5['sfsi_plus_email_MouseOverText'] : '' ;?>" type="text" />
 		</div>
 		
 		<div class="clear">
-		<div class="mouseover_field twitter_section">
+		<div class="mouseover_field sfsiplus_twitter_section">
 			<label>Twitter:</label>
 			<input name="sfsi_plus_twitter_MouseOverText" value="<?php echo ($option5['sfsi_plus_twitter_MouseOverText']!='') ?  $option5['sfsi_plus_twitter_MouseOverText'] : '' ;?>" type="text" />
 		</div>
-		<div class="mouseover_field facebook_section">
+		<div class="mouseover_field sfsiplus_facebook_section">
 			<label>Facebook:</label>
 			<input name="sfsi_plus_facebook_MouseOverText" value="<?php echo ($option5['sfsi_plus_facebook_MouseOverText']!='') ?  $option5['sfsi_plus_facebook_MouseOverText'] : '' ;?>" type="text" />
 		</div>
 		</div>
 		<div class="clear">
-		<div class="mouseover_field google_section">
+		<div class="mouseover_field sfsiplus_google_section">
 			<label>Google:</label>
 			<input name="sfsi_plus_google_MouseOverText" value="<?php echo ($option5['sfsi_plus_google_MouseOverText']!='') ?  $option5['sfsi_plus_google_MouseOverText'] : '' ;?>"  type="text" />
 		</div>
-		<div class="mouseover_field linkedin_section">
+		<div class="mouseover_field sfsiplus_linkedin_section">
 			<label>LinkedIn:</label>
 			<input name="sfsi_plus_linkedIn_MouseOverText" value="<?php echo ($option5['sfsi_plus_linkedIn_MouseOverText']!='') ?  $option5['sfsi_plus_linkedIn_MouseOverText'] : '' ;?>"  type="text" />
 		</div>
 		</div>
 		<div class="clear">
-		<div class="mouseover_field pinterest_section">
+		<div class="mouseover_field sfsiplus_pinterest_section">
 			<label>Pinterest:</label>
 			<input name="sfsi_plus_pinterest_MouseOverText" value="<?php echo ($option5['sfsi_plus_pinterest_MouseOverText']!='') ?  $option5['sfsi_plus_pinterest_MouseOverText'] : '' ;?>" type="text" />
 		</div>
-		<div class="mouseover_field youtube_section">
+		<div class="mouseover_field sfsiplus_youtube_section">
 			<label>Youtube:</label>
 			<input name="sfsi_plus_youtube_MouseOverText" value="<?php echo ($option5['sfsi_plus_youtube_MouseOverText']!='') ?  $option5['sfsi_plus_youtube_MouseOverText'] : '' ;?>" type="text" />
 		</div>
 		</div>
 		<div class="clear">
-		    <div class="mouseover_field instagram_section">
+		    <div class="mouseover_field sfsiplus_instagram_section">
 			<label>Instagram:</label>
 			<input name="sfsi_plus_instagram_MouseOverText" value="<?php echo ($option5['sfsi_plus_instagram_MouseOverText']!='') ?  $option5['sfsi_plus_instagram_MouseOverText'] : '' ;?>" type="text" />
 		    </div>
 		</div>
 		<!--<div class="clear">
-		<div class="mouseover_field share_section">
+		<div class="mouseover_field sfsiplus_share_section">
 			<label>Share:</label>
 			<input name="sfsi_plus_share_MouseOverText" value="<?php //echo ($option5['sfsi_plus_share_MouseOverText']!='') ?  $option5['sfsi_plus_share_MouseOverText'] : '' ;?>" type="text" />
 		</div>
@@ -225,7 +225,7 @@ here what text will be displayed if a user moves his mouse over the icon:</p>
                     $count=1; for($i=$first_key;$i<=$endkey;$i++) : ?> 
                  <?php if(!empty( $icons[$i])) : ?>
                     
-                    <div class="mouseover_field custom_section sfsiICON_<?php echo $i; ?>">
+                    <div class="mouseover_field sfsiplus_custom_section sfsiICON_<?php echo $i; ?>">
 			<label>Custom <?php echo $count; ?>:</label>
 			<input name="sfsi_plus_custom_MouseOverTexts[]" value="<?php echo (isset($sfsiMouseOverTexts[$i]) && $sfsiMouseOverTexts[$i]!='') ?  $sfsiMouseOverTexts[$i] : '' ;?>" type="text" file-id="<?php echo $i; ?>" />
                     </div>

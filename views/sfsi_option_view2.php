@@ -7,7 +7,7 @@
 <!-- Section 2 "What do you want the icons to do?" main div Start -->
 <div class="tab2">
       <!-- RSS ICON -->
-    <div class="row bdr_top rss_section">
+    <div class="row bdr_top sfsiplus_rss_section">
     <h2 class="sfsicls_rs_s">RSS</h2>
         <div class="inr_cont">
             <p>When clicked on, users can subscribe via RSS</p>
@@ -19,7 +19,7 @@
     
     <!-- EMAIL ICON -->
     <?php $feedId=get_option('sfsi_plus_feed_id',false);?>
-    <div class="row email_section">
+    <div class="row sfsiplus_email_section">
         <h2 class="sfsicls_email">Email</h2>
         <div class="inr_cont">
          <p>When people click on this icon, they will see <a href="http://www.specificfeeds.com/widget/emailsubscribe/<?php echo base64_encode($feedId); ?>/<?php echo base64_encode(8); ?>" target="_new">your subscription screen</a> where they can select which messages they want to receive from your RSS feed (by email).  The service is 100% FREE, fully automatic and also makes sense if you already offer an email newsletter <a href="http://specificfeeds.com/rss" target="_new">(learn more)</a>. </p>
@@ -32,7 +32,7 @@
     </div><!-- END EMAIL ICON -->
     
      <!-- FACEBOOK ICON -->
-    <div class="row facebook_section">
+    <div class="row sfsiplus_facebook_section">
     <h2 class="sfsicls_facebook">Facebook</h2>
         <div class="inr_cont">
         <p>The facebook icon can perform several actions. Pick below which ones it should perform. If you select several options, then users can select what they want to do <a class="rit_link pop-up" href="javascript:;"  data-id="fbex-s2">(see an example)</a>.</p>
@@ -48,7 +48,7 @@
     </div><!-- END FACEBOOK ICON -->
     
    <!-- TWITTER ICON -->
-    <div class="row twitter_section">
+    <div class="row sfsiplus_twitter_section">
     <h2 class="sfsicls_twt">Twitter</h2>
         <div class="inr_cont twt_tab_2">
          <p>The Twitter icon can perform several actions. Pick below which ones it should perform. If you select several options, then users can select what they want to do <a class="rit_link pop-up" href="javascript:;"  data-id="twex-s2">(see an example)</a>.</p> 
@@ -62,7 +62,7 @@
     </div><!-- END TWITTER ICON -->
     
       <!-- GOOGLE ICON -->
-    <div class="row google_section">
+    <div class="row sfsiplus_google_section">
     <h2 class="sfsicls_ggle_pls">Google+</h2>
         <div class="inr_cont google_in">
         <p>The Google+ icon can perform several actions. Pick below which ones it should perform. If you select several options, then users can select what they want to do <a class="rit_link pop-up" href="javascript:;"  data-id="googlex-s2">(see an example)</a>.</p> 
@@ -74,7 +74,7 @@
     </div><!-- END GOOGLE ICON -->
     
     <!-- YOUTUBE ICON -->
-    <div class="row youtube_section">
+    <div class="row sfsiplus_youtube_section">
     <h2 class="sfsicls_utube">Youtube</h2>
         <div class="inr_cont utube_inn">
         <p>The Youtube icon can perform several actions. Pick below which ones it should perform. If you select several options, then users can select what they want to do  <a class="rit_link pop-up" href="javascript:;"  data-id="ytex-s2">(see an example)</a>.</p> 
@@ -117,7 +117,7 @@
     </div><!-- END YOUTUBE ICON -->
     
      <!-- PINTEREST ICON -->
-    <div class="row pinterest_section">
+    <div class="row sfsiplus_pinterest_section">
     <h2 class="sfsicls_pinterest">Pinterest</h2>
         <div class="inr_cont">
         <p>The Pinterest icon can perform several actions. Pick below which ones it should perform. If you select several options, then users can select what they want to do   <a class="rit_link pop-up" href="javascript:;"  data-id="pinex-s2">(see an example)</a>.</p> 
@@ -129,7 +129,7 @@
     </div><!-- END PINTEREST ICON -->
     
     <!-- INSTAGRAM ICON -->
-    <div class="row instagram_section">
+    <div class="row sfsiplus_instagram_section">
     <h2 class="sfsicls_instagram">Instagram</h2>
         <div class="inr_cont">
         <p>When clicked on, users will get directed to your Instagram page.</p> 
@@ -138,7 +138,7 @@
     </div><!-- END INSTAGRAM ICON -->
     
      <!-- LINKEDIN ICON -->
-    <div class="row linkedin_section">
+    <div class="row sfsiplus_linkedin_section">
     <h2 class="sfsicls_linkdin">LinkedIn</h2>
         <div class="inr_cont linked_tab_2 link_in">
         <p>The LinkedIn icon can perform several actions. Pick below which ones it should perform. If you select several options, then users can select what they want to do <a class="rit_link pop-up" href="javascript:;"  data-id="linkex-s2">(see an example)</a>.</p> 
@@ -155,7 +155,7 @@
     </div><!-- END LINKEDIN ICON -->
     
     <!-- share button -->
-    <div class="row share_section">
+    <div class="row sfsiplus_share_section">
     <h2 class="sfsicls_share">Share</h2>
         <div class="inr_cont">
         <p>Nothing needs to be done here – your visitors to share your site via «all the other» social media sites.  <a class="rit_link pop-up" href="javascript:;"  data-id="share-s2">(see an example).</a></p> 
@@ -163,7 +163,7 @@
     </div>
     <!-- share end -->
     <!-- Custom icon section start here -->
-   <div class="plus_custom-links custom_section">
+   <div class="plus_custom-links sfsiplus_custom_section">
 	<?php 
 	  $costom_links=  unserialize($option2['sfsi_plus_CustomIcon_links']);
 	  $count=1; for($i=$first_key;$i<=$endkey;$i++) : ?> 
@@ -174,7 +174,7 @@
 	   <div class="inr_cont ">
 	   <p>Where do you want this icon to link to?</p> 
 	 
-	   <p class="radio_section fb_url custom_section cus_link " ><label>Link :</label><input name="sfsi_plus_CustomIcon_links[]" type="text" value="<?php echo (isset($costom_links[$i]) && $costom_links[$i]!='') ?  $costom_links[$i] : '' ;?>" placeholder="http://" class="add" file-id="<?php echo $i; ?>" /></p>
+	   <p class="radio_section fb_url sfsiplus_custom_section cus_link " ><label>Link :</label><input name="sfsi_plus_CustomIcon_links[]" type="text" value="<?php echo (isset($costom_links[$i]) && $costom_links[$i]!='') ?  $costom_links[$i] : '' ;?>" placeholder="http://" class="add" file-id="<?php echo $i; ?>" /></p>
 	
 	   </div>
        </div>

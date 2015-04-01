@@ -148,7 +148,7 @@ function sfsi_plus_shuffle() {
     var s = [];
     SFSI(".sfsi_plus_wicons ").each(function(i) {
         SFSI(this).text().match(/^\s*$/) || (s[i] = "<div class='" + SFSI(this).attr("class") + "'>" + SFSI(this).html() + "</div>", 
-        SFSI(this).fadeOut("slow"), SFSI(this).insertBefore(SFSI(this).prev(".sfsi_wicons")), 
+        SFSI(this).fadeOut("slow"), SFSI(this).insertBefore(SFSI(this).prev(".sfsi_plus_wicons")), 
         SFSI(this).fadeIn("slow"));
     }), s = sfsiplus_Shuffle(s), $("#sfsi_plus_wDiv").html("");
     for (var i = 0; i < testArray.length; i++) $("#sfsi_plus_wDiv").append(s[i]);
@@ -192,28 +192,28 @@ SFSI(document).ready(function(s) {
     SFSI(document).click(function(s) {
         var i = SFSI(".sfsi_plus_FrntInner"), e = SFSI(".sfsi_plus_wDiv"), t = SFSI("#at15s");
         i.is(s.target) || 0 !== i.has(s.target).length || e.is(s.target) || 0 !== e.has(s.target).length || t.is(s.target) || 0 !== t.has(s.target).length || i.fadeOut();
-    }), SFSI(".sfsi_plus_outr_div").find(".addthis_button").mousemove(function() {
-        var s = SFSI(".sfsi_plus_outr_div").find(".addthis_button").offset().top + 10;
+    }), SFSI(".sfsi_plus_outr_div").find(".sfsiplus_addthis_button").mousemove(function() {
+        var s = SFSI(".sfsi_plus_outr_div").find(".sfsiplus_addthis_button").offset().top + 10;
         SFSI("#at15s").css({
             top:s + "px",
-            left:SFSI(".sfsi_plus_outr_div").find(".addthis_button").offset().left + "px"
+            left:SFSI(".sfsi_plus_outr_div").find(".sfsiplus_addthis_button").offset().left + "px"
         });
-    }), SFSI("div#sfsiid_linkedin").find(".icon4").find("a").find("img").mouseover(function() {
+    }), SFSI("div#sfsiplusid_linkedin").find(".icon4").find("a").find("img").mouseover(function() {
         SFSI(this).attr("src", ajax_object.plugin_url + "images/visit_icons/linkedIn_hover.svg");
-    }), SFSI("div#sfsiid_linkedin").find(".icon4").find("a").find("img").mouseleave(function() {
+    }), SFSI("div#sfsiplusid_linkedin").find(".icon4").find("a").find("img").mouseleave(function() {
         SFSI(this).attr("src", ajax_object.plugin_url + "images/visit_icons/linkedIn.svg");
-    }), SFSI("div#sfsiid_youtube").find(".icon1").find("a").find("img").mouseover(function() {
+    }), SFSI("div#sfsiplusid_youtube").find(".icon1").find("a").find("img").mouseover(function() {
         SFSI(this).attr("src", ajax_object.plugin_url + "images/visit_icons/youtube_hover.svg");
-    }), SFSI("div#sfsiid_youtube").find(".icon1").find("a").find("img").mouseleave(function() {
+    }), SFSI("div#sfsiplusid_youtube").find(".icon1").find("a").find("img").mouseleave(function() {
         SFSI(this).attr("src", ajax_object.plugin_url + "images/visit_icons/youtube.svg");
-    }), SFSI("div#sfsiid_facebook").find(".icon1").find("a").find("img").mouseover(function() {
+    }), SFSI("div#sfsiplusid_facebook").find(".icon1").find("a").find("img").mouseover(function() {
         SFSI(this).css("opacity", "0.9");
-    }), SFSI("div#sfsiid_facebook").find(".icon1").find("a").find("img").mouseleave(function() {
+    }), SFSI("div#sfsiplusid_facebook").find(".icon1").find("a").find("img").mouseleave(function() {
         SFSI(this).css("opacity", "1");
 		/*{Monad}*/
-    }), SFSI("div#sfsiid_twitter").find(".cstmicon1").find("a").find("img").mouseover(function() {
+    }), SFSI("div#sfsiplusid_twitter").find(".cstmicon1").find("a").find("img").mouseover(function() {
         SFSI(this).css("opacity", "0.9");
-    }), SFSI("div#sfsiid_twitter").find(".cstmicon1").find("a").find("img").mouseleave(function() {
+    }), SFSI("div#sfsiplusid_twitter").find(".cstmicon1").find("a").find("img").mouseleave(function() {
         SFSI(this).css("opacity", "1");
     }), SFSI(".pop-up").on("click", function() {
         ("fbex-s2" == SFSI(this).attr("data-id") || "googlex-s2" == SFSI(this).attr("data-id") || "linkex-s2" == SFSI(this).attr("data-id")) && (SFSI("." + SFSI(this).attr("data-id")).hide(), 
@@ -232,9 +232,9 @@ SFSI(document).ready(function(s) {
     }), /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ? SFSI("img.sfsi_wicon").on("click", function(s) {
         s.stopPropagation();
         var i = SFSI("#sfsi_plus_floater_sec").val();
-        SFSI("div.sfsi_wicons").css("z-index", "0"), SFSI(this).parent().parent().parent().siblings("div.sfsi_wicons").find(".inerCnt").find("div.sfsi_tool_tip_2").hide(), 
+        SFSI("div.sfsi_plus_wicons").css("z-index", "0"), SFSI(this).parent().parent().parent().siblings("div.sfsi_plus_wicons").find(".sfsiplus_inerCnt").find("div.sfsi_tool_tip_2").hide(), 
         SFSI(this).parent().parent().parent().parent().siblings("li").length > 0 && (SFSI(this).parent().parent().parent().parent().siblings("li").find("div.sfsi_tool_tip_2").css("z-index", "0"), 
-        SFSI(this).parent().parent().parent().parent().siblings("li").find("div.sfsi_wicons").find(".inerCnt").find("div.sfsi_tool_tip_2").hide()), 
+        SFSI(this).parent().parent().parent().parent().siblings("li").find("div.sfsi_plus_wicons").find(".sfsiplus_inerCnt").find("div.sfsi_tool_tip_2").hide()), 
         SFSI(this).parent().parent().parent().css("z-index", "1000000"), SFSI(this).parent().parent().css({
             "z-index":"999"
         }), SFSI(this).attr("effect") && "fade_in" == SFSI(this).attr("effect") && (SFSI(this).parentsUntil("div").siblings("div.sfsi_tool_tip_2").css({
@@ -261,9 +261,9 @@ SFSI(document).ready(function(s) {
         }), SFSI(this).parentsUntil("div").siblings("div.sfsi_tool_tip_2").show());
     }) :SFSI("img.sfsi_wicon").on("mouseenter", function() {
         var s = SFSI("#sfsi_plus_floater_sec").val();
-        SFSI("div.sfsi_wicons").css("z-index", "0"), SFSI(this).parent().parent().parent().siblings("div.sfsi_wicons").find(".inerCnt").find("div.sfsi_tool_tip_2").hide(), 
+        SFSI("div.sfsi_plus_wicons").css("z-index", "0"), SFSI(this).parent().parent().parent().siblings("div.sfsi_plus_wicons").find(".sfsiplus_inerCnt").find("div.sfsi_tool_tip_2").hide(), 
         SFSI(this).parent().parent().parent().parent().siblings("li").length > 0 && (SFSI(this).parent().parent().parent().parent().siblings("li").find("div.sfsi_tool_tip_2").css("z-index", "0"), 
-        SFSI(this).parent().parent().parent().parent().siblings("li").find("div.sfsi_wicons").find(".inerCnt").find("div.sfsi_tool_tip_2").hide()), 
+        SFSI(this).parent().parent().parent().parent().siblings("li").find("div.sfsi_plus_wicons").find(".sfsiplus_inerCnt").find("div.sfsi_tool_tip_2").hide()), 
         SFSI(this).parent().parent().parent().css("z-index", "1000000"), SFSI(this).parent().parent().css({
             "z-index":"999"
         }), SFSI(this).attr("effect") && "fade_in" == SFSI(this).attr("effect") && (SFSI(this).parentsUntil("div").siblings("div.sfsi_tool_tip_2").css({
@@ -288,17 +288,17 @@ SFSI(document).ready(function(s) {
             opacity:1,
             "z-index":10
         }), SFSI(this).parentsUntil("div").siblings("div.sfsi_tool_tip_2").show());
-    }), SFSI("div.sfsi_wicons").on("mouseleave", function() {
-		SFSI(this).children("div.inerCnt").children("a.sficn").attr("effect") && "fade_in" == SFSI(this).children("div.inerCnt").children("a.sficn").attr("effect") && SFSI(this).children("div.inerCnt").find("a.sficn").css("opacity", "0.6"), 
-        SFSI(this).children("div.inerCnt").children("a.sficn").attr("effect") && "scale" == SFSI(this).children("div.inerCnt").children("a.sficn").attr("effect") && SFSI(this).children("div.inerCnt").find("a.sficn").removeClass("scale"), 
-        SFSI(this).children("div.inerCnt").children("a.sficn").attr("effect") && "combo" == SFSI(this).children("div.inerCnt").children("a.sficn").attr("effect") && (SFSI(this).children("div.inerCnt").find("a.sficn").css("opacity", "0.6"), 
-        SFSI(this).children("div.inerCnt").find("a.sficn").removeClass("scale")), "sfsiid_google" == SFSI(this).children("div.inerCnt").find("a.sficn").attr("id") ? SFSI("body").on("click", function() {
-            SFSI(this).children(".inerCnt").find("div.sfsi_tool_tip_2").hide();
+    }), SFSI("div.sfsi_plus_wicons").on("mouseleave", function() {
+		SFSI(this).children("div.sfsiplus_inerCnt").children("a.sficn").attr("effect") && "fade_in" == SFSI(this).children("div.sfsiplus_inerCnt").children("a.sficn").attr("effect") && SFSI(this).children("div.sfsiplus_inerCnt").find("a.sficn").css("opacity", "0.6"), 
+        SFSI(this).children("div.sfsiplus_inerCnt").children("a.sficn").attr("effect") && "scale" == SFSI(this).children("div.sfsiplus_inerCnt").children("a.sficn").attr("effect") && SFSI(this).children("div.sfsiplus_inerCnt").find("a.sficn").removeClass("scale"), 
+        SFSI(this).children("div.sfsiplus_inerCnt").children("a.sficn").attr("effect") && "combo" == SFSI(this).children("div.sfsiplus_inerCnt").children("a.sficn").attr("effect") && (SFSI(this).children("div.sfsiplus_inerCnt").find("a.sficn").css("opacity", "0.6"), 
+        SFSI(this).children("div.sfsiplus_inerCnt").find("a.sficn").removeClass("scale")), "sfsiplusid_google" == SFSI(this).children("div.sfsiplus_inerCnt").find("a.sficn").attr("id") ? SFSI("body").on("click", function() {
+            SFSI(this).children(".sfsiplus_inerCnt").find("div.sfsi_tool_tip_2").hide();
         }) :(SFSI(this).css({
             "z-index":"0"
-        }), SFSI(this).children(".inerCnt").find("div.sfsi_tool_tip_2").hide());
+        }), SFSI(this).children(".sfsiplus_inerCnt").find("div.sfsi_tool_tip_2").hide());
     }), SFSI("body").on("click", function() {
-        SFSI(".inerCnt").find("div.sfsi_tool_tip_2").hide();
+        SFSI(".sfsiplus_inerCnt").find("div.sfsi_tool_tip_2").hide();
     }), SFSI(".adminTooltip >a").on("hover", function() {
         SFSI(this).offset().top, SFSI(this).parent("div").find("div.sfsi_tool_tip_2_inr").css("opacity", "1"), 
         SFSI(this).parent("div").find("div.sfsi_tool_tip_2_inr").show();
@@ -313,7 +313,7 @@ SFSI(document).ready(function(s) {
         SFSI(this).text("Read more"));
     }), SFSI(".sfsi_plus_wDiv").length > 0 && setTimeout(function() {
         var s = parseInt(SFSI(".sfsi_plus_wDiv").height()) + 15 + "px";
-        SFSI(".sfsi_holders").each(function() {
+        SFSI(".sfsi_plus_holders").each(function() {
             SFSI(this).css("height", s);
         });
     }, 200);

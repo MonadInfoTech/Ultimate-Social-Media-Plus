@@ -11,16 +11,16 @@
 	<div class="sfsi_plus_Popinner">
 <h2>Enjoy this site? Please follow and like us!</h2>
 	<ul class="like_icon plus_sfsi_sample_icons">
-    	 <li class="rss_section"><div><img src="<?php echo SFSI_PLUS_PLUGURL ?>images/rss.png" alt="RSS" /><span class="sfsi_Cdisplay" id="sfsi_plus_rss_countsDisplay">12k</span></div></li>
-        <li class="email_section"><div><img src="<?php echo SFSI_PLUS_PLUGURL ?>images/<?php echo $email_image; ?>" alt="Email" class="icon_img" /><span class="sfsi_Cdisplay" id="sfsi_plus_email_countsDisplay">12k</span></div></li>
-        <li class="facebook_section"><div><img src="<?php echo SFSI_PLUS_PLUGURL ?>images/facebook.png" alt="Facebook" /><span class="sfsi_Cdisplay" id="sfsi_plus_facebook_countsDisplay">12k</span></div></li>
-        <li class="google_section"><div><img src="<?php echo SFSI_PLUS_PLUGURL ?>images/google_plus.png" alt="Google Plus" /><span class="sfsi_Cdisplay" id="sfsi_plus_google_countsDisplay">12k</span></div></li>
-        <li class="twitter_section"><div><img src="<?php echo SFSI_PLUS_PLUGURL ?>images/twitter.png" alt="Twitter" /><span class="sfsi_Cdisplay" id="sfsi_plus_twitter_countsDisplay">12k</span></div></li>
-        <li class="share_section"><div><img src="<?php echo SFSI_PLUS_PLUGURL ?>images/share.png" alt="Share" /><span class="sfsi_Cdisplay" id="sfsi_plus_shares_countsDisplay">12k</span></div></li>
-        <li class="youtube_section"><div><img src="<?php echo SFSI_PLUS_PLUGURL ?>images/youtube.png" alt="YouTube" /><span class="sfsi_Cdisplay" id="sfsi_plus_youtube_countsDisplay">12k</span></div></li>
-        <li class="pinterest_section"><div><img src="<?php echo SFSI_PLUS_PLUGURL ?>images/pinterest.png" alt="Pinterest" /><span class="sfsi_Cdisplay" id="sfsi_plus_pinterest_countsDisplay">12k</span></div></li>
-        <li class="linkedin_section"><div><img src="<?php echo SFSI_PLUS_PLUGURL ?>images/linked_in.png" alt="Linked In" /><span class="sfsi_Cdisplay" id="sfsi_plus_linkedIn_countsDisplay">12k</span></div></li>
-	<li class="instagram_section"><div><img src="<?php echo SFSI_PLUS_PLUGURL ?>images/instagram.png" alt="Instagram" /><span class="sfsi_Cdisplay" id="sfsi_plus_instagram_countsDisplay">12k</span></div></li>
+    	 <li class="sfsiplus_rss_section"><div><img src="<?php echo SFSI_PLUS_PLUGURL ?>images/rss.png" alt="RSS" /><span class="sfsi_Cdisplay" id="sfsi_plus_rss_countsDisplay">12k</span></div></li>
+        <li class="sfsiplus_email_section"><div><img src="<?php echo SFSI_PLUS_PLUGURL ?>images/<?php echo $email_image; ?>" alt="Email" class="icon_img" /><span class="sfsi_Cdisplay" id="sfsi_plus_email_countsDisplay">12k</span></div></li>
+        <li class="sfsiplus_facebook_section"><div><img src="<?php echo SFSI_PLUS_PLUGURL ?>images/facebook.png" alt="Facebook" /><span class="sfsi_Cdisplay" id="sfsi_plus_facebook_countsDisplay">12k</span></div></li>
+        <li class="sfsiplus_google_section"><div><img src="<?php echo SFSI_PLUS_PLUGURL ?>images/google_plus.png" alt="Google Plus" /><span class="sfsi_Cdisplay" id="sfsi_plus_google_countsDisplay">12k</span></div></li>
+        <li class="sfsiplus_twitter_section"><div><img src="<?php echo SFSI_PLUS_PLUGURL ?>images/twitter.png" alt="Twitter" /><span class="sfsi_Cdisplay" id="sfsi_plus_twitter_countsDisplay">12k</span></div></li>
+        <li class="sfsiplus_share_section"><div><img src="<?php echo SFSI_PLUS_PLUGURL ?>images/share.png" alt="Share" /><span class="sfsi_Cdisplay" id="sfsi_plus_shares_countsDisplay">12k</span></div></li>
+        <li class="sfsiplus_youtube_section"><div><img src="<?php echo SFSI_PLUS_PLUGURL ?>images/youtube.png" alt="YouTube" /><span class="sfsi_Cdisplay" id="sfsi_plus_youtube_countsDisplay">12k</span></div></li>
+        <li class="sfsiplus_pinterest_section"><div><img src="<?php echo SFSI_PLUS_PLUGURL ?>images/pinterest.png" alt="Pinterest" /><span class="sfsi_Cdisplay" id="sfsi_plus_pinterest_countsDisplay">12k</span></div></li>
+        <li class="sfsiplus_linkedin_section"><div><img src="<?php echo SFSI_PLUS_PLUGURL ?>images/linked_in.png" alt="Linked In" /><span class="sfsi_Cdisplay" id="sfsi_plus_linkedIn_countsDisplay">12k</span></div></li>
+	<li class="sfsiplus_instagram_section"><div><img src="<?php echo SFSI_PLUS_PLUGURL ?>images/instagram.png" alt="Instagram" /><span class="sfsi_Cdisplay" id="sfsi_plus_instagram_countsDisplay">12k</span></div></li>
 	<?php
 		if(isset($icons) && !empty($icons))
 		{
@@ -28,7 +28,7 @@
 			{
 				foreach($icons as $icn =>$img)
 				{
-					echo '<li class="custom_section sfsiICON_'.$icn.'"  element-id="'.$icn.'" ><div><img src="'.$img.'" alt="Custom Icon" class="sfcm" /><span class="sfsi_Cdisplay">12k</span></div></li>';
+					echo '<li class="sfsiplus_custom_section sfsiICON_'.$icn.'"  element-id="'.$icn.'" ><div><img src="'.$img.'" alt="Custom Icon" class="sfcm" /><span class="sfsi_Cdisplay">12k</span></div></li>';
 				}
 			}
 		}
@@ -42,10 +42,10 @@
 	<h4>Text &amp; Design</h4>
 	<div class="text_options">
 		<h3>Text Options</h3>
-		<div class="row_tab">
+		<div class="sfsiplus_row_tab">
                     <label>Text:</label><input class="mkPop" name="sfsi_plus_popup_text" type="text" value="<?php echo ($option7['sfsi_plus_popup_text']!='') ?  $option7['sfsi_plus_popup_text'] : '' ;?>" />
 		</div>
-		<div class="row_tab">
+		<div class="sfsiplus_row_tab">
 			<label>Font:</label>
                         <div class="field">
                             <select name="sfsi_plus_popup_font" id="sfsi_plus_popup_font" class="styled">
@@ -66,7 +66,7 @@
                             </select>
                         </div>
 		</div>
-		<div class="row_tab">
+		<div class="sfsiplus_row_tab">
 			<label>Font style:</label>
 			<div class="field">
                             <select name="sfsi_plus_popup_fontStyle" id="sfsi_plus_popup_fontStyle" class="styled">
@@ -77,21 +77,21 @@
                             </select>
                         </div>
 		</div>
-		<div class="row_tab">
+		<div class="sfsiplus_row_tab">
 			<label>Font color:</label>
                         <input name="sfsi_plus_popup_fontColor" id="sfsi_plus_popup_fontColor" type="text" value="<?php echo ($option7['sfsi_plus_popup_fontColor']!='') ?  $option7['sfsi_plus_popup_fontColor'] : '' ;?>" class="small mkPop" /><div class="color_box">
 			  <div class="corner"></div>
                           <div class="color_box1" id="sfsifontCloroPicker" style="background: <?php echo ($option7['sfsi_plus_popup_fontColor']!='') ?  $option7['sfsi_plus_popup_fontColor'] : '#ffffff' ; ?>"></div>
 			</div>
 		</div>
-		<div class="row_tab">
+		<div class="sfsiplus_row_tab">
 			<label>Font size:</label>
                         <input name="sfsi_plus_popup_fontSize" type="text" value="<?php echo ($option7['sfsi_plus_popup_fontSize']!='') ?  $option7['sfsi_plus_popup_fontSize'] : '' ;?>" class="small" />
 		</div>
 	</div>
 	<div class="text_options layout">
 		<h3>Icon Box Layout</h3>
-		<div class="row_tab">
+		<div class="sfsiplus_row_tab">
 			<label>Backgroud<br />
 			Color:</label>
                     <input name="sfsi_plus_popup_background_color" id="sfsi_plus_popup_background_color" type="text" value="<?php echo ($option7['sfsi_plus_popup_background_color']!='') ?  $option7['sfsi_plus_popup_background_color'] : '' ;?>" class="small" />
@@ -100,7 +100,7 @@
                           <div class="color_box1" id="sfsiBackgroundColorPicker" style="background: <?php echo ($option7['sfsi_plus_popup_background_color']!='') ?  $option7['sfsi_plus_popup_background_color'] : '#ffffff' ; ?>"></div>
 			</div>
 		</div>
-		<div class="row_tab">
+		<div class="sfsiplus_row_tab">
 			<label class="border">Border Color:</label>
 			<div class="field"><input name="sfsi_plus_popup_border_color" id="sfsi_plus_popup_border_color" type="text" value="<?php echo ($option7['sfsi_plus_popup_border_color']!='') ?  $option7['sfsi_plus_popup_border_color'] : '' ;?>" class="small" />
 			<div class="color_box">
@@ -108,13 +108,13 @@
                           <div class="color_box1" id="sfsiBorderColorPicker" style="background: <?php echo ($option7['sfsi_plus_popup_border_color']!='') ?  $option7['sfsi_plus_popup_border_color'] : '#ffffff' ; ?>"></div>
 			</div></div>
 		</div>
-		<div class="row_tab">
+		<div class="sfsiplus_row_tab">
 			<label>Border<br />
 			Thinckness:</label>
 			<div class="field"><input name="sfsi_plus_popup_border_thickness" type="text" value="<?php echo ($option7['sfsi_plus_popup_border_thickness']!='') ?  $option7['sfsi_plus_popup_border_thickness'] : '' ;?>" class="small" />
 			</div>
 		</div>
-		<div class="row_tab">
+		<div class="sfsiplus_row_tab">
 			<label>Border <br />
 			Shadow:</label>
 			<ul class="border_shadow">

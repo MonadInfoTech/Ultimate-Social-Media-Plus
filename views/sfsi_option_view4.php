@@ -17,16 +17,16 @@
   <p>Therefore, you can select to display the count next to your main icons, for your main icons, not those next to the posts which will look like this:</p>
 	<!-- sample icons --> 
 	<ul class="like_icon">
-        <li class="rss_section"><a href="#" title="RSS"><img src="<?php echo SFSI_PLUS_PLUGURL ?>images/rss.png" alt="RSS" /></a><span>12k</span></li>
-        <li class="email_section"><a href="#" title="Email"><img src="<?php echo SFSI_PLUS_PLUGURL ?>images/<?php echo $email_image; ?>" alt="Email" class="icon_img" /></a><span>12k</span></li>
-        <li class="facebook_section"><a href="#" title="Facebook"><img src="<?php echo SFSI_PLUS_PLUGURL ?>images/facebook.png" alt="Facebook" /></a><span>12k</span></li>
-        <li class="google_section"><a href="#" title="Google Plus"><img src="<?php echo SFSI_PLUS_PLUGURL ?>images/google_plus.png" alt="Google Plus" /></a><span>12k</span></li>
-        <li class="twitter_section"><a href="#" title="Twitter"><img src="<?php echo SFSI_PLUS_PLUGURL ?>images/twitter.png" alt="Twitter" /></a><span>12k</span></li>
-        <li class="share_section"><a href="#" title="Share"><img src="<?php echo SFSI_PLUS_PLUGURL ?>images/share.png" alt="Share" /></a><span>12k</span></li>
-        <li class="youtube_section"><a href="#" title="YouTube"><img src="<?php echo SFSI_PLUS_PLUGURL ?>images/youtube.png" alt="YouTube" /></a><span>12k</span></li>
-        <li class="pinterest_section"><a href="#" title="Pinterest"><img src="<?php echo SFSI_PLUS_PLUGURL ?>images/pinterest.png" alt="Pinterest" /></a><span>12k</span></li>
-        <li class="linkedin_section"><a href="#" title="Linked In"><img src="<?php echo SFSI_PLUS_PLUGURL ?>images/linked_in.png" alt="Linked In" /></a><span>12k</span></li>
-        <li class="instagram_section"><a href="#" title="Instagram"><img src="<?php echo SFSI_PLUS_PLUGURL ?>images/instagram.png" alt="instagram" /></a><span>12k</span></li>
+        <li class="sfsiplus_rss_section"><a href="#" title="RSS"><img src="<?php echo SFSI_PLUS_PLUGURL ?>images/rss.png" alt="RSS" /></a><span>12k</span></li>
+        <li class="sfsiplus_email_section"><a href="#" title="Email"><img src="<?php echo SFSI_PLUS_PLUGURL ?>images/<?php echo $email_image; ?>" alt="Email" class="icon_img" /></a><span>12k</span></li>
+        <li class="sfsiplus_facebook_section"><a href="#" title="Facebook"><img src="<?php echo SFSI_PLUS_PLUGURL ?>images/facebook.png" alt="Facebook" /></a><span>12k</span></li>
+        <li class="sfsiplus_google_section"><a href="#" title="Google Plus"><img src="<?php echo SFSI_PLUS_PLUGURL ?>images/google_plus.png" alt="Google Plus" /></a><span>12k</span></li>
+        <li class="sfsiplus_twitter_section"><a href="#" title="Twitter"><img src="<?php echo SFSI_PLUS_PLUGURL ?>images/twitter.png" alt="Twitter" /></a><span>12k</span></li>
+        <li class="sfsiplus_share_section"><a href="#" title="Share"><img src="<?php echo SFSI_PLUS_PLUGURL ?>images/share.png" alt="Share" /></a><span>12k</span></li>
+        <li class="sfsiplus_youtube_section"><a href="#" title="YouTube"><img src="<?php echo SFSI_PLUS_PLUGURL ?>images/youtube.png" alt="YouTube" /></a><span>12k</span></li>
+        <li class="sfsiplus_pinterest_section"><a href="#" title="Pinterest"><img src="<?php echo SFSI_PLUS_PLUGURL ?>images/pinterest.png" alt="Pinterest" /></a><span>12k</span></li>
+        <li class="sfsiplus_linkedin_section"><a href="#" title="Linked In"><img src="<?php echo SFSI_PLUS_PLUGURL ?>images/linked_in.png" alt="Linked In" /></a><span>12k</span></li>
+        <li class="sfsiplus_instagram_section"><a href="#" title="Instagram"><img src="<?php echo SFSI_PLUS_PLUGURL ?>images/instagram.png" alt="instagram" /></a><span>12k</span></li>
     </ul>  <!-- END sample icons -->
     
   <p>Of course, if you start at 0, you shoot yourself in the foot with that. So we suggest that you only turn this feature on once you have a good number of followers/likes/shares (min. of 20 – no worries if it’s not too many, it should just not be 0).</p>
@@ -38,11 +38,11 @@
   </ul> <!-- END  show/hide counts for icons section --> 
   
   <!-- show/hide counts for all icons section  START --> 
-  <div class="count_sections" style="display:none">
+  <div class="sfsiplus_count_sections" style="display:none">
   
   <h4>Please specify which counts should be shown:</h4>
    <!-- RSS ICON COUNT SECTION-->
-  <div class="specify_counts rss_section">
+  <div class="sfsiplus_specify_counts sfsiplus_rss_section">
 	<div class="radio_section"><input name="sfsi_plus_rss_countsDisplay" <?php echo ($option4['sfsi_plus_rss_countsDisplay']=='yes') ?  'checked="true"' : '' ;?> type="checkbox" value="yes" class="styled"  /></div>
 	<div class="social_icon_like">
 	    <ul class="like_icon">
@@ -57,7 +57,7 @@
   </div>   <!-- END RSS ICON COUNT SECTION-->
   
   <!-- EMAIL ICON COUNT SECTION-->
-  <div class="specify_counts email_section">
+  <div class="sfsiplus_specify_counts sfsiplus_email_section">
 	<div class="radio_section"><input name="sfsi_plus_email_countsDisplay" <?php echo ($option4['sfsi_plus_email_countsDisplay']=='yes') ?  'checked="true"' : '' ;?> type="checkbox" value="yes" class="styled"  /></div>
 	<div class="social_icon_like">
 	    <ul class="like_icon">
@@ -73,7 +73,7 @@
   </div> <!--END  EMAIL  ICON COUNT SECTION--> 
   
   <!-- FACEBOOK ICON COUNT SECTION-->
-  <div class="specify_counts facebook_section">
+  <div class="sfsiplus_specify_counts sfsiplus_facebook_section">
   	<div class="radio_section"><input name="sfsi_plus_facebook_countsDisplay" <?php echo ($option4['sfsi_plus_facebook_countsDisplay']=='yes') ?  'checked="true"' : '' ;?>  type="checkbox" value="yes" class="styled"  /></div>
     <div class="social_icon_like">
     	<ul class="like_icon">
@@ -89,7 +89,7 @@
   </div>   <!-- END FACEBOOK ICON COUNT SECTION-->
   
   <!-- TWITTER ICON COUNT SECTION-->
-  <div class="specify_counts twitter_section">
+  <div class="sfsiplus_specify_counts sfsiplus_twitter_section">
   	<div class="radio_section"><input name="sfsi_plus_twitter_countsDisplay" <?php echo ($option4['sfsi_plus_twitter_countsDisplay']=='yes') ?  'checked="true"' : '' ;?>  type="checkbox" value="yes" class="styled"  /></div>
     <div class="social_icon_like">
     	<ul class="like_icon">
@@ -124,7 +124,7 @@
   </div>  <!--END TWITTER ICON COUNT SECTION-->
   
   <!-- GOOGLE ICON COUNT SECTION-->
-  <div class="specify_counts google_section">
+  <div class="sfsiplus_specify_counts sfsiplus_google_section">
   	<div class="radio_section"><input name="sfsi_plus_google_countsDisplay" <?php echo ($option4['sfsi_plus_google_countsDisplay']=='yes') ?  'checked="true"' : '' ;?>  type="checkbox" value="yes" class="styled"  /></div>
     <div class="social_icon_like">
     	<ul class="like_icon">
@@ -154,7 +154,7 @@
   </div>  <!-- END GOOGLE ICON COUNT SECTION-->
   
   <!-- LINKEDIN ICON COUNT SECTION-->
-  <div class="specify_counts linkedin_section">
+  <div class="sfsiplus_specify_counts sfsiplus_linkedin_section">
   	<div class="radio_section"><input name="sfsi_plus_linkedIn_countsDisplay" <?php echo ($option4['sfsi_plus_linkedIn_countsDisplay']=='yes') ?  'checked="true"' : '' ;?>  type="checkbox" value="yes" class="styled"  /></div>
     <div class="social_icon_like">
     	<ul class="like_icon">
@@ -189,7 +189,7 @@
   </div> <!-- END LINKEDIN ICON COUNT SECTION-->
   
    <!-- YOUTUBE ICON COUNT SECTION-->
-  <div class="specify_counts youtube_section">
+  <div class="sfsiplus_specify_counts sfsiplus_youtube_section">
   	<div class="radio_section"><input name="sfsi_plus_youtube_countsDisplay" <?php echo ($option4['sfsi_plus_youtube_countsDisplay']=='yes') ?  'checked="true"' : '' ;?>  type="checkbox" value="yes" class="styled"  /></div>
     <div class="social_icon_like">
     	<ul class="like_icon">
@@ -206,7 +206,7 @@
   </div><!-- END YOUTUBE ICON COUNT SECTION-->
   
   <!-- PINIT ICON COUNT SECTION-->
-  <div class="specify_counts pinterest_section">
+  <div class="sfsiplus_specify_counts sfsiplus_pinterest_section">
   	<div class="radio_section"><input name="sfsi_plus_pinterest_countsDisplay" <?php echo ($option4['sfsi_plus_pinterest_countsDisplay']=='yes') ?  'checked="true"' : '' ;?>  type="checkbox" value="yes" class="styled"  /></div>
     <div class="social_icon_like">
     	<ul class="like_icon">
@@ -222,7 +222,7 @@
   </div> <!-- END PINIT ICON COUNT SECTION-->
   
    <!-- INSTAGRAM ICON COUNT SECTION-->
-  <div class="specify_counts instagram_section">
+  <div class="sfsiplus_specify_counts sfsiplus_instagram_section">
   	<div class="radio_section"><input name="sfsi_plus_instagram_countsDisplay" <?php echo ($option4['sfsi_plus_instagram_countsDisplay']=='yes') ?  'checked="true"' : '' ;?>  type="checkbox" value="yes" class="styled"  /></div>
     <div class="social_icon_like">
     	<ul class="like_icon">
@@ -239,7 +239,7 @@
   </div>  <!-- END INSTAGRAM ICON COUNT SECTION-->
   
     <!-- ADDTHIS ICON COUNT SECTION-->
-  <div class="specify_counts share_section">
+  <div class="sfsiplus_specify_counts sfsiplus_share_section">
   	<div class="radio_section"><input name="sfsi_plus_shares_countsDisplay" <?php echo ($option4['sfsi_plus_shares_countsDisplay']=='yes') ?  'checked="true"' : '' ;?>  type="checkbox" value="yes" class="styled"  /></div>
     <div class="social_icon_like">
     	<ul class="like_icon">

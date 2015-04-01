@@ -1,11 +1,11 @@
 function sfsi_plus_update_index() {
     var s = 1;
     SFSI("ul.plus_icn_listing li.plus_custom").each(function() {
-        SFSI(this).children("span.custom-txt").html("Custom " + s), s++;
+        SFSI(this).children("span.sfsiplus_custom-txt").html("Custom " + s), s++;
     }), cntt = 1, SFSI("div.cm_lnk").each(function() {
         SFSI(this).find("h2.custom").find("span.sfsiCtxt").html("Custom " + cntt + ":"), 
         cntt++;
-    }), cntt = 1, SFSI("div.plus_custom_m").find("div.custom_section").each(function() {
+    }), cntt = 1, SFSI("div.plus_custom_m").find("div.sfsiplus_custom_section").each(function() {
         SFSI(this).find("label").html("Custom " + cntt + ":"), cntt++;
     });
 }
@@ -40,7 +40,7 @@ function sfsi_plus_delete_CusIcon(s, i) {
                 SFSI(".plus_custom_m").find("div." + attr).remove(), SFSI(".plus_share_icon_order").children("li." + attr).remove(), 
                 SFSI("ul.plus_sfsi_sample_icons").children("li." + attr).remove();
                 var n = e.total_up + 1;
-                4 == e.total_up && SFSI(".plus_icn_listing").append('<li id="plus_c' + t + '" class="plus_custom bdr_btm_non"><div class="radio_section tb_4_ck"><span class="checkbox" dynamic_ele="yes" style="background-position: 0px 0px;"></span><input name="plussfsiICON_' + t + '_display"  type="checkbox" value="yes" class="styled" style="display:none;" element-type="cusotm-icon" isNew="yes" /></div> <span class="plus_custom-img"><img src="' + SFSI("#plugin_url").val() + 'images/custom.png" id="plus_CImg_' + t + '"  /> </span> <span class="custom custom-txt">Custom' + n + ' </span> <div class="right_info"> <p><span>It depends:</span> Upload a custom icon if you have other accounts/websites you want to link to.</p><div class="inputWrapper"></div></li>');
+                4 == e.total_up && SFSI(".plus_icn_listing").append('<li id="plus_c' + t + '" class="plus_custom bdr_btm_non"><div class="radio_section tb_4_ck"><span class="checkbox" dynamic_ele="yes" style="background-position: 0px 0px;"></span><input name="plussfsiICON_' + t + '_display"  type="checkbox" value="yes" class="styled" style="display:none;" element-type="sfsiplus-cusotm-icon" isNew="yes" /></div> <span class="plus_custom-img"><img src="' + SFSI("#plugin_url").val() + 'images/custom.png" id="plus_CImg_' + t + '"  /> </span> <span class="custom sfsiplus_custom-txt">Custom' + n + ' </span> <div class="sfsiplus_right_info"> <p><span>It depends:</span> Upload a custom icon if you have other accounts/websites you want to link to.</p><div class="inputWrapper"></div></li>');
             } else sfsiplus_showErrorSuc("error", "Unkown error , please try again", 1);
             return sfsi_plus_update_index(), plus_update_Sec5Iconorder(), sfsi_plus_update_step1(), sfsi_plus_update_step5(), 
             sfsiplus_afterLoad(), "suc";
@@ -64,14 +64,14 @@ function sfsi_plus_depened_sections() {
     if ("sfsi" == SFSI("input[name='sfsi_plus_rss_icons']:checked").val()) {
         for (i = 0; 16 > i; i++) {
             var s = i + 1, e = 74 * i;
-            SFSI(".row_" + s + "_2").css("background-position", "-588px -" + e + "px");
+            SFSI(".sfsiplus_row_" + s + "_2").css("background-position", "-588px -" + e + "px");
         }
         var t = SFSI(".icon_img").attr("src"), n = t.replace("email.png", "sf_arow_icn.png");
         SFSI(".icon_img").attr("src", n);
     } else {
-        for (SFSI(".row_1_2").css("background-position", "-58px 0"), i = 0; 16 > i; i++) {
+        for (SFSI(".sfsiplus_row_1_2").css("background-position", "-58px 0"), i = 0; 16 > i; i++) {
             var s = i + 1, e = 74 * i;
-            SFSI(".row_" + s + "_2").css("background-position", "-58px -" + e + "px");
+            SFSI(".sfsiplus_row_" + s + "_2").css("background-position", "-58px -" + e + "px");
         }
         var t = SFSI(".icon_img").attr("src");
         if (t) {
@@ -79,17 +79,17 @@ function sfsi_plus_depened_sections() {
             SFSI(".icon_img").attr("src", n);
         }
     }
-    SFSI("input[name='sfsi_plus_rss_display']").prop("checked") ? sfsi_plus_section_Display("rss_section", "show") :sfsi_plus_section_Display("rss_section", "hide"), 
-    SFSI("input[name='sfsi_plus_email_display']").prop("checked") ? sfsi_plus_section_Display("email_section", "show") :sfsi_plus_section_Display("email_section", "hide"), 
-    SFSI("input[name='sfsi_plus_facebook_display']").prop("checked") ? sfsi_plus_section_Display("facebook_section", "show") :sfsi_plus_section_Display("facebook_section", "hide"), 
-    SFSI("input[name='sfsi_plus_twitter_display']").prop("checked") ? sfsi_plus_section_Display("twitter_section", "show") :sfsi_plus_section_Display("twitter_section", "hide"), 
-    SFSI("input[name='sfsi_plus_google_display']").prop("checked") ? sfsi_plus_section_Display("google_section", "show") :sfsi_plus_section_Display("google_section", "hide"), 
-    SFSI("input[name='sfsi_plus_share_display']").prop("checked") ? sfsi_plus_section_Display("share_section", "show") :sfsi_plus_section_Display("share_section", "hide"), 
-    SFSI("input[name='sfsi_plus_youtube_display']").prop("checked") ? sfsi_plus_section_Display("youtube_section", "show") :sfsi_plus_section_Display("youtube_section", "hide"), 
-    SFSI("input[name='sfsi_plus_pinterest_display']").prop("checked") ? sfsi_plus_section_Display("pinterest_section", "show") :sfsi_plus_section_Display("pinterest_section", "hide"), 
-    SFSI("input[name='sfsi_plus_instagram_display']").prop("checked") ? sfsi_plus_section_Display("instagram_section", "show") :sfsi_plus_section_Display("instagram_section", "hide"), 
-    SFSI("input[name='sfsi_plus_linkedin_display']").prop("checked") ? sfsi_plus_section_Display("linkedin_section", "show") :sfsi_plus_section_Display("linkedin_section", "hide"), 
-    SFSI("input[element-type='cusotm-icon']").prop("checked") ? sfsi_plus_section_Display("custom_section", "show") :sfsi_plus_section_Display("custom_section", "hide");
+    SFSI("input[name='sfsi_plus_rss_display']").prop("checked") ? sfsi_plus_section_Display("sfsiplus_rss_section", "show") :sfsi_plus_section_Display("sfsiplus_rss_section", "hide"), 
+    SFSI("input[name='sfsi_plus_email_display']").prop("checked") ? sfsi_plus_section_Display("sfsiplus_email_section", "show") :sfsi_plus_section_Display("sfsiplus_email_section", "hide"), 
+    SFSI("input[name='sfsi_plus_facebook_display']").prop("checked") ? sfsi_plus_section_Display("sfsiplus_facebook_section", "show") :sfsi_plus_section_Display("sfsiplus_facebook_section", "hide"), 
+    SFSI("input[name='sfsi_plus_twitter_display']").prop("checked") ? sfsi_plus_section_Display("sfsiplus_twitter_section", "show") :sfsi_plus_section_Display("sfsiplus_twitter_section", "hide"), 
+    SFSI("input[name='sfsi_plus_google_display']").prop("checked") ? sfsi_plus_section_Display("sfsiplus_google_section", "show") :sfsi_plus_section_Display("sfsiplus_google_section", "hide"), 
+    SFSI("input[name='sfsi_plus_share_display']").prop("checked") ? sfsi_plus_section_Display("sfsiplus_share_section", "show") :sfsi_plus_section_Display("sfsiplus_share_section", "hide"), 
+    SFSI("input[name='sfsi_plus_youtube_display']").prop("checked") ? sfsi_plus_section_Display("sfsiplus_youtube_section", "show") :sfsi_plus_section_Display("sfsiplus_youtube_section", "hide"), 
+    SFSI("input[name='sfsi_plus_pinterest_display']").prop("checked") ? sfsi_plus_section_Display("sfsiplus_pinterest_section", "show") :sfsi_plus_section_Display("sfsiplus_pinterest_section", "hide"), 
+    SFSI("input[name='sfsi_plus_instagram_display']").prop("checked") ? sfsi_plus_section_Display("sfsiplus_instagram_section", "show") :sfsi_plus_section_Display("sfsiplus_instagram_section", "hide"), 
+    SFSI("input[name='sfsi_plus_linkedin_display']").prop("checked") ? sfsi_plus_section_Display("sfsiplus_linkedin_section", "show") :sfsi_plus_section_Display("sfsiplus_linkedin_section", "hide"), 
+    SFSI("input[element-type='sfsiplus-cusotm-icon']").prop("checked") ? sfsi_plus_section_Display("sfsiplus_custom_section", "show") :sfsi_plus_section_Display("sfsiplus_custom_section", "hide");
 }
 
 function PlusCustomIConSectionsUpdate() {
@@ -157,8 +157,8 @@ function SFSI_plus_done()
         type:"post",
         data:e,
         success:function(msg) {
-			  jQuery("li.cstomskins_upload").children(".icns_tab_3").html(msg);
-			  SFSI("input[name='sfsi_plus_rss_display']").prop("checked") ? sfsi_plus_section_Display("rss_section", "show") :sfsi_plus_section_Display("rss_section", "hide"),SFSI("input[name='sfsi_plus_email_display']").prop("checked") ? sfsi_plus_section_Display("email_section", "show") :sfsi_plus_section_Display("email_section", "hide"),SFSI("input[name='sfsi_plus_facebook_display']").prop("checked") ? sfsi_plus_section_Display("facebook_section", "show") :sfsi_plus_section_Display("facebook_section", "hide"), SFSI("input[name='sfsi_plus_twitter_display']").prop("checked") ? sfsi_plus_section_Display("twitter_section", "show") :sfsi_plus_section_Display("twitter_section", "hide"),SFSI("input[name='sfsi_plus_google_display']").prop("checked") ? sfsi_plus_section_Display("google_section", "show") :sfsi_plus_section_Display("google_section", "hide"), SFSI("input[name='sfsi_plus_share_display']").prop("checked") ? sfsi_plus_section_Display("share_section", "show") :sfsi_plus_section_Display("share_section", "hide"), SFSI("input[name='sfsi_plus_youtube_display']").prop("checked") ? sfsi_plus_section_Display("youtube_section", "show") :sfsi_plus_section_Display("youtube_section", "hide"), SFSI("input[name='sfsi_plus_pinterest_display']").prop("checked") ? sfsi_plus_section_Display("pinterest_section", "show") :sfsi_plus_section_Display("pinterest_section", "hide"), SFSI("input[name='sfsi_plus_instagram_display']").prop("checked") ? sfsi_plus_section_Display("instagram_section", "show") :sfsi_plus_section_Display("instagram_section", "hide"), SFSI("input[name='sfsi_plus_linkedin_display']").prop("checked") ? sfsi_plus_section_Display("linkedin_section", "show") :sfsi_plus_section_Display("linkedin_section", "hide"), SFSI("input[element-type='cusotm-icon']").prop("checked") ? sfsi_plus_section_Display("custom_section", "show") :sfsi_plus_section_Display("custom_section", "hide");
+			  jQuery("li.cstomskins_upload").children(".sfsiplus_icns_tab_3").html(msg);
+			  SFSI("input[name='sfsi_plus_rss_display']").prop("checked") ? sfsi_plus_section_Display("sfsiplus_rss_section", "show") :sfsi_plus_section_Display("sfsiplus_rss_section", "hide"),SFSI("input[name='sfsi_plus_email_display']").prop("checked") ? sfsi_plus_section_Display("sfsiplus_email_section", "show") :sfsi_plus_section_Display("sfsiplus_email_section", "hide"),SFSI("input[name='sfsi_plus_facebook_display']").prop("checked") ? sfsi_plus_section_Display("sfsiplus_facebook_section", "show") :sfsi_plus_section_Display("sfsiplus_facebook_section", "hide"), SFSI("input[name='sfsi_plus_twitter_display']").prop("checked") ? sfsi_plus_section_Display("sfsiplus_twitter_section", "show") :sfsi_plus_section_Display("sfsiplus_twitter_section", "hide"),SFSI("input[name='sfsi_plus_google_display']").prop("checked") ? sfsi_plus_section_Display("sfsiplus_google_section", "show") :sfsi_plus_section_Display("sfsiplus_google_section", "hide"), SFSI("input[name='sfsi_plus_share_display']").prop("checked") ? sfsi_plus_section_Display("sfsiplus_share_section", "show") :sfsi_plus_section_Display("sfsiplus_share_section", "hide"), SFSI("input[name='sfsi_plus_youtube_display']").prop("checked") ? sfsi_plus_section_Display("sfsiplus_youtube_section", "show") :sfsi_plus_section_Display("sfsiplus_youtube_section", "hide"), SFSI("input[name='sfsi_plus_pinterest_display']").prop("checked") ? sfsi_plus_section_Display("sfsiplus_pinterest_section", "show") :sfsi_plus_section_Display("sfsiplus_pinterest_section", "hide"), SFSI("input[name='sfsi_plus_instagram_display']").prop("checked") ? sfsi_plus_section_Display("sfsiplus_instagram_section", "show") :sfsi_plus_section_Display("sfsiplus_instagram_section", "hide"), SFSI("input[name='sfsi_plus_linkedin_display']").prop("checked") ? sfsi_plus_section_Display("sfsiplus_linkedin_section", "show") :sfsi_plus_section_Display("sfsiplus_linkedin_section", "hide"), SFSI("input[element-type='sfsiplus-cusotm-icon']").prop("checked") ? sfsi_plus_section_Display("sfsiplus_custom_section", "show") :sfsi_plus_section_Display("sfsiplus_custom_section", "hide");
         	  SFSI(".cstmskins-overlay").hide("slow");
 			  sfsi_plus_update_step3() && sfsipluscollapse(this);
 		}
@@ -321,8 +321,8 @@ function sfsi_plus_update_step3() {
 }
 
 function sfsi_plus_show_counts() {
-    "yes" == SFSI("input[name='sfsi_plus_display_counts']:checked").val() ? (SFSI(".count_sections").slideDown(), 
-    sfsi_plus_showPreviewCounts()) :(SFSI(".count_sections").slideUp(), sfsi_plus_showPreviewCounts());
+    "yes" == SFSI("input[name='sfsi_plus_display_counts']:checked").val() ? (SFSI(".sfsiplus_count_sections").slideDown(), 
+    sfsi_plus_showPreviewCounts()) :(SFSI(".sfsiplus_count_sections").slideUp(), sfsi_plus_showPreviewCounts());
 }
 
 function sfsi_plus_showPreviewCounts() {
@@ -608,10 +608,10 @@ function sfsiplus_afterIconSuccess(s) {
         SFSI("input[name=plussfsiICON_" + s.key + "]").removeAttr("isnew");
 		icons_name = SFSI("li.plus_custom:last-child").find("input.styled").attr("name");
         var n = icons_name.split("_");
-		s.key = s.key, s.img_path += "?" + d.getTime(), 5 > e && SFSI(".plus_icn_listing").append('<li id="plus_c' + i + '" class="plus_custom bdr_btm_non"><div class="radio_section tb_4_ck"><span class="checkbox" dynamic_ele="yes" style="background-position: 0px 0px;"></span><input name="plussfsiICON_' + i + '"  type="checkbox" value="yes" class="styled" style="display:none;" element-type="cusotm-icon" isNew="yes" /></div> <span class="plus_custom-img"><img src="' + SFSI("#plugin_url").val() + 'images/custom.png" id="plus_CImg_' + i + '"  /> </span> <span class="custom custom-txt">Custom' + t + ' </span> <div class="right_info"> <p><span>It depends:</span> Upload a custom icon if you have other accounts/websites you want to link to.</p><div class="inputWrapper"></div></li>'), 
-        SFSI(".custom_section").show(), SFSI(".plus_custom-links").append(' <div class="row  sfsiICON_' + s.key + ' cm_lnk"> <h2 class="custom"> <span class="customstep2-img"> <img   src="' + s.img_path + "?" + d.getTime() + '" style="border-radius:48%" /> </span> <span class="sfsiCtxt">Custom ' + e + '</span> </h2> <div class="inr_cont "><p>Where do you want this icon to link to?</p> <p class="radio_section fb_url custom_section  sfsiICON_' + s.key + '" ><label>Link :</label><input file-id="' + s.key + '" name="sfsi_plus_CustomIcon_links[]" type="text" value="" placeholder="http://" class="add" /></p></div></div>');
+		s.key = s.key, s.img_path += "?" + d.getTime(), 5 > e && SFSI(".plus_icn_listing").append('<li id="plus_c' + i + '" class="plus_custom bdr_btm_non"><div class="radio_section tb_4_ck"><span class="checkbox" dynamic_ele="yes" style="background-position: 0px 0px;"></span><input name="plussfsiICON_' + i + '"  type="checkbox" value="yes" class="styled" style="display:none;" element-type="sfsiplus-cusotm-icon" isNew="yes" /></div> <span class="plus_custom-img"><img src="' + SFSI("#plugin_url").val() + 'images/custom.png" id="plus_CImg_' + i + '"  /> </span> <span class="custom sfsiplus_custom-txt">Custom' + t + ' </span> <div class="sfsiplus_right_info"> <p><span>It depends:</span> Upload a custom icon if you have other accounts/websites you want to link to.</p><div class="inputWrapper"></div></li>'), 
+        SFSI(".sfsiplus_custom_section").show(), SFSI(".plus_custom-links").append(' <div class="row  sfsiICON_' + s.key + ' cm_lnk"> <h2 class="custom"> <span class="customstep2-img"> <img   src="' + s.img_path + "?" + d.getTime() + '" style="border-radius:48%" /> </span> <span class="sfsiCtxt">Custom ' + e + '</span> </h2> <div class="inr_cont "><p>Where do you want this icon to link to?</p> <p class="radio_section fb_url sfsiplus_custom_section  sfsiICON_' + s.key + '" ><label>Link :</label><input file-id="' + s.key + '" name="sfsi_plus_CustomIcon_links[]" type="text" value="" placeholder="http://" class="add" /></p></div></div>');
         var o = SFSI("div.plus_custom_m").find("div.mouseover_field").length;
-        SFSI("div.plus_custom_m").append(0 == o % 2 ? '<div class="clear"> </div> <div class="mouseover_field custom_section sfsiICON_' + s.key + '"><label>Custom ' + e + ':</label><input name="sfsi_plus_custom_MouseOverTexts[]" value="" type="text" file-id="' + s.key + '" /></div>' :'<div class="cHover " ><div class="mouseover_field custom_section sfsiICON_' + s.key + '"><label>Custom ' + e + ':</label><input name="sfsi_plus_custom_MouseOverTexts[]" value="" type="text" file-id="' + s.key + '" /></div>'), 
+        SFSI("div.plus_custom_m").append(0 == o % 2 ? '<div class="clear"> </div> <div class="mouseover_field sfsiplus_custom_section sfsiICON_' + s.key + '"><label>Custom ' + e + ':</label><input name="sfsi_plus_custom_MouseOverTexts[]" value="" type="text" file-id="' + s.key + '" /></div>' :'<div class="cHover " ><div class="mouseover_field sfsiplus_custom_section sfsiICON_' + s.key + '"><label>Custom ' + e + ':</label><input name="sfsi_plus_custom_MouseOverTexts[]" value="" type="text" file-id="' + s.key + '" /></div>'), 
         SFSI("ul.plus_share_icon_order").append('<li class="sfsiplus_custom_iconOrder sfsiICON_' + s.key + '" data-index="" element-id="' + s.key + '" id=""><a href="#" title="Custom Icon" ><img src="' + s.img_path + '" alt="Linked In" class="sfcm"/></a></li>'), 
         SFSI("ul.plus_sfsi_sample_icons").append('<li class="sfsiICON_' + s.key + '" element-id="' + s.key + '" ><div><img src="' + s.img_path + '" alt="Linked In" class="sfcm"/><span class="sfsi_Cdisplay">12k</span></div></li>'), 
         sfsi_plus_update_index(), plus_update_Sec5Iconorder(), sfsi_plus_update_step1(), sfsi_plus_update_step2(), 
@@ -742,7 +742,7 @@ var global_error = 0;
 
 SFSI(document).ready(function(s) {
     //changes done {Monad}
-	SFSI(".tab_3_icns").on("click", ".cstomskins_upload", function() {
+	SFSI(".sfsiplus_tab_3_icns").on("click", ".cstomskins_upload", function() {
 		SFSI(".cstmskins-overlay").show("slow", function() {
             e = 0;
         });
@@ -793,11 +793,11 @@ SFSI(document).ready(function(s) {
     }), SFSI(document).click(function(s) {
         var i = SFSI(".sfsi_plus_FrntInner"), e = SFSI(".sfsi_plus_wDiv"), t = SFSI("#at15s");
         i.is(s.target) || 0 !== i.has(s.target).length || e.is(s.target) || 0 !== e.has(s.target).length || t.is(s.target) || 0 !== t.has(s.target).length || i.fadeOut();
-    }), SFSI(".sfsi_plus_outr_div").find(".addthis_button").mousemove(function() {
-        var s = SFSI(".sfsi_plus_outr_div").find(".addthis_button").offset().top + 10;
+    }), SFSI(".sfsi_plus_outr_div").find(".sfsiplus_addthis_button").mousemove(function() {
+        var s = SFSI(".sfsi_plus_outr_div").find(".sfsiplus_addthis_button").offset().top + 10;
         SFSI("#at15s").css({
             top:s + "px",
-            left:SFSI(".sfsi_plus_outr_div").find(".addthis_button").offset().left + "px"
+            left:SFSI(".sfsi_plus_outr_div").find(".sfsiplus_addthis_button").offset().left + "px"
         });
     }), SFSI("#sfsifontCloroPicker").ColorPicker({
         color:"#f80000",
@@ -818,22 +818,22 @@ SFSI(document).ready(function(s) {
             SFSI("#sfsi_plus_popup_fontColor").val("#" + i), SFSI("#sfsifontCloroPicker").css("background", "#" + i), 
             sfsi_plus_make_popBox();
         }
-    }), SFSI("div#sfsiid_linkedin").find(".icon4").find("a").find("img").mouseover(function() {
+    }), SFSI("div#sfsiplusid_linkedin").find(".icon4").find("a").find("img").mouseover(function() {
 		SFSI(this).attr("src", ajax_object.plugin_url + "images/visit_icons/linkedIn_hover.svg");
-    }), SFSI("div#sfsiid_linkedin").find(".icon4").find("a").find("img").mouseleave(function() {
+    }), SFSI("div#sfsiplusid_linkedin").find(".icon4").find("a").find("img").mouseleave(function() {
         SFSI(this).attr("src", ajax_object.plugin_url + "images/visit_icons/linkedIn.svg");
-    }), SFSI("div#sfsiid_youtube").find(".icon1").find("a").find("img").mouseover(function() {
+    }), SFSI("div#sfsiplusid_youtube").find(".icon1").find("a").find("img").mouseover(function() {
         SFSI(this).attr("src", ajax_object.plugin_url + "images/visit_icons/youtube_hover.svg");
-    }), SFSI("div#sfsiid_youtube").find(".icon1").find("a").find("img").mouseleave(function() {
+    }), SFSI("div#sfsiplusid_youtube").find(".icon1").find("a").find("img").mouseleave(function() {
         SFSI(this).attr("src", ajax_object.plugin_url + "images/visit_icons/youtube.svg");
-    }), SFSI("div#sfsiid_facebook").find(".icon1").find("a").find("img").mouseover(function() {
+    }), SFSI("div#sfsiplusid_facebook").find(".icon1").find("a").find("img").mouseover(function() {
         SFSI(this).css("opacity", "0.9");
-    }), SFSI("div#sfsiid_facebook").find(".icon1").find("a").find("img").mouseleave(function() {
+    }), SFSI("div#sfsiplusid_facebook").find(".icon1").find("a").find("img").mouseleave(function() {
         SFSI(this).css("opacity", "1");
 		/*{Monad}*/
-    }), SFSI("div#sfsiid_twitter").find(".cstmicon1").find("a").find("img").mouseover(function() {
+    }), SFSI("div#sfsiplusid_twitter").find(".cstmicon1").find("a").find("img").mouseover(function() {
         SFSI(this).css("opacity", "0.9");
-    }), SFSI("div#sfsiid_twitter").find(".cstmicon1").find("a").find("img").mouseleave(function() {
+    }), SFSI("div#sfsiplusid_twitter").find(".cstmicon1").find("a").find("img").mouseleave(function() {
         SFSI(this).css("opacity", "1");
     }), SFSI("#sfsiBackgroundColorPicker").ColorPicker({
         color:"#f80000",
@@ -924,10 +924,10 @@ SFSI(document).ready(function(s) {
         SFSI(this).css("background-position", "0px -36px")) :(SFSI(s).removeAttr("checked", !0), 
         SFSI(this).css("background-position", "0px 0px")));
         var s = SFSI(this).parent().find("input:checkbox:first");
-        if (s.is(":checked") && "cusotm-icon" == s.attr("element-type")) SFSI(".fileUPInput").attr("name", "custom_icons[]"), 
+        if (s.is(":checked") && "sfsiplus-cusotm-icon" == s.attr("element-type")) SFSI(".fileUPInput").attr("name", "custom_icons[]"), 
         SFSI(".upload-overlay").show("slow", function() {
             e = 0;
-        }), SFSI("#upload_id").val(s.attr("name")); else if (!s.is(":checked") && "cusotm-icon" == s.attr("element-type")) return s.attr("ele-type") ? (SFSI(this).attr("checked", !0), 
+        }), SFSI("#upload_id").val(s.attr("name")); else if (!s.is(":checked") && "sfsiplus-cusotm-icon" == s.attr("element-type")) return s.attr("ele-type") ? (SFSI(this).attr("checked", !0), 
         SFSI(this).css("background-position", "0px -36px"), e = 0, !1) :confirm("Are you sure want to delete this Icon..?? ") ? "suc" == sfsi_plus_delete_CusIcon(this, s) ? (s.attr("checked", !1), 
         SFSI(this).css("background-position", "0px 0px"), e = 0, !1) :(e = 0, !1) :(s.attr("checked", !0), 
         SFSI(this).css("background-position", "0px -36px"), e = 0, !1);
@@ -1030,9 +1030,9 @@ SFSI(document).ready(function(s) {
     }), /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ? SFSI("img.sfsi_wicon").on("click", function(s) {
         s.stopPropagation();
         var i = SFSI("#sfsi_plus_floater_sec").val();
-        SFSI("div.sfsi_wicons").css("z-index", "0"), SFSI(this).parent().parent().parent().siblings("div.sfsi_wicons").find(".inerCnt").find("div.sfsi_tool_tip_2").hide(), 
+        SFSI("div.sfsi_plus_wicons").css("z-index", "0"), SFSI(this).parent().parent().parent().siblings("div.sfsi_plus_wicons").find(".sfsiplus_inerCnt").find("div.sfsi_tool_tip_2").hide(), 
         SFSI(this).parent().parent().parent().parent().siblings("li").length > 0 && (SFSI(this).parent().parent().parent().parent().siblings("li").find("div.sfsi_tool_tip_2").css("z-index", "0"), 
-        SFSI(this).parent().parent().parent().parent().siblings("li").find("div.sfsi_wicons").find(".inerCnt").find("div.sfsi_tool_tip_2").hide()), 
+        SFSI(this).parent().parent().parent().parent().siblings("li").find("div.sfsi_plus_wicons").find(".sfsiplus_inerCnt").find("div.sfsi_tool_tip_2").hide()), 
         SFSI(this).parent().parent().parent().css("z-index", "1000000"), SFSI(this).parent().parent().css({
             "z-index":"999"
         }), SFSI(this).attr("effect") && "fade_in" == SFSI(this).attr("effect") && (SFSI(this).parentsUntil("div").siblings("div.sfsi_tool_tip_2").css({
@@ -1059,9 +1059,9 @@ SFSI(document).ready(function(s) {
         }), SFSI(this).parentsUntil("div").siblings("div.sfsi_tool_tip_2").show());
     }) :SFSI("img.sfsi_wicon").on("mouseenter", function() {
         var s = SFSI("#sfsi_plus_floater_sec").val();
-        SFSI("div.sfsi_wicons").css("z-index", "0"), SFSI(this).parent().parent().parent().siblings("div.sfsi_wicons").find(".inerCnt").find("div.sfsi_tool_tip_2").hide(), 
+        SFSI("div.sfsi_plus_wicons").css("z-index", "0"), SFSI(this).parent().parent().parent().siblings("div.sfsi_plus_wicons").find(".sfsiplus_inerCnt").find("div.sfsi_tool_tip_2").hide(), 
         SFSI(this).parent().parent().parent().parent().siblings("li").length > 0 && (SFSI(this).parent().parent().parent().parent().siblings("li").find("div.sfsi_tool_tip_2").css("z-index", "0"), 
-        SFSI(this).parent().parent().parent().parent().siblings("li").find("div.sfsi_wicons").find(".inerCnt").find("div.sfsi_tool_tip_2").hide()), 
+        SFSI(this).parent().parent().parent().parent().siblings("li").find("div.sfsi_plus_wicons").find(".sfsiplus_inerCnt").find("div.sfsi_tool_tip_2").hide()), 
         SFSI(this).parent().parent().parent().css("z-index", "1000000"), SFSI(this).parent().parent().css({
             "z-index":"999"
         }), SFSI(this).attr("effect") && "fade_in" == SFSI(this).attr("effect") && (SFSI(this).parentsUntil("div").siblings("div.sfsi_tool_tip_2").css({
@@ -1086,17 +1086,17 @@ SFSI(document).ready(function(s) {
             opacity:1,
             "z-index":10
         }), SFSI(this).parentsUntil("div").siblings("div.sfsi_tool_tip_2").show());
-    }), SFSI("div.sfsi_wicons").on("mouseleave", function() {
-        SFSI(this).children("div.inerCnt").children("a.sficn").attr("effect") && "fade_in" == SFSI(this).children("div.inerCnt").children("a.sficn").attr("effect") && SFSI(this).children("div.inerCnt").find("a.sficn").css("opacity", "0.6"), 
-        SFSI(this).children("div.inerCnt").children("a.sficn").attr("effect") && "scale" == SFSI(this).children("div.inerCnt").children("a.sficn").attr("effect") && SFSI(this).children("div.inerCnt").find("a.sficn").removeClass("scale"), 
-        SFSI(this).children("div.inerCnt").children("a.sficn").attr("effect") && "combo" == SFSI(this).children("div.inerCnt").children("a.sficn").attr("effect") && (SFSI(this).children("div.inerCnt").find("a.sficn").css("opacity", "0.6"), 
-        SFSI(this).children("div.inerCnt").find("a.sficn").removeClass("scale")), "google" == SFSI(this).children("div.inerCnt").find("a.sficn").attr("id") ? SFSI("body").on("click", function() {
-            SFSI(this).children(".inerCnt").find("div.sfsi_tool_tip_2").hide();
+    }), SFSI("div.sfsi_plus_wicons").on("mouseleave", function() {
+        SFSI(this).children("div.sfsiplus_inerCnt").children("a.sficn").attr("effect") && "fade_in" == SFSI(this).children("div.sfsiplus_inerCnt").children("a.sficn").attr("effect") && SFSI(this).children("div.sfsiplus_inerCnt").find("a.sficn").css("opacity", "0.6"), 
+        SFSI(this).children("div.sfsiplus_inerCnt").children("a.sficn").attr("effect") && "scale" == SFSI(this).children("div.sfsiplus_inerCnt").children("a.sficn").attr("effect") && SFSI(this).children("div.sfsiplus_inerCnt").find("a.sficn").removeClass("scale"), 
+        SFSI(this).children("div.sfsiplus_inerCnt").children("a.sficn").attr("effect") && "combo" == SFSI(this).children("div.sfsiplus_inerCnt").children("a.sficn").attr("effect") && (SFSI(this).children("div.sfsiplus_inerCnt").find("a.sficn").css("opacity", "0.6"), 
+        SFSI(this).children("div.sfsiplus_inerCnt").find("a.sficn").removeClass("scale")), "google" == SFSI(this).children("div.sfsiplus_inerCnt").find("a.sficn").attr("id") ? SFSI("body").on("click", function() {
+            SFSI(this).children(".sfsiplus_inerCnt").find("div.sfsi_tool_tip_2").hide();
         }) :(SFSI(this).css({
             "z-index":"0"
-        }), SFSI(this).children(".inerCnt").find("div.sfsi_tool_tip_2").hide());
+        }), SFSI(this).children(".sfsiplus_inerCnt").find("div.sfsi_tool_tip_2").hide());
     }), SFSI("body").on("click", function() {
-        SFSI(".inerCnt").find("div.sfsi_tool_tip_2").hide();
+        SFSI(".sfsiplus_inerCnt").find("div.sfsi_tool_tip_2").hide();
     }), SFSI(".adminTooltip >a").on("hover", function() {
         SFSI(this).offset().top, SFSI(this).parent("div").find("div.sfsi_tool_tip_2_inr").css("opacity", "1"), 
         SFSI(this).parent("div").find("div.sfsi_tool_tip_2_inr").show();
@@ -1122,7 +1122,7 @@ SFSI(document).ready(function(s) {
         SFSI('input[name="sfsi_plus_icons_float"][value="yes"]').parent().find("span.radio").attr("style", "background-position:0px -0px;"));
     }), SFSI(".sfsi_plus_wDiv").length > 0 && setTimeout(function() {
         var s = parseInt(SFSI(".sfsi_plus_wDiv").height()) + 15 + "px";
-        SFSI(".sfsi_holders").each(function() {
+        SFSI(".sfsi_plus_holders").each(function() {
             SFSI(this).css("height", s);
         });
     }, 200), SFSI(".checkbox").live("click", function() {
@@ -1148,7 +1148,7 @@ SFSI(document).ready(function(s) {
         SFSI('input[name="sfsi_plus_float_on_page"][value="no"]').prop("checked", !0), SFSI('input[name="sfsi_plus_float_on_page"][value="yes"]').prop("checked", !1), 
         SFSI('input[name="sfsi_plus_float_on_page"][value="no"]').parent().find("span.checkbox").attr("style", "background-position:0px -41px;"), 
         SFSI('input[name="sfsi_plus_float_on_page"][value="yes"]').parent().find("span.checkbox").attr("style", "background-position:0px -0px;"),
-		jQuery(a).children(".checkbox").css("background-position", "0px 0px" ), toggleflotpage(a));
+		jQuery(a).children(".checkbox").css("background-position", "0px 0px" ), sfsiplus_toggleflotpage(a));
     });*/
 });
 
@@ -1170,21 +1170,21 @@ function showhideutube(ref)
 
 var sfsiplus_initTop = new Array();
 
-function toggleflotpage(ref)
+function sfsiplus_toggleflotpage(ref)
 {
 	var pos = jQuery(ref).children(".checkbox").css("background-position");
 	if(pos == "0px 0px")
 	{
-		jQuery(ref).next(".right_info").children("p").children(".sub-subtitle").hide();
-		jQuery(ref).next(".right_info").children(".tab_3_icns").hide();
+		jQuery(ref).next(".sfsiplus_right_info").children("p").children(".sfsiplus_sub-subtitle").hide();
+		jQuery(ref).next(".sfsiplus_right_info").children(".sfsiplus_tab_3_icns").hide();
 	}
 	else
 	{
-		jQuery(ref).next(".right_info").children("p").children(".sub-subtitle").show();
-		jQuery(ref).next(".right_info").children(".tab_3_icns").show();
+		jQuery(ref).next(".sfsiplus_right_info").children("p").children(".sfsiplus_sub-subtitle").show();
+		jQuery(ref).next(".sfsiplus_right_info").children(".sfsiplus_tab_3_icns").show();
 	}
 }
-function togglbtmsection(show, hide, ref)
+function sfsiplus_togglbtmsection(show, hide, ref)
 {
 	jQuery(ref).parent("ul").children("li.clckbltglcls").each(function(index, element)
 	{
@@ -1225,10 +1225,10 @@ function checkforinfoslction(ref)
 	var pos = jQuery(ref).children(".checkbox").css("background-position");
 	if(pos == "0px 0px")
 	{
-		jQuery(ref).next(".right_info").children("p").children("label").hide();
+		jQuery(ref).next(".sfsiplus_right_info").children("p").children("label").hide();
 	}
 	else
 	{
-		jQuery(ref).next(".right_info").children("p").children("label").show();
+		jQuery(ref).next(".sfsiplus_right_info").children("p").children("label").show();
 	}
 }

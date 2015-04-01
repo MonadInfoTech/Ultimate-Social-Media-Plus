@@ -3,12 +3,12 @@
     $option8=  unserialize(get_option('sfsi_plus_section8_options',false));
 ?>
 <div class="tab8">
-	<ul class="icn_listing8">
+	<ul class="sfsiplus_icn_listing8">
 		<li class="">
 			<div class="radio_section tb_4_ck" onclick="checkforinfoslction(this);"><input name="sfsi_plus_show_via_widget" <?php echo ($option8['sfsi_plus_show_via_widget']=='yes') ?  'checked="true"' : '' ;?>  id="sfsi_plus_show_via_widget" type="checkbox" value="yes" class="styled"  /></div>
-			<div class="right_info">
+			<div class="sfsiplus_right_info">
 				<p>
-					<span class="toglepstpgspn">Show them via a widget</span><br>
+					<span class="sfsiplus_toglepstpgspn">Show them via a widget</span><br>
                     <?php
                     if($option8['sfsi_plus_show_via_widget']=='yes')
 					{
@@ -19,17 +19,17 @@
 						$label_style = 'style="font-size: 16px;"';
 					}
 					?>
-					<label class="sub-subtitle ckckslctn" <?php echo $label_style;?>>Go to the <a href="<?php echo admin_url('widgets.php');?>">widgets area</a> and drag & drop it where you want to have it!</label>
+					<label class="sfsiplus_sub-subtitle ckckslctn" <?php echo $label_style;?>>Go to the <a href="<?php echo admin_url('widgets.php');?>">widgets area</a> and drag & drop it where you want to have it!</label>
 				</p>
 			</div>
 		</li>
 		<li class="">
-        <div class="radio_section tb_4_ck cstmfltonpgstck" onclick="toggleflotpage(this);">
+        <div class="radio_section tb_4_ck cstmfltonpgstck" onclick="sfsiplus_toggleflotpage(this);">
         	<input name="sfsi_plus_float_on_page" <?php echo ($option8['sfsi_plus_float_on_page']=='yes') ?  'checked="true"' : '' ;?>  id="sfsi_plus_float_on_page" type="checkbox" value="yes" class="styled" />
         </div>
-			<div class="right_info">
+			<div class="sfsiplus_right_info">
 				<p>
-					<span class="toglepstpgspn">Float them on the page</span>
+					<span class="sfsiplus_toglepstpgspn">Float them on the page</span>
 				</p>
                 <?php
                 if($option8['sfsi_plus_float_on_page'] == "yes")
@@ -41,7 +41,7 @@
 					$style ="display: none;";
 				}
 				?>
-				<ul class="tab_3_icns flthmonpg" <?php echo 'style="'.$style.'";';?>>
+				<ul class="sfsiplus_tab_3_icns flthmonpg" <?php echo 'style="'.$style.'";';?>>
 					<li>
 						<input name="sfsi_plus_float_page_position" <?php echo ( $option8['sfsi_plus_float_page_position']=='top-left') ?  'checked="true"' : '' ;?> type="radio" value="top-left" class="styled"  />
                         <span class="sfsi_flicnsoptn3 sfsioptntl">Top left</span>
@@ -75,11 +75,11 @@
 				</ul>
 			</div>
 		</li>
-		<li class="placethemanulywpr">
+		<li class="sfsiplusplacethemanulywpr">
 			<div class="radio_section tb_4_ck" onclick="checkforinfoslction(this);"><input name="sfsi_plus_place_item_manually" <?php echo ($option8['sfsi_plus_place_item_manually']=='yes') ?  'checked="true"' : '' ;?>  id="sfsi_plus_place_item_manually" type="checkbox" value="yes" class="styled"  /></div>
-			<div class="right_info">
+			<div class="sfsiplus_right_info">
 				<p>
-					<span class="toglepstpgspn">Place them manually</span><br>
+					<span class="sfsiplus_toglepstpgspn">Place them manually</span><br>
                     <?php
                     if($option8['sfsi_plus_place_item_manually']=='yes')
 					{
@@ -90,29 +90,39 @@
 						$label_style = 'style="font-size: 15px;"';
 					}
 					?>
-					<label class="sub-subtitle ckckslctn" <?php echo $label_style;?>>Place <label class="sfsi_ckckslctnlbl"><</label><label class="sfsi_ckckslctnlbl">?</label><label class="sfsi_ckckslctnlbl">php DISPLAY_ULTIMATE_PLUS();</label><label class="sfsi_ckckslctnlbl">?</label><label class="sfsi_ckckslctnlbl">></label> in your theme codes or use the shortcode <b>[DISPLAY_ULTIMATE_PLUS]</b> to display them wherever you want.</label>
+					<label class="sfsiplus_sub-subtitle ckckslctn" <?php echo $label_style;?>>Place <label class="sfsi_ckckslctnlbl"><</label><label class="sfsi_ckckslctnlbl">?</label><label class="sfsi_ckckslctnlbl">php DISPLAY_ULTIMATE_PLUS();</label><label class="sfsi_ckckslctnlbl">?</label><label class="sfsi_ckckslctnlbl">></label> in your theme codes or use the shortcode <b>[DISPLAY_ULTIMATE_PLUS]</b> to display them wherever you want.</label>
 				</p>
 			</div>
 		</li>
 		<li class="">
-			<div class="radio_section tb_4_ck" onclick="toggleflotpage(this);"><input name="sfsi_plus_show_item_onposts" <?php echo ($option8['sfsi_plus_show_item_onposts']=='yes') ?  'checked="true"' : '' ;?>  id="sfsi_plus_show_item_onposts" type="checkbox" value="yes" class="styled"  /></div>
-			<div class="right_info">
+			<div class="radio_section tb_4_ck" onclick="sfsiplus_toggleflotpage(this);"><input name="sfsi_plus_show_item_onposts" <?php echo ($option8['sfsi_plus_show_item_onposts']=='yes') ?  'checked="true"' : '' ;?>  id="sfsi_plus_show_item_onposts" type="checkbox" value="yes" class="styled"  /></div>
+			<div class="sfsiplus_right_info">
 				<p>
-					<span class="toglepstpgspn">Show them before or after posts</span>
+					<span class="sfsiplus_toglepstpgspn">Show them before or after posts</span>
                     <br>
-                    <label class="sub-subtitle toglpstpgsbttl" style="font-size: 15px;">Here you have two options:</label>
+                    <?php
+					if($option8['sfsi_plus_show_item_onposts'] != "yes")
+					{
+						$style_float = "style='font-size: 15px; display: none;'";
+					}
+					else
+					{
+						$style_float = "style='font-size: 15px;'";
+					}
+					?>
+                    <label class="sfsiplus_sub-subtitle sfsiplus_toglpstpgsbttl" <?php echo $style_float;?>>Here you have two options:</label>
 				</p>
 				
-				<ul class="tab_3_icns shwthmbfraftr" <?php echo ($option8['sfsi_plus_show_item_onposts'] != "yes")? 'style="display: none";' : '' ;?>>
-					<li onclick="togglbtmsection('toggledsplyitemslctn', 'toggleonlystndrshrng', this);" class="clckbltglcls">
+				<ul class="sfsiplus_tab_3_icns sfsiplus_shwthmbfraftr" <?php echo ($option8['sfsi_plus_show_item_onposts'] != "yes")? 'style="display: none";' : '' ;?>>
+					<li onclick="sfsiplus_togglbtmsection('sfsiplus_toggledsplyitemslctn', 'sfsiplus_toggleonlystndrshrng', this);" class="clckbltglcls">
 						<input name="sfsi_plus_display_button_type" <?php echo ( $option8['sfsi_plus_display_button_type']=='normal_button') ?  'checked="true"' : '' ;?> type="radio" value="normal_button" class="styled"  />
 						<label class="labelhdng4">Display the icons I selected above</label>
                     </li>
-                    <li onclick="togglbtmsection('toggleonlystndrshrng', 'toggledsplyitemslctn', this);" class="clckbltglcls">
+                    <li onclick="sfsiplus_togglbtmsection('sfsiplus_toggleonlystndrshrng', 'sfsiplus_toggledsplyitemslctn', this);" class="clckbltglcls">
 						<input name="sfsi_plus_display_button_type" <?php echo ( $option8['sfsi_plus_display_button_type']=='standard_buttons') ?  'checked="true"' : '' ;?> type="radio" value="standard_buttons" class="styled"  />
 						<label class="labelhdng4">Display only standard sharing buttons</label>
                     </li>
-                    <li class="toggledsplyitemslctn">
+                    <li class="sfsiplus_toggledsplyitemslctn">
                     	<?php if ($option8['sfsi_plus_display_button_type']=='normal_button'): $display = "display:block"; else:  $display = "display:none"; endif;?>
 						<div class="row radiodisplaysection" style="<?php echo $display; ?>">
 							<h4>Size &amp; spacing of your icons</h4>
@@ -120,7 +130,7 @@
 						</div>
                     </li>
                     
-                    <li class="toggleonlystndrshrng">
+                    <li class="sfsiplus_toggleonlystndrshrng">
                     	<?php if ($option8['sfsi_plus_display_button_type']=='standard_buttons'): $display = "display:block"; else:  $display = "display:none"; endif;?>
 						<div class="radiodisplaysection" style="<?php echo $display; ?>">
 
@@ -169,19 +179,19 @@
                         <div class="chckwpr">
                             <div class="snglchckcntr">
                                 <div class="radio_section tb_4_ck"><input name="sfsi_plus_display_before_posts" <?php echo ($option8['sfsi_plus_display_before_posts']=='yes') ?  'checked="true"' : '' ;?>  id="sfsi_plus_display_before_posts" type="checkbox" value="yes" class="styled"  /></div>
-                                <div class="right_info">Before posts</div>
+                                <div class="sfsiplus_right_info">Before posts</div>
                             </div>
                             <div class="snglchckcntr">
                                 <div class="radio_section tb_4_ck"><input name="sfsi_plus_display_after_posts" <?php echo ($option8['sfsi_plus_display_after_posts']=='yes') ?  'checked="true"' : '' ;?>  id="sfsi_plus_display_after_posts" type="checkbox" value="yes" class="styled"  /></div>
-                                <div class="right_info">After posts</div>
+                                <div class="sfsiplus_right_info">After posts</div>
                             </div>
                             <!--<div class="snglchckcntr">
                                 <div class="radio_section tb_4_ck"><input name="sfsi_plus_display_on_postspage" <?php //echo ($option8['sfsi_plus_display_on_postspage']=='yes') ?  'checked="true"' : '' ;?>  id="sfsi_plus_display_on_postspage" type="checkbox" value="yes" class="styled"  /></div>
-                                <div class="right_info">On posts pages</div>
+                                <div class="sfsiplus_right_info">On posts pages</div>
                             </div>
                             <div class="snglchckcntr">
                                 <div class="radio_section tb_4_ck"><input name="sfsi_plus_display_on_homepage" <?php //echo ($option8['sfsi_plus_display_on_homepage']=='yes') ?  'checked="true"' : '' ;?>  id="sfsi_plus_display_on_homepage" type="checkbox" value="yes" class="styled"  /></div>
-                                <div class="right_info">On homepage</div>
+                                <div class="sfsiplus_right_info">On homepage</div>
                             </div>-->
                         </div>
                     </div>
@@ -192,19 +202,19 @@
                         <div class="chckwpr">
                             <div class="snglchckcntr">
                                 <div class="radio_section tb_4_ck"><input name="sfsi_plus_display_before_blogposts" <?php echo ($option8['sfsi_plus_display_before_blogposts']=='yes') ?  'checked="true"' : '' ;?>  id="sfsi_plus_display_before_blogposts" type="checkbox" value="yes" class="styled"  /></div>
-                                <div class="right_info">Before posts</div>
+                                <div class="sfsiplus_right_info">Before posts</div>
                             </div>
                             <div class="snglchckcntr">
                                 <div class="radio_section tb_4_ck"><input name="sfsi_plus_display_after_blogposts" <?php echo ($option8['sfsi_plus_display_after_blogposts']=='yes') ?  'checked="true"' : '' ;?>  id="sfsi_plus_display_after_blogposts" type="checkbox" value="yes" class="styled"  /></div>
-                                <div class="right_info">After posts</div>
+                                <div class="sfsiplus_right_info">After posts</div>
                             </div>
                             <!--<div class="snglchckcntr">
                                 <div class="radio_section tb_4_ck"><input name="sfsi_plus_display_on_postspage" <?php //echo ($option8['sfsi_plus_display_on_postspage']=='yes') ?  'checked="true"' : '' ;?>  id="sfsi_plus_display_on_postspage" type="checkbox" value="yes" class="styled"  /></div>
-                                <div class="right_info">On posts pages</div>
+                                <div class="sfsiplus_right_info">On posts pages</div>
                             </div>
                             <div class="snglchckcntr">
                                 <div class="radio_section tb_4_ck"><input name="sfsi_plus_display_on_homepage" <?php //echo ($option8['sfsi_plus_display_on_homepage']=='yes') ?  'checked="true"' : '' ;?>  id="sfsi_plus_display_on_homepage" type="checkbox" value="yes" class="styled"  /></div>
-                                <div class="right_info">On homepage</div>
+                                <div class="sfsiplus_right_info">On homepage</div>
                             </div>-->
                         </div>
                     </div>

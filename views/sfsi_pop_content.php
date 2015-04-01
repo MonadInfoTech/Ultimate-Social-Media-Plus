@@ -102,7 +102,7 @@ define('rss_readmore_text2', $rss_readmore_text2);
 			<script type="text/javascript">
 				var addthis_config = {pubid: "YOUR-PROFILE-ID"}
 			</script>
-			<a href="http://www.addthis.com/bookmark.php?v=250" class="addthis_button">
+			<a href="http://www.addthis.com/bookmark.php?v=250" class="sfsiplus_addthis_button">
             	<img width="51" class="sfsi_wicon" src="<?php echo $icons_baseUrl."/".$active_theme; ?>_share.png" title="share" alt="share" />
             </a>
     		<?php //echo sfsi_plus_Addthis(1); ?>
@@ -236,7 +236,7 @@ $pin_url=($option2['sfsi_plus_pinterest_pageUrl']!='') ?  $option2['sfsi_plus_pi
     <div class="pop_up_box sfsi_pop_up adPopWidth" >
         <img src="<?php echo SFSI_PLUS_PLUGURL; ?>images/close.jpg" id="close_popup" class="sfsicloseBtn" />
     	<h4 id="readmore_text">Move over the “+ icon” to see the sharing options</h4>
- 	    <div style="float: right;opacity: 1;position: relative;right: 215px;top: 10px;width: 52px; text-align: center;" ><a alt="share"  href="http://www.addthis.com/bookmark.php?v=250"  effect="" class="addthis_button"><img width="51" class="sfsi_wicon" src="<?php echo SFSI_PLUS_PLUGURL; ?>images/share.png" title="share" alt="share" /></a>
+ 	    <div style="float: right;opacity: 1;position: relative;right: 215px;top: 10px;width: 52px; text-align: center;" ><a alt="share"  href="http://www.addthis.com/bookmark.php?v=250"  effect="" class="sfsiplus_addthis_button"><img width="51" class="sfsi_wicon" src="<?php echo SFSI_PLUS_PLUGURL; ?>images/share.png" title="share" alt="share" /></a>
     </div>
   </div>
 </div><!-- END ADDTHIS ICON POP-UP -->

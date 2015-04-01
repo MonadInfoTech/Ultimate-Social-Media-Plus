@@ -267,7 +267,7 @@ function sfsi_plus_check_visiblity($isFloter=0)
     $jquery.="</script>";
     $icons.='</div >';
     $margin=$width+11;
-    $icons_main.=$icons.'<div id="sfsi_holder" class="sfsi_holders" style="position: relative; float: left;width:100%;z-index:-1;"></div >'.$jquery;
+    $icons_main.=$icons.'<div id="sfsi_holder" class="sfsi_plus_holders" style="position: relative; float: left;width:100%;z-index:-1;"></div >'.$jquery;
     /* if floating of icons is active create a floater div */
     $icons_float='';
 	if($sfsi_section8['sfsi_plus_float_on_page']=="yes" && $isFloter==1)
@@ -344,7 +344,7 @@ function sfsi_plus_prepairIcons($icon_name,$is_front=0)
 		     $url = ($sfsi_plus_section2_options['sfsi_plus_rss_url'])? $sfsi_plus_section2_options['sfsi_plus_rss_url'] : 'javascript:void(0);';
              $toolClass = "rss_tool_bdr";
 		     $hoverdiv = '';
-		     $arrow_class = "bot_rss_arow";
+		     $arsfsiplus_row_class = "bot_rss_arow";
 		     
 			 /* fecth no of counts if active in admin section */
 			 if($sfsi_plus_section4_options['sfsi_plus_rss_countsDisplay']=="yes" && $sfsi_plus_section4_options['sfsi_plus_display_counts']=="yes")
@@ -387,7 +387,7 @@ function sfsi_plus_prepairIcons($icon_name,$is_front=0)
 			   $sfsi_plus_section2_options['sfsi_plus_email_url'];
 			   $url = (isset($sfsi_plus_section2_options['sfsi_plus_email_url'])) ? $sfsi_plus_section2_options['sfsi_plus_email_url'] : 'javascript:void(0);';
 			   $toolClass = "email_tool_bdr";
-		       $arrow_class = "bot_eamil_arow";
+		       $arsfsiplus_row_class = "bot_eamil_arow";
 		       
 			   /* fecth no of counts if active in admin section */
 		       if($sfsi_plus_section4_options['sfsi_plus_email_countsDisplay']=="yes" && $sfsi_plus_section4_options['sfsi_plus_display_counts']=="yes")
@@ -437,7 +437,7 @@ function sfsi_plus_prepairIcons($icon_name,$is_front=0)
 		    $totwith = $width+28+$icons_space;
 		    $twt_margin = $totwith/2;
 		    $toolClass = "fb_tool_bdr";
-		    $arrow_class = "bot_fb_arow";
+		    $arsfsiplus_row_class = "bot_fb_arow";
 		    
 			/* check for the over section */
 			if(!empty($sfsi_plus_section5_options['sfsi_plus_facebook_MouseOverText']))
@@ -518,7 +518,7 @@ function sfsi_plus_prepairIcons($icon_name,$is_front=0)
 		
         case "google" :                    
 				$toolClass = "gpls_tool_bdr";
-				$arrow_class = "bot_gpls_arow";
+				$arsfsiplus_row_class = "bot_gpls_arow";
 				$socialObj = new sfsi_plus_SocialHelper();
 				$width = 76;
 				$totwith = $width+28+$icons_space;
@@ -606,7 +606,7 @@ function sfsi_plus_prepairIcons($icon_name,$is_front=0)
         
 		case "twitter" :
 				$toolClass = "twt_tool_bdr";
-				$arrow_class = "bot_twt_arow";
+				$arsfsiplus_row_class = "bot_twt_arow";
 				$socialObj = new sfsi_plus_SocialHelper();
 				$url = ($sfsi_plus_section2_options['sfsi_plus_twitter_pageURL'])?$sfsi_plus_section2_options['sfsi_plus_twitter_pageURL'] : 'javascript:void(0);';
 				$twitter_user = $sfsi_plus_section2_options['sfsi_plus_twitter_followUserName'];
@@ -693,7 +693,7 @@ function sfsi_plus_prepairIcons($icon_name,$is_front=0)
 		case "share" :
 				$socialObj = new sfsi_plus_SocialHelper();
 				$url = "http://www.addthis.com/bookmark.php?v=250";
-				$class = "addthis_button";
+				$class = "sfsiplus_addthis_button";
 				
 				/*fecth no of counts if active in admin section */
 		      	if($sfsi_plus_section4_options['sfsi_plus_shares_countsDisplay']=="yes" && $sfsi_plus_section4_options['sfsi_plus_display_counts']=="yes")
@@ -746,7 +746,7 @@ function sfsi_plus_prepairIcons($icon_name,$is_front=0)
 		case "youtube" :
 				$socialObj = new sfsi_plus_SocialHelper();
 				$toolClass = "utube_tool_bdr";
-				$arrow_class = "bot_utube_arow";
+				$arsfsiplus_row_class = "bot_utube_arow";
 				$socialObj = new sfsi_plus_SocialHelper();
 				$width = 96;
 				$totwith = $width+28+$icons_space;
@@ -824,7 +824,7 @@ function sfsi_plus_prepairIcons($icon_name,$is_front=0)
 				$twt_margin = $totwith/2;
 				$socialObj = new sfsi_plus_SocialHelper();			 
 				$toolClass = "printst_tool_bdr";
-				$arrow_class = "bot_pintst_arow";
+				$arsfsiplus_row_class = "bot_pintst_arow";
 				
 				$pinterest_user = $sfsi_plus_section4_options['sfsi_plus_pinterest_user'];
 				$pinterest_board = $sfsi_plus_section4_options['sfsi_plus_pinterest_board'];
@@ -899,7 +899,7 @@ function sfsi_plus_prepairIcons($icon_name,$is_front=0)
 		
 		case "instagram" :		 
 				$toolClass = "instagram_tool_bdr";
-				$arrow_class = "bot_pintst_arow";
+				$arsfsiplus_row_class = "bot_pintst_arow";
 				$socialObj = new sfsi_plus_SocialHelper();
 				$url = (isset($sfsi_plus_section2_options['sfsi_plus_instagram_pageUrl'])) ? $sfsi_plus_section2_options['sfsi_plus_instagram_pageUrl'] : 'javascript:void(0);';
 				$instagram_user_name = $sfsi_plus_section4_options['sfsi_plus_instagram_User'];
@@ -956,7 +956,7 @@ function sfsi_plus_prepairIcons($icon_name,$is_front=0)
 				$width = 66;
 				$socialObj = new sfsi_plus_SocialHelper();		
 				$toolClass = "linkedin_tool_bdr";
-				$arrow_class = "bot_linkedin_arow";                
+				$arsfsiplus_row_class = "bot_linkedin_arow";                
 				$linkedIn_compayId = $sfsi_plus_section2_options['sfsi_plus_linkedin_followCompany'];
 				$linkedIn_compay = $sfsi_plus_section2_options['sfsi_plus_linkedin_followCompany']; 
 				$linkedIn_ProductId = $sfsi_plus_section2_options['sfsi_plus_linkedin_recommendProductId'];
@@ -1061,7 +1061,7 @@ function sfsi_plus_prepairIcons($icon_name,$is_front=0)
 				$custom_icon_urls = unserialize($sfsi_plus_section2_options['sfsi_plus_CustomIcon_links']);
 				$url = (isset($custom_icon_urls[$icon_n]) && !empty($custom_icon_urls[$icon_n])) ? $custom_icon_urls[$icon_n]:'javascript:void(0);'; 
 				$toolClass = "custom_lkn";
-				$arrow_class = "";
+				$arsfsiplus_row_class = "";
 				$custom_icons_hoverTxt = unserialize($sfsi_plus_section5_options['sfsi_plus_custom_MouseOverTexts']);
 				$icons = unserialize($sfsi_plus_section1_options['sfsi_custom_files']);
 				$icon = $icons[$icon_n]; 
@@ -1147,8 +1147,8 @@ function sfsi_plus_prepairIcons($icon_name,$is_front=0)
 	if(isset($icon) && !empty($icon) && filter_var($icon, FILTER_VALIDATE_URL))
 	{
 		$icons.= "<div style='width:".$icon_width."px; height:".$icon_width."px;margin-left:".$icons_space."px;margin-bottom:".$margin_bot."' class='sfsi_plus_wicons ".$cmcls."'>";
-		$icons.= "<div class='inerCnt'>";
-		$icons.= "<a class='".$class." sficn' effect='".$mouse_hover_effect."' . $new_window.  href='".$url."' id='sfsiid_".$icon_name."' alt='".$alt_text."' style='opacity:".$icon_opacity."' >";     
+		$icons.= "<div class='sfsiplus_inerCnt'>";
+		$icons.= "<a class='".$class." sficn' effect='".$mouse_hover_effect."' . $new_window.  href='".$url."' id='sfsiplusid_".$icon_name."' alt='".$alt_text."' style='opacity:".$icon_opacity."' >";     
 		$icons.= "<img alt='".$alt_text."' title='".$alt_text."' src='".$icon."' width='".$icons_size."' style='".$border_radius.$padding_top."' class='sfcm sfsi_wicon' effect='".$mouse_hover_effect."'   />"; 
 		$icons.= '</a>';
 	   
@@ -1159,8 +1159,8 @@ function sfsi_plus_prepairIcons($icon_name,$is_front=0)
 		 
 	   if($hoverSHow && !empty($hoverdiv))
 	   {	
-			$icons.= '<div class="sfsi_tool_tip_2 '.$toolClass.' '.$toolT_cls.'" style="width:'.$width.'px ;opacity:0;z-index:-1;margin-left:-'.$twt_margin.'px;" id="sfsiid_'.$icon_name.'">';
-			$icons.= '<span class="bot_arow '.$arrow_class.'"></span>';
+			$icons.= '<div class="sfsi_tool_tip_2 '.$toolClass.' '.$toolT_cls.'" style="width:'.$width.'px ;opacity:0;z-index:-1;margin-left:-'.$twt_margin.'px;" id="sfsiplusid_'.$icon_name.'">';
+			$icons.= '<span class="bot_arow '.$arsfsiplus_row_class.'"></span>';
 			$icons.= '<div class="sfsi_inside">'.$hoverdiv."</div>";
 			$icons.= "</div>";
 	   }
@@ -1230,7 +1230,7 @@ function sfsi_plus_check_posts_visiblity($isFloter=0)
     /* built the main widget div */
     $icons_main='<div class="sfsiplus_norm_row sfsi_plus_wDivothr">';
     $icons="";
-	$icons .= '<style type="text/css">.sfsibeforpstwpr .sfsiplus_norm_row.sfsi_plus_wDivothr .sfsi_wicons, .sfsiaftrpstwpr .sfsiplus_norm_row.sfsi_plus_wDivothr .sfsi_wicons{width: '.$icons_size.'px !important;height: '.$icons_size.'px !important; margin-left: '.$icons_space.'px !important;}</style>';
+	$icons .= '<style type="text/css">.sfsibeforpstwpr .sfsiplus_norm_row.sfsi_plus_wDivothr .sfsi_plus_wicons, .sfsiaftrpstwpr .sfsiplus_norm_row.sfsi_plus_wDivothr .sfsi_plus_wicons{width: '.$icons_size.'px !important;height: '.$icons_size.'px !important; margin-left: '.$icons_space.'px !important;}</style>';
     /* loop through icons and bulit the icons with all settings applied in admin */
 	foreach($icons_order  as $index => $icn) :
 	if(is_array($icn)) { $icon_arry=$icn; $icn="custom" ; } 
@@ -1328,7 +1328,7 @@ function sfsi_plus_postsprepairIcons($icon_name,$is_front=0)
 		     $url = ($sfsi_plus_section2_options['sfsi_plus_rss_url'])? $sfsi_plus_section2_options['sfsi_plus_rss_url'] : 'javascript:void(0);';
              $toolClass = "rss_tool_bdr";
 		     $hoverdiv = '';
-		     $arrow_class = "bot_rss_arow";
+		     $arsfsiplus_row_class = "bot_rss_arow";
 		     
 			 /* fecth no of counts if active in admin section */
 			 if($sfsi_plus_section4_options['sfsi_plus_rss_countsDisplay']=="yes" && $sfsi_plus_section4_options['sfsi_plus_display_counts']=="yes")
@@ -1371,7 +1371,7 @@ function sfsi_plus_postsprepairIcons($icon_name,$is_front=0)
 			   $sfsi_plus_section2_options['sfsi_plus_email_url'];
 			   $url = (isset($sfsi_plus_section2_options['sfsi_plus_email_url'])) ? $sfsi_plus_section2_options['sfsi_plus_email_url'] : 'javascript:void(0);';
 			   $toolClass = "email_tool_bdr";
-		       $arrow_class = "bot_eamil_arow";
+		       $arsfsiplus_row_class = "bot_eamil_arow";
 		       
 			   /* fecth no of counts if active in admin section */
 		       if($sfsi_plus_section4_options['sfsi_plus_email_countsDisplay']=="yes" && $sfsi_plus_section4_options['sfsi_plus_display_counts']=="yes")
@@ -1421,7 +1421,7 @@ function sfsi_plus_postsprepairIcons($icon_name,$is_front=0)
 		    $totwith = $width+28+$icons_space;
 		    $twt_margin = $totwith/2;
 		    $toolClass = "fb_tool_bdr";
-		    $arrow_class = "bot_fb_arow";
+		    $arsfsiplus_row_class = "bot_fb_arow";
 		    
 			//for post sharing
 			if($sfsi_plus_section8_options["sfsi_plus_display_button_type"] == "normal_button" && $sfsi_plus_section8_options["sfsi_plus_show_item_onposts"] == "yes")
@@ -1513,7 +1513,7 @@ function sfsi_plus_postsprepairIcons($icon_name,$is_front=0)
 		
         case "google" :                    
 				$toolClass = "gpls_tool_bdr";
-				$arrow_class = "bot_gpls_arow";
+				$arsfsiplus_row_class = "bot_gpls_arow";
 				$socialObj = new sfsi_plus_SocialHelper();
 				$width = 76;
 				$totwith = $width+28+$icons_space;
@@ -1601,7 +1601,7 @@ function sfsi_plus_postsprepairIcons($icon_name,$is_front=0)
         
 		case "twitter" :
 				$toolClass = "twt_tool_bdr";
-				$arrow_class = "bot_twt_arow";
+				$arsfsiplus_row_class = "bot_twt_arow";
 				$socialObj = new sfsi_plus_SocialHelper();
 				$url = ($sfsi_plus_section2_options['sfsi_plus_twitter_pageURL'])?$sfsi_plus_section2_options['sfsi_plus_twitter_pageURL'] : 'javascript:void(0);';
 				$twitter_user = $sfsi_plus_section2_options['sfsi_plus_twitter_followUserName'];
@@ -1688,7 +1688,7 @@ function sfsi_plus_postsprepairIcons($icon_name,$is_front=0)
 		case "share" :
 				$socialObj = new sfsi_plus_SocialHelper();
 				$url = "http://www.addthis.com/bookmark.php?v=250";
-				$class = "addthis_button";
+				$class = "sfsiplus_addthis_button";
 				
 				/*fecth no of counts if active in admin section */
 		      	if($sfsi_plus_section4_options['sfsi_plus_shares_countsDisplay']=="yes" && $sfsi_plus_section4_options['sfsi_plus_display_counts']=="yes")
@@ -1741,7 +1741,7 @@ function sfsi_plus_postsprepairIcons($icon_name,$is_front=0)
 		case "youtube" :
 				$socialObj = new sfsi_plus_SocialHelper();
 				$toolClass = "utube_tool_bdr";
-				$arrow_class = "bot_utube_arow";
+				$arsfsiplus_row_class = "bot_utube_arow";
 				$socialObj = new sfsi_plus_SocialHelper();
 				$width = 96;
 				$totwith = $width+28+$icons_space;
@@ -1819,7 +1819,7 @@ function sfsi_plus_postsprepairIcons($icon_name,$is_front=0)
 				$twt_margin = $totwith/2;
 				$socialObj = new sfsi_plus_SocialHelper();			 
 				$toolClass = "printst_tool_bdr";
-				$arrow_class = "bot_pintst_arow";
+				$arsfsiplus_row_class = "bot_pintst_arow";
 				
 				$pinterest_user = $sfsi_plus_section4_options['sfsi_plus_pinterest_user'];
 				$pinterest_board = $sfsi_plus_section4_options['sfsi_plus_pinterest_board'];
@@ -1894,7 +1894,7 @@ function sfsi_plus_postsprepairIcons($icon_name,$is_front=0)
 		
 		case "instagram" :		 
 				$toolClass = "instagram_tool_bdr";
-				$arrow_class = "bot_pintst_arow";
+				$arsfsiplus_row_class = "bot_pintst_arow";
 				$socialObj = new sfsi_plus_SocialHelper();
 				$url = (isset($sfsi_plus_section2_options['sfsi_plus_instagram_pageUrl'])) ? $sfsi_plus_section2_options['sfsi_plus_instagram_pageUrl'] : 'javascript:void(0);';
 				$instagram_user_name = $sfsi_plus_section4_options['sfsi_plus_instagram_User'];
@@ -1951,7 +1951,7 @@ function sfsi_plus_postsprepairIcons($icon_name,$is_front=0)
 				$width = 66;
 				$socialObj = new sfsi_plus_SocialHelper();		
 				$toolClass = "linkedin_tool_bdr";
-				$arrow_class = "bot_linkedin_arow";                
+				$arsfsiplus_row_class = "bot_linkedin_arow";                
 				$linkedIn_compayId = $sfsi_plus_section2_options['sfsi_plus_linkedin_followCompany'];
 				$linkedIn_compay = $sfsi_plus_section2_options['sfsi_plus_linkedin_followCompany']; 
 				$linkedIn_ProductId = $sfsi_plus_section2_options['sfsi_plus_linkedin_recommendProductId'];
@@ -2056,7 +2056,7 @@ function sfsi_plus_postsprepairIcons($icon_name,$is_front=0)
 				$custom_icon_urls = unserialize($sfsi_plus_section2_options['sfsi_plus_CustomIcon_links']);
 				$url = (isset($custom_icon_urls[$icon_n]) && !empty($custom_icon_urls[$icon_n])) ? $custom_icon_urls[$icon_n]:'javascript:void(0);'; 
 				$toolClass = "custom_lkn";
-				$arrow_class = "";
+				$arsfsiplus_row_class = "";
 				$custom_icons_hoverTxt = unserialize($sfsi_plus_section5_options['sfsi_plus_custom_MouseOverTexts']);
 				$icons = unserialize($sfsi_plus_section1_options['sfsi_custom_files']);
 				$icon = $icons[$icon_n]; 
@@ -2142,15 +2142,15 @@ function sfsi_plus_postsprepairIcons($icon_name,$is_front=0)
 	if(isset($icon) && !empty($icon) && filter_var($icon, FILTER_VALIDATE_URL))
 	{
 		$icons.= "<div style='width:".$icon_width."px; height:".$icon_width."px;margin-left:".$icons_space."px;margin-bottom:".$margin_bot."' class='sfsi_plus_wicons ".$cmcls."'>";
-		$icons.= "<div class='inerCnt'>";
-		$icons.= "<a class='".$class." sficn' effect='".$mouse_hover_effect."' . $new_window.  href='".$url."' id='sfsiid_".$icon_name."' alt='".$alt_text."' style='opacity:".$icon_opacity."' >";     
+		$icons.= "<div class='sfsiplus_inerCnt'>";
+		$icons.= "<a class='".$class." sficn' effect='".$mouse_hover_effect."' . $new_window.  href='".$url."' id='sfsiplusid_".$icon_name."' alt='".$alt_text."' style='opacity:".$icon_opacity."' >";     
 		$icons.= "<img alt='".$alt_text."' title='".$alt_text."' src='".$icon."' width='".$icons_size."' style='".$border_radius.$padding_top."' class='sfcm sfsi_wicon' effect='".$mouse_hover_effect."'   />"; 
 		$icons.= '</a>';
 		 
 	   if($hoverSHow && !empty($hoverdiv))
 	   {	
-			$icons.= '<div class="sfsi_tool_tip_2 '.$toolClass.' '.$toolT_cls.'" style="width:'.$width.'px ;opacity:0;z-index:-1;margin-left:-'.$twt_margin.'px;" id="sfsiid_'.$icon_name.'">';
-			$icons.= '<span class="bot_arow '.$arrow_class.'"></span>';
+			$icons.= '<div class="sfsi_tool_tip_2 '.$toolClass.' '.$toolT_cls.'" style="width:'.$width.'px ;opacity:0;z-index:-1;margin-left:-'.$twt_margin.'px;" id="sfsiplusid_'.$icon_name.'">';
+			$icons.= '<span class="bot_arow '.$arsfsiplus_row_class.'"></span>';
 			$icons.= '<div class="sfsi_inside">'.$hoverdiv."</div>";
 			$icons.= "</div>";
 	   }

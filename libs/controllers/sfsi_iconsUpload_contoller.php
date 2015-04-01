@@ -118,91 +118,91 @@ function sfsi_plus_Iamdone()
 	 if(get_option("plus_rss_skin"))
 	 {
 		$icon = get_option("plus_rss_skin");
-		$return .= '<span class="row_17_1 rss_section" style="background: url('.$icon.') no-repeat;"></span>';
+		$return .= '<span class="sfsiplus_row_17_1 sfsiplus_rss_section" style="background: url('.$icon.') no-repeat;"></span>';
 	 }else
 	 {
-		$return .= '<span class="row_17_1 rss_section" style="background-position:-1px 0;"></span>';
+		$return .= '<span class="sfsiplus_row_17_1 sfsiplus_rss_section" style="background-position:-1px 0;"></span>';
 	 }
 	 
 	 if(get_option("plus_email_skin"))
 	 {
 		$icon = get_option("plus_email_skin");
-		$return .= '<span class="row_17_2 email_section" style="background: url('.$icon.') no-repeat;"></span>';
+		$return .= '<span class="sfsiplus_row_17_2 sfsiplus_email_section" style="background: url('.$icon.') no-repeat;"></span>';
 	 }else
 	 {
-		$return .= '<span class="row_17_2 email_section" style="background-position:-58px 0;"></span>';
+		$return .= '<span class="sfsiplus_row_17_2 sfsiplus_email_section" style="background-position:-58px 0;"></span>';
 	 }
 	 
 	 if(get_option("plus_facebook_skin"))
 	 {
 		$icon = get_option("plus_facebook_skin");
-		$return .= '<span class="row_17_3 facebook_section" style="background: url('.$icon.') no-repeat;"></span>';
+		$return .= '<span class="sfsiplus_row_17_3 sfsiplus_facebook_section" style="background: url('.$icon.') no-repeat;"></span>';
 	 }else
 	 {
-		$return .= '<span class="row_17_3 facebook_section" style="background-position:-118px 0;"></span>';
+		$return .= '<span class="sfsiplus_row_17_3 sfsiplus_facebook_section" style="background-position:-118px 0;"></span>';
 	 }
 	 
 	 if(get_option("plus_google_skin"))
 	 {
 		$icon = get_option("plus_google_skin");
-		$return .= '<span class="row_17_4 google_section" style="background: url('.$icon.') no-repeat;"></span>';
+		$return .= '<span class="sfsiplus_row_17_4 sfsiplus_google_section" style="background: url('.$icon.') no-repeat;"></span>';
 	 }else
 	 {
-		$return .= '<span class="row_17_4 google_section" style="background-position:-176px 0;"></span>';
+		$return .= '<span class="sfsiplus_row_17_4 sfsiplus_google_section" style="background-position:-176px 0;"></span>';
 	 }
 	 
 	 if(get_option("twitter_skin"))
 	 {
 		$icon = get_option("plus_twitter_skin");
-		$return .= '<span class="row_17_5 twitter_section" style="background: url('.$icon.') no-repeat;"></span>';
+		$return .= '<span class="sfsiplus_row_17_5 sfsiplus_twitter_section" style="background: url('.$icon.') no-repeat;"></span>';
 	 }else
 	 {
-		$return .= '<span class="row_17_5 twitter_section" style="background-position:-235px 0;"></span>';
+		$return .= '<span class="sfsiplus_row_17_5 sfsiplus_twitter_section" style="background-position:-235px 0;"></span>';
 	 }
 	 
 	 if(get_option("plus_share_skin"))
 	 {
 		$icon = get_option("plus_share_skin");
-		$return .= '<span class="row_17_6 share_section" style="background: url('.$icon.') no-repeat;"></span>';
+		$return .= '<span class="sfsiplus_row_17_6 sfsiplus_share_section" style="background: url('.$icon.') no-repeat;"></span>';
 	 }else
 	 {
-		$return .= '<span class="row_17_6 share_section" style="background-position:-293px 0;"></span>';
+		$return .= '<span class="sfsiplus_row_17_6 sfsiplus_share_section" style="background-position:-293px 0;"></span>';
 	 }
 	 
 	 if(get_option("plus_youtube_skin"))
 	 {
 		$icon = get_option("plus_youtube_skin");
-		$return .= '<span class="row_17_7 youtube_section" style="background: url('.$icon.') no-repeat;"></span>';
+		$return .= '<span class="sfsiplus_row_17_7 sfsiplus_youtube_section" style="background: url('.$icon.') no-repeat;"></span>';
 	 }else
 	 {
-		$return .= '<span class="row_17_7 youtube_section" style="background-position:-350px 0;"></span>';
+		$return .= '<span class="sfsiplus_row_17_7 sfsiplus_youtube_section" style="background-position:-350px 0;"></span>';
 	 }
 	 
 	 if(get_option("plus_pintrest_skin"))
 	 {
 		$icon = get_option("plus_pintrest_skin");
-		$return .= '<span class="row_17_8 pinterest_section" style="background: url('.$icon.') no-repeat;"></span>';
+		$return .= '<span class="sfsiplus_row_17_8 sfsiplus_pinterest_section" style="background: url('.$icon.') no-repeat;"></span>';
 	 }else
 	 {
-		$return .= '<span class="row_17_8 pinterest_section" style="background-position:-409px 0;"></span>';
+		$return .= '<span class="sfsiplus_row_17_8 sfsiplus_pinterest_section" style="background-position:-409px 0;"></span>';
 	 }
 	 
 	 if(get_option("plus_linkedin_skin"))
 	 {
 		$icon = get_option("plus_linkedin_skin");
-		$return .= '<span class="row_17_9 linkedin_section" style="background: url('.$icon.') no-repeat;"></span>';
+		$return .= '<span class="sfsiplus_row_17_9 sfsiplus_linkedin_section" style="background: url('.$icon.') no-repeat;"></span>';
 	 }else
 	 {
-		$return .= '<span class="row_17_9 linkedin_section" style="background-position:-476px 0;"></span>';
+		$return .= '<span class="sfsiplus_row_17_9 sfsiplus_linkedin_section" style="background-position:-476px 0;"></span>';
 	 }
 	 
 	 if(get_option("plus_instagram_skin"))
 	 {
 		$icon = get_option("plus_instagram_skin");
-		$return .= '<span class="row_17_10 instagram_section" style="background: url('.$icon.') no-repeat;"></span>';
+		$return .= '<span class="sfsiplus_row_17_10 sfsiplus_instagram_section" style="background: url('.$icon.') no-repeat;"></span>';
 	 }else
 	 {
-		$return .= '<span class="row_17_10 instagram_section" style="background-position:-526px 0;"></span>';
+		$return .= '<span class="sfsiplus_row_17_10 sfsiplus_instagram_section" style="background-position:-526px 0;"></span>';
 	 }
 	 die($return);
 }

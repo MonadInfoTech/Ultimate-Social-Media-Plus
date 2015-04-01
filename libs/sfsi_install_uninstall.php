@@ -172,16 +172,16 @@ function sfsi_plus_activate_plugin()
 		$option5=  unserialize(get_option('sfsi_plus_section5_options',false));
 	if(get_option('sfsi_plus_section6_options',false))	
 		$option6=  unserialize(get_option('sfsi_plus_section6_options',false));
-	if($option6['sfsi_plus_show_Onposts'] == 'yes')
+	/*if($option6['sfsi_plus_show_Onposts'] == 'yes')
 	{
 		$sfsi_plus_display_button_type = 'standard_buttons';
 	}
 	else
 	{
 		$sfsi_plus_display_button_type = '';
-	}
+	}*/
 	$options8=array(
-		'sfsi_plus_show_via_widget'=>'yes',
+		'sfsi_plus_show_via_widget'=>'no',
         'sfsi_plus_float_on_page'=> $option5['sfsi_plus_icons_float'],
         'sfsi_plus_float_page_position'=>$option5['sfsi_plus_icons_floatPosition'],
         'sfsi_plus_post_icons_size'=>$option5['sfsi_plus_icons_size'],
@@ -193,7 +193,7 @@ function sfsi_plus_activate_plugin()
 		'sfsi_plus_place_item_manually'=>'no',
         /*'sfsi_plus_show_item_onposts'=>'no',*/
 		'sfsi_plus_show_item_onposts'=> $option6['sfsi_plus_show_Onposts'],
-		'sfsi_plus_display_button_type'=> $sfsi_plus_display_button_type,
+		'sfsi_plus_display_button_type'=> 'standard_buttons',
         'sfsi_plus_display_before_posts'=>'no',
 		'sfsi_plus_display_after_posts'=>$option6['sfsi_plus_show_Onposts'],
 		'sfsi_plus_display_on_postspage'=>'no',
