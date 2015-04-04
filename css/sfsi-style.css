@@ -1246,6 +1246,10 @@ ul.tab_2_email_sec li .radio {
     clear: both;
     overflow: hidden;
 }
+.tab3 .row.sfsiplusmousetxt
+{
+	border: medium none;
+}
 .tab3 ul.tab_3_list {
     overflow: hidden;
     margin: 4px 0 11px;
@@ -3382,9 +3386,9 @@ ul.cstmskin_iconlist {
 .tab8 .sfsiplus_tab_3_icns.sfsiplus_shwthmbfraftr .social_icon_like1 li { width: auto; max-width: auto; min-width: auto; margin: 0 50px 0 0 }
 .tab8 .sfsiplus_tab_3_icns.sfsiplus_shwthmbfraftr .usually > li { width:85% !important;  max-width: 100% !important; margin-left: 70px; font-family: 'helveticaneue-light'; padding-bottom: 5px}
 .tab8 .sfsiplus_tab_3_icns.sfsiplus_shwthmbfraftr .options > label { width:356px !important; margin:0; width: auto; margin-bottom: 0; margin-top: 0px; }
-.tab8 .row.PostsSettings_section .options .first.chcklbl { float: left !important; width: 335px !important; }
-.tab8 .row.PostsSettings_section .options .chckwpr { width:538px; float:right; }
-.tab8 .row.PostsSettings_section .options {
+.tab8 .row.sfsiplus_PostsSettings_section .options .first.chcklbl { float: left !important; width: 335px !important; }
+.tab8 .row.sfsiplus_PostsSettings_section .options .chckwpr { width:538px; float:right; }
+.tab8 .row.sfsiplus_PostsSettings_section .options {
 	width:100%; 
 	margin:0; 
 	font-family: 'helveticaneue-light'; 
@@ -3394,7 +3398,7 @@ ul.cstmskin_iconlist {
 	border-left: none;
 }
 .sfsiplus_toggleonlystndrshrng { margin-bottom: 30px !important}
-.tab8 .row.PostsSettings_section .options.shareicontextfld { margin: 15px 0; }
+.tab8 .row.sfsiplus_PostsSettings_section .options.shareicontextfld { margin: 15px 0; }
 .tab8 .sfsiplus_tab_3_icns.flthmonpg .radio { margin-top:55px !important; }
 .tab8 .radiodisplaysection { float: left;}
 
@@ -3445,7 +3449,7 @@ ul.plus_icn_listing li .sfsiplus_right_info label.sfsiplus_sub-subtitle a
 
 .tab8 ul.sfsiplus_icn_listing8 li .sfsiplus_tab_3_icns.sfsiplus_shwthmbfraftr>li:nth-child(1),
 .tab8 ul.sfsiplus_icn_listing8 li .sfsiplus_tab_3_icns.sfsiplus_shwthmbfraftr>li:nth-child(2)  { width: 50% !important}
-.disblfltonmbl p.list { width: 100%; margin-bottom: 28px}
+.space.disblfltonmbl p.list { width: 100%; margin-bottom: 28px}
 
 
 #accordion .tab8 .sfsiplus_icn_listing8 li .sfsiplus_right_info p { display: table}
@@ -3650,10 +3654,10 @@ ul.plus_icn_listing li .sfsiplus_right_info label.sfsiplus_sub-subtitle a
 #accordion .tab8 .sfsiplus_icn_listing8 li .sfsiplus_right_info p.cstmdisplaysharingtxt { padding-top: 5px; display: inline;}
 #accordion .tab8 ul.sfsiplus_shwthmbfraftr .labelhdng4, 
 #accordion .tab8 ul.sfsiplus_shwthmbfraftr .row h4.labelhdng4 { color: #555; font-size: 20px; margin-left: 20px; font-family: 'helveticaregular'}
-.tab8 .sfsiplus_tab_3_icns.sfsiplus_shwthmbfraftr .row.PostsSettings_section { border-left: 105px solid transparent; float: left; padding-top: 0}
+.tab8 .sfsiplus_tab_3_icns.sfsiplus_shwthmbfraftr .row.sfsiplus_PostsSettings_section { border-left: 105px solid transparent; float: left; padding-top: 0}
 .sfsiplus_toggleonlystndrshrng { margin-bottom: 0 !important}
 .radiodisplaysection { float: left}
-.tab8 .sfsiplus_tab_3_icns.sfsiplus_shwthmbfraftr .row.PostsSettings_section>.labelhdng4 { margin-bottom: 20px !important} 
+.tab8 .sfsiplus_tab_3_icns.sfsiplus_shwthmbfraftr .row.sfsiplus_PostsSettings_section>.labelhdng4 { margin-bottom: 20px !important} 
 .sfsiplus_shwthmbfraftr { margin-top: 5px !important}
 label.sfsiplus_toglpstpgsbttl { float: left; margin-top: 5px !important}
 #accordion .tab8 ul.sfsiplus_shwthmbfraftr .row h4 {
@@ -3663,7 +3667,7 @@ label.sfsiplus_toglpstpgsbttl { float: left; margin-top: 5px !important}
 	color: #69737c;
 	float: left
 }
-.tab8 .row.PostsSettings_section .options .seconds.chcklbl { float: right; width: 538px !important; }
+.tab8 .row.sfsiplus_PostsSettings_section .options .seconds.chcklbl { float: right; width: 538px !important; }
 .sfsibeforpstwpr, .sfsiaftrpstwpr
 {
 	width: 100%;

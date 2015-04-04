@@ -6,7 +6,7 @@
 <!-- Section 3 "What design & animation do you want to give your icons?" main div Start -->
 <div class="tab3">
 		<!--Content of 4-->
-        <div class="row mouse_txt tab3">
+        <div class="row mouse_txt sfsiplusmousetxt tab3">
         <p>A good & well-fitting design is not only nice to look at, but it increases chances that people will subscribe and/or share your site with friends:</p>
     
         <ul class="tab_3_list">

@@ -341,7 +341,7 @@ function sfsi_plus_showPreviewCounts() {
 }
 
 function sfsi_plus_show_OnpostsDisplay() {
-   //"yes" == SFSI("input[name='sfsi_plus_show_Onposts']:checked").val() ? SFSI(".PostsSettings_section").slideDown() :SFSI(".PostsSettings_section").slideUp();
+   //"yes" == SFSI("input[name='sfsi_plus_show_Onposts']:checked").val() ? SFSI(".sfsiplus_PostsSettings_section").slideDown() :SFSI(".sfsiplus_PostsSettings_section").slideUp();
 }
 
 function sfsi_plus_update_step4() {
@@ -968,7 +968,7 @@ SFSI(document).ready(function(s) {
             data:s,
             dataType:"json",
             success:function(s) {
-                "success" == s.res && (SFSI(".sfsi_removeFooter").fadeOut("slow"), SFSI(".sfsi_footerLnk").fadeOut("slow"));
+                "success" == s.res && (SFSI(".sfsi_removeFooter").fadeOut("slow"), SFSI(".sfsiplus_footerLnk").fadeOut("slow"));
             }
         });
     }), SFSI(".radio").live("click", function() {

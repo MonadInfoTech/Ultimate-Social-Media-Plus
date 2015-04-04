@@ -169,7 +169,7 @@
                     
 					    
                       
-                  <li class="row PostsSettings_section">
+                  <li class="row sfsiplus_PostsSettings_section">
                     <!--<h4 class="labelhdng4">Options:</h4>-->
                     
                     <!--Display them options-->

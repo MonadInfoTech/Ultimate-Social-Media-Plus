@@ -30,7 +30,7 @@
         </ul><!-- icons display section -->
 	
   <!-- icons position section -->	
-  <div class="row PostsSettings_section">
+  <div class="row sfsiplus_PostsSettings_section">
   	<h4>Options:</h4>
 	<div class="options">
             <label class="first">Text to appear before the sharing icons:</label><input name="sfsi_plus_textBefor_icons" type="text" value="<?php echo ($option6['sfsi_plus_textBefor_icons']!='') ?  $option6['sfsi_plus_textBefor_icons'] : '' ; ?>" />
