@@ -3341,6 +3341,8 @@ ul.cstmskin_iconlist {
 
 .tab8 ul.sfsiplus_icn_listing8 li .sfsiplus_right_info {
     font-family: helveticaregular;
+	width: 94.7%;
+	float: left;
 }
 .tab8 ul.sfsiplus_icn_listing8 li .sfsiplus_right_info p label.ckckslctn
 {
