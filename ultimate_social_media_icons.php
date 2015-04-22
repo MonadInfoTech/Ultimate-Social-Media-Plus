@@ -330,7 +330,7 @@ function sfsi_plus_getlinhght($lineheight)
 
 //sanitizing values
 function sfsi_string_sanitize($s) {
-    $result = preg_replace("/[^a-zA-Z0-9]+/", "", html_entity_decode($s, ENT_QUOTES));
+    $result = preg_replace("/[^a-zA-Z0-9]+/", " ", html_entity_decode($s, ENT_QUOTES));
     return $result;
 }
 ?>
