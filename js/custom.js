@@ -12,9 +12,9 @@ jQuery(document).ready(function(e) {
 			img_found++;
 			if(img_found == 2)
 			{
-				if(meta.getAttribute("data-id") === "sfsi")
+				if(meta.getAttribute("data-id") === "sfsi-plus")
 				{
-					jQuery("meta[data-id=sfsi]").remove();
+					jQuery("meta[data-id=sfsi-plus]").remove();
 				}
 			}
 		}
@@ -186,47 +186,59 @@ var global_error = 0;
 SFSI(document).ready(function(s) {
 
 	//changes done {Monad}
-	
-    SFSI("head").append('<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />'), 
+	SFSI("head").append('<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />'), 
     SFSI("head").append('<meta http-equiv="Pragma" content="no-cache" />'), SFSI("head").append('<meta http-equiv="Expires" content="0" />'), 
-    SFSI(document).click(function(s) {
-        var i = SFSI(".sfsi_plus_FrntInner"), e = SFSI(".sfsi_plus_wDiv"), t = SFSI("#at15s");
+    SFSI(document).click(function(s)
+	{
+        var i = SFSI(".sfsi_plus_FrntInner_changedmonad"), e = SFSI(".sfsi_plus_wDiv"), t = SFSI("#at15s");
         i.is(s.target) || 0 !== i.has(s.target).length || e.is(s.target) || 0 !== e.has(s.target).length || t.is(s.target) || 0 !== t.has(s.target).length || i.fadeOut();
-    }), SFSI(".sfsi_plus_outr_div").find(".sfsiplus_addthis_button").mousemove(function() {
+    }),
+	SFSI(".sfsi_plus_outr_div").find(".sfsiplus_addthis_button").mousemove(function() {
         var s = SFSI(".sfsi_plus_outr_div").find(".sfsiplus_addthis_button").offset().top + 10;
         SFSI("#at15s").css({
             top:s + "px",
             left:SFSI(".sfsi_plus_outr_div").find(".sfsiplus_addthis_button").offset().left + "px"
         });
-    }), SFSI("div#sfsiplusid_linkedin").find(".icon4").find("a").find("img").mouseover(function() {
+    }),
+	SFSI("div#sfsiplusid_linkedin").find(".icon4").find("a").find("img").mouseover(function() {
         SFSI(this).attr("src", ajax_object.plugin_url + "images/visit_icons/linkedIn_hover.svg");
-    }), SFSI("div#sfsiplusid_linkedin").find(".icon4").find("a").find("img").mouseleave(function() {
+    }),
+	SFSI("div#sfsiplusid_linkedin").find(".icon4").find("a").find("img").mouseleave(function() {
         SFSI(this).attr("src", ajax_object.plugin_url + "images/visit_icons/linkedIn.svg");
-    }), SFSI("div#sfsiplusid_youtube").find(".icon1").find("a").find("img").mouseover(function() {
+    }),
+	SFSI("div#sfsiplusid_youtube").find(".icon1").find("a").find("img").mouseover(function() {
         SFSI(this).attr("src", ajax_object.plugin_url + "images/visit_icons/youtube_hover.svg");
-    }), SFSI("div#sfsiplusid_youtube").find(".icon1").find("a").find("img").mouseleave(function() {
+    }),
+	SFSI("div#sfsiplusid_youtube").find(".icon1").find("a").find("img").mouseleave(function() {
         SFSI(this).attr("src", ajax_object.plugin_url + "images/visit_icons/youtube.svg");
-    }), SFSI("div#sfsiplusid_facebook").find(".icon1").find("a").find("img").mouseover(function() {
+    }),
+	SFSI("div#sfsiplusid_facebook").find(".icon1").find("a").find("img").mouseover(function() {
         SFSI(this).css("opacity", "0.9");
-    }), SFSI("div#sfsiplusid_facebook").find(".icon1").find("a").find("img").mouseleave(function() {
+    }),
+	SFSI("div#sfsiplusid_facebook").find(".icon1").find("a").find("img").mouseleave(function() {
         SFSI(this).css("opacity", "1");
-		/*{Monad}*/
-    }), SFSI("div#sfsiplusid_twitter").find(".cstmicon1").find("a").find("img").mouseover(function() {
+	}),
+	SFSI("div#sfsiplusid_twitter").find(".cstmicon1").find("a").find("img").mouseover(function() {
         SFSI(this).css("opacity", "0.9");
-    }), SFSI("div#sfsiplusid_twitter").find(".cstmicon1").find("a").find("img").mouseleave(function() {
+    }),
+	SFSI("div#sfsiplusid_twitter").find(".cstmicon1").find("a").find("img").mouseleave(function() {
         SFSI(this).css("opacity", "1");
-    }), SFSI(".pop-up").on("click", function() {
+    }),
+	SFSI(".pop-up").on("click", function() {
         ("fbex-s2" == SFSI(this).attr("data-id") || "googlex-s2" == SFSI(this).attr("data-id") || "linkex-s2" == SFSI(this).attr("data-id")) && (SFSI("." + SFSI(this).attr("data-id")).hide(), 
         SFSI("." + SFSI(this).attr("data-id")).css("opacity", "1"), SFSI("." + SFSI(this).attr("data-id")).css("z-index", "1000")), 
         SFSI("." + SFSI(this).attr("data-id")).show("slow");
-    }), SFSI("#close_popup").live("click", function() {
+    }),
+	SFSI("#close_popup").live("click", function() {
         SFSI(".read-overlay").hide("slow");
     });
     var e = 0; 
-    sfsi_plus_make_popBox(), SFSI('input[name="sfsi_plus_popup_text"] ,input[name="sfsi_plus_popup_background_color"],input[name="sfsi_plus_popup_border_color"],input[name="sfsi_plus_popup_border_thickness"],input[name="sfsi_plus_popup_fontSize"],input[name="sfsi_plus_popup_fontColor"]').on("keyup", sfsi_plus_make_popBox), 
+    sfsi_plus_make_popBox(),
+	SFSI('input[name="sfsi_plus_popup_text"] ,input[name="sfsi_plus_popup_background_color"],input[name="sfsi_plus_popup_border_color"],input[name="sfsi_plus_popup_border_thickness"],input[name="sfsi_plus_popup_fontSize"],input[name="sfsi_plus_popup_fontColor"]').on("keyup", sfsi_plus_make_popBox), 
     SFSI('input[name="sfsi_plus_popup_text"] ,input[name="sfsi_plus_popup_background_color"],input[name="sfsi_plus_popup_border_color"],input[name="sfsi_plus_popup_border_thickness"],input[name="sfsi_plus_popup_fontSize"],input[name="sfsi_plus_popup_fontColor"]').on("focus", sfsi_plus_make_popBox), 
     SFSI("#sfsi_plus_popup_font ,#sfsi_plus_popup_fontStyle").on("change", sfsi_plus_make_popBox), 
-    SFSI(".radio").live("click", function() {
+    SFSI(".radio").live("click", function()
+	{
         var s = SFSI(this).parent().find("input:radio:first");
         "sfsi_plus_popup_border_shadow" == s.attr("name") && sfsi_plus_make_popBox();
     }), /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ? SFSI("img.sfsi_wicon").on("click", function(s) {

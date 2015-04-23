@@ -71,11 +71,11 @@ function DISPLAY_ULTIMATE_PLUS($args = null, $content = null)
 add_action('wp_head', 'ultimateplusfbmetatags');
 function ultimateplusfbmetatags()
 {	
-	$post_id = get_the_ID();
+   $post_id = get_the_ID();
    $post = get_post( $post_id );
    $attachment_id = get_post_thumbnail_id($post_id);
    $description = $post->post_content;
-   $description = sfsi_string_sanitize($description);
+   $description = sfsi_plus_string_sanitize($description);
    $title = get_the_title($post_id);
    $url = get_permalink($post_id);
    echo ' <meta name="viewport" content="width=device-width, initial-scale=1">';
@@ -84,11 +84,11 @@ function ultimateplusfbmetatags()
 	   $feat_image = wp_get_attachment_url( $attachment_id );
 	   if (preg_match('/https/',$feat_image))
 	   {
-			   echo '<meta property="og:image:secure_url" content="'.$feat_image.'" data-id="sfsi"/>';
+			   echo '<meta property="og:image:secure_url" content="'.$feat_image.'" data-id="sfsi-plus"/>';
 	   }
 	   else
 	   {
-			   echo '<meta property="og:image" content="'.$feat_image.'" data-id="sfsi"/>';
+			   echo '<meta property="og:image" content="'.$feat_image.'" data-id="sfsi-plus"/>';
 	   }
 	   $metadata = wp_get_attachment_metadata( $attachment_id );
 	   if(isset($metadata) && !empty($metadata))
@@ -124,12 +124,12 @@ function ultimateplusfbmetatags()
 			$width = '';
 			$height = '';  
 	   }
-	   echo '<meta property="og:image:type" content="'.$image_type.'" data-id="sfsi"/>';
-	   echo '<meta property="og:image:width" content="'.$width.'" data-id="sfsi"/>';
-	   echo '<meta property="og:image:height" content="'.$height.'" data-id="sfsi"/>';
-	   echo '<meta property="og:description" content="'.$description.'" data-id="sfsi"/>';
-	   echo '<meta property="og:title" content="'.$title.'" data-id="sfsi"/>';
-	   echo '<meta property="og:url" content="'.$url.'" data-id="sfsi"/>';
+	   echo '<meta property="og:image:type" content="'.$image_type.'" data-id="sfsi-plus"/>';
+	   echo '<meta property="og:image:width" content="'.$width.'" data-id="sfsi-plus"/>';
+	   echo '<meta property="og:image:height" content="'.$height.'" data-id="sfsi-plus"/>';
+	   echo '<meta property="og:description" content="'.$description.'" data-id="sfsi-plus"/>';
+	   echo '<meta property="og:title" content="'.$title.'" data-id="sfsi-plus"/>';
+	   echo '<meta property="og:url" content="'.$url.'" data-id="sfsi-plus"/>';
    }
 }
 
@@ -329,7 +329,7 @@ function sfsi_plus_getlinhght($lineheight)
 }
 
 //sanitizing values
-function sfsi_string_sanitize($s) {
+function sfsi_plus_string_sanitize($s) {
     $result = preg_replace("/[^a-zA-Z0-9]+/", " ", html_entity_decode($s, ENT_QUOTES));
     return $result;
 }

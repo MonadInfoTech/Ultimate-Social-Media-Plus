@@ -46,6 +46,7 @@ function sfsi_plus_check_PopUp($content)
 				{	
 					jQuery('.sfsi_plus_outr_div').css({'z-index':'1000000',opacity:1});
 					jQuery('.sfsi_plus_outr_div').fadeIn();
+					jQuery('.sfsi_plus_FrntInner').fadeIn(200);
 				}
 				,<?php echo $time_popUp; ?>);
 		});
@@ -56,10 +57,11 @@ function sfsi_plus_check_PopUp($content)
      }
      if($sfsi_plus_section7_options['sfsi_plus_Shown_pop']=="ETscroll")
      {
-		$time_popUp=$sfsi_plus_section7_options['sfsi_plus_Shown_popupOnceTime'];
-		$time_popUp=$time_popUp*1000;
-	    ob_start();?>
-     <script>
+		$time_popUp = $sfsi_plus_section7_options['sfsi_plus_Shown_popupOnceTime'];
+		$time_popUp = $time_popUp*1000;
+	    ob_start();
+		?>
+     	<script>
 	    jQuery( document ).scroll(function( $ )
 		{
 	    	var y = jQuery(this).scrollTop();
@@ -98,9 +100,9 @@ function sfsi_plus_check_PopUp($content)
      }
      if($sfsi_plus_section7_options['sfsi_plus_Shown_pop']=="LimitPopUp")
      {
-	 	$time_popUp=$sfsi_plus_section7_options['sfsi_plus_Shown_popuplimitPerUserTime'];
-	 	$end_time=$_COOKIE['sfsi_socialPopUp']+($time_popUp*60); 
-		$time_popUp=$time_popUp*1000;
+	 	$time_popUp = $sfsi_plus_section7_options['sfsi_plus_Shown_popuplimitPerUserTime'];
+	 	$end_time = $_COOKIE['sfsi_socialPopUp']+($time_popUp*60); 
+		$time_popUp = $time_popUp*1000;
      
 	 	if(!empty($end_time))
 		{
@@ -108,12 +110,12 @@ function sfsi_plus_check_PopUp($content)
 			 {     
 			 ?>
 			 <script>
-			jQuery( document ).ready(function( $ ) {
-				  //SFSI('.sfsi_plus_outr_div').fadeIn();
-			  sfsi_plus_setCookie('sfsi_socialPopUp',<?php echo time(); ?>,32);
-			  setTimeout(function() {jQuery('.sfsi_plus_outr_div').css({'z-index':'1000000',opacity:1});jQuery('.sfsi_plus_outr_div').fadeIn();},<?php echo $time_popUp; ?>);
-			});
-			var SFSI = jQuery.noConflict();
+				jQuery( document ).ready(function( $ ) {
+				   //SFSI('.sfsi_plus_outr_div').fadeIn();
+			  		sfsi_plus_setCookie('sfsi_socialPopUp',<?php echo time(); ?>,32);
+			  		setTimeout(function() {jQuery('.sfsi_plus_outr_div').css({'z-index':'1000000',opacity:1});jQuery('.sfsi_plus_outr_div').fadeIn();},<?php echo $time_popUp; ?>);
+				});
+				var SFSI = jQuery.noConflict();
 			</script>
 			<?php
 			}
@@ -158,8 +160,8 @@ function sfsi_plus_FrontPopupDiv()
     
 	$h_style="font-family:".$div_FontFamily.";font-style:".$div_Fonttyle.";color:".$div_FontColor.";font-size:".$div_FontSize."px";
     /* get all icons including custom icons */
-    $custom_icons_order=unserialize($sfsi_section5['sfsi_plus_CustomIcons_order']);
-    $icons_order=array($sfsi_section5['sfsi_plus_rssIcon_order']		=>'rss',
+    $custom_icons_order = unserialize($sfsi_section5['sfsi_plus_CustomIcons_order']);
+    $icons_order = array($sfsi_section5['sfsi_plus_rssIcon_order']		=>'rss',
                      $sfsi_section5['sfsi_plus_emailIcon_order']		=>'email',
                      $sfsi_section5['sfsi_plus_facebookIcon_order']	=>'facebook',
                      $sfsi_section5['sfsi_plus_googleIcon_order']	=>'google',
@@ -169,9 +171,9 @@ function sfsi_plus_FrontPopupDiv()
                      $sfsi_section5['sfsi_plus_pinterestIcon_order']	=>'pinterest',
                      $sfsi_section5['sfsi_plus_linkedinIcon_order']	=>'linkedin',
 		     		 $sfsi_section5['sfsi_plus_instagramIcon_order']	=>'instagram',) ;
-  $icons=array();
-  $elements=array();
-  $icons=  unserialize($sfsi_plus_section1_options['sfsi_custom_files']);
+  $icons = array();
+  $elements = array();
+  $icons = unserialize($sfsi_plus_section1_options['sfsi_custom_files']);
   if(is_array($icons))  $elements=array_keys($icons);
   $cnt=0;
   $total=count($custom_icons_order);
@@ -193,11 +195,10 @@ function sfsi_plus_FrontPopupDiv()
 		  endif;
 	  }
   }
-  
-    ksort($icons_order);/* short icons in order to display */
+  ksort($icons_order);/* short icons in order to display */
 	
-    $icons = '<div class="sfsi_plus_outr_div" > <div class="sfsi_plus_FrntInner" style="'.$style.'">';
-	$icons.='<div class="sfsiclpupwpr" onclick="sfsiplushidemepopup();"><img src="'.SFSI_PLUS_PLUGURL.'images/close.png" /></div>';
+   $icons = '<div class="sfsi_plus_outr_div" > <div class="sfsi_plus_FrntInner" style="'.$style.'">';
+   $icons.='<div class="sfsiclpupwpr" onclick="sfsiplushidemepopup();"><img src="'.SFSI_PLUS_PLUGURL.'images/close.png" /></div>';
 	
 	if(!empty($heading_text))
 	{
@@ -216,27 +217,38 @@ function sfsi_plus_FrontPopupDiv()
         
     if(is_array($icn)) { $icon_arry=$icn; $icn="custom" ; } 
     switch ($icn) :     
-    case 'rss' :  if($sfsi_plus_section1_options['sfsi_plus_rss_display']=='yes')  $icons.= "<li>".sfsi_plus_prepairIcons('rss',1)."</li>";  
+    case 'rss' :
+		if($sfsi_plus_section1_options['sfsi_plus_rss_display']=='yes')  $icons.= "<li>".sfsi_plus_prepairIcons('rss',1)."</li>";  
     break;
-    case 'email' :   if($sfsi_plus_section1_options['sfsi_plus_email_display']=='yes')   $icons.= "<li>".sfsi_plus_prepairIcons('email',1)."</li>"; 
+    case 'email' :
+		if($sfsi_plus_section1_options['sfsi_plus_email_display']=='yes')   $icons.= "<li>".sfsi_plus_prepairIcons('email',1)."</li>"; 
     break;
-    case 'facebook' :  if($sfsi_plus_section1_options['sfsi_plus_facebook_display']=='yes') $icons.= "<li>".sfsi_plus_prepairIcons('facebook',1)."</li>";
+    case 'facebook' :
+		if($sfsi_plus_section1_options['sfsi_plus_facebook_display']=='yes') $icons.= "<li>".sfsi_plus_prepairIcons('facebook',1)."</li>";
     break;
-    case 'google' :  if($sfsi_plus_section1_options['sfsi_plus_google_display']=='yes')    $icons.= "<li>".sfsi_plus_prepairIcons('google',1)."</li>";
+    case 'google' :
+		if($sfsi_plus_section1_options['sfsi_plus_google_display']=='yes')    $icons.= "<li>".sfsi_plus_prepairIcons('google',1)."</li>";
     break;
-    case 'twitter' :  if($sfsi_plus_section1_options['sfsi_plus_twitter_display']=='yes')    $icons.= "<li>".sfsi_plus_prepairIcons('twitter',1)."</li>"; 
+    case 'twitter' :
+		if($sfsi_plus_section1_options['sfsi_plus_twitter_display']=='yes')    $icons.= "<li>".sfsi_plus_prepairIcons('twitter',1)."</li>"; 
     break;
-    case 'share' :  if($sfsi_plus_section1_options['sfsi_plus_share_display']=='yes')    $icons.= "<li id='SFshareIcon'>".sfsi_plus_prepairIcons('share',1)."</li>";                                                                                                                                                                                                    
+    case 'share' :
+		if($sfsi_plus_section1_options['sfsi_plus_share_display']=='yes')    $icons.= "<li id='SFshareIcon'>".sfsi_plus_prepairIcons('share',1)."</li>";
+	break;
+    case 'youtube' :
+		if($sfsi_plus_section1_options['sfsi_plus_youtube_display']=='yes')     $icons.= "<li>".sfsi_plus_prepairIcons('youtube',1)."</li>"; 
     break;
-    case 'youtube' :  if($sfsi_plus_section1_options['sfsi_plus_youtube_display']=='yes')     $icons.= "<li>".sfsi_plus_prepairIcons('youtube',1)."</li>"; 
+    case 'pinterest' :
+		if($sfsi_plus_section1_options['sfsi_plus_pinterest_display']=='yes')     $icons.= "<li>".sfsi_plus_prepairIcons('pinterest',1)."</li>";
     break;
-    case 'pinterest' :   if($sfsi_plus_section1_options['sfsi_plus_pinterest_display']=='yes')     $icons.= "<li>".sfsi_plus_prepairIcons('pinterest',1)."</li>";
+    case 'linkedin' :
+		if($sfsi_plus_section1_options['sfsi_plus_linkedin_display']=='yes')    $icons.= "<li>".sfsi_plus_prepairIcons('linkedin',1)."</li>"; 
     break;
-    case 'linkedin' :  if($sfsi_plus_section1_options['sfsi_plus_linkedin_display']=='yes')    $icons.= "<li>".sfsi_plus_prepairIcons('linkedin',1)."</li>"; 
+    case 'instagram' :
+		if($sfsi_plus_section1_options['sfsi_plus_instagram_display']=='yes')    $icons.= "<li>".sfsi_plus_prepairIcons('instagram',1)."</li>"; 
     break;
-    case 'instagram' :  if($sfsi_plus_section1_options['sfsi_plus_instagram_display']=='yes')    $icons.= "<li>".sfsi_plus_prepairIcons('instagram',1)."</li>"; 
-    break;
-    case 'custom' : $icons.= "<li>". sfsi_plus_prepairIcons($icon_arry['ele'],1)."</li>"; 
+    case 'custom' :
+		$icons.= "<li>". sfsi_plus_prepairIcons($icon_arry['ele'],1)."</li>"; 
     break;    
     endswitch;
     endforeach;    
