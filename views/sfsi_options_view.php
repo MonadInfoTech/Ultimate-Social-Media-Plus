@@ -11,20 +11,21 @@
 <!-- START Admin view for plugin-->
 <div class="wapper sfsi_mainContainer">
 	
-     <!-- Top content area of plugin -->
+    <!-- Top content area of plugin -->
     <div class="main_contant">
-	<!--<h1>Welcome to the Ultimate Social Icons and Share Plugin!</h1>
-	<p>This plugin is 100% FREE and will fulfill all your subscription/sharing/liking needs!</p>
-	<p>Get started by clicking on the first question below. Once done, go to the <a href="<?php //echo admin_url('/widgets.php');?>">widget area</a> and move the widget to the sidebar so that your icons are displayed.</p>
-    <p> If you have any questions, <a  href="mailto:support@ultimatelysocial.com" title="support@ultimatelysocial.com" alt="support@ultimatelysocial.com" class="lit_txt">let us know</a>, we‘ll help you out!</p>-->
-    <h1>Welcome to the Ultimate Social Media Icons PLUS plugin!</h1>
-	<p>This plugin is 100% FREE and will fulfill all your subscription/sharing/liking needs!</p>
-	<p>Simply answer the questions below (at least the first 3) by clicking on them - that's it!</p>
-    <p> If you have questions, or <b>something doesn't work as it should,</b> please <a  href="mailto:support@ultimatelysocial.com" title="support@ultimatelysocial.com" alt="support@ultimatelysocial.com" class="lit_txt">get in touch with us</a>, we‘re happy to sort it out!</p>
-    </div> <!-- END Top content area of plugin -->
+        <!--<h1>Welcome to the Ultimate Social Icons and Share Plugin!</h1>
+        <p>This plugin is 100% FREE and will fulfill all your subscription/sharing/liking needs!</p>
+        <p>Get started by clicking on the first question below. Once done, go to the <a href="<?php //echo admin_url('/widgets.php');?>">widget area</a> and move the widget to the sidebar so that your icons are displayed.</p>
+        <p> If you have any questions, <a  href="mailto:support@ultimatelysocial.com" title="support@ultimatelysocial.com" alt="support@ultimatelysocial.com" class="lit_txt">let us know</a>, we‘ll help you out!</p>-->
+        <h1>Welcome to the Ultimate Social Media Icons PLUS plugin!</h1>
+        <p>This plugin is 100% FREE and will fulfill all your subscription/sharing/liking needs!</p>
+        <p>Simply answer the questions below (at least the first 3) by clicking on them - that's it!</p>
+        <p> If you have questions, or <b>something doesn't work as it should,</b> please <a  href="mailto:support@ultimatelysocial.com" title="support@ultimatelysocial.com" alt="support@ultimatelysocial.com" class="lit_txt">get in touch with us</a>, we‘re happy to sort it out!</p>
+    </div>
+    <!-- END Top content area of plugin -->
       
     <!-- step 1 end  here -->
-     <div id="accordion">
+    <div id="accordion">
     <h3><span>1</span>Which icons do you want to show on your site? </h3>
     <!-- step 1 end  here -->
     <?php include(SFSI_PLUS_DOCROOT.'/views/sfsi_option_view1.php'); ?>

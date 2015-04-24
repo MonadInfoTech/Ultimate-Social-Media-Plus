@@ -2,7 +2,6 @@
 /* create SFSI widget */
 class Sfsi_Plus_Widget extends WP_Widget
 {
-
 	function Sfsi_Plus_Widget()
 	{
         $widget_ops = array( 'classname' => 'sfsi_plus', 'description' => __('Ultimate Social Media PLUS widgets', 'Ultimate Social Media PLUS ') );
@@ -77,9 +76,9 @@ class Sfsi_Plus_Widget extends WP_Widget
 		     Please go to  the <a href="admin.php?page=sfsi-plus-options">plugin page</a> to set your preferences
 		</p>
 	<?php
-	}} /* END OF widget Class */
-
-
+	}
+}
+/* END OF widget Class */
 /* register widget to wordpress */
 function register_sfsi_plus_widgets()
 {
@@ -92,22 +91,21 @@ function sfsi_plus_check_visiblity($isFloter=0)
 {
   	global $wpdb;
     /* Access the saved settings in database  */
-    $sfsi_plus_section1_options=  unserialize(get_option('sfsi_plus_section1_options',false));
-    $sfsi_section3=  unserialize(get_option('sfsi_plus_section3_options',false));
-    $sfsi_section5=  unserialize(get_option('sfsi_plus_section5_options',false));
+    $sfsi_plus_section1_options =  unserialize(get_option('sfsi_plus_section1_options',false));
+    $sfsi_section3 = unserialize(get_option('sfsi_plus_section3_options',false));
+    $sfsi_section5 = unserialize(get_option('sfsi_plus_section5_options',false));
     
 	//options that are added on the third question
-	$sfsi_section8=  unserialize(get_option('sfsi_plus_section8_options',false));
+	$sfsi_section8 = unserialize(get_option('sfsi_plus_section8_options',false));
 	   
     /* calculate the width and icons display alignments */
-    $icons_space=$sfsi_section5['sfsi_plus_icons_spacing'];
-    $icons_size=$sfsi_section5['sfsi_plus_icons_size'];
-    $icons_per_row=($sfsi_section5['sfsi_plus_icons_perRow'])? $sfsi_section5['sfsi_plus_icons_perRow'] : '';
+    $icons_space = $sfsi_section5['sfsi_plus_icons_spacing'];
+    $icons_size = $sfsi_section5['sfsi_plus_icons_size'];
+    $icons_per_row = ($sfsi_section5['sfsi_plus_icons_perRow'])? $sfsi_section5['sfsi_plus_icons_perRow'] : '';
     
-    $icons_alignment=$sfsi_section5['sfsi_plus_icons_Alignment'];
-	$icons_alignment=$sfsi_section8['sfsi_plus_icons_alignment'];
-    $position='position:absolute;';
-    $position1='position:absolute;';
+    $icons_alignment = $sfsi_section5['sfsi_plus_icons_Alignment'];
+	$position = 'position:absolute;';
+    $position1 = 'position:absolute;';
     $jquery='<script>';
 	
 	$jquery .= 'jQuery(".sfsi_plus_widget").each(function( index ) {
@@ -140,8 +138,7 @@ function sfsi_plus_check_visiblity($isFloter=0)
 	
     /* check if icons floating  is activated in admin */
 	/*settings under third question*/
-    //if($sfsi_section5['sfsi_plus_icons_float']=="yes")
-	if($sfsi_section8['sfsi_plus_float_on_page']=="yes")
+    if($sfsi_section8['sfsi_plus_float_on_page']=="yes")
 	{
          $top="15";
          //switch($sfsi_section5['sfsi_plus_icons_floatPosition'])

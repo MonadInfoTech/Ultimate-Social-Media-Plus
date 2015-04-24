@@ -2,7 +2,7 @@
 /* unserialize all saved option for  section 5 options */
      
   $icons = ($option1['sfsi_custom_files']) ? unserialize($option1['sfsi_custom_files']) : array() ;
-   $option3=  unserialize(get_option('sfsi_plus_section3_options',false));
+  $option3=  unserialize(get_option('sfsi_plus_section3_options',false));
   $option5 =  unserialize(get_option('sfsi_plus_section5_options',false));
   $custom_icons_order = unserialize($option5['sfsi_plus_CustomIcons_order']);
   $icons_order = array($option5['sfsi_plus_rssIcon_order']=>'rss',
@@ -111,24 +111,24 @@
         <span class="drag_drp">(Drag &amp; Drop)</span>
      <!-- icon's size and spacing section start here -->	
     <div class="row">
-	<h4>Size &amp; spacing of your icons</h4>
-	<div class="icons_size"><span>Size:</span><input name="sfsi_plus_icons_size" value="<?php echo ($option5['sfsi_plus_icons_size']!='') ?  $option5['sfsi_plus_icons_size'] : '' ;?>" type="text" /><ins>pixels wide &amp; tall</ins> <span class="last">Spacing between icons:</span><input name="sfsi_plus_icons_spacing" type="text" value="<?php echo ($option5['sfsi_plus_icons_spacing']!='') ?  $option5['sfsi_plus_icons_spacing'] : '' ;?>" /><ins>Pixels</ins></div>
+        <h4>Size &amp; spacing of your icons</h4>
+        <div class="icons_size"><span>Size:</span><input name="sfsi_plus_icons_size" value="<?php echo ($option5['sfsi_plus_icons_size']!='') ?  $option5['sfsi_plus_icons_size'] : '' ;?>" type="text" /><ins>pixels wide &amp; tall</ins> <span class="last">Spacing between icons:</span><input name="sfsi_plus_icons_spacing" type="text" value="<?php echo ($option5['sfsi_plus_icons_spacing']!='') ?  $option5['sfsi_plus_icons_spacing'] : '' ;?>" /><ins>Pixels</ins></div>
     </div>
     
     <div class="row">
-	<h4>Alignments</h4>
-	<div class="icons_size"><span>Alignment of icons:</span><div class="field"><select name="sfsi_plus_icons_Alignment" id="sfsi_plus_icons_Alignment" class="styled"><option value="center" <?php echo ($option5['sfsi_plus_icons_Alignment']=='center') ?  'selected="selected"' : '' ;?>>Centered</option><option value="right" <?php echo ($option5['sfsi_plus_icons_Alignment']=='right') ?  'selected="selected"' : '' ;?>>Right</option><option value="left" <?php echo ($option5['sfsi_plus_icons_Alignment']=='left') ?  'selected="selected"' : '' ;?>>Left</option></select></div> <span>Icons per row:</span><input name="sfsi_plus_icons_perRow" type="text" value="<?php echo ($option5['sfsi_plus_icons_perRow']!='') ?  $option5['sfsi_plus_icons_perRow'] : '' ;?>" /><ins class="leave_empty">Leave empty if you dont want to <br />
-    define this
-    </ins></div>
+        <h4>Alignments</h4>
+        <div class="icons_size"><span>Alignment of icons:</span><div class="field"><select name="sfsi_plus_icons_Alignment" id="sfsi_plus_icons_Alignment" class="styled"><option value="center" <?php echo ($option5['sfsi_plus_icons_Alignment']=='center') ?  'selected="selected"' : '' ;?>>Centered</option><option value="right" <?php echo ($option5['sfsi_plus_icons_Alignment']=='right') ?  'selected="selected"' : '' ;?>>Right</option><option value="left" <?php echo ($option5['sfsi_plus_icons_Alignment']=='left') ?  'selected="selected"' : '' ;?>>Left</option></select></div> <span>Icons per row:</span><input name="sfsi_plus_icons_perRow" type="text" value="<?php echo ($option5['sfsi_plus_icons_perRow']!='') ?  $option5['sfsi_plus_icons_perRow'] : '' ;?>" /><ins class="leave_empty">Leave empty if you dont want to <br />
+        define this
+        </ins></div>
     </div>
     
     <div class="row new_wind">
-	<h4>New window</h4>
-	<div class="sfsiplus_row_onl"><p>If user clicks on your icons, do you want to open the page in a new window?</p>
-	<ul class="enough_waffling">
-	    <li><input name="sfsi_plus_icons_ClickPageOpen" <?php echo ($option5['sfsi_plus_icons_ClickPageOpen']=='yes') ?  'checked="true"' : '' ;?> type="radio" value="yes" class="styled"  /><label>Yes</label></li>
-	<li><input name="sfsi_plus_icons_ClickPageOpen" <?php echo ($option5['sfsi_plus_icons_ClickPageOpen']=='no') ?  'checked="true"' : '' ;?> type="radio" value="no" class="styled" /><label>No</label></li>
-      </ul></div>
+        <h4>New window</h4>
+        <div class="sfsiplus_row_onl"><p>If user clicks on your icons, do you want to open the page in a new window?</p>
+        <ul class="enough_waffling">
+            <li><input name="sfsi_plus_icons_ClickPageOpen" <?php echo ($option5['sfsi_plus_icons_ClickPageOpen']=='yes') ?  'checked="true"' : '' ;?> type="radio" value="yes" class="styled"  /><label>Yes</label></li>
+        	<li><input name="sfsi_plus_icons_ClickPageOpen" <?php echo ($option5['sfsi_plus_icons_ClickPageOpen']=='no') ?  'checked="true"' : '' ;?> type="radio" value="no" class="styled" /><label>No</label></li>
+        </ul></div>
     </div>
    <!-- END icon's size and spacing section -->
    
