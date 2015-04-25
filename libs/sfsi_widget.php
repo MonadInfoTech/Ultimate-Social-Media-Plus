@@ -690,7 +690,7 @@ function sfsi_plus_prepairIcons($icon_name,$is_front=0)
 		case "share" :
 				$socialObj = new sfsi_plus_SocialHelper();
 				$url = "http://www.addthis.com/bookmark.php?v=250";
-				$class = "sfsiplus_addthis_button";
+				$class = "addthis_button";
 				
 				/*fecth no of counts if active in admin section */
 		      	if($sfsi_plus_section4_options['sfsi_plus_shares_countsDisplay']=="yes" && $sfsi_plus_section4_options['sfsi_plus_display_counts']=="yes")
@@ -1145,7 +1145,7 @@ function sfsi_plus_prepairIcons($icon_name,$is_front=0)
 	{
 		$icons.= "<div style='width:".$icon_width."px; height:".$icon_width."px;margin-left:".$icons_space."px;margin-bottom:".$margin_bot."' class='sfsi_plus_wicons ".$cmcls."'>";
 		$icons.= "<div class='sfsiplus_inerCnt'>";
-		$icons.= "<a class='".$class." sficn' effect='".$mouse_hover_effect."' . $new_window.  href='".$url."' id='sfsiplusid_".$icon_name."' alt='".$alt_text."' style='opacity:".$icon_opacity."' >";     
+		$icons.= "<a class='".$class." sficn' effect='".$mouse_hover_effect."' $new_window  href='".$url."' id='sfsiplusid_".$icon_name."' alt='".$alt_text."' style='opacity:".$icon_opacity."' >";     
 		$icons.= "<img alt='".$alt_text."' title='".$alt_text."' src='".$icon."' width='".$icons_size."' style='".$border_radius.$padding_top."' class='sfcm sfsi_wicon' effect='".$mouse_hover_effect."'   />"; 
 		$icons.= '</a>';
 	   
@@ -1685,7 +1685,7 @@ function sfsi_plus_postsprepairIcons($icon_name,$is_front=0)
 		case "share" :
 				$socialObj = new sfsi_plus_SocialHelper();
 				$url = "http://www.addthis.com/bookmark.php?v=250";
-				$class = "sfsiplus_addthis_button";
+				$class = "addthis_button";
 				
 				/*fecth no of counts if active in admin section */
 		      	if($sfsi_plus_section4_options['sfsi_plus_shares_countsDisplay']=="yes" && $sfsi_plus_section4_options['sfsi_plus_display_counts']=="yes")
@@ -2140,7 +2140,7 @@ function sfsi_plus_postsprepairIcons($icon_name,$is_front=0)
 	{
 		$icons.= "<div style='width:".$icon_width."px; height:".$icon_width."px;margin-left:".$icons_space."px;margin-bottom:".$margin_bot."' class='sfsi_plus_wicons ".$cmcls."'>";
 		$icons.= "<div class='sfsiplus_inerCnt'>";
-		$icons.= "<a class='".$class." sficn' effect='".$mouse_hover_effect."' . $new_window.  href='".$url."' id='sfsiplusid_".$icon_name."' alt='".$alt_text."' style='opacity:".$icon_opacity."' >";     
+		$icons.= "<a class='".$class." sficn' effect='".$mouse_hover_effect."' $new_window  href='".$url."' id='sfsiplusid_".$icon_name."' alt='".$alt_text."' style='opacity:".$icon_opacity."' >";     
 		$icons.= "<img alt='".$alt_text."' title='".$alt_text."' src='".$icon."' width='".$icons_size."' style='".$border_radius.$padding_top."' class='sfcm sfsi_wicon' effect='".$mouse_hover_effect."'   />"; 
 		$icons.= '</a>';
 		 

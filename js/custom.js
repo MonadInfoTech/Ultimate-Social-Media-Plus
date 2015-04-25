@@ -193,11 +193,11 @@ SFSI(document).ready(function(s) {
         var i = SFSI(".sfsi_plus_FrntInner_changedmonad"), e = SFSI(".sfsi_plus_wDiv"), t = SFSI("#at15s");
         i.is(s.target) || 0 !== i.has(s.target).length || e.is(s.target) || 0 !== e.has(s.target).length || t.is(s.target) || 0 !== t.has(s.target).length || i.fadeOut();
     }),
-	SFSI(".sfsi_plus_outr_div").find(".sfsiplus_addthis_button").mousemove(function() {
-        var s = SFSI(".sfsi_plus_outr_div").find(".sfsiplus_addthis_button").offset().top + 10;
+	SFSI(".sfsi_plus_outr_div").find(".addthis_button").mousemove(function() {
+        var s = SFSI(".sfsi_plus_outr_div").find(".addthis_button").offset().top + 10;
         SFSI("#at15s").css({
             top:s + "px",
-            left:SFSI(".sfsi_plus_outr_div").find(".sfsiplus_addthis_button").offset().left + "px"
+            left:SFSI(".sfsi_plus_outr_div").find(".addthis_button").offset().left + "px"
         });
     }),
 	SFSI("div#sfsiplusid_linkedin").find(".icon4").find("a").find("img").mouseover(function() {
