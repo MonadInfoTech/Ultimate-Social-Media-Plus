@@ -1,7 +1,7 @@
 <?php
 require_once(SFSI_PLUS_DOCROOT.'/helpers/OAuth.php');
 
-class LinkedIn {
+class Plus_LinkedIn {
 	public $base_url = "http://api.linkedin.com";
 	public $secure_base_url = "https://api.linkedin.com";
 	public $oauth_callback = "oob";
@@ -21,8 +21,8 @@ class LinkedIn {
 			$this->oauth_callback = $oauth_callback;
 		}
                 $this->request_token=    
-		$this->consumer = new OAuthConsumer($consumer_key, $consumer_secret, $this->oauth_callback);
-		$this->signature_method = new OAuthSignatureMethod_HMAC_SHA1();
+		$this->consumer = new Plus_OAuthConsumer($consumer_key, $consumer_secret, $this->oauth_callback);
+		$this->signature_method = new Plus_OAuthSignatureMethod_HMAC_SHA1();
 		$this->request_token_path = $this->secure_base_url . "/uas/oauth/requestToken?scope=r_basicprofile+r_emailaddress+r_network+w_messages";
 		$this->access_token_path = $this->secure_base_url . "/uas/oauth/accessToken";
 		$this->authorize_path = $this->secure_base_url . "/uas/oauth/authorize";
@@ -31,14 +31,14 @@ class LinkedIn {
 	function getRequestToken()
 	{
 		$consumer = $this->consumer;
-		$request = OAuthRequest::from_consumer_and_token($consumer, NULL, "GET", $this->request_token_path);
+		$request = Plus_OAuthRequest::from_consumer_and_token($consumer, NULL, "GET", $this->request_token_path);
 		$request->set_parameter("oauth_callback", $this->oauth_callback);
 		$request->sign_request($this->signature_method, $consumer, NULL);
 		$headers = Array();
 		$url = $request->to_url();
 		$response = $this->httpRequest($url, $headers, "GET");
 		parse_str($response, $response_params);
-		$this->request_token = new OAuthConsumer($response_params['oauth_token'], $response_params['oauth_token_secret'], 1);
+		$this->request_token = new Plus_OAuthConsumer($response_params['oauth_token'], $response_params['oauth_token_secret'], 1);
 	}
 
 	function generateAuthorizeUrl()
@@ -50,20 +50,20 @@ class LinkedIn {
 
 	function getAccessToken($oauth_verifier)
 	{
-		$request = OAuthRequest::from_consumer_and_token($this->consumer, $this->request_token, "GET", $this->access_token_path);
+		$request = Plus_OAuthRequest::from_consumer_and_token($this->consumer, $this->request_token, "GET", $this->access_token_path);
 		$request->set_parameter("oauth_verifier", $oauth_verifier);
 		$request->sign_request($this->signature_method, $this->consumer, $this->request_token);
 		$headers = Array();
 		$url = $request->to_url();
 		$response = $this->httpRequest($url, $headers, "GET");
 		parse_str($response, $response_params);
-		$this->access_token = new OAuthConsumer($response_params['oauth_token'], $response_params['oauth_token_secret'], 1);
+		$this->access_token = new Plus_OAuthConsumer($response_params['oauth_token'], $response_params['oauth_token_secret'], 1);
 	}
 
         function getCompanyFollowersById($companyID = "")
 	{
 		$api_url = $this->base_url . "/v1/companies/".$companyID.":(num-followers)/";
-		$request = OAuthRequest::from_consumer_and_token($this->consumer, $this->access_token, "GET", $api_url);
+		$request = Plus_OAuthRequest::from_consumer_and_token($this->consumer, $this->access_token, "GET", $api_url);
 		$request->sign_request($this->signature_method, $this->consumer, $this->access_token);
 		$auth_header = $request->to_header("https://api.linkedin.com"); # this is the realm
 		$response = $this->httpRequest($api_url, $auth_header, "GET");
@@ -72,7 +72,7 @@ class LinkedIn {
         function  getCompanyFollowersByName($companyName = "")
 	{
 		$api_url = $this->base_url . "/v1/companies/universal-name=".$companyName.":(num-followers)/";
-		$request = OAuthRequest::from_consumer_and_token($this->consumer, $this->access_token, "GET", $api_url);
+		$request = Plus_OAuthRequest::from_consumer_and_token($this->consumer, $this->access_token, "GET", $api_url);
 		$request->sign_request($this->signature_method, $this->consumer, $this->access_token);
 		$auth_header = $request->to_header("https://api.linkedin.com"); # this is the realm
 		$response = $this->httpRequest($api_url, $auth_header, "GET");
@@ -108,7 +108,7 @@ class LinkedIn {
 
 }
 
-function array_msort($array, $cols)
+function Plus_array_msort($array, $cols)
 {
     $colarr = array();
     foreach ($cols as $col => $order) {

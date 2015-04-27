@@ -16,13 +16,20 @@ function sfsi_get_tweets($username,$tw_settings)
     'consumer_secret' => "HUUEHS5rVSzaY57tICF9dVIaJ3bC5vwSZR9gWqq8QQ"
     );
     // Replace the four parameters below with the information from your Twitter developer application.
-    $twitterConnection = new TwitterOAuth($tw_settings['sfsiplus_tw_consumer_key'],$tw_settings['sfsiplus_tw_consumer_secret'], $tw_settings['sfsiplus_tw_oauth_access_token_secret']);
+    $twitterConnection = new Plus_TwitterOAuth($tw_settings['sfsiplus_tw_consumer_key'],$tw_settings['sfsiplus_tw_consumer_secret'], $tw_settings['sfsiplus_tw_oauth_access_token_secret']);
 
     // Send the API request
     $twitterData = $twitterConnection->get('users/show', array('screen_name' =>$username));
-    // Extract the follower and tweet counts
-    $followerCount = $twitterData->followers_count;
-    return $followerCount;
+	// Extract the follower and tweet counts
+	if(isset($twitterData->followers_count))
+	{
+    	$followerCount = $twitterData->followers_count;
+    	return $followerCount;
+	}
+	else
+	{
+		return 0;
+	}
 }
 /* get linkedIn counts */
 function sfsi_get_linkedin($url)
@@ -37,9 +44,12 @@ function sfsi_getlinkedin_follower($sfsi_plus_ln_company,$APIsettings)
    require_once(SFSI_PLUS_DOCROOT.'/helpers/linkedin-api/linkedin-api.php');
    $scheme = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off' || $_SERVER['SERVER_PORT'] == 443) ? "https" : "http";
    $url=$scheme.'://'.$_SERVER['SERVER_NAME'].$_SERVER['REQUEST_URI'];
-   $linkedin = new LinkedIn($APIsettings['sfsi_plus_ln_api_key'], $APIsettings['sfsi_plus_ln_secret_key'],$APIsettings['sfsi_plus_ln_oAuth_user_token'], $url );
-   $followers = $linkedin->getCompanyFollowersByName($sfsi_plus_ln_company); 
-   return  strip_tags($followers);
+   $linkedin = new Plus_LinkedIn($APIsettings['sfsi_plus_ln_api_key'], $APIsettings['sfsi_plus_ln_secret_key'],$APIsettings['sfsi_plus_ln_oAuth_user_token'], $url );
+   $followers = $linkedin->getCompanyFollowersByName($sfsi_plus_ln_company);
+   if (strpos($followers, '404') === false)
+   {   return  strip_tags($followers); }
+   else
+   {   return  0; }
 }
 /* get facebook likes */
 function sfsi_get_fb($url)
