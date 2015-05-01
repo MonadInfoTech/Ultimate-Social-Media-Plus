@@ -41,7 +41,6 @@ function DISPLAY_ULTIMATE_PLUS($args = null, $content = null)
 	$sfsi_plus_section8_options = get_option("sfsi_plus_section8_options");
 	$sfsi_plus_section8_options = unserialize($sfsi_plus_section8_options);
 	$sfsi_plus_place_item_manually = $sfsi_plus_section8_options['sfsi_plus_place_item_manually'];
-		
 	if($sfsi_plus_place_item_manually == "yes")
 	{
 		$return = '';

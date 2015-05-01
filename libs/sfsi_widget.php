@@ -283,28 +283,28 @@ function sfsi_plus_check_visiblity($isFloter=0)
 function sfsi_plus_prepairIcons($icon_name,$is_front=0)
 {  
     global $wpdb; global $socialObj;
-    $mouse_hover_effect=''; 
-    $active_theme='official';
-    $sfsi_plus_shuffle_Firstload='no';
-    $sfsi_plus_display_counts="no";
-    $icon='';
-    $url='';
-    $alt_text='';
-    $new_window='';
-    $class='';
+    $mouse_hover_effect = ''; 
+    $active_theme = 'official';
+    $sfsi_plus_shuffle_Firstload = 'no';
+    $sfsi_plus_display_counts = "no";
+    $icon = '';
+    $url = '';
+    $alt_text = '';
+    $new_window = '';
+    $class = '';
     /* access  all saved settings in admin */
-    $sfsi_plus_section1_options= unserialize(get_option('sfsi_plus_section1_options',false));
-    $sfsi_plus_section2_options=  unserialize(get_option('sfsi_plus_section2_options',false));
-    $sfsi_plus_section3_options=  unserialize(get_option('sfsi_plus_section3_options',false));
-    $sfsi_plus_section4_options=  unserialize(get_option('sfsi_plus_section4_options',false));
-    $sfsi_plus_section5_options=  unserialize(get_option('sfsi_plus_section5_options',false));
-    $sfsi_plus_section6_options=  unserialize(get_option('sfsi_plus_section6_options',false));
-    $sfsi_plus_section7_options=  unserialize(get_option('sfsi_plus_section7_options',false));
-	$sfsi_plus_section8_options=  unserialize(get_option('sfsi_plus_section8_options',false));
+    $sfsi_plus_section1_options = unserialize(get_option('sfsi_plus_section1_options',false));
+    $sfsi_plus_section2_options = unserialize(get_option('sfsi_plus_section2_options',false));
+    $sfsi_plus_section3_options = unserialize(get_option('sfsi_plus_section3_options',false));
+    $sfsi_plus_section4_options = unserialize(get_option('sfsi_plus_section4_options',false));
+    $sfsi_plus_section5_options = unserialize(get_option('sfsi_plus_section5_options',false));
+    $sfsi_plus_section6_options = unserialize(get_option('sfsi_plus_section6_options',false));
+    $sfsi_plus_section7_options = unserialize(get_option('sfsi_plus_section7_options',false));
+	$sfsi_plus_section8_options = unserialize(get_option('sfsi_plus_section8_options',false));
 
 	 /* get active theme */
-     $border_radius='';
-     $active_theme=$sfsi_plus_section3_options['sfsi_plus_actvite_theme'];
+     $border_radius = '';
+     $active_theme = $sfsi_plus_section3_options['sfsi_plus_actvite_theme'];
     
     
     /* shuffle effect */   
@@ -317,22 +317,22 @@ function sfsi_plus_prepairIcons($icon_name,$is_front=0)
         }
     }
      /* define the main url for icon access */ 
-     $icons_baseUrl=SFSI_PLUS_PLUGURL."/images/icons_theme/".$active_theme."/";
-     $visit_iconsUrl= SFSI_PLUS_PLUGURL."/images/visit_icons/";   
-     $hoverSHow=0;
+     $icons_baseUrl = SFSI_PLUS_PLUGURL."images/icons_theme/".$active_theme."/";
+     $visit_iconsUrl = SFSI_PLUS_PLUGURL."images/visit_icons/";   
+     $hoverSHow = 0;
    
    /* check is icon is a custom icon or default icon */  
    if(is_numeric($icon_name)) { $icon_n=$icon_name; $icon_name="custom" ; } 
     $counts='';
-    $twit_tolCls="";
-    $twt_margin="";
-    $icons_space=$sfsi_plus_section5_options['sfsi_plus_icons_spacing'];
-    $padding_top='';
+    $twit_tolCls = "";
+    $twt_margin = "";
+    $icons_space = $sfsi_plus_section5_options['sfsi_plus_icons_spacing'];
+    $padding_top = '';
     $scheme = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off' || $_SERVER['SERVER_PORT'] == 443) ? "https" : "http";
-	$current_url= $scheme.'://'.$_SERVER['SERVER_NAME'].$_SERVER['REQUEST_URI'];
-	$url="#";
+	$current_url = $scheme.'://'.$_SERVER['SERVER_NAME'].$_SERVER['REQUEST_URI'];
+	$url = "#";
     $cmcls='';
-    $toolClass='';
+    $toolClass = '';
     
 	switch($icon_name)
     {
@@ -368,13 +368,13 @@ function sfsi_plus_prepairIcons($icon_name,$is_front=0)
 				 else
 				 {
 					$active_theme = 'default';
-					$icons_baseUrl = SFSI_PLUS_PLUGURL."/images/icons_theme/default/";
-					$icon=$icons_baseUrl.$active_theme."_rss.png"; 
+					$icons_baseUrl = SFSI_PLUS_PLUGURL."images/icons_theme/default/";
+					$icon = $icons_baseUrl.$active_theme."_rss.png"; 
 				 }
 			 }
 			 else
 			 {
-				$icon=$icons_baseUrl.$active_theme."_rss.png";
+				$icon = $icons_baseUrl.$active_theme."_rss.png";
 			 }		 
         break;
         
@@ -418,7 +418,7 @@ function sfsi_plus_prepairIcons($icon_name,$is_front=0)
 			 else
 			 {
 				$active_theme = 'default';
-				$icons_baseUrl = SFSI_PLUS_PLUGURL."/images/icons_theme/default/";
+				$icons_baseUrl = SFSI_PLUS_PLUGURL."images/icons_theme/default/";
 				$icon=($sfsi_plus_section2_options['sfsi_plus_rss_icons']=="sfsi") ? $icons_baseUrl.$active_theme."_sf.png" : $icons_baseUrl.$active_theme."_email.png"; 
 			 }
 			}
@@ -503,7 +503,7 @@ function sfsi_plus_prepairIcons($icon_name,$is_front=0)
 				 else
 				 {
 					$active_theme = 'default';
-					$icons_baseUrl = SFSI_PLUS_PLUGURL."/images/icons_theme/default/";
+					$icons_baseUrl = SFSI_PLUS_PLUGURL."images/icons_theme/default/";
 					$icon=$icons_baseUrl.$active_theme."_facebook.png";
 				 }
 			}
@@ -591,7 +591,7 @@ function sfsi_plus_prepairIcons($icon_name,$is_front=0)
 					 else
 					 {
 						$active_theme = 'default';
-						$icons_baseUrl = SFSI_PLUS_PLUGURL."/images/icons_theme/default/";
+						$icons_baseUrl = SFSI_PLUS_PLUGURL."images/icons_theme/default/";
 						$icon=$icons_baseUrl.$active_theme."_google.png";
 					 }
 				}
@@ -677,7 +677,7 @@ function sfsi_plus_prepairIcons($icon_name,$is_front=0)
 					 else
 					 {
 						$active_theme = 'default';
-						$icons_baseUrl = SFSI_PLUS_PLUGURL."/images/icons_theme/default/";
+						$icons_baseUrl = SFSI_PLUS_PLUGURL."images/icons_theme/default/";
 						$icon=$icons_baseUrl.$active_theme."_twitter.png";
 					 }
 				}
@@ -730,7 +730,7 @@ function sfsi_plus_prepairIcons($icon_name,$is_front=0)
 					 else
 					 {
 						$active_theme = 'default';
-						$icons_baseUrl = SFSI_PLUS_PLUGURL."/images/icons_theme/default/";
+						$icons_baseUrl = SFSI_PLUS_PLUGURL."images/icons_theme/default/";
 						$icon=$icons_baseUrl.$active_theme."_share.png";
 					 }
 				}
@@ -805,13 +805,13 @@ function sfsi_plus_prepairIcons($icon_name,$is_front=0)
 					 else
 					 {
 						$active_theme = 'default';
-						$icons_baseUrl = SFSI_PLUS_PLUGURL."/images/icons_theme/default/";
-						$icon=$icons_baseUrl.$active_theme."_youtube.png";
+						$icons_baseUrl = SFSI_PLUS_PLUGURL."images/icons_theme/default/";
+						$icon = $icons_baseUrl.$active_theme."_youtube.png";
 					 }
 				}
 				else
 				{
-					$icon=$icons_baseUrl.$active_theme."_youtube.png";
+					$icon = $icons_baseUrl.$active_theme."_youtube.png";
 				}	  
        break;
        
@@ -884,7 +884,7 @@ function sfsi_plus_prepairIcons($icon_name,$is_front=0)
 					 else
 					 {
 						$active_theme = 'default';
-						$icons_baseUrl = SFSI_PLUS_PLUGURL."/images/icons_theme/default/";
+						$icons_baseUrl = SFSI_PLUS_PLUGURL."images/icons_theme/default/";
 						$icon=$icons_baseUrl.$active_theme."_pinterest.png";
 					 }
 				}
@@ -939,7 +939,7 @@ function sfsi_plus_prepairIcons($icon_name,$is_front=0)
 					 else
 					 {
 						$active_theme = 'default';
-						$icons_baseUrl = SFSI_PLUS_PLUGURL."/images/icons_theme/default/";
+						$icons_baseUrl = SFSI_PLUS_PLUGURL."images/icons_theme/default/";
 						$icon=$icons_baseUrl.$active_theme."_instagram.png";
 					 }
 				}
@@ -1031,7 +1031,7 @@ function sfsi_plus_prepairIcons($icon_name,$is_front=0)
 					 else
 					 {
 						$active_theme = 'default';
-						$icons_baseUrl = SFSI_PLUS_PLUGURL."/images/icons_theme/default/";
+						$icons_baseUrl = SFSI_PLUS_PLUGURL."images/icons_theme/default/";
 						$icon=$icons_baseUrl.$active_theme."_linkedin.png";
 					 }
 				}
@@ -1143,7 +1143,7 @@ function sfsi_plus_prepairIcons($icon_name,$is_front=0)
     
 	if(isset($icon) && !empty($icon) && filter_var($icon, FILTER_VALIDATE_URL))
 	{
-		$icons.= "<div style='width:".$icon_width."px; height:".$icon_width."px;margin-left:".$icons_space."px;margin-bottom:".$margin_bot."' class='sfsi_plus_wicons ".$cmcls."'>";
+		$icons.= "<div style='width:".$icon_width."px; height:".$icon_width."px;margin-left:".$icons_space."px;margin-bottom:".$margin_bot."' class='sfsi_plus_wicons shuffeldiv ".$cmcls."'>";
 		$icons.= "<div class='sfsiplus_inerCnt'>";
 		$icons.= "<a class='".$class." sficn' effect='".$mouse_hover_effect."' $new_window  href='".$url."' id='sfsiplusid_".$icon_name."' alt='".$alt_text."' style='opacity:".$icon_opacity."' >";     
 		$icons.= "<img alt='".$alt_text."' title='".$alt_text."' src='".$icon."' width='".$icons_size."' style='".$border_radius.$padding_top."' class='sfcm sfsi_wicon' effect='".$mouse_hover_effect."'   />"; 
@@ -1301,8 +1301,8 @@ function sfsi_plus_postsprepairIcons($icon_name,$is_front=0)
         }
     }
      /* define the main url for icon access */ 
-     $icons_baseUrl=SFSI_PLUS_PLUGURL."/images/icons_theme/".$active_theme."/";
-     $visit_iconsUrl= SFSI_PLUS_PLUGURL."/images/visit_icons/";   
+     $icons_baseUrl=SFSI_PLUS_PLUGURL."images/icons_theme/".$active_theme."/";
+     $visit_iconsUrl= SFSI_PLUS_PLUGURL."images/visit_icons/";   
      $hoverSHow=0;
    
    /* check is icon is a custom icon or default icon */  
@@ -1352,7 +1352,7 @@ function sfsi_plus_postsprepairIcons($icon_name,$is_front=0)
 				 else
 				 {
 					$active_theme = 'default';
-					$icons_baseUrl = SFSI_PLUS_PLUGURL."/images/icons_theme/default/";
+					$icons_baseUrl = SFSI_PLUS_PLUGURL."images/icons_theme/default/";
 					$icon=$icons_baseUrl.$active_theme."_rss.png"; 
 				 }
 			 }
@@ -1402,7 +1402,7 @@ function sfsi_plus_postsprepairIcons($icon_name,$is_front=0)
 			 else
 			 {
 				$active_theme = 'default';
-				$icons_baseUrl = SFSI_PLUS_PLUGURL."/images/icons_theme/default/";
+				$icons_baseUrl = SFSI_PLUS_PLUGURL."images/icons_theme/default/";
 				$icon=($sfsi_plus_section2_options['sfsi_plus_rss_icons']=="sfsi") ? $icons_baseUrl.$active_theme."_sf.png" : $icons_baseUrl.$active_theme."_email.png"; 
 			 }
 			}
@@ -1498,7 +1498,7 @@ function sfsi_plus_postsprepairIcons($icon_name,$is_front=0)
 				 else
 				 {
 					$active_theme = 'default';
-					$icons_baseUrl = SFSI_PLUS_PLUGURL."/images/icons_theme/default/";
+					$icons_baseUrl = SFSI_PLUS_PLUGURL."images/icons_theme/default/";
 					$icon=$icons_baseUrl.$active_theme."_facebook.png";
 				 }
 			}
@@ -1586,7 +1586,7 @@ function sfsi_plus_postsprepairIcons($icon_name,$is_front=0)
 					 else
 					 {
 						$active_theme = 'default';
-						$icons_baseUrl = SFSI_PLUS_PLUGURL."/images/icons_theme/default/";
+						$icons_baseUrl = SFSI_PLUS_PLUGURL."images/icons_theme/default/";
 						$icon=$icons_baseUrl.$active_theme."_google.png";
 					 }
 				}
@@ -1672,7 +1672,7 @@ function sfsi_plus_postsprepairIcons($icon_name,$is_front=0)
 					 else
 					 {
 						$active_theme = 'default';
-						$icons_baseUrl = SFSI_PLUS_PLUGURL."/images/icons_theme/default/";
+						$icons_baseUrl = SFSI_PLUS_PLUGURL."images/icons_theme/default/";
 						$icon=$icons_baseUrl.$active_theme."_twitter.png";
 					 }
 				}
@@ -1725,7 +1725,7 @@ function sfsi_plus_postsprepairIcons($icon_name,$is_front=0)
 					 else
 					 {
 						$active_theme = 'default';
-						$icons_baseUrl = SFSI_PLUS_PLUGURL."/images/icons_theme/default/";
+						$icons_baseUrl = SFSI_PLUS_PLUGURL."images/icons_theme/default/";
 						$icon=$icons_baseUrl.$active_theme."_share.png";
 					 }
 				}
@@ -1800,7 +1800,7 @@ function sfsi_plus_postsprepairIcons($icon_name,$is_front=0)
 					 else
 					 {
 						$active_theme = 'default';
-						$icons_baseUrl = SFSI_PLUS_PLUGURL."/images/icons_theme/default/";
+						$icons_baseUrl = SFSI_PLUS_PLUGURL."images/icons_theme/default/";
 						$icon=$icons_baseUrl.$active_theme."_youtube.png";
 					 }
 				}
@@ -1879,7 +1879,7 @@ function sfsi_plus_postsprepairIcons($icon_name,$is_front=0)
 					 else
 					 {
 						$active_theme = 'default';
-						$icons_baseUrl = SFSI_PLUS_PLUGURL."/images/icons_theme/default/";
+						$icons_baseUrl = SFSI_PLUS_PLUGURL."images/icons_theme/default/";
 						$icon=$icons_baseUrl.$active_theme."_pinterest.png";
 					 }
 				}
@@ -1934,7 +1934,7 @@ function sfsi_plus_postsprepairIcons($icon_name,$is_front=0)
 					 else
 					 {
 						$active_theme = 'default';
-						$icons_baseUrl = SFSI_PLUS_PLUGURL."/images/icons_theme/default/";
+						$icons_baseUrl = SFSI_PLUS_PLUGURL."images/icons_theme/default/";
 						$icon=$icons_baseUrl.$active_theme."_instagram.png";
 					 }
 				}
@@ -2026,7 +2026,7 @@ function sfsi_plus_postsprepairIcons($icon_name,$is_front=0)
 					 else
 					 {
 						$active_theme = 'default';
-						$icons_baseUrl = SFSI_PLUS_PLUGURL."/images/icons_theme/default/";
+						$icons_baseUrl = SFSI_PLUS_PLUGURL."images/icons_theme/default/";
 						$icon=$icons_baseUrl.$active_theme."_linkedin.png";
 					 }
 				}
