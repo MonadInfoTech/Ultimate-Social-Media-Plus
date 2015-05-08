@@ -688,7 +688,7 @@ function sfsi_plus_getCounts()
    return $scounts; exit;
 }
 /* activate and remove footer credit link */
-add_action('wp_ajax_activateFooter','sfsiplusActivateFooter');     
+add_action('wp_ajax_plus_activateFooter','sfsiplusActivateFooter');     
 function sfsiplusActivateFooter()
 {
     update_option('sfsi_plus_footer_sec', 'yes');

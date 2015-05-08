@@ -943,7 +943,7 @@ SFSI(document).ready(function(s) {
     }), SFSI(".hidePop").on("click", function() {
         SFSI(".demail-1").hide("slow"), SFSI(".demail-2").hide("slow"), SFSI(".demail-3").hide("slow");
     }), SFSI(".activate_footer").on("click", function() {
-        SFSI(this).text("activating....");
+		SFSI(this).text("activating....");
         var s = {
             action:"plus_activateFooter"
         };
@@ -953,7 +953,7 @@ SFSI(document).ready(function(s) {
             data:s,
             dataType:"json",
             success:function(s) {
-                "success" == s.res && (SFSI(".demail-1").hide("slow"), SFSI(".demail-2").hide("slow"), 
+				"success" == s.res && (SFSI(".demail-1").hide("slow"), SFSI(".demail-2").hide("slow"), 
                 SFSI(".demail-3").hide("slow"), SFSI(".activate_footer").text("Ok, activate link"));
             }
         });
