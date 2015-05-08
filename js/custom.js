@@ -1,26 +1,5 @@
 jQuery(document).ready(function(e) {
     jQuery("#sfsi_plus_floater").attr("data-top",jQuery(document).height());
-	
-	//removing confliction from yoast plugin
-	var metas = document.getElementsByTagName("meta");
-	var img_found = 0;
-	for (var i=0; i<metas.length; ++i)
-	{
-  		var meta = metas[i];
-		if(meta.getAttribute("property") === "og:image")
-		{
-			img_found++;
-			if(img_found == 2)
-			{
-				if(meta.getAttribute("data-id") === "sfsi-plus")
-				{
-					jQuery("meta[data-id=sfsi-plus]").remove();
-				}
-			}
-		}
-	}
-	//removing confliction from yoast plugin
-			
 });
 
 function sfsiplus_showErrorSuc(s, i, e) {
