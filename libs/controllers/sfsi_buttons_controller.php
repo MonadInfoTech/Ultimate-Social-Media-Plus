@@ -4,7 +4,9 @@
 add_action('wp_ajax_plus_updateSrcn1','sfsi_plus_options_updater1');        
 function sfsi_plus_options_updater1()
 {
-  
+  	if ( !wp_verify_nonce( $_POST['nonce'], "update_plus_step1")) {
+      echo  json_encode(array("wrong_nonce")); exit;
+   	}
     $option1=  unserialize(get_option('sfsi_plus_section1_options',false));
     $sfsi_plus_rss_display           = isset($_POST["sfsi_plus_rss_display"]) ? $_POST["sfsi_plus_rss_display"] : 'no'; 
     $sfsi_plus_email_display         = isset($_POST["sfsi_plus_email_display"]) ? $_POST["sfsi_plus_email_display"] : 'no'; 
@@ -38,6 +40,9 @@ function sfsi_plus_options_updater1()
 add_action('wp_ajax_plus_updateSrcn2','sfsi_plus_options_updater2');        
 function sfsi_plus_options_updater2()
 {
+	if ( !wp_verify_nonce( $_POST['nonce'], "update_plus_step2")) {
+      echo  json_encode(array("wrong_nonce")); exit;
+   	}
     $sfsi_plus_rss_url                   = isset($_POST["sfsi_plus_rss_url"]) ? trim($_POST["sfsi_plus_rss_url"]) : ''; 
     $sfsi_plus_rss_icons                 = isset($_POST["sfsi_plus_rss_icons"]) ? $_POST["sfsi_plus_rss_icons"] : 'email'; 
     
@@ -142,8 +147,9 @@ function sfsi_plus_options_updater2()
 add_action('wp_ajax_plus_updateSrcn3','sfsi_plus_options_updater3');        
 function sfsi_plus_options_updater3()
 {
-  
-    
+	if ( !wp_verify_nonce( $_POST['nonce'], "update_plus_step3")) {
+      echo  json_encode(array("wrong_nonce")); exit;
+   	}
     $sfsi_plus_actvite_theme             = isset($_POST["sfsi_plus_actvite_theme"]) ? $_POST["sfsi_plus_actvite_theme"] : 'no'; 
     $sfsi_plus_mouseOver                 = isset($_POST["sfsi_plus_mouseOver"]) ? $_POST["sfsi_plus_mouseOver"] : 'no'; 
     $sfsi_plus_mouseOver_effect          = isset($_POST["sfsi_plus_mouseOver_effect"]) ? $_POST["sfsi_plus_mouseOver_effect"] : 'fade_in'; 
@@ -185,6 +191,9 @@ function sfsi_plus_options_updater3()
 add_action('wp_ajax_plus_updateSrcn4','sfsi_plus_options_updater4');        
 function sfsi_plus_options_updater4()
 {
+	if ( !wp_verify_nonce( $_POST['nonce'], "update_plus_step4")) {
+      echo  json_encode(array("wrong_nonce")); exit;
+   	}
     $sfsi_plus_display_counts             = isset($_POST["sfsi_plus_display_counts"]) ? $_POST["sfsi_plus_display_counts"] : 'no'; 
    
     $sfsi_plus_email_countsDisplay        = isset($_POST["sfsi_plus_email_countsDisplay"]) ? $_POST["sfsi_plus_email_countsDisplay"] : 'no'; 
@@ -310,6 +319,9 @@ function sfsi_plus_options_updater4()
 add_action('wp_ajax_plus_updateSrcn5','sfsi_plus_options_updater5');        
 function sfsi_plus_options_updater5()
 {
+	if ( !wp_verify_nonce( $_POST['nonce'], "update_plus_step5")) {
+      echo  json_encode(array("wrong_nonce")); exit;
+   	}
 	$sfsi_plus_icons_size                = isset($_POST["sfsi_plus_icons_size"]) ? $_POST["sfsi_plus_icons_size"] : '51'; 
     $sfsi_plus_icons_spacing             = isset($_POST["sfsi_plus_icons_spacing"]) ? $_POST["sfsi_plus_icons_spacing"] : '2'; 
     $sfsi_plus_icons_Alignment           = isset($_POST["sfsi_plus_icons_Alignment"]) ? $_POST["sfsi_plus_icons_Alignment"] : 'center'; 
@@ -397,6 +409,9 @@ function sfsi_plus_options_updater5()
 add_action('wp_ajax_plus_updateSrcn6','sfsi_plus_options_updater6');        
 function sfsi_plus_options_updater6()
 {
+	if ( !wp_verify_nonce( $_POST['nonce'], "update_plus_step6")) {
+      echo  json_encode(array("wrong_nonce")); exit;
+   	}
     $sfsi_plus_show_Onposts                = isset($_POST["sfsi_plus_show_Onposts"]) ? $_POST["sfsi_plus_show_Onposts"] : 'no'; 
     $sfsi_plus_icons_postPositon           = isset($_POST["sfsi_plus_icons_postPositon"]) ? $_POST["sfsi_plus_icons_postPositon"] : ''; 
     $sfsi_plus_icons_alignment             = isset($_POST["sfsi_plus_icons_alignment"]) ? $_POST["sfsi_plus_icons_alignment"] : 'center-right'; 
@@ -418,6 +433,9 @@ function sfsi_plus_options_updater6()
 add_action('wp_ajax_plus_updateSrcn7','sfsi_plus_options_updater7');        
 function sfsi_plus_options_updater7()
 {
+	if ( !wp_verify_nonce( $_POST['nonce'], "update_plus_step7")) {
+      echo  json_encode(array("wrong_nonce")); exit;
+   	}
     $sfsi_plus_popup_text                    = isset($_POST["sfsi_plus_popup_text"]) ? $_POST["sfsi_plus_popup_text"] : ''; 
     $sfsi_plus_popup_background_color        = isset($_POST["sfsi_plus_popup_background_color"]) ? $_POST["sfsi_plus_popup_background_color"] : '#fffff'; 
     $sfsi_plus_popup_border_color            = isset($_POST["sfsi_plus_popup_border_color"]) ? $_POST["sfsi_plus_popup_border_color"] : 'center-right'; 
@@ -460,6 +478,9 @@ function sfsi_plus_options_updater7()
 add_action('wp_ajax_plus_updateSrcn8','sfsi_plus_options_updater8');        
 function sfsi_plus_options_updater8()
 {
+	if ( !wp_verify_nonce( $_POST['nonce'], "update_plus_step8")) {
+      echo  json_encode(array("wrong_nonce")); exit;
+   	}
 	$sfsi_plus_show_via_widget           = isset($_POST["sfsi_plus_show_via_widget"]) ? $_POST["sfsi_plus_show_via_widget"] : 'no'; 
     $sfsi_plus_float_on_page           	 = isset($_POST["sfsi_plus_float_on_page"]) ? $_POST["sfsi_plus_float_on_page"] : 'no'; 
 	$sfsi_plus_float_page_position         = isset($_POST["sfsi_plus_float_page_position"]) ? $_POST["sfsi_plus_float_page_position"] : 'no'; 
@@ -691,12 +712,18 @@ function sfsi_plus_getCounts()
 add_action('wp_ajax_plus_activateFooter','sfsiplusActivateFooter');     
 function sfsiplusActivateFooter()
 {
+	if ( !wp_verify_nonce( $_POST['nonce'], "active_plusfooter")) {
+      echo  json_encode(array('res'=>'wrong_nonce')); exit;
+   	}
     update_option('sfsi_plus_footer_sec', 'yes');
     echo json_encode(array('res'=>'success'));exit;
 }
-add_action('wp_ajax_removeFooter','sfsiplusremoveFooter');     
+add_action('wp_ajax_plus_removeFooter','sfsiplusremoveFooter');     
 function sfsiplusremoveFooter()
 {
+	if ( !wp_verify_nonce( $_POST['nonce'], "remove_plusfooter")) {
+      echo  json_encode(array('res'=>'wrong_nonce')); exit;
+   	}
     update_option('sfsi_plus_footer_sec', 'no');
     echo json_encode(array('res'=>'success'));exit;
 }

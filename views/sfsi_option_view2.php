@@ -187,7 +187,8 @@
     <!-- SAVE BUTTON SECTION   --> 
     <div class="save_button tab_2_sav">
         <img src="<?php echo SFSI_PLUS_PLUGURL; ?>images/ajax-loader.gif" class="loader-img" />
-        <a href="javascript:;" id="sfsi_plus_save2" title="Save">Save</a>
+        <?php  $nonce = wp_create_nonce("update_plus_step2"); ?>
+        <a href="javascript:;" id="sfsi_plus_save2" title="Save" data-nonce="<?php echo $nonce;?>">Save</a>
     </div>
     <!-- END SAVE BUTTON SECTION   -->
     <a class="sfsiColbtn closeSec" href="javascript:;">Collapse area</a>

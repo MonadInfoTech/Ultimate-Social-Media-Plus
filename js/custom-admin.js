@@ -193,6 +193,7 @@ function plus_sfsi_newcustomicon_upload(s) {
 }
 
 function sfsi_plus_update_step1() {
+	var nonce = SFSI("#sfsi_plus_save1").attr("data-nonce");
     global_error = 0, sfsiplus_beForeLoad(), sfsi_plus_depened_sections();
     var s = !1, i = SFSI("input[name='sfsi_plus_rss_display']:checked").val(), e = SFSI("input[name='sfsi_plus_email_display']:checked").val(), t = SFSI("input[name='sfsi_plus_facebook_display']:checked").val(), n = SFSI("input[name='sfsi_plus_twitter_display']:checked").val(), o = SFSI("input[name='sfsi_plus_google_display']:checked").val(), a = SFSI("input[name='sfsi_plus_share_display']:checked").val(), r = SFSI("input[name='sfsi_plus_youtube_display']:checked").val(), c = SFSI("input[name='sfsi_plus_pinterest_display']:checked").val(), p = SFSI("input[name='sfsi_plus_linkedin_display']:checked").val(), _ = SFSI("input[name='sfsi_plus_instagram_display']:checked").val(), l = SFSI("input[name='sfsi_custom1_display']:checked").val(), S = SFSI("input[name='sfsi_custom2_display']:checked").val(), u = SFSI("input[name='sfsi_custom3_display']:checked").val(), f = SFSI("input[name='sfsi_custom4_display']:checked").val(), d = SFSI("input[name='sfsi_custom5_display']:checked").val(), I = {
         action:"plus_updateSrcn1",
@@ -210,7 +211,8 @@ function sfsi_plus_update_step1() {
         sfsi_custom2_display:S,
         sfsi_custom3_display:u,
         sfsi_custom4_display:f,
-        sfsi_custom5_display:d
+        sfsi_custom5_display:d,
+		nonce:nonce
     };
     SFSI.ajax({
         url:ajax_object.ajax_url,
@@ -219,14 +221,24 @@ function sfsi_plus_update_step1() {
         async:!0,
         dataType:"json",
         success:function(i) {
-            "success" == i ? (sfsiplus_showErrorSuc("success", "Saved !", 1), sfsipluscollapse("#sfsi_plus_save1"), 
-            sfsi_plus_make_popBox()) :(global_error = 1, sfsiplus_showErrorSuc("error", "Unkown error , please try again", 1), 
-            s = !1), sfsiplus_afterLoad();
-        }
+            if(i=="wrong_nonce")
+			{
+				sfsiplus_showErrorSuc("error", "Unauthorised Request, Try again after refreshing page", 1);
+            	s = !1;
+				sfsiplus_afterLoad();
+			}
+			else
+			{
+				"success" == i ? (sfsiplus_showErrorSuc("success", "Saved !", 1), sfsipluscollapse("#sfsi_plus_save1"), 
+				sfsi_plus_make_popBox()) :(global_error = 1, sfsiplus_showErrorSuc("error", "Unkown error , please try again", 1), 
+				s = !1), sfsiplus_afterLoad();
+			}
+		}
     });
 }
 
 function sfsi_plus_update_step2() {
+	var nonce = SFSI("#sfsi_plus_save2").attr("data-nonce");
     var s = sfsi_plus_validationStep2();
     if (!s) return global_error = 1, !1;
     sfsiplus_beForeLoad();
@@ -270,7 +282,8 @@ function sfsi_plus_update_step2() {
         sfsi_plus_linkedin_recommendBusines:O,
         sfsi_plus_linkedin_recommendCompany:j,
         sfsi_plus_linkedin_recommendProductId:T,
-        sfsi_plus_custom_links:P
+        sfsi_plus_custom_links:P,
+		nonce:nonce
     };
     SFSI.ajax({
         url:ajax_object.ajax_url,
@@ -279,14 +292,24 @@ function sfsi_plus_update_step2() {
         async:!0,
         dataType:"json",
         success:function(s) {
-            "success" == s ? (sfsiplus_showErrorSuc("success", "Saved !", 2), sfsipluscollapse("#sfsi_plus_save2"), 
-            sfsi_plus_depened_sections()) :(global_error = 1, sfsiplus_showErrorSuc("error", "Unkown error , please try again", 2), 
-            return_value = !1), sfsiplus_afterLoad();
+			if(s == "wrong_nonce")
+			{
+				sfsiplus_showErrorSuc("error", "Unauthorised Request, Try again after refreshing page", 2);
+            	return_value = !1;
+				sfsiplus_afterLoad();
+			}
+			else
+			{
+				"success" == s ? (sfsiplus_showErrorSuc("success", "Saved !", 2), sfsipluscollapse("#sfsi_plus_save2"), 
+				sfsi_plus_depened_sections()) :(global_error = 1, sfsiplus_showErrorSuc("error", "Unkown error , please try again", 2), 
+				return_value = !1), sfsiplus_afterLoad();
+			}
         }
     });
 }
 
 function sfsi_plus_update_step3() {
+	var nonce = SFSI("#sfsi_plus_save3").attr("data-nonce");
     var s = sfsi_plus_validationStep3();
     if (!s) return global_error = 1, !1;
     sfsiplus_beForeLoad();
@@ -305,7 +328,8 @@ function sfsi_plus_update_step3() {
         sfsi_plus_specialIcon_Firstload_Icons:l,
         sfsi_plus_specialIcon_interval:S,
         sfsi_plus_specialIcon_intervalTime:u,
-        sfsi_plus_specialIcon_intervalIcons:f
+        sfsi_plus_specialIcon_intervalIcons:f,
+		nonce:nonce
     };
     SFSI.ajax({
         url:ajax_object.ajax_url,
@@ -314,9 +338,18 @@ function sfsi_plus_update_step3() {
         async:!0,
         dataType:"json",
         success:function(s) {
-            "success" == s ? (sfsiplus_showErrorSuc("success", "Saved !", 3), sfsipluscollapse("#sfsi_plus_save3")) :(sfsiplus_showErrorSuc("error", "Unkown error , please try again", 3), 
-            return_value = !1), sfsiplus_afterLoad();
-        }
+			if(s == "wrong_nonce")
+			{
+				sfsiplus_showErrorSuc("error", "Unauthorised Request, Try again after refreshing page", 3);
+            	return_value = !1;
+				sfsiplus_afterLoad();
+			}
+			else
+			{
+				"success" == s ? (sfsiplus_showErrorSuc("success", "Saved !", 3), sfsipluscollapse("#sfsi_plus_save3")) :(sfsiplus_showErrorSuc("error", "Unkown error , please try again", 3), 
+				return_value = !1), sfsiplus_afterLoad();
+			}
+		}
     });
 }
 
@@ -345,6 +378,7 @@ function sfsi_plus_show_OnpostsDisplay() {
 }
 
 function sfsi_plus_update_step4() {
+	var nonce = SFSI("#sfsi_plus_save4").attr("data-nonce");
     var s = !1, i = sfsi_plus_validationStep4();
     if (!i) return global_error = 1, !1;
     sfsiplus_beForeLoad();
@@ -392,7 +426,8 @@ function sfsi_plus_update_step4() {
         sfsi_plus_instagram_User:H,
         sfsi_plus_shares_countsDisplay:R,
         sfsi_plus_shares_countsFrom:W,
-        sfsi_plus_shares_manualCounts:q
+        sfsi_plus_shares_manualCounts:q,
+		nonce:nonce
     };
     return SFSI.ajax({
         url:ajax_object.ajax_url,
@@ -401,14 +436,24 @@ function sfsi_plus_update_step4() {
         dataType:"json",
         async:!0,
         success:function(s) {
-            "success" == s.res ? (sfsiplus_showErrorSuc("success", "Saved !", 4), sfsipluscollapse("#sfsi_plus_save4"), 
-            sfsi_plus_showPreviewCounts()) :(sfsiplus_showErrorSuc("error", "Unkown error , please try again", 4), 
-            global_error = 1), sfsiplus_afterLoad();
+			if(s == "wrong_nonce")
+			{
+				sfsiplus_showErrorSuc("error", "Unauthorised Request, Try again after refreshing page", 4);
+            	global_error = 1;
+				sfsiplus_afterLoad();
+			}
+			else
+			{
+				"success" == s.res ? (sfsiplus_showErrorSuc("success", "Saved !", 4), sfsipluscollapse("#sfsi_plus_save4"), 
+				sfsi_plus_showPreviewCounts()) :(sfsiplus_showErrorSuc("error", "Unkown error , please try again", 4), 
+				global_error = 1), sfsiplus_afterLoad();
+			}
         }
     }), s;
 }
 
 function sfsi_plus_update_step5() {
+	var nonce = SFSI("#sfsi_plus_save5").attr("data-nonce");
 	sfsi_plus_update_step3();
     var s = sfsi_plus_validationStep5();
     if (!s) return global_error = 1, !1;
@@ -457,7 +502,8 @@ function sfsi_plus_update_step5() {
         sfsi_plus_shareIcon_order:m,
         sfsi_plus_instagramIcon_order:I,
         sfsi_plus_linkedinIcon_order:F,
-        sfsi_plus_custom_orders:h
+        sfsi_plus_custom_orders:h,
+		nonce:nonce
     };
     SFSI.ajax({
         url:ajax_object.ajax_url,
@@ -466,20 +512,31 @@ function sfsi_plus_update_step5() {
         dataType:"json",
         async:!0,
         success:function(s) {
-			"success" == s ? (sfsiplus_showErrorSuc("success", "Saved !", 5), sfsipluscollapse("#sfsi_plus_save5")) :(global_error = 1, 
-            sfsiplus_showErrorSuc("error", "Unkown error , please try again", 5)), sfsiplus_afterLoad();
-        }
+			if(s == "wrong_nonce")
+			{
+				sfsiplus_showErrorSuc("error", "Unauthorised Request, Try again after refreshing page", 5);
+            	global_error = 1;
+				sfsiplus_afterLoad();
+			}
+			else
+			{
+				"success" == s ? (sfsiplus_showErrorSuc("success", "Saved !", 5), sfsipluscollapse("#sfsi_plus_save5")) :(global_error = 1, 
+				sfsiplus_showErrorSuc("error", "Unkown error , please try again", 5)), sfsiplus_afterLoad();
+			}
+		}
     });
 }
 
 function sfsi_plus_update_step6() {
+	var nonce = SFSI("#sfsi_plus_save6").attr("data-nonce");
     sfsiplus_beForeLoad();
     var s = SFSI("input[name='sfsi_plus_show_Onposts']:checked").val(), i = SFSI("input[name='sfsi_plus_textBefor_icons']").val(), e = SFSI("#sfsi_plus_icons_alignment").val(), t = SFSI("#sfsi_plus_icons_DisplayCounts").val(), n = {
         action:"plus_updateSrcn6",
         sfsi_plus_show_Onposts:s,
         sfsi_plus_icons_DisplayCounts:t,
         sfsi_plus_icons_alignment:e,
-        sfsi_plus_textBefor_icons:i
+        sfsi_plus_textBefor_icons:i,
+		nonce:nonce
     };
     SFSI.ajax({
         url:ajax_object.ajax_url,
@@ -488,13 +545,23 @@ function sfsi_plus_update_step6() {
         dataType:"json",
         async:!0,
         success:function(s) {
-            "success" == s ? (sfsiplus_showErrorSuc("success", "Saved !", 6), sfsipluscollapse("#sfsi_plus_save6")) :(global_error = 1, 
-            sfsiplus_showErrorSuc("error", "Unkown error , please try again", 6)), sfsiplus_afterLoad();
-        }
+			if(s == "wrong_nonce")
+			{
+				sfsiplus_showErrorSuc("error", "Unauthorised Request, Try again after refreshing page", 6);
+            	global_error = 1;
+				sfsiplus_afterLoad();
+			}
+			else
+			{
+				"success" == s ? (sfsiplus_showErrorSuc("success", "Saved !", 6), sfsipluscollapse("#sfsi_plus_save6")) :(global_error = 1, 
+				sfsiplus_showErrorSuc("error", "Unkown error , please try again", 6)), sfsiplus_afterLoad();
+			}
+		}
     });
 }
 
 function sfsi_plus_update_step7() {
+	var nonce = SFSI("#sfsi_plus_save7").attr("data-nonce");
     var s = sfsi_plus_validationStep7();
     if (!s) return global_error = 1, !1;
     sfsiplus_beForeLoad();
@@ -517,7 +584,8 @@ function sfsi_plus_update_step7() {
         sfsi_plus_Show_popupOn_PageIDs:_,
         sfsi_plus_Shown_pop:l,
         sfsi_plus_Shown_popupOnceTime:S,
-        sfsi_plus_Shown_popuplimitPerUserTime:u
+        sfsi_plus_Shown_popuplimitPerUserTime:u,
+		nonce:nonce
     };
     SFSI.ajax({
         url:ajax_object.ajax_url,
@@ -526,13 +594,22 @@ function sfsi_plus_update_step7() {
         dataType:"json",
         async:!0,
         success:function(s) {
-            "success" == s ? (sfsiplus_showErrorSuc("success", "Saved !", 7), sfsipluscollapse("#sfsi_plus_save7")) :sfsiplus_showErrorSuc("error", "Unkown error , please try again", 7), 
-            sfsiplus_afterLoad();
-        }
+			if(s == "wrong_nonce")
+			{
+				sfsiplus_showErrorSuc("error", "Unauthorised Request, Try again after refreshing page", 7);
+            	sfsiplus_afterLoad();
+			}
+			else
+			{
+				"success" == s ? (sfsiplus_showErrorSuc("success", "Saved !", 7), sfsipluscollapse("#sfsi_plus_save7")) :sfsiplus_showErrorSuc("error", "Unkown error , please try again", 7), 
+				sfsiplus_afterLoad();
+			}
+		}
     });
 }
 
 function sfsi_plus_update_step8() {
+	var nonce = SFSI("#sfsi_plus_save8").attr("data-nonce");
     var s = sfsi_plus_validationStep7();
 	s = true;
     if (!s) return global_error = 1, !1;
@@ -579,7 +656,8 @@ function sfsi_plus_update_step8() {
 			/*sfsi_plus_display_on_postspage: f,
 			sfsi_plus_display_on_homepage: g*/
 			sfsi_plus_display_before_blogposts: f,
-			sfsi_plus_display_after_blogposts: g
+			sfsi_plus_display_after_blogposts: g,
+			nonce:nonce
         };
     SFSI.ajax({
         url: ajax_object.ajax_url,
@@ -588,8 +666,16 @@ function sfsi_plus_update_step8() {
         dataType: "json",
         async: !0,
         success: function(s) {
-			"success" == s ? (sfsiplus_showErrorSuc("success", "Saved !", 8), sfsipluscollapse("#sfsi_plus_save8")) : sfsiplus_showErrorSuc("error", "Unkown error , please try again", 8), sfsiplus_afterLoad()
-        }
+			if(s == "wrong_nonce")
+			{
+				sfsiplus_showErrorSuc("error", "Unauthorised Request, Try again after refreshing page", 8);
+            	sfsiplus_afterLoad();
+			}
+			else
+			{
+				"success" == s ? (sfsiplus_showErrorSuc("success", "Saved !", 8), sfsipluscollapse("#sfsi_plus_save8")) : sfsiplus_showErrorSuc("error", "Unkown error , please try again", 8), sfsiplus_afterLoad()
+			}
+		}
     })
 }
 
@@ -942,10 +1028,12 @@ SFSI(document).ready(function(s) {
         SFSI(".demail-1").hide("slow"), SFSI(".demail-2").hide("slow"), SFSI(".demail-3").hide("slow");
     }), SFSI(".hidePop").on("click", function() {
         SFSI(".demail-1").hide("slow"), SFSI(".demail-2").hide("slow"), SFSI(".demail-3").hide("slow");
-    }), SFSI(".activate_footer").on("click", function() {
+    }), SFSI(".sfsiplus_activate_footer").on("click", function() {
+		var nonce = SFSI(this).attr("data-nonce");
 		SFSI(this).text("activating....");
         var s = {
-            action:"plus_activateFooter"
+            action:"plus_activateFooter",
+			nonce:nonce
         };
         SFSI.ajax({
             url:ajax_object.ajax_url,
@@ -953,14 +1041,24 @@ SFSI(document).ready(function(s) {
             data:s,
             dataType:"json",
             success:function(s) {
-				"success" == s.res && (SFSI(".demail-1").hide("slow"), SFSI(".demail-2").hide("slow"), 
-                SFSI(".demail-3").hide("slow"), SFSI(".activate_footer").text("Ok, activate link"));
-            }
+				if(s.res == "wrong_nonce")
+				{
+					SFSI(".sfsiplus_activate_footer").css("font-size", "18px");
+					SFSI(".sfsiplus_activate_footer").text("Unauthorised Request, Try again after refreshing page");
+				}
+				else
+				{
+					"success" == s.res && (SFSI(".demail-1").hide("slow"), SFSI(".demail-2").hide("slow"), 
+                	SFSI(".demail-3").hide("slow"), SFSI(".sfsiplus_activate_footer").text("Ok, activate link"));
+				}
+			}
         });
-    }), SFSI(".sfsi_removeFooter").on("click", function() {
+    }), SFSI(".sfsiplus_removeFooter").on("click", function() {
+		var nonce = SFSI(this).attr("data-nonce");
         SFSI(this).text("working....");
         var s = {
-            action:"plus_removeFooter"
+            action:"plus_removeFooter",
+			nonce:nonce
         };
         SFSI.ajax({
             url:ajax_object.ajax_url,
@@ -968,8 +1066,15 @@ SFSI(document).ready(function(s) {
             data:s,
             dataType:"json",
             success:function(s) {
-                "success" == s.res && (SFSI(".sfsi_removeFooter").fadeOut("slow"), SFSI(".sfsiplus_footerLnk").fadeOut("slow"));
-            }
+				if(s.res == "wrong_nonce")
+				{
+					SFSI(".sfsiplus_removeFooter").text("Unauthorised Request, Try again after refreshing page");
+				}
+				else
+				{
+                	"success" == s.res && (SFSI(".sfsiplus_removeFooter").fadeOut("slow"), SFSI(".sfsiplus_footerLnk").fadeOut("slow"));
+				}
+			}
         });
     }), SFSI(".radio").live("click", function() {
         var s = SFSI(this).parent().find("input:radio:first");
