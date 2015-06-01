@@ -24,6 +24,15 @@
   }
   ksort($icons_order);
   
+  if(isset($option5['sfsi_plus_disable_viewport']))
+  {
+	$sfsi_plus_disable_viewport = $option5['sfsi_plus_disable_viewport'];	 
+  }
+  else
+  {
+  	$sfsi_plus_disable_viewport = 'no';
+  }
+  
 ?>
 <!-- Section 5 "Any other wishes for your main icons?" main div Start -->
 <div class="tab5">
@@ -159,6 +168,15 @@
   </ul>
   </div>
   <!--disable float icons-->
+  <!--disabling view port meta tag-->
+  <div class="space disblfltonmbl">
+    <p class="list">Disable auto-scaling feature for mobile devices("viewport" meta tag)</p>	
+    <ul class="enough_waffling">
+    <li><input name="sfsi_plus_disable_viewport" <?php echo ($sfsi_plus_disable_viewport=='yes') ?  'checked="true"' : '' ;?> type="radio" value="yes" class="styled"  /><label>Yes</label></li>
+	<li><input name="sfsi_plus_disable_viewport" <?php echo ($sfsi_plus_disable_viewport=='no') ?  'checked="true"' : '' ;?>  type="radio" value="no" class="styled" /><label>No</label></li>
+  </ul>
+  </div>
+  <!--disabling view port meta tag-->
 </div><!-- END icon's floating and stick section -->
  
  <!-- mouse over text section start here -->

@@ -491,6 +491,13 @@ function sfsi_plus_prepairIcons($icon_name,$is_front=0)
 					 $counts=$socialObj->format_num($fb_data['share_count']);
 					
 				 }
+				 else if($sfsi_plus_section4_options['sfsi_plus_facebook_countsFrom']=="mypage")
+				 {
+					 $current_url = $sfsi_plus_section4_options['sfsi_plus_facebook_mypageCounts'];
+					 $fb_data=$socialObj->sfsi_get_fb_pagelike($current_url);
+					 $counts=$socialObj->format_num($fb_data);
+					
+				 }
 			 } 
 			
 			//Custom Skin Support {Monad}	 
@@ -1484,6 +1491,13 @@ function sfsi_plus_postsprepairIcons($icon_name,$is_front=0)
 				 {
 					 $fb_data=$socialObj->sfsi_get_fb($current_url);
 					 //$counts=$socialObj->format_num($fb_data['share_count']);
+					
+				 }
+				 else if($sfsi_plus_section4_options['sfsi_plus_facebook_countsFrom']=="mypage")
+				 {
+					 $current_url = $sfsi_plus_section4_options['sfsi_plus_facebook_mypageCounts'];
+					 $fb_data=$socialObj->sfsi_get_fb_pagelike($current_url);
+					 //$counts=$socialObj->format_num($fb_data);
 					
 				 }
 			 } 

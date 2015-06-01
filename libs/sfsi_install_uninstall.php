@@ -114,6 +114,7 @@ function sfsi_plus_activate_plugin()
         'sfsi_plus_icons_ClickPageOpen'=>'yes',
         'sfsi_plus_icons_float'=>'no',
 		'sfsi_plus_disable_floaticons'=>'no',
+		'sfsi_plus_disable_viewport'=>'no',
         'sfsi_plus_icons_floatPosition'=>'center-right',
         'sfsi_plus_icons_stick'=>'no',
         'sfsi_plus_rssIcon_order'=>'1',

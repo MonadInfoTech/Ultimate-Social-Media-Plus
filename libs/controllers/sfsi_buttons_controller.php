@@ -205,6 +205,7 @@ function sfsi_plus_options_updater4()
     
     $sfsi_plus_facebook_countsDisplay     = isset($_POST["sfsi_plus_facebook_countsDisplay"]) ? $_POST["sfsi_plus_facebook_countsDisplay"] : 'no'; 
     $sfsi_plus_facebook_countsFrom       = isset($_POST["sfsi_plus_facebook_countsFrom"]) ? $_POST["sfsi_plus_facebook_countsFrom"] : 'manual';
+	$sfsi_plus_facebook_mypageCounts      = isset($_POST["sfsi_plus_facebook_mypageCounts"]) ? trim($_POST["sfsi_plus_facebook_mypageCounts"]) : '';
     $sfsi_plus_facebook_manualCounts      = isset($_POST["sfsi_plus_facebook_manualCounts"]) ? trim($_POST["sfsi_plus_facebook_manualCounts"]) : '';
     $sfsi_plus_facebook_PageLink          = isset($_POST["sfsi_plus_facebook_PageLink"]) ? trim($_POST["sfsi_plus_facebook_PageLink"]) : '';
     
@@ -263,6 +264,7 @@ function sfsi_plus_options_updater4()
    
    'sfsi_plus_facebook_countsDisplay'=>$sfsi_plus_facebook_countsDisplay,
    'sfsi_plus_facebook_countsFrom'=>$sfsi_plus_facebook_countsFrom,
+   'sfsi_plus_facebook_mypageCounts'=>$sfsi_plus_facebook_mypageCounts,
    'sfsi_plus_facebook_manualCounts'=>$sfsi_plus_facebook_manualCounts,
    //'sfsi_plus_facebook_PageLink'=>$sfsi_plus_facebook_PageLink,
    
@@ -330,7 +332,8 @@ function sfsi_plus_options_updater5()
     $sfsi_plus_icons_ClickPageOpen       = isset($_POST["sfsi_plus_icons_ClickPageOpen"]) ? $_POST["sfsi_plus_icons_ClickPageOpen"] : 'no'; 
     
     $sfsi_plus_icons_float               = isset($_POST["sfsi_plus_icons_float"]) ? $_POST["sfsi_plus_icons_float"] : 'no';
-	$sfsi_plus_disable_floaticons		= isset($_POST["sfsi_plus_disable_floaticons"]) ? $_POST["sfsi_plus_disable_floaticons"] : 'no'; 
+	$sfsi_plus_disable_floaticons		= isset($_POST["sfsi_plus_disable_floaticons"]) ? $_POST["sfsi_plus_disable_floaticons"] : 'no';
+	$sfsi_plus_disable_viewport		  = isset($_POST["sfsi_plus_disable_viewport"]) ? $_POST["sfsi_plus_disable_viewport"] : 'no'; 
     $sfsi_plus_icons_floatPosition       = isset($_POST["sfsi_plus_icons_floatPosition"]) ? $_POST["sfsi_plus_icons_floatPosition"] : 'center-right';
     $sfsi_plus_icons_stick               = isset($_POST["sfsi_plus_icons_stick"]) ? $_POST["sfsi_plus_icons_stick"] : 'no';
     $sfsi_plus_rss_MouseOverText         = isset($_POST["sfsi_plus_rss_MouseOverText"]) ? $_POST["sfsi_plus_rss_MouseOverText"] : '';
@@ -374,6 +377,7 @@ function sfsi_plus_options_updater5()
         'sfsi_plus_icons_ClickPageOpen'=>$sfsi_plus_icons_ClickPageOpen,
         'sfsi_plus_icons_float'=>$sfsi_plus_icons_float,
 		'sfsi_plus_disable_floaticons'=>$sfsi_plus_disable_floaticons,
+		'sfsi_plus_disable_viewport'=>$sfsi_plus_disable_viewport,
         'sfsi_plus_icons_floatPosition'=>$sfsi_plus_icons_floatPosition,
         'sfsi_plus_icons_stick'=>$sfsi_plus_icons_stick,
         /* mouse over texts */
@@ -581,6 +585,12 @@ function sfsi_plus_getCounts()
           $scounts['fb_count']=(string) "0";
         }
        
+   }
+   else if($sfsi_plus_section4_options['sfsi_plus_facebook_countsFrom']=="mypage" )
+   {
+       $url = $sfsi_plus_section4_options['sfsi_plus_facebook_mypageCounts'];
+       $fb_data = $socialObj->sfsi_get_fb_pagelike($url);
+       $scounts['fb_count']= $fb_data;
    }
    else
    {

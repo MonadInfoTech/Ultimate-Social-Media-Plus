@@ -919,7 +919,8 @@ ul.flwstep>li {
     text-decoration: none;
     text-align: center;
     display: inline-block;
-    margin-top: 12px;
+    margin-top: 20px;
+	width: 100%;
 }
 .pop_up_box .upload {
     width: 100%;
@@ -2239,6 +2240,11 @@ ul.tab_3_list li span {
 .sfsiplus_specify_counts .listing li .input {
     width: 73px;
 }
+.sfsiplus_fbpgidwpr{width: 160px; float: left; font-weight: bold;}
+.sfsiplus_fbpgidwpr.sfsiplus_fbpgiddesc{font-weight: normal; width: 100%; font-size: 14px; color: #888888;padding: 4px 0 0 60px; }
+.sfsiplus_specify_counts .listing li .input.mypginpt {
+    width: 288px;
+}
 .tab3 .Shuffle_auto .sub_sub_box .tab_3_option {
     padding-top: 0!important;
     margin-bottom: 10px!important;
@@ -2516,21 +2522,21 @@ h2.optional {
     overflow: hidden;
 }
 .fb_tool_bdr .sfsi_inside .icon1 {
-    margin: 2px 0 2px 0;
+    margin: 0px 0 0px 0;
     height: 28px;
     display: inline-block;
     float: none;
     width: 62px;
 }
 .fb_tool_bdr .sfsi_inside .icon2 {
-    margin: 2px 0 2px 0 ;
+    margin: 1px 0 1px 0 ;
     height: 20px;
     width: 49px;
     display: inline-block;
 	overflow: hidden;
 }
 .fb_tool_bdr .sfsi_inside .icon3 {
-    margin: 1px 0 2px 0;
+    margin: 1px 0 0px 0;
     height: 20px;
     width: 62px;
     display: inline-block;
@@ -2590,14 +2596,14 @@ h2.optional {
     width: 76px;
 }
 .gpls_tool_bdr .sfsi_inside .icon2 {
-    margin: 2px 0;
+    margin: 2px 0 3px 0;
     display: inline-block;
     float: none;
     height: 24px;
     width: 38px;
 }
 .gpls_tool_bdr .sfsi_inside .icon3 {
-    margin: 2px 0;
+    margin: 3px 0 2px 0;
     display: inline-block;
     float: none;
     height: 24px;
@@ -2624,23 +2630,26 @@ h2.optional {
     width: 62px;
     overflow: hidden;
 }
+.twt_tool_bdr .sfsi_inside .cstmicon1 a img{
+	float: left;
+}
 .twt_tool_bdr .sfsi_inside .icon1 {
-    margin: 2px 0!important;
+    margin: 0px 0 0px !important;
     display: inline-block;
     float: none;
-    width: 60px;
+    width: 61px;
     overflow: hidden;
-    height: 20px;
+    height: 21px;
 }
 .twt_tool_bdr .sfsi_inside .icon1 iframe {
-    width: 59px!important;
+    width: 61px!important;
 }
 .twt_tool_bdr .sfsi_inside .icon2 {
     margin: 2px 0!important;
     display: inline-block;
     float: none;
-    height: 16px;
-    width: 59px;
+    height: 19px;
+    width: 58px;
 }
 .twt_tool_bdr .sfsi_inside .twt_1 {
     margin: 9px 0 0;
@@ -2666,14 +2675,14 @@ h2.optional {
     float: left;
 }
 .utube_tool_bdr .sfsi_inside .icon1{
-    margin: 9px 0 0;
+    margin: 7px 0 0;
     height: 24px;
     display: inline-block;
     float: none;
-    width: 96px;
+    width: 87px;
 }
 .utube_tool_bdr .sfsi_inside .icon2 {
-    margin: 9px 0 0;
+    margin: 3px 0 0;
     height: 24px;
     display: inline-block;
     float: none;
@@ -2694,34 +2703,34 @@ h2.optional {
     float: left;
     width: 100%}
 .linkedin_tool_bdr .sfsi_inside .icon1{
-    margin: 2px 0;
+    margin: 0px 0;
     display: inline-block;
     float: none;
-    height: 20px;
+    height: 23px;
     width: 100%;
 }
 .linkedin_tool_bdr .sfsi_inside .icon2{
-    margin: 2px 0;
+    margin: 0px 0;
     display: inline-block;
     float: none;
-    height: 20px;
+    height: 23px;
     width: 100%;
 }
 .linkedin_tool_bdr .sfsi_inside .icon3 {
-    margin: 2px 0;
+    margin: 0px 0;
     display: inline-block;
     float: none;
-    height: 20px;
+    height: 23px;
     width: 100%;
 }
 
  
 .linkedin_tool_bdr .sfsi_inside .icon4 {
-    margin: 2px 0;
+    margin: 0px 0;
     display: inline-block;
     float: none;
     height: 28px;
-    width: 100%;
+    width: 66px;
 }
 .sfsi_plus_FrntInner .linkedin_tool_bdr .sfsi_inside .icon1{ margin: 7px 0;}
 .sfsi_plus_widget .linkedin_tool_bdr .sfsi_inside .icon4,
@@ -2741,7 +2750,7 @@ h2.optional {
 }
 .twt_tool_bdr .sfsi_inside .icon1>iframe {
     margin: 0 auto!important;
-    float: none!important;
+    float: left !important;
     width: 100%}
 .twt_tool_bdr .sfsi_inside .icon1>iframe #widget {
     text-align: center;

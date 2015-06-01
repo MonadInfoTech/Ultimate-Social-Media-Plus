@@ -5,7 +5,7 @@ Plugin URI: http://ultimatelysocial.com
 Description: The best social media plugin on the market. And 100% FREE. Allows you to add social media & share icons to your blog (esp. Facebook, Twitter, Email, RSS, Pinterest, Instagram, Google+, LinkedIn, Share-button). It offers a wide range of design options and other features. 
 Author: UltimatelySocial
 Author URI: http://ultimatelysocial.com
-Version: 1.2
+Version: 1.1
 License: GPLv2
 */
 
@@ -98,17 +98,32 @@ add_action('wp_head', 'ultimateplusfbmetatags');
 function ultimateplusfbmetatags()
 {
 	$metarequest = get_option("adding_plustags");
-	if($metarequest == 'yes')
+	$post_id = get_the_ID();
+	if($metarequest == 'yes' && !empty($post_id))
 	{	
-	   $post_id = get_the_ID();
 	   $post = get_post( $post_id );
 	   $attachment_id = get_post_thumbnail_id($post_id);
 	   $title = str_replace('"', "", strip_tags(get_the_title($post_id)));
 	   $description = $post->post_content;
 	   $description = str_replace('"', "", strip_tags($description));
 	   $url = get_permalink($post_id);
+	
+		//checking for disabling viewport meta tag
+		$option5 =  unserialize(get_option('sfsi_plus_section5_options',false));
+		if(isset($option5['sfsi_plus_disable_viewport']))
+		{
+			$sfsi_plus_disable_viewport = $option5['sfsi_plus_disable_viewport'];	 
+		}
+		else
+		{
+			$sfsi_plus_disable_viewport = 'no';
+		}
+		if($sfsi_plus_disable_viewport == 'no')
+		{
+	   		echo ' <meta name="viewport" content="width=device-width, initial-scale=1">';
+		}
+		//checking for disabling viewport meta tag
 		
-	   echo ' <meta name="viewport" content="width=device-width, initial-scale=1">';
 	   if($attachment_id)
 	   {
 	       $feat_image = wp_get_attachment_url( $attachment_id );
