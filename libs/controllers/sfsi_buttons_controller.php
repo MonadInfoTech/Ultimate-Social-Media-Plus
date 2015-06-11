@@ -83,7 +83,7 @@ function sfsi_plus_options_updater2()
     $sfsi_plus_linkedin_recommendProductId= isset($_POST["sfsi_plus_linkedin_recommendProductId"]) ? trim($_POST["sfsi_plus_linkedin_recommendProductId"]) : '';
     
 	$sfsi_plus_youtubeusernameorid = isset($_POST["sfsi_plus_youtubeusernameorid"]) ? trim($_POST["sfsi_plus_youtubeusernameorid"]) : '';
-    $sfsi_plus_youtube_user              = ($_POST["sfsi_plus_ytube_user"]) ? $_POST["sfsi_plus_ytube_user"] : '';
+    $sfsi_plus_ytube_user              = ($_POST["sfsi_plus_ytube_user"]) ? $_POST["sfsi_plus_ytube_user"] : '';
 	$sfsi_plus_ytube_chnlid              = isset($_POST["sfsi_plus_ytube_chnlid"]) ? $_POST["sfsi_plus_ytube_chnlid"] : '';
     
     $sfsi_plus_CustomIcon_links          = isset($_POST["sfsi_plus_custom_links"]) ? serialize($_POST["sfsi_plus_custom_links"]) : '';
@@ -116,6 +116,9 @@ function sfsi_plus_options_updater2()
                         'sfsi_plus_youtube_pageUrl'=>$sfsi_plus_youtube_pageUrl,
                         'sfsi_plus_youtube_page'=>$sfsi_plus_youtube_page,
                         'sfsi_plus_youtube_follow'=>$sfsi_plus_youtube_follow,
+						'sfsi_plus_youtubeusernameorid'=>$sfsi_plus_youtubeusernameorid,
+						'sfsi_plus_ytube_chnlid'=>$sfsi_plus_ytube_chnlid,
+						'sfsi_plus_ytube_user'=>$sfsi_plus_ytube_user,
 						 /* pinterest options */
                         'sfsi_plus_pinterest_page'=>$sfsi_plus_pinterest_page,
                         'sfsi_plus_pinterest_pageUrl'=>$sfsi_plus_pinterest_pageUrl,
@@ -135,11 +138,8 @@ function sfsi_plus_options_updater2()
     
     );
       update_option('sfsi_plus_section2_options',serialize($up_option2));
-      $option4=unserialize(get_option('sfsi_plus_section4_options',false));     
-      $option4['sfsi_plus_youtube_user']=$sfsi_plus_youtube_user;
-	  $option4['sfsi_plus_youtubeusernameorid']=$sfsi_plus_youtubeusernameorid;
-	  $option4['sfsi_plus_ytube_chnlid']=$sfsi_plus_ytube_chnlid;
-      update_option('sfsi_plus_section4_options',serialize($option4));
+      //$option4=unserialize(get_option('sfsi_plus_section4_options',false));     
+      //update_option('sfsi_plus_section4_options',serialize($option4));
     header('Content-Type: application/json');
     echo  json_encode(array("success")); exit;
 }
@@ -503,6 +503,13 @@ function sfsi_plus_options_updater8()
 	$sfsi_plus_display_on_homepage    = isset($_POST["sfsi_plus_display_on_homepage"]) ? $_POST["sfsi_plus_display_on_homepage"] : 'no';*/ 
 	$sfsi_plus_display_before_blogposts    = isset($_POST["sfsi_plus_display_before_blogposts"]) ? $_POST["sfsi_plus_display_before_blogposts"] : 'no'; 
 	$sfsi_plus_display_after_blogposts    = isset($_POST["sfsi_plus_display_after_blogposts"]) ? $_POST["sfsi_plus_display_after_blogposts"] : 'no';
+	$sfsi_plus_rectsub    = isset($_POST["sfsi_plus_rectsub"]) ? $_POST["sfsi_plus_rectsub"] : 'no';
+	$sfsi_plus_rectfb    = isset($_POST["sfsi_plus_rectfb"]) ? $_POST["sfsi_plus_rectfb"] : 'no';
+	$sfsi_plus_rectgp    = isset($_POST["sfsi_plus_rectgp"]) ? $_POST["sfsi_plus_rectgp"] : 'no';
+	$sfsi_plus_rectshr    = isset($_POST["sfsi_plus_rectshr"]) ? $_POST["sfsi_plus_rectshr"] : 'no';
+	$sfsi_plus_recttwtr    = isset($_POST["sfsi_plus_recttwtr"]) ? $_POST["sfsi_plus_recttwtr"] : 'no';
+	
+	
     //post options
 	/*if($sfsi_plus_float_on_page == 'yes')
 	{
@@ -529,6 +536,11 @@ function sfsi_plus_options_updater8()
 				'sfsi_plus_display_on_homepage'=>$sfsi_plus_display_on_homepage,*/
 				'sfsi_plus_display_before_blogposts'=>$sfsi_plus_display_before_blogposts,
 				'sfsi_plus_display_after_blogposts'=>$sfsi_plus_display_after_blogposts,
+				'sfsi_plus_rectsub'=>$sfsi_plus_rectsub,
+				'sfsi_plus_rectfb'=>$sfsi_plus_rectfb,
+				'sfsi_plus_rectgp'=>$sfsi_plus_rectgp,
+				'sfsi_plus_rectshr'=>$sfsi_plus_rectshr,
+				'sfsi_plus_recttwtr'=>$sfsi_plus_recttwtr		
     );
     update_option('sfsi_plus_section8_options',serialize($up_option8));
     header('Content-Type: application/json');

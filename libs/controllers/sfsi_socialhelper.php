@@ -114,12 +114,15 @@ function sfsi_getPlus1($url)
 /* get youtube subscribers  */
 function sfsi_get_youtube($user)
 {
-    $xmlData = @file_get_contents('http://gdata.youtube.com/feeds/api/users/' . $user);
+	/*$xmlData = @file_get_contents('http://gdata.youtube.com/feeds/api/users/' . $user);//deprecated*/
+	$xmlData = @file_get_contents('https://www.googleapis.com/youtube/v3/channels?part=statistics&forUsername='.$user.'&key=AIzaSyA_SqAZGCpZ22vHzOUr3St5xf5XMy78oTY');
     if($xmlData)
     {   
-        $xmlData = str_replace('yt:', 'yt', $xmlData);
+		/*$xmlData = str_replace('yt:', 'yt', $xmlData);
         $xml = new SimpleXMLElement($xmlData);
-        $subs = $xml->ytstatistics['subscriberCount'];
+        $subs = $xml->ytstatistics['subscriberCount'];*/
+		$xmlData = json_decode($xmlData);
+		$subs = $xmlData->items[0]->statistics->subscriberCount;
         $subs=$this->format_num($subs);
     }
     else
@@ -231,6 +234,20 @@ public function sfsi_plus_FBlike($permalink)
         $fb_like_html .= ' action="like"></fb:like>';
         return $fb_like_html;exit;
 }
+/*subscribe like*/
+function sfsi_plus_Subscribelike($permalink, $show_count)
+{
+	
+}
+/*subscribe like*/
+/*twitter like*/
+function sfsi_plus_twitterlike($permalink, $show_count)
+{
+	$twitter_text = '';
+	return sfsi_twitterShare($permalink,$twitter_text);
+}
+/*twitter like*/
+
 /* create on page facebook share option */
 public function sfsiFB_Share($permalink)
 {
@@ -275,17 +292,47 @@ public function sfsi_Googlelike($permalink)
 	               
                 return $twitter_html;
 	} 
+	
+	/* create on page twitter share icon with count */
+ public function sfsi_twitterSharewithcount($permalink,$tweettext, $show_count) {
+		if($show_count)
+		{
+			$twitter_html = '<a href="http://twitter.com/share" class="sr-twitter-button twitter-share-button" lang="en" data-counturl="'.$permalink.'" data-url="'.$permalink.'" data-text="'.$tweettext.'" ></a>';
+		}
+		else
+		{
+			$twitter_html = '<a href="http://twitter.com/share" data-count="none" class="sr-twitter-button twitter-share-button" lang="en" data-url="'.$permalink.'" data-text="'.$tweettext.'" ></a>';
+		}
+	   return $twitter_html;
+	}
+	
  /* create on page youtube subscribe icon */       
  public function sfsi_YouTubeSub($yuser) {
-	 	$option4=  unserialize(get_option('sfsi_plus_section4_options',false));
-		if($option4['sfsi_plus_youtubeusernameorid'] == 'name')
+	 	$option2=  unserialize(get_option('sfsi_plus_section2_options',false));
+		$option4=  unserialize(get_option('sfsi_plus_section4_options',false));
+		if(isset($option2['sfsi_plus_youtubeusernameorid']))
 		{
-			$yuser = $option4['sfsi_plus_youtube_user'];
+			$sfsi_plus_youtubeusernameorid = $option2['sfsi_plus_youtubeusernameorid'];
+			$sfsi_plus_ytube_chnlid = $option2['sfsi_plus_ytube_chnlid'];
+		}
+		elseif(isset($option4['sfsi_plus_youtubeusernameorid']))
+		{
+			$sfsi_plus_youtubeusernameorid = $option4['sfsi_plus_youtubeusernameorid'];
+			$sfsi_plus_ytube_chnlid = $option4['sfsi_plus_ytube_chnlid'];
+		}
+		else
+		{
+			$sfsi_plus_youtubeusernameorid = '';
+			$sfsi_plus_ytube_chnlid = '';
+		}
+		if($sfsi_plus_youtubeusernameorid == 'name')
+		{
+			$yuser = $option2['sfsi_plus_ytube_user'];
 			$youtube_html = '<div class="g-ytsubscribe" data-channel="'.$yuser.'" data-layout="default" data-count="hidden"></div>';
 		}
 		else
 		{
-			$yuser = $option4['sfsi_plus_ytube_chnlid'];
+			$yuser = $sfsi_plus_ytube_chnlid;
 			$youtube_html = '<div class="g-ytsubscribe" data-channelid="'.$yuser.'" data-layout="default" data-count="hidden"></div>';
 		}
 		return $youtube_html;
@@ -330,7 +377,7 @@ public function sfsi_get_instagramFollowers($user_name)
  /* get no of subscribers from specificfeeds for current blog */
 public function  SFSI_getFeedSubscriber($feedid)
 {
-    $curl = curl_init();  
+	$curl = curl_init();  
      
     curl_setopt_array($curl, array(
         CURLOPT_RETURNTRANSFER => 1,
@@ -343,11 +390,17 @@ public function  SFSI_getFeedSubscriber($feedid)
     ));
      /* Send the request & save response to $resp */
         $resp = curl_exec($curl);
-        $resp=json_decode($resp);
-        curl_close($curl);
-          $feeddata=stripslashes_deep($resp->subscriber_count);
-         return $this->format_num($feeddata);exit;
-         
+		if(!empty($resp))
+		{
+        	$resp=json_decode($resp);
+        	curl_close($curl);
+			$feeddata=stripslashes_deep($resp->subscriber_count);
+        }
+		else
+		{
+			$feeddata = 0;
+		}
+		return $this->format_num($feeddata);exit;
 }
     /* check response from a url */
     private function sfsi_get_http_response_code($url) {

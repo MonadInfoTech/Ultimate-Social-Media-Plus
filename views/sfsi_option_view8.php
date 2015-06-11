@@ -1,6 +1,26 @@
 <?php
      /* unserialize all saved option for Eight options */
     $option8=  unserialize(get_option('sfsi_plus_section8_options',false));
+	if(!isset($option8['sfsi_plus_rectsub']))
+	{
+		$option8['sfsi_plus_rectsub'] = 'yes';
+	}
+	if(!isset($option8['sfsi_plus_rectfb']))
+	{
+		$option8['sfsi_plus_rectfb'] = 'yes';
+	}
+	if(!isset($option8['sfsi_plus_rectgp']))
+	{
+		$option8['sfsi_plus_rectgp'] = 'yes';
+	}
+	if(!isset($option8['sfsi_plus_rectshr']))
+	{
+		$option8['sfsi_plus_rectshr'] = 'yes';
+	}
+	if(!isset($option8['sfsi_plus_recttwtr']))
+	{
+		$option8['sfsi_plus_recttwtr'] = 'yes';
+	}
 ?>
 <div class="tab8">
 	<ul class="sfsiplus_icn_listing8">
@@ -114,66 +134,80 @@
 				</p>
 				
 				<ul class="sfsiplus_tab_3_icns sfsiplus_shwthmbfraftr" <?php echo ($option8['sfsi_plus_show_item_onposts'] != "yes")? 'style="display: none";' : '' ;?>>
-					<li onclick="sfsiplus_togglbtmsection('sfsiplus_toggledsplyitemslctn', 'sfsiplus_toggleonlystndrshrng', this);" class="clckbltglcls">
+					<li onclick="sfsiplus_togglbtmsection('sfsiplus_toggleonlystndrshrng', 'sfsiplus_toggledsplyitemslctn', this);" class="clckbltglcls">
+						<input name="sfsi_plus_display_button_type" <?php echo ( $option8['sfsi_plus_display_button_type']=='standard_buttons') ?  'checked="true"' : '' ;?> type="radio" value="standard_buttons" class="styled"  />
+						<label class="labelhdng4">Display rectangle icons</label>
+                    </li>
+                    <li onclick="sfsiplus_togglbtmsection('sfsiplus_toggledsplyitemslctn', 'sfsiplus_toggleonlystndrshrng', this);" class="clckbltglcls">
 						<input name="sfsi_plus_display_button_type" <?php echo ( $option8['sfsi_plus_display_button_type']=='normal_button') ?  'checked="true"' : '' ;?> type="radio" value="normal_button" class="styled"  />
 						<label class="labelhdng4">Display the icons I selected above</label>
                     </li>
-                    <li onclick="sfsiplus_togglbtmsection('sfsiplus_toggleonlystndrshrng', 'sfsiplus_toggledsplyitemslctn', this);" class="clckbltglcls">
-						<input name="sfsi_plus_display_button_type" <?php echo ( $option8['sfsi_plus_display_button_type']=='standard_buttons') ?  'checked="true"' : '' ;?> type="radio" value="standard_buttons" class="styled"  />
-						<label class="labelhdng4">Display only standard sharing buttons</label>
+					<li class="sfsiplus_toggleonlystndrshrng">
+                    	<?php if ($option8['sfsi_plus_display_button_type']=='standard_buttons'): $display = "display:block"; else:  $display = "display:none"; endif;?>
+						<div class="radiodisplaysection" style="<?php echo $display; ?>">
+
+                            <p class="cstmdisplaysharingtxt cstmdisextrpdng">Rectangle icons spell out the <code>«</code><strong>call to action</strong><code>»</code> which increases chances that visitors do it.</p>
+							<p class="cstmdisplaysharingtxt">Select the icons you want to show:</p>
+                            <div class="social_icon_like1">
+                                <ul>
+                                    <li>
+										<div class="radio_section tb_4_ck"><input name="sfsi_plus_rectsub" <?php echo ($option8['sfsi_plus_rectsub']=='yes') ?  'checked="true"' : '' ;?>  id="sfsi_plus_rectsub" type="checkbox" value="yes" class="styled"  /></div>
+                                        <a href="#" title="Subscribe Follow">
+                                            <img src="<?php echo SFSI_PLUS_PLUGURL; ?>images/follow_subscribe.png" alt="Subscribe Follow" /><span style="display: none;">18k</span>
+                                        </a>
+                                    </li>
+									<li>
+										<div class="radio_section tb_4_ck"><input name="sfsi_plus_rectfb" <?php echo ($option8['sfsi_plus_rectfb']=='yes') ?  'checked="true"' : '' ;?>  id="sfsi_plus_rectfb" type="checkbox" value="yes" class="styled"  /></div>
+                                        <a href="#" title="Facebook Like">
+                                            <img src="<?php echo SFSI_PLUS_PLUGURL; ?>images/like.jpg" alt="Facebook Like" /><span style="display: none;">18k</span>
+                                        </a>
+                                    </li>
+                                    <li>
+										<div class="radio_section tb_4_ck"><input name="sfsi_plus_rectgp" <?php echo ($option8['sfsi_plus_rectgp']=='yes') ?  'checked="true"' : '' ;?>  id="sfsi_plus_rectgp" type="checkbox" value="yes" class="styled"  /></div>
+                                        <a href="#" title="Google Plus">
+                                            <img src="<?php echo SFSI_PLUS_PLUGURL; ?>images/google_plus1.jpg" alt="Google Plus" /><span style="display: none;">18k</span>
+                                        </a>
+                                    </li>
+                                    <li>
+										<div class="radio_section tb_4_ck"><input name="sfsi_plus_recttwtr" <?php echo ($option8['sfsi_plus_recttwtr']=='yes') ?  'checked="true"' : '' ;?>  id="sfsi_plus_recttwtr" type="checkbox" value="yes" class="styled"  /></div>
+                                        <a href="#" title="Share">
+                                            <img src="<?php echo SFSI_PLUS_PLUGURL; ?>images/twiiter.png" alt="Twitter like" /><span style="display: none;">18k</span>
+                                        </a>
+                                    </li>
+									<li>
+										<div class="radio_section tb_4_ck"><input name="sfsi_plus_rectshr" <?php echo ($option8['sfsi_plus_rectshr']=='yes') ?  'checked="true"' : '' ;?>  id="sfsi_plus_rectshr" type="checkbox" value="yes" class="styled"  /></div>
+                                        <a href="#" title="Share">
+                                            <img src="<?php echo SFSI_PLUS_PLUGURL; ?>images/share1.jpg" alt="Share" /><span style="display: none;">18k</span>
+                                        </a>
+                                    </li>
+								</ul>	
+                            </div>
+						
+                            <!--<p class="clear">Those are usually all you need: </p>
+                            <ul class="usually" style="color:#5a6570">
+                                <li>1. Facebook is No.1 in liking, so it’s a must have</li>
+                                <li>2. Google+ is also important due to SEO reasons, so important to have as well</li>
+                                <li>3. Share-button covers all other platforms for sharing</li>
+                            </ul>-->
+                            <div class="options">
+                                <label>Do you want to display the counts?</label><div class="field"><select name="sfsi_plus_icons_DisplayCounts" id="sfsi_plus_icons_DisplayCounts" class="styled"><option value="yes" <?php echo ($option8['sfsi_plus_icons_DisplayCounts']=='yes') ?  'selected="true"' : '' ;?>>YES</option><option value="no" <?php echo ($option8['sfsi_plus_icons_DisplayCounts']=='no') ?  'selected="true"' : '' ;?>>NO</option></select></div>
+                            </div>
+					  </div>
                     </li>
-                    <li class="sfsiplus_toggledsplyitemslctn">
+					
+					<li class="sfsiplus_toggledsplyitemslctn">
                     	<?php if ($option8['sfsi_plus_display_button_type']=='normal_button'): $display = "display:block"; else:  $display = "display:none"; endif;?>
 						<div class="row radiodisplaysection" style="<?php echo $display; ?>">
 							<h4>Size &amp; spacing of your icons</h4>
 							<div class="icons_size"><span>Size:</span><input name="sfsi_plus_post_icons_size" value="<?php echo ($option8['sfsi_plus_post_icons_size']!='') ?  $option8['sfsi_plus_post_icons_size'] : '' ;?>" type="text" /><ins>pixels wide &amp; tall</ins> <span class="last">Spacing between icons:</span><input name="sfsi_plus_post_icons_spacing" type="text" value="<?php echo ($option8['sfsi_plus_post_icons_spacing']!='') ?  $option8['sfsi_plus_post_icons_spacing'] : '' ;?>" /><ins>Pixels</ins></div>
 						</div>
                     </li>
-                    
-                    <li class="sfsiplus_toggleonlystndrshrng">
-                    	<?php if ($option8['sfsi_plus_display_button_type']=='standard_buttons'): $display = "display:block"; else:  $display = "display:none"; endif;?>
-						<div class="radiodisplaysection" style="<?php echo $display; ?>">
-
-                            <p class="cstmdisplaysharingtxt">The following icons will be displayed:</p>
-                            <div class="social_icon_like1">
-                                <ul>
-                                    <li>
-                                        <a href="#" title="Facebook Like">
-                                            <img src="<?php echo SFSI_PLUS_PLUGURL; ?>images/like.jpg" alt="Facebook Like" /><span>18k</span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#" title="Google Plus">
-                                            <img src="<?php echo SFSI_PLUS_PLUGURL; ?>images/google_plus1.jpg" alt="Google Plus" /><span>18k</span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#" title="Share">
-                                            <img src="<?php echo SFSI_PLUS_PLUGURL; ?>images/share1.jpg" alt="Share" /><span>18k</span>
-                                        </a>
-                                    </li>
-                                </ul>	
-                            </div>
-						
-                            <p class="clear">Those are usually all you need: </p>
-                            <ul class="usually" style="color:#5a6570">
-                                <li>1. Facebook is No.1 in liking, so it’s a must have</li>
-                                <li>2. Google+ is also important due to SEO reasons, so important to have as well</li>
-                                <li>3. Share-button covers all other platforms for sharing</li>
-                            </ul>
-                            <div class="options">
-                                <label>Do you want to display the counts?</label><div class="field"><select name="sfsi_plus_icons_DisplayCounts" id="sfsi_plus_icons_DisplayCounts" class="styled"><option value="yes" <?php echo ($option8['sfsi_plus_icons_DisplayCounts']=='yes') ?  'selected="true"' : '' ;?>>YES</option><option value="no" <?php echo ($option8['sfsi_plus_icons_DisplayCounts']=='no') ?  'selected="true"' : '' ;?>>NO</option></select></div>
-                            </div>
-					  </div>
-                    </li>
-                    
-					    
                       
                   <li class="row sfsiplus_PostsSettings_section">
                     <!--<h4 class="labelhdng4">Options:</h4>-->
                     
                     <!--Display them options-->
-                    <div class="options">
+                    <div class="options sfsipluspstvwpr">
                         <label class="first chcklbl">Display them: </label>
                         <label class="seconds chcklbl labelhdng4">On Post Pages </label>
                         <div class="chckwpr">
@@ -197,7 +231,7 @@
                     </div>
                     
                     
-                    <div class="options">
+                    <div class="options sfsipluspstvwpr">
                         <label class="seconds chcklbl labelhdng4">On Homepage</label>
                         <div class="chckwpr">
                             <div class="snglchckcntr">

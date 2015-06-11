@@ -23,13 +23,14 @@ class Sfsi_Plus_Widget extends WP_Widget
 			$show_info = isset( $instance['show_info'] ) ? $instance['show_info'] : false;
 			global $is_floter;	      
 			echo $before_widget;
+			/* Display the widget title */
+			if ( $title ) echo $before_title . $title . $after_title;
 			?>
 				<div class="sfsi_plus_widget" data-position="widget">   
 					<div id='sfsi_plus_wDiv'></div>
-						<?php /* Display the widget title */
-							if ( $title ) echo $before_title . $title . $after_title;
-								/* Link the main icons function */
-								 echo sfsi_plus_check_visiblity(0);
+						<?php 
+							/* Link the main icons function */
+							 echo sfsi_plus_check_visiblity(0);
 						  ?>
                     <div style="clear: both;"></div>
 				</div>
@@ -380,7 +381,7 @@ function sfsi_plus_prepairIcons($icon_name,$is_front=0)
         
 		case "email" :
 			   $socialObj = new sfsi_plus_SocialHelper();  /* global object to access 3rd party icon's actions */	
-		       $hoverdiv = '';
+			   $hoverdiv = '';
 			   $sfsi_plus_section2_options['sfsi_plus_email_url'];
 			   $url = (isset($sfsi_plus_section2_options['sfsi_plus_email_url'])) ? $sfsi_plus_section2_options['sfsi_plus_email_url'] : 'javascript:void(0);';
 			   $toolClass = "email_tool_bdr";
@@ -419,12 +420,36 @@ function sfsi_plus_prepairIcons($icon_name,$is_front=0)
 			 {
 				$active_theme = 'default';
 				$icons_baseUrl = SFSI_PLUS_PLUGURL."images/icons_theme/default/";
-				$icon=($sfsi_plus_section2_options['sfsi_plus_rss_icons']=="sfsi") ? $icons_baseUrl.$active_theme."_sf.png" : $icons_baseUrl.$active_theme."_email.png"; 
+				//$icon=($sfsi_plus_section2_options['sfsi_plus_rss_icons']=="sfsi") ? $icons_baseUrl.$active_theme."_sf.png" : $icons_baseUrl.$active_theme."_email.png";
+				if($sfsi_plus_section2_options['sfsi_plus_rss_icons']=="sfsi")
+				{
+					$icon = $icons_baseUrl.$active_theme."_sf.png";
+				}
+				elseif($sfsi_plus_section2_options['sfsi_plus_rss_icons']=="email")
+				{
+					$icon = $icons_baseUrl.$active_theme."_email.png";
+				}
+				else
+				{
+					$icon = $icons_baseUrl.$active_theme."_subscribe.png";
+				}
 			 }
 			}
 			else
 			{
-				$icon=($sfsi_plus_section2_options['sfsi_plus_rss_icons']=="sfsi") ? $icons_baseUrl.$active_theme."_sf.png" : $icons_baseUrl.$active_theme."_email.png";
+				//$icon=($sfsi_plus_section2_options['sfsi_plus_rss_icons']=="sfsi") ? $icons_baseUrl.$active_theme."_sf.png" : $icons_baseUrl.$active_theme."_email.png";
+				if($sfsi_plus_section2_options['sfsi_plus_rss_icons']=="sfsi")
+				{
+					$icon = $icons_baseUrl.$active_theme."_sf.png";
+				}
+				elseif($sfsi_plus_section2_options['sfsi_plus_rss_icons']=="email")
+				{
+					$icon = $icons_baseUrl.$active_theme."_email.png";
+				}
+				else
+				{
+					$icon = $icons_baseUrl.$active_theme."_subscribe.png";
+				}
 			}
         break;
         
@@ -793,7 +818,7 @@ function sfsi_plus_prepairIcons($icon_name,$is_front=0)
                       }
                       else if($sfsi_plus_section4_options['sfsi_plus_youtube_countsFrom']=="subscriber")
                       {
-                             $followers=$socialObj->sfsi_get_youtube($youtube_user);
+						  	$followers=$socialObj->sfsi_get_youtube($youtube_user);
                              $counts=$socialObj->format_num($followers);
                              if(empty($counts))
 							 {
@@ -1410,12 +1435,36 @@ function sfsi_plus_postsprepairIcons($icon_name,$is_front=0)
 			 {
 				$active_theme = 'default';
 				$icons_baseUrl = SFSI_PLUS_PLUGURL."images/icons_theme/default/";
-				$icon=($sfsi_plus_section2_options['sfsi_plus_rss_icons']=="sfsi") ? $icons_baseUrl.$active_theme."_sf.png" : $icons_baseUrl.$active_theme."_email.png"; 
+				//$icon=($sfsi_plus_section2_options['sfsi_plus_rss_icons']=="sfsi") ? $icons_baseUrl.$active_theme."_sf.png" : $icons_baseUrl.$active_theme."_email.png"; 
+			 	if($sfsi_plus_section2_options['sfsi_plus_rss_icons']=="sfsi")
+				{
+					$icon = $icons_baseUrl.$active_theme."_sf.png";
+				}
+				elseif($sfsi_plus_section2_options['sfsi_plus_rss_icons']=="email")
+				{
+					$icon = $icons_baseUrl.$active_theme."_email.png";
+				}
+				else
+				{
+					$icon = $icons_baseUrl.$active_theme."_subscribe.png";
+				}
 			 }
 			}
 			else
 			{
-				$icon=($sfsi_plus_section2_options['sfsi_plus_rss_icons']=="sfsi") ? $icons_baseUrl.$active_theme."_sf.png" : $icons_baseUrl.$active_theme."_email.png";
+				//$icon=($sfsi_plus_section2_options['sfsi_plus_rss_icons']=="sfsi") ? $icons_baseUrl.$active_theme."_sf.png" : $icons_baseUrl.$active_theme."_email.png";
+				if($sfsi_plus_section2_options['sfsi_plus_rss_icons']=="sfsi")
+				{
+					$icon = $icons_baseUrl.$active_theme."_sf.png";
+				}
+				elseif($sfsi_plus_section2_options['sfsi_plus_rss_icons']=="email")
+				{
+					$icon = $icons_baseUrl.$active_theme."_email.png";
+				}
+				else
+				{
+					$icon = $icons_baseUrl.$active_theme."_subscribe.png";
+				}
 			}
         break;
         

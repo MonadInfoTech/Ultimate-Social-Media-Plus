@@ -187,6 +187,16 @@ body {
     background: url(../images/check_bg.jpg) no-repeat;
     display: inherit;
 }
+.tab8 .social_icon_like1 li span.checkbox {
+    width: 31px;
+    height: 31px;
+    background: url(../images/check_bg.jpg) no-repeat;
+    display: inherit;
+}
+.tab8 .social_icon_like1 li a
+{
+	float: left;
+}
 .sfsi_mainContainer .radio {
     width: 40px;
     height: 40px;
@@ -1105,7 +1115,13 @@ ul.sfsiplus_icn_listing8 li .sfsiplus_right_info a {
 }
 .row ul.tab_2_email_sec li {
     float: left;
-    margin-right: 66px;
+    margin-right: 10px;
+	width: 32%;
+}
+.sfsiplusicnsdvwrp
+{
+	width: 110px;
+	float: left;
 }
 .row ul.tab_2_email_sec:first-child {
     margin-right: 2%}
@@ -1166,14 +1182,21 @@ ul.tab_2_email_sec .sf_arow {
     height: 52px;
     float: left;
     background: url(../images/sf_arow_icn.png) no-repeat;
-    margin: 0 8px 0 6px;
+    margin: 0 0px 0 6px;
 }
 ul.tab_2_email_sec .email_icn {
     background: url(../images/tab_1_icn_list.png) 0 -71px no-repeat;
     width: 52px;
     height: 52px;
     float: left;
-    margin: 0 8px;
+    margin: 0 0 0 5px;
+}
+ul.tab_2_email_sec .subscribe_icn {
+    background: url(../images/tab_1_icn_list.png) 0 -860px no-repeat;
+    width: 52px;
+    height: 52px;
+    float: left;
+    margin: 0 0 0 5px;
 }
 ul.tab_2_email_sec li .radio {
     float: left;
@@ -1181,8 +1204,16 @@ ul.tab_2_email_sec li .radio {
 }
 .row ul.tab_2_email_sec li label {
     margin: 13px 0 0 7px;
-    font-size: 19px;
+    font-size: 16px;
     float: left;
+	width: 160px;
+}
+.row ul.tab_2_email_sec li label span
+{
+	font-size: 15px;
+	color: #808080;
+	width: 100%;
+	float: left;
 }
 .inr_cont .fb_url {
     clear: both;
@@ -2240,8 +2271,15 @@ ul.tab_3_list li span {
 .sfsiplus_specify_counts .listing li .input {
     width: 73px;
 }
-.sfsiplus_fbpgidwpr{width: 160px; float: left; font-weight: bold;}
-.sfsiplus_fbpgidwpr.sfsiplus_fbpgiddesc{font-weight: normal; width: 100%; font-size: 14px; color: #888888;padding: 4px 0 0 60px; }
+.sfsiplus_fbpgidwpr{width: 160px; float: left; font-weight: bold; font-size: 17px; color: #000000;}
+.sfsiplus_fbpgiddesc{font-weight: normal; width: 100%; font-size: 14px; color: #888888;padding: 4px 0 0 60px; }
+.sfsiplus_fbpgiddesc code
+{
+	background: none repeat scroll 0 0 transparent;
+	padding-right: 0px;
+	padding-left: 0px;
+	
+}
 .sfsiplus_specify_counts .listing li .input.mypginpt {
     width: 288px;
 }
@@ -2319,7 +2357,7 @@ ul.tab_3_list li span {
     padding-bottom: 40px!important;
 }
 .tab8 .save_button {
-    padding-top: 40px;
+    padding-top: 0px;
 }
 .tab8 .save_button a {
     padding: 16px 0;
@@ -2465,6 +2503,33 @@ label {
     top: -10px;
     left: 50%;
     width: 15px;
+}
+/*.sf_subscrbe .bot_no:before
+{
+	content: url(images/count_left_arow.png);
+    height: 9px;
+	left: 0;
+	margin-left: -12px;
+	position: absolute;
+    top: 0px;
+	width: 15px;
+}*/
+.sf_subscrbe .bot_no
+{
+	background: rgba(0, 0, 0, 0) url(images/count_left_arow.png) no-repeat scroll 0 0 / 27px auto;
+	font-size: 12px !important;
+    left: 67px;
+    line-height: 17px !important;
+    margin-left: 0px;
+    margin-top: 10px;
+    padding: 1px 0;
+    position: absolute;
+    text-align: center;
+    top: -8px;
+    white-space: pre;
+    width: 33px;
+	height: 20px;
+    z-index: 9;
 }
 .bot_no.sfsiSmBtn {
     font-size: 10px;
@@ -2856,23 +2921,67 @@ h2.optional {
     width: 500px!important;
 }
 @media (max-width:767px) {
-    .icon2 .fb_iframe_widget span {
-    width: auto;
+		.icon2 .fb_iframe_widget span {
+		width: auto;
+	}
+	.sfsi_plus_outr_div {
+		top: 10%}
+	.sfsi_plus_outr_div h2 {
+		font-size: 22px!important;
+		line-height: 28px;
+	}
+	.sfsi_plus_wicons {
+		padding-top: 0;
+	}
 }
-.sfsi_plus_outr_div {
-    top: 10%}
-.sfsi_plus_outr_div h2 {
-    font-size: 22px!important;
-    line-height: 28px;
-}
-.sfsi_plus_wicons {
-    padding-top: 0;
-}
-}.sfsiplus_specify_counts .listing li .high_prb {
+.sfsiplus_specify_counts .listing li .high_prb {
     height: 41px;
 }
 .sfsi_Sicons {
     position: relative;
+}
+.sfsi_Sicons .sf_subscrbe{ margin: 2px 8px 3px 0; line-height: 20px;}
+.sfsi_Sicons .sf_fb{ margin: 0 4px 0 5px; line-height: 20px;}
+.sfsi_Sicons .sf_google{ margin: 0 5px 0 5px; line-height: 20px;}
+.sfsi_Sicons .sf_twiter{ margin: 1px 7px 0 4px; line-height: 20px;}
+.sfsi_Sicons .sf_addthis{ margin: 2px 7px 0 2px; line-height: 20px;}
+
+.sfsi_Sicons.left .sf_subscrbe{ margin: 2px 13px 3px 0; }
+.sfsi_Sicons.left .sf_fb{ margin: 0 7px 0 0; }
+.sfsi_Sicons.left .sf_google{ margin: 0 8px 0 0; }
+.sfsi_Sicons.left .sf_twiter{ margin: 1px 6px 0 0; }
+.sfsi_Sicons.left .sf_addthis{ margin: 2px 7px 0 0; }
+
+.sfsi_Sicons.right .sf_subscrbe{ margin: 2px 0 3px; }
+.sfsi_Sicons.right .sf_fb{ margin: 0 0 0 13px; }
+.sfsi_Sicons.right .sf_google{ margin: 0 0 0 7px; }
+.sfsi_Sicons.right .sf_twiter{ margin: 1px 0 0 8px; }
+.sfsi_Sicons.right .sf_addthis{ margin: 2px 0 0 6px; }
+
+.sfsi_Sicons .sf_subscrbe, .sfsi_Sicons .sf_twiter
+{
+	position: relative;
+	width: 75px;
+}
+.sfsi_Sicons .sf_twiter iframe
+{
+	margin: 0px;
+}
+.sfsi_Sicons .sf_subscrbe a
+{
+	width: auto;
+	float: left;
+	border: medium none;
+	padding-top: 0px;
+}
+.sfsi_Sicons .sf_subscrbe a:focus
+{
+	outline: medium none;
+}
+.sfsi_Sicons .sf_subscrbe a img
+{
+	width: 65px;
+	float: left;
 }
 .sfsi_Sicons .sf_fb {
     position: relative;
@@ -2883,12 +2992,19 @@ h2.optional {
     width: 73px;
     margin: 2px 0 0;
 }
+/*absolute commented as for standard icon it was giving issue while icon was to be aligned centerd.*/
 .sfsi_Sicons .sf_fb .fb_iframe_widget>span {
-    position: absolute;
+    position: relative;
     /*width: 450px!important;*/
+	float: left;
 }
 .sfsi_Sicons .sf_addthis, .sfsi_Sicons .sf_google {
     position: relative;
+}
+.sfsi_Sicons .sf_google>div
+{
+	float: left !important;
+	margin-top: 1px !important;	
 }
 .wrapper .sfsi_Sicons .sf_addthis {
     margin: 7px 0 0 4px!important;
@@ -3400,7 +3516,7 @@ ul.cstmskin_iconlist {
 .tab8 .row.sfsiplus_PostsSettings_section .options .first.chcklbl { float: left !important; width: 335px !important; }
 .tab8 .row.sfsiplus_PostsSettings_section .options .chckwpr { width:538px; float:right; }
 .tab8 .row.sfsiplus_PostsSettings_section .options {
-	width:100%; 
+	width:90%; 
 	margin:0; 
 	font-family: 'helveticaneue-light'; 
 	float: left; 
@@ -3644,7 +3760,7 @@ ul.plus_icn_listing li .sfsiplus_right_info label.sfsiplus_sub-subtitle a
 	line-height: 30px;
 }
 .chckwpr .snglchckcntr:first-child { float:left; }
-.chckwpr .snglchckcntr:last-child { float:right; }
+.chckwpr .snglchckcntr:last-child { float:left; margin-left: 150px; }
 .chckwpr
 {
 	width:100%;
@@ -3679,26 +3795,51 @@ label.sfsiplus_toglpstpgsbttl { float: left; margin-top: 5px !important}
 	float: left
 }
 .tab8 .row.sfsiplus_PostsSettings_section .options .seconds.chcklbl { float: right; width: 538px !important; }
-.sfsibeforpstwpr, .sfsiaftrpstwpr
+.sfsibeforpstwpr
 {
 	width: 100%;
 	float: left;
 	line-height: 18px;
+	margin: 5px 0;
 }
-.sfsibeforpstwpr .sfsi_Sicons span, .sfsiaftrpstwpr .sfsi_Sicons span
+.sfsiaftrpstwpr
+{
+	width: 100%;
+	float: left;
+	line-height: 18px;
+	margin: 5px 0;
+}
+.sfsibeforpstwpr .sfsi_Sicons span
 {
 	font-size: 20px;
 }
-.sfsibeforpstwpr .sfsi_Sicons, .sfsiaftrpstwpr .sfsi_Sicons
+.sfsiaftrpstwpr .sfsi_Sicons span
+{
+	font-size: 20px;
+}
+.sfsibeforpstwpr .sfsi_Sicons
 {
 	
 }
-.sfsibeforpstwpr .sfsiplus_norm_row.sfsi_plus_wDivothr, .sfsiaftrpstwpr .sfsiplus_norm_row.sfsi_plus_wDivothr
+.sfsiaftrpstwpr .sfsi_Sicons
+{
+	
+}
+.sfsibeforpstwpr .sfsiplus_norm_row.sfsi_plus_wDivothr
 {
 	width: auto;
 	float: left;
 }
-.sfsibeforpstwpr .sfsiplus_norm_row.sfsi_plus_wDivothr .sfsi_plus_wicons, .sfsiaftrpstwpr .sfsiplus_norm_row.sfsi_plus_wDivothr .sfsi_plus_wicons
+.sfsiaftrpstwpr .sfsiplus_norm_row.sfsi_plus_wDivothr
+{
+	width: auto;
+	float: left;
+}
+.sfsibeforpstwpr .sfsiplus_norm_row.sfsi_plus_wDivothr .sfsi_plus_wicons
+{
+	float: left;
+}
+.sfsiaftrpstwpr .sfsiplus_norm_row.sfsi_plus_wDivothr .sfsi_plus_wicons
 {
 	float: left;
 }
@@ -3716,7 +3857,8 @@ label.sfsiplus_toglpstpgsbttl { float: left; margin-top: 5px !important}
 {
 	font-weight: bold;
 }
-.sfsibeforpstwpr iframe, .sfsiaftrpstwpr iframe{max-width: none;}
+.sfsibeforpstwpr iframe{max-width: none; vertical-align: middle;}
+.sfsiaftrpstwpr iframe{max-width: none; vertical-align: middle;}
 .sfwp_fivestar_ul li { display: inline-block; padding-right: 20px; }
 .fb_iframe_widget iframe
 {
@@ -3725,3 +3867,24 @@ label.sfsiplus_toglpstpgsbttl { float: left; margin-top: 5px !important}
 .sfsi_mainContainer p.bldtxtmsg{float: left; font-size: 15px; font-weight: bold; margin-top: 12px; width: 100%;}
 .addthis_toolbox a{border: medium none !important; float: left;}
 .sfsiplus_icn_listing8 li > div{width: auto; float: left;}
+#accordion .tab8 .sfsiplus_icn_listing8 li .sfsiplus_right_info p.cstmdisextrpdng
+{
+	padding-bottom: 30px;
+	float: left;
+}
+#accordion .tab8 .sfsiplus_icn_listing8 li .sfsiplus_right_info p.cstmdisextrpdng
+{
+	background: medium none;
+}
+#accordion .tab8 .sfsiplus_icn_listing8 li .sfsiplus_right_info p.cstmdisextrpdng code
+{
+	background: none repeat scroll 0 0 transparent;	
+	padding-left: 0px;
+	padding-right: 0px;
+}
+.options.sfsipluspstvwpr {
+    margin-left: 17% !important;
+}
+.sfsiplus_tab_3_icns.sfsiplus_shwthmbfraftr {
+    overflow: visible;
+}
