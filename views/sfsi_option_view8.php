@@ -148,35 +148,35 @@
 
                             <p class="cstmdisplaysharingtxt cstmdisextrpdng">Rectangle icons spell out the <code>«</code><strong>call to action</strong><code>»</code> which increases chances that visitors do it.</p>
 							<p class="cstmdisplaysharingtxt">Select the icons you want to show:</p>
-                            <div class="social_icon_like1">
+                            <div class="social_icon_like1 cstmdsplyulwpr">
                                 <ul>
                                     <li>
 										<div class="radio_section tb_4_ck"><input name="sfsi_plus_rectsub" <?php echo ($option8['sfsi_plus_rectsub']=='yes') ?  'checked="true"' : '' ;?>  id="sfsi_plus_rectsub" type="checkbox" value="yes" class="styled"  /></div>
-                                        <a href="#" title="Subscribe Follow">
+                                        <a href="#" title="Subscribe Follow" class="cstmdsplsub">
                                             <img src="<?php echo SFSI_PLUS_PLUGURL; ?>images/follow_subscribe.png" alt="Subscribe Follow" /><span style="display: none;">18k</span>
                                         </a>
                                     </li>
 									<li>
 										<div class="radio_section tb_4_ck"><input name="sfsi_plus_rectfb" <?php echo ($option8['sfsi_plus_rectfb']=='yes') ?  'checked="true"' : '' ;?>  id="sfsi_plus_rectfb" type="checkbox" value="yes" class="styled"  /></div>
-                                        <a href="#" title="Facebook Like">
+                                        <a href="#" title="Facebook Like" class="cstmdspllke">
                                             <img src="<?php echo SFSI_PLUS_PLUGURL; ?>images/like.jpg" alt="Facebook Like" /><span style="display: none;">18k</span>
                                         </a>
                                     </li>
                                     <li>
 										<div class="radio_section tb_4_ck"><input name="sfsi_plus_rectgp" <?php echo ($option8['sfsi_plus_rectgp']=='yes') ?  'checked="true"' : '' ;?>  id="sfsi_plus_rectgp" type="checkbox" value="yes" class="styled"  /></div>
-                                        <a href="#" title="Google Plus">
+                                        <a href="#" title="Google Plus" class="cstmdsplggpls">
                                             <img src="<?php echo SFSI_PLUS_PLUGURL; ?>images/google_plus1.jpg" alt="Google Plus" /><span style="display: none;">18k</span>
                                         </a>
                                     </li>
                                     <li>
 										<div class="radio_section tb_4_ck"><input name="sfsi_plus_recttwtr" <?php echo ($option8['sfsi_plus_recttwtr']=='yes') ?  'checked="true"' : '' ;?>  id="sfsi_plus_recttwtr" type="checkbox" value="yes" class="styled"  /></div>
-                                        <a href="#" title="Share">
+                                        <a href="#" title="twitter" class="cstmdspltwtr">
                                             <img src="<?php echo SFSI_PLUS_PLUGURL; ?>images/twiiter.png" alt="Twitter like" /><span style="display: none;">18k</span>
                                         </a>
                                     </li>
 									<li>
 										<div class="radio_section tb_4_ck"><input name="sfsi_plus_rectshr" <?php echo ($option8['sfsi_plus_rectshr']=='yes') ?  'checked="true"' : '' ;?>  id="sfsi_plus_rectshr" type="checkbox" value="yes" class="styled"  /></div>
-                                        <a href="#" title="Share">
+                                        <a href="#" title="Share" class="cstmdsplshr">
                                             <img src="<?php echo SFSI_PLUS_PLUGURL; ?>images/share1.jpg" alt="Share" /><span style="display: none;">18k</span>
                                         </a>
                                     </li>

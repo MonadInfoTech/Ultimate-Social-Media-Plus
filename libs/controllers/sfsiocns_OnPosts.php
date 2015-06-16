@@ -60,11 +60,11 @@ function sfsi_plus_social_buttons_below($content) {
         $float= $sfsi_section8['sfsi_plus_icons_alignment'];
 		if($sfsi_section8['sfsi_plus_rectsub'] == 'yes' || $sfsi_section8['sfsi_plus_rectfb'] == 'yes' || $sfsi_section8['sfsi_plus_rectgp'] == 'yes' || $sfsi_section8['sfsi_plus_rectshr'] == 'yes' || $sfsi_section8['sfsi_plus_recttwtr'] == 'yes')
 		{
-			$icons="<div class='sfsi_Sicons ".$float."' style='float:".$float."'><div style='float:left;margin:0px 5px 0px 0px; line-height: 24px'><span>".$txt."</span></div>";
+			$icons="<div class='sfsi_Sicons ".$float."' style='float:".$float."'><div style='float:left;margin:0px 8px 0px 0px; line-height: 24px'><span>".$txt."</span></div>";
 		}
 		if($sfsi_section8['sfsi_plus_rectsub'] == 'yes')
 		{
-			if($show_count){$sfsiLikeWithsub = "90px";}else{$sfsiLikeWithsub = "60px";}
+			if($show_count){$sfsiLikeWithsub = "93px";}else{$sfsiLikeWithsub = "64px";}
 			if(!isset($sfsiLikeWithsub)){$sfsiLikeWithsub = $sfsiLikeWith;}
         	$icons.="<div class='sf_subscrbe' style='float:left;width:".$sfsiLikeWithsub."'>".sfsi_plus_Subscribelike($permalink,$show_count)."</div>";
 		}

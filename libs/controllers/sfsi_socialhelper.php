@@ -237,7 +237,7 @@ public function sfsi_plus_FBlike($permalink)
 /*subscribe like*/
 function sfsi_plus_Subscribelike($permalink, $show_count)
 {
-	
+
 }
 /*subscribe like*/
 /*twitter like*/
@@ -390,6 +390,7 @@ public function  SFSI_getFeedSubscriber($feedid)
     ));
      /* Send the request & save response to $resp */
         $resp = curl_exec($curl);
+		
 		if(!empty($resp))
 		{
         	$resp=json_decode($resp);

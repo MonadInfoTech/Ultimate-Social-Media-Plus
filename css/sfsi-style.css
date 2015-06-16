@@ -1003,6 +1003,15 @@ ul.sfsiplus_icn_listing8 li .tb_4_ck {
     float: left;
     margin: 10px 0 0;
 }
+.tab8 .cstmdsplyulwpr .radio_section.tb_4_ck
+{
+	margin-right: 10px !important;
+}
+.tab8 .social_icon_like1.cstmdsplyulwpr .cstmdsplsub{margin-top: 3px;}
+.tab8 .social_icon_like1.cstmdsplyulwpr .cstmdspllke{margin-top: 3px;}
+.tab8 .social_icon_like1.cstmdsplyulwpr .cstmdsplggpls{margin-top: 3px;}
+.tab8 .social_icon_like1.cstmdsplyulwpr .cstmdspltwtr{margin-top: 4px;}
+.tab8 .social_icon_like1.cstmdsplyulwpr .cstmdsplshr{margin-top: 3px;}
 .tab1 ul.plus_icn_listing li .custom, .tab1 ul.plus_icn_listing li .sfsicls_email, .tab1 ul.plus_icn_listing li .sfsicls_facebook, .tab1 ul.plus_icn_listing li .sfsicls_ggle_pls, .tab1 ul.plus_icn_listing li .sfsicls_instagram, .tab1 ul.plus_icn_listing li .sfsicls_linkdin, .tab1 ul.plus_icn_listing li .sfsicls_pinterest, .tab1 ul.plus_icn_listing li .sfsicls_rs_s, .tab1 ul.plus_icn_listing li .sfsicls_share, .tab1 ul.plus_icn_listing li .sfsicls_twt, .tab1 ul.plus_icn_listing li .sfsicls_utube {
     background: url(../images/tab_1_icn_list.png) no-repeat;
     float: left;
@@ -2265,6 +2274,7 @@ ul.tab_3_list li span {
     top: -93px;
 }
 #accordion .tab4 h4, #accordion1 .tab4 h4 {
+
     color: #414951;
     font-size: 20px;
 }
@@ -2521,14 +2531,14 @@ label {
     left: 67px;
     line-height: 17px !important;
     margin-left: 0px;
-    margin-top: 10px;
+    margin-top: 9px;
     padding: 1px 0;
     position: absolute;
     text-align: center;
     top: -8px;
     white-space: pre;
     width: 33px;
-	height: 20px;
+	height: 19px;
     z-index: 9;
 }
 .bot_no.sfsiSmBtn {
@@ -2940,23 +2950,23 @@ h2.optional {
 .sfsi_Sicons {
     position: relative;
 }
-.sfsi_Sicons .sf_subscrbe{ margin: 2px 8px 3px 0; line-height: 20px;}
+.sfsi_Sicons .sf_subscrbe{ margin: 2px 3px 3px 0; line-height: 20px;}
 .sfsi_Sicons .sf_fb{ margin: 0 4px 0 5px; line-height: 20px;}
 .sfsi_Sicons .sf_google{ margin: 0 5px 0 5px; line-height: 20px;}
 .sfsi_Sicons .sf_twiter{ margin: 1px 7px 0 4px; line-height: 20px;}
 .sfsi_Sicons .sf_addthis{ margin: 2px 7px 0 2px; line-height: 20px;}
 
-.sfsi_Sicons.left .sf_subscrbe{ margin: 2px 13px 3px 0; }
-.sfsi_Sicons.left .sf_fb{ margin: 0 7px 0 0; }
+.sfsi_Sicons.left .sf_subscrbe{ margin: 2px 8px 3px 0; }
+.sfsi_Sicons.left .sf_fb{ margin: 0 8px 0 0; }
 .sfsi_Sicons.left .sf_google{ margin: 0 8px 0 0; }
-.sfsi_Sicons.left .sf_twiter{ margin: 1px 6px 0 0; }
+.sfsi_Sicons.left .sf_twiter{ margin: 1px 8px 0 0; }
 .sfsi_Sicons.left .sf_addthis{ margin: 2px 7px 0 0; }
 
 .sfsi_Sicons.right .sf_subscrbe{ margin: 2px 0 3px; }
-.sfsi_Sicons.right .sf_fb{ margin: 0 0 0 13px; }
-.sfsi_Sicons.right .sf_google{ margin: 0 0 0 7px; }
+.sfsi_Sicons.right .sf_fb{ margin: 0 0 0 7px; }
+.sfsi_Sicons.right .sf_google{ margin: 0 0 0 8px; }
 .sfsi_Sicons.right .sf_twiter{ margin: 1px 0 0 8px; }
-.sfsi_Sicons.right .sf_addthis{ margin: 2px 0 0 6px; }
+.sfsi_Sicons.right .sf_addthis{ margin: 2px 0 0 8px; }
 
 .sfsi_Sicons .sf_subscrbe, .sfsi_Sicons .sf_twiter
 {
@@ -2966,6 +2976,12 @@ h2.optional {
 .sfsi_Sicons .sf_twiter iframe
 {
 	margin: 0px;
+	height: 20px !important;
+	overflow: visible !important;
+}
+.sfsi_Sicons .sf_twiter iframe #widget
+{
+	overflow: visible !important;
 }
 .sfsi_Sicons .sf_subscrbe a
 {
