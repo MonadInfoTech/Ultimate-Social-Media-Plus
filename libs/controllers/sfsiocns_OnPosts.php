@@ -12,6 +12,29 @@ function sfsi_plus_social_buttons_below($content) {
 		 $sfsi_plus_show_item_onposts = $sfsi_section8['sfsi_plus_show_item_onposts'];
 		 //new options that are added on the third questions
         
+		//checking for standard icons
+		if(!isset($sfsi_section8['sfsi_plus_rectsub']))
+		{
+			$sfsi_section8['sfsi_plus_rectsub'] = 'no';
+		}
+		if(!isset($sfsi_section8['sfsi_plus_rectfb']))
+		{
+			$sfsi_section8['sfsi_plus_rectfb'] = 'yes';
+		}
+		if(!isset($sfsi_section8['sfsi_plus_rectgp']))
+		{
+			$sfsi_section8['sfsi_plus_rectgp'] = 'yes';
+		}
+		if(!isset($sfsi_section8['sfsi_plus_rectshr']))
+		{
+			$sfsi_section8['sfsi_plus_rectshr'] = 'yes';
+		}
+		if(!isset($sfsi_section8['sfsi_plus_recttwtr']))
+		{
+			$sfsi_section8['sfsi_plus_recttwtr'] = 'no';
+		}
+		//checking for standard icons
+		
   /* check if option activated in admin or not */ 
   //if($sfsi_section6['sfsi_plus_show_Onposts']=="yes")
   //removing following condition for now
@@ -35,12 +58,36 @@ function sfsi_plus_social_buttons_below($content) {
         $txt=(isset($sfsi_section8['sfsi_plus_textBefor_icons']))? $sfsi_section8['sfsi_plus_textBefor_icons'] : "Please follow and like us:" ;
 		//$float= $sfsi_section6['sfsi_plus_icons_alignment'];
         $float= $sfsi_section8['sfsi_plus_icons_alignment'];
-		$icons="<div class='sfsi_Sicons' style='float:".$float."'><div style='float:left;margin:0 px; line-height: 32px'><span>".$txt."</span></div>";
-        
-        $icons.="<div class='sf_fb' style='float:left;margin:5px;width:".$sfsiLikeWith."'>".sfsi_plus_FBlike($permalink,$show_count)."</div>";
-		$icons.="<div class='sf_google'  style='float:left;margin:5px;max-width:62px;min-width:35px;'>".sfsi_plus_googlePlus($permalink,$show_count)."</div>";
-        $icons.="<div class='sf_addthis'  style='float:left;margin:8px 5px 5px 5px;'>".sfsi_plus_Addthis($show_count)."</div>";
-      
+		if($sfsi_section8['sfsi_plus_rectsub'] == 'yes' || $sfsi_section8['sfsi_plus_rectfb'] == 'yes' || $sfsi_section8['sfsi_plus_rectgp'] == 'yes' || $sfsi_section8['sfsi_plus_rectshr'] == 'yes' || $sfsi_section8['sfsi_plus_recttwtr'] == 'yes')
+		{
+			$icons="<div class='sfsi_Sicons ".$float."' style='float:".$float."'><div style='float:left;margin:0px 8px 0px 0px; line-height: 24px'><span>".$txt."</span></div>";
+		}
+		if($sfsi_section8['sfsi_plus_rectsub'] == 'yes')
+		{
+			if($show_count){$sfsiLikeWithsub = "93px";}else{$sfsiLikeWithsub = "64px";}
+			if(!isset($sfsiLikeWithsub)){$sfsiLikeWithsub = $sfsiLikeWith;}
+        	$icons.="<div class='sf_subscrbe' style='float:left;width:".$sfsiLikeWithsub."'>".sfsi_plus_Subscribelike($permalink,$show_count)."</div>";
+		}
+		if($sfsi_section8['sfsi_plus_rectfb'] == 'yes')
+		{
+			if($show_count){}else{$sfsiLikeWithfb = "48px";}
+			if(!isset($sfsiLikeWithfb)){$sfsiLikeWithfb = $sfsiLikeWith;}
+        	$icons.="<div class='sf_fb' style='float:left;width:".$sfsiLikeWithfb."'>".sfsi_plus_FBlike($permalink,$show_count)."</div>";
+		}
+		if($sfsi_section8['sfsi_plus_rectgp'] == 'yes')
+		{
+			$icons.="<div class='sf_google'  style='float:left;max-width:62px;min-width:35px;'>".sfsi_plus_googlePlus($permalink,$show_count)."</div>";
+		}
+		if($sfsi_section8['sfsi_plus_recttwtr'] == 'yes')
+		{
+			if($show_count){$sfsiLikeWithtwtr = "77px";}else{$sfsiLikeWithtwtr = "56px";}
+			if(!isset($sfsiLikeWithtwtr)){$sfsiLikeWithtwtr = $sfsiLikeWith;}
+        	$icons.="<div class='sf_twiter' style='float:left;width:".$sfsiLikeWithtwtr."'>".sfsi_plus_twitterlike($permalink,$show_count)."</div>";
+		}
+		if($sfsi_section8['sfsi_plus_rectshr'] == 'yes')
+		{
+			$icons.="<div class='sf_addthis'  style='float:left;'>".sfsi_plus_Addthis($show_count, $permalink, $title)."</div>";
+		}
 	$icons.="</div>";
     if(!is_feed() && !is_home() && !is_page()) {
 		$content =   $content .$icons;
@@ -49,6 +96,54 @@ function sfsi_plus_social_buttons_below($content) {
 	return $content;
 }
 
+/*subscribe like*/
+function sfsi_plus_Subscribelike($permalink, $show_count)
+{
+	global $socialObj;
+	$socialObj = new sfsi_plus_SocialHelper();
+	
+	$sfsi_plus_section2_options=  unserialize(get_option('sfsi_plus_section2_options',false));
+	$sfsi_plus_section4_options = unserialize(get_option('sfsi_plus_section4_options',false));
+	$sfsi_plus_section8_options=  unserialize(get_option('sfsi_plus_section8_options',false));
+	$url = (isset($sfsi_plus_section2_options['sfsi_plus_email_url'])) ? $sfsi_plus_section2_options['sfsi_plus_email_url'] : 'javascript:void(0);';
+	
+	if($sfsi_plus_section4_options['sfsi_plus_email_countsFrom']=="manual")
+	 {    
+		$counts=$socialObj->format_num($sfsi_plus_section4_options['sfsi_plus_email_manualCounts']);
+	 }
+	 else
+	 {
+		$counts= $socialObj->SFSI_getFeedSubscriber(get_option('sfsi_plus_feed_id',false));           
+	 }
+	 
+	 if($sfsi_plus_section8_options['sfsi_plus_icons_DisplayCounts']=="yes")
+	 {
+	 	$icon = '<a href="'.$url.'" target="_blank"><img src="'.SFSI_PLUS_PLUGURL.'images/follow_subscribe.png" /></a><span class="bot_no">'.$counts.'</span>';
+	 }
+	 else
+	 {
+	 	$icon = '<a href="'.$url.'" target="_blank"><img src="'.SFSI_PLUS_PLUGURL.'images/follow_subscribe.png" /></a>';
+	 }
+	 return $icon;
+}
+/*subscribe like*/
+/*twitter like*/
+function sfsi_plus_twitterlike($permalink, $show_count)
+{
+	global $socialObj;
+	$socialObj = new sfsi_plus_SocialHelper();
+	$twitter_text = '';
+	if(!empty($permalink))
+	{
+		$postid = url_to_postid( $permalink );
+	}
+	if(!empty($postid))
+	{
+		$twitter_text = get_the_title($postid);
+	}
+	return $socialObj->sfsi_twitterSharewithcount($permalink,$twitter_text, $show_count);
+}
+/*twitter like*/
 /* create google+ button */
 function sfsi_plus_googlePlus($permalink,$show_count) {
         $google_html = '<div class="g-plusone" data-href="' . $permalink . '" ';
@@ -77,27 +172,34 @@ function sfsi_plus_FBlike($permalink,$show_count) {
         return $fb_like_html;
 }
 /* create add this  button */
-function sfsi_plus_Addthis($show_count)
+function sfsi_plus_Addthis($show_count, $permalink, $post_title)
 {
-   
-   $atiocn=' <script type="text/javascript">
+   /*$atiocn=' <script type="text/javascript">
 var addthis_config = {
-     pubid: "YOUR-PROFILE-ID"
+     pubid: "YOUR-PROFILE-ID"*/
+	 $atiocn=' <script type="text/javascript">
+var addthis_config = {
+     url: "'.$permalink.'",
+   	 title: "'.$post_title.'"
 }
 </script>';
 
 if($show_count==1)
    {
-       $atiocn.=' <div class="addthis_toolbox">
+       /*$atiocn.=' <div class="addthis_toolbox">
               <a class="addthis_counter addthis_pill_style share_showhide"></a>
+	   </div>';*/
+	    $atiocn.=' <div class="addthis_toolbox" addthis:url="'.$permalink.'" addthis:title="'.$post_title.'">
+			<a class="addthis_counter addthis_pill_style share_showhide"></a>
 	   </div>';
-	    return $atiocn;
+		return $atiocn;
 	
    }
    else
    {
-	$atiocn.='<div class="addthis_toolbox addthis_default_style addthis_20x20_style"><a class="addthis_button_compact " href="#">  <img src="'.SFSI_PLUS_PLUGURL.'images/sharebtn.png"  border="0" alt="Share" /></a></div>';
-      return $atiocn; 
+	/*$atiocn.='<div class="addthis_toolbox addthis_default_style addthis_20x20_style"><a class="addthis_button_compact " href="#">  <img src="'.SFSI_PLUS_PLUGURL.'images/sharebtn.png"  border="0" alt="Share" /></a></div>';*/
+      $atiocn.='<div class="addthis_toolbox addthis_default_style addthis_20x20_style" addthis:url="'.$permalink.'" addthis:title="'.$post_title.'"><a class="addthis_button_compact " href="#">  <img src="'.SFSI_PLUS_PLUGURL.'images/sharebtn.png"  border="0" alt="Share" /></a></div>';
+	  return $atiocn; 
     }
 }
 
@@ -127,7 +229,8 @@ if($show_count==1)
  function sfsi_plus_footer_script() {
 	  $sfsi_section1=  unserialize(get_option('sfsi_plus_section1_options',false));
 	  $sfsi_section6=  unserialize(get_option('sfsi_plus_section6_options',false));
-	if($sfsi_section1['sfsi_plus_facebook_display']=="yes")
+	  $sfsi_section8=  unserialize(get_option('sfsi_plus_section8_options',false));
+	if($sfsi_section1['sfsi_plus_facebook_display']=="yes" || $sfsi_section8['sfsi_plus_rectfb'] == "yes")
 	{
 	?>
 	<!--facebook like and share js -->                   
@@ -139,7 +242,7 @@ if($show_count==1)
 	  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&appId=1425108201100352&version=v2.0";
 	  fjs.parentNode.insertBefore(js, fjs);
 	}(document, 'script', 'facebook-jssdk'));</script>
- <?php } if($sfsi_section1['sfsi_plus_google_display']=="yes" || $sfsi_section1['sfsi_plus_youtube_display']=="yes") { ?>
+ <?php } if($sfsi_section1['sfsi_plus_google_display']=="yes" || $sfsi_section1['sfsi_plus_youtube_display']=="yes" || $sfsi_section8['sfsi_plus_rectgp'] == "yes") { ?>
  <!--google share and  like and e js -->
 	<script type="text/javascript">
 		window.___gcfg = {
@@ -166,7 +269,7 @@ if($show_count==1)
        <!-- linkedIn share and  follow js -->
         <script src="//platform.linkedin.com/in.js" type="text/javascript">lang: en_US</script>
 	
-<?php } if($sfsi_section1['sfsi_plus_share_display']=="yes" || $sfsi_section6['sfsi_plus_show_Onposts']=="yes") { ?>		
+<?php } if($sfsi_section1['sfsi_plus_share_display']=="yes" || $sfsi_section6['sfsi_plus_show_Onposts']=="yes" || $sfsi_section8['sfsi_plus_rectshr'] == "yes") { ?>		
 	 <!-- Addthis js -->
         <script type="text/javascript" src="https://s7.addthis.com/js/300/addthis_widget.js"></script>
         <script type="text/javascript">
@@ -177,7 +280,7 @@ if($show_count==1)
 	<!--pinit js -->
 	<script type="text/javascript" src="//assets.pinterest.com/js/pinit.js"></script>
 	
-	<?php } if($sfsi_section1['sfsi_plus_twitter_display']=="yes") {?>
+	<?php } if($sfsi_section1['sfsi_plus_twitter_display']=="yes" || $sfsi_section8['sfsi_plus_recttwtr'] == "yes") {?>
 <!-- twitter JS End -->
 	<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>	
 	<?php }

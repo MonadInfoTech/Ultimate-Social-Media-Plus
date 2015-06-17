@@ -12,7 +12,15 @@
     if($option2['sfsi_plus_rss_icons']=="sfsi")
     {
         $email_image="sf_arow_icn.png";
-    }    
+    }
+	elseif($option2['sfsi_plus_rss_icons']=="email")
+	{
+		$email_image="email.png";
+	}
+	else
+	{
+		$email_image = "subscribe.png";
+	}
     $hide="display:none;";
 ?>
 <!-- Section 4 "Do you want to display "counts" next to your icons?" main div Start -->
@@ -87,7 +95,14 @@
     <div class="listing">
     	<ul>
             <li><input name="sfsi_plus_facebook_countsFrom" <?php echo ($option4['sfsi_plus_facebook_countsFrom']=='likes') ?  'checked="true"' : '' ;?>  type="radio" value="likes" class="styled"  />Retrieve the number of likes <strong>of your blog</strong></li>
-            <li><input name="sfsi_plus_facebook_countsFrom" <?php echo ($option4['sfsi_plus_facebook_countsFrom']=='mypage') ?  'checked="true"' : '' ;?>  type="radio" value="mypage" class="styled"  />Retrieve the number of likes <strong>of your facebook page</strong><br><div class="sfsiplus_fbpgidwpr" style="<?php echo ($option4['sfsi_plus_facebook_countsFrom']=='likes' || $option4['sfsi_plus_facebook_countsFrom']=='followers' || $option4['sfsi_plus_facebook_countsFrom']=='manual') ?  'display:none;' : '' ;?>">Facebook page ID:</div> <input name="sfsi_plus_facebook_mypageCounts" type="text" class="input mypginpt" value="<?php echo ($option4['sfsi_plus_facebook_mypageCounts']!='') ?  $option4['sfsi_plus_facebook_mypageCounts'] : '' ;?>" style="<?php echo ($option4['sfsi_plus_facebook_countsFrom']=='likes' || $option4['sfsi_plus_facebook_countsFrom']=='followers' || $option4['sfsi_plus_facebook_countsFrom']=='manual') ?  'display:none;' : '' ;?>" /><div class="sfsiplus_fbpgidwpr sfsiplus_fbpgiddesc" style="<?php echo ($option4['sfsi_plus_facebook_countsFrom']=='likes' || $option4['sfsi_plus_facebook_countsFrom']=='followers' || $option4['sfsi_plus_facebook_countsFrom']=='manual') ?  'display:none;' : '' ;?>">(You'll find it at the bottom of the <code><<</code>About<code>>></code>-tab on your facebook page)</div></li>
+            <li>
+            	<input name="sfsi_plus_facebook_countsFrom" <?php echo ($option4['sfsi_plus_facebook_countsFrom']=='mypage') ?  'checked="true"' : '' ;?>  type="radio" value="mypage" class="styled"  />Retrieve the number of likes <strong>of your facebook page</strong><br>
+            	<div class="sfsiplus_fbpgiddesc">
+                	<div class="sfsiplus_fbpgidwpr" style="<?php echo ($option4['sfsi_plus_facebook_countsFrom']=='likes' || $option4['sfsi_plus_facebook_countsFrom']=='followers' || $option4['sfsi_plus_facebook_countsFrom']=='manual') ?  'display:none;' : '' ;?>">Facebook page ID:</div>
+            		<input name="sfsi_plus_facebook_mypageCounts" type="text" class="input mypginpt" value="<?php echo ($option4['sfsi_plus_facebook_mypageCounts']!='') ?  $option4['sfsi_plus_facebook_mypageCounts'] : '' ;?>" style="<?php echo ($option4['sfsi_plus_facebook_countsFrom']=='likes' || $option4['sfsi_plus_facebook_countsFrom']=='followers' || $option4['sfsi_plus_facebook_countsFrom']=='manual') ?  'display:none;' : '' ;?>" />
+            	</div>
+                <div class="sfsiplus_fbpgidwpr sfsiplus_fbpgiddesc" style="<?php echo ($option4['sfsi_plus_facebook_countsFrom']=='likes' || $option4['sfsi_plus_facebook_countsFrom']=='followers' || $option4['sfsi_plus_facebook_countsFrom']=='manual') ?  'display:none;' : '' ;?>">(You'll find it at the bottom of the <code><<</code>About<code>>></code> -tab on your facebook page)</div>
+            </li>
             <li><input name="sfsi_plus_facebook_countsFrom" <?php echo ($option4['sfsi_plus_facebook_countsFrom']=='manual') ?  'checked="true"' : '' ;?>  type="radio" value="manual" class="styled" />Enter the figure manually<input name="sfsi_plus_facebook_manualCounts" type="text" class="input" value="<?php echo ($option4['sfsi_plus_facebook_manualCounts']!='') ?  $option4['sfsi_plus_facebook_manualCounts'] : '' ;?>"  style="<?php echo ($option4['sfsi_plus_facebook_countsFrom']=='likes' || $option4['sfsi_plus_facebook_countsFrom']=='followers' || $option4['sfsi_plus_facebook_countsFrom']=='mypage') ?  'display:none;' : '' ;?>" /></li>
         </ul>
     </div>    

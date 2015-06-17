@@ -66,18 +66,60 @@ function sfsi_plus_depened_sections() {
             var s = i + 1, e = 74 * i;
             SFSI(".sfsiplus_row_" + s + "_2").css("background-position", "-588px -" + e + "px");
         }
-        var t = SFSI(".icon_img").attr("src"), n = t.replace("email.png", "sf_arow_icn.png");
-        SFSI(".icon_img").attr("src", n);
-    } else {
-        for (SFSI(".sfsiplus_row_1_2").css("background-position", "-58px 0"), i = 0; 16 > i; i++) {
-            var s = i + 1, e = 74 * i;
-            SFSI(".sfsiplus_row_" + s + "_2").css("background-position", "-58px -" + e + "px");
-        }
-        var t = SFSI(".icon_img").attr("src");
-        if (t) {
-            var n = t.replace("sf_arow_icn.png", "email.png");
-            SFSI(".icon_img").attr("src", n);
-        }
+        var t = SFSI(".icon_img").attr("src")
+		if(t)
+		{
+			if (t.indexOf("subscribe") !=-1)
+			{
+				var n = t.replace("subscribe.png", "sf_arow_icn.png");
+			}
+			else
+			{
+				var n = t.replace("email.png", "sf_arow_icn.png");
+			}
+			SFSI(".icon_img").attr("src", n);
+		}
+	}
+	else
+	{
+        if("email" == SFSI("input[name='sfsi_plus_rss_icons']:checked").val())
+		{
+			for (SFSI(".sfsiplus_row_1_2").css("background-position", "-58px 0"), i = 0; 16 > i; i++) {
+				var s = i + 1, e = 74 * i;
+				SFSI(".sfsiplus_row_" + s + "_2").css("background-position", "-58px -" + e + "px");
+			}
+			var t = SFSI(".icon_img").attr("src");
+			if (t) {
+				if (t.indexOf("sf_arow_icn") !=-1)
+				{
+					var n = t.replace("sf_arow_icn.png", "email.png");
+				}
+				else
+				{
+					var n = t.replace("subscribe.png", "email.png");
+				}
+				SFSI(".icon_img").attr("src", n);
+			}
+		}
+		else
+		{
+			for (SFSI(".sfsiplus_row_1_2").css("background-position", "-649px 0"), i = 0; 16 > i; i++) {
+				var s = i + 1, e = 74 * i;
+				SFSI(".sfsiplus_row_" + s + "_2").css("background-position", "-649px -" + e + "px");
+			}
+			var t = SFSI(".icon_img").attr("src");
+			if (t) {
+				if (t.indexOf("email") !=-1)
+				{
+					var n = t.replace("email.png", "subscribe.png");
+				}
+				else
+				{
+					var n = t.replace("sf_arow_icn.png", "subscribe.png");
+				}
+				SFSI(".icon_img").attr("src", n);
+			}
+		}
     }
     SFSI("input[name='sfsi_plus_rss_display']").prop("checked") ? sfsi_plus_section_Display("sfsiplus_rss_section", "show") :sfsi_plus_section_Display("sfsiplus_rss_section", "hide"), 
     SFSI("input[name='sfsi_plus_email_display']").prop("checked") ? sfsi_plus_section_Display("sfsiplus_email_section", "show") :sfsi_plus_section_Display("sfsiplus_email_section", "hide"), 
@@ -634,7 +676,11 @@ function sfsi_plus_update_step8() {
 		g = SFSI("input[name='sfsi_plus_display_on_homepage']:checked").val(),*/
 		f = SFSI("input[name='sfsi_plus_display_before_blogposts']:checked").val(),
 		g = SFSI("input[name='sfsi_plus_display_after_blogposts']:checked").val(),
-		
+		rsub = SFSI("input[name='sfsi_plus_rectsub']:checked").val(),
+		rfb = SFSI("input[name='sfsi_plus_rectfb']:checked").val(),
+		rgp = SFSI("input[name='sfsi_plus_rectgp']:checked").val(),
+		rshr = SFSI("input[name='sfsi_plus_rectshr']:checked").val(),
+		rtwr = SFSI("input[name='sfsi_plus_recttwtr']:checked").val(),
         _ = [];
     /*SFSI("#sfsi_plus_Show_popupOn_PageIDs :selected").each(function(s, i) {
         _[s] = SFSI(i).val()
@@ -659,6 +705,11 @@ function sfsi_plus_update_step8() {
 			sfsi_plus_display_on_homepage: g*/
 			sfsi_plus_display_before_blogposts: f,
 			sfsi_plus_display_after_blogposts: g,
+			sfsi_plus_rectsub: rsub,
+			sfsi_plus_rectfb: rfb,
+			sfsi_plus_rectgp: rgp,
+			sfsi_plus_rectshr: rshr,
+			sfsi_plus_recttwtr: rtwr,
 			nonce:nonce
         };
     SFSI.ajax({

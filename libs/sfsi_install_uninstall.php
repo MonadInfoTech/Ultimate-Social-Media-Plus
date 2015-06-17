@@ -19,7 +19,7 @@ function sfsi_plus_activate_plugin()
     $sffeeds=SFSI_PLUS_getFeedUrl();
     /* Links and icons  options */	 
     $options2=array('sfsi_plus_rss_url'=>get_bloginfo('rss2_url'),
-        'sfsi_plus_rss_icons'=>'email', 
+        'sfsi_plus_rss_icons'=>'subscribe', 
         'sfsi_plus_email_url'=>$sffeeds->redirect_url,
         'sfsi_plus_facebookPage_option'=>'no',
         'sfsi_plus_facebookPage_url'=>'',
@@ -38,6 +38,9 @@ function sfsi_plus_activate_plugin()
         'sfsi_plus_youtube_pageUrl'=>'',
         'sfsi_plus_youtube_page'=>'no',
         'sfsi_plus_youtube_follow'=>'no',
+		'sfsi_plus_youtubeusernameorid'=>'name',
+		'sfsi_plus_ytube_chnlid'=>'',
+		'sfsi_plus_ytube_user'=>'',
         'sfsi_plus_pinterest_page'=>'no',
         'sfsi_plus_pinterest_pageUrl'=>'',
         'sfsi_plus_pinterest_pingBlog'=>'',
@@ -87,10 +90,8 @@ function sfsi_plus_activate_plugin()
         'sfsi_plus_ln_secret_key'=>'',
         'sfsi_plus_ln_oAuth_user_token'=>'',
         'sfsi_plus_ln_company'=>'',
-		'sfsi_plus_youtubeusernameorid'=>'name',
-        'sfsi_plus_youtube_user'=>'',
-		'sfsi_plus_ytube_chnlid'=>'',
-        'sfsi_plus_youtube_countsDisplay'=>'no',
+		'sfsi_plus_youtube_user'=>'',
+		'sfsi_plus_youtube_countsDisplay'=>'no',
         'sfsi_plus_youtube_countsFrom'=>'manual',
         'sfsi_plus_youtube_manualCounts'=>'20',
         'sfsi_plus_pinterest_countsDisplay'=>'no',
@@ -200,7 +201,12 @@ function sfsi_plus_activate_plugin()
 		'sfsi_plus_display_on_postspage'=>'no',
 		'sfsi_plus_display_on_homepage'=>'no',
 		'sfsi_plus_display_before_blogposts'=>'no',
-		'sfsi_plus_display_after_blogposts'=>'no');
+		'sfsi_plus_display_after_blogposts'=>'no',
+		'sfsi_plus_rectsub'=>'yes',
+		'sfsi_plus_rectfb'=>'yes',
+		'sfsi_plus_rectgp'=>'yes',
+		'sfsi_plus_rectshr'=>'yes',
+		'sfsi_plus_recttwtr'=>'yes');
 	add_option('sfsi_plus_section8_options',  serialize($options8));		
 		
 	update_option('sfsi_plus_feed_id',$sffeeds->feed_id);
