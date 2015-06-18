@@ -113,7 +113,7 @@ function sfsi_plus_check_visiblity($isFloter=0)
 					if(jQuery(this).attr("data-position") == "widget")
 					{
 						var wdgt_hght = jQuery(this).children(".sfsiplus_norm_row.sfsi_plus_wDiv").height();
-						var title_hght = jQuery(this).children(".widget-title").height();
+						var title_hght = jQuery(this).parent(".widget.sfsi_plus").children(".widget-title").height();
 						var totl_hght = parseInt( title_hght ) + parseInt( wdgt_hght );
 						jQuery(this).parent(".widget.sfsi_plus").css("min-height", totl_hght+"px");
 					}

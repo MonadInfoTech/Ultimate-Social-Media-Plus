@@ -401,12 +401,12 @@ function sfsi_plus_rating_msg()
 	$diff_inrval = round(($datetime2->format('U') - $datetime1->format('U')) / (60*60*24));
 	
     if($diff_inrval >= 30 && get_option('sfsi_plus_RatingDiv')=="no")
-    {
+	{
 	 echo '
 <div class="sfwp_fivestar">
     	<p>We noticed you\'ve been using the Ultimate Social Media PLUS Plugin for more than 30 days. For using it 100% for free, could you please do us a BIG favor and give it a 5-star rating on Wordpress?</p>
         <ul class="sfwp_fivestar_ul">
-        	<li><a href="https://wordpress.org/support/view/plugin-reviews/ultimate-social-media-icons" target="_new" title="Ok, you deserved it">Ok, you deserved it</a></li>
+        	<li><a href="https://wordpress.org/support/view/plugin-reviews/ultimate-social-media-plus" target="_new" title="Ok, you deserved it">Ok, you deserved it</a></li>
             <li><a href="javascript:void(0);" class="sfsiHideRating" title="I already did">I already did</a></li>
             <li><a href="javascript:void(0);" class="sfsiHideRating" title="No, not good enough">No, not good enough</a></li>
         </ul>

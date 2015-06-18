@@ -306,7 +306,8 @@ SFSI(document).ready(function(s) {
         var s = parseInt(SFSI(".sfsi_plus_wDiv").height()) + 15 + "px";
         SFSI(".sfsi_plus_holders").each(function() {
             SFSI(this).css("height", s);
-        });
+		});
+		SFSI(".sfsi_plus_widget").css("min-height", "auto");
     }, 200);
 });
 

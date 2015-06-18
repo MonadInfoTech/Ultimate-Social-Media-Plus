@@ -2044,6 +2044,10 @@ ul.sfsiplus_tab_3_icns li .sfsiplus_icns_tab_3, ul.sfsiplus_tab_3_icns li .radio
     display: inline-block;
     position: relative;
 }
+.sfsi_plus_widget
+{
+	min-height: 100px;
+}
 .sfsi_tool_tip_2 a {
     min-height: 0!important;
 }
@@ -3530,7 +3534,7 @@ ul.cstmskin_iconlist {
 .tab8 .sfsiplus_tab_3_icns.sfsiplus_shwthmbfraftr .usually > li { width:85% !important;  max-width: 100% !important; margin-left: 70px; font-family: 'helveticaneue-light'; padding-bottom: 5px}
 .tab8 .sfsiplus_tab_3_icns.sfsiplus_shwthmbfraftr .options > label { width:356px !important; margin:0; width: auto; margin-bottom: 0; margin-top: 0px; }
 .tab8 .row.sfsiplus_PostsSettings_section .options .first.chcklbl { float: left !important; width: 335px !important; }
-.tab8 .row.sfsiplus_PostsSettings_section .options .chckwpr { width:538px; float:right; }
+.tab8 .row.sfsiplus_PostsSettings_section .options .chckwpr { width:400px; float:right; }
 .tab8 .row.sfsiplus_PostsSettings_section .options {
 	width:90%; 
 	margin:0; 
@@ -3776,7 +3780,7 @@ ul.plus_icn_listing li .sfsiplus_right_info label.sfsiplus_sub-subtitle a
 	line-height: 30px;
 }
 .chckwpr .snglchckcntr:first-child { float:left; }
-.chckwpr .snglchckcntr:last-child { float:left; margin-left: 150px; }
+.chckwpr .snglchckcntr:last-child { float:left; margin-left: 110px; }
 .chckwpr
 {
 	width:100%;
@@ -3810,7 +3814,7 @@ label.sfsiplus_toglpstpgsbttl { float: left; margin-top: 5px !important}
 	color: #69737c;
 	float: left
 }
-.tab8 .row.sfsiplus_PostsSettings_section .options .seconds.chcklbl { float: right; width: 538px !important; }
+.tab8 .row.sfsiplus_PostsSettings_section .options .seconds.chcklbl { float: right; width: 400px !important; }
 .sfsibeforpstwpr
 {
 	width: 100%;
@@ -3900,6 +3904,7 @@ label.sfsiplus_toglpstpgsbttl { float: left; margin-top: 5px !important}
 }
 .options.sfsipluspstvwpr {
     margin-left: 17% !important;
+	margin-left: 0% !important;
 }
 .tab8 .row.sfsiplus_PostsSettings_section .options.sfsipluspstvwpr .first.chcklbl 
 {
