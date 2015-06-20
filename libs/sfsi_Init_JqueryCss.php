@@ -21,7 +21,7 @@ function sfsiplus_plugin_back_enqueue_script()
 			{
 				wp_enqueue_script('jquery');
 			 
-				wp_register_script('SFSIPLUSMigrate',  SFSI_PLUS_PLUGURL . 'js/jquery-migrate-1.1.0.min.js', '', '', true);
+				wp_register_script('SFSIPLUSMigrate',  SFSI_PLUS_PLUGURL . 'js/jquery-migrate-min.js', '', '', true);
 				wp_enqueue_script("SFSIPLUSMigrate");
 				
 				wp_enqueue_script('media-upload');
@@ -75,7 +75,7 @@ function sfsiplus_plugin_front_enqueue_script()
 		
 		wp_enqueue_script('jquery');
 	 
-		wp_register_script('SFSIPLUSMigrate',  SFSI_PLUS_PLUGURL . 'js/jquery-migrate-1.1.0.min.js', '','',true);
+		wp_register_script('SFSIPLUSMigrate',  SFSI_PLUS_PLUGURL . 'js/jquery-migrate-min.js', '','',true);
 		wp_enqueue_script("SFSIPLUSMigrate");
 		
 		wp_register_script('SFSIPLUSjquery.ui.min', SFSI_PLUS_PLUGURL . 'js/jquery-ui-min.js', '','',true);

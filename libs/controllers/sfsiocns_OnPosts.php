@@ -230,6 +230,26 @@ if($show_count==1)
 	  $sfsi_section1=  unserialize(get_option('sfsi_plus_section1_options',false));
 	  $sfsi_section6=  unserialize(get_option('sfsi_plus_section6_options',false));
 	  $sfsi_section8=  unserialize(get_option('sfsi_plus_section8_options',false));
+	  if(!isset($sfsi_section8['sfsi_plus_rectsub']))
+	{
+		$sfsi_section8['sfsi_plus_rectsub'] = 'no';
+	}
+	if(!isset($sfsi_section8['sfsi_plus_rectfb']))
+	{
+		$sfsi_section8['sfsi_plus_rectfb'] = 'yes';
+	}
+	if(!isset($sfsi_section8['sfsi_plus_rectgp']))
+	{
+		$sfsi_section8['sfsi_plus_rectgp'] = 'yes';
+	}
+	if(!isset($sfsi_section8['sfsi_plus_rectshr']))
+	{
+		$sfsi_section8['sfsi_plus_rectshr'] = 'yes';
+	}
+	if(!isset($sfsi_section8['sfsi_plus_recttwtr']))
+	{
+		$sfsi_section8['sfsi_plus_recttwtr'] = 'no';
+	}
 	if($sfsi_section1['sfsi_plus_facebook_display']=="yes" || $sfsi_section8['sfsi_plus_rectfb'] == "yes")
 	{
 	?>
