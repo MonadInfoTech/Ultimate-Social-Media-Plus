@@ -76,7 +76,7 @@ function sfsi_plus_social_buttons_below($content) {
 		}
 		if($sfsi_section8['sfsi_plus_rectgp'] == 'yes')
 		{
-			$icons.="<div class='sf_google'  style='float:left;max-width:62px;min-width:35px;'>".sfsi_plus_googlePlus($permalink,$show_count)."</div>";
+			$icons.="<div class='sf_google' style='float:left;max-width:62px;min-width:35px;'>".sfsi_plus_googlePlus($permalink,$show_count)."</div>";
 		}
 		if($sfsi_section8['sfsi_plus_recttwtr'] == 'yes')
 		{

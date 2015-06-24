@@ -29,17 +29,20 @@
 					<div class="sfsiplusicnsdvwrp">
 						<input name="sfsi_plus_rss_icons" <?php echo ($option2['sfsi_plus_rss_icons']=='email') ?  'checked="true"' : '' ;?> type="radio" value="email" class="styled" /><span class="email_icn"></span>
 					</div>
-					<label>Email-icon</label></li>
+					<label>Email-icon</label>
+                </li>
 				<li>
 					<div class="sfsiplusicnsdvwrp">
 						<input name="sfsi_plus_rss_icons" <?php echo ($option2['sfsi_plus_rss_icons']=='subscribe') ?  'checked="true"' : '' ;?> type="radio" value="subscribe" class="styled" /><span class="subscribe_icn"></span>
 					</div>
-					<label>Follow icon<span class="sfplsdesc"> (increases sign-ups)</span></label></li>
+					<label>Follow icon<span class="sfplsdesc"> (increases sign-ups)</span></label>
+                </li>
 				<li>
 					<div class="sfsiplusicnsdvwrp">
 						<input name="sfsi_plus_rss_icons" <?php echo ($option2['sfsi_plus_rss_icons']=='sfsi') ?  'checked="true"' : '' ;?> type="radio" value="sfsi" class="styled"  /><span class="sf_arow"></span>
 					</div>
-					<label>SpecificFeeds icon<span class="sfplsdesc"> (provider of the service)</span></label></li>
+					<label>SpecificFeeds icon<span class="sfplsdesc"> (provider of the service)</span></label>
+                </li>
             </ul>
         </div>
     </div>

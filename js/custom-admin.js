@@ -66,7 +66,7 @@ function sfsi_plus_depened_sections() {
             var s = i + 1, e = 74 * i;
             SFSI(".sfsiplus_row_" + s + "_2").css("background-position", "-588px -" + e + "px");
         }
-        var t = SFSI(".icon_img").attr("src")
+        var t = SFSI(".icon_img").attr("src");
 		if(t)
 		{
 			if (t.indexOf("subscribe") !=-1)
