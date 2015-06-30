@@ -282,7 +282,7 @@ public function sfsi_Googlelike($permalink)
  /* create on page twitter follow option */ 
  public function sfsi_twitterFollow($tw_username) {
                
-		$twitter_html = '<a href="https://twitter.com/'.trim($tw_username).'" class="twitter-follow-button"  data-show-count="false" >Follow </a>';
+		$twitter_html = '<a href="https://twitter.com/'.trim($tw_username).'" class="twitter-follow-button"  data-show-count="false" data-show-screen-name="false">Follow </a>';
 		
 		return $twitter_html;
 	} 
