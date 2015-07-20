@@ -19,10 +19,11 @@ function sfsiplus_plugin_back_enqueue_script()
 		{
 			if($_GET['page'] == 'sfsi-plus-options')
 			{
+				//wp_register_script('SFSIMigrate',  SFSI_PLUGURL . 'js/jquery-migrate-min.js', '', '', true);
+				//wp_enqueue_script("SFSIMigrate");
+				
 				wp_enqueue_script('jquery');
-			 
-				wp_register_script('SFSIPLUSMigrate',  SFSI_PLUS_PLUGURL . 'js/jquery-migrate-min.js', '', '', true);
-				wp_enqueue_script("SFSIPLUSMigrate");
+				wp_enqueue_script("jquery-migrate");
 				
 				wp_enqueue_script('media-upload');
 				wp_enqueue_script('thickbox'); 
@@ -74,9 +75,10 @@ function sfsiplus_plugin_front_enqueue_script()
 		}
 		
 		wp_enqueue_script('jquery');
-	 
-		wp_register_script('SFSIPLUSMigrate',  SFSI_PLUS_PLUGURL . 'js/jquery-migrate-min.js', '','',true);
-		wp_enqueue_script("SFSIPLUSMigrate");
+	 	wp_enqueue_script("jquery-migrate");
+		
+		//wp_register_script('SFSIPLUSMigrate',  SFSI_PLUS_PLUGURL . 'js/jquery-migrate-min.js', '','',true);
+		//wp_enqueue_script("SFSIPLUSMigrate");
 		
 		wp_register_script('SFSIPLUSjquery.ui.min', SFSI_PLUS_PLUGURL . 'js/jquery-ui-min.js', '','',true);
 		wp_enqueue_script("SFSIPLUSjquery.ui.min");	
