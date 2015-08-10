@@ -127,7 +127,8 @@
                     <li class="tw_follow_options" style="<?php echo ($option4['sfsi_plus_twitter_countsFrom']=='manual') ?  'display:none;' : '' ;?>"><label>Enter Access Token Secret</label><input name="sfsiplus_tw_oauth_access_token_secret" class="input_facebook" type="text" value="<?php echo (isset($option4['sfsiplus_tw_oauth_access_token_secret']) && $option4['sfsiplus_tw_oauth_access_token_secret']!='') ?  $option4['sfsiplus_tw_oauth_access_token_secret'] : '' ;?>"  /> </li>
                 </ul>
                 <ul class="SFSI_instructions">
-                	<li class="tw_follow_options" style="<?php echo ($option4['sfsi_plus_twitter_countsFrom']=='manual') ?  'display:none;' : '' ;?>"><h3>To get this inforematuion : </h3></li>
+                	<li class="tw_follow_options" style="<?php echo ($option4['sfsi_plus_twitter_countsFrom']=='manual') ?  'display:none;' : '' ;?>">Please make sure you have entered the <b>Username</b> for <b>"Follow me on Twitter:"</b> in twitter settings under question number 2.</li>
+                	<li class="tw_follow_options" style="<?php echo ($option4['sfsi_plus_twitter_countsFrom']=='manual') ?  'display:none;' : '' ;?>"><h3>To get this information : </h3></li>
                     <li class="tw_follow_options" style="<?php echo ($option4['sfsi_plus_twitter_countsFrom']=='manual') ?  'display:none;' : '' ;?>">1: Go to <a href="http://apps.twitter.com" target="_blank">apps.twitter.com</a></li>
                     <li class="tw_follow_options" style="<?php echo ($option4['sfsi_plus_twitter_countsFrom']=='manual') ?  'display:none;' : '' ;?>">2: Click on "Create new app"</li>
                     <li class="tw_follow_options" style="<?php echo ($option4['sfsi_plus_twitter_countsFrom']=='manual') ?  'display:none;' : '' ;?>">3: Enter a random Name , Descriptions and Website URL (including the "http://", e.g. http://dummysitename.com)</li>
@@ -161,6 +162,8 @@
             		<li class="google_option" style="<?php echo ($option4['sfsi_plus_google_countsFrom']=='manual') ?  'display:none;' : '' ;?>"><label>Enter Google API Key </label><input name="sfsi_plus_google_api_key" class="input_facebook" type="url" value="<?php echo (isset($option4['sfsi_plus_google_api_key']) && $option4['sfsi_plus_google_api_key']!='') ?  $option4['sfsi_plus_google_api_key'] : '' ;?>"  /> </li>
                 </ul>
                 <ul class="SFSI_instructions">
+                	<li class="google_option" style="<?php echo ($option4['sfsi_plus_twitter_countsFrom']=='manual') ?  'display:none;' : '' ;?>">Please make sure you have entered the <b>URL</b> for <b>Visit my Google+ page at:</b> like <b>https://plus.google.com/u/0/b/[pageid]</b> in Google+ settings under question number 2.	
+                    </li>
                 	<li class="google_option" style="<?php echo ($option4['sfsi_plus_twitter_countsFrom']=='manual') ?  'display:none;' : '' ;?>"><h3>To get the API key for G+:</h3></li>
 					<li class="google_option" style="<?php echo ($option4['sfsi_plus_twitter_countsFrom']=='manual') ?  'display:none;' : '' ;?>">1: Login to your 					Goolge account, go to <a href="http://console.developers.google.com" target="_blank">console.developers.google.com</a> and create a new project</li>
 					<li class="google_option" style="<?php echo ($option4['sfsi_plus_twitter_countsFrom']=='manual') ?  'display:none;' : '' ;?>">2: Then on the left menu bar go to “APIs & auth”, “Credentials” and click “Create new key” in the “Public API access” section</li>
