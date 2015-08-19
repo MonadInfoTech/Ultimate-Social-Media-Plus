@@ -1,7 +1,19 @@
 <?php
 function sfsi_plus_activate_plugin()
 {
-    /* check for CURL enable at server */
+    if(get_option('sfsi_plus_section1_options'))
+	{
+		if(!get_option('sfsi_plus_show_notification'))
+		{
+			add_option("sfsi_plus_show_notification", "yes");
+		}
+		if(!get_option('sfsi_plus_show_notification_plugin'))
+		{
+			add_option("sfsi_plus_show_notification_plugin", "yes");
+		}
+	}
+	
+	/* check for CURL enable at server */
     sfsi_plus_curl_enable_notice();	
     $options1=array('sfsi_plus_rss_display'=>'yes',
           'sfsi_plus_email_display'=>'yes',
@@ -17,6 +29,7 @@ function sfsi_plus_activate_plugin()
           'sfsi_custom_files'=>'');
 	add_option('sfsi_plus_section1_options',  serialize($options1));
     $sffeeds=SFSI_PLUS_getFeedUrl();
+	
     /* Links and icons  options */	 
     $options2=array('sfsi_plus_rss_url'=>get_bloginfo('rss2_url'),
         'sfsi_plus_rss_icons'=>'subscribe', 
@@ -56,7 +69,8 @@ function sfsi_plus_activate_plugin()
         'sfsi_plus_linkedin_recommendProductId'=>'',
         'sfsi_plus_CustomIcon_links'=>'');
 	add_option('sfsi_plus_section2_options',  serialize($options2));
-    /* Design and animation option  */
+    
+	/* Design and animation option  */
 	$options3=array('sfsi_plus_mouseOver'=>'yes',
         'sfsi_plus_mouseOver_effect'=>'fade_in',
         'sfsi_plus_shuffle_icons'=>'no',
@@ -65,6 +79,7 @@ function sfsi_plus_activate_plugin()
         'sfsi_plus_shuffle_intervalTime'=>'',                              
         'sfsi_plus_actvite_theme'=>'default');
 	add_option('sfsi_plus_section3_options',  serialize($options3));
+	
 	/* display counts options */         
     $options4=array('sfsi_plus_display_counts'=>'no',
         'sfsi_plus_email_countsDisplay'=>'no',
@@ -141,7 +156,8 @@ function sfsi_plus_activate_plugin()
         'sfsi_plus_share_MouseOverText'=>'Share',
         'sfsi_plus_custom_MouseOverTexts'=>'');
 	add_option('sfsi_plus_section5_options',  serialize($options5));
-    /* post options */	                
+    
+	/* post options */	                
     $options6=array('sfsi_plus_show_Onposts'=>'no',
         'sfsi_plus_show_Onbottom'=>'no',
         'sfsi_plus_icons_postPositon'=>'source',
@@ -150,7 +166,8 @@ function sfsi_plus_activate_plugin()
         'sfsi_plus_textBefor_icons'=>'Please follow and like us:',
         'sfsi_plus_icons_DisplayCounts'=>'no');
 	add_option('sfsi_plus_section6_options',  serialize($options6));       
-    /* icons pop options */
+    
+	/* icons pop options */
     $options7=array('sfsi_plus_show_popup'=>'no',
         'sfsi_plus_popup_text'=>'Enjoy this blog? Please spread the word :)',
         'sfsi_plus_popup_background_color'=>'#eff7f7',
@@ -167,6 +184,7 @@ function sfsi_plus_activate_plugin()
         'sfsi_plus_Shown_popupOnceTime'=>'',
         'sfsi_plus_Shown_popuplimitPerUserTime'=>'');
 	add_option('sfsi_plus_section7_options',  serialize($options7));
+	
 	/*options that are added in the third question*/
 	if(get_option('sfsi_plus_section4_options',false))
 		$option4=  unserialize(get_option('sfsi_plus_section4_options',false));
@@ -208,16 +226,53 @@ function sfsi_plus_activate_plugin()
 		'sfsi_plus_rectshr'=>'yes',
 		'sfsi_plus_recttwtr'=>'yes');
 	add_option('sfsi_plus_section8_options',  serialize($options8));		
+	
+	/* subscription form */
+    $options9 = array('sfsi_plus_form_adjustment'=>'yes',
+        'sfsi_plus_form_height'=>'180',
+        'sfsi_plus_form_width' =>'230',
+        'sfsi_plus_form_border'=>'no',
+        'sfsi_plus_form_border_thickness'=>'1',
+        'sfsi_plus_form_border_color'=>'#f3faf2',
+        'sfsi_plus_form_background'=>'#eff7f7',
 		
+        'sfsi_plus_form_heading_text'=>'Get new posts by email:',
+        'sfsi_plus_form_heading_font'=>'Helvetica,Arial,sans-serif',
+        'sfsi_plus_form_heading_fontstyle'=>'normal',
+        'sfsi_plus_form_heading_fontcolor'=>'#000000',
+        'sfsi_plus_form_heading_fontsize'=>'22',
+        'sfsi_plus_form_heading_fontalign'=>'center',
+		
+		'sfsi_plus_form_field_text'=>'Enter your email',
+        'sfsi_plus_form_field_font'=>'Helvetica,Arial,sans-serif',
+        'sfsi_plus_form_field_fontstyle'=>'normal',
+        'sfsi_plus_form_field_fontcolor'=>'#000000',
+        'sfsi_plus_form_field_fontsize'=>'22',
+        'sfsi_plus_form_field_fontalign'=>'center',
+		
+		'sfsi_plus_form_button_text'=>'Subscribe',
+        'sfsi_plus_form_button_font'=>'Helvetica,Arial,sans-serif',
+        'sfsi_plus_form_button_fontstyle'=>'normal',
+        'sfsi_plus_form_button_fontcolor'=>'#fff',
+        'sfsi_plus_form_button_fontsize'=>'22',
+        'sfsi_plus_form_button_fontalign'=>'center',
+        'sfsi_plus_form_button_background'=>'#5a6570',
+    );
+	add_option('sfsi_plus_section9_options',  serialize($options9));
+	
+	/*Some additional option added*/	
 	update_option('sfsi_plus_feed_id',$sffeeds->feed_id);
 	add_option('sfsi_plus_installDate',date('Y-m-d h:i:s'));
 	add_option('sfsi_plus_RatingDiv','no');
 	add_option('sfsi_plus_footer_sec','no');
 	update_option('sfsi_plus_activate', 1);
 	
+	/*Changes in option 2*/
 	$get_option2 = unserialize(get_option('sfsi_plus_section2_options',false));
 	$get_option2['sfsi_plus_email_url'] = $sffeeds->redirect_url;
 	update_option('sfsi_plus_section2_options', serialize($get_option2));
+	
+	/*Activation Setup for (specificfeed)*/
 	sfsi_plus_setUpfeeds($sffeeds->feed_id);
 	sfsi_plus_updateFeedPing('N',$sffeeds->feed_id);
 }

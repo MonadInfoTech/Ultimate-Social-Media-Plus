@@ -5,7 +5,7 @@ Plugin URI: http://ultimatelysocial.com
 Description: The best social media plugin on the market. And 100% FREE. Allows you to add social media & share icons to your blog (esp. Facebook, Twitter, Email, RSS, Pinterest, Instagram, Google+, LinkedIn, Share-button). It offers a wide range of design options and other features. 
 Author: UltimatelySocial
 Author URI: http://ultimatelysocial.com
-Version: 1.6
+Version: 1.7
 License: GPLv2
 */
 
@@ -26,6 +26,7 @@ include(SFSI_PLUS_DOCROOT.'/libs/controllers/sfsi_floater_icons.php');
 include(SFSI_PLUS_DOCROOT.'/libs/controllers/sfsi_frontpopUp.php');
 include(SFSI_PLUS_DOCROOT.'/libs/controllers/sfsiocns_OnPosts.php');
 include(SFSI_PLUS_DOCROOT.'/libs/sfsi_widget.php');
+include(SFSI_PLUS_DOCROOT.'/libs/sfsi_plus_subscribe_widget.php');
 
 /* plugin install and uninstall hooks */ 
 register_activation_hook(__FILE__, 'sfsi_plus_activate_plugin' );
@@ -455,5 +456,34 @@ function sfsi_plus_getlinhght($lineheight)
 function sfsi_plus_string_sanitize($s) {
     $result = preg_replace("/[^a-zA-Z0-9]+/", " ", html_entity_decode($s, ENT_QUOTES));
     return $result;
+}
+
+add_action('admin_notices', 'sfsi_plus_admin_notice', 1);
+function sfsi_plus_admin_notice()
+{
+	if(strpos($_SERVER['SCRIPT_NAME'], "plugins.php"))
+	{
+		if(get_option("sfsi_plus_show_notification_plugin") == "yes")
+		{ 
+			$url = "?sfsiPlus-dismiss-notice=true";
+			?>
+			<div class="updated" style="overflow: hidden;">
+            	<div class="alignleft" style="margin: 9px 0;">
+                	<b>New feature in the Ultimate Social Media PLUS plugin:</b> You can now add a subscription form to increase sign-ups (under question 8). <a href="https://wordpress.org/plugins/ultimate-social-media-plus/" style="color:#7AD03A; font-weight:bold;">Check it out</a>
+                </div>
+                <p class="alignright">
+                	<a href="<?php echo $url; ?>">Dismiss</a>
+                </p>
+            </div>
+		<?php }
+	}
+}
+add_action('admin_init', 'sfsi_plus_dismiss_admin_notice');
+function sfsi_plus_dismiss_admin_notice()
+{
+	if ( isset($_REQUEST['sfsiPlus-dismiss-notice']) && $_REQUEST['sfsiPlus-dismiss-notice'] == 'true' )
+	{
+		update_option( 'sfsi_plus_show_notification_plugin', "no" );
+	}
 }
 ?>
