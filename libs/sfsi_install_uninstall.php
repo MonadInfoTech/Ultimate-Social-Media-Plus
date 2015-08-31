@@ -1,4 +1,17 @@
 <?php
+function sfsi_plus_update_plugin()
+{
+	//Install version
+	update_option("sfsi_plus_pluginVersion", "1.7");
+	
+	/*Extra important options*/
+	$sfsi_plus_instagram_sf_count = array(
+		"date" => "",
+		"sfsi_plus_sf_count" => "",
+		"sfsi_plus_instagram_count" => ""
+	);
+	add_option('sfsi_plus_instagram_sf_count',  serialize($sfsi_plus_instagram_sf_count));
+}
 function sfsi_plus_activate_plugin()
 {
     /* check for CURL enable at server */
@@ -16,7 +29,8 @@ function sfsi_plus_activate_plugin()
           'sfsi_custom_display'=>'',
           'sfsi_custom_files'=>'');
 	add_option('sfsi_plus_section1_options',  serialize($options1));
-    $sffeeds=SFSI_PLUS_getFeedUrl();
+    $sffeeds = SFSI_PLUS_getFeedUrl();
+	
     /* Links and icons  options */	 
     $options2=array('sfsi_plus_rss_url'=>get_bloginfo('rss2_url'),
         'sfsi_plus_rss_icons'=>'subscribe', 

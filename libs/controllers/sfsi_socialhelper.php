@@ -8,23 +8,25 @@ private $url,$timeout=10;
 /* get twitter followers */
 function sfsi_get_tweets($username,$tw_settings)
 {
-   require_once(SFSI_PLUS_DOCROOT.'/helpers/twitter-api/twitteroauth.php');
-    $settings = array(
-    'oauth_access_token' => "335692958-JuqG7ArGrblrccHl3veVRFOdg64BUQZ7XpIs8x3Q",
-    'oauth_access_token_secret' => "A1l0LMrAVb3UeBbkpgigQr8O1EgfPcfG5USWg8cTcQyvg",
-    'consumer_key' => "d8OCu7GokBpy7DT17L5X1Q",
-    'consumer_secret' => "HUUEHS5rVSzaY57tICF9dVIaJ3bC5vwSZR9gWqq8QQ"
-    );
-    // Replace the four parameters below with the information from your Twitter developer application.
-    $twitterConnection = new Plus_TwitterOAuth($tw_settings['sfsiplus_tw_consumer_key'],$tw_settings['sfsiplus_tw_consumer_secret'], $tw_settings['sfsiplus_tw_oauth_access_token_secret']);
-
-    // Send the API request
-    $twitterData = $twitterConnection->get('users/show', array('screen_name' =>$username));
+	require_once(SFSI_PLUS_DOCROOT.'/helpers/twitter-api/twitteroauth.php');
+	$settings = array(
+		'oauth_access_token' => "335692958-JuqG7ArGrblrccHl3veVRFOdg64BUQZ7XpIs8x3Q",
+		'oauth_access_token_secret' => "A1l0LMrAVb3UeBbkpgigQr8O1EgfPcfG5USWg8cTcQyvg",
+		'consumer_key' => "d8OCu7GokBpy7DT17L5X1Q",
+		'consumer_secret' => "HUUEHS5rVSzaY57tICF9dVIaJ3bC5vwSZR9gWqq8QQ"
+	);
+	
+	// Replace the four parameters below with the information from your Twitter developer application.
+	$twitterConnection = new Plus_TwitterOAuth($tw_settings['sfsiplus_tw_consumer_key'],$tw_settings['sfsiplus_tw_consumer_secret'], $tw_settings['sfsiplus_tw_oauth_access_token_secret']);
+	
+	// Send the API request
+	$twitterData = $twitterConnection->get('users/show', array('screen_name' =>$username));
+	
 	// Extract the follower and tweet counts
 	if(isset($twitterData->followers_count))
 	{
-    	$followerCount = $twitterData->followers_count;
-    	return $followerCount;
+		$followerCount = $twitterData->followers_count;
+		return $followerCount;
 	}
 	else
 	{
@@ -43,7 +45,7 @@ function sfsi_getlinkedin_follower($sfsi_plus_ln_company,$APIsettings)
 {      
    require_once(SFSI_PLUS_DOCROOT.'/helpers/linkedin-api/linkedin-api.php');
    $scheme = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off' || $_SERVER['SERVER_PORT'] == 443) ? "https" : "http";
-   $url=$scheme.'://'.$_SERVER['SERVER_NAME'].$_SERVER['REQUEST_URI'];
+   $url = $scheme.'://'.$_SERVER['SERVER_NAME'].$_SERVER['REQUEST_URI'];
    $linkedin = new Plus_LinkedIn($APIsettings['sfsi_plus_ln_api_key'], $APIsettings['sfsi_plus_ln_secret_key'],$APIsettings['sfsi_plus_ln_oAuth_user_token'], $url );
    $followers = $linkedin->getCompanyFollowersByName($sfsi_plus_ln_company);
    if (strpos($followers, '404') === false)
@@ -262,7 +264,7 @@ public function sfsiFB_Share($permalink)
 }
   /* create on page google share option */      
 public function sfsi_Googlelike($permalink)
- {
+{
   $show_count=0;  
   $google_html = '<div class="g-plusone" data-href="' . $permalink . '" ';
 	if($show_count)
@@ -290,15 +292,18 @@ public function sfsi_Googlelike($permalink)
 		
 		return $twitter_html;
 	} 
- /* create on page twitter share icon */
- public function sfsi_twitterShare($permalink,$tweettext) {
+	
+	/* create on page twitter share icon */
+	public function sfsi_twitterShare($permalink,$tweettext)
+	{
 		$twitter_html = '<a rel="nofollow" href="http://twitter.com/share" data-count="none" class="sr-twitter-button twitter-share-button" lang="en" data-url="'.$permalink.'" data-text="'.$tweettext.'" ></a>';
 	               
-                return $twitter_html;
+        return $twitter_html;
 	} 
 	
 	/* create on page twitter share icon with count */
- public function sfsi_twitterSharewithcount($permalink,$tweettext, $show_count) {
+ 	public function sfsi_twitterSharewithcount($permalink,$tweettext, $show_count)
+	{
 		if($show_count)
 		{
 			$twitter_html = '<a href="http://twitter.com/share" class="sr-twitter-button twitter-share-button" lang="en" data-counturl="'.$permalink.'" data-url="'.$permalink.'" data-text="'.$tweettext.'" ></a>';
@@ -310,8 +315,9 @@ public function sfsi_Googlelike($permalink)
 	   return $twitter_html;
 	}
 	
- /* create on page youtube subscribe icon */       
- public function sfsi_YouTubeSub($yuser) {
+	/* create on page youtube subscribe icon */       
+	public function sfsi_YouTubeSub($yuser)
+	{
 	 	$option2=  unserialize(get_option('sfsi_plus_section2_options',false));
 		$option4=  unserialize(get_option('sfsi_plus_section4_options',false));
 		if(isset($option2['sfsi_plus_youtubeusernameorid']))
@@ -340,80 +346,161 @@ public function sfsi_Googlelike($permalink)
 			$youtube_html = '<div class="g-ytsubscribe" data-channelid="'.$yuser.'" data-layout="default" data-count="hidden"></div>';
 		}
 		return $youtube_html;
-	}  
- /* create on page pinit button icon */      
-public function sfsi_PinIt($url='') {       
-	$pin_it_html = '<a href="//www.pinterest.com/pin/create/button/" data-pin-do="buttonBookmark" ><img src="//assets.pinterest.com/images/pidgets/pinit_fg_en_rect_gray_20.png" /></a>';
-	return $pin_it_html;
-}
- /* get instragram followers */
-public function sfsi_get_instagramFollowers($user_name)
-{
-    /* get instagram user id */
-    /*$return_data = $this->file_get_contents_curl('http://jelled.com/ajax/instagram?do=username&username='.$user_name.'&format=json');*/
-	$return_data = $this->get_content_curl('https://api.instagram.com/v1/users/search?q='.$user_name.'&client_id=12d8dcc9abd74f83b0899756adccedc2');
-	$json_string = preg_replace('/^receiveCount\((.*)\)$/', "\\1", $return_data);
-    $json = json_decode($json_string, true);
-	$user_id=$json['data'][0]['id'];
+	}
 	
-	$return_data = $this->get_content_curl('https://api.instagram.com/v1/users/'.$user_id.'/?access_token=53042481.ab103e5.0c6f8f50471a4e1f97595f8db529a47a');
-    $json_string = preg_replace('/^receiveCount\((.*)\)$/', "\\1", $return_data);
-    $json = json_decode($json_string, true);
-    return $this->format_num($json['data']['counts']['followed_by'],0);
-
-}
- /* create linkedIn  follow button */
- public function sfsi_LinkedInFollow($company_id)
- {
-    return  $ifollow='<script type="IN/FollowCompany" data-id="'.$company_id.'" data-counter="none"></script>';
- }
-  /* create linkedIn  recommend button */
- public function sfsi_LinkedInRecommend($company_name,$product_id)
- {
-    return  $ifollow='<script type="IN/RecommendProduct" data-company="'.$company_name.'" data-product="'.$product_id.'"></script>';
- }
- /* create linkedIn  share button */
-  public function sfsi_LinkedInShare($url='')
- {
-      $url=(isset($url))? $url :  home_url();
-      return  $ifollow='<script type="IN/Share" data-url="'.$url.'"></script>';
- }
- /* get no of subscribers from specificfeeds for current blog */
-public function  SFSI_getFeedSubscriber($feedid)
-{
-	$curl = curl_init();  
-     
-    curl_setopt_array($curl, array(
-        CURLOPT_RETURNTRANSFER => 1,
-        CURLOPT_URL => 'http://www.specificfeeds.com/wordpress/countsubscriber',
-        CURLOPT_USERAGENT => 'sf rss request',
-        CURLOPT_POST => 1,
-        CURLOPT_POSTFIELDS => array(
-            'feed_id' => $feedid
-        )
-    ));
-     /* Send the request & save response to $resp */
-        $resp = curl_exec($curl);
+ 	/* create on page pinit button icon */      
+	public function sfsi_PinIt($url='')
+	{       
+		$pin_it_html = '<a href="//www.pinterest.com/pin/create/button/" data-pin-do="buttonBookmark" ><img src="//assets.pinterest.com/images/pidgets/pinit_fg_en_rect_gray_20.png" /></a>';
+		return $pin_it_html;
+	}
+	
+	/* get instragram followers */
+	public function sfsi_get_instagramFollowers($user_name)
+	{
+		$sfsi_plus_instagram_sf_count = unserialize(get_option('sfsi_plus_instagram_sf_count',false));
+		
+		/*if date is empty (for decrease request count)*/
+		if(empty($sfsi_plus_instagram_sf_count["date"]))
+		{
+			$sfsi_plus_instagram_sf_count["date"] = strtotime(date("Y-m-d"));
+			$counts = $this->sfsi_plus_get_instagramFollowersCount($user_name);
+			$sfsi_plus_instagram_sf_count["sfsi_plus_instagram_count"] = $counts;
+			update_option('sfsi_plus_instagram_sf_count',  serialize($sfsi_plus_instagram_sf_count));
+		}
+		else
+		{
+			 $diff = date_diff(
+			 	date_create(
+					date("Y-m-d", $sfsi_plus_instagram_sf_count["date"])
+				),
+				date_create(
+					date("Y-m-d")
+				));
+			 if($diff->format("%a") > 1)
+			 {
+				 $sfsi_plus_instagram_sf_count["date"] = strtotime(date("Y-m-d"));
+				 $counts = $this->sfsi_plus_get_instagramFollowersCount($user_name);
+				 $sfsi_plus_instagram_sf_count["sfsi_plus_instagram_count"] = $counts;
+				 update_option('sfsi_plus_instagram_sf_count',  serialize($sfsi_plus_instagram_sf_count));
+			 }
+			 else
+			 {
+				 $counts = $sfsi_plus_instagram_sf_count["sfsi_plus_instagram_count"];
+			 }
+		}
+		return $counts;
+	}
+	
+	/* get instragram followers */
+	public function sfsi_plus_get_instagramFollowersCount($user_name)
+	{
+		/* get instagram user id */
+		$return_data = $this->get_content_curl('https://api.instagram.com/v1/users/search?q='.$user_name.'&client_id=12d8dcc9abd74f83b0899756adccedc2');
+		$json_string = preg_replace('/^receiveCount\((.*)\)$/', "\\1", $return_data);
+		$json = json_decode($json_string, true);
+		$user_id = $json['data'][0]['id'];
+		
+		$return_data = $this->get_content_curl('https://api.instagram.com/v1/users/'.$user_id.'/?access_token=53042481.ab103e5.0c6f8f50471a4e1f97595f8db529a47a');
+		$json_string = preg_replace('/^receiveCount\((.*)\)$/', "\\1", $return_data);
+		$json = json_decode($json_string, true);
+		return $this->format_num($json['data']['counts']['followed_by'],0);
+	}
+	
+	/* create linkedIn  follow button */
+	public function sfsi_LinkedInFollow($company_id)
+	{
+		return  $ifollow='<script type="IN/FollowCompany" data-id="'.$company_id.'" data-counter="none"></script>';
+	}
+	
+	/* create linkedIn  recommend button */
+	public function sfsi_LinkedInRecommend($company_name,$product_id)
+	{
+		return  $ifollow='<script type="IN/RecommendProduct" data-company="'.$company_name.'" data-product="'.$product_id.'"></script>';
+	}
+	
+	/* create linkedIn  share button */
+	public function sfsi_LinkedInShare($url='')
+	{
+		$url=(isset($url))? $url :  home_url();
+		return  $ifollow='<script type="IN/Share" data-url="'.$url.'"></script>';
+	}
+	
+	/* get no of subscribers from specificfeeds for current blog */
+	public function  SFSI_getFeedSubscriber($feedid)
+	{
+		$sfsi_plus_instagram_sf_count = unserialize(get_option('sfsi_plus_instagram_sf_count',false));
+		
+		/*if date is empty (for decrease request count)*/
+		if(empty($sfsi_plus_instagram_sf_count["date"]))
+		{
+			$sfsi_plus_instagram_sf_count["date"] = strtotime(date("Y-m-d"));
+			$counts = $this->sfsi_plus_getFeedSubscriberCount($feedid);
+			$sfsi_plus_instagram_sf_count["sfsi_plus_sf_count"] = $counts;
+			update_option('sfsi_plus_instagram_sf_count',  serialize($sfsi_plus_instagram_sf_count));
+		}
+		else
+		{
+			 $diff = date_diff(
+			 	date_create(
+					date("Y-m-d", $sfsi_plus_instagram_sf_count["date"])
+				),
+				date_create(
+					date("Y-m-d")
+			 ));
+			 if($diff->format("%a") > 1)
+			 {
+				 $sfsi_plus_instagram_sf_count["date"] = strtotime(date("Y-m-d"));
+				 $counts = $this->sfsi_plus_getFeedSubscriberCount($feedid);
+				 $sfsi_plus_instagram_sf_count["sfsi_plus_sf_count"] = $counts;
+				 update_option('sfsi_plus_instagram_sf_count',  serialize($sfsi_plus_instagram_sf_count));
+			 }
+			 else
+			 {
+				 $counts = $sfsi_plus_instagram_sf_count["sfsi_plus_sf_count"];
+			 }
+		}
+		return $counts;
+	}
+	
+	/* get no of subscribers from specificfeeds for current blog count*/
+	public function  sfsi_plus_getFeedSubscriberCount($feedid)
+	{
+		$curl = curl_init();  
+		 
+		curl_setopt_array($curl, array(
+			CURLOPT_RETURNTRANSFER => 1,
+			CURLOPT_URL => 'http://www.specificfeeds.com/wordpress/wpCountSubscriber',
+			CURLOPT_USERAGENT => 'sf rss request',
+			CURLOPT_POST => 1,
+			CURLOPT_POSTFIELDS => array(
+				'feed_id' => $feedid,
+				'v' => "newplugincount"
+			)
+		));
+		/* Send the request & save response to $resp */
+		$resp = curl_exec($curl);
 		
 		if(!empty($resp))
 		{
-        	$resp=json_decode($resp);
-        	curl_close($curl);
-			$feeddata=stripslashes_deep($resp->subscriber_count);
-        }
+			$resp = json_decode($resp);
+			curl_close($curl);
+			$feeddata = stripslashes_deep($resp->subscriber_count);
+		}
 		else
 		{
 			$feeddata = 0;
 		}
 		return $this->format_num($feeddata);exit;
-}
+	}
+	
     /* check response from a url */
-    private function sfsi_get_http_response_code($url) {
-    $headers = get_headers($url);
-    return substr($headers[0], 9, 3);
-}
+    private function sfsi_get_http_response_code($url)
+	{
+		$headers = get_headers($url);
+		return substr($headers[0], 9, 3);
+	}
   
-}/* end of class */
- 
-		
+}
+/* end of class */		
 ?>

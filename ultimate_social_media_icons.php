@@ -5,7 +5,7 @@ Plugin URI: http://ultimatelysocial.com
 Description: The best social media plugin on the market. And 100% FREE. Allows you to add social media & share icons to your blog (esp. Facebook, Twitter, Email, RSS, Pinterest, Instagram, Google+, LinkedIn, Share-button). It offers a wide range of design options and other features. 
 Author: UltimatelySocial
 Author URI: http://ultimatelysocial.com
-Version: 1.6
+Version: 1.7
 License: GPLv2
 */
 
@@ -31,6 +31,11 @@ include(SFSI_PLUS_DOCROOT.'/libs/sfsi_widget.php');
 register_activation_hook(__FILE__, 'sfsi_plus_activate_plugin' );
 register_deactivation_hook(__FILE__, 'sfsi_plus_deactivate_plugin');
 register_uninstall_hook(__FILE__, 'sfsi_plus_Unistall_plugin');
+
+if(!get_option('sfsi_plus_pluginVersion') || get_option('sfsi_plus_pluginVersion') < 1.7)
+{
+	add_action("init", "sfsi_plus_update_plugin");
+}
 
 //shortcode for the ultimate social icons {Monad}
 add_shortcode("DISPLAY_ULTIMATE_PLUS", "DISPLAY_ULTIMATE_PLUS");
