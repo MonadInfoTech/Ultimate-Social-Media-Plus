@@ -4,7 +4,29 @@ add_action("wp_head", "sfsi_plus_addStyleFunction");
 function sfsi_plus_addStyleFunction()
 {
 	$option9 = unserialize(get_option('sfsi_plus_section9_options',false));
+	$sfsi_plus_feediid = get_option('sfsi_plus_feed_id');
+	$url = "http://www.specificfeeds.com/widgets/subscribeWidget/";
+	echo $return = '';
 	?>
+    	<script>
+			function sfsi_plus_processfurther(ref) {
+				var feed_id = <?php echo $sfsi_plus_feediid?>;
+				var feedtype = 8;
+				var email = jQuery(ref).find('input[name="data[Widget][email]"]').val();
+				var filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+				if ((email != "Enter your email") && (filter.test(email))) {
+					if (feedtype == "8") {
+						var url = "'.$url.'"+feed_id+"/"+feedtype;
+						window.open(url, "popupwindow", "scrollbars=yes,width=1080,height=760");
+						return true;
+					}
+				} else {
+					alert("Please enter email address");
+					jQuery(ref).find('input[name="data[Widget][email]"]').focus();
+					return false;
+				}
+			}
+		</script>
     	<style type="text/css" aria-selected="true">
 			.sfsi_plus_subscribe_Popinner
 			{
@@ -18,9 +40,12 @@ function sfsi_plus_addStyleFunction()
 				<?php if($option9['sfsi_plus_form_border'] == 'yes') : ?>
 				border: <?php echo $option9['sfsi_plus_form_border_thickness']."px solid ".$option9['sfsi_plus_form_border_color'];?> !important;
 				<?php endif;?>
-				float: left !important;
-				padding: 18px 20px !important;
+				padding: 18px 0px !important;
 				background-color: <?php echo $option9['sfsi_plus_form_background'] ?> !important;
+			}
+			.sfsi_plus_subscribe_Popinner form
+			{
+				margin: 0 20px !important;
 			}
 			.sfsi_plus_subscribe_Popinner h5
 			{
@@ -37,9 +62,10 @@ function sfsi_plus_addStyleFunction()
     			padding: 0 !important;
 			}
 			.sfsi_plus_subscription_form_field {
-				float: left !important;
 				margin: 5px 0 !important;
 				width: 100% !important;
+				display: inline-flex;
+				display: -webkit-inline-flex;
 			}
 			.sfsi_plus_subscription_form_field input {
 				width: 100% !important;
@@ -48,6 +74,53 @@ function sfsi_plus_addStyleFunction()
 			.sfsi_plus_subscribe_Popinner input[type=email]
 			{
 				font-family: <?php echo $option9['sfsi_plus_form_field_font'] ?> !important;
+				<?php if($option9['sfsi_plus_form_field_fontstyle'] != 'bold') {?>
+				font-style: <?php echo $option9['sfsi_plus_form_field_fontstyle'] ?> !important;
+				<?php } else{ ?>
+				font-weight: <?php echo $option9['sfsi_plus_form_field_fontstyle'] ?> !important;
+				<?php }?>
+				color: <?php echo $option9['sfsi_plus_form_field_fontcolor'] ?> !important;
+				font-size: <?php echo $option9['sfsi_plus_form_field_fontsize']."px" ?> !important;
+				text-align: <?php echo $option9['sfsi_plus_form_field_fontalign'] ?> !important;
+			}
+			.sfsi_plus_subscribe_Popinner input[type=email]::-webkit-input-placeholder {
+			   font-family: <?php echo $option9['sfsi_plus_form_field_font'] ?> !important;
+				<?php if($option9['sfsi_plus_form_field_fontstyle'] != 'bold') {?>
+				font-style: <?php echo $option9['sfsi_plus_form_field_fontstyle'] ?> !important;
+				<?php } else{ ?>
+				font-weight: <?php echo $option9['sfsi_plus_form_field_fontstyle'] ?> !important;
+				<?php }?>
+				color: <?php echo $option9['sfsi_plus_form_field_fontcolor'] ?> !important;
+				font-size: <?php echo $option9['sfsi_plus_form_field_fontsize']."px" ?> !important;
+				text-align: <?php echo $option9['sfsi_plus_form_field_fontalign'] ?> !important;
+			}
+			
+			.sfsi_plus_subscribe_Popinner input[type=email]:-moz-placeholder { /* Firefox 18- */
+			    font-family: <?php echo $option9['sfsi_plus_form_field_font'] ?> !important;
+				<?php if($option9['sfsi_plus_form_field_fontstyle'] != 'bold') {?>
+				font-style: <?php echo $option9['sfsi_plus_form_field_fontstyle'] ?> !important;
+				<?php } else{ ?>
+				font-weight: <?php echo $option9['sfsi_plus_form_field_fontstyle'] ?> !important;
+				<?php }?>
+				color: <?php echo $option9['sfsi_plus_form_field_fontcolor'] ?> !important;
+				font-size: <?php echo $option9['sfsi_plus_form_field_fontsize']."px" ?> !important;
+				text-align: <?php echo $option9['sfsi_plus_form_field_fontalign'] ?> !important;
+			}
+			
+			.sfsi_plus_subscribe_Popinner input[type=email]::-moz-placeholder {  /* Firefox 19+ */
+			    font-family: <?php echo $option9['sfsi_plus_form_field_font'] ?> !important;
+				<?php if($option9['sfsi_plus_form_field_fontstyle'] != 'bold') {?>
+				font-style: <?php echo $option9['sfsi_plus_form_field_fontstyle'] ?> !important;
+				<?php } else{ ?>
+				font-weight: <?php echo $option9['sfsi_plus_form_field_fontstyle'] ?> !important;
+				<?php }?>
+				color: <?php echo $option9['sfsi_plus_form_field_fontcolor'] ?> !important;
+				font-size: <?php echo $option9['sfsi_plus_form_field_fontsize']."px" ?> !important;
+				text-align: <?php echo $option9['sfsi_plus_form_field_fontalign'] ?> !important;
+			}
+			
+			.sfsi_plus_subscribe_Popinner input[type=email]:-ms-input-placeholder {  
+			  	font-family: <?php echo $option9['sfsi_plus_form_field_font'] ?> !important;
 				<?php if($option9['sfsi_plus_form_field_fontstyle'] != 'bold') {?>
 				font-style: <?php echo $option9['sfsi_plus_form_field_fontstyle'] ?> !important;
 				<?php } else{ ?>
@@ -145,15 +218,20 @@ add_shortcode("USM_plus_form", "sfsi_plus_get_subscriberForm");
 function sfsi_plus_get_subscriberForm()
 {
 	$option9 = unserialize(get_option('sfsi_plus_section9_options',false));
+	$sfsi_plus_feediid = get_option('sfsi_plus_feed_id');
+	$url = "http://www.specificfeeds.com/widgets/subscribeWidget/";
 	
 	$return = '';
+	$url = $url.$sfsi_plus_feediid.'/8/';	
 	$return .= '<div class="sfsi_plus_subscribe_Popinner">
-					<form method="post">
+					<form method="post" onsubmit="return sfsi_plus_processfurther(this);" target="popupwindow" action="'.$url.'">
 						<h5>'.trim($option9['sfsi_plus_form_heading_text']).'</h5>
 						<div class="sfsi_plus_subscription_form_field">
-							<input type="email" name="subscribe_email" value="" placeholder="'.trim($option9['sfsi_plus_form_field_text']).'"/>
+							<input type="email" name="data[Widget][email]" value="" placeholder="'.trim($option9['sfsi_plus_form_field_text']).'"/>
 						</div>
 						<div class="sfsi_plus_subscription_form_field">
+							<input type="hidden" name="data[Widget][feed_id]" value="'.$sfsi_plus_feediid.'">
+							<input type="hidden" name="data[Widget][feedtype]" value="8">
 							<input type="submit" name="subscribe" value="'.$option9['sfsi_plus_form_button_text'].'" />
 						</div>
 					</form>

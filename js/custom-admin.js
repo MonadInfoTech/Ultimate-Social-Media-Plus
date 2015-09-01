@@ -1006,26 +1006,30 @@ function sfsi_plus_create_suscriber_form()
 	SFSI('#sfsi_plus_form_heading_fontalign').val() != "" ? (SFSI(".sfsi_plus_subscribe_Popinner > form > h5").css("text-align", SFSI("#sfsi_plus_form_heading_fontalign").val())) : '';
 	
 	//Field customization
-	SFSI('input[name="sfsi_plus_form_field_text"]').val() != "" ? (SFSI(".sfsi_plus_subscribe_Popinner").find('input[name="subscribe_email"]').attr("placeholder", SFSI('input[name="sfsi_plus_form_field_text"]').val())) : SFSI(".sfsi_plus_subscribe_Popinner").find('input[name="subscribe_email"]').attr("placeholder", '');
+	SFSI('input[name="sfsi_plus_form_field_text"]').val() != "" ? (SFSI(".sfsi_plus_subscribe_Popinner").find('input[name="data[Widget][email]"]').attr("placeholder", SFSI('input[name="sfsi_plus_form_field_text"]').val())) : SFSI(".sfsi_plus_subscribe_Popinner").find('input[name="data[Widget][email]"]').attr("placeholder", '');
 	
-	SFSI('#sfsi_plus_form_field_font').val() != "" ? (SFSI(".sfsi_plus_subscribe_Popinner").find('input[name="subscribe_email"]').css("font-family", SFSI("#sfsi_plus_form_field_font").val())) : '';
+	SFSI('input[name="sfsi_plus_form_field_text"]').val() != "" ? (SFSI(".sfsi_plus_left_container > .sfsi_plus_subscribe_Popinner").find('input[name="data[Widget][email]"]').val(SFSI('input[name="sfsi_plus_form_field_text"]').val())) : SFSI(".sfsi_plus_left_container > .sfsi_plus_subscribe_Popinner").find('input[name="data[Widget][email]"]').val('');
+	
+	SFSI('input[name="sfsi_plus_form_field_text"]').val() != "" ? (SFSI(".like_pop_box > .sfsi_plus_subscribe_Popinner").find('input[name="data[Widget][email]"]').val(SFSI('input[name="sfsi_plus_form_field_text"]').val())) : SFSI(".like_pop_box > .sfsi_plus_subscribe_Popinner").find('input[name="data[Widget][email]"]').val('');
+	
+	SFSI('#sfsi_plus_form_field_font').val() != "" ? (SFSI(".sfsi_plus_subscribe_Popinner").find('input[name="data[Widget][email]"]').css("font-family", SFSI("#sfsi_plus_form_field_font").val())) : '';
 	
 	if(SFSI('#sfsi_plus_form_field_fontstyle').val() != "bold")
 	{
-		SFSI('#sfsi_plus_form_field_fontstyle').val() != "" ? (SFSI(".sfsi_plus_subscribe_Popinner").find('input[name="subscribe_email"]').css("font-style", SFSI("#sfsi_plus_form_field_fontstyle").val())) : '';
-		SFSI(".sfsi_plus_subscribe_Popinner").find('input[name="subscribe_email"]').css("font-weight", '');
+		SFSI('#sfsi_plus_form_field_fontstyle').val() != "" ? (SFSI(".sfsi_plus_subscribe_Popinner").find('input[name="data[Widget][email]"]').css("font-style", SFSI("#sfsi_plus_form_field_fontstyle").val())) : '';
+		SFSI(".sfsi_plus_subscribe_Popinner").find('input[name="data[Widget][email]"]').css("font-weight", '');
 	}
 	else
 	{
-		SFSI('#sfsi_plus_form_field_fontstyle').val() != "" ? (SFSI(".sfsi_plus_subscribe_Popinner").find('input[name="subscribe_email"]').css("font-weight", 'bold')) : '';
-		SFSI(".sfsi_plus_subscribe_Popinner").find('input[name="subscribe_email"]').css("font-style", '');
+		SFSI('#sfsi_plus_form_field_fontstyle').val() != "" ? (SFSI(".sfsi_plus_subscribe_Popinner").find('input[name="data[Widget][email]"]').css("font-weight", 'bold')) : '';
+		SFSI(".sfsi_plus_subscribe_Popinner").find('input[name="data[Widget][email]"]').css("font-style", '');
 	}
 	
-	SFSI('input[name="sfsi_plus_form_field_fontcolor"]').val() != "" ? (SFSI(".sfsi_plus_subscribe_Popinner").find('input[name="subscribe_email"]').css("color", SFSI('input[name="sfsi_plus_form_field_fontcolor"]').val())) : '';
+	SFSI('input[name="sfsi_plus_form_field_fontcolor"]').val() != "" ? (SFSI(".sfsi_plus_subscribe_Popinner").find('input[name="data[Widget][email]"]').css("color", SFSI('input[name="sfsi_plus_form_field_fontcolor"]').val())) : '';
 	
-	SFSI('input[name="sfsi_plus_form_field_fontsize"]').val() != "" ? (SFSI(".sfsi_plus_subscribe_Popinner").find('input[name="subscribe_email"]').css({"font-size": parseInt(SFSI('input[name="sfsi_plus_form_field_fontsize"]').val())})) : '';
+	SFSI('input[name="sfsi_plus_form_field_fontsize"]').val() != "" ? (SFSI(".sfsi_plus_subscribe_Popinner").find('input[name="data[Widget][email]"]').css({"font-size": parseInt(SFSI('input[name="sfsi_plus_form_field_fontsize"]').val())})) : '';
 	
-	SFSI('#sfsi_plus_form_field_fontalign').val() != "" ? (SFSI(".sfsi_plus_subscribe_Popinner").find('input[name="subscribe_email"]').css("text-align", SFSI("#sfsi_plus_form_field_fontalign").val())) : '';
+	SFSI('#sfsi_plus_form_field_fontalign').val() != "" ? (SFSI(".sfsi_plus_subscribe_Popinner").find('input[name="data[Widget][email]"]').css("text-align", SFSI("#sfsi_plus_form_field_fontalign").val())) : '';
 	
 	//Button customization
 	SFSI('input[name="sfsi_plus_form_button_text"]').val() != "" ? (SFSI(".sfsi_plus_subscribe_Popinner").find('input[name="subscribe"]').attr("value", SFSI('input[name="sfsi_plus_form_button_text"]').val())) : '';

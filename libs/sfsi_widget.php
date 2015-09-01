@@ -2,11 +2,23 @@
 /* create SFSI widget */
 class Sfsi_Plus_Widget extends WP_Widget
 {
-	function Sfsi_Plus_Widget()
+	function __construct()
 	{
         $widget_ops = array( 'classname' => 'sfsi_plus', 'description' => __('Ultimate Social Media PLUS widgets', 'Ultimate Social Media PLUS ') );
         $control_ops = array( 'width' => 300, 'height' => 350, 'id_base' => 'sfsi-plus-widget' );
-        $this->WP_Widget( 'sfsi-plus-widget', __('Ultimate Social Media PLUS', 'Ultimate Social Media PLUS'), $widget_ops, $control_ops );	
+        
+		parent::__construct(
+			// Base ID of your widget
+			'sfsi-plus-widget', 
+	
+			// Widget name will appear in UI
+			__('Ultimate Social Media PLUS', 'Ultimate Social Media PLUS'), 
+	
+			// Widget description
+			$widget_ops,
+			
+			$control_ops
+		);
 	}
 	
 	function widget( $args, $instance )
@@ -66,10 +78,26 @@ class Sfsi_Plus_Widget extends WP_Widget
 	{
 		$defaults = array( 'title' =>"" );
 		$instance = wp_parse_args( (array) $instance, $defaults );
-		if( $instance['showf']==0 && empty($instance['title'])) { $instance['title']='Please follow & like us :)';  } else { $instance['title']; }; 
+		if(isset($instance['showf']))
+		{
+			if( $instance['showf'] == 0 && empty($instance['title']))
+			{
+				$instance['title']='Please follow & like us :)';
+			}
+			else
+			{
+				$instance['title'];
+			}
+		}
+		else
+		{
+			$instance['title']='Please follow & like us :)';
+		}
 		?>
 		<p>
-		    <label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php _e('Title:', 'Subscription and Social Icons'); ?></label>
+		    <label for="<?php echo $this->get_field_id( 'title' ); ?>">
+				<?php _e('Title:', 'Subscription and Social Icons'); ?>
+            </label>
 		    <input id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" value="<?php echo $instance['title']; ?>" style="width:100%;" />
 		    <input type="hidden" value="<?php echo $instance['showf'] ?>" id="<?php echo $this->get_field_id( 'showf' ); ?>" name="<?php echo $this->get_field_name( 'showf' ); ?>" />
 		</p>
@@ -196,7 +224,7 @@ function sfsi_plus_check_visiblity($isFloter=0)
 	    
    /* magnage the icons in saved order in admin */ 
    $custom_icons_order = unserialize($sfsi_section5['sfsi_plus_CustomIcons_order']);
-   $icons=  unserialize($sfsi_plus_section1_options['sfsi_custom_files']);
+   $icons = unserialize($sfsi_plus_section1_options['sfsi_custom_files']);
    $icons_order = array(
    					 '0' => '',
 					 $sfsi_section5['sfsi_plus_rssIcon_order']=>'rss',

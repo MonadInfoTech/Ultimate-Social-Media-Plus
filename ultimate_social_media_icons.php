@@ -5,7 +5,7 @@ Plugin URI: http://ultimatelysocial.com
 Description: The best social media plugin on the market. And 100% FREE. Allows you to add social media & share icons to your blog (esp. Facebook, Twitter, Email, RSS, Pinterest, Instagram, Google+, LinkedIn, Share-button). It offers a wide range of design options and other features. 
 Author: UltimatelySocial
 Author URI: http://ultimatelysocial.com
-Version: 1.7
+Version: 1.8
 License: GPLv2
 */
 
@@ -32,6 +32,12 @@ include(SFSI_PLUS_DOCROOT.'/libs/sfsi_plus_subscribe_widget.php');
 register_activation_hook(__FILE__, 'sfsi_plus_activate_plugin' );
 register_deactivation_hook(__FILE__, 'sfsi_plus_deactivate_plugin');
 register_uninstall_hook(__FILE__, 'sfsi_plus_Unistall_plugin');
+
+/*Plugin version setup*/
+if(!get_option('sfsi_plus_pluginVersion') || get_option('sfsi_plus_pluginVersion') < 1.8)
+{
+	add_action("init", "sfsi_plus_update_plugin");
+}
 
 //shortcode for the ultimate social icons {Monad}
 add_shortcode("DISPLAY_ULTIMATE_PLUS", "DISPLAY_ULTIMATE_PLUS");
@@ -458,25 +464,31 @@ function sfsi_plus_string_sanitize($s) {
     return $result;
 }
 
-add_action('admin_notices', 'sfsi_plus_admin_notice', 1);
+add_action('admin_notices', 'sfsi_plus_admin_notice', 10);
 function sfsi_plus_admin_notice()
 {
-	if(strpos($_SERVER['SCRIPT_NAME'], "plugins.php"))
+	if(isset($_GET['page']) && $_GET['page'] == "sfsi-plus-options")
 	{
-		if(get_option("sfsi_plus_show_notification_plugin") == "yes")
-		{ 
-			$url = "?sfsiPlus-dismiss-notice=true";
-			?>
-			<div class="updated" style="overflow: hidden;">
-            	<div class="alignleft" style="margin: 9px 0;">
-                	<b>New feature in the Ultimate Social Media PLUS plugin:</b> You can now add a subscription form to increase sign-ups (under question 8). <a href="https://wordpress.org/plugins/ultimate-social-media-plus/" style="color:#7AD03A; font-weight:bold;">Check it out</a>
-                </div>
-                <p class="alignright">
-                	<a href="<?php echo $url; ?>">Dismiss</a>
-                </p>
-            </div>
-		<?php }
+		$style = "overflow: hidden; margin:12px 3px 0px;";
 	}
+	else
+	{
+		$style = "overflow: hidden;"; 
+	}
+	
+	if(get_option("sfsi_plus_show_notification_plugin") == "yes")
+	{ 
+		$url = "?sfsiPlus-dismiss-notice=true";
+		?>
+		<div class="updated" style="<?php echo $style; ?>"">
+			<div class="alignleft" style="margin: 9px 0;">
+				<b>New feature in the Ultimate Social Media PLUS plugin:</b> You can now add a subscription form to increase sign-ups (under question 8). <a href="<?php echo site_url();?>/wp-admin/admin.php?page=sfsi-plus-options" style="color:#7AD03A; font-weight:bold;">Check it out</a>
+			</div>
+			<p class="alignright">
+				<a href="<?php echo $url; ?>">Dismiss</a>
+			</p>
+		</div>
+	<?php }
 }
 add_action('admin_init', 'sfsi_plus_dismiss_admin_notice');
 function sfsi_plus_dismiss_admin_notice()
@@ -484,6 +496,7 @@ function sfsi_plus_dismiss_admin_notice()
 	if ( isset($_REQUEST['sfsiPlus-dismiss-notice']) && $_REQUEST['sfsiPlus-dismiss-notice'] == 'true' )
 	{
 		update_option( 'sfsi_plus_show_notification_plugin', "no" );
+		header("Location: ".site_url()."/wp-admin/admin.php?page=sfsi-plus-options");
 	}
 }
 ?>
