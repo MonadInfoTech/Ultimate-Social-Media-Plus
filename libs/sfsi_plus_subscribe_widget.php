@@ -16,7 +16,7 @@ function sfsi_plus_addStyleFunction()
 				var filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
 				if ((email != "Enter your email") && (filter.test(email))) {
 					if (feedtype == "8") {
-						var url = "'.$url.'"+feed_id+"/"+feedtype;
+						var url = "<?php echo $url; ?>"+feed_id+"/"+feedtype;
 						window.open(url, "popupwindow", "scrollbars=yes,width=1080,height=760");
 						return true;
 					}
@@ -187,6 +187,10 @@ class sfsiPlus_subscriber_widget extends WP_Widget {
 		if ( isset( $instance[ 'title' ] ))
 		{
 			$title = $instance[ 'title' ];
+		}
+		else
+		{
+			$title = '';
 		}
 		?>
 		<p>
