@@ -24,6 +24,7 @@
 ?>
 <div class="tab8">
 	<ul class="sfsiplus_icn_listing8">
+    	<!--First Section-->
 		<li class="">
 			<div class="radio_section tb_4_ck" onclick="checkforinfoslction(this);"><input name="sfsi_plus_show_via_widget" <?php echo ($option8['sfsi_plus_show_via_widget']=='yes') ?  'checked="true"' : '' ;?>  id="sfsi_plus_show_via_widget" type="checkbox" value="yes" class="styled"  /></div>
 			<div class="sfsiplus_right_info">
@@ -43,10 +44,12 @@
 				</p>
 			</div>
 		</li>
+        
+        <!--Second Section-->
 		<li class="">
-        <div class="radio_section tb_4_ck cstmfltonpgstck" onclick="sfsiplus_toggleflotpage(this);">
-        	<input name="sfsi_plus_float_on_page" <?php echo ($option8['sfsi_plus_float_on_page']=='yes') ?  'checked="true"' : '' ;?>  id="sfsi_plus_float_on_page" type="checkbox" value="yes" class="styled" />
-        </div>
+            <div class="radio_section tb_4_ck cstmfltonpgstck" onclick="sfsiplus_toggleflotpage(this);">
+                <input name="sfsi_plus_float_on_page" <?php echo ($option8['sfsi_plus_float_on_page']=='yes') ?  'checked="true"' : '' ;?>  id="sfsi_plus_float_on_page" type="checkbox" value="yes" class="styled" />
+            </div>
 			<div class="sfsiplus_right_info">
 				<p>
 					<span class="sfsiplus_toglepstpgspn">Float them on the page</span>
@@ -61,40 +64,65 @@
 					$style ="display: none;";
 				}
 				?>
-				<ul class="sfsiplus_tab_3_icns flthmonpg" <?php echo 'style="'.$style.'";';?>>
-					<li>
-						<input name="sfsi_plus_float_page_position" <?php echo ( $option8['sfsi_plus_float_page_position']=='top-left') ?  'checked="true"' : '' ;?> type="radio" value="top-left" class="styled"  />
-                        <span class="sfsi_flicnsoptn3 sfsioptntl">Top left</span>
-						<label><img src="<?php echo SFSI_PLUS_PLUGURL;?>images/top_left.png" /></label>
-					</li>
-					<li>
-						<input name="sfsi_plus_float_page_position" <?php echo ( $option8['sfsi_plus_float_page_position']=='top-right') ?  'checked="true"' : '' ;?> type="radio" value="top-right" class="styled"  />
-                        <span class="sfsi_flicnsoptn3 sfsioptntr">Top right</span>
-						<label><img src="<?php echo SFSI_PLUS_PLUGURL;?>images/top_right.png" /></label>
-					</li>
-					<li>
-						<input name="sfsi_plus_float_page_position" <?php echo ( $option8['sfsi_plus_float_page_position']=='center-left') ?  'checked="true"' : '' ;?> type="radio" value="center-left" class="styled"  />
-                        <span class="sfsi_flicnsoptn3 sfsioptncl">Center left</span>
-						<label><img src="<?php echo SFSI_PLUS_PLUGURL;?>images/center_left.png" /></label>
-					</li>
-					<li>
-						<input name="sfsi_plus_float_page_position" <?php echo ( $option8['sfsi_plus_float_page_position']=='center-right') ?  'checked="true"' : '' ;?> type="radio" value="center-right" class="styled"  />
-                        <span class="sfsi_flicnsoptn3 sfsioptncr">Center right</span>
-						<label><img src="<?php echo SFSI_PLUS_PLUGURL;?>images/center_right.png" /></label>
-					</li>
-					<li>
-						<input name="sfsi_plus_float_page_position" <?php echo ( $option8['sfsi_plus_float_page_position']=='bottom-left') ?  'checked="true"' : '' ;?> type="radio" value="bottom-left" class="styled"  />
-                        <span class="sfsi_flicnsoptn3 sfsioptnbl">Bottom left</span>
-						<label><img src="<?php echo SFSI_PLUS_PLUGURL;?>images/bottom_left.png" /></label>
-					</li>
-					<li>
-						<input name="sfsi_plus_float_page_position" <?php echo ( $option8['sfsi_plus_float_page_position']=='bottom-right') ?  'checked="true"' : '' ;?> type="radio" value="bottom-right" class="styled"  />
-                        <span class="sfsi_flicnsoptn3 sfsioptnbr">Bottom right</span>
-						<label><img src="<?php echo SFSI_PLUS_PLUGURL;?>images/bottom_right.png" /></label>
-					</li>
-				</ul>
+                <div class="sfsiplus_tab_3_icns"  <?php echo 'style="'.$style.'"';?>>
+					<ul class="sfsiplus_tab_3_icns flthmonpg">
+                        <li>
+                            <input name="sfsi_plus_float_page_position" <?php echo ( $option8['sfsi_plus_float_page_position']=='top-left') ?  'checked="true"' : '' ;?> type="radio" value="top-left" class="styled"  />
+                            <span class="sfsi_flicnsoptn3 sfsioptntl">Top left</span>
+                            <label><img src="<?php echo SFSI_PLUS_PLUGURL;?>images/top_left.png" /></label>
+                        </li>
+                        <li>
+                            <input name="sfsi_plus_float_page_position" <?php echo ( $option8['sfsi_plus_float_page_position']=='top-right') ?  'checked="true"' : '' ;?> type="radio" value="top-right" class="styled"  />
+                            <span class="sfsi_flicnsoptn3 sfsioptntr">Top right</span>
+                            <label><img src="<?php echo SFSI_PLUS_PLUGURL;?>images/top_right.png" /></label>
+                        </li>
+                        <li>
+                            <input name="sfsi_plus_float_page_position" <?php echo ( $option8['sfsi_plus_float_page_position']=='center-left') ?  'checked="true"' : '' ;?> type="radio" value="center-left" class="styled"  />
+                            <span class="sfsi_flicnsoptn3 sfsioptncl">Center left</span>
+                            <label><img src="<?php echo SFSI_PLUS_PLUGURL;?>images/center_left.png" /></label>
+                        </li>
+                        <li>
+                            <input name="sfsi_plus_float_page_position" <?php echo ( $option8['sfsi_plus_float_page_position']=='center-right') ?  'checked="true"' : '' ;?> type="radio" value="center-right" class="styled"  />
+                            <span class="sfsi_flicnsoptn3 sfsioptncr">Center right</span>
+                            <label><img src="<?php echo SFSI_PLUS_PLUGURL;?>images/center_right.png" /></label>
+                        </li>
+                        <li>
+                            <input name="sfsi_plus_float_page_position" <?php echo ( $option8['sfsi_plus_float_page_position']=='bottom-left') ?  'checked="true"' : '' ;?> type="radio" value="bottom-left" class="styled"  />
+                            <span class="sfsi_flicnsoptn3 sfsioptnbl">Bottom left</span>
+                            <label><img src="<?php echo SFSI_PLUS_PLUGURL;?>images/bottom_left.png" /></label>
+                        </li>
+                        <li>
+                            <input name="sfsi_plus_float_page_position" <?php echo ( $option8['sfsi_plus_float_page_position']=='bottom-right') ?  'checked="true"' : '' ;?> type="radio" value="bottom-right" class="styled"  />
+                            <span class="sfsi_flicnsoptn3 sfsioptnbr">Bottom right</span>
+                            <label><img src="<?php echo SFSI_PLUS_PLUGURL;?>images/bottom_right.png" /></label>
+                        </li>
+                    </ul>
+                    <div style="width: 88%; float: left; margin:25px 0 0 47px">
+                        <h4>Margin From :</h4>
+                        <ul class="sfsi_plus_floaticon_margin_sec">
+                            <li>
+                                <label>Top :</label>
+                                <input name="sfsi_plus_icons_floatMargin_top" type="text" value="<?php echo ($option8['sfsi_plus_icons_floatMargin_top']!='') ?  $option8['sfsi_plus_icons_floatMargin_top'] : '' ;?>" /><ins>Pixels</ins>
+                            </li>
+                            <li>
+                                <label>Bottom :</label>
+                                <input name="sfsi_plus_icons_floatMargin_bottom" type="text" value="<?php echo ($option8['sfsi_plus_icons_floatMargin_bottom'] != '') ?  $option8['sfsi_plus_icons_floatMargin_bottom'] : '' ;?>" /><ins>Pixels</ins>
+                            </li>
+                            <li>
+                                <label>Left :</label>
+                                <input name="sfsi_plus_icons_floatMargin_left" type="text" value="<?php echo ($option8['sfsi_plus_icons_floatMargin_left']!='') ?  $option8['sfsi_plus_icons_floatMargin_left'] : '' ;?>" /><ins>Pixels</ins>
+                            </li>
+                            <li>
+                                <label>Right :</label>
+                                <input name="sfsi_plus_icons_floatMargin_right" type="text" value="<?php echo ($option8['sfsi_plus_icons_floatMargin_right']!='') ?  $option8['sfsi_plus_icons_floatMargin_right'] : '' ;?>" /><ins>Pixels</ins>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
 			</div>
 		</li>
+        
+        <!--Third Section-->
 		<li class="sfsiplusplacethemanulywpr">
 			<div class="radio_section tb_4_ck" onclick="checkforinfoslction(this);"><input name="sfsi_plus_place_item_manually" <?php echo ($option8['sfsi_plus_place_item_manually']=='yes') ?  'checked="true"' : '' ;?>  id="sfsi_plus_place_item_manually" type="checkbox" value="yes" class="styled"  /></div>
 			<div class="sfsiplus_right_info">
@@ -114,6 +142,8 @@
 				</p>
 			</div>
 		</li>
+        
+        <!--Fourth Section-->
 		<li class="">
 			<div class="radio_section tb_4_ck" onclick="sfsiplus_toggleflotpage(this);"><input name="sfsi_plus_show_item_onposts" <?php echo ($option8['sfsi_plus_show_item_onposts']=='yes') ?  'checked="true"' : '' ;?>  id="sfsi_plus_show_item_onposts" type="checkbox" value="yes" class="styled"  /></div>
 			<div class="sfsiplus_right_info">
@@ -278,14 +308,15 @@
        <img src="<?php echo SFSI_PLUS_PLUGURL ?>images/ajax-loader.gif" class="loader-img" />
        <?php  $nonce = wp_create_nonce("update_plus_step8"); ?>
         <a  href="javascript:;" id="sfsi_plus_save8" title="Save" data-nonce="<?php echo $nonce;?>">Save</a>
-  
-	</div>  <!-- END SAVE BUTTON SECTION   -->
-	<a class="sfsiColbtn closeSec" href="javascript:;" class="closeSec">Collapse area</a>
+  	</div>
+    <!-- END SAVE BUTTON SECTION   -->
+	
+    <a class="sfsiColbtn closeSec" href="javascript:;">Collapse area</a>
 	<label class="closeSec"></label>
+    
 	<!-- ERROR AND SUCCESS MESSAGE AREA-->
 	<p class="red_txt errorMsg" style="display:none"> </p>
 	<p class="green_txt sucMsg" style="display:none"> </p>
 	<div class="clear"></div>
-	
 	
 </div>

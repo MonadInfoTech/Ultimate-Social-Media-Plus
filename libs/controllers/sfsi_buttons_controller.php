@@ -457,23 +457,23 @@ function sfsi_plus_options_updater7()
   		
     /* icons pop options */
 	$up_option7=array(	
-		'sfsi_plus_popup_text'=>$sfsi_plus_popup_text,
-		'sfsi_plus_popup_background_color'=>$sfsi_plus_popup_background_color,
-		'sfsi_plus_popup_border_color'=>$sfsi_plus_popup_border_color,
-		'sfsi_plus_popup_border_thickness'=>$sfsi_plus_popup_border_thickness,
-		'sfsi_plus_popup_border_shadow'=>$sfsi_plus_popup_border_shadow,
-		'sfsi_plus_popup_font'=>$sfsi_plus_popup_font,
-		'sfsi_plus_popup_fontSize'=>$sfsi_plus_popup_fontSize,
-		'sfsi_plus_popup_fontStyle'=>$sfsi_plus_popup_fontStyle,
-                'sfsi_plus_popup_fontColor'=>$sfsi_plus_popup_fontColor,
+		'sfsi_plus_popup_text'				=> stripslashes($sfsi_plus_popup_text),
+		'sfsi_plus_popup_background_color'	=> $sfsi_plus_popup_background_color,
+		'sfsi_plus_popup_border_color'		=> $sfsi_plus_popup_border_color,
+		'sfsi_plus_popup_border_thickness'	=> $sfsi_plus_popup_border_thickness,
+		'sfsi_plus_popup_border_shadow'		=> $sfsi_plus_popup_border_shadow,
+		'sfsi_plus_popup_font'				=> $sfsi_plus_popup_font,
+		'sfsi_plus_popup_fontSize'			=> $sfsi_plus_popup_fontSize,
+		'sfsi_plus_popup_fontStyle'			=> $sfsi_plus_popup_fontStyle,
+        'sfsi_plus_popup_fontColor'			=> $sfsi_plus_popup_fontColor,
 		
-		'sfsi_plus_Show_popupOn'=>$sfsi_plus_Show_popupOn,
-		'sfsi_plus_Show_popupOn_PageIDs'=>$sfsi_plus_Show_popupOn_PageIDs,
+		'sfsi_plus_Show_popupOn'			=> $sfsi_plus_Show_popupOn,
+		'sfsi_plus_Show_popupOn_PageIDs'	=> $sfsi_plus_Show_popupOn_PageIDs,
 		
-		'sfsi_plus_Shown_pop'=>$sfsi_plus_Shown_pop,
-		'sfsi_plus_Shown_popupOnceTime'=>$sfsi_plus_Shown_popupOnceTime,
+		'sfsi_plus_Shown_pop'				=> $sfsi_plus_Shown_pop,
+		'sfsi_plus_Shown_popupOnceTime'		=> $sfsi_plus_Shown_popupOnceTime,
 		'sfsi_plus_Shown_popuplimitPerUserTime'=>$sfsi_plus_Shown_popuplimitPerUserTime,
-                );
+	);
     update_option('sfsi_plus_section7_options',serialize($up_option7)); 
     header('Content-Type: application/json');
     echo  json_encode(array("success")); exit;
@@ -485,29 +485,38 @@ function sfsi_plus_options_updater8()
 	if ( !wp_verify_nonce( $_POST['nonce'], "update_plus_step8")) {
       echo  json_encode(array("wrong_nonce")); exit;
    	}
-	$sfsi_plus_show_via_widget	= isset($_POST["sfsi_plus_show_via_widget"]) ? $_POST["sfsi_plus_show_via_widget"] : 'no'; 
-    $sfsi_plus_float_on_page	= isset($_POST["sfsi_plus_float_on_page"]) ? $_POST["sfsi_plus_float_on_page"] : 'no'; 
-	$sfsi_plus_float_page_position	= isset($_POST["sfsi_plus_float_page_position"]) ? $_POST["sfsi_plus_float_page_position"] : 'no'; 
-    $sfsi_plus_place_item_manually	= isset($_POST["sfsi_plus_place_item_manually"]) ? $_POST["sfsi_plus_place_item_manually"] : 'no'; 
-    $sfsi_plus_show_item_onposts	= isset($_POST["sfsi_plus_show_item_onposts"]) ? $_POST["sfsi_plus_show_item_onposts"] : 'no';
+	$sfsi_plus_show_via_widget		= isset($_POST["sfsi_plus_show_via_widget"]) ? $_POST["sfsi_plus_show_via_widget"] : 'no'; 
+    $sfsi_plus_float_on_page		= isset($_POST["sfsi_plus_float_on_page"]) ? $_POST["sfsi_plus_float_on_page"] : 'no'; 
+	$sfsi_plus_float_page_position	= isset($_POST["sfsi_plus_float_page_position"]) ? $_POST["sfsi_plus_float_page_position"] : 'no';
+	
+	$sfsi_plus_icons_floatMargin_top     = isset($_POST["sfsi_plus_icons_floatMargin_top"]) ? $_POST["sfsi_plus_icons_floatMargin_top"] : '';
+	$sfsi_plus_icons_floatMargin_bottom  = isset($_POST["sfsi_plus_icons_floatMargin_bottom"])? $_POST["sfsi_plus_icons_floatMargin_bottom"]:'';
+	$sfsi_plus_icons_floatMargin_left    = isset($_POST["sfsi_plus_icons_floatMargin_left"]) ? $_POST["sfsi_plus_icons_floatMargin_left"] : '';
+	$sfsi_plus_icons_floatMargin_right   = isset($_POST["sfsi_plus_icons_floatMargin_right"]) ? $_POST["sfsi_plus_icons_floatMargin_right"]:''; 
+	
+    $sfsi_plus_place_item_manually	= isset($_POST["sfsi_plus_place_item_manually"]) ? $_POST["sfsi_plus_place_item_manually"] : 'no';
+	$sfsi_plus_show_item_onposts	= isset($_POST["sfsi_plus_show_item_onposts"]) ? $_POST["sfsi_plus_show_item_onposts"] : 'no';
 	$sfsi_plus_display_button_type	= isset($_POST["sfsi_plus_display_button_type"]) ? $_POST["sfsi_plus_display_button_type"] : 'no';
-	$sfsi_plus_post_icons_size	= isset($_POST["sfsi_plus_post_icons_size"]) ? $_POST["sfsi_plus_post_icons_size"] : 40;
-	$sfsi_plus_post_icons_spacing = isset($_POST["sfsi_plus_post_icons_spacing"]) ? $_POST["sfsi_plus_post_icons_spacing"] : 5;
-	$sfsi_plus_show_Onposts		= isset($_POST["sfsi_plus_show_Onposts"]) ? $_POST["sfsi_plus_show_Onposts"] : 'no';
-	$sfsi_plus_textBefor_icons  = isset($_POST["sfsi_plus_textBefor_icons"]) ? $_POST["sfsi_plus_textBefor_icons"] : 'Please follow and like us:';
-	$sfsi_plus_icons_alignment  = isset($_POST["sfsi_plus_icons_alignment"]) ? $_POST["sfsi_plus_icons_alignment"] : 'center-right';
-	$sfsi_plus_icons_DisplayCounts    = isset($_POST["sfsi_plus_icons_DisplayCounts"]) ? $_POST["sfsi_plus_icons_DisplayCounts"] : 'no'; 
-	$sfsi_plus_display_before_posts    = isset($_POST["sfsi_plus_display_before_posts"]) ? $_POST["sfsi_plus_display_before_posts"] : 'no'; 
-	$sfsi_plus_display_after_posts    = isset($_POST["sfsi_plus_display_after_posts"]) ? $_POST["sfsi_plus_display_after_posts"] : 'no'; 
-	/*$sfsi_plus_display_on_postspage    = isset($_POST["sfsi_plus_display_on_postspage"]) ? $_POST["sfsi_plus_display_on_postspage"] : 'no'; 
+	
+	$sfsi_plus_post_icons_size		= isset($_POST["sfsi_plus_post_icons_size"]) ? $_POST["sfsi_plus_post_icons_size"] : 40;
+	$sfsi_plus_post_icons_spacing 	= isset($_POST["sfsi_plus_post_icons_spacing"]) ? $_POST["sfsi_plus_post_icons_spacing"] : 5;
+	$sfsi_plus_show_Onposts			= isset($_POST["sfsi_plus_show_Onposts"]) ? $_POST["sfsi_plus_show_Onposts"] : 'no';
+	$sfsi_plus_textBefor_icons  	= isset($_POST["sfsi_plus_textBefor_icons"]) ? $_POST["sfsi_plus_textBefor_icons"] : 'Please follow and like us:';
+	$sfsi_plus_icons_alignment  	= isset($_POST["sfsi_plus_icons_alignment"]) ? $_POST["sfsi_plus_icons_alignment"] : 'center-right';
+	$sfsi_plus_icons_DisplayCounts  = isset($_POST["sfsi_plus_icons_DisplayCounts"]) ? $_POST["sfsi_plus_icons_DisplayCounts"] : 'no'; 
+	$sfsi_plus_display_before_posts = isset($_POST["sfsi_plus_display_before_posts"]) ? $_POST["sfsi_plus_display_before_posts"] : 'no'; 
+	$sfsi_plus_display_after_posts  = isset($_POST["sfsi_plus_display_after_posts"]) ? $_POST["sfsi_plus_display_after_posts"] : 'no'; 
+	
+	/*$sfsi_plus_display_on_postspage = isset($_POST["sfsi_plus_display_on_postspage"]) ? $_POST["sfsi_plus_display_on_postspage"] : 'no'; 
 	$sfsi_plus_display_on_homepage    = isset($_POST["sfsi_plus_display_on_homepage"]) ? $_POST["sfsi_plus_display_on_homepage"] : 'no';*/ 
-	$sfsi_plus_display_before_blogposts    = isset($_POST["sfsi_plus_display_before_blogposts"]) ? $_POST["sfsi_plus_display_before_blogposts"] : 'no'; 
-	$sfsi_plus_display_after_blogposts    = isset($_POST["sfsi_plus_display_after_blogposts"]) ? $_POST["sfsi_plus_display_after_blogposts"] : 'no';
-	$sfsi_plus_rectsub    = isset($_POST["sfsi_plus_rectsub"]) ? $_POST["sfsi_plus_rectsub"] : 'no';
-	$sfsi_plus_rectfb    = isset($_POST["sfsi_plus_rectfb"]) ? $_POST["sfsi_plus_rectfb"] : 'no';
-	$sfsi_plus_rectgp    = isset($_POST["sfsi_plus_rectgp"]) ? $_POST["sfsi_plus_rectgp"] : 'no';
-	$sfsi_plus_rectshr    = isset($_POST["sfsi_plus_rectshr"]) ? $_POST["sfsi_plus_rectshr"] : 'no';
-	$sfsi_plus_recttwtr    = isset($_POST["sfsi_plus_recttwtr"]) ? $_POST["sfsi_plus_recttwtr"] : 'no';
+	
+	$sfsi_plus_display_before_blogposts	= isset($_POST["sfsi_plus_display_before_blogposts"]) ? $_POST["sfsi_plus_display_before_blogposts"] : 'no'; 
+	$sfsi_plus_display_after_blogposts  = isset($_POST["sfsi_plus_display_after_blogposts"]) ? $_POST["sfsi_plus_display_after_blogposts"] : 'no';
+	$sfsi_plus_rectsub    				= isset($_POST["sfsi_plus_rectsub"]) ? $_POST["sfsi_plus_rectsub"] : 'no';
+	$sfsi_plus_rectfb    				= isset($_POST["sfsi_plus_rectfb"]) ? $_POST["sfsi_plus_rectfb"] : 'no';
+	$sfsi_plus_rectgp    				= isset($_POST["sfsi_plus_rectgp"]) ? $_POST["sfsi_plus_rectgp"] : 'no';
+	$sfsi_plus_rectshr    				= isset($_POST["sfsi_plus_rectshr"]) ? $_POST["sfsi_plus_rectshr"] : 'no';
+	$sfsi_plus_recttwtr    				= isset($_POST["sfsi_plus_recttwtr"]) ? $_POST["sfsi_plus_recttwtr"] : 'no';
 	
 	
     //post options
@@ -518,29 +527,35 @@ function sfsi_plus_options_updater8()
 		update_option('sfsi_plus_section5_options',serialize($option5));
 	}*/
     $up_option8=array(
-                'sfsi_plus_show_via_widget'=>$sfsi_plus_show_via_widget,
-                'sfsi_plus_float_on_page'=>$sfsi_plus_float_on_page,
-                'sfsi_plus_float_page_position'=>$sfsi_plus_float_page_position,
-                'sfsi_plus_place_item_manually'=>$sfsi_plus_place_item_manually,
-                'sfsi_plus_show_item_onposts'=>$sfsi_plus_show_item_onposts,
-				'sfsi_plus_display_button_type'=>$sfsi_plus_display_button_type,
-				'sfsi_plus_post_icons_size'=>$sfsi_plus_post_icons_size,
-				'sfsi_plus_post_icons_spacing'=>$sfsi_plus_post_icons_spacing,
-				'sfsi_plus_show_Onposts'=>$sfsi_plus_show_Onposts,
-				'sfsi_plus_textBefor_icons'=>$sfsi_plus_textBefor_icons,
-				'sfsi_plus_icons_alignment'=>$sfsi_plus_icons_alignment,
-				'sfsi_plus_icons_DisplayCounts'=>$sfsi_plus_icons_DisplayCounts,
-				'sfsi_plus_display_before_posts'=>$sfsi_plus_display_before_posts,
-				'sfsi_plus_display_after_posts'=>$sfsi_plus_display_after_posts,
+                'sfsi_plus_show_via_widget'		=> $sfsi_plus_show_via_widget,
+                'sfsi_plus_float_on_page'		=> $sfsi_plus_float_on_page,
+                'sfsi_plus_float_page_position'	=> $sfsi_plus_float_page_position,
+				'sfsi_plus_icons_floatMargin_top'	=> $sfsi_plus_icons_floatMargin_top,
+				'sfsi_plus_icons_floatMargin_bottom'=> $sfsi_plus_icons_floatMargin_bottom,
+				'sfsi_plus_icons_floatMargin_left'	=> $sfsi_plus_icons_floatMargin_left,
+				'sfsi_plus_icons_floatMargin_right'	=> $sfsi_plus_icons_floatMargin_right,
+                'sfsi_plus_place_item_manually'	=> $sfsi_plus_place_item_manually,
+                'sfsi_plus_show_item_onposts'	=> $sfsi_plus_show_item_onposts,
+				'sfsi_plus_display_button_type'	=> $sfsi_plus_display_button_type,
+				'sfsi_plus_post_icons_size'		=> $sfsi_plus_post_icons_size,
+				'sfsi_plus_post_icons_spacing'	=> $sfsi_plus_post_icons_spacing,
+				'sfsi_plus_show_Onposts'		=> $sfsi_plus_show_Onposts,
+				'sfsi_plus_textBefor_icons'		=> stripslashes($sfsi_plus_textBefor_icons),
+				'sfsi_plus_icons_alignment'		=> $sfsi_plus_icons_alignment,
+				'sfsi_plus_icons_DisplayCounts'	=> $sfsi_plus_icons_DisplayCounts,
+				'sfsi_plus_display_before_posts'=> $sfsi_plus_display_before_posts,
+				'sfsi_plus_display_after_posts'	=> $sfsi_plus_display_after_posts,
+				
 				/*'sfsi_plus_display_on_postspage'=>$sfsi_plus_display_on_postspage,
-				'sfsi_plus_display_on_homepage'=>$sfsi_plus_display_on_homepage,*/
-				'sfsi_plus_display_before_blogposts'=>$sfsi_plus_display_before_blogposts,
-				'sfsi_plus_display_after_blogposts'=>$sfsi_plus_display_after_blogposts,
-				'sfsi_plus_rectsub'=>$sfsi_plus_rectsub,
-				'sfsi_plus_rectfb'=>$sfsi_plus_rectfb,
-				'sfsi_plus_rectgp'=>$sfsi_plus_rectgp,
-				'sfsi_plus_rectshr'=>$sfsi_plus_rectshr,
-				'sfsi_plus_recttwtr'=>$sfsi_plus_recttwtr		
+				'sfsi_plus_display_on_homepage'	=>$sfsi_plus_display_on_homepage,*/
+				
+				'sfsi_plus_display_before_blogposts'=> $sfsi_plus_display_before_blogposts,
+				'sfsi_plus_display_after_blogposts'=>  $sfsi_plus_display_after_blogposts,
+				'sfsi_plus_rectsub'	=> $sfsi_plus_rectsub,
+				'sfsi_plus_rectfb'	=> $sfsi_plus_rectfb,
+				'sfsi_plus_rectgp'	=> $sfsi_plus_rectgp,
+				'sfsi_plus_rectshr'	=> $sfsi_plus_rectshr,
+				'sfsi_plus_recttwtr'=> $sfsi_plus_recttwtr		
     );
     update_option('sfsi_plus_section8_options',serialize($up_option8));
     header('Content-Type: application/json');
@@ -594,21 +609,21 @@ function sfsi_plus_options_updater9()
 		'sfsi_plus_form_border_color'	 =>	$sfsi_plus_form_border_color,
 		'sfsi_plus_form_background'		 =>	$sfsi_plus_form_background,
 		
-		'sfsi_plus_form_heading_text'	 =>	$sfsi_plus_form_heading_text,
+		'sfsi_plus_form_heading_text'	 =>	stripslashes($sfsi_plus_form_heading_text),
 		'sfsi_plus_form_heading_font'	 =>	$sfsi_plus_form_heading_font,
 		'sfsi_plus_form_heading_fontstyle'=>$sfsi_plus_form_heading_fontstyle,
 		'sfsi_plus_form_heading_fontcolor'=>$sfsi_plus_form_heading_fontcolor,
 		'sfsi_plus_form_heading_fontsize' =>$sfsi_plus_form_heading_fontsize,
 		'sfsi_plus_form_heading_fontalign'=>$sfsi_plus_form_heading_fontalign,
 		
-		'sfsi_plus_form_field_text'		=>	$sfsi_plus_form_field_text,
+		'sfsi_plus_form_field_text'		=>	stripslashes($sfsi_plus_form_field_text),
 		'sfsi_plus_form_field_font'		=>	$sfsi_plus_form_field_font,
 		'sfsi_plus_form_field_fontstyle'=>	$sfsi_plus_form_field_fontstyle,
 		'sfsi_plus_form_field_fontcolor'=>	$sfsi_plus_form_field_fontcolor,
 		'sfsi_plus_form_field_fontsize'	=>	$sfsi_plus_form_field_fontsize,
 		'sfsi_plus_form_field_fontalign'=>	$sfsi_plus_form_field_fontalign,
 		
-		'sfsi_plus_form_button_text'	=>	$sfsi_plus_form_button_text,
+		'sfsi_plus_form_button_text'	=>	stripslashes($sfsi_plus_form_button_text),
 		'sfsi_plus_form_button_font'	=>	$sfsi_plus_form_button_font,
 		'sfsi_plus_form_button_fontstyle'=>	$sfsi_plus_form_button_fontstyle,
 		'sfsi_plus_form_button_fontcolor'=>	$sfsi_plus_form_button_fontcolor,

@@ -4140,6 +4140,32 @@ label.sfsiplus_toglpstpgsbttl { float: left; margin-top: 5px !important}
     white-space: pre-line;
     word-wrap: break-word;
 }
+.sfsiplus_right_info ul.sfsi_plus_floaticon_margin_sec li {
+    float: left;
+    width: 300px !important;
+	max-width: 300px !important;
+	min-width: 300px !important;
+}
+.sfsiplus_right_info ul.sfsi_plus_floaticon_margin_sec label {
+    font-size: 17px;
+    padding-right: 20px;
+    width: 65px !important;
+	display: inline-block;
+}
+.sfsiplus_right_info ul.sfsi_plus_floaticon_margin_sec li input {
+    background-color: #dedede;
+    border: medium none;
+    box-shadow: none;
+    padding: 14px 8px;
+    width: 80px;
+}
+.sfsiplus_right_info ul.sfsi_plus_floaticon_margin_sec li ins {
+    font-size: 17px;
+    font-weight: 400;
+    margin-left: 15px;
+    text-decoration: none;
+}
+
 @media (max-width:1160px) {
 .sfsi_plus_subscription_html xmp {
     display: block;

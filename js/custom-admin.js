@@ -680,12 +680,18 @@ function sfsi_plus_update_step8()
     /*SFSI("#sfsi_plus_Show_popupOn_PageIDs :selected").each(function(s, i) {
         _[s] = SFSI(i).val()
     });*/
+	var mst = SFSI("input[name='sfsi_plus_icons_floatMargin_top']").val(), msb = SFSI("input[name='sfsi_plus_icons_floatMargin_bottom']").val(), msl = SFSI("input[name='sfsi_plus_icons_floatMargin_left']").val(), msr = SFSI("input[name='sfsi_plus_icons_floatMargin_right']").val();
+	
 	var f = {
             action: "plus_updateSrcn8",
             sfsi_plus_show_via_widget: i,
             sfsi_plus_float_on_page: e,
             sfsi_plus_float_page_position: t,
-            sfsi_plus_place_item_manually: n,
+			sfsi_plus_icons_floatMargin_top:mst,
+			sfsi_plus_icons_floatMargin_bottom:msb,
+			sfsi_plus_icons_floatMargin_left:msl,
+			sfsi_plus_icons_floatMargin_right:msr,
+			sfsi_plus_place_item_manually: n,
             sfsi_plus_show_item_onposts: o,
             sfsi_plus_display_button_type: a,
             sfsi_plus_post_icons_size: r,

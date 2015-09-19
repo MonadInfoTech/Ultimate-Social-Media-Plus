@@ -1,8 +1,18 @@
 <?php
 function sfsi_plus_update_plugin()
 {
+	if($feed_id = get_option('sfsi_plus_feed_id'))
+	{
+		if(is_numeric($feed_id))
+		{
+			$sfsiId = SFSI_PLUS_updateFeedUrl();
+			update_option('sfsi_plus_feed_id', $sfsiId->feed_id);
+			update_option('sfsi_plus_redirect_url', $sfsiId->redirect_url);
+		}
+	}
+	
 	//Install version
-	update_option("sfsi_plus_pluginVersion", "1.8");
+	update_option("sfsi_plus_pluginVersion", "1.9");
 	
 	/*show notification*/
 	if(!get_option('sfsi_plus_show_notification'))
@@ -54,6 +64,17 @@ function sfsi_plus_update_plugin()
 		"sfsi_plus_instagram_count" => ""
 	);
 	add_option('sfsi_plus_instagram_sf_count',  serialize($sfsi_plus_instagram_sf_count));
+	
+	/*Float Icon setting*/
+	$option8 = unserialize(get_option('sfsi_plus_section8_options',false));
+	if(isset($option8) && !isset($option8['sfsi_plus_icons_floatMargin_top']))
+	{
+		$option8['sfsi_plus_icons_floatMargin_top'] = '';
+		$option8['sfsi_plus_icons_floatMargin_bottom'] = '';
+		$option8['sfsi_plus_icons_floatMargin_left'] = '';
+		$option8['sfsi_plus_icons_floatMargin_right'] = '';
+		update_option('sfsi_plus_section8_options', serialize($option8));
+	}
 }
 function sfsi_plus_activate_plugin()
 {
@@ -260,6 +281,10 @@ function sfsi_plus_activate_plugin()
 		'sfsi_plus_show_via_widget'=>'no',
         'sfsi_plus_float_on_page'=> $option5['sfsi_plus_icons_float'],
         'sfsi_plus_float_page_position'=>$option5['sfsi_plus_icons_floatPosition'],
+		'sfsi_plus_icons_floatMargin_top'=>'',
+		'sfsi_plus_icons_floatMargin_bottom'=>'',
+		'sfsi_plus_icons_floatMargin_left'=>'',
+		'sfsi_plus_icons_floatMargin_right'=>'',
         'sfsi_plus_post_icons_size'=>$option5['sfsi_plus_icons_size'],
         'sfsi_plus_post_icons_spacing'=>$option5['sfsi_plus_icons_spacing'],
 		'sfsi_plus_show_Onposts'=>$option6['sfsi_plus_show_Onposts'],
@@ -388,9 +413,34 @@ function SFSI_PLUS_getFeedUrl()
         $resp = json_decode($resp);
 		curl_close($curl);
 		
-		 $feed_url=stripslashes_deep($resp->redirect_url);
+		 $feed_url = stripslashes_deep($resp->redirect_url);
          return $resp;exit;
          
+}
+/* fetch rss url from specificfeeds on */ 
+function SFSI_PLUS_updateFeedUrl()
+{
+    $curl = curl_init();  
+     
+    curl_setopt_array($curl, array(
+        CURLOPT_RETURNTRANSFER => 1,
+        CURLOPT_URL => 'http://www.specificfeeds.com/wordpress/updateFeedPlugin',
+        CURLOPT_USERAGENT => 'sf rss request',
+        CURLOPT_POST => 1,
+        CURLOPT_POSTFIELDS => array(
+			'feed_id' => get_option('sfsi_plus_feed_id'),
+            'web_url' => get_bloginfo('url'),
+            'feed_url' => get_bloginfo('rss2_url'),
+            'email'=>get_bloginfo('admin_email')
+        )
+    ));
+ 	// Send the request & save response to $resp
+	$resp = curl_exec($curl);
+	$resp = json_decode($resp);
+	curl_close($curl);
+	
+	$feed_url = stripslashes_deep($resp->redirect_url);
+	return $resp;exit;
 }
 /* add sf tags */
 function sfsi_plus_setUpfeeds($feed_id)
