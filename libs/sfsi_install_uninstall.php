@@ -67,7 +67,7 @@ function sfsi_plus_update_plugin()
 	
 	/*Float Icon setting*/
 	$option8 = unserialize(get_option('sfsi_plus_section8_options',false));
-	if(isset($option8) && !isset($option8['sfsi_plus_icons_floatMargin_top']))
+	if(isset($option8) && !empty($option8) && !isset($option8['sfsi_plus_icons_floatMargin_top']))
 	{
 		$option8['sfsi_plus_icons_floatMargin_top'] = '';
 		$option8['sfsi_plus_icons_floatMargin_bottom'] = '';
