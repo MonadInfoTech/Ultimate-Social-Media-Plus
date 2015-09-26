@@ -12,7 +12,7 @@ function sfsi_plus_update_plugin()
 	}
 	
 	//Install version
-	update_option("sfsi_plus_pluginVersion", "1.9");
+	update_option("sfsi_plus_pluginVersion", "1.91");
 	
 	/*show notification*/
 	if(!get_option('sfsi_plus_show_notification'))
