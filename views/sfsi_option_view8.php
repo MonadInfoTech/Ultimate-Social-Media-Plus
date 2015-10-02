@@ -205,10 +205,16 @@
                                         </a>
                                     </li>
 									<li>
-										<div class="radio_section tb_4_ck"><input name="sfsi_plus_rectshr" <?php echo ($option8['sfsi_plus_rectshr']=='yes') ?  'checked="true"' : '' ;?>  id="sfsi_plus_rectshr" type="checkbox" value="yes" class="styled"  /></div>
+										<div class="radio_section tb_4_ck">
+                                        	<input name="sfsi_plus_rectshr" <?php echo ($option8['sfsi_plus_rectshr']=='yes') ?  'checked="true"' : '' ;?>  id="sfsi_plus_rectshr" type="checkbox" value="yes" class="styled"  />
+                                        </div>
                                         <a href="#" title="Share" class="cstmdsplshr">
-                                            <img src="<?php echo SFSI_PLUS_PLUGURL; ?>images/share1.jpg" alt="Share" /><span style="display: none;">18k</span>
+                                            <img src="<?php echo SFSI_PLUS_PLUGURL; ?>images/share1.jpg" alt="Share" />
+                                            <span style="display: none;">18k</span>
                                         </a>
+                                        <p style="width:auto;float:left;padding: 0px!important;border:0px !important;">
+                                        	(may impact loading speed)
+                                        </p>
                                     </li>
 								</ul>	
                             </div>

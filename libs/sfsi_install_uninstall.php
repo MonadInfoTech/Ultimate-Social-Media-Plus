@@ -85,7 +85,7 @@ function sfsi_plus_activate_plugin()
           'sfsi_plus_facebook_display'=>'yes',
           'sfsi_plus_twitter_display'=>'yes',
           'sfsi_plus_google_display'=>'yes',
-          'sfsi_plus_share_display'=>'yes',
+          'sfsi_plus_share_display'=>'no',
           'sfsi_plus_pinterest_display'=>'no',
 	  	  'sfsi_plus_instagram_display'=>'no',
           'sfsi_plus_linkedin_display'=>'no',
@@ -304,7 +304,7 @@ function sfsi_plus_activate_plugin()
 		'sfsi_plus_rectsub'=>'yes',
 		'sfsi_plus_rectfb'=>'yes',
 		'sfsi_plus_rectgp'=>'yes',
-		'sfsi_plus_rectshr'=>'yes',
+		'sfsi_plus_rectshr'=>'no',
 		'sfsi_plus_recttwtr'=>'yes');
 	add_option('sfsi_plus_section8_options',  serialize($options8));		
 	
