@@ -2,13 +2,14 @@
 /*  instalation of javascript and css  */
 function sfsiplus_plugin_back_enqueue_script()
 {
-		/* include CSS for backend  */
-  		wp_enqueue_style('thickbox');
-		wp_enqueue_style("SFSIPLUSmainCss", SFSI_PLUS_PLUGURL . 'css/sfsi-style.css' );
 		if(isset($_GET['page']))
 		{
 			if($_GET['page'] == 'sfsi-plus-options')
 			{
+				/* include CSS for backend  */
+				wp_enqueue_style('thickbox');
+				wp_enqueue_style("SFSIPLUSmainCss", SFSI_PLUS_PLUGURL . 'css/sfsi-style.css' );
+				
 				wp_enqueue_style("SFSIPLUSJqueryCSS", SFSI_PLUS_PLUGURL . 'css/jquery-ui-1.10.4/jquery-ui-min.css' );
 				wp_enqueue_style("SFSIPLUSColorCss", SFSI_PLUS_PLUGURL . 'css/colorpicker/css/colorpicker-min.css' );
 				wp_enqueue_style("SFSIPLUSLayoutCss", SFSI_PLUS_PLUGURL . 'css/colorpicker/css/layout-min.css' );

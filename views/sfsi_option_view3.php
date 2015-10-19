@@ -5,17 +5,20 @@
 ?>
 <!-- Section 3 "What design & animation do you want to give your icons?" main div Start -->
 <div class="tab3">
-		<!--Content of 4-->
-        <div class="row mouse_txt sfsiplusmousetxt tab3">
+	<!--Content of 4-->
+    <div class="row mouse_txt sfsiplusmousetxt tab3">
         <p>A good & well-fitting design is not only nice to look at, but it increases chances that people will subscribe and/or share your site with friends:</p>
     
         <ul class="tab_3_list">
             <li>It comes across as <span>more professional/</span> gives your site <span>more “credit”</span></li>
-            <li>A smart automatic animation can <span>make your visitors aware of your icons</span> in an unintrusive manner</li> 
-            <!--<li>Animated icons can trigger <span>a positive emotion for </span> the viewer, getting them into a state in which they are more likely 		to subscribe</li> -->
-        </ul>
+            <li>A smart automatic animation can <span>make your visitors aware of your icons</span> in an unintrusive manner</li>        </ul>
+        
+        <p style="padding:0px;">
+            The icons have been compressed by <a href="https://shortpixel.com" target="_blank">Shortpixel.com</a> for faster loading of your site. Thank you Shortpixel!
+        </p>
+        
         <div class="row">
-    <h3>Theme options</h3>
+    	<h3>Theme options</h3>
         <!--icon themes section start -->
         <ul class="sfsiplus_tab_3_icns">
                 <li><input name="sfsi_plus_actvite_theme" <?php echo ( $option3['sfsi_plus_actvite_theme']=='default') ?  'checked="true"' : '' ;?> type="radio" value="default" class="styled"  /><label>Default</label><div class="sfsiplus_icns_tab_3"><span class="sfsiplus_row_1_1 sfsiplus_rss_section"></span><span class="sfsiplus_row_1_2 sfsiplus_email_section"></span><span class="sfsiplus_row_1_3 sfsiplus_facebook_section"></span><span class="sfsiplus_row_1_4 sfsiplus_google_section"></span><span class="sfsiplus_row_1_5 sfsiplus_twitter_section"></span><span class="sfsiplus_row_1_6 sfsiplus_share_section"></span><span class="sfsiplus_row_1_7 sfsiplus_youtube_section"></span><span class="sfsiplus_row_1_8 sfsiplus_pinterest_section"></span><span class="sfsiplus_row_1_9 sfsiplus_linkedin_section"></span> <span class="sfsiplus_row_1_10 sfsiplus_instagram_section"></span><!--<span class="sfsiplus_row_1_11 sf_section"></span>--></div></li>
