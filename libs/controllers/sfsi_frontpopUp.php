@@ -161,16 +161,20 @@ function sfsi_plus_FrontPopupDiv()
 	$h_style="font-family:".$div_FontFamily.";font-style:".$div_Fonttyle.";color:".$div_FontColor.";font-size:".$div_FontSize."px";
     /* get all icons including custom icons */
     $custom_icons_order = unserialize($sfsi_section5['sfsi_plus_CustomIcons_order']);
-    $icons_order = array($sfsi_section5['sfsi_plus_rssIcon_order']		=>'rss',
-                     $sfsi_section5['sfsi_plus_emailIcon_order']		=>'email',
+    $icons_order = array($sfsi_section5['sfsi_plus_rssIcon_order']	=>'rss',
+                     $sfsi_section5['sfsi_plus_emailIcon_order']	=>'email',
                      $sfsi_section5['sfsi_plus_facebookIcon_order']	=>'facebook',
                      $sfsi_section5['sfsi_plus_googleIcon_order']	=>'google',
                      $sfsi_section5['sfsi_plus_twitterIcon_order']	=>'twitter',
-                     $sfsi_section5['sfsi_plus_shareIcon_order']		=>'share',
+                     $sfsi_section5['sfsi_plus_shareIcon_order']	=>'share',
                      $sfsi_section5['sfsi_plus_youtubeIcon_order']	=>'youtube',
-                     $sfsi_section5['sfsi_plus_pinterestIcon_order']	=>'pinterest',
+                     $sfsi_section5['sfsi_plus_pinterestIcon_order']=>'pinterest',
                      $sfsi_section5['sfsi_plus_linkedinIcon_order']	=>'linkedin',
-		     		 $sfsi_section5['sfsi_plus_instagramIcon_order']	=>'instagram',) ;
+		     		 $sfsi_section5['sfsi_plus_instagramIcon_order']=>'instagram',
+					 (isset($sfsi_section5['sfsi_plus_houzzIcon_order']))
+						? $sfsi_section5['sfsi_plus_houzzIcon_order']
+						: 11 => 'houzz'
+					) ;
   $icons = array();
   $elements = array();
   $icons = unserialize($sfsi_plus_section1_options['sfsi_custom_files']);
@@ -246,6 +250,9 @@ function sfsi_plus_FrontPopupDiv()
     break;
     case 'instagram' :
 		if($sfsi_plus_section1_options['sfsi_plus_instagram_display']=='yes')    $icons.= "<li>".sfsi_plus_prepairIcons('instagram',1)."</li>"; 
+    break;
+	case 'houzz' :
+		if($sfsi_plus_section1_options['sfsi_plus_houzz_display']=='yes')    $icons.= "<li>".sfsi_plus_prepairIcons('houzz',1)."</li>"; 
     break;
     case 'custom' :
 		$icons.= "<li>". sfsi_plus_prepairIcons($icon_arry['ele'],1)."</li>"; 

@@ -204,6 +204,15 @@ function sfsi_plus_Iamdone()
 	 {
 		$return .= '<span class="sfsiplus_row_17_10 sfsiplus_instagram_section" style="background-position:-526px 0;"></span>';
 	 }
+	 
+	 if(get_option("plus_houzz_skin"))
+	 {
+		$icon = get_option("plus_houzz_skin");
+		$return .= '<span class="sfsiplus_row_17_11 sfsiplus_houzz_section" style="background: url('.$icon.') no-repeat;"></span>';
+	 }else
+	 {
+		$return .= '<span class="sfsiplus_row_17_11 sfsiplus_houzz_section" style="background-position:-711px 0;"></span>';
+	 }
 	 die($return);
 }
 

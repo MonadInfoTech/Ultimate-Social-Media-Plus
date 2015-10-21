@@ -122,10 +122,20 @@
             <a href="javascript:;" class="pop-up" data-id="athis-s1" >See Example</a>
             </div>
        </li>
-        <!-- END SHARE ICON -->
-        
-        <!-- Custom icon section start here -->
-        <?php
+       <!-- END SHARE ICON -->
+       
+       <!-- Houzz ICON -->
+       <li>
+            <div class="radio_section tb_4_ck"><input name="sfsi_plus_houzz_display" <?php echo ($option1['sfsi_plus_houzz_display']=='yes') ?  'checked="true"' : '' ;?> id="sfsi_plus_houzz_display"  type="checkbox" value="yes" class="styled"  /></div>
+            <span class="sfsicls_houzz">Houzz</span> 
+            <div class="sfsiplus_right_info">
+            <p><span>It depends:</span>Show this icon if you have a Houzz account. <a href="http://www.houzz.com/" target="_blank">Houzz</a> is the No.1 site & community in the world of archticture and interior design.</p>
+            </div>
+       </li>
+       <!-- END Houzz ICON -->
+         
+       <!-- Custom icon section start here -->
+       <?php
           $icons= ($option1['sfsi_custom_files']) ? unserialize($option1['sfsi_custom_files']) : array() ;
           $total_icons=count($icons);
           end($icons);
@@ -138,12 +148,12 @@
           if($total_icons>0){
             $new_element=$endkey+1;
           }     
-        ?>
-        <!-- Display all custom icons  -->
-        <?php $count=1; for($i=$first_key;$i<=$endkey;$i++) : ?> 
-        <?php if(!empty( $icons[$i])) : ?>
-        <li id="plus_c<?php echo $i; ?>" class="plus_custom">
-            <div class="radio_section tb_4_ck">
+       ?>
+       <!-- Display all custom icons  -->
+       <?php $count=1; for($i=$first_key;$i<=$endkey;$i++) : ?> 
+       <?php if(!empty( $icons[$i])) : ?>
+       <li id="plus_c<?php echo $i; ?>" class="plus_custom">
+			<div class="radio_section tb_4_ck">
                 <input name="plussfsiICON_<?php echo $i; ?>"  checked="true" type="checkbox" value="yes" class="styled" element-type="sfsiplus-cusotm-icon"  />
             </div>
             <span class="plus_custom-img">

@@ -12,7 +12,7 @@ function sfsi_plus_update_plugin()
 	}
 	
 	//Install version
-	update_option("sfsi_plus_pluginVersion", "1.91");
+	update_option("sfsi_plus_pluginVersion", "2.0");
 	
 	/*show notification*/
 	if(!get_option('sfsi_plus_show_notification'))
@@ -89,7 +89,8 @@ function sfsi_plus_activate_plugin()
           'sfsi_plus_pinterest_display'=>'no',
 	  	  'sfsi_plus_instagram_display'=>'no',
           'sfsi_plus_linkedin_display'=>'no',
-          'sfsi_plus_youtube_display'=>'no',  
+          'sfsi_plus_youtube_display'=>'no',
+		  'sfsi_plus_houzz_display'=>'no',
           'sfsi_custom_display'=>'',
           'sfsi_custom_files'=>'');
 	add_option('sfsi_plus_section1_options',  serialize($options1));
@@ -134,6 +135,7 @@ function sfsi_plus_activate_plugin()
         'sfsi_plus_pinterest_pingBlog'=>'',
 	 	'sfsi_plus_instagram_page'=>'no',
         'sfsi_plus_instagram_pageUrl'=>'',
+		'sfsi_plus_houzz_pageUrl'=>'',
 		'sfsi_plus_linkedin_page'=>'no',
         'sfsi_plus_linkedin_pageURL'=>'',
         'sfsi_plus_linkedin_follow'=>'no',
@@ -195,7 +197,10 @@ function sfsi_plus_activate_plugin()
 		'sfsi_plus_instagram_User'=>'',
         'sfsi_plus_shares_countsDisplay'=>'no',
         'sfsi_plus_shares_countsFrom'=>'manual',
-        'sfsi_plus_shares_manualCounts'=>'20');
+        'sfsi_plus_shares_manualCounts'=>'20',
+		'sfsi_plus_houzz_countsDisplay'=>'no',
+        'sfsi_plus_houzz_countsFrom'=>'manual',
+        'sfsi_plus_houzz_manualCounts'=>'20');
 	add_option('sfsi_plus_section4_options',  serialize($options4));
   
     $options5=array('sfsi_plus_icons_size'=>'40',
@@ -218,6 +223,7 @@ function sfsi_plus_activate_plugin()
         'sfsi_plus_pinterestIcon_order'=>'8',
         'sfsi_plus_linkedinIcon_order'=>'9',
 		'sfsi_plus_instagramIcon_order'=>'10',
+		'sfsi_plus_houzzIcon_order'=>'11',
         'sfsi_plus_CustomIcons_order'=>'',
         'sfsi_plus_rss_MouseOverText'=>'RSS',
         'sfsi_plus_email_MouseOverText'=>'Follow by Email',
@@ -227,6 +233,7 @@ function sfsi_plus_activate_plugin()
         'sfsi_plus_linkedIn_MouseOverText'=>'LinkedIn',
         'sfsi_plus_pinterest_MouseOverText'=>'Pinterest',
 		'sfsi_plus_instagram_MouseOverText'=>'Instagram',
+		'sfsi_plus_houzz_MouseOverText'=>'Houzz',
         'sfsi_plus_youtube_MouseOverText'=>'YouTube',
         'sfsi_plus_share_MouseOverText'=>'Share',
         'sfsi_plus_custom_MouseOverTexts'=>'');
@@ -383,9 +390,9 @@ function sfsi_plus_curl_enable_notice(){
 	
 /* add admin menus */
 function sfsi_plus_admin_menu() {
-add_menu_page('Ultimate Social Media PLUS', 'Ultimate Social Media PLUS', 'administrator','sfsi-plus-options','sfsi_plus_options_page',plugins_url( 'images/logo.png' , dirname(__FILE__) ));
-//add_submenu_page('sfsi-plus-options', 'Subscription Options', 'Settings','administrator', 'sfsi-plus-options', 'sfsi_plus_options_page');
-//add_submenu_page('sfsi-plus-options', 'Specific About Us', 'About','administrator', 'sfsi-about', 'sfsi_plus_about_page');
+	add_menu_page('Ultimate Social Media PLUS', 'Ultimate Social Media PLUS', 'administrator','sfsi-plus-options','sfsi_plus_options_page',plugins_url( 'images/logo.png' , dirname(__FILE__) ));
+	//add_submenu_page('sfsi-plus-options', 'Subscription Options', 'Settings','administrator', 'sfsi-plus-options', 'sfsi_plus_options_page');
+	//add_submenu_page('sfsi-plus-options', 'Specific About Us', 'About','administrator', 'sfsi-about', 'sfsi_plus_about_page');
 }
 function sfsi_plus_options_page(){ include SFSI_PLUS_DOCROOT . '/views/sfsi_options_view.php';	} /* end function  */
 function sfsi_plus_about_page(){ include SFSI_PLUS_DOCROOT . '/views/sfsi_aboutus.php';	} /* end function  */
@@ -408,13 +415,13 @@ function SFSI_PLUS_getFeedUrl()
             'email'=>get_bloginfo('admin_email')
         )
     ));
-     // Send the request & save response to $resp
-        $resp = curl_exec($curl);
-        $resp = json_decode($resp);
-		curl_close($curl);
+    // Send the request & save response to $resp
+	$resp = curl_exec($curl);
+	$resp = json_decode($resp);
+	curl_close($curl);
 		
-		 $feed_url = stripslashes_deep($resp->redirect_url);
-         return $resp;exit;
+	$feed_url = stripslashes_deep($resp->redirect_url);
+	return $resp;exit;
          
 }
 /* fetch rss url from specificfeeds on */ 
@@ -452,8 +459,8 @@ function sfsi_plus_setUpfeeds($feed_id)
         CURLOPT_USERAGENT => 'sf rss request',
         CURLOPT_POST => 0      
 	));
-        $resp = curl_exec($curl);
-        curl_close($curl);	
+	$resp = curl_exec($curl);
+	curl_close($curl);	
 	
 }
 /* admin notice if wp_head is missing in active theme */

@@ -1,13 +1,15 @@
 <?php
-  /* unserialize all saved option for  section 4 options */
+  	/* unserialize all saved option for  section 4 options */
     $option4=  unserialize(get_option('sfsi_plus_section4_options',false));
 	if(!isset($option4['sfsi_plus_facebook_mypageCounts']))
 	{
 		$option4['sfsi_plus_facebook_mypageCounts'] = '';
 	}
-    $option2=  unserialize(get_option('sfsi_plus_section2_options',false));
-    $counts=sfsi_plus_getCounts(); /* fetch counts for admin sections */
-    /* check for email icon display */
+    $option2 =  unserialize(get_option('sfsi_plus_section2_options',false));
+    $counts = sfsi_plus_getCounts();
+	/* fetch counts for admin sections */
+    
+	/* check for email icon display */
     $email_image="email.png";
     if($option2['sfsi_plus_rss_icons']=="sfsi")
     {
@@ -25,8 +27,10 @@
 ?>
 <!-- Section 4 "Do you want to display "counts" next to your icons?" main div Start -->
 <div class="tab4">
-  <p>It’s a psychological fact that people like to follow other people (as explained well in Robert Cialdini’s book “<a href="http://www.amazon.com/Influence-Psychology-Persuasion-Revised-Edition/dp/006124189X" target="_blank" class="lit_txt">Influence</a>”), so when they see that your site has already a good number of Facebook likes, it’s more likely that they will subscribe/like/share your site than if it had 0. </p>
-  <p>Therefore, you can select to display the count next to your main icons, for your main icons, not those next to the posts which will look like this:</p>
+	<p>It’s a psychological fact that people like to follow other people (as explained well in Robert Cialdini’s book “<a href="http://www.amazon.com/Influence-Psychology-Persuasion-Revised-Edition/dp/006124189X" target="_blank" class="lit_txt">Influence</a>”), so when they see that your site has already a good number of Facebook likes, it’s more likely that they will subscribe/like/share your site than if it had 0. </p>
+	<p>
+  		Therefore, you can select to display the count next to your main icons, for your main icons, not those next to the posts which will look like this:
+   	</p>
 	<!-- sample icons --> 
 	<ul class="like_icon">
         <li class="sfsiplus_rss_section"><a href="#" title="RSS"><img src="<?php echo SFSI_PLUS_PLUGURL ?>images/rss.png" alt="RSS" /></a><span>12k</span></li>
@@ -39,21 +43,28 @@
         <li class="sfsiplus_pinterest_section"><a href="#" title="Pinterest"><img src="<?php echo SFSI_PLUS_PLUGURL ?>images/pinterest.png" alt="Pinterest" /></a><span>12k</span></li>
         <li class="sfsiplus_linkedin_section"><a href="#" title="Linked In"><img src="<?php echo SFSI_PLUS_PLUGURL ?>images/linked_in.png" alt="Linked In" /></a><span>12k</span></li>
         <li class="sfsiplus_instagram_section"><a href="#" title="Instagram"><img src="<?php echo SFSI_PLUS_PLUGURL ?>images/instagram.png" alt="instagram" /></a><span>12k</span></li>
+        <li class="sfsiplus_houzz_section"><a href="#" title="Houzz"><img src="<?php echo SFSI_PLUS_PLUGURL ?>images/houzz.png" alt="instagram" /></a><span>12k</span></li>
     </ul>  <!-- END sample icons -->
     
-  <p>Of course, if you start at 0, you shoot yourself in the foot with that. So we suggest that you only turn this feature on once you have a good number of followers/likes/shares (min. of 20 – no worries if it’s not too many, it should just not be 0).</p>
-  <h4>Enough waffling. So do you want to display counts?</h4>
-  <!-- show/hide counts for icons section  START --> 
-  <ul class="enough_waffling">
-  	<li><input name="sfsi_plus_display_counts" <?php echo ($option4['sfsi_plus_display_counts']=='yes') ?  'checked="true"' : '' ;?> type="radio" value="yes" class="styled"  /><label>Yes</label></li>
-    <li><input name="sfsi_plus_display_counts" <?php echo ($option4['sfsi_plus_display_counts']=='no') ?  'checked="true"' : '' ;?> type="radio" value="no" class="styled"  /><label>No</label></li>
-  </ul> <!-- END  show/hide counts for icons section --> 
+  	<p>
+    	Of course, if you start at 0, you shoot yourself in the foot with that. So we suggest that you only turn this feature on once you have a good number of followers/likes/shares (min. of 20 – no worries if it’s not too many, it should just not be 0).
+    </p>
+  	
+    <h4>Enough waffling. So do you want to display counts?</h4>
+  	
+    <!-- show/hide counts for icons section  START --> 
+  	<ul class="enough_waffling">
+  		<li><input name="sfsi_plus_display_counts" <?php echo ($option4['sfsi_plus_display_counts']=='yes') ?  'checked="true"' : '' ;?> type="radio" value="yes" class="styled"  /><label>Yes</label></li>
+    	<li><input name="sfsi_plus_display_counts" <?php echo ($option4['sfsi_plus_display_counts']=='no') ?  'checked="true"' : '' ;?> type="radio" value="no" class="styled"  /><label>No</label></li>
+  	</ul>
+    <!-- END  show/hide counts for icons section --> 
   
-  <!-- show/hide counts for all icons section  START --> 
-  <div class="sfsiplus_count_sections" style="display:none">
+<!-- show/hide counts for all icons section  START --> 
+<div class="sfsiplus_count_sections" style="display:none">
   
-  <h4>Please specify which counts should be shown:</h4>
-   <!-- RSS ICON COUNT SECTION-->
+	<h4>Please specify which counts should be shown:</h4>
+  
+  <!-- RSS ICON COUNT SECTION-->
   <div class="sfsiplus_specify_counts sfsiplus_rss_section">
 	<div class="radio_section"><input name="sfsi_plus_rss_countsDisplay" <?php echo ($option4['sfsi_plus_rss_countsDisplay']=='yes') ?  'checked="true"' : '' ;?> type="checkbox" value="yes" class="styled"  /></div>
 	<div class="social_icon_like">
@@ -66,7 +77,8 @@
 		<li>We cannot track this. So enter the figure here: <input name="sfsi_plus_rss_manualCounts" type="text" class="input" value="<?php echo ($option4['sfsi_plus_rss_manualCounts']!='') ?  $option4['sfsi_plus_rss_manualCounts'] : '' ;?>" /></li>
 	    </ul>
 	</div>    
-  </div>   <!-- END RSS ICON COUNT SECTION-->
+  </div>
+  <!-- END RSS ICON COUNT SECTION-->
   
   <!-- EMAIL ICON COUNT SECTION-->
   <div class="sfsiplus_specify_counts sfsiplus_email_section">
@@ -106,7 +118,8 @@
             <li><input name="sfsi_plus_facebook_countsFrom" <?php echo ($option4['sfsi_plus_facebook_countsFrom']=='manual') ?  'checked="true"' : '' ;?>  type="radio" value="manual" class="styled" />Enter the figure manually<input name="sfsi_plus_facebook_manualCounts" type="text" class="input" value="<?php echo ($option4['sfsi_plus_facebook_manualCounts']!='') ?  $option4['sfsi_plus_facebook_manualCounts'] : '' ;?>"  style="<?php echo ($option4['sfsi_plus_facebook_countsFrom']=='likes' || $option4['sfsi_plus_facebook_countsFrom']=='followers' || $option4['sfsi_plus_facebook_countsFrom']=='mypage') ?  'display:none;' : '' ;?>" /></li>
         </ul>
     </div>    
-  </div>   <!-- END FACEBOOK ICON COUNT SECTION-->
+  </div>
+  <!-- END FACEBOOK ICON COUNT SECTION-->
   
   <!-- TWITTER ICON COUNT SECTION-->
   <div class="sfsiplus_specify_counts sfsiplus_twitter_section">
@@ -142,7 +155,8 @@
         </ul>
         
     </div>    
-  </div>  <!--END TWITTER ICON COUNT SECTION-->
+  </div>  
+  <!--END TWITTER ICON COUNT SECTION-->
   
   <!-- GOOGLE ICON COUNT SECTION-->
   <div class="sfsiplus_specify_counts sfsiplus_google_section">
@@ -174,7 +188,8 @@
             <li><input name="sfsi_plus_google_countsFrom" <?php echo ($option4['sfsi_plus_google_countsFrom']=='manual') ?  'checked="true"' : '' ;?>  type="radio" value="manual" class="styled" />Enter the figure manually<input name="sfsi_plus_google_manualCounts" type="text" class="input" value="<?php echo ($option4['sfsi_plus_google_manualCounts']!='') ?  $option4['sfsi_plus_google_manualCounts'] : '' ;?>" style="<?php echo ($option4['sfsi_plus_google_countsFrom']=='follower' || $option4['sfsi_plus_google_countsFrom']=='likes') ?  'display:none;' : '' ;?>"  /></li>
         </ul>
     </div>    
-  </div>  <!-- END GOOGLE ICON COUNT SECTION-->
+  </div>
+  <!-- END GOOGLE ICON COUNT SECTION-->
   
   <!-- LINKEDIN ICON COUNT SECTION-->
   <div class="sfsiplus_specify_counts sfsiplus_linkedin_section">
@@ -209,9 +224,10 @@
            <li><input name="sfsi_plus_linkedIn_countsFrom" <?php echo ($option4['sfsi_plus_linkedIn_countsFrom']=='manual' || $option4['sfsi_plus_linkedIn_countsFrom']=='follower') ?  'checked="true"' : '' ;?>  type="radio" value="manual" class="styled" />Enter the figure manually<input name="sfsi_plus_linkedIn_manualCounts" type="text" class="input" value="<?php echo ($option4['sfsi_plus_linkedIn_manualCounts']!='') ?  $option4['sfsi_plus_linkedIn_manualCounts'] : '' ;?>" style="<?php echo ($option4['sfsi_plus_linkedIn_countsFrom']=='follower') ?  'display:none;' : '' ;?>" /></li>
         </ul>
     </div>    
-  </div> <!-- END LINKEDIN ICON COUNT SECTION-->
+  </div>
+  <!-- END LINKEDIN ICON COUNT SECTION-->
   
-   <!-- YOUTUBE ICON COUNT SECTION-->
+  <!-- YOUTUBE ICON COUNT SECTION-->
   <div class="sfsiplus_specify_counts sfsiplus_youtube_section">
   	<div class="radio_section"><input name="sfsi_plus_youtube_countsDisplay" <?php echo ($option4['sfsi_plus_youtube_countsDisplay']=='yes') ?  'checked="true"' : '' ;?>  type="checkbox" value="yes" class="styled"  /></div>
     <div class="social_icon_like">
@@ -226,7 +242,8 @@
                 <li><input name="sfsi_plus_youtube_countsFrom" type="radio" value="manual" <?php echo ($option4['sfsi_plus_youtube_countsFrom']=='manual') ?  'checked="true"' : '' ;?>  class="styled" />Enter the figure manually<input name="sfsi_plus_youtube_manualCounts" type="text" class="input" value="<?php echo ($option4['sfsi_plus_youtube_manualCounts']!='') ?  $option4['sfsi_plus_youtube_manualCounts'] : '' ;?>" style="<?php echo ($option4['sfsi_plus_youtube_countsFrom']=='subscriber') ?  'display:none;' : '' ;?>" /></li>
         </ul>
     </div>    
-  </div><!-- END YOUTUBE ICON COUNT SECTION-->
+  </div>
+  <!-- END YOUTUBE ICON COUNT SECTION-->
   
   <!-- PINIT ICON COUNT SECTION-->
   <div class="sfsiplus_specify_counts sfsiplus_pinterest_section">
@@ -242,9 +259,10 @@
                 <li><input name="sfsi_plus_pinterest_countsFrom" <?php echo ($option4['sfsi_plus_pinterest_countsFrom']=='manual') ?  'checked="true"' : '' ;?>  type="radio" value="manual" class="styled" /><label class="high_prb">Enter the figure manually</label><input name="sfsi_plus_pinterest_manualCounts" type="text" class="input" value="<?php echo ($option4['sfsi_plus_pinterest_manualCounts']!='') ?  $option4['sfsi_plus_pinterest_manualCounts'] : '' ;?>" style="<?php echo ($option4['sfsi_plus_pinterest_countsFrom']=='pins') ?  'display:none;' : '' ;?>" /></li>
         </ul>
     </div>    
-  </div> <!-- END PINIT ICON COUNT SECTION-->
+  </div>
+  <!-- END PINIT ICON COUNT SECTION-->
   
-   <!-- INSTAGRAM ICON COUNT SECTION-->
+  <!-- INSTAGRAM ICON COUNT SECTION-->
   <div class="sfsiplus_specify_counts sfsiplus_instagram_section">
   	<div class="radio_section"><input name="sfsi_plus_instagram_countsDisplay" <?php echo ($option4['sfsi_plus_instagram_countsDisplay']=='yes') ?  'checked="true"' : '' ;?>  type="checkbox" value="yes" class="styled"  /></div>
     <div class="social_icon_like">
@@ -259,9 +277,10 @@
 		<li><input name="sfsi_plus_instagram_countsFrom" <?php echo ($option4['sfsi_plus_instagram_countsFrom']=='manual') ?  'checked="true"' : '' ;?>  type="radio" value="manual" class="styled" /><label class="high_prb">Enter the figure manually</label><input name="sfsi_plus_instagram_manualCounts" type="text" class="input" value="<?php echo ($option4['sfsi_plus_instagram_manualCounts']!='') ?  $option4['sfsi_plus_instagram_manualCounts'] : '' ;?>" style="<?php echo ($option4['sfsi_plus_instagram_countsFrom']=='followers') ?  'display:none;' : '' ;?>" /></li>
         </ul>
     </div>    
-  </div>  <!-- END INSTAGRAM ICON COUNT SECTION-->
+  </div>
+  <!-- END INSTAGRAM ICON COUNT SECTION-->
   
-    <!-- ADDTHIS ICON COUNT SECTION-->
+  <!-- ADDTHIS ICON COUNT SECTION-->
   <div class="sfsiplus_specify_counts sfsiplus_share_section">
   	<div class="radio_section"><input name="sfsi_plus_shares_countsDisplay" <?php echo ($option4['sfsi_plus_shares_countsDisplay']=='yes') ?  'checked="true"' : '' ;?>  type="checkbox" value="yes" class="styled"  /></div>
     <div class="social_icon_like">
@@ -275,20 +294,52 @@
             <li><input name="sfsi_plus_shares_countsFrom" <?php echo ($option4['sfsi_plus_shares_countsFrom']=='manual') ?  'checked="true"' : '' ;?>  type="radio" value="manual" class="styled" /><label class="high_prb">Enter the figure manually</label><input name="sfsi_plus_shares_manualCounts" type="text" class="input" value="<?php echo ($option4['sfsi_plus_pinterest_manualCounts']!='') ?  $option4['sfsi_plus_pinterest_manualCounts'] : '' ;?>" style="<?php echo ($option4['sfsi_plus_shares_countsFrom']=='shares') ?  'display:none;' : '' ;?>" /></li>
         </ul>
     </div>    
-  </div>  <!-- END ADDTHIS ICON COUNT SECTION-->
+  </div>
+  <!-- END ADDTHIS ICON COUNT SECTION-->
   
-  </div>  <!-- END show/hide counts for all icons section -->
+  <!-- HOUZZ ICON COUNT SECTION-->
+  <div class="sfsiplus_specify_counts sfsiplus_houzz_section">
+  	<div class="radio_section">
+    	<input name="sfsi_plus_houzz_countsDisplay" <?php echo ($option4['sfsi_plus_houzz_countsDisplay']=='yes') ?  'checked="true"' : '' ;?>  type="checkbox" value="yes" class="styled"  />
+    </div>
+    <div class="social_icon_like">
+    	<ul class="like_icon">
+    		<li>
+            	<a title="Houzz">
+                    <img src="<?php echo SFSI_PLUS_PLUGURL ?>images/houzz.png" alt="Houzz" />
+                    <span><?php echo $counts['houzz_count']; ?></span>
+                </a>
+            </li>
+    	</ul>
+    </div>
+    <div class="listing">
+    	<ul>
+        	<li>
+            	<input name="sfsi_plus_houzz_countsFrom" checked="true" type="radio" value="manual" class="styled" />
+                <label class="high_prb">Enter the figure manually</label>
+                <input name="sfsi_plus_houzz_manualCounts" type="text" class="input" value="<?php echo ($option4['sfsi_plus_houzz_manualCounts']!='') ?  $option4['sfsi_plus_houzz_manualCounts'] : '20' ;?>" />
+            </li>
+        </ul>
+    </div>    
+  </div>
+  <!-- END HOUZZ ICON COUNT SECTION-->
   
-   <!-- SAVE BUTTON SECTION   --> 
-  <div class="save_button">
+</div>
+<!-- END show/hide counts for all icons section -->
+  
+    <!-- SAVE BUTTON SECTION   --> 
+    <div class="save_button">
        <img src="<?php echo SFSI_PLUS_PLUGURL ?>images/ajax-loader.gif" class="loader-img" />
        <?php  $nonce = wp_create_nonce("update_plus_step4"); ?>
       <a href="javascript:;" id="sfsi_plus_save4" title="Save" data-nonce="<?php echo $nonce;?>">Save</a>
-  </div><!-- END SAVE BUTTON SECTION   -->
-  <a class="sfsiColbtn closeSec" href="javascript:;" class="closeSec">Collapse area</a>
-  <label class="closeSec"></label>
-  <!-- ERROR AND SUCCESS MESSAGE AREA-->
-  <p class="red_txt errorMsg" style="display:none"> </p>
-  <p class="green_txt sucMsg" style="display:none"> </p>
-  <div class="clear"></div>
+    </div>
+    <!-- END SAVE BUTTON SECTION   -->
+
+	<a class="sfsiColbtn closeSec" href="javascript:;">Collapse area</a>
+	<label class="closeSec"></label>
+  
+  	<!-- ERROR AND SUCCESS MESSAGE AREA-->
+  	<p class="red_txt errorMsg" style="display:none"> </p>
+  	<p class="green_txt sucMsg" style="display:none"> </p>
+  	<div class="clear"></div>
 </div><!-- END Section 4 "Do you want to display "counts" next to your icons?"  -->

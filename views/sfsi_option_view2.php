@@ -8,7 +8,7 @@
 <div class="tab2">
     <!-- RSS ICON -->
     <div class="row bdr_top sfsiplus_rss_section">
-    <h2 class="sfsicls_rs_s">RSS</h2>
+    	<h2 class="sfsicls_rs_s">RSS</h2>
         <div class="inr_cont">
             <p>When clicked on, users can subscribe via RSS</p>
             <div class="rss_url_row">
@@ -17,6 +17,7 @@
         </div>    
     </div>
     <!-- END RSS ICON -->
+    
     <!-- EMAIL ICON -->
     <?php
 		$feedId = get_option('sfsi_plus_feed_id',false);
@@ -52,9 +53,10 @@
         </div>
     </div>
     <!-- END EMAIL ICON -->
+    
     <!-- FACEBOOK ICON -->
     <div class="row sfsiplus_facebook_section">
-    <h2 class="sfsicls_facebook">Facebook</h2>
+    	<h2 class="sfsicls_facebook">Facebook</h2>
         <div class="inr_cont">
             <p>The facebook icon can perform several actions. Pick below which ones it should perform. If you select several options, then users can select what they want to do <a class="rit_link pop-up" href="javascript:;"  data-id="fbex-s2">(see an example)</a>.</p>
             <p>The facebook icon should allow users to...</p> 
@@ -67,6 +69,7 @@
         </div>
     </div>
     <!-- END FACEBOOK ICON -->
+    
     <!-- TWITTER ICON -->
     <div class="row sfsiplus_twitter_section">
     	<h2 class="sfsicls_twt">Twitter</h2>
@@ -81,6 +84,7 @@
         </div>
     </div>
     <!-- END TWITTER ICON -->
+    
     <!-- GOOGLE ICON -->
     <div class="row sfsiplus_google_section">
     	<h2 class="sfsicls_ggle_pls">Google+</h2>
@@ -93,6 +97,7 @@
         </div>
     </div>
     <!-- END GOOGLE ICON -->
+    
     <!-- YOUTUBE ICON -->
     <div class="row sfsiplus_youtube_section">
     	<h2 class="sfsicls_utube">Youtube</h2>
@@ -142,6 +147,7 @@
         </div>
     </div>
     <!-- END YOUTUBE ICON -->
+    
     <!-- PINTEREST ICON -->
     <div class="row sfsiplus_pinterest_section">
     	<h2 class="sfsicls_pinterest">Pinterest</h2>
@@ -154,6 +160,7 @@
         </div>
     </div>
     <!-- END PINTEREST ICON -->
+    
     <!-- INSTAGRAM ICON -->
     <div class="row sfsiplus_instagram_section">
     	<h2 class="sfsicls_instagram">Instagram</h2>
@@ -163,6 +170,7 @@
         </div>
     </div>
     <!-- END INSTAGRAM ICON -->
+    
     <!-- LINKEDIN ICON -->
     <div class="row sfsiplus_linkedin_section">
     	<h2 class="sfsicls_linkdin">LinkedIn</h2>
@@ -180,6 +188,7 @@
         </div>
     </div>
     <!-- END LINKEDIN ICON -->
+    
     <!-- share button -->
     <div class="row sfsiplus_share_section">
    		<h2 class="sfsicls_share">Share</h2>
@@ -188,6 +197,20 @@
         </div>
     </div>
     <!-- share end -->
+    
+    <!-- HOUZZ ICON -->
+    <div class="row sfsiplus_houzz_section">
+    	<h2 class="sfsicls_houzz">Houzz</h2>
+        <div class="inr_cont">
+            <p>Please provide the url to your Houzz profile (e.g. http://http://www.houzz.com/user/your_username).</p> 
+            <p class="radio_section fb_url  cus_link instagram_space" >
+            	<label>URL</label>
+                <input name="sfsi_plus_houzz_pageUrl" type="text" value="<?php echo (isset($option2['sfsi_plus_houzz_pageUrl']) && $option2['sfsi_plus_houzz_pageUrl']!='') ?  $option2['sfsi_plus_houzz_pageUrl'] : '' ;?>" placeholder="http://" class="add" />
+            </p>        
+        </div>
+    </div>
+    <!-- HOUZZ INSTAGRAM ICON -->
+    
     <!-- Custom icon section start here -->
     <div class="plus_custom-links sfsiplus_custom_section">
 	<?php 

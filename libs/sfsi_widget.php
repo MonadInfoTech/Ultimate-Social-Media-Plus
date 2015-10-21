@@ -236,7 +236,11 @@ function sfsi_plus_check_visiblity($isFloter=0)
                      $sfsi_section5['sfsi_plus_youtubeIcon_order']=>'youtube',
                      $sfsi_section5['sfsi_plus_pinterestIcon_order']=>'pinterest',
                      $sfsi_section5['sfsi_plus_linkedinIcon_order']=>'linkedin',
-		     		 $sfsi_section5['sfsi_plus_instagramIcon_order']=>'instagram',) ;
+		     		 $sfsi_section5['sfsi_plus_instagramIcon_order']=>'instagram',
+					 (isset($sfsi_section5['sfsi_plus_houzzIcon_order']))
+						? $sfsi_section5['sfsi_plus_houzzIcon_order']
+						: 12 => 'houzz'
+				);
    
    if(is_array($custom_icons_order) ) 
    {
@@ -246,7 +250,7 @@ function sfsi_plus_check_visiblity($isFloter=0)
 		}
    }
    ksort($icons_order);
-   					  
+   
    /* calculate the total width of widget according to icons  */
    if(!empty($icons_per_row))
    {
@@ -284,6 +288,8 @@ function sfsi_plus_check_visiblity($isFloter=0)
     case 'linkedin' :  if($sfsi_plus_section1_options['sfsi_plus_linkedin_display']=='yes')    $icons.= sfsi_plus_prepairIcons('linkedin'); 
     break;
     case 'instagram' :  if($sfsi_plus_section1_options['sfsi_plus_instagram_display']=='yes')    $icons.= sfsi_plus_prepairIcons('instagram'); 
+    break;
+	case 'houzz' :  if($sfsi_plus_section1_options['sfsi_plus_houzz_display']=='yes') $icons.= sfsi_plus_prepairIcons('houzz'); 
     break;	  
     case 'custom' : $icons.= sfsi_plus_prepairIcons($icon_arry['ele']); 
     break;    
@@ -1034,6 +1040,51 @@ function sfsi_plus_prepairIcons($icon_name,$is_front=0)
 				}
         break;
         
+		case "houzz" :
+			 $socialObj = new sfsi_plus_SocialHelper(); /* global object to access 3rd party icon's actions */	
+		     $url = ($sfsi_plus_section2_options['sfsi_plus_houzz_pageUrl'])? $sfsi_plus_section2_options['sfsi_plus_houzz_pageUrl'] : 'javascript:void(0);';
+             $toolClass = "rss_tool_bdr";
+		     $hoverdiv = '';
+		     $arsfsiplus_row_class = "bot_rss_arow";
+		     
+			 /* fecth no of counts if active in admin section */
+			 if(
+			 	$sfsi_plus_section4_options['sfsi_plus_houzz_countsDisplay'] == "yes" &&
+				$sfsi_plus_section4_options['sfsi_plus_display_counts'] == "yes"
+			 )
+			 {
+				 $counts=$socialObj->format_num($sfsi_plus_section4_options['sfsi_plus_houzz_manualCounts']);
+			 }
+			 
+			 if(!empty($sfsi_plus_section5_options['sfsi_plus_houzz_MouseOverText'])) 
+			 {	
+			 	$alt_text = $sfsi_plus_section5_options['sfsi_plus_houzz_MouseOverText'];
+			 }
+			 else
+			 {
+				 $alt_text = 'Houzz';
+			 }
+			 
+			 //Custom Skin Support {Monad}	 
+			 if($active_theme == 'custom_support')
+			 {
+				 if(get_option("plus_houzz_skin"))
+				 {
+					$icon = get_option("plus_houzz_skin");
+				 }
+				 else
+				 {
+					$active_theme = 'default';
+					$icons_baseUrl = SFSI_PLUS_PLUGURL."images/icons_theme/default/";
+					$icon = $icons_baseUrl.$active_theme."_houzz.png"; 
+				 }
+			 }
+			 else
+			 {
+				$icon = $icons_baseUrl.$active_theme."_houzz.png";
+			 }		 
+        break;
+		
 		case "linkedin" :
 				$width = 66;
 				$socialObj = new sfsi_plus_SocialHelper();		
@@ -1298,7 +1349,11 @@ function sfsi_plus_check_posts_visiblity($isFloter=0)
                      $sfsi_section5['sfsi_plus_youtubeIcon_order']=>'youtube',
                      $sfsi_section5['sfsi_plus_pinterestIcon_order']=>'pinterest',
                      $sfsi_section5['sfsi_plus_linkedinIcon_order']=>'linkedin',
-		     		 $sfsi_section5['sfsi_plus_instagramIcon_order']=>'instagram',) ;
+		     		 $sfsi_section5['sfsi_plus_instagramIcon_order']=>'instagram',
+					 (isset($sfsi_section5['sfsi_plus_houzzIcon_order']))
+						? $sfsi_section5['sfsi_plus_houzzIcon_order']
+						: 12 => 'houzz'
+					);
    
    if(is_array($custom_icons_order) ) 
    {
@@ -1335,6 +1390,8 @@ function sfsi_plus_check_posts_visiblity($isFloter=0)
     case 'linkedin' :  if($sfsi_plus_section1_options['sfsi_plus_linkedin_display']=='yes')    $icons.= sfsi_plus_postsprepairIcons('linkedin'); 
     break;
     case 'instagram' :  if($sfsi_plus_section1_options['sfsi_plus_instagram_display']=='yes')    $icons.= sfsi_plus_postsprepairIcons('instagram'); 
+    break;
+	case 'houzz' :  if($sfsi_plus_section1_options['sfsi_plus_houzz_display']=='yes') $icons.= sfsi_plus_postsprepairIcons('houzz'); 
     break;	  
     case 'custom' : $icons.= sfsi_plus_postsprepairIcons($icon_arry['ele']); 
     break;    
@@ -2060,6 +2117,52 @@ function sfsi_plus_postsprepairIcons($icon_name,$is_front=0)
 				}
         break;
         
+		
+		case "houzz" :
+			 $socialObj = new sfsi_plus_SocialHelper(); /* global object to access 3rd party icon's actions */	
+		     $url = ($sfsi_plus_section2_options['sfsi_plus_houzz_pageUrl'])? $sfsi_plus_section2_options['sfsi_plus_houzz_pageUrl'] : 'javascript:void(0);';
+             $toolClass = "rss_tool_bdr";
+		     $hoverdiv = '';
+		     $arsfsiplus_row_class = "bot_rss_arow";
+		     
+			 /* fecth no of counts if active in admin section */
+			 if(
+			 	$sfsi_plus_section4_options['sfsi_plus_houzz_countsDisplay'] == "yes" &&
+				$sfsi_plus_section4_options['sfsi_plus_display_counts'] == "yes"
+			 )
+			 {
+				 $counts=$socialObj->format_num($sfsi_plus_section4_options['sfsi_plus_houzz_manualCounts']);
+			 }
+			 
+			 if(!empty($sfsi_plus_section5_options['sfsi_plus_houzz_MouseOverText'])) 
+			 {	
+			 	$alt_text = $sfsi_plus_section5_options['sfsi_plus_houzz_MouseOverText'];
+			 }
+			 else
+			 {
+				 $alt_text = 'Houzz';
+			 }
+			 
+			 //Custom Skin Support {Monad}	 
+			 if($active_theme == 'custom_support')
+			 {
+				 if(get_option("plus_houzz_skin"))
+				 {
+					$icon = get_option("plus_houzz_skin");
+				 }
+				 else
+				 {
+					$active_theme = 'default';
+					$icons_baseUrl = SFSI_PLUS_PLUGURL."images/icons_theme/default/";
+					$icon = $icons_baseUrl.$active_theme."_houzz.png"; 
+				 }
+			 }
+			 else
+			 {
+				$icon = $icons_baseUrl.$active_theme."_houzz.png";
+			 }		 
+        break;
+		
 		case "linkedin" :
 				$width = 66;
 				$socialObj = new sfsi_plus_SocialHelper();		

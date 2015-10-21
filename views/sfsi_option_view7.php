@@ -20,7 +20,8 @@
         <li class="sfsiplus_youtube_section"><div><img src="<?php echo SFSI_PLUS_PLUGURL ?>images/youtube.png" alt="YouTube" /><span class="sfsi_Cdisplay" id="sfsi_plus_youtube_countsDisplay">12k</span></div></li>
         <li class="sfsiplus_pinterest_section"><div><img src="<?php echo SFSI_PLUS_PLUGURL ?>images/pinterest.png" alt="Pinterest" /><span class="sfsi_Cdisplay" id="sfsi_plus_pinterest_countsDisplay">12k</span></div></li>
         <li class="sfsiplus_linkedin_section"><div><img src="<?php echo SFSI_PLUS_PLUGURL ?>images/linked_in.png" alt="Linked In" /><span class="sfsi_Cdisplay" id="sfsi_plus_linkedIn_countsDisplay">12k</span></div></li>
-	<li class="sfsiplus_instagram_section"><div><img src="<?php echo SFSI_PLUS_PLUGURL ?>images/instagram.png" alt="Instagram" /><span class="sfsi_Cdisplay" id="sfsi_plus_instagram_countsDisplay">12k</span></div></li>
+		<li class="sfsiplus_instagram_section"><div><img src="<?php echo SFSI_PLUS_PLUGURL ?>images/instagram.png" alt="Instagram" /><span class="sfsi_Cdisplay" id="sfsi_plus_instagram_countsDisplay">12k</span></div></li>
+        <li class="sfsiplus_houzz_section"><div><img src="<?php echo SFSI_PLUS_PLUGURL ?>images/houzz.png" alt="Houzz" /><span class="sfsi_Cdisplay" id="sfsi_plus_houzz_countsDisplay">12k</span></div></li>
 	<?php
 		if(isset($icons) && !empty($icons))
 		{
