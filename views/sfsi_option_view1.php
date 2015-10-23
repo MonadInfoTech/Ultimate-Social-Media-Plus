@@ -129,7 +129,7 @@
             <div class="radio_section tb_4_ck"><input name="sfsi_plus_houzz_display" <?php echo ($option1['sfsi_plus_houzz_display']=='yes') ?  'checked="true"' : '' ;?> id="sfsi_plus_houzz_display"  type="checkbox" value="yes" class="styled"  /></div>
             <span class="sfsicls_houzz">Houzz</span> 
             <div class="sfsiplus_right_info">
-            <p><span>It depends:</span>Show this icon if you have a Houzz account. <a href="http://www.houzz.com/" target="_blank">Houzz</a> is the No.1 site & community in the world of archticture and interior design.</p>
+            <p><span>It depends:  </span>Show this icon if you have a Houzz account. <a href="http://www.houzz.com/" target="_blank">Houzz</a> is the No.1 site & community in the world of architecture and interior design.</p>
             </div>
        </li>
        <!-- END Houzz ICON -->
