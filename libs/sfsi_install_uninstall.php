@@ -379,6 +379,7 @@ function sfsi_plus_Unistall_plugin()
     delete_option('sfsi_plus_footer_sec');
     delete_option('sfsi_plus_activate');
 	delete_option("sfsi_plus_pluginVersion");
+	delete_option("sfsi_plus_verificatiom_code");
     
 } /* end function */
 /* check CUrl */
