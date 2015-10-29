@@ -14,7 +14,7 @@
             <li>A smart automatic animation can <span>make your visitors aware of your icons</span> in an unintrusive manner</li>        </ul>
         
         <p style="padding:0px;">
-            The icons have been compressed by <a href="https://shortpixel.com" target="_blank">Shortpixel.com</a> for faster loading of your site. Thank you Shortpixel!
+            The icons have been compressed by <a href="https://goo.gl/IV5Q3z" target="_blank">Shortpixel.com</a> for faster loading of your site. Thank you Shortpixel!
         </p>
         
         <div class="row">
