@@ -200,7 +200,8 @@ function ultimateplusfbmetatags()
 if(is_admin())
 {	
 	$code = get_option('sfsi_plus_verificatiom_code');
-	if(empty($code))
+	$feed_id = get_option('sfsi_plus_feed_id');
+	if(empty($code) && !empty($feed_id))
 	{
 		add_action("init", "sfsi_plus_getverification_code");
 	}
