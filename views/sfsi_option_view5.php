@@ -41,7 +41,9 @@
 ?>
 <!-- Section 5 "Any other wishes for your main icons?" main div Start -->
 <div class="tab5">
-	<h4>Order of your icons</h4>
+	<h4>
+		<?php  _e( 'Order of your icons', 'ultimate-social-media-plus' ); ?>
+    </h4>
     <!-- icon drag drop  section start here -->	
     <ul class="plus_share_icon_order" >
      <?php 
@@ -128,129 +130,256 @@
      
     </ul> <!-- END icon drag drop section start here -->
     
-    <span class="drag_drp">(Drag &amp; Drop)</span>
+    <span class="drag_drp">
+    	<?php  _e( '(Drag &amp; Drop)', 'ultimate-social-media-plus' ); ?>
+    </span>
     <!-- icon's size and spacing section start here -->	
     <div class="row">
-        <h4>Size &amp; spacing of your icons</h4>
-        <div class="icons_size"><span>Size:</span><input name="sfsi_plus_icons_size" value="<?php echo ($option5['sfsi_plus_icons_size']!='') ?  $option5['sfsi_plus_icons_size'] : '' ;?>" type="text" /><ins>pixels wide &amp; tall</ins> <span class="last">Spacing between icons:</span><input name="sfsi_plus_icons_spacing" type="text" value="<?php echo ($option5['sfsi_plus_icons_spacing']!='') ?  $option5['sfsi_plus_icons_spacing'] : '' ;?>" /><ins>Pixels</ins></div>
+        <h4>
+        	<?php  _e( 'Size &amp; spacing of your icons', 'ultimate-social-media-plus' ); ?>
+        </h4>
+        <div class="icons_size">
+        	<span>
+        		<?php  _e( 'Size:', 'ultimate-social-media-plus' ); ?>
+        	</span>
+            <input name="sfsi_plus_icons_size" value="<?php echo ($option5['sfsi_plus_icons_size']!='') ?  $option5['sfsi_plus_icons_size'] : '' ;?>" type="text" />
+        	<ins>
+        		<?php  _e( 'pixels wide &amp; tall', 'ultimate-social-media-plus' ); ?>
+        	</ins>
+         	<span class="last">
+         		<?php  _e( 'Spacing between icons:', 'ultimate-social-media-plus' ); ?>
+         	</span>
+            <input name="sfsi_plus_icons_spacing" type="text" value="<?php echo ($option5['sfsi_plus_icons_spacing']!='') ?  $option5['sfsi_plus_icons_spacing'] : '' ;?>" />
+         	<ins>
+         		<?php  _e( 'Pixels', 'ultimate-social-media-plus' ); ?>
+         	</ins>
+    	</div>
     </div>
     
     <div class="row">
-        <h4>Alignments</h4>
-        <div class="icons_size"><span>Alignment of icons:</span><div class="field"><select name="sfsi_plus_icons_Alignment" id="sfsi_plus_icons_Alignment" class="styled"><option value="center" <?php echo ($option5['sfsi_plus_icons_Alignment']=='center') ?  'selected="selected"' : '' ;?>>Centered</option><option value="right" <?php echo ($option5['sfsi_plus_icons_Alignment']=='right') ?  'selected="selected"' : '' ;?>>Right</option><option value="left" <?php echo ($option5['sfsi_plus_icons_Alignment']=='left') ?  'selected="selected"' : '' ;?>>Left</option></select></div> <span>Icons per row:</span><input name="sfsi_plus_icons_perRow" type="text" value="<?php echo ($option5['sfsi_plus_icons_perRow']!='') ?  $option5['sfsi_plus_icons_perRow'] : '' ;?>" /><ins class="leave_empty">Leave empty if you dont want to <br />
-        define this
-        </ins></div>
+        <h4>
+        	<?php  _e( 'Alignments', 'ultimate-social-media-plus' ); ?>
+        </h4>
+        <div class="icons_size">
+        	<span>
+        		<?php  _e( 'Alignment of icons:', 'ultimate-social-media-plus' ); ?>
+        	</span>
+        	<div class="field">
+                <select name="sfsi_plus_icons_Alignment" id="sfsi_plus_icons_Alignment" class="styled">
+                    <option value="center" <?php echo ($option5['sfsi_plus_icons_Alignment']=='center') ?  'selected="selected"' : '' ;?>>
+                        <?php  _e( 'Centered', 'ultimate-social-media-plus' ); ?>
+                    </option>
+                    <option value="right" <?php echo ($option5['sfsi_plus_icons_Alignment']=='right') ?  'selected="selected"' : '' ;?>>
+                    	<?php  _e( 'Right', 'ultimate-social-media-plus' ); ?>
+                    </option>
+                    <option value="left" <?php echo ($option5['sfsi_plus_icons_Alignment']=='left') ?  'selected="selected"' : '' ;?>>
+                    	<?php  _e( 'Left', 'ultimate-social-media-plus' ); ?>
+                    </option>
+                </select>
+       		</div> 
+        	<span>
+        		<?php  _e( 'Icons per row:', 'ultimate-social-media-plus' ); ?>
+        	</span>
+        	<input name="sfsi_plus_icons_perRow" type="text" value="<?php echo ($option5['sfsi_plus_icons_perRow']!='') ?  $option5['sfsi_plus_icons_perRow'] : '' ;?>" />
+        	<ins class="leave_empty">
+        		<?php  _e( 'Leave empty if you dont want to', 'ultimate-social-media-plus' ); ?>
+        		<br />
+        		<?php  _e( 'define this', 'ultimate-social-media-plus' ); ?>
+        	</ins>
+        </div>
     </div>
     
     <div class="row new_wind">
-        <h4>New window</h4>
-        <div class="sfsiplus_row_onl"><p>If user clicks on your icons, do you want to open the page in a new window?</p>
-        <ul class="enough_waffling">
-            <li><input name="sfsi_plus_icons_ClickPageOpen" <?php echo ($option5['sfsi_plus_icons_ClickPageOpen']=='yes') ?  'checked="true"' : '' ;?> type="radio" value="yes" class="styled"  /><label>Yes</label></li>
-        	<li><input name="sfsi_plus_icons_ClickPageOpen" <?php echo ($option5['sfsi_plus_icons_ClickPageOpen']=='no') ?  'checked="true"' : '' ;?> type="radio" value="no" class="styled" /><label>No</label></li>
-        </ul></div>
+        <h4>
+			<?php  _e( 'New window', 'ultimate-social-media-plus' ); ?>
+        </h4>
+        <div class="sfsiplus_row_onl">
+        	<p>
+				<?php
+					_e(
+                    	'If user clicks on your icons, do you want to open the page in a new window?', 
+                        'ultimate-social-media-plus' 
+                    );
+				?>
+        	</p>
+            <ul class="enough_waffling">
+                <li>
+                    <input name="sfsi_plus_icons_ClickPageOpen" <?php echo ($option5['sfsi_plus_icons_ClickPageOpen']=='yes') ?  'checked="true"' : '' ;?> type="radio" value="yes" class="styled"  />
+                    <label>
+                    	<?php  _e( 'Yes', 'ultimate-social-media-plus' ); ?>
+                    </label>
+                </li>
+                <li>
+                    <input name="sfsi_plus_icons_ClickPageOpen" <?php echo ($option5['sfsi_plus_icons_ClickPageOpen']=='no') ?  'checked="true"' : '' ;?> type="radio" value="no" class="styled" />
+                    <label>
+                    	<?php  _e( 'No', 'ultimate-social-media-plus' ); ?>
+                    </label>
+                </li>
+            </ul>
+      	</div>
     </div>
    <!-- END icon's size and spacing section -->
    
      <!-- icon's floating and stick section start here -->	
     <div class="row sticking">
-	<h4>Sticking & Disable on mobile</h4>
-	<p>If you decided to show your icons via a widget, you can add the effect that when the user scrolls down, the icons will stick at the  top of the screen so that they are still displayed even if the user scrolled all the way down. Do you want to do that?</p>
+    	<h4>
+            <?php  _e( 'Sticking & Disable on mobile', 'ultimate-social-media-plus' ); ?>
+        </h4>
+        <p>
+            <?php  _e( 'If you decided to show your icons via a widget, you can add the effect that when the user scrolls down, the icons will stick at the  top of the screen so that they are still displayed even if the user scrolled all the way down. Do you want to do that?', 'ultimate-social-media-plus' ); ?>
+        </p>
 	<!--<div class="space">
 	<p class="list">Make icons float?</p>	
 	<ul class="enough_waffling"><li><input name="sfsi_plus_icons_float" <?php //echo ($option5['sfsi_plus_icons_float']=='yes') ?  'checked="true"' : '' ;?>  type="radio" value="yes" class="styled"  /><label>Yes</label></li><li><input name="sfsi_plus_icons_float" <?php //echo ($option5['sfsi_plus_icons_float']=='no') ?  'checked="true"' : '' ;?>  type="radio" value="no" class="styled" /><label>No</label></li></ul>
       </div>
       <div class="clear float_options" <?php //if($option5['sfsi_plus_icons_stick']=='yes' || $option5['sfsi_plus_icons_float']=='no') :?> style="display:none" <?php //endif;?>><div class="float">Where shall they float?</div><select name="sfsi_plus_icons_floatPosition" id="sfsi_plus_icons_floatPosition" class="styled"><option value="top-left" <?php //echo ($option5['sfsi_plus_icons_floatPosition']=='top-left') ?  'selected="selected"' : '' ;?> >Top - Left</option><option value="top-right" <?php //echo ($option5['sfsi_plus_icons_floatPosition']=='top-right') ?  'selected="selected"' : '' ;?> >Top - Right</option><option value="center-left" <?php //echo ($option5['sfsi_plus_icons_floatPosition']=='center-left') ?  'selected="selected"' : '' ;?> >Center - Left</option><option value="center-right" <?php //echo ($option5['sfsi_plus_icons_floatPosition']=='center-right') ?  'selected="selected"' : '' ;?> >Center - Right</option><option value="bottom-left" <?php //echo ($option5['sfsi_plus_icons_floatPosition']=='bottom-left') ?  'selected="selected"' : '' ;?> >Bottom - Left</option><option value="bottom-right" <?php //echo ($option5['sfsi_plus_icons_floatPosition']=='bottom-right') ?  'selected="selected"' : '' ;?> >Bottom - Right</option></select></div></div>-->
   
-    <div class="space">
-        <!--<p class="list">Make icons stick?</p>-->	
-        <ul class="enough_waffling">
-            <li><input name="sfsi_plus_icons_stick" <?php echo ($option5['sfsi_plus_icons_stick']=='yes') ?  'checked="true"' : '' ;?> type="radio" value="yes" class="styled"  /><label>Yes</label></li>
-            <li><input name="sfsi_plus_icons_stick" <?php echo ($option5['sfsi_plus_icons_stick']=='no') ?  'checked="true"' : '' ;?>  type="radio" value="no" class="styled" /><label>No</label></li>
-        </ul>
-    </div>
+    	<div class="space">
+        	<!--<p class="list">Make icons stick?</p>-->	
+            <ul class="enough_waffling">
+            	<li>
+                	<input name="sfsi_plus_icons_stick" <?php echo ($option5['sfsi_plus_icons_stick']=='yes') ?  'checked="true"' : '' ;?> type="radio" value="yes" class="styled"  />
+                    <label>
+                    	<?php  _e( 'Yes', 'ultimate-social-media-plus' ); ?>
+                    </label>
+                </li>
+                <li>
+                	<input name="sfsi_plus_icons_stick" <?php echo ($option5['sfsi_plus_icons_stick']=='no') ?  'checked="true"' : '' ;?>  type="radio" value="no" class="styled" />
+                    <label>
+                    	<?php  _e( 'No', 'ultimate-social-media-plus' ); ?>
+                    </label>
+               	</li>
+            </ul>
+    	</div>
   	
-    <!--disable float icons-->
-  	<div class="space disblfltonmbl">
-    	<p class="list">Disable float icons on mobile devices</p>	
-    	<ul class="enough_waffling">
-    		<li><input name="sfsi_plus_disable_floaticons" <?php echo ($option5['sfsi_plus_disable_floaticons']=='yes') ?  'checked="true"' : '' ;?> type="radio" value="yes" class="styled"  /><label>Yes</label></li>
-			<li><input name="sfsi_plus_disable_floaticons" <?php echo ($option5['sfsi_plus_disable_floaticons']=='no') ?  'checked="true"' : '' ;?>  type="radio" value="no" class="styled" /><label>No</label></li>
-  		</ul>
-  	</div>
-  	<!--disable float icons-->
+    	<!--disable float icons-->
+  		<div class="space disblfltonmbl">
+            <p class="list">
+            	<?php  _e( 'Disable float icons on mobile devices', 'ultimate-social-media-plus' ); ?>
+            </p>	
+            <ul class="enough_waffling">
+                <li>
+                	<input name="sfsi_plus_disable_floaticons" <?php echo ($option5['sfsi_plus_disable_floaticons']=='yes') ?  'checked="true"' : '' ;?> type="radio" value="yes" class="styled"  />
+                    <label>
+                    	<?php  _e( 'Yes', 'ultimate-social-media-plus' ); ?>
+                    </label>
+                </li>
+                <li>
+                    <input name="sfsi_plus_disable_floaticons" <?php echo ($option5['sfsi_plus_disable_floaticons']=='no') ?  'checked="true"' : '' ;?>  type="radio" value="no" class="styled" />
+                    <label>
+                    	<?php  _e( 'No', 'ultimate-social-media-plus' ); ?>
+                    </label>
+                </li>
+            </ul>
+  		</div>
+  		<!--disable float icons-->
   	
-    <!--disabling view port meta tag-->
-  	<div class="space disblfltonmbl">
-    	<p class="list">Disable auto-scaling feature for mobile devices("viewport" meta tag)</p>	
-        <ul class="enough_waffling">
-            <li><input name="sfsi_plus_disable_viewport" <?php echo ($sfsi_plus_disable_viewport=='yes') ?  'checked="true"' : '' ;?> type="radio" value="yes" class="styled"  /><label>Yes</label></li>
-            <li><input name="sfsi_plus_disable_viewport" <?php echo ($sfsi_plus_disable_viewport=='no') ?  'checked="true"' : '' ;?>  type="radio" value="no" class="styled" /><label>No</label></li>
-        </ul>
-  	</div>
-  	<!--disabling view port meta tag-->
-</div>
-<!-- END icon's floating and stick section -->
+    	<!--disabling view port meta tag-->
+  		<div class="space disblfltonmbl">
+            <p class="list">
+                <?php  _e( 'Disable auto-scaling feature for mobile devices("viewport" meta tag)', 'ultimate-social-media-plus' ); ?>
+            </p>	
+            <ul class="enough_waffling">
+            	<li>
+                    <input name="sfsi_plus_disable_viewport" <?php echo ($sfsi_plus_disable_viewport=='yes') ?  'checked="true"' : '' ;?> type="radio" value="yes" class="styled"  />
+                    <label>
+                    	<?php  _e( 'Yes', 'ultimate-social-media-plus' ); ?>
+                    </label>
+                </li>
+                <li>
+                    <input name="sfsi_plus_disable_viewport" <?php echo ($sfsi_plus_disable_viewport=='no') ?  'checked="true"' : '' ;?>  type="radio" value="no" class="styled" />
+                    <label>
+                    	<?php  _e( 'No', 'ultimate-social-media-plus' ); ?>
+                    </label>
+                </li>
+            </ul>
+  		</div>
+  		<!--disabling view port meta tag-->
+	</div>
+	<!-- END icon's floating and stick section -->
  
-<!-- mouse over text section start here -->
-<div class="row mouse_txt">
-    <h4>Mouseover text</h4>
-	<p>If you’ve given your icon only one function (i.e. no pop-up where user can perform different actions) then you can define 
-here what text will be displayed if a user moves his mouse over the icon:</p>
-	
-    <div class="space">
-		<div class="clear"></div>
-		<div class="mouseover_field sfsiplus_rss_section">
-			<label>RSS:</label><input name="sfsi_plus_rss_MouseOverText" value="<?php echo ($option5['sfsi_plus_rss_MouseOverText']!='') ?  $option5['sfsi_plus_rss_MouseOverText'] : '' ;?>" type="text" />
-		</div>
+	<!-- mouse over text section start here -->
+	<div class="row mouse_txt">
+        <h4>
+            <?php  _e( 'Mouseover text', 'ultimate-social-media-plus' ); ?>
+        </h4>
+        <p>
+            <?php  _e('If you’ve given your icon only one function (i.e. no pop-up where user can perform different actions) then you can define here what text will be displayed if a user moves his mouse over the icon:', 'ultimate-social-media-plus' ); ?>
+        </p>
+		
+        <div class="space">
+			<div class="clear"></div>
+			<div class="mouseover_field sfsiplus_rss_section">
+                <label>
+                    <?php  _e( 'RSS:', 'ultimate-social-media-plus' ); ?>
+                </label>
+            	<input name="sfsi_plus_rss_MouseOverText" value="<?php echo ($option5['sfsi_plus_rss_MouseOverText']!='') ?  $option5['sfsi_plus_rss_MouseOverText'] : '' ;?>" type="text" />
+			</div>
+            <div class="mouseover_field sfsiplus_email_section">
+                <label>
+                    <?php  _e( 'Email:', 'ultimate-social-media-plus' ); ?>
+                </label>
+                <input name="sfsi_plus_email_MouseOverText" value="<?php echo ($option5['sfsi_plus_email_MouseOverText']!='') ?  $option5['sfsi_plus_email_MouseOverText'] : '' ;?>" type="text" />
+            </div>
+            <div class="clear">
+            	<div class="mouseover_field sfsiplus_twitter_section">
+                	<label>
+                        <?php  _e( 'Twitter:', 'ultimate-social-media-plus' ); ?>
+                    </label>
+                    <input name="sfsi_plus_twitter_MouseOverText" value="<?php echo ($option5['sfsi_plus_twitter_MouseOverText']!='') ?  $option5['sfsi_plus_twitter_MouseOverText'] : '' ;?>" type="text" />
+                </div>
+                <div class="mouseover_field sfsiplus_facebook_section">
+                    <label>
+                        <?php  _e( 'Facebook:', 'ultimate-social-media-plus' ); ?>
+                    </label>
+                    <input name="sfsi_plus_facebook_MouseOverText" value="<?php echo ($option5['sfsi_plus_facebook_MouseOverText']!='') ?  $option5['sfsi_plus_facebook_MouseOverText'] : '' ;?>" type="text" />
+                </div>
+            </div>
         
-		<div class="mouseover_field sfsiplus_email_section">
-			<label>Email:</label><input name="sfsi_plus_email_MouseOverText" value="<?php echo ($option5['sfsi_plus_email_MouseOverText']!='') ?  $option5['sfsi_plus_email_MouseOverText'] : '' ;?>" type="text" />
-		</div>
+			<div class="clear">
+                <div class="mouseover_field sfsiplus_google_section">
+                    <label>
+                        <?php  _e( 'Google:', 'ultimate-social-media-plus' ); ?>
+                    </label>
+                    <input name="sfsi_plus_google_MouseOverText" value="<?php echo ($option5['sfsi_plus_google_MouseOverText']!='') ?  $option5['sfsi_plus_google_MouseOverText'] : '' ;?>"  type="text" />
+                </div>
+                <div class="mouseover_field sfsiplus_linkedin_section">
+                    <label>
+                        <?php  _e( 'LinkedIn:', 'ultimate-social-media-plus' ); ?>
+                    </label>
+                    <input name="sfsi_plus_linkedIn_MouseOverText" value="<?php echo ($option5['sfsi_plus_linkedIn_MouseOverText']!='') ?  $option5['sfsi_plus_linkedIn_MouseOverText'] : '' ;?>"  type="text" />
+                </div>
+			</div>
 		
-        <div class="clear">
-		    <div class="mouseover_field sfsiplus_twitter_section">
-                <label>Twitter:</label>
-                <input name="sfsi_plus_twitter_MouseOverText" value="<?php echo ($option5['sfsi_plus_twitter_MouseOverText']!='') ?  $option5['sfsi_plus_twitter_MouseOverText'] : '' ;?>" type="text" />
-            </div>
-            <div class="mouseover_field sfsiplus_facebook_section">
-                <label>Facebook:</label>
-                <input name="sfsi_plus_facebook_MouseOverText" value="<?php echo ($option5['sfsi_plus_facebook_MouseOverText']!='') ?  $option5['sfsi_plus_facebook_MouseOverText'] : '' ;?>" type="text" />
-            </div>
-		</div>
-        
-		<div class="clear">
-            <div class="mouseover_field sfsiplus_google_section">
-                <label>Google:</label>
-                <input name="sfsi_plus_google_MouseOverText" value="<?php echo ($option5['sfsi_plus_google_MouseOverText']!='') ?  $option5['sfsi_plus_google_MouseOverText'] : '' ;?>"  type="text" />
-            </div>
-            <div class="mouseover_field sfsiplus_linkedin_section">
-                <label>LinkedIn:</label>
-                <input name="sfsi_plus_linkedIn_MouseOverText" value="<?php echo ($option5['sfsi_plus_linkedIn_MouseOverText']!='') ?  $option5['sfsi_plus_linkedIn_MouseOverText'] : '' ;?>"  type="text" />
-            </div>
-		</div>
+        	<div class="clear">
+                <div class="mouseover_field sfsiplus_pinterest_section">
+                    <label>
+                        <?php  _e( 'Pinterest:', 'ultimate-social-media-plus' ); ?>
+                    </label>
+                    <input name="sfsi_plus_pinterest_MouseOverText" value="<?php echo ($option5['sfsi_plus_pinterest_MouseOverText']!='') ?  $option5['sfsi_plus_pinterest_MouseOverText'] : '' ;?>" type="text" />
+                </div>
+                <div class="mouseover_field sfsiplus_youtube_section">
+                    <label>
+                        <?php  _e( 'Youtube:', 'ultimate-social-media-plus' ); ?>
+                    </label>
+                    <input name="sfsi_plus_youtube_MouseOverText" value="<?php echo ($option5['sfsi_plus_youtube_MouseOverText']!='') ?  $option5['sfsi_plus_youtube_MouseOverText'] : '' ;?>" type="text" />
+                </div>
+			</div>
 		
-        <div class="clear">
-            <div class="mouseover_field sfsiplus_pinterest_section">
-                <label>Pinterest:</label>
-                <input name="sfsi_plus_pinterest_MouseOverText" value="<?php echo ($option5['sfsi_plus_pinterest_MouseOverText']!='') ?  $option5['sfsi_plus_pinterest_MouseOverText'] : '' ;?>" type="text" />
-            </div>
-            <div class="mouseover_field sfsiplus_youtube_section">
-                <label>Youtube:</label>
-                <input name="sfsi_plus_youtube_MouseOverText" value="<?php echo ($option5['sfsi_plus_youtube_MouseOverText']!='') ?  $option5['sfsi_plus_youtube_MouseOverText'] : '' ;?>" type="text" />
-            </div>
-		</div>
-		
-        <div class="clear">
-		    <div class="mouseover_field sfsiplus_instagram_section">
-                <label>Instagram:</label>
-                <input name="sfsi_plus_instagram_MouseOverText" value="<?php echo ($option5['sfsi_plus_instagram_MouseOverText']!='') ?  $option5['sfsi_plus_instagram_MouseOverText'] : '' ;?>" type="text" />
-		    </div>
-            <div class="mouseover_field sfsiplus_houzz_section">
-                <label>Houzz:</label>
-                <input name="sfsi_plus_houzz_MouseOverText" value="<?php echo ($option5['sfsi_plus_houzz_MouseOverText']!='') ?  $option5['sfsi_plus_houzz_MouseOverText'] : 'Houzz' ;?>" type="text" />
-		    </div>
-		</div>
+        	<div class="clear">
+                <div class="mouseover_field sfsiplus_instagram_section">
+                    <label>
+                        <?php  _e( 'Instagram:', 'ultimate-social-media-plus' ); ?>
+                    </label>
+                    <input name="sfsi_plus_instagram_MouseOverText" value="<?php echo ($option5['sfsi_plus_instagram_MouseOverText']!='') ?  $option5['sfsi_plus_instagram_MouseOverText'] : '' ;?>" type="text" />
+                </div>
+                <div class="mouseover_field sfsiplus_houzz_section">
+                    <label>
+                        <?php  _e( 'Houzz:', 'ultimate-social-media-plus' ); ?>
+                    </label>
+                    <input name="sfsi_plus_houzz_MouseOverText" value="<?php echo ($option5['sfsi_plus_houzz_MouseOverText']!='') ?  $option5['sfsi_plus_houzz_MouseOverText'] : 'Houzz' ;?>" type="text" />
+                </div>
+			</div>
         
         <!--<div class="clear">
             <div class="mouseover_field sfsiplus_share_section">
@@ -259,29 +388,28 @@ here what text will be displayed if a user moves his mouse over the icon:</p>
             </div>
         </div>-->
          	
-        <div class="clear"> </div>
-        <div class="plus_custom_m">
-        	<?php 
-				$sfsiMouseOverTexts =  unserialize($option5['sfsi_plus_custom_MouseOverTexts']);
-				$count=1; for($i=$first_key; $i<=$endkey; $i++) :
-            ?> 
-            <?php if(!empty( $icons[$i])) : ?>
+        	<div class="clear"> </div>
+        	<div class="plus_custom_m">
+				<?php 
+                    $sfsiMouseOverTexts =  unserialize($option5['sfsi_plus_custom_MouseOverTexts']);
+                    $count=1; for($i=$first_key; $i<=$endkey; $i++) :
+                ?> 
+            	<?php if(!empty( $icons[$i])) : ?>
                     
-            <div class="mouseover_field sfsiplus_custom_section sfsiICON_<?php echo $i; ?>">
-				<label>Custom <?php echo $count; ?>:</label>
-				<input name="sfsi_plus_custom_MouseOverTexts[]" value="<?php echo (isset($sfsiMouseOverTexts[$i]) && $sfsiMouseOverTexts[$i]!='') ?  $sfsiMouseOverTexts[$i] : '' ;?>" type="text" file-id="<?php echo $i; ?>" />
-            </div>
-                      
-            <?php if($count%2==0): ?>
-                    
-            <div class="clear"> </div>  
-		
-			<?php endif; ?>
-            <?php $count++; endif; endfor; ?>
-		
-        </div>
-	</div>
-
+                    <div class="mouseover_field sfsiplus_custom_section sfsiICON_<?php echo $i; ?>">
+                        <label>
+                            <?php  _e( 'Custom', 'ultimate-social-media-plus' ); ?>
+                            <?php echo $count; ?>:
+                        </label>
+                        <input name="sfsi_plus_custom_MouseOverTexts[]" value="<?php echo (isset($sfsiMouseOverTexts[$i]) && $sfsiMouseOverTexts[$i]!='') ?  $sfsiMouseOverTexts[$i] : '' ;?>" type="text" file-id="<?php echo $i; ?>" />
+                    </div>
+                	<?php if($count%2==0): ?>
+                		<div class="clear"> </div>  
+					<?php endif; ?>
+            		<?php $count++; 
+				endif; endfor; ?>
+			</div>
+		</div>
 	</div>
     <!-- END mouse over text section -->
     
@@ -289,11 +417,13 @@ here what text will be displayed if a user moves his mouse over the icon:</p>
     <div class="save_button">
         <img src="<?php echo SFSI_PLUS_PLUGURL ?>images/ajax-loader.gif" class="loader-img" />
         <?php  $nonce = wp_create_nonce("update_plus_step5"); ?>
-        <a href="javascript:;" id="sfsi_plus_save5" title="Save" data-nonce="<?php echo $nonce;?>">Save</a>
+        <a href="javascript:;" id="sfsi_plus_save5" title="Save" data-nonce="<?php echo $nonce;?>"><?php  _e( 'Save', 'ultimate-social-media-plus' ); ?></a>
     </div>
     <!-- END SAVE BUTTON SECTION   -->
     
-    <a class="sfsiColbtn closeSec" href="javascript:;" >Collapse area</a>
+    <a class="sfsiColbtn closeSec" href="javascript:;" >
+  		<?php  _e( 'Collapse area', 'ultimate-social-media-plus' ); ?>
+    </a>
     <label class="closeSec"></label>
     
     <!-- ERROR AND SUCCESS MESSAGE AREA-->

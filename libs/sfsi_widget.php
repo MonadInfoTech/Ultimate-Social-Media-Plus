@@ -102,7 +102,11 @@ class Sfsi_Plus_Widget extends WP_Widget
 		    <input type="hidden" value="<?php echo $instance['showf'] ?>" id="<?php echo $this->get_field_id( 'showf' ); ?>" name="<?php echo $this->get_field_name( 'showf' ); ?>" />
 		</p>
 		<p>
-		     Please go to  the <a href="admin.php?page=sfsi-plus-options">plugin page</a> to set your preferences
+			<?php  _e( 'Please go to  the', 'ultimate-social-media-plus' ); ?>
+            <a href="admin.php?page=sfsi-plus-options">
+            	<?php  _e( 'plugin page', 'ultimate-social-media-plus' ); ?>
+            </a> 
+            <?php  _e( 'to set your preferences', 'ultimate-social-media-plus' ); ?>
 		</p>
 	<?php
 	}
@@ -289,7 +293,14 @@ function sfsi_plus_check_visiblity($isFloter=0)
     break;
     case 'instagram' :  if($sfsi_plus_section1_options['sfsi_plus_instagram_display']=='yes')    $icons.= sfsi_plus_prepairIcons('instagram'); 
     break;
-	case 'houzz' :  if($sfsi_plus_section1_options['sfsi_plus_houzz_display']=='yes') $icons.= sfsi_plus_prepairIcons('houzz'); 
+	case 'houzz' :
+		if(
+			isset($sfsi_plus_section1_options['sfsi_plus_houzz_display']) &&
+			$sfsi_plus_section1_options['sfsi_plus_houzz_display'] == 'yes'
+		)
+		{
+			$icons.= sfsi_plus_prepairIcons('houzz');
+		}
     break;	  
     case 'custom' : $icons.= sfsi_plus_prepairIcons($icon_arry['ele']); 
     break;    

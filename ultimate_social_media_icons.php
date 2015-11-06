@@ -4,8 +4,9 @@ Plugin Name: Ultimate Social Media PLUS
 Plugin URI: http://ultimatelysocial.com
 Description: The best social media plugin on the market. And 100% FREE. Allows you to add social media & share icons to your blog (esp. Facebook, Twitter, Email, RSS, Pinterest, Instagram, Google+, LinkedIn, Share-button). It offers a wide range of design options and other features. 
 Author: UltimatelySocial
+Text Domain: ultimate-social-media-plus
 Author URI: http://ultimatelysocial.com
-Version: 2.2.1
+Version: 2.2.2
 License: GPLv2
 */
 
@@ -34,7 +35,7 @@ register_deactivation_hook(__FILE__, 'sfsi_plus_deactivate_plugin');
 register_uninstall_hook(__FILE__, 'sfsi_plus_Unistall_plugin');
 
 /*Plugin version setup*/
-if(!get_option('sfsi_plus_pluginVersion') || get_option('sfsi_plus_pluginVersion') < 2.21)
+if(!get_option('sfsi_plus_pluginVersion') || get_option('sfsi_plus_pluginVersion') < 2.22)
 {
 	add_action("init", "sfsi_plus_update_plugin");
 }
@@ -219,7 +220,8 @@ function sfsi_plus_getverification_code()
             'feed_id' => $feed_id
         )
     ));
-     // Send the request & save response to $resp
+    
+	// Send the request & save response to $resp
 	$resp = curl_exec($curl);
 	$resp = json_decode($resp);
 	update_option('sfsi_plus_verificatiom_code', $resp->code);
@@ -520,10 +522,21 @@ function sfsi_plus_admin_notice()
 		?>
 		<div class="updated" style="<?php echo $style; ?>"">
 			<div class="alignleft" style="margin: 9px 0;">
-				<b>New feature in the Ultimate Social Media PLUS plugin:</b> You can now add a subscription form to increase sign-ups (under question 8). <a href="<?php echo site_url();?>/wp-admin/admin.php?page=sfsi-plus-options" style="color:#7AD03A; font-weight:bold;">Check it out</a>
+				<b>
+                <?php _e( 'New feature in the Ultimate Social Media PLUS plugin:', 'ultimate-social-media-plus' ); ?>
+                
+                </b>  
+                 <?php _e( 'You can now add a subscription form to increase sign-ups (under question 8).', 'ultimate-social-media-plus' ); ?>
+                <a href="<?php echo site_url();?>/wp-admin/admin.php?page=sfsi-plus-options" style="color:#7AD03A; font-weight:bold;">
+                
+                <?php _e( 'Check it out', 'ultimate-social-media-plus' ); ?>
+                </a>
 			</div>
 			<p class="alignright">
-				<a href="<?php echo $url; ?>">Dismiss</a>
+				<a href="<?php echo $url; ?>">
+               
+                <?php _e( 'Dismiss', 'ultimate-social-media-plus' ); ?>
+                </a>
 			</p>
 		</div>
 	<?php }
@@ -536,5 +549,11 @@ function sfsi_plus_dismiss_admin_notice()
 		update_option( 'sfsi_plus_show_notification_plugin', "no" );
 		header("Location: ".site_url()."/wp-admin/admin.php?page=sfsi-plus-options");
 	}
+}
+add_action('plugins_loaded', 'sfsi_plus_load_domain');
+function sfsi_plus_load_domain() 
+{
+	$plugin_dir = basename(dirname(__FILE__)).'/languages';
+	load_plugin_textdomain( 'ultimate-social-media-plus', false, $plugin_dir );
 }
 ?>

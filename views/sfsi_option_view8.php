@@ -29,7 +29,9 @@
 			<div class="radio_section tb_4_ck" onclick="checkforinfoslction(this);"><input name="sfsi_plus_show_via_widget" <?php echo ($option8['sfsi_plus_show_via_widget']=='yes') ?  'checked="true"' : '' ;?>  id="sfsi_plus_show_via_widget" type="checkbox" value="yes" class="styled"  /></div>
 			<div class="sfsiplus_right_info">
 				<p>
-					<span class="sfsiplus_toglepstpgspn">Show them via a widget</span><br>
+					<span class="sfsiplus_toglepstpgspn">
+                    	<?php  _e( 'Show them via a widget', 'ultimate-social-media-plus' ); ?>
+                    </span><br>
                     <?php
                     if($option8['sfsi_plus_show_via_widget']=='yes')
 					{
@@ -40,7 +42,13 @@
 						$label_style = 'style="font-size: 16px;"';
 					}
 					?>
-					<label class="sfsiplus_sub-subtitle ckckslctn" <?php echo $label_style;?>>Go to the <a href="<?php echo admin_url('widgets.php');?>">widgets area</a> and drag & drop it where you want to have it!</label>
+					<label class="sfsiplus_sub-subtitle ckckslctn" <?php echo $label_style;?>>
+                    	<?php  _e( 'Go to the', 'ultimate-social-media-plus' ); ?>
+                    	<a href="<?php echo admin_url('widgets.php');?>">
+                    		<?php  _e( 'widgets area', 'ultimate-social-media-plus' ); ?>
+                    	</a> 
+                    	<?php  _e( 'and drag & drop it where you want to have it!', 'ultimate-social-media-plus' ); ?>
+                    </label>
 				</p>
 			</div>
 		</li>
@@ -52,7 +60,9 @@
             </div>
 			<div class="sfsiplus_right_info">
 				<p>
-					<span class="sfsiplus_toglepstpgspn">Float them on the page</span>
+					<span class="sfsiplus_toglepstpgspn">
+                    	<?php  _e( 'Float them on the page', 'ultimate-social-media-plus' ); ?>
+                    </span>
 				</p>
                 <?php
                 if($option8['sfsi_plus_float_on_page'] == "yes")
@@ -68,53 +78,87 @@
 					<ul class="sfsiplus_tab_3_icns flthmonpg">
                         <li>
                             <input name="sfsi_plus_float_page_position" <?php echo ( $option8['sfsi_plus_float_page_position']=='top-left') ?  'checked="true"' : '' ;?> type="radio" value="top-left" class="styled"  />
-                            <span class="sfsi_flicnsoptn3 sfsioptntl">Top left</span>
+                            <span class="sfsi_flicnsoptn3 sfsioptntl">
+                           		<?php  _e( 'Top left', 'ultimate-social-media-plus' ); ?>
+                            </span>
                             <label><img src="<?php echo SFSI_PLUS_PLUGURL;?>images/top_left.png" /></label>
                         </li>
                         <li>
                             <input name="sfsi_plus_float_page_position" <?php echo ( $option8['sfsi_plus_float_page_position']=='top-right') ?  'checked="true"' : '' ;?> type="radio" value="top-right" class="styled"  />
-                            <span class="sfsi_flicnsoptn3 sfsioptntr">Top right</span>
+                            <span class="sfsi_flicnsoptn3 sfsioptntr">
+                            	<?php  _e( 'Top right', 'ultimate-social-media-plus' ); ?>
+                            </span>
                             <label><img src="<?php echo SFSI_PLUS_PLUGURL;?>images/top_right.png" /></label>
                         </li>
                         <li>
                             <input name="sfsi_plus_float_page_position" <?php echo ( $option8['sfsi_plus_float_page_position']=='center-left') ?  'checked="true"' : '' ;?> type="radio" value="center-left" class="styled"  />
-                            <span class="sfsi_flicnsoptn3 sfsioptncl">Center left</span>
+                            <span class="sfsi_flicnsoptn3 sfsioptncl">
+                            	<?php  _e( 'Center left', 'ultimate-social-media-plus' ); ?>
+                            </span>
                             <label><img src="<?php echo SFSI_PLUS_PLUGURL;?>images/center_left.png" /></label>
                         </li>
                         <li>
                             <input name="sfsi_plus_float_page_position" <?php echo ( $option8['sfsi_plus_float_page_position']=='center-right') ?  'checked="true"' : '' ;?> type="radio" value="center-right" class="styled"  />
-                            <span class="sfsi_flicnsoptn3 sfsioptncr">Center right</span>
+                            <span class="sfsi_flicnsoptn3 sfsioptncr">
+                            	<?php  _e( 'Center right', 'ultimate-social-media-plus' ); ?>
+                            </span>
                             <label><img src="<?php echo SFSI_PLUS_PLUGURL;?>images/center_right.png" /></label>
                         </li>
                         <li>
                             <input name="sfsi_plus_float_page_position" <?php echo ( $option8['sfsi_plus_float_page_position']=='bottom-left') ?  'checked="true"' : '' ;?> type="radio" value="bottom-left" class="styled"  />
-                            <span class="sfsi_flicnsoptn3 sfsioptnbl">Bottom left</span>
+                            <span class="sfsi_flicnsoptn3 sfsioptnbl">
+                            	<?php  _e( 'Bottom left', 'ultimate-social-media-plus' ); ?>
+                            </span>
                             <label><img src="<?php echo SFSI_PLUS_PLUGURL;?>images/bottom_left.png" /></label>
                         </li>
                         <li>
                             <input name="sfsi_plus_float_page_position" <?php echo ( $option8['sfsi_plus_float_page_position']=='bottom-right') ?  'checked="true"' : '' ;?> type="radio" value="bottom-right" class="styled"  />
-                            <span class="sfsi_flicnsoptn3 sfsioptnbr">Bottom right</span>
+                            <span class="sfsi_flicnsoptn3 sfsioptnbr">
+                            	<?php  _e( 'Bottom right', 'ultimate-social-media-plus' ); ?>
+                            </span>
                             <label><img src="<?php echo SFSI_PLUS_PLUGURL;?>images/bottom_right.png" /></label>
                         </li>
                     </ul>
                     <div style="width: 88%; float: left; margin:25px 0 0 47px">
-                        <h4>Margin From :</h4>
+                    	<h4>
+                       		<?php  _e( 'Margin From :', 'ultimate-social-media-plus' ); ?>
+                        </h4>
                         <ul class="sfsi_plus_floaticon_margin_sec">
                             <li>
-                                <label>Top :</label>
-                                <input name="sfsi_plus_icons_floatMargin_top" type="text" value="<?php echo ($option8['sfsi_plus_icons_floatMargin_top']!='') ?  $option8['sfsi_plus_icons_floatMargin_top'] : '' ;?>" /><ins>Pixels</ins>
+                                <label>
+                                	<?php  _e( 'Top :', 'ultimate-social-media-plus' ); ?>
+                                </label>
+                                <input name="sfsi_plus_icons_floatMargin_top" type="text" value="<?php echo ($option8['sfsi_plus_icons_floatMargin_top']!='') ?  $option8['sfsi_plus_icons_floatMargin_top'] : '' ;?>" />
+                                <ins>
+                                	<?php  _e( 'Pixels', 'ultimate-social-media-plus' ); ?>
+                                </ins>
                             </li>
                             <li>
-                                <label>Bottom :</label>
-                                <input name="sfsi_plus_icons_floatMargin_bottom" type="text" value="<?php echo ($option8['sfsi_plus_icons_floatMargin_bottom'] != '') ?  $option8['sfsi_plus_icons_floatMargin_bottom'] : '' ;?>" /><ins>Pixels</ins>
+                                <label>
+                                	<?php  _e( 'Bottom :', 'ultimate-social-media-plus' ); ?>
+                                </label>
+                                <input name="sfsi_plus_icons_floatMargin_bottom" type="text" value="<?php echo ($option8['sfsi_plus_icons_floatMargin_bottom'] != '') ?  $option8['sfsi_plus_icons_floatMargin_bottom'] : '' ;?>" />
+                                <ins>
+                                	<?php  _e( 'Pixels', 'ultimate-social-media-plus' ); ?>
+                                </ins>
                             </li>
                             <li>
-                                <label>Left :</label>
-                                <input name="sfsi_plus_icons_floatMargin_left" type="text" value="<?php echo ($option8['sfsi_plus_icons_floatMargin_left']!='') ?  $option8['sfsi_plus_icons_floatMargin_left'] : '' ;?>" /><ins>Pixels</ins>
+                                <label>
+                             		<?php  _e( 'Left :', 'ultimate-social-media-plus' ); ?>
+                                </label>
+                                <input name="sfsi_plus_icons_floatMargin_left" type="text" value="<?php echo ($option8['sfsi_plus_icons_floatMargin_left']!='') ?  $option8['sfsi_plus_icons_floatMargin_left'] : '' ;?>" />
+                                <ins>
+                              		<?php  _e( 'Pixels', 'ultimate-social-media-plus' ); ?>
+                                </ins>
                             </li>
                             <li>
-                                <label>Right :</label>
-                                <input name="sfsi_plus_icons_floatMargin_right" type="text" value="<?php echo ($option8['sfsi_plus_icons_floatMargin_right']!='') ?  $option8['sfsi_plus_icons_floatMargin_right'] : '' ;?>" /><ins>Pixels</ins>
+                                <label>
+                                	<?php  _e( 'Right :', 'ultimate-social-media-plus' ); ?>
+                                </label>
+                                <input name="sfsi_plus_icons_floatMargin_right" type="text" value="<?php echo ($option8['sfsi_plus_icons_floatMargin_right']!='') ?  $option8['sfsi_plus_icons_floatMargin_right'] : '' ;?>" />
+                                <ins>
+                                	<?php  _e( 'Pixels', 'ultimate-social-media-plus' ); ?>
+                                </ins>
                             </li>
                         </ul>
                     </div>
@@ -127,7 +171,9 @@
 			<div class="radio_section tb_4_ck" onclick="checkforinfoslction(this);"><input name="sfsi_plus_place_item_manually" <?php echo ($option8['sfsi_plus_place_item_manually']=='yes') ?  'checked="true"' : '' ;?>  id="sfsi_plus_place_item_manually" type="checkbox" value="yes" class="styled"  /></div>
 			<div class="sfsiplus_right_info">
 				<p>
-					<span class="sfsiplus_toglepstpgspn">Place them manually</span><br>
+					<span class="sfsiplus_toglepstpgspn">
+                    	<?php  _e( 'Place them manually', 'ultimate-social-media-plus' ); ?>
+                    </span><br>
                     <?php
                     if($option8['sfsi_plus_place_item_manually']=='yes')
 					{
@@ -138,7 +184,20 @@
 						$label_style = 'style="font-size: 15px;"';
 					}
 					?>
-					<label class="sfsiplus_sub-subtitle ckckslctn" <?php echo $label_style;?>>Place <label class="sfsi_ckckslctnlbl"><</label><label class="sfsi_ckckslctnlbl">?</label><label class="sfsi_ckckslctnlbl">php echo DISPLAY_ULTIMATE_PLUS(); </label><label class="sfsi_ckckslctnlbl">?</label><label class="sfsi_ckckslctnlbl">></label> in your theme codes or use the shortcode <b>[DISPLAY_ULTIMATE_PLUS]</b> to display them wherever you want.</label>
+					<label class="sfsiplus_sub-subtitle ckckslctn" <?php echo $label_style;?>>
+                    	<?php  _e( 'Place', 'ultimate-social-media-plus' ); ?>
+                    <label class="sfsi_ckckslctnlbl"><</label><label class="sfsi_ckckslctnlbl">?</label><label class="sfsi_ckckslctnlbl">
+                    	php echo DISPLAY_ULTIMATE_PLUS();
+                    	<?php  //_e( 'php echo DISPLAY_ULTIMATE_PLUS();', 'ultimate-social-media-plus' ); ?>
+                    
+                    </label><label class="sfsi_ckckslctnlbl">?</label><label class="sfsi_ckckslctnlbl">></label> 
+                    	<?php  _e( 'in your theme codes or use the shortcode', 'ultimate-social-media-plus' ); ?>
+                    	<b>
+                    		[DISPLAY_ULTIMATE_PLUS]
+							<?php  //_e( '[DISPLAY_ULTIMATE_PLUS]', 'ultimate-social-media-plus' ); ?>
+                    	</b> 
+                    	<?php  _e( 'to display them wherever you want.', 'ultimate-social-media-plus' ); ?>
+                    </label>
 				</p>
 			</div>
 		</li>
@@ -148,7 +207,9 @@
 			<div class="radio_section tb_4_ck" onclick="sfsiplus_toggleflotpage(this);"><input name="sfsi_plus_show_item_onposts" <?php echo ($option8['sfsi_plus_show_item_onposts']=='yes') ?  'checked="true"' : '' ;?>  id="sfsi_plus_show_item_onposts" type="checkbox" value="yes" class="styled"  /></div>
 			<div class="sfsiplus_right_info">
 				<p>
-					<span class="sfsiplus_toglepstpgspn">Show them before or after posts</span>
+					<span class="sfsiplus_toglepstpgspn">
+                    	<?php  _e( 'Show them before or after posts', 'ultimate-social-media-plus' ); ?>
+                    </span>
                     <br>
                     <?php
 					if($option8['sfsi_plus_show_item_onposts'] != "yes")
@@ -160,24 +221,39 @@
 						$style_float = "style='font-size: 15px;'";
 					}
 					?>
-                    <label class="sfsiplus_sub-subtitle sfsiplus_toglpstpgsbttl" <?php echo $style_float;?>>Here you have two options:</label>
+                    <label class="sfsiplus_sub-subtitle sfsiplus_toglpstpgsbttl" <?php echo $style_float;?>>
+                    	<?php  _e( 'Here you have two options:', 'ultimate-social-media-plus' ); ?>
+                    </label>
 				</p>
 				
 				<ul class="sfsiplus_tab_3_icns sfsiplus_shwthmbfraftr" <?php echo ($option8['sfsi_plus_show_item_onposts'] != "yes")? 'style="display: none";' : '' ;?>>
 					<li onclick="sfsiplus_togglbtmsection('sfsiplus_toggleonlystndrshrng', 'sfsiplus_toggledsplyitemslctn', this);" class="clckbltglcls">
 						<input name="sfsi_plus_display_button_type" <?php echo ( $option8['sfsi_plus_display_button_type']=='standard_buttons') ?  'checked="true"' : '' ;?> type="radio" value="standard_buttons" class="styled"  />
-						<label class="labelhdng4">Display rectangle icons</label>
+						<label class="labelhdng4">
+                        	<?php  _e( 'Display rectangle icons', 'ultimate-social-media-plus' ); ?>
+                        </label>
                     </li>
                     <li onclick="sfsiplus_togglbtmsection('sfsiplus_toggledsplyitemslctn', 'sfsiplus_toggleonlystndrshrng', this);" class="clckbltglcls">
 						<input name="sfsi_plus_display_button_type" <?php echo ( $option8['sfsi_plus_display_button_type']=='normal_button') ?  'checked="true"' : '' ;?> type="radio" value="normal_button" class="styled"  />
-						<label class="labelhdng4">Display the icons I selected above</label>
+						<label class="labelhdng4">
+                        	<?php  _e( 'Display the icons I selected above', 'ultimate-social-media-plus' ); ?>
+                        </label>
                     </li>
 					<li class="sfsiplus_toggleonlystndrshrng">
                     	<?php if ($option8['sfsi_plus_display_button_type']=='standard_buttons'): $display = "display:block"; else:  $display = "display:none"; endif;?>
 						<div class="radiodisplaysection" style="<?php echo $display; ?>">
 
-                            <p class="cstmdisplaysharingtxt cstmdisextrpdng">Rectangle icons spell out the <code>«</code><strong>call to action</strong><code>»</code> which increases chances that visitors do it.</p>
-							<p class="cstmdisplaysharingtxt">Select the icons you want to show:</p>
+                            <p class="cstmdisplaysharingtxt cstmdisextrpdng">
+                            	<?php  _e( 'Rectangle icons spell out the', 'ultimate-social-media-plus' ); ?>
+                            	<code>«</code>
+                                <strong>
+								<?php  _e( 'call to action', 'ultimate-social-media-plus' ); ?></strong>
+                                <code>»</code> 
+                            	<?php  _e( 'which increases chances that visitors do it.', 'ultimate-social-media-plus' ); ?>
+                            </p>
+							<p class="cstmdisplaysharingtxt">
+                            	<?php  _e( 'Select the icons you want to show:', 'ultimate-social-media-plus' ); ?>
+                            </p>
                             <div class="social_icon_like1 cstmdsplyulwpr">
                                 <ul>
                                     <li>
@@ -213,7 +289,8 @@
                                             <span style="display: none;">18k</span>
                                         </a>
                                         <p style="width:auto;float:left;padding: 0px!important;border:0px !important;">
-                                        	(may impact loading speed)
+                                        	
+                                            <?php  _e( '(may impact loading speed)', 'ultimate-social-media-plus' ); ?>
                                         </p>
                                     </li>
 								</ul>	
@@ -226,7 +303,14 @@
                                 <li>3. Share-button covers all other platforms for sharing</li>
                             </ul>-->
                             <div class="options">
-                                <label>Do you want to display the counts?</label><div class="field"><select name="sfsi_plus_icons_DisplayCounts" id="sfsi_plus_icons_DisplayCounts" class="styled"><option value="yes" <?php echo ($option8['sfsi_plus_icons_DisplayCounts']=='yes') ?  'selected="true"' : '' ;?>>YES</option><option value="no" <?php echo ($option8['sfsi_plus_icons_DisplayCounts']=='no') ?  'selected="true"' : '' ;?>>NO</option></select></div>
+                                <label>
+                                	<?php  _e( 'Do you want to display the counts?', 'ultimate-social-media-plus' ); ?>
+                                </label><div class="field">
+                                <select name="sfsi_plus_icons_DisplayCounts" id="sfsi_plus_icons_DisplayCounts" class="styled"><option value="yes" <?php echo ($option8['sfsi_plus_icons_DisplayCounts']=='yes') ?  'selected="true"' : '' ;?>>
+                                	<?php  _e( 'YES', 'ultimate-social-media-plus' ); ?>
+                                </option><option value="no" <?php echo ($option8['sfsi_plus_icons_DisplayCounts']=='no') ?  'selected="true"' : '' ;?>>
+                                	<?php  _e( 'NO', 'ultimate-social-media-plus' ); ?>
+                                </option></select></div>
                             </div>
 					  </div>
                     </li>
@@ -234,8 +318,19 @@
 					<li class="sfsiplus_toggledsplyitemslctn">
                     	<?php if ($option8['sfsi_plus_display_button_type']=='normal_button'): $display = "display:block"; else:  $display = "display:none"; endif;?>
 						<div class="row radiodisplaysection" style="<?php echo $display; ?>">
-							<h4>Size &amp; spacing of your icons</h4>
-							<div class="icons_size"><span>Size:</span><input name="sfsi_plus_post_icons_size" value="<?php echo ($option8['sfsi_plus_post_icons_size']!='') ?  $option8['sfsi_plus_post_icons_size'] : '' ;?>" type="text" /><ins>pixels wide &amp; tall</ins> <span class="last">Spacing between icons:</span><input name="sfsi_plus_post_icons_spacing" type="text" value="<?php echo ($option8['sfsi_plus_post_icons_spacing']!='') ?  $option8['sfsi_plus_post_icons_spacing'] : '' ;?>" /><ins>Pixels</ins></div>
+							<h4>
+                            	<?php  _e( 'Size &amp; spacing of your icons', 'ultimate-social-media-plus' ); ?>
+                            </h4>
+							<div class="icons_size">
+                            <span>
+                            	<?php  _e( 'Size:', 'ultimate-social-media-plus' ); ?>
+                            </span><input name="sfsi_plus_post_icons_size" value="<?php echo ($option8['sfsi_plus_post_icons_size']!='') ?  $option8['sfsi_plus_post_icons_size'] : '' ;?>" type="text" /><ins>
+                           		<?php  _e( 'pixels wide &amp; tall', 'ultimate-social-media-plus' ); ?>
+                            </ins> <span class="last">
+                            	<?php  _e( 'Spacing between icons:', 'ultimate-social-media-plus' ); ?>
+                            </span><input name="sfsi_plus_post_icons_spacing" type="text" value="<?php echo ($option8['sfsi_plus_post_icons_spacing']!='') ?  $option8['sfsi_plus_post_icons_spacing'] : '' ;?>" /><ins>
+                            	<?php  _e( 'Pixels', 'ultimate-social-media-plus' ); ?>
+                            </ins></div>
 						</div>
                     </li>
                       
@@ -244,16 +339,24 @@
                     
                     <!--Display them options-->
                     <div class="options sfsipluspstvwpr">
-                        <label class="first chcklbl">Display them: </label>
-                        <label class="seconds chcklbl labelhdng4">On Post Pages </label>
+                        <label class="first chcklbl">
+                        	<?php  _e( 'Display them:', 'ultimate-social-media-plus' ); ?>
+                        </label>
+                        <label class="seconds chcklbl labelhdng4">
+                        	<?php  _e( 'On Post Pages', 'ultimate-social-media-plus' ); ?>
+                        </label>
                         <div class="chckwpr">
                             <div class="snglchckcntr">
                                 <div class="radio_section tb_4_ck"><input name="sfsi_plus_display_before_posts" <?php echo ($option8['sfsi_plus_display_before_posts']=='yes') ?  'checked="true"' : '' ;?>  id="sfsi_plus_display_before_posts" type="checkbox" value="yes" class="styled"  /></div>
-                                <div class="sfsiplus_right_info">Before posts</div>
+                                <div class="sfsiplus_right_info">
+                                	<?php  _e( 'Before posts', 'ultimate-social-media-plus' ); ?>
+                                </div>
                             </div>
                             <div class="snglchckcntr">
                                 <div class="radio_section tb_4_ck"><input name="sfsi_plus_display_after_posts" <?php echo ($option8['sfsi_plus_display_after_posts']=='yes') ?  'checked="true"' : '' ;?>  id="sfsi_plus_display_after_posts" type="checkbox" value="yes" class="styled"  /></div>
-                                <div class="sfsiplus_right_info">After posts</div>
+                                <div class="sfsiplus_right_info">
+                                	<?php  _e( 'After posts', 'ultimate-social-media-plus' ); ?>
+                                </div>
                             </div>
                             <!--<div class="snglchckcntr">
                                 <div class="radio_section tb_4_ck"><input name="sfsi_plus_display_on_postspage" <?php //echo ($option8['sfsi_plus_display_on_postspage']=='yes') ?  'checked="true"' : '' ;?>  id="sfsi_plus_display_on_postspage" type="checkbox" value="yes" class="styled"  /></div>
@@ -268,15 +371,21 @@
                     
                     
                     <div class="options sfsipluspstvwpr">
-                        <label class="seconds chcklbl labelhdng4">On Homepage</label>
+                        <label class="seconds chcklbl labelhdng4">
+                        	<?php  _e( 'On Homepage', 'ultimate-social-media-plus' ); ?>
+                        </label>
                         <div class="chckwpr">
                             <div class="snglchckcntr">
                                 <div class="radio_section tb_4_ck"><input name="sfsi_plus_display_before_blogposts" <?php echo ($option8['sfsi_plus_display_before_blogposts']=='yes') ?  'checked="true"' : '' ;?>  id="sfsi_plus_display_before_blogposts" type="checkbox" value="yes" class="styled"  /></div>
-                                <div class="sfsiplus_right_info">Before posts</div>
+                                <div class="sfsiplus_right_info">
+                                	<?php  _e( 'Before posts', 'ultimate-social-media-plus' ); ?>
+                                </div>
                             </div>
                             <div class="snglchckcntr">
                                 <div class="radio_section tb_4_ck"><input name="sfsi_plus_display_after_blogposts" <?php echo ($option8['sfsi_plus_display_after_blogposts']=='yes') ?  'checked="true"' : '' ;?>  id="sfsi_plus_display_after_blogposts" type="checkbox" value="yes" class="styled"  /></div>
-                                <div class="sfsiplus_right_info">After posts</div>
+                                <div class="sfsiplus_right_info">
+                                	<?php  _e( 'After posts', 'ultimate-social-media-plus' ); ?>
+                                </div>
                             </div>
                             <!--<div class="snglchckcntr">
                                 <div class="radio_section tb_4_ck"><input name="sfsi_plus_display_on_postspage" <?php //echo ($option8['sfsi_plus_display_on_postspage']=='yes') ?  'checked="true"' : '' ;?>  id="sfsi_plus_display_on_postspage" type="checkbox" value="yes" class="styled"  /></div>
@@ -293,10 +402,25 @@
                     
                     
                     <div class="options shareicontextfld">
-                        <label class="first">Text to appear before the sharing icons:</label><input name="sfsi_plus_textBefor_icons" type="text" value="<?php echo ($option8['sfsi_plus_textBefor_icons']!='') ?  $option8['sfsi_plus_textBefor_icons'] : '' ; ?>" />
+                        <label class="first">
+                        	<?php  _e( 'Text to appear before the sharing icons:', 'ultimate-social-media-plus' ); ?>
+                        </label><input name="sfsi_plus_textBefor_icons" type="text" value="<?php echo ($option8['sfsi_plus_textBefor_icons']!='') ?  $option8['sfsi_plus_textBefor_icons'] : '' ; ?>" />
                     </div>
                     <div class="options">
-                        <label>Alignment of share icons: </label><div class="field"><select name="sfsi_plus_icons_alignment" id="sfsi_plus_icons_alignment" class="styled"><option value="left" <?php echo ($option8['sfsi_plus_icons_alignment']=='left') ?  'selected="selected"' : '' ;?>>Left</option><option value="right" <?php echo ($option8['sfsi_plus_icons_alignment']=='right') ?  'selected="selected"' : '' ;?>>Right</option><option value="center" <?php echo ($option8['sfsi_plus_icons_alignment']=='center') ?  'selected="selected"' : '' ;?>>Center</option></select></div>
+                        <label>
+                         	<?php  _e( 'Alignment of share icons:', 'ultimate-social-media-plus' ); ?>
+                        </label><div class="field">
+                        <select name="sfsi_plus_icons_alignment" id="sfsi_plus_icons_alignment" class="styled">
+                        	<option value="left" <?php echo ($option8['sfsi_plus_icons_alignment']=='left') ?  'selected="selected"' : '' ;?>>
+                        		<?php  _e( 'Left', 'ultimate-social-media-plus' ); ?>
+                        	</option>
+                            <option value="right" <?php echo ($option8['sfsi_plus_icons_alignment']=='right') ?  'selected="selected"' : '' ;?>>
+                        		<?php  _e( 'Right', 'ultimate-social-media-plus' ); ?>
+                        	</option>
+                            <option value="center" <?php echo ($option8['sfsi_plus_icons_alignment']=='center') ?  'selected="selected"' : '' ;?>>
+                        		<?php  _e( 'Center', 'ultimate-social-media-plus' ); ?>
+                        	</option>
+                        </select></div>
                     </div>
                     <!--<div class="options">
                         <label>Do you want to display the counts?</label><div class="field"><select name="sfsi_plus_icons_DisplayCounts" id="sfsi_plus_icons_DisplayCounts" class="styled"><option value="yes" <?php //echo ($option8['sfsi_plus_icons_DisplayCounts']=='yes') ?  'selected="true"' : '' ;?>>YES</option><option value="no" <?php //echo ($option8['sfsi_plus_icons_DisplayCounts']=='no') ?  'selected="true"' : '' ;?>>NO</option></select></div>
@@ -313,11 +437,15 @@
 	<div class="save_button">
        <img src="<?php echo SFSI_PLUS_PLUGURL ?>images/ajax-loader.gif" class="loader-img" />
        <?php  $nonce = wp_create_nonce("update_plus_step8"); ?>
-        <a  href="javascript:;" id="sfsi_plus_save8" title="Save" data-nonce="<?php echo $nonce;?>">Save</a>
+        <a  href="javascript:;" id="sfsi_plus_save8" title="Save" data-nonce="<?php echo $nonce;?>">
+        	<?php  _e( 'Save', 'ultimate-social-media-plus' ); ?>
+        </a>
   	</div>
     <!-- END SAVE BUTTON SECTION   -->
 	
-    <a class="sfsiColbtn closeSec" href="javascript:;">Collapse area</a>
+    <a class="sfsiColbtn closeSec" href="javascript:;">
+    	<?php  _e( 'Collapse area', 'ultimate-social-media-plus' ); ?>
+    </a>
 	<label class="closeSec"></label>
     
 	<!-- ERROR AND SUCCESS MESSAGE AREA-->

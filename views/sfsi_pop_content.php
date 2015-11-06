@@ -13,7 +13,9 @@ define('rss_readmore_text2', $rss_readmore_text2);
 <div class="pop-overlay read-overlay" >
     <div class="pop_up_box sfsi_pop_up"  >
         <img src="<?php echo SFSI_PLUS_PLUGURL; ?>images/close.jpg" id="close_popup" class="sfsicloseBtn" />
-        <h4 id="readmore_text">Note: Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</h4>
+        <h4 id="readmore_text">
+        	<?php  _e( "Note: Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.", 'ultimate-social-media-plus' ); ?>
+        </h4>
 </div>
 </div>
 
@@ -25,11 +27,30 @@ define('rss_readmore_text2', $rss_readmore_text2);
             <img src="<?php echo SFSI_PLUS_PLUGURL; ?>images/close.jpg" id="close_Uploadpopup" class="sfsicloseBtn" />
 	    <div class="sfsi_uploader">
             <div class="sfsi_popupcntnr">
-            	<h3>Steps:</h3>
+            	<h3>
+               		<?php  _e( 'Steps:', 'ultimate-social-media-plus' ); ?>
+                </h3>
                 <ul class="flwstep">
-                	<li>1. Click on <span> << </span> <span> Upload </span> <span> >> </span> below</li>
-                    <li>2. Upload the icon into the media gallery</li>
-					<li>3. Click on  <span> << </span> <span> Insert into post </span> <span> >> </span> </li>
+                	<li>
+                    	<?php  _e( '1. Click on ', 'ultimate-social-media-plus' ); ?>
+                    	<span> << </span> 
+                        <span>
+                            <?php  _e( 'Upload', 'ultimate-social-media-plus' ); ?>
+                        </span> 
+                    	<span> >> </span>
+                      	<?php  _e( 'below', 'ultimate-social-media-plus' ); ?>
+                    </li>
+                    <li>
+                    	<?php  _e( '2. Upload the icon into the media gallery', 'ultimate-social-media-plus' ); ?>
+                    </li>
+					<li>
+                    	<?php  _e( '3. Click on', 'ultimate-social-media-plus' ); ?>
+                    	<span> << </span> 
+                        <span>
+                            <?php  _e( 'Insert into post ', 'ultimate-social-media-plus' ); ?>
+                        </span>
+                        <span> >> </span> 
+                    </li>
                 </ul>    
                 <div class="upldbtn"><input name=""  type="button" value="Upload" class="upload_butt" onclick="upload_image_icon(this)" /></div>
             </div>
@@ -76,7 +97,9 @@ define('rss_readmore_text2', $rss_readmore_text2);
 <div class="fb-overlay read-overlay fbex-s2" >
     <div class="pop_up_box_ex sfsi_pop_up adPopWidth" >
         <img src="<?php echo SFSI_PLUS_PLUGURL; ?>images/close.jpg" id="close_popup" class="sfsicloseBtn" />
-	    <h4 id="readmore_text">Move over the Facebook-icon… </h4>
+	    <h4 id="readmore_text">
+        	<?php  _e( 'Move over the Facebook-icon…', 'ultimate-social-media-plus' ); ?>
+        </h4>
     
         <div class="adminTooltip" >
            <a href="javascript:"><img width="51" class="sfsi_wicon" src="<?php echo SFSI_PLUS_PLUGURL; ?>images/facebook.png" title="facebook" alt="facebook" /></a>
@@ -97,7 +120,9 @@ define('rss_readmore_text2', $rss_readmore_text2);
 <div class="pop-overlay read-overlay athis-s1" >
     <div class="pop_up_box sfsi_pop_up adPopWidth"  >
         <img src="<?php echo SFSI_PLUS_PLUGURL; ?>images/close.jpg" id="close_popup" class="sfsicloseBtn" />
-    	<h4 id="readmore_text">Move over the “+ icon” to see the sharing options</h4>
+    	<h4 id="readmore_text">
+        	<?php  _e( 'Move over the “+ icon” to see the sharing optionss', 'ultimate-social-media-plus' ); ?>
+        </h4>
     	<div style="margin: 0px auto;">
 			<script type="text/javascript">
 				var addthis_config = {pubid: "YOUR-PROFILE-ID"}
@@ -123,7 +148,9 @@ define('rss_readmore_text2', $rss_readmore_text2);
 <div class="pop-overlay read-overlay twex-s2" >
     <div class="pop_up_box_ex sfsi_pop_up adPopWidth" >
         <img src="<?php echo SFSI_PLUS_PLUGURL; ?>images/close.jpg" id="close_popup" class="sfsicloseBtn" />
-    	<h4 id="readmore_text">Move over the Twiiter-icon… </h4>
+    	<h4 id="readmore_text">
+        	<?php  _e( 'Move over the Twiiter-icon…', 'ultimate-social-media-plus' ); ?>
+        </h4>
     
         <div class="adminTooltip" >
         	<a href="javascript:"><img width="51" class="sfsi_wicon" src="<?php echo SFSI_PLUS_PLUGURL; ?>images/twitter.png" title="Twitter" alt="Twitter" /></a>
@@ -146,7 +173,9 @@ define('rss_readmore_text2', $rss_readmore_text2);
 <div class="pop-overlay read-overlay googlex-s2"  style="display: block;z-index: -1;opacity: 0;">
     <div class="pop_up_box_ex sfsi_pop_up adPopWidth" style="display: block;" >
         <img src="<?php echo SFSI_PLUS_PLUGURL; ?>images/close.jpg" id="close_popup" class="sfsicloseBtn" />
-    	<h4 id="readmore_text">Move over the Google+ icon… </h4>
+    	<h4 id="readmore_text">
+        	<?php  _e( 'Move over the Google+ icon…', 'ultimate-social-media-plus' ); ?>
+        </h4>
     
         <div class="adminTooltip" >
         	<a href="javascript:"><img width="51" class="sfsi_wicon" src="<?php echo SFSI_PLUS_PLUGURL; ?>images/google_plus.png" title="google+" alt="google"/></a>
@@ -170,7 +199,9 @@ define('rss_readmore_text2', $rss_readmore_text2);
 <div class="pop-overlay read-overlay ytex-s2" >
     <div class="pop_up_box_ex sfsi_pop_up adPopWidth" >
         <img src="<?php echo SFSI_PLUS_PLUGURL; ?>images/close.jpg" id="close_popup" class="sfsicloseBtn" />
-    	<h4 id="readmore_text">Move over the YouTube-icon… </h4>
+    	<h4 id="readmore_text">
+        	<?php  _e( 'Move over the YouTube-icon…', 'ultimate-social-media-plus' ); ?>
+        </h4>
     	
         <div class="adminTooltip" >
         	<a href="javascript:"><img width="51" class="sfsi_wicon" src="<?php echo SFSI_PLUS_PLUGURL; ?>images/youtube.png" title="youtube" alt="youtube" /></a>
@@ -191,7 +222,9 @@ $pin_url=($option2['sfsi_plus_pinterest_pageUrl']!='') ?  $option2['sfsi_plus_pi
 <div class="pop-overlay read-overlay pinex-s2" >
     <div class="pop_up_box_ex sfsi_pop_up adPopWidth" >
         <img src="<?php echo SFSI_PLUS_PLUGURL; ?>images/close.jpg" id="close_popup" class="sfsicloseBtn" />
-    	<h4 id="readmore_text">Move over the Pinterest-icon… </h4>
+    	<h4 id="readmore_text">
+        	<?php  _e( 'Move over the Pinterest-icon… ', 'ultimate-social-media-plus' ); ?>
+        </h4>
     
      	<div class="adminTooltip" >
         <a href="javascript:"><img width="51" class="sfsi_wicon" src="<?php echo SFSI_PLUS_PLUGURL; ?>images/pinterest.png" title="pinterest" alt="pinterest" /></a>
@@ -215,7 +248,9 @@ $pin_url=($option2['sfsi_plus_pinterest_pageUrl']!='') ?  $option2['sfsi_plus_pi
 <div class="pop-overlay read-overlay linkex-s2" style="display: block;z-index: -1;opacity: 0;" >
     <div class="pop_up_box_ex sfsi_pop_up adPopWidth" >
     	<img src="<?php echo SFSI_PLUS_PLUGURL; ?>images/close.jpg" id="close_popup" class="sfsicloseBtn" />
-    	<h4 id="readmore_text">Move over the LinkedIn-icon… </h4>
+    	<h4 id="readmore_text">
+        	<?php  _e( 'Move over the LinkedIn-icon…', 'ultimate-social-media-plus' ); ?>
+        </h4>
         <div class="adminTooltip" >
         	<a href="javascript:"><img width="51" class="sfsi_wicon" src="<?php echo SFSI_PLUS_PLUGURL;?>images/linked_in.png" title="LinkedIn" alt="LinkedIn"/></a>
         	<div class="sfsi_tool_tip_2 sfsi_tool_tip_2_inr linkedin_tool_bdr"  style=" width: 99px; margin-left: -68.5px;">
@@ -235,7 +270,9 @@ $pin_url=($option2['sfsi_plus_pinterest_pageUrl']!='') ?  $option2['sfsi_plus_pi
 <div class="pop-overlay read-overlay share-s2" >
     <div class="pop_up_box sfsi_pop_up adPopWidth" >
         <img src="<?php echo SFSI_PLUS_PLUGURL; ?>images/close.jpg" id="close_popup" class="sfsicloseBtn" />
-    	<h4 id="readmore_text">Move over the “+ icon” to see the sharing options</h4>
+    	<h4 id="readmore_text">
+        	<?php  _e( 'Move over the “+ icon” to see the sharing options', 'ultimate-social-media-plus' ); ?>
+        </h4>
  	    <div style="float: right;opacity: 1;position: relative;right: 215px;top: 10px;width: 52px; text-align: center;" ><a alt="share"  href="http://www.addthis.com/bookmark.php?v=250"  effect="" class="addthis_button"><img width="51" class="sfsi_wicon" src="<?php echo SFSI_PLUS_PLUGURL; ?>images/share.png" title="share" alt="share" /></a>
     </div>
   </div>
@@ -247,28 +284,60 @@ $pin_url=($option2['sfsi_plus_pinterest_pageUrl']!='') ?  $option2['sfsi_plus_pi
 
 <div class="pop-overlay read-overlay demail-1" >
     <div class="pop_up_box sfsi_pop_up" >
-       <h4>Note: Also if you already offer a newsletter it makes sense to offer this option too, because it will get you <span class="mediam_txt">more readers</span>, as explained <a href="http://www.specificfeeds.com/rss" target="_new" style="color:#5A6570;display: inline;text-decoration:underline">here</a>. </h4>
-       <div class="button"><a href="javascript:;" class="hideemailpop" title="Ok, keep it active for the time being,I want to see how it works">Ok, keep it active for the time being, <br />
-I want to see how it works</a></div>
-       <a href="javascript:;" id="deac_email2" title="Deactivate it">Deactivate it</a>
+       <h4>
+       		<?php  _e( 'Note: Also if you already offer a newsletter it makes sense to offer this option too, because it will get you ', 'ultimate-social-media-plus' ); ?>
+       		<span class="mediam_txt">
+           		<?php  _e( 'more readers', 'ultimate-social-media-plus' ); ?>
+       		</span>
+            <?php  _e( ', as explained', 'ultimate-social-media-plus' ); ?>
+           	<a href="http://www.specificfeeds.com/rss" target="_new" style="color:#5A6570;display: inline;text-decoration:underline">
+                <?php  _e( 'here', 'ultimate-social-media-plus' ); ?>
+           	</a>. 
+       </h4>
+       <div class="button">
+           <a href="javascript:;" class="hideemailpop" title="Ok, keep it active for the time being,I want to see how it works">
+                <?php  _e( 'Ok, keep it active for the time being,', 'ultimate-social-media-plus' ); ?>
+                <br />
+                <?php  _e( 'I want to see how it works', 'ultimate-social-media-plus' ); ?>
+            </a>
+       </div>
+       <a href="javascript:;" id="deac_email2" title="Deactivate it">
+              <?php  _e( 'Deactivate it', 'ultimate-social-media-plus' ); ?>
+       </a>
   </div>
 </div>
 
 <div class="pop-overlay read-overlay demail-2" >
     <div class="pop_up_box sfsi_pop_up" >
-       <h4 class="activate">Ok, fine, however for using this plugin for FREE, please support us by activating a link back to our site:</h4>
+       <h4 class="activate">
+              <?php  _e( 'Ok, fine, however for using this plugin for FREE, please support us by activating a link back to our site:', 'ultimate-social-media-plus' ); ?>
+       </h4>
 		<?php $nonce = wp_create_nonce("active_plusfooter");?>
-    <div class="button"><a href="javascript:;" class="sfsiplus_activate_footer activate" title="Ok, activate link" data-nonce="<?php echo $nonce;?>">Ok, activate link</a></div>
-<a href="javascript:;" id="deac_email3" title="Don’t activate link">Don’t activate link</a>
+        <div class="button">
+            <a href="javascript:;" class="sfsiplus_activate_footer activate" title="Ok, activate link" data-nonce="<?php echo $nonce;?>">
+                <?php  _e( 'Ok, activate link', 'ultimate-social-media-plus' ); ?>
+            </a>
+        </div>
+        <a href="javascript:;" id="deac_email3" title="Don’t activate link">
+            <?php  _e( 'Don’t activate link', 'ultimate-social-media-plus' ); ?>
+        </a>
   </div>
 </div>
 
 <div class="pop-overlay read-overlay demail-3" >
     <div class="pop_up_box sfsi_pop_up" >
-       <h4>You’re a toughie. Last try: As a minimum, could you please review this plugin (with 5 stars)? It only takes a minute. Thank you! </h4>
-	<div class="button"><a href="https://wordpress.org/support/view/plugin-reviews/ultimate-social-media-plus" target="_new" class="hidePop activate" title="Ok, Review it" >Ok, Review it</a></div>
-        <a href="javascript:;" class="hidePop" title="Don’t review and exit">Don’t review and exit</a>
-  </div>
+       <h4>
+              <?php  _e( 'You’re a toughie. Last try: As a minimum, could you please review this plugin (with 5 stars)? It only takes a minute. Thank you! ', 'ultimate-social-media-plus' ); ?>
+       </h4>
+        <div class="button">
+            <a href="https://wordpress.org/support/view/plugin-reviews/ultimate-social-media-plus" target="_new" class="hidePop activate" title="Ok, Review it" >
+                <?php  _e( 'Ok, Review it', 'ultimate-social-media-plus' ); ?>
+            </a>
+        </div>
+        <a href="javascript:;" class="hidePop" title="Don’t review and exit">
+            <?php  _e( 'Don’t review and exit', 'ultimate-social-media-plus' ); ?>
+        </a>
+      </div>
 </div> <!-- END email deactivate pop-ups -->
 
 <!--Custom Skin popup {Monad}-->
@@ -277,20 +346,36 @@ I want to see how it works</a></div>
         <img src="<?php echo SFSI_PLUS_PLUGURL; ?>images/close.jpg" id="custmskin_clspop" class="sfsicloseBtn" />
         
         <div class="cstomskins_wrpr">
-            <h3>Upload custom icons</h3>
+            <h3>
+           		<?php  _e( 'Upload custom icons', 'ultimate-social-media-plus' ); ?>
+            </h3>
             <div class="custskinmsg">
-                Here you can upload custom icons which perform the same actions as the standard icons.
-                
+            	<?php  _e( 'Here you can upload custom icons which perform the same actions as the standard icons.', 'ultimate-social-media-plus' ); ?>
                 <ul>
-                    <li>1. Click on <span> << </span> <span> Upload </span> <span> >> </span> below</li>
-                    <li>2. Upload the icon into the media gallery</li>
-                    <li>3. Click on  <span> << </span> <span> Insert into post </span> <span> >> </span> </li>
+                    <li>
+                		<?php  _e( '1. Click on ', 'ultimate-social-media-plus' ); ?>
+                    	<span> << </span>
+                     	<span> <?php  _e( 'Upload', 'ultimate-social-media-plus' ); ?> </span> 
+                     	<span> >> </span> 
+                     	<?php  _e( 'below', 'ultimate-social-media-plus' ); ?>
+                    </li>
+                    <li>
+                    	<?php  _e( '2. Upload the icon into the media gallery', 'ultimate-social-media-plus' ); ?>
+                    </li>
+                    <li>
+                     	<?php  _e( '3. Click on', 'ultimate-social-media-plus' ); ?>
+                     	<span> << </span> 
+                     	<span> <?php  _e( 'Insert into post', 'ultimate-social-media-plus' ); ?> </span> 
+                     	<span> >> </span> 
+                    </li>
                 </ul>
             </div>
             
             <ul class="cstmskin_iconlist">
             	<li>
-                	<div class="cstm_icnname">RSS</div>
+                	<div class="cstm_icnname">
+                    	<?php  _e( 'RSS', 'ultimate-social-media-plus' ); ?>
+                    </div>
                     <div class="cstmskins_btn">
                     	<?php 
 							if(get_option("plus_rss_skin"))
@@ -310,7 +395,9 @@ I want to see how it works</a></div>
                     </div>
                 </li>
                 <li>
-                	<div class="cstm_icnname">Email</div>
+                	<div class="cstm_icnname">
+                    	<?php  _e( 'Email', 'ultimate-social-media-plus' ); ?>
+                    </div>
                     <div class="cstmskins_btn">
                     	<?php 
 							if(get_option("plus_email_skin"))
@@ -330,7 +417,9 @@ I want to see how it works</a></div>
                     </div>
                 </li>
                 <li>
-                	<div class="cstm_icnname">Facebook</div>
+                	<div class="cstm_icnname">
+                    	<?php  _e( 'Facebook', 'ultimate-social-media-plus' ); ?>
+                    </div>
                     <div class="cstmskins_btn">
                     	<?php 
 							if(get_option("plus_facebook_skin"))
@@ -350,7 +439,9 @@ I want to see how it works</a></div>
                     </div>
                 </li>
                 <li>
-                	<div class="cstm_icnname">Twitter</div>
+                	<div class="cstm_icnname">
+                    	<?php  _e( 'Twitter', 'ultimate-social-media-plus' ); ?>
+                    </div>
                     <div class="cstmskins_btn">
                     	<?php 
 							if(get_option("plus_twitter_skin"))
@@ -370,7 +461,9 @@ I want to see how it works</a></div>
                     </div>
                 </li>
                 <li>
-                	<div class="cstm_icnname">Google+</div>
+                	<div class="cstm_icnname">
+                    	<?php  _e( 'Google+', 'ultimate-social-media-plus' ); ?>
+                    </div>
                     <div class="cstmskins_btn">
                     	<?php 
 							if(get_option("plus_google_skin"))
@@ -390,7 +483,9 @@ I want to see how it works</a></div>
                     </div>
 				</li>
                 <li>
-                	<div class="cstm_icnname">Share</div>
+                	<div class="cstm_icnname">
+                    	<?php  _e( 'Share', 'ultimate-social-media-plus' ); ?>
+                    </div>
                     <div class="cstmskins_btn">
                     	<?php 
 							if(get_option("plus_share_skin"))
@@ -410,7 +505,9 @@ I want to see how it works</a></div>
                     </div>
                 </li>
                 <li>
-                	<div class="cstm_icnname">Youtube</div>
+                	<div class="cstm_icnname">
+                    	<?php  _e( 'Youtube', 'ultimate-social-media-plus' ); ?>
+                    </div>
                     <div class="cstmskins_btn">
                     	<?php 
 							if(get_option("plus_youtube_skin"))
@@ -430,7 +527,9 @@ I want to see how it works</a></div>
                     </div>
                 </li>
                 <li>
-                	<div class="cstm_icnname">Linkedin</div>
+                	<div class="cstm_icnname">
+                    	<?php  _e( 'Linkedin', 'ultimate-social-media-plus' ); ?>
+                    </div>
                     <div class="cstmskins_btn">
                     	<?php 
 							if(get_option("plus_linkedin_skin"))
@@ -450,7 +549,9 @@ I want to see how it works</a></div>
                     </div>
                 </li>
                 <li>
-                	<div class="cstm_icnname">Pinterest</div>
+                	<div class="cstm_icnname">
+                    	<?php  _e( 'Pinterest', 'ultimate-social-media-plus' ); ?>
+                    </div>
                     <div class="cstmskins_btn">
                     	<?php 
 							if(get_option("plus_pintrest_skin"))
@@ -470,7 +571,9 @@ I want to see how it works</a></div>
                     </div>
                 </li>
                 <li>
-                	<div class="cstm_icnname">Instagram</div>
+                	<div class="cstm_icnname">
+                    	<?php  _e( 'Instagram', 'ultimate-social-media-plus' ); ?>
+                    </div>
                     <div class="cstmskins_btn">
                     	<?php 
 							if(get_option("plus_instagram_skin"))
@@ -492,7 +595,9 @@ I want to see how it works</a></div>
                 
             </ul>
             <div class="cstmskins_sbmt">
-            	<a href="javascript:" class="done_btn" onclick="SFSI_plus_done();">I'm done!</a> 
+            	<a href="javascript:" class="done_btn" onclick="SFSI_plus_done();">
+                	<?php  _e( "I'm done!", 'ultimate-social-media-plus' ); ?>
+                </a> 
             </div>
            
         </div>

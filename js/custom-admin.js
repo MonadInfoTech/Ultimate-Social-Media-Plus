@@ -896,7 +896,8 @@ function sfsiplus_beForeLoad()
 }
 function sfsiplus_afterLoad()
 {
-    SFSI("input").removeClass("inputError"), SFSI(".save_button >a").html("Save"), SFSI(".tab10>div.save_button >a").html("Save All Settings"), 
+    SFSI("input").removeClass("inputError"), SFSI(".save_button >a").html(object_name.Sa_ve), 
+	SFSI(".tab10>div.save_button >a").html(object_name1.Save_All_Settings), 
     SFSI(".save_button >a").css("pointer-events", "auto"), SFSI(".save_button >a").removeAttr("onclick"), 
     SFSI(".loader-img").hide();
 }
@@ -1677,9 +1678,9 @@ SFSI(document).ready(function(s) {
         SFSI(this).parent("div").find("div.sfsi_tool_tip_2_inr").hide());
     }),
 	SFSI(".expand-area").on("click", function() {
-        "Read more" == SFSI(this).text() ? (SFSI(this).siblings("p").children("label").fadeIn("slow"), 
-        SFSI(this).text("Collapse")) :(SFSI(this).siblings("p").children("label").fadeOut("slow"), 
-        SFSI(this).text("Read more"));
+        object_name.Re_ad == SFSI(this).text() ? (SFSI(this).siblings("p").children("label").fadeIn("slow"), 
+        SFSI(this).text(object_name1.Coll_apse)) :(SFSI(this).siblings("p").children("label").fadeOut("slow"), 
+        SFSI(this).text(object_name.Re_ad));
     }),
 	SFSI(".radio").live("click", function()
 	{

@@ -848,7 +848,10 @@ function sfsi_plus_getCounts()
     }
 	
 	/* get instagram count */
-   	if($sfsi_plus_section4_options['sfsi_plus_houzz_countsFrom']=="manual" )
+   	if(
+		isset($sfsi_plus_section4_options['sfsi_plus_houzz_countsFrom']) &&
+		$sfsi_plus_section4_options['sfsi_plus_houzz_countsFrom']=="manual"
+	)
    	{
 		if(
 			isset($sfsi_plus_section4_options['sfsi_plus_houzz_manualCounts'])

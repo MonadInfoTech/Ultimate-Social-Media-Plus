@@ -12,7 +12,7 @@ function sfsi_plus_update_plugin()
 	}
 	
 	//Install version
-	update_option("sfsi_plus_pluginVersion", "2.21");
+	update_option("sfsi_plus_pluginVersion", "2.22");
 	
 	/*show notification*/
 	if(!get_option('sfsi_plus_show_notification'))
@@ -380,8 +380,8 @@ function sfsi_plus_Unistall_plugin()
     delete_option('sfsi_plus_activate');
 	delete_option("sfsi_plus_pluginVersion");
 	delete_option("sfsi_plus_verificatiom_code");
-    
-} /* end function */
+}
+/* end function */
 /* check CUrl */
 function sfsi_plus_curl_enable_notice(){
     if(!function_exists('curl_init')) {
@@ -391,9 +391,15 @@ function sfsi_plus_curl_enable_notice(){
 	
 /* add admin menus */
 function sfsi_plus_admin_menu() {
-	add_menu_page('Ultimate Social Media PLUS', 'Ultimate Social Media PLUS', 'administrator','sfsi-plus-options','sfsi_plus_options_page',plugins_url( 'images/logo.png' , dirname(__FILE__) ));
-	//add_submenu_page('sfsi-plus-options', 'Subscription Options', 'Settings','administrator', 'sfsi-plus-options', 'sfsi_plus_options_page');
-	//add_submenu_page('sfsi-plus-options', 'Specific About Us', 'About','administrator', 'sfsi-about', 'sfsi_plus_about_page');
+	add_menu_page(
+	 
+	__( 'Ultimate Social Media PLUS', 'ultimate-social-media-plus' ),
+	__( 'Ultimate Social Media PLUS', 'ultimate-social-media-plus' ),
+	'administrator',
+	'sfsi-plus-options',
+	'sfsi_plus_options_page',
+	plugins_url( 'images/logo.png' , dirname(__FILE__) )
+	);
 }
 function sfsi_plus_options_page(){ include SFSI_PLUS_DOCROOT . '/views/sfsi_options_view.php';	} /* end function  */
 function sfsi_plus_about_page(){ include SFSI_PLUS_DOCROOT . '/views/sfsi_aboutus.php';	} /* end function  */
@@ -475,20 +481,18 @@ function sfsi_plus_check_wp_head() {
 	    $search_header = "wp_head";
 	    $file_lines = @file($header);
 	    $foind_header=0;
-	    foreach ($file_lines as $line) {
-		    
-					    
+	    foreach ($file_lines as $line)
+		{
 		    $searchCount = substr_count($line, $search_header);
-		    
-		    if ($searchCount > 0) {
+		    if ($searchCount > 0)
+			{
 			    return true;
 		    }
-		    
-	    }
+		}
 	    $path=pathinfo($_SERVER['REQUEST_URI']);
 	    if($path['basename']=="themes.php" || $path['basename']=="theme-editor.php" || $path['basename']=="admin.php?page=sfsi-plus-options")
 	    {
-	     echo "<div class=\"error\" >" . "<p> Error : Please fix your theme to make plugins work correctly: Go to the <a href=\"theme-editor.php\">Theme Editor</a> and insert <code>&lt;?php wp_head(); ?&gt;</code> just before the <code>&lt;/head&gt;</code> line of your theme's <code>header.php</code> file." . "</p></div>";
+	    	echo "<div class=\"error\" >" . "<p> Error : Please fix your theme to make plugins work correctly: Go to the <a href=\"theme-editor.php\">Theme Editor</a> and insert <code>&lt;?php wp_head(); ?&gt;</code> just before the <code>&lt;/head&gt;</code> line of your theme's <code>header.php</code> file." . "</p></div>";
 	    }		
 	}
 }
@@ -511,25 +515,28 @@ function sfsi_plus_check_wp_footer() {
 		
 		if($path['basename']=="themes.php" || $path['basename']=="theme-editor.php" || $path['basename']=="admin.php?page=sfsi-plus-options")
 		{
-		echo "<div class=\"error\" >" . "<p>Error : Please fix your theme to make plugins work correctly: Go to the <a href=\"theme-editor.php\">Theme Editor</a> and insert <code>&lt;?php wp_footer(); ?&gt;</code> as the first line of your theme's <code>footer.php</code> file. " . "</p></div>";
+			echo "<div class=\"error\" >" . "<p>Error : Please fix your theme to make plugins work correctly: Go to the <a href=\"theme-editor.php\">Theme Editor</a> and insert <code>&lt;?php wp_footer(); ?&gt;</code> as the first line of your theme's <code>footer.php</code> file. " . "</p></div>";
 		} 	    
 	}
 }
 /* admin notice for first time installation */
 function sfsi_plus_activation_msg()
 {
-      global $wp_version;
-     
-    if(get_option('sfsi_plus_activate',false)==1)
-     {
-	echo "<div class=\"updated\" >" . "<p>Thank you for installing the <b>Ultimate Social Media PLUS</b> Plugin. Please go to the <a href=\"admin.php?page=sfsi-plus-options\">plugin's settings page </a> to configure it. </p></div>"; update_option('sfsi_plus_activate',0);
-     }
-     $path=pathinfo($_SERVER['REQUEST_URI']);
-     update_option('sfsi_plus_activate',0);		
-     if($wp_version<3.5 &&  $path['basename']=="admin.php?page=sfsi-plus-options")
-     {
-	echo "<div class=\"update-nag\" >" . "<p ><b>You're using an old Wordpress version, which may cause several of your plugins to not work correctly. Please upgrade</b></p></div>"; 
-     }
+	global $wp_version;
+	
+	if(get_option('sfsi_plus_activate',false)==1)
+	{
+		_e("<div class='updated' ><p>Thank you for installing the <b>Ultimate Social Media PLUS</b> Plugin. Please go to the <a href='admin.php?page=sfsi-plus-options'>plugin`s settings page </a> to configure it. </p></div>", "ultimate-social-media-plus");
+		update_option('sfsi_plus_activate',0);
+	}
+	
+	$path=pathinfo($_SERVER['REQUEST_URI']);
+	update_option('sfsi_plus_activate',0);		
+	
+	if($wp_version < 3.5 &&  $path['basename']=="admin.php?page=sfsi-plus-options")
+	{
+		echo "<div class=\"update-nag\" >" . "<p ><b>You're using an old Wordpress version, which may cause several of your plugins to not work correctly. Please upgrade</b></p></div>"; 
+	}
 }
 /* admin notice for first time installation */
 function sfsi_plus_rating_msg()
@@ -544,7 +551,7 @@ function sfsi_plus_rating_msg()
     if($diff_inrval >= 30 && get_option('sfsi_plus_RatingDiv')=="no")
 	{
 	 echo '
-<div class="sfwp_fivestar">
+	<div class="sfwp_fivestar">
     	<p>We noticed you\'ve been using the Ultimate Social Media PLUS Plugin for more than 30 days. For using it 100% for free, could you please do us a BIG favor and give it a 5-star rating on Wordpress?</p>
         <ul class="sfwp_fivestar_ul">
         	<li><a href="https://wordpress.org/support/view/plugin-reviews/ultimate-social-media-plus" target="_new" title="Ok, you deserved it">Ok, you deserved it</a></li>
@@ -577,7 +584,8 @@ function sfsi_plus_rating_msg()
    }
 }
 add_action('wp_ajax_plushideRating','sfsi_plusHideRatingDiv');
-function sfsi_plusHideRatingDiv(){
+function sfsi_plusHideRatingDiv()
+{
     update_option('sfsi_plus_RatingDiv','yes');
     echo  json_encode(array("success")); exit;
 }
@@ -592,32 +600,37 @@ function sfsi_plus_pingVendor( $post_id )
 	// If this is just a revision, don't send the email.
 	if ( wp_is_post_revision( $post_id ) )
 		return;
+		
 	$post_data=get_post($post_id,ARRAY_A);
 	if($post_data['post_status']=='publish' && $post_data['post_type']=='post') : 
-		 $categories = wp_get_post_categories($post_data['ID']);
-		 $cats='';
-		 $total=count($categories);
-		 $count=1;
-		 foreach($categories as $c)
-		 {	
+		
+		$categories = wp_get_post_categories($post_data['ID']);
+		$cats='';
+		$total=count($categories);
+		$count=1;
+		foreach($categories as $c)
+		{	
 			$cat_data = get_category( $c );
 			if($count==$total)
 			{
-				$cats.=$cat_data->name;
-			}else{
-				$cats.=$cat_data->name.',';	
+				$cats.= $cat_data->name;
+			}
+			else
+			{
+				$cats.= $cat_data->name.',';	
 			}
 			$count++;	
-		 }
+		}
 		$postto_array = array(
-					'feed_id'=>get_option('sfsi_plus_feed_id'),
-					'title'=>$post_data['post_title'],
-					'description'=>$post_data['post_content'],
-					'link'=>$post_data['guid'],
-					'author'=>get_the_author_meta('user_login', $post_data['post_author']),
-					'category'=>$cats,
-					'pubDate'=>$post_data['post_modified'],
-					'rssurl'=>get_bloginfo('rss2_url'));
+			'feed_id'	=> get_option('sfsi_plus_feed_id'),
+			'title'		=> $post_data['post_title'],
+			'description' => $post_data['post_content'],
+			'link'		=> $post_data['guid'],
+			'author'	=> get_the_author_meta('user_login', $post_data['post_author']),
+			'category' 	=> $cats,
+			'pubDate'	=> $post_data['post_modified'],
+			'rssurl'	=> get_bloginfo('rss2_url')
+		);
 		
 		$curl = curl_init();  
 		curl_setopt_array($curl, array(

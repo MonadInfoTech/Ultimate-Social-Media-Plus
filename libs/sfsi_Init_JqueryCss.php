@@ -42,6 +42,20 @@ function sfsiplus_plugin_back_enqueue_script()
 			wp_enqueue_script("SFSIPLUSCustomFormJs");
 			
 			wp_register_script('SFSIPLUSCustomJs', SFSI_PLUS_PLUGURL . 'js/custom-admin.js', '', '', true);
+			// Localize the script with new data
+			$translation_array = array(
+				'Re_ad'                 => __('Read more','ultimate-social-media-plus'),
+				'Sa_ve'                 => __('Save','ultimate-social-media-plus'),
+				'Sav_ing'               => __('Saving...','ultimate-social-media-plus'),
+				'Sa_ved'                => __('Saved !','ultimate-social-media-plus')
+			);
+			$translation_array1 = array(
+				'Coll_apse'             => __('Collapse','ultimate-social-media-plus'),
+				'Save_All_Settings'     => __(' Save All Settings','ultimate-social-media-plus')
+			);
+			
+			wp_localize_script( 'SFSIPLUSCustomJs', 'object_name', $translation_array );
+			wp_localize_script( 'SFSIPLUSCustomJs', 'object_name1', $translation_array1 );
 			wp_enqueue_script("SFSIPLUSCustomJs");
 			
 			wp_register_script('SFSIPLUSCustomValidateJs', SFSI_PLUS_PLUGURL . 'js/customValidate-min.js', '', '', true);
