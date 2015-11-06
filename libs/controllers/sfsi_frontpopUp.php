@@ -252,7 +252,13 @@ function sfsi_plus_FrontPopupDiv()
 		if($sfsi_plus_section1_options['sfsi_plus_instagram_display']=='yes')    $icons.= "<li>".sfsi_plus_prepairIcons('instagram',1)."</li>"; 
     break;
 	case 'houzz' :
-		if($sfsi_plus_section1_options['sfsi_plus_houzz_display']=='yes')    $icons.= "<li>".sfsi_plus_prepairIcons('houzz',1)."</li>"; 
+		if(
+			isset($sfsi_plus_section1_options['sfsi_plus_houzz_display']) &&
+			$sfsi_plus_section1_options['sfsi_plus_houzz_display']=='yes'
+		)
+		{
+			$icons.= "<li>".sfsi_plus_prepairIcons('houzz',1)."</li>";
+		}
     break;
     case 'custom' :
 		$icons.= "<li>". sfsi_plus_prepairIcons($icon_arry['ele'],1)."</li>"; 

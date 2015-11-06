@@ -1060,14 +1060,18 @@ function sfsi_plus_prepairIcons($icon_name,$is_front=0)
 		     
 			 /* fecth no of counts if active in admin section */
 			 if(
-			 	$sfsi_plus_section4_options['sfsi_plus_houzz_countsDisplay'] == "yes" &&
+			 	isset($sfsi_plus_section4_options['sfsi_plus_houzz_countsDisplay']) &&
+				$sfsi_plus_section4_options['sfsi_plus_houzz_countsDisplay'] == "yes" &&
 				$sfsi_plus_section4_options['sfsi_plus_display_counts'] == "yes"
 			 )
 			 {
 				 $counts=$socialObj->format_num($sfsi_plus_section4_options['sfsi_plus_houzz_manualCounts']);
 			 }
 			 
-			 if(!empty($sfsi_plus_section5_options['sfsi_plus_houzz_MouseOverText'])) 
+			 if(
+			 	isset($sfsi_plus_section5_options['sfsi_plus_houzz_MouseOverText']) &&
+			 	!empty($sfsi_plus_section5_options['sfsi_plus_houzz_MouseOverText'])
+			 )
 			 {	
 			 	$alt_text = $sfsi_plus_section5_options['sfsi_plus_houzz_MouseOverText'];
 			 }
@@ -1402,7 +1406,14 @@ function sfsi_plus_check_posts_visiblity($isFloter=0)
     break;
     case 'instagram' :  if($sfsi_plus_section1_options['sfsi_plus_instagram_display']=='yes')    $icons.= sfsi_plus_postsprepairIcons('instagram'); 
     break;
-	case 'houzz' :  if($sfsi_plus_section1_options['sfsi_plus_houzz_display']=='yes') $icons.= sfsi_plus_postsprepairIcons('houzz'); 
+	case 'houzz' :
+		if(
+			isset($sfsi_plus_section1_options['sfsi_plus_houzz_display']) &&
+			$sfsi_plus_section1_options['sfsi_plus_houzz_display']=='yes'
+		)
+		{
+			$icons.= sfsi_plus_postsprepairIcons('houzz'); 
+		}
     break;	  
     case 'custom' : $icons.= sfsi_plus_postsprepairIcons($icon_arry['ele']); 
     break;    
@@ -2138,6 +2149,7 @@ function sfsi_plus_postsprepairIcons($icon_name,$is_front=0)
 		     
 			 /* fecth no of counts if active in admin section */
 			 if(
+			 	isset($sfsi_plus_section4_options['sfsi_plus_houzz_countsDisplay']) &&
 			 	$sfsi_plus_section4_options['sfsi_plus_houzz_countsDisplay'] == "yes" &&
 				$sfsi_plus_section4_options['sfsi_plus_display_counts'] == "yes"
 			 )
@@ -2145,7 +2157,10 @@ function sfsi_plus_postsprepairIcons($icon_name,$is_front=0)
 				 $counts=$socialObj->format_num($sfsi_plus_section4_options['sfsi_plus_houzz_manualCounts']);
 			 }
 			 
-			 if(!empty($sfsi_plus_section5_options['sfsi_plus_houzz_MouseOverText'])) 
+			 if(
+			 	isset($sfsi_plus_section5_options['sfsi_plus_houzz_MouseOverText']) &&
+			 	!empty($sfsi_plus_section5_options['sfsi_plus_houzz_MouseOverText'])
+			 ) 
 			 {	
 			 	$alt_text = $sfsi_plus_section5_options['sfsi_plus_houzz_MouseOverText'];
 			 }
