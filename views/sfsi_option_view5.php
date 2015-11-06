@@ -377,7 +377,7 @@
                     <label>
                         <?php  _e( 'Houzz:', 'ultimate-social-media-plus' ); ?>
                     </label>
-                    <input name="sfsi_plus_houzz_MouseOverText" value="<?php echo ($option5['sfsi_plus_houzz_MouseOverText']!='') ?  $option5['sfsi_plus_houzz_MouseOverText'] : 'Houzz' ;?>" type="text" />
+                    <input name="sfsi_plus_houzz_MouseOverText" value="<?php echo (isset($option5['sfsi_plus_houzz_MouseOverText']) && $option5['sfsi_plus_houzz_MouseOverText']!='') ?  $option5['sfsi_plus_houzz_MouseOverText'] : 'Houzz' ;?>" type="text" />
                 </div>
 			</div>
         

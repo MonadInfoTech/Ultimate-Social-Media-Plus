@@ -641,7 +641,7 @@
 		<!-- HOUZZ ICON COUNT SECTION-->
 		<div class="sfsiplus_specify_counts sfsiplus_houzz_section">
 			<div class="radio_section">
-				<input name="sfsi_plus_houzz_countsDisplay" <?php echo ($option4['sfsi_plus_houzz_countsDisplay']=='yes') ?  'checked="true"' : '' ;?>  type="checkbox" value="yes" class="styled"  />
+				<input name="sfsi_plus_houzz_countsDisplay" <?php echo (isset($option4['sfsi_plus_houzz_countsDisplay']) && $option4['sfsi_plus_houzz_countsDisplay']=='yes') ?  'checked="true"' : '' ;?>  type="checkbox" value="yes" class="styled"  />
 			</div>
 			<div class="social_icon_like">
 				<ul class="like_icon">
@@ -660,7 +660,7 @@
 						<label class="high_prb">
 							<?php  _e( 'Enter the figure manually', 'ultimate-social-media-plus' ); ?>
 						</label>
-						<input name="sfsi_plus_houzz_manualCounts" type="text" class="input" value="<?php echo ($option4['sfsi_plus_houzz_manualCounts']!='') ?  $option4['sfsi_plus_houzz_manualCounts'] : '20' ;?>" />
+						<input name="sfsi_plus_houzz_manualCounts" type="text" class="input" value="<?php echo (isset($option4['sfsi_plus_houzz_manualCounts']) && $option4['sfsi_plus_houzz_manualCounts']!='') ?  $option4['sfsi_plus_houzz_manualCounts'] : '20' ;?>" />
 					</li>
 				</ul>
 			</div>    
