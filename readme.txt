@@ -4,7 +4,7 @@ Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=seb.r
 Tags: social media, social media icons, social media buttons, social media sharing, floating social media, social media icon, social media button, sharing icons, sharing, sharing buttons, social media widget, socialmedia, social media pop-up, social, social icons, icon, icons, buttons, facebook icon, twitter icon, instagram, instagram icon, counter, facebook, facebook like, like, tweet, tweet button, buttons, tweet icon, youtube, youtube icon, linkedin, linkedin icon, logos, follow, social profiles, social media accounts, social share
 Requires at least: 3.0
 Tested up to: 4.3.1
-Stable tag: 2.2.2
+Stable tag: 2.2.3
 License: GPLv2 
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
