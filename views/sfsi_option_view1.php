@@ -246,9 +246,15 @@
                 
                 		<?php  _e( 'to make people follow you. Not offering an email subscription option means losing out on future traffic to your site.', 'ultimate-social-media-plus' ); ?>
                		</label>
-                	<a href="javascript:;" class="pop-up" data-id="athis-s1" > 
-               			<?php  _e( ' See Example', 'ultimate-social-media-plus' ); ?> 
-                	</a>
+                    See an
+                    <a href="javascript:;" class="pop-up" data-id="athis-s1" >
+                    	<?php  _e( ' Example', 'ultimate-social-media-plus' ); ?>
+                    </a> 
+                    and checkout their 
+                    <a href="https://wordpress.org/support/view/plugin-reviews/addthis" target="_blank">
+                    	<?php  _e( ' reviews', 'ultimate-social-media-plus' ); ?>
+                    </a>
+                	
             	</p>
             </div>
        </li>
