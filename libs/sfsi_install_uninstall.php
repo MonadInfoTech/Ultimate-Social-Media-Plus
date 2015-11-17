@@ -380,6 +380,8 @@ function sfsi_plus_Unistall_plugin()
     delete_option('sfsi_plus_activate');
 	delete_option("sfsi_plus_pluginVersion");
 	delete_option("sfsi_plus_verificatiom_code");
+	delete_option("sfsi_plus_curlErrorNotices");
+	delete_option("sfsi_plus_curlErrorMessage");
 }
 /* end function */
 /* check CUrl */
@@ -424,6 +426,11 @@ function SFSI_PLUS_getFeedUrl()
     ));
     // Send the request & save response to $resp
 	$resp = curl_exec($curl);
+	if(curl_errno($curl))
+	{
+		update_option("sfsi_plus_curlErrorNotices", "yes");
+		update_option("sfsi_plus_curlErrorMessage", curl_errno($curl));
+	}
 	$resp = json_decode($resp);
 	curl_close($curl);
 		

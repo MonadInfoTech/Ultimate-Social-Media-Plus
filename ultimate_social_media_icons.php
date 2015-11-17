@@ -516,6 +516,21 @@ function sfsi_plus_admin_notice()
 		$style = "overflow: hidden;"; 
 	}
 	
+	if(get_option("sfsi_plus_curlErrorNotices") == "yes")
+	{ 
+		$url = "?sfsiPlus-dismiss-curlNotice=true";
+		?>
+		<div class="error" style="<?php echo $style; ?>">
+			<div class="alignleft" style="margin: 9px 0;">
+				There seems to be an error on your website which prevents the plugin to work properly. Please contact us at <a href="mailto:support@ultimatelysocial.com">support@ultimatelysocial.com</a> and state the error code you see below.
+                <p style="text-align:left"><b>Error : <?php echo ucfirst(get_option("sfsi_plus_curlErrorMessage")); ?></b></p>
+			</div>
+			<p class="alignright">
+				<a href="<?php echo $url; ?>">Dismiss</a>
+			</p>
+		</div>
+	<?php }
+	
 	if(get_option("sfsi_plus_show_notification_plugin") == "yes")
 	{ 
 		$url = "?sfsiPlus-dismiss-notice=true";
@@ -544,6 +559,12 @@ function sfsi_plus_admin_notice()
 add_action('admin_init', 'sfsi_plus_dismiss_admin_notice');
 function sfsi_plus_dismiss_admin_notice()
 {
+	if ( isset($_REQUEST['sfsiPlus-dismiss-curlNotice']) && $_REQUEST['sfsiPlus-dismiss-curlNotice'] == 'true' )
+	{
+		update_option( 'sfsi_plus_curlErrorNotices', "no" );
+		header("Location: ".site_url()."/wp-admin/admin.php?page=sfsi-plus-options");
+	}
+	
 	if ( isset($_REQUEST['sfsiPlus-dismiss-notice']) && $_REQUEST['sfsiPlus-dismiss-notice'] == 'true' )
 	{
 		update_option( 'sfsi_plus_show_notification_plugin', "no" );
