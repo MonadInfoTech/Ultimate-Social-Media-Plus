@@ -522,11 +522,28 @@ function sfsi_plus_admin_notice()
 		?>
 		<div class="error" style="<?php echo $style; ?>">
 			<div class="alignleft" style="margin: 9px 0;">
-				There seems to be an error on your website which prevents the plugin to work properly. Please contact us at <a href="mailto:support@ultimatelysocial.com">support@ultimatelysocial.com</a> and state the error code you see below.
+				<?php
+				_e(
+					'There seems to be an error on your website which prevents the plugin to work properly. Please contact us at ',
+					'ultimate-social-media-plus'
+				);
+				?>
+                <a href="mailto:support@ultimatelysocial.com">support@ultimatelysocial.com</a>
+                <?php
+				_e(
+					' and state the error code you see below.',
+					'ultimate-social-media-plus'
+				);
+				?>
+                 
                 <p style="text-align:left"><b>Error : <?php echo ucfirst(get_option("sfsi_plus_curlErrorMessage")); ?></b></p>
 			</div>
 			<p class="alignright">
-				<a href="<?php echo $url; ?>">Dismiss</a>
+				<a href="<?php echo $url; ?>">
+                <?php
+					_e('Dismiss','ultimate-social-media-plus');
+				?>
+                </a>
 			</p>
 		</div>
 	<?php }
