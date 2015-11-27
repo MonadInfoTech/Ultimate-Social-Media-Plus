@@ -207,6 +207,7 @@ function sfsi_plus_activate_plugin()
         'sfsi_plus_icons_spacing'=>'5',
         'sfsi_plus_icons_Alignment'=>'left',
         'sfsi_plus_icons_perRow'=>'5',
+		'sfsi_plus_icons_language'=>'en_US',
         'sfsi_plus_icons_ClickPageOpen'=>'yes',
         'sfsi_plus_icons_float'=>'no',
 		'sfsi_plus_disable_floaticons'=>'no',

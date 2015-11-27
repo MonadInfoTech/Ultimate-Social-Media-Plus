@@ -112,6 +112,7 @@ class Sfsi_Plus_Widget extends WP_Widget
 	}
 }
 /* END OF widget Class */
+
 /* register widget to wordpress */
 function register_sfsi_plus_widgets()
 {
@@ -392,8 +393,8 @@ function sfsi_plus_prepairIcons($icon_name,$is_front=0)
      $visit_iconsUrl = SFSI_PLUS_PLUGURL."images/visit_icons/";   
      $hoverSHow = 0;
    
-   /* check is icon is a custom icon or default icon */  
-   if(is_numeric($icon_name)) { $icon_n=$icon_name; $icon_name="custom" ; } 
+   	/* check is icon is a custom icon or default icon */  
+   	if(is_numeric($icon_name)) { $icon_n=$icon_name; $icon_name="custom" ; } 
     $counts='';
     $twit_tolCls = "";
     $twt_margin = "";
@@ -404,7 +405,7 @@ function sfsi_plus_prepairIcons($icon_name,$is_front=0)
 	$url = "#";
     $cmcls='';
     $toolClass = '';
-    
+    $icons_language = $sfsi_plus_section5_options['sfsi_plus_icons_language'];
 	switch($icon_name)
     {
         case "rss" :
@@ -540,8 +541,17 @@ function sfsi_plus_prepairIcons($icon_name,$is_front=0)
 			{
 				$alt_text = "FACEBOOK";
 			}
-			
-			$visit_icon = $visit_iconsUrl."facebook.png";
+			$visit_icon1 = $visit_iconsUrl."fb_visit_icon_".$icons_language.".png";
+			//$visit_icon = getimagesize($visit_icon1);
+			if(is_array(@getimagesize($visit_icon1)))
+			{
+				$visit_icon = $visit_iconsUrl."fb_visit_icon_".$icons_language.".png";
+			}
+			 else
+			{
+				$visit_icon = $visit_iconsUrl."facebook.png";
+			}
+			//$visit_icon = $visit_iconsUrl."facebook.png";
 		    $url = ($sfsi_plus_section2_options['sfsi_plus_facebookPage_url']) ? $sfsi_plus_section2_options['sfsi_plus_facebookPage_url']:'javascript:void(0);';
             
 			if($sfsi_plus_section2_options['sfsi_plus_facebookLike_option']=="yes" || $sfsi_plus_section2_options['sfsi_plus_facebookShare_option']=="yes" )
@@ -632,7 +642,17 @@ function sfsi_plus_prepairIcons($icon_name,$is_front=0)
 					$alt_text = "GOOGLE";
 				}
 				
-				$visit_icon = $visit_iconsUrl."google.png";
+				$visit_icon1 = $visit_iconsUrl."google_visit_icon_".$icons_language.".png";
+				//$visit_icon = getimagesize($visit_icon1);
+				if(is_array(@getimagesize($visit_icon1)))
+				{
+					$visit_icon = $visit_iconsUrl."google_visit_icon_".$icons_language.".png";
+				}
+				 else
+				{
+					$visit_icon = $visit_iconsUrl."google.png";
+				}
+				//$visit_icon = $visit_iconsUrl."google.png";
 				$url = ($sfsi_plus_section2_options['sfsi_plus_google_pageURL'])?$sfsi_plus_section2_options['sfsi_plus_google_pageURL'] : 'javascript:void(0);';
 				
 				/* check for icons to display */     
@@ -646,11 +666,11 @@ function sfsi_plus_prepairIcons($icon_name,$is_front=0)
 					 } 
 					 if($sfsi_plus_section2_options['sfsi_plus_googleLike_option']=="yes")
 					 {
-						 $hoverdiv.="<div  class='icon2'>".$socialObj->sfsi_Googlelike($current_url)."</div>";  
+						 $hoverdiv.="<div  class='icon2'>".$socialObj->sfsi_Googlelike($current_url,$icons_language)."</div>";  
 					 }    
 					 if($sfsi_plus_section2_options['sfsi_plus_googleShare_option']=="yes")
 					 {
-						 $hoverdiv.="<div  class='icon3'>".$socialObj->sfsi_GoogleShare($current_url)."</div>"; 
+						 $hoverdiv.="<div  class='icon3'>".$socialObj->sfsi_GoogleShare($current_url,$icons_language)."</div>"; 
 					 }                          
 				 }
 
@@ -710,13 +730,23 @@ function sfsi_plus_prepairIcons($icon_name,$is_front=0)
 				$url = ($sfsi_plus_section2_options['sfsi_plus_twitter_pageURL'])?$sfsi_plus_section2_options['sfsi_plus_twitter_pageURL'] : 'javascript:void(0);';
 				$twitter_user = $sfsi_plus_section2_options['sfsi_plus_twitter_followUserName'];
 				$twitter_text = $sfsi_plus_section2_options['sfsi_plus_twitter_aboutPageText'];
-				$visit_icon = $visit_iconsUrl."twitter.png";
+				//$visit_icon = $visit_iconsUrl."twitter.png";
 				$width = 59;
 				$totwith = $width+28+$icons_space;
 				$twt_margin = $totwith/2;
              	/* check for icons to display */
 		     	$hoverdiv='';
-			    
+			    $visit_icon1 = $visit_iconsUrl."twitter_visit_icon_".$icons_language.".png";
+				//$visit_icon = getimagesize($visit_icon1);
+				if(is_array(@getimagesize($visit_icon1)))
+				{
+					$visit_icon = $visit_iconsUrl."twitter_visit_icon_".$icons_language.".png";
+				}
+				 else
+				{
+					$visit_icon = $visit_iconsUrl."twitter.png";
+				}
+				
 				 if($sfsi_plus_section2_options['sfsi_plus_twitter_followme']=="yes" || $sfsi_plus_section2_options['sfsi_plus_twitter_aboutPage']=="yes")
 				 {
 					 $hoverSHow=1;
@@ -727,11 +757,11 @@ function sfsi_plus_prepairIcons($icon_name,$is_front=0)
 					 }
 					 if($sfsi_plus_section2_options['sfsi_plus_twitter_followme']=="yes" && !empty($twitter_user))
 					 {
-						 $hoverdiv.="<div  class='icon1'>".$socialObj->sfsi_twitterFollow($twitter_user)."</div>";
+						 $hoverdiv.="<div  class='icon1'>".$socialObj->sfsi_twitterFollow($twitter_user,$icons_language)."</div>";
 					 }    
 					 if($sfsi_plus_section2_options['sfsi_plus_twitter_aboutPage']=="yes")
 					 {
-						 $hoverdiv.="<div  class='icon2'>".$socialObj->sfsi_twitterShare($current_url,$twitter_text)."</div>";
+						 $hoverdiv.="<div  class='icon2'>".$socialObj->sfsi_twitterShare($current_url,$twitter_text,$icons_language)."</div>";
 					 } 
 					 
 				 }
@@ -851,7 +881,17 @@ function sfsi_plus_prepairIcons($icon_name,$is_front=0)
 				$totwith = $width+28+$icons_space;
 				$twt_margin = $totwith/2;
 				$youtube_user = (isset($sfsi_plus_section4_options['sfsi_plus_youtube_user']) && !empty($sfsi_plus_section4_options['sfsi_plus_youtube_user'])) ? $sfsi_plus_section4_options['sfsi_plus_youtube_user'] : 'SpecificFeeds';
-				$visit_icon = $visit_iconsUrl."youtube.png";
+				//$visit_icon = $visit_iconsUrl."youtube.png";
+				$visit_icon1 = $visit_iconsUrl."youtube_visit_icon_".$icons_language.".png";
+				//$visit_icon = getimagesize($visit_icon1);
+				if(is_array(@getimagesize($visit_icon1)))
+				{
+					$visit_icon = $visit_iconsUrl."youtube_visit_icon_".$icons_language.".png";
+				}
+				 else
+				{
+					$visit_icon = $visit_iconsUrl."youtube.png";
+				}
 				$url = ($sfsi_plus_section2_options['sfsi_plus_youtube_pageUrl'])? $sfsi_plus_section2_options['sfsi_plus_youtube_pageUrl'] : 'javascript:void(0);';
 				
 				//Giving alternative text to image
@@ -927,7 +967,17 @@ function sfsi_plus_prepairIcons($icon_name,$is_front=0)
 				
 				$pinterest_user = $sfsi_plus_section4_options['sfsi_plus_pinterest_user'];
 				$pinterest_board = $sfsi_plus_section4_options['sfsi_plus_pinterest_board'];
-				$visit_icon = $visit_iconsUrl."pinterest.png";
+				//$visit_icon = $visit_iconsUrl."pinterest.png";
+				$visit_icon1 = $visit_iconsUrl."pinterest_visit_icon_".$icons_language.".png";
+				//$visit_icon = getimagesize($visit_icon1);
+				if(is_array(@getimagesize($visit_icon1)))
+				{
+					$visit_icon = $visit_iconsUrl."pinterest_visit_icon_".$icons_language.".png";
+				}
+				 else
+				{
+					$visit_icon = $visit_iconsUrl."pinterest.png";
+				}
 		        $url = (isset($sfsi_plus_section2_options['sfsi_plus_pinterest_pageUrl'])) ? $sfsi_plus_section2_options['sfsi_plus_pinterest_pageUrl'] : 'javascript:void(0);';
                 
 				//Giving alternative text to image
@@ -1108,7 +1158,17 @@ function sfsi_plus_prepairIcons($icon_name,$is_front=0)
 				$linkedIn_compayId = $sfsi_plus_section2_options['sfsi_plus_linkedin_followCompany'];
 				$linkedIn_compay = $sfsi_plus_section2_options['sfsi_plus_linkedin_followCompany']; 
 				$linkedIn_ProductId = $sfsi_plus_section2_options['sfsi_plus_linkedin_recommendProductId'];
-				$visit_icon = $visit_iconsUrl."linkedIn.png";
+				//$visit_icon = $visit_iconsUrl."linkedIn.png";
+				$visit_icon1 = $visit_iconsUrl."linkedIn_visit_icon_".$icons_language.".png";
+				//$visit_icon = getimagesize($visit_icon1);
+				if(is_array(@getimagesize($visit_icon1)))
+				{
+					$visit_icon = $visit_iconsUrl."linkedIn_visit_icon_".$icons_language.".png";
+				}
+				 else
+				{
+					$visit_icon = $visit_iconsUrl."linkedIn.png";
+				}
 				
 				/*check for icons to display */     
 				$url=($sfsi_plus_section2_options['sfsi_plus_linkedin_pageURL'])? $sfsi_plus_section2_options['sfsi_plus_linkedin_pageURL'] : 'javascript:void(0);';         

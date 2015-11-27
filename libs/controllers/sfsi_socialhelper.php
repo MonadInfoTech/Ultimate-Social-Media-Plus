@@ -286,9 +286,18 @@ class sfsi_plus_SocialHelper
 	}
 
 	/* create on page google share option */      
-	public function sfsi_Googlelike($permalink)
+	public function sfsi_Googlelike($permalink,$icons_language)
 	{
 		$show_count=0;  
+		?>
+		<script >
+			window.___gcfg = 
+			{
+				lang:'<?php echo $icons_language; ?>',parsetags: 'onload'
+			};
+		</script>
+		<script src="https://apis.google.com/js/platform.js" async defer></script>
+     	<?php
 		$google_html = '<div class="g-plusone" data-href="' . $permalink . '" ';
 		if($show_count)
 		{
@@ -303,28 +312,34 @@ class sfsi_plus_SocialHelper
 	}      
   	
 	/* create on page google share option */      
-  	public function sfsi_GoogleShare($permalink)
+  	public function sfsi_GoogleShare($permalink,$icons_language)
 	{
       $show_count=1;
-      
-      $google_html = '<div class="g-plus" data-action="share" data-annotation="none" data-height="24" data-href="'.$permalink.'">' . $permalink . '"></div>';
+      ?>
+		<script >
+			window.___gcfg = 
+			{
+				lang:'<?php echo $icons_language; ?>',parsetags: 'onload'
+			};
+		</script>
+		<script src="https://apis.google.com/js/platform.js" async defer></script>
+     <?php
+     	$google_html = '<div class="g-plus" data-action="share" data-annotation="none" data-height="24" data-href="'.$permalink.'">' . $permalink . '"></div>';
         return $google_html;
 	}
  
  	/* create on page twitter follow option */ 
- 	public function sfsi_twitterFollow($tw_username)
+ 	public function sfsi_twitterFollow($tw_username,$icons_language)
 	{
-    	$twitter_html = '<a href="https://twitter.com/'.trim($tw_username).'" class="twitter-follow-button"  data-show-count="false" data-show-screen-name="false">Follow </a>';
-		
+    	$twitter_html = '<a href="https://twitter.com/'.trim($tw_username).'" class="twitter-follow-button"  data-show-count="false" data-lang="'.$icons_language.'" data-show-screen-name="false">Follow </a>';
 		return $twitter_html;
 	} 
  
  	/* create on page twitter share icon */
- 	public function sfsi_twitterShare($permalink,$tweettext)
+ 	public function sfsi_twitterShare($permalink,$tweettext,$icons_language)
 	{
-		$twitter_html = '<a rel="nofollow" href="http://twitter.com/share" data-count="none" class="sr-twitter-button twitter-share-button" lang="en" data-url="'.$permalink.'" data-text="'.$tweettext.'" ></a>';
-	               
-                return $twitter_html;
+		$twitter_html = '<a rel="nofollow" href="http://twitter.com/share" data-count="none" class="sr-twitter-button twitter-share-button" data-lang="'.$icons_language.'" data-url="'.$permalink.'" data-text="'.$tweettext.'" ></a>';
+         return $twitter_html;
 	} 
 	
 	/* create on page twitter share icon with count */

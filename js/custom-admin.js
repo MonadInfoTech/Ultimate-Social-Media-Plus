@@ -503,7 +503,7 @@ function sfsi_plus_update_step5()
     var s = sfsi_plus_validationStep5();
     if (!s) return global_error = 1, !1;
     sfsiplus_beForeLoad();
-    var i = SFSI("input[name='sfsi_plus_icons_size']").val(), e = SFSI("input[name='sfsi_plus_icons_perRow']").val(), t = SFSI("input[name='sfsi_plus_icons_spacing']").val(), n = SFSI("#sfsi_plus_icons_Alignment").val(), o = SFSI("input[name='sfsi_plus_icons_ClickPageOpen']:checked").val(), a = SFSI("input[name='sfsi_plus_icons_float']:checked").val(), dsb = SFSI("input[name='sfsi_plus_disable_floaticons']:checked").val(), dsbv = SFSI("input[name='sfsi_plus_disable_viewport']:checked").val(), r = SFSI("#sfsi_plus_icons_floatPosition").val(), c = SFSI("input[name='sfsi_plus_icons_stick']:checked").val(), p = SFSI("#sfsi_plus_rssIcon_order").attr("data-index"), _ = SFSI("#sfsi_plus_emailIcon_order").attr("data-index"), l = SFSI("#sfsi_plus_googleIcon_order").attr("data-index"), S = SFSI("#sfsi_plus_facebookIcon_order").attr("data-index"), u = SFSI("#sfsi_plus_twitterIcon_order").attr("data-index"), f = SFSI("#sfsi_plus_youtubeIcon_order").attr("data-index"), d = SFSI("#sfsi_plus_pinterestIcon_order").attr("data-index"), I = SFSI("#sfsi_plus_instagramIcon_order").attr("data-index"), m = SFSI("#sfsi_plus_shareIcon_order").attr("data-index"), F = SFSI("#sfsi_plus_linkedinIcon_order").attr("data-index"), houzzOrder = SFSI("#sfsi_plus_houzzIcon_order").attr("data-index"), h = new Array();
+    var i = SFSI("input[name='sfsi_plus_icons_size']").val(), e = SFSI("input[name='sfsi_plus_icons_perRow']").val(), t = SFSI("input[name='sfsi_plus_icons_spacing']").val(), n = SFSI("#sfsi_plus_icons_Alignment").val(),lang = SFSI("#sfsi_plus_icons_language").val(), o = SFSI("input[name='sfsi_plus_icons_ClickPageOpen']:checked").val(), a = SFSI("input[name='sfsi_plus_icons_float']:checked").val(), dsb = SFSI("input[name='sfsi_plus_disable_floaticons']:checked").val(), dsbv = SFSI("input[name='sfsi_plus_disable_viewport']:checked").val(), r = SFSI("#sfsi_plus_icons_floatPosition").val(), c = SFSI("input[name='sfsi_plus_icons_stick']:checked").val(), p = SFSI("#sfsi_plus_rssIcon_order").attr("data-index"), _ = SFSI("#sfsi_plus_emailIcon_order").attr("data-index"), l = SFSI("#sfsi_plus_googleIcon_order").attr("data-index"), S = SFSI("#sfsi_plus_facebookIcon_order").attr("data-index"), u = SFSI("#sfsi_plus_twitterIcon_order").attr("data-index"), f = SFSI("#sfsi_plus_youtubeIcon_order").attr("data-index"), d = SFSI("#sfsi_plus_pinterestIcon_order").attr("data-index"), I = SFSI("#sfsi_plus_instagramIcon_order").attr("data-index"), m = SFSI("#sfsi_plus_shareIcon_order").attr("data-index"), F = SFSI("#sfsi_plus_linkedinIcon_order").attr("data-index"), houzzOrder = SFSI("#sfsi_plus_houzzIcon_order").attr("data-index"), h = new Array();
     SFSI(".sfsiplus_custom_iconOrder").each(function()
 	{
         h.push({
@@ -520,6 +520,7 @@ function sfsi_plus_update_step5()
         sfsi_plus_icons_size:i,
         sfsi_plus_icons_Alignment:n,
         sfsi_plus_icons_perRow:e,
+		sfsi_plus_icons_language:lang,
         sfsi_plus_icons_spacing:t,
         sfsi_plus_icons_ClickPageOpen:o,
         sfsi_plus_icons_float:a,
