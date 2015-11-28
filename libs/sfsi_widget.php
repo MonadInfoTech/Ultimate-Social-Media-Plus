@@ -541,18 +541,10 @@ function sfsi_plus_prepairIcons($icon_name,$is_front=0)
 			{
 				$alt_text = "FACEBOOK";
 			}
-			$visit_icon1 = $visit_iconsUrl."fb_visit_icon_".$icons_language.".png";
-			//$visit_icon = getimagesize($visit_icon1);
-			if(is_array(@getimagesize($visit_icon1)))
-			{
-				$visit_icon = $visit_iconsUrl."fb_visit_icon_".$icons_language.".png";
-			}
-			 else
-			{
-				$visit_icon = $visit_iconsUrl."facebook.png";
-			}
-			//$visit_icon = $visit_iconsUrl."facebook.png";
-		    $url = ($sfsi_plus_section2_options['sfsi_plus_facebookPage_url']) ? $sfsi_plus_section2_options['sfsi_plus_facebookPage_url']:'javascript:void(0);';
+			
+			$visit_icon = $visit_iconsUrl."facebook.png";
+		    
+			$url = ($sfsi_plus_section2_options['sfsi_plus_facebookPage_url']) ? $sfsi_plus_section2_options['sfsi_plus_facebookPage_url']:'javascript:void(0);';
             
 			if($sfsi_plus_section2_options['sfsi_plus_facebookLike_option']=="yes" || $sfsi_plus_section2_options['sfsi_plus_facebookShare_option']=="yes" )
 			{
@@ -642,17 +634,8 @@ function sfsi_plus_prepairIcons($icon_name,$is_front=0)
 					$alt_text = "GOOGLE";
 				}
 				
-				$visit_icon1 = $visit_iconsUrl."google_visit_icon_".$icons_language.".png";
-				//$visit_icon = getimagesize($visit_icon1);
-				if(is_array(@getimagesize($visit_icon1)))
-				{
-					$visit_icon = $visit_iconsUrl."google_visit_icon_".$icons_language.".png";
-				}
-				 else
-				{
-					$visit_icon = $visit_iconsUrl."google.png";
-				}
-				//$visit_icon = $visit_iconsUrl."google.png";
+				$visit_icon = $visit_iconsUrl."google.png";
+				
 				$url = ($sfsi_plus_section2_options['sfsi_plus_google_pageURL'])?$sfsi_plus_section2_options['sfsi_plus_google_pageURL'] : 'javascript:void(0);';
 				
 				/* check for icons to display */     
@@ -730,25 +713,16 @@ function sfsi_plus_prepairIcons($icon_name,$is_front=0)
 				$url = ($sfsi_plus_section2_options['sfsi_plus_twitter_pageURL'])?$sfsi_plus_section2_options['sfsi_plus_twitter_pageURL'] : 'javascript:void(0);';
 				$twitter_user = $sfsi_plus_section2_options['sfsi_plus_twitter_followUserName'];
 				$twitter_text = $sfsi_plus_section2_options['sfsi_plus_twitter_aboutPageText'];
-				//$visit_icon = $visit_iconsUrl."twitter.png";
 				$width = 59;
 				$totwith = $width+28+$icons_space;
 				$twt_margin = $totwith/2;
              	/* check for icons to display */
 		     	$hoverdiv='';
-			    $visit_icon1 = $visit_iconsUrl."twitter_visit_icon_".$icons_language.".png";
-				//$visit_icon = getimagesize($visit_icon1);
-				if(is_array(@getimagesize($visit_icon1)))
-				{
-					$visit_icon = $visit_iconsUrl."twitter_visit_icon_".$icons_language.".png";
-				}
-				 else
-				{
-					$visit_icon = $visit_iconsUrl."twitter.png";
-				}
+			    
+				$visit_icon = $visit_iconsUrl."twitter.png";
 				
-				 if($sfsi_plus_section2_options['sfsi_plus_twitter_followme']=="yes" || $sfsi_plus_section2_options['sfsi_plus_twitter_aboutPage']=="yes")
-				 {
+				if($sfsi_plus_section2_options['sfsi_plus_twitter_followme']=="yes" || $sfsi_plus_section2_options['sfsi_plus_twitter_aboutPage']=="yes")
+				{
 					 $hoverSHow=1;
 					 //Visit twitter page {Monad}	 
 					 if($sfsi_plus_section2_options['sfsi_plus_twitter_page']=="yes")
@@ -764,17 +738,17 @@ function sfsi_plus_prepairIcons($icon_name,$is_front=0)
 						 $hoverdiv.="<div  class='icon2'>".$socialObj->sfsi_twitterShare($current_url,$twitter_text,$icons_language)."</div>";
 					 } 
 					 
-				 }
+				}
 		      	 
-				 /* fecth no of counts if active in admin section */
-				 if($sfsi_plus_section4_options['sfsi_plus_twitter_countsDisplay']=="yes" && $sfsi_plus_section4_options['sfsi_plus_display_counts']=="yes")
-				 {
-					 if($sfsi_plus_section4_options['sfsi_plus_twitter_countsFrom']=="manual")
-					 {    
-					 $counts=$socialObj->format_num($sfsi_plus_section4_options['sfsi_plus_twitter_manualCounts']);
-					 }
-					 else if($sfsi_plus_section4_options['sfsi_plus_twitter_countsFrom']=="source")
-					 {
+				/* fecth no of counts if active in admin section */
+				if($sfsi_plus_section4_options['sfsi_plus_twitter_countsDisplay']=="yes" && $sfsi_plus_section4_options['sfsi_plus_display_counts']=="yes")
+				{
+					if($sfsi_plus_section4_options['sfsi_plus_twitter_countsFrom']=="manual")
+					{    
+						$counts=$socialObj->format_num($sfsi_plus_section4_options['sfsi_plus_twitter_manualCounts']);
+					}
+					else if($sfsi_plus_section4_options['sfsi_plus_twitter_countsFrom']=="source")
+					{
 						$tw_settings=array('sfsiplus_tw_consumer_key'=>$sfsi_plus_section4_options['sfsiplus_tw_consumer_key'],
 										   'sfsiplus_tw_consumer_secret'=> $sfsi_plus_section4_options['sfsiplus_tw_consumer_secret'],
 										   'sfsiplus_tw_oauth_access_token'=> $sfsi_plus_section4_options['sfsiplus_tw_oauth_access_token'],
@@ -786,7 +760,7 @@ function sfsi_plus_prepairIcons($icon_name,$is_front=0)
 						 {
 						   $counts=(string) "0";
 						 }
-					 }
+					}
 				 } 
                  
 				 //Giving alternative text to image 	 
@@ -881,17 +855,8 @@ function sfsi_plus_prepairIcons($icon_name,$is_front=0)
 				$totwith = $width+28+$icons_space;
 				$twt_margin = $totwith/2;
 				$youtube_user = (isset($sfsi_plus_section4_options['sfsi_plus_youtube_user']) && !empty($sfsi_plus_section4_options['sfsi_plus_youtube_user'])) ? $sfsi_plus_section4_options['sfsi_plus_youtube_user'] : 'SpecificFeeds';
-				//$visit_icon = $visit_iconsUrl."youtube.png";
-				$visit_icon1 = $visit_iconsUrl."youtube_visit_icon_".$icons_language.".png";
-				//$visit_icon = getimagesize($visit_icon1);
-				if(is_array(@getimagesize($visit_icon1)))
-				{
-					$visit_icon = $visit_iconsUrl."youtube_visit_icon_".$icons_language.".png";
-				}
-				 else
-				{
-					$visit_icon = $visit_iconsUrl."youtube.png";
-				}
+				$visit_icon = $visit_iconsUrl."youtube.png";
+				
 				$url = ($sfsi_plus_section2_options['sfsi_plus_youtube_pageUrl'])? $sfsi_plus_section2_options['sfsi_plus_youtube_pageUrl'] : 'javascript:void(0);';
 				
 				//Giving alternative text to image
@@ -967,17 +932,8 @@ function sfsi_plus_prepairIcons($icon_name,$is_front=0)
 				
 				$pinterest_user = $sfsi_plus_section4_options['sfsi_plus_pinterest_user'];
 				$pinterest_board = $sfsi_plus_section4_options['sfsi_plus_pinterest_board'];
-				//$visit_icon = $visit_iconsUrl."pinterest.png";
-				$visit_icon1 = $visit_iconsUrl."pinterest_visit_icon_".$icons_language.".png";
-				//$visit_icon = getimagesize($visit_icon1);
-				if(is_array(@getimagesize($visit_icon1)))
-				{
-					$visit_icon = $visit_iconsUrl."pinterest_visit_icon_".$icons_language.".png";
-				}
-				 else
-				{
-					$visit_icon = $visit_iconsUrl."pinterest.png";
-				}
+				$visit_icon = $visit_iconsUrl."pinterest.png";
+				
 		        $url = (isset($sfsi_plus_section2_options['sfsi_plus_pinterest_pageUrl'])) ? $sfsi_plus_section2_options['sfsi_plus_pinterest_pageUrl'] : 'javascript:void(0);';
                 
 				//Giving alternative text to image
@@ -1158,17 +1114,7 @@ function sfsi_plus_prepairIcons($icon_name,$is_front=0)
 				$linkedIn_compayId = $sfsi_plus_section2_options['sfsi_plus_linkedin_followCompany'];
 				$linkedIn_compay = $sfsi_plus_section2_options['sfsi_plus_linkedin_followCompany']; 
 				$linkedIn_ProductId = $sfsi_plus_section2_options['sfsi_plus_linkedin_recommendProductId'];
-				//$visit_icon = $visit_iconsUrl."linkedIn.png";
-				$visit_icon1 = $visit_iconsUrl."linkedIn_visit_icon_".$icons_language.".png";
-				//$visit_icon = getimagesize($visit_icon1);
-				if(is_array(@getimagesize($visit_icon1)))
-				{
-					$visit_icon = $visit_iconsUrl."linkedIn_visit_icon_".$icons_language.".png";
-				}
-				 else
-				{
-					$visit_icon = $visit_iconsUrl."linkedIn.png";
-				}
+				$visit_icon = $visit_iconsUrl."linkedIn.png";
 				
 				/*check for icons to display */     
 				$url=($sfsi_plus_section2_options['sfsi_plus_linkedin_pageURL'])? $sfsi_plus_section2_options['sfsi_plus_linkedin_pageURL'] : 'javascript:void(0);';         
