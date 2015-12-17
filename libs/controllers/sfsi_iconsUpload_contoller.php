@@ -92,7 +92,7 @@ function sfsi_plus_DeleteSkin()
         require_once('../../../../../wp-load.php');
 	$upload_dir = wp_upload_dir();
 	
-	if($_REQUEST['action'] == 'DeleteSkin' && isset($_REQUEST['iconname']) && !empty($_REQUEST['iconname']))
+	if($_REQUEST['action'] == 'plus_DeleteSkin' && isset($_REQUEST['iconname']) && !empty($_REQUEST['iconname']))
 	{
 	   $imgurl = get_option( $_REQUEST['iconname'] );
 	   $path = parse_url($imgurl, PHP_URL_PATH);
@@ -434,7 +434,11 @@ function sfsiplus_cropImage($CurWidth,$CurHeight,$iSize,$DestFolder,$SrcImage,$Q
 	$maketransparent = imagecolortransparent($NewCanves,$white);
 	imagefill($NewCanves, 0, 0, $maketransparent);
 	
-	if(imagecopyresampled($NewCanves, $SrcImage,0, 0, $x_offset, $y_offset, $iSize, $iSize, $square_size, $square_size))
+	/*
+	 * Change offset for increase image quality ($x_offset, $y_offset)
+	 * imagecopyresampled($NewCanves, $SrcImage,0, 0, $x_offset, $y_offset, $iSize, $iSize, $square_size, $square_size)
+	 */
+	if(imagecopyresampled($NewCanves, $SrcImage,0, 0, 0, 0, $iSize, $iSize, $square_size, $square_size))
 	{
 		imagesavealpha($NewCanves,true); 
 		switch(strtolower($ImageType))
