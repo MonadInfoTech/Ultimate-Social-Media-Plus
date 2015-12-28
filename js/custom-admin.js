@@ -1134,7 +1134,44 @@ SFSI(document).ready(function(s) {
 			default:
 		}	
 	});
-	SFSI("#sfsiPlusFormBorderColor").ColorPicker({
+	
+	//pooja 28-12-2015
+	SFSI('#sfsi_plus_form_border_color').wpColorPicker({
+		defaultColor: false,
+		change: function(event, ui){sfsi_plus_create_suscriber_form()},
+		clear: function() {sfsi_plus_create_suscriber_form()},
+		hide: true,
+		palettes: true
+	}),
+	SFSI('#sfsi_plus_form_background').wpColorPicker({
+		defaultColor: false,
+		change: function(event, ui){sfsi_plus_create_suscriber_form()},
+		clear: function() {sfsi_plus_create_suscriber_form()},
+		hide: true,
+		palettes: true
+	}),
+	SFSI('#sfsi_plus_form_heading_fontcolor').wpColorPicker({
+		defaultColor: false,
+		change: function(event, ui){sfsi_plus_create_suscriber_form()},
+		clear: function() {sfsi_plus_create_suscriber_form()},
+		hide: true,
+		palettes: true
+	}),
+	SFSI('#sfsi_plus_form_button_fontcolor').wpColorPicker({
+		defaultColor: false,
+		change: function(event, ui){sfsi_plus_create_suscriber_form()},
+		clear: function() {sfsi_plus_create_suscriber_form()},
+		hide: true,
+		palettes: true
+	}),
+	SFSI('#sfsi_plus_form_button_background').wpColorPicker({
+		defaultColor: false,
+		change: function(event, ui){sfsi_plus_create_suscriber_form()},
+		clear: function() {sfsi_plus_create_suscriber_form()},
+		hide: true,
+		palettes: true
+	});
+	/*SFSI("#sfsiPlusFormBorderColor").ColorPicker({
         color:"#f80000",
         onBeforeShow:function() {
             s(this).ColorPickerSetColor(SFSI("#sfsi_plus_form_border_color").val());
@@ -1253,7 +1290,7 @@ SFSI(document).ready(function(s) {
             SFSI("#sfsi_plus_form_button_background").val("#"+i), SFSI("#sfsiPlusFormButtonBackground").css("background","#"+i);
 			sfsi_plus_create_suscriber_form();
         }
-    });
+    });*/
 	//changes done {Monad}
 	
 	function i() {
@@ -1307,7 +1344,31 @@ SFSI(document).ready(function(s) {
             left:SFSI(".sfsi_plus_outr_div").find(".addthis_button").offset().left + "px"
         });
     }),
-	SFSI("#sfsifontCloroPicker").ColorPicker({
+	
+	//pooja 28-12-2015
+		SFSI('#sfsi_plus_popup_background_color').wpColorPicker({
+		defaultColor: false,
+		change: function(event, ui){sfsi_plus_make_popBox()},
+		clear: function() {sfsi_plus_make_popBox()},
+		hide: true,
+		palettes: true
+	}),
+	SFSI('#sfsi_plus_popup_border_color').wpColorPicker({
+		defaultColor: false,
+		change: function(event, ui){sfsi_plus_make_popBox()},
+		clear: function() {sfsi_plus_make_popBox()},
+		hide: true,
+		palettes: true
+	}),
+	SFSI('#sfsi_plus_popup_fontColor').wpColorPicker({
+		defaultColor: false,
+		change: function(event, ui){sfsi_plus_make_popBox()},
+		clear: function() {sfsi_plus_make_popBox()},
+		hide: true,
+		palettes: true
+	}),
+	
+	/*SFSI("#sfsifontCloroPicker").ColorPicker({
         color:"#f80000",
         onBeforeShow:function() {
             s(this).ColorPickerSetColor(SFSI("#sfsi_plus_popup_fontColor").val());
@@ -1326,7 +1387,7 @@ SFSI(document).ready(function(s) {
             SFSI("#sfsi_plus_popup_fontColor").val("#" + i), SFSI("#sfsifontCloroPicker").css("background", "#" + i), 
             sfsi_plus_make_popBox();
         }
-    }),
+    }),*/
 	SFSI("div#sfsiplusid_linkedin").find(".icon4").find("a").find("img").mouseover(function() {
 		SFSI(this).attr("src", ajax_object.plugin_url + "images/visit_icons/linkedIn_hover.svg");
     }),
@@ -1352,7 +1413,10 @@ SFSI(document).ready(function(s) {
 	SFSI("div#sfsiplusid_twitter").find(".cstmicon1").find("a").find("img").mouseleave(function() {
         SFSI(this).css("opacity", "1");
     }),
-	SFSI("#sfsiBackgroundColorPicker").ColorPicker({
+	
+	//pooja 28-12-2015
+	
+	/*SFSI("#sfsiBackgroundColorPicker").ColorPicker({
         color:"#f80000",
         onBeforeShow:function() {
             s(this).ColorPickerSetColor(SFSI("#sfsi_plus_popup_background_color").val());
@@ -1391,7 +1455,7 @@ SFSI(document).ready(function(s) {
             SFSI("#sfsi_plus_popup_border_color").val("#" + i), SFSI("#sfsiBorderColorPicker").css("background", "#" + i), 
             sfsi_plus_make_popBox();
         }
-    }),
+    }),*/
 	SFSI("#sfsi_plus_save1").on("click", function() {
         sfsi_plus_update_step1() && sfsipluscollapse(this);
     }),

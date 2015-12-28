@@ -286,7 +286,7 @@ class sfsi_plus_SocialHelper
 	}
 
 	/* create on page google share option */      
-	public function sfsi_Googlelike($permalink,$icons_language)
+	public function sfsi_Googlelike($permalink,$icons_language="en_US")
 	{
 		$show_count=0;  
 		?>
@@ -312,10 +312,10 @@ class sfsi_plus_SocialHelper
 	}      
   	
 	/* create on page google share option */      
-  	public function sfsi_GoogleShare($permalink,$icons_language)
+  	public function sfsi_GoogleShare($permalink,$icons_language="en_US")
 	{
       $show_count=1;
-      ?>
+	  ?>
 		<script >
 			window.___gcfg = 
 			{
@@ -323,8 +323,8 @@ class sfsi_plus_SocialHelper
 			};
 		</script>
 		<script src="https://apis.google.com/js/platform.js" async defer></script>
-     <?php
-     	$google_html = '<div class="g-plus" data-action="share" data-annotation="none" data-height="24" data-href="'.$permalink.'">' . $permalink . '"></div>';
+     	<?php
+      $google_html = '<div class="g-plus" data-action="share" data-annotation="none" data-height="24" data-href="'.$permalink.'">' . $permalink . '"></div>';
         return $google_html;
 	}
  

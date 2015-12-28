@@ -13,8 +13,9 @@ function sfsiplus_plugin_back_enqueue_script()
 			wp_enqueue_style("SFSIPLUSmainCss", SFSI_PLUS_PLUGURL . 'css/sfsi-style.css' );
 			
 			wp_enqueue_style("SFSIPLUSJqueryCSS", SFSI_PLUS_PLUGURL . 'css/jquery-ui-1.10.4/jquery-ui-min.css' );
-			wp_enqueue_style("SFSIPLUSColorCss", SFSI_PLUS_PLUGURL . 'css/colorpicker/css/colorpicker-min.css' );
-			wp_enqueue_style("SFSIPLUSLayoutCss", SFSI_PLUS_PLUGURL . 'css/colorpicker/css/layout-min.css' );
+			//wp_enqueue_style("SFSIPLUSColorCss", SFSI_PLUS_PLUGURL . 'css/colorpicker/css/colorpicker-min.css' );
+			//wp_enqueue_style("SFSIPLUSLayoutCss", SFSI_PLUS_PLUGURL . 'css/colorpicker/css/layout-min.css' );
+			wp_enqueue_style("wp-color-picker");
 		}
 	}
 		
@@ -28,15 +29,21 @@ function sfsiplus_plugin_back_enqueue_script()
 			wp_enqueue_script('media-upload');
 			wp_enqueue_script('thickbox'); 
 			
-			wp_register_script('SFSIPLUSjquery.ui.min', SFSI_PLUS_PLUGURL . 'js/jquery-ui-min.js', '', '', true);
-			wp_enqueue_script("SFSIPLUSjquery.ui.min");	
+			wp_enqueue_script("jquery-ui-accordion");	
+			wp_enqueue_script("wp-color-picker");
+			wp_enqueue_script("jquery-effects-core");
+			wp_enqueue_script("jquery-ui-sortable");
+				
+			
+			//wp_register_script('SFSIPLUSjquery.ui.min', SFSI_PLUS_PLUGURL . 'js/jquery-ui-min.js', '', '', true);
+			//wp_enqueue_script("SFSIPLUSjquery.ui.min");	
 			
 			
 			wp_register_script('SFSIPLUSJqueryFRM', SFSI_PLUS_PLUGURL . 'js/jquery.form-min.js', '', '', true);
 			wp_enqueue_script("SFSIPLUSJqueryFRM");
 			
-			wp_register_script('SFSIPLUSJqueryColorPicker', SFSI_PLUS_PLUGURL . 'js/color-picker/colorpicker-min.js', '', '', true);
-			wp_enqueue_script("SFSIPLUSJqueryColorPicker");
+			//wp_register_script('SFSIPLUSJqueryColorPicker', SFSI_PLUS_PLUGURL . 'js/color-picker/colorpicker-min.js', '', '', true);
+			//wp_enqueue_script("SFSIPLUSJqueryColorPicker");
 			
 			wp_register_script('SFSIPLUSCustomFormJs', SFSI_PLUS_PLUGURL . 'js/custom-form-min.js', '', '', true);
 			wp_enqueue_script("SFSIPLUSCustomFormJs");

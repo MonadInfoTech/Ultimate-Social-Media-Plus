@@ -132,10 +132,11 @@
 			<label>
             	<?php  _e( 'Font color:', 'ultimate-social-media-plus' ); ?>
             </label>
-            <input name="sfsi_plus_popup_fontColor" id="sfsi_plus_popup_fontColor" type="text" value="<?php echo ($option7['sfsi_plus_popup_fontColor']!='') ?  $option7['sfsi_plus_popup_fontColor'] : '' ;?>" class="small mkPop" /><div class="color_box">
+            <input name="sfsi_plus_popup_fontColor" data-default-color="#b5b5b5" id="sfsi_plus_popup_fontColor" type="text" value="<?php echo ($option7['sfsi_plus_popup_fontColor']!='') ?  $option7['sfsi_plus_popup_fontColor'] : '' ;?>" />
+			<!--div class="color_box">
 			<div class="corner"></div>
             <div class="color_box1" id="sfsifontCloroPicker" style="background: <?php echo ($option7['sfsi_plus_popup_fontColor']!='') ?  $option7['sfsi_plus_popup_fontColor'] : '#ffffff' ; ?>"></div>
-			</div>
+			</div-->
 		</div>
 		<div class="sfsiplus_row_tab">
 			<label>
@@ -153,21 +154,22 @@
             	<?php  _e( 'Backgroud', 'ultimate-social-media-plus' ); ?><br />
 				<?php  _e( 'Color:', 'ultimate-social-media-plus' ); ?>
             </label>
-            <input name="sfsi_plus_popup_background_color" id="sfsi_plus_popup_background_color" type="text" value="<?php echo ($option7['sfsi_plus_popup_background_color']!='') ?  $option7['sfsi_plus_popup_background_color'] : '' ;?>" class="small" />
-			<div class="color_box">
+            <input name="sfsi_plus_popup_background_color" data-default-color="#b5b5b5" id="sfsi_plus_popup_background_color" type="text" value="<?php echo ($option7['sfsi_plus_popup_background_color']!='') ?  $option7['sfsi_plus_popup_background_color'] : '' ;?>" />
+			<!--div class="color_box">
 			  <div class="corner"></div>			  
-                          <div class="color_box1" id="sfsiBackgroundColorPicker" style="background: <?php echo ($option7['sfsi_plus_popup_background_color']!='') ?  $option7['sfsi_plus_popup_background_color'] : '#ffffff' ; ?>"></div>
-			</div>
+                          <div class="color_box1" id="sfsiBackgroundColorPicker" style="background: <?php //echo ($option7['sfsi_plus_popup_background_color']!='') ?  $option7['sfsi_plus_popup_background_color'] : '#ffffff' ; ?>"></div>
+			</div-->
 		</div>
 		<div class="sfsiplus_row_tab">
 			<label class="border">
            		<?php  _e( 'Border Color:', 'ultimate-social-media-plus' ); ?>
             </label>
-			<div class="field"><input name="sfsi_plus_popup_border_color" id="sfsi_plus_popup_border_color" type="text" value="<?php echo ($option7['sfsi_plus_popup_border_color']!='') ?  $option7['sfsi_plus_popup_border_color'] : '' ;?>" class="small" />
-			<div class="color_box">
+			<div class="field"><input name="sfsi_plus_popup_border_color" data-default-color="#b5b5b5" id="sfsi_plus_popup_border_color" type="text" value="<?php echo ($option7['sfsi_plus_popup_border_color']!='') ?  $option7['sfsi_plus_popup_border_color'] : '' ;?>"  />
+			<!--div class="color_box">
 			  <div class="corner"></div>
-                          <div class="color_box1" id="sfsiBorderColorPicker" style="background: <?php echo ($option7['sfsi_plus_popup_border_color']!='') ?  $option7['sfsi_plus_popup_border_color'] : '#ffffff' ; ?>"></div>
-			</div></div>
+                          <div class="color_box1" id="sfsiBorderColorPicker" style="background: <?php //echo ($option7['sfsi_plus_popup_border_color']!='') ?  $option7['sfsi_plus_popup_border_color'] : '#ffffff' ; ?>"></div>
+			</div-->
+			</div>
 		</div>
 		<div class="sfsiplus_row_tab">
 			<label>

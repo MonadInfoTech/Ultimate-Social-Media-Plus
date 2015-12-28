@@ -188,14 +188,14 @@
                     	<label>
                         	<?php  _e( 'Color', 'ultimate-social-media-plus' ); ?>
                         </label>
-                        <input id="sfsi_plus_form_border_color" class="small color-code" type="text" name="sfsi_plus_form_border_color"
+                        <input id="sfsi_plus_form_border_color" data-default-color="#b5b5b5" type="text" name="sfsi_plus_form_border_color"
                         	value="<?php echo ($option9['sfsi_plus_form_border_color']!='')
 										? $option9['sfsi_plus_form_border_color'] : '' ;
 									?>">
-                        <div class="color_box">
+                        <!--div class="color_box">
                             <div class="corner"></div>
-                            <div id="sfsiPlusFormBorderColor" class="color_box1" style="background: <?php echo ($option9['sfsi_plus_form_border_color']!='')? $option9['sfsi_plus_form_border_color'] : '' ;?>"></div>
-                        </div>
+                            <div id="sfsiPlusFormBorderColor" class="color_box1" style="background: <?php //echo ($option9['sfsi_plus_form_border_color']!='')? $option9['sfsi_plus_form_border_color'] : '' ;?>"></div>
+                        </div-->
                     </div>
                 </div>
                 <!--Row Section-->
@@ -204,14 +204,14 @@
                     	<?php  _e( 'Background color:', 'ultimate-social-media-plus' ); ?>
                     </label>
 					<div class="sfsi_plus_field">
-                    	<input id="sfsi_plus_form_background" class="small color-code" type="text" name="sfsi_plus_form_background"
+                    	<input id="sfsi_plus_form_background" data-default-color="#b5b5b5" type="text" name="sfsi_plus_form_background"
                         	value="<?php echo ($option9['sfsi_plus_form_background']!='')
 										? $option9['sfsi_plus_form_background'] : '' ;
 									?>">
-                        <div class="color_box">
+                        <!--div class="color_box">
                             <div class="corner"></div>
-                            <div id="sfsiPlusFormBackground" class="color_box1" style="background: <?php echo ($option9['sfsi_plus_form_background']!='')? $option9['sfsi_plus_form_background'] : '' ;?>"></div>
-                        </div>
+                            <div id="sfsiPlusFormBackground" class="color_box1" style="background: <?php //echo ($option9['sfsi_plus_form_background']!='')? $option9['sfsi_plus_form_background'] : '' ;?>"></div>
+                        </div-->
                     </div>
 				</div>
                 <!--Row Section-->
@@ -264,14 +264,14 @@
                     	<label class="sfsi_plus_same_width">
                         	<?php  _e( 'Font color', 'ultimate-social-media-plus' ); ?>
                         </label>
-                        <input type="text" name="sfsi_plus_form_heading_fontcolor" class="small color-code" id="sfsi_plus_form_heading_fontcolor" value="<?php echo ($option9['sfsi_plus_form_heading_fontcolor']!='')
+                        <input type="text" name="sfsi_plus_form_heading_fontcolor" data-default-color="#b5b5b5" id="sfsi_plus_form_heading_fontcolor" value="<?php echo ($option9['sfsi_plus_form_heading_fontcolor']!='')
 										? $option9['sfsi_plus_form_heading_fontcolor'] : '' ;
 									?>">
-                        <div class="color_box">
+                        <!--div class="color_box">
                             <div class="corner"></div>
-                            <div class="color_box1" id="sfsiPlusFormHeadingFontcolor" style="background: <?php echo ($option9['sfsi_plus_form_heading_fontcolor']!='') ? $option9['sfsi_plus_form_heading_fontcolor'] : '' ;
+                            <div class="color_box1" id="sfsiPlusFormHeadingFontcolor" style="background: <?php //echo ($option9['sfsi_plus_form_heading_fontcolor']!='') ? $option9['sfsi_plus_form_heading_fontcolor'] : '' ;
 									?>"></div>
-                        </div>
+                        </div-->
                     </div>
                     <div class="sfsi_plus_field">
                     	<label>
@@ -421,14 +421,14 @@
                     	<label class="sfsi_plus_same_width">
                         	<?php  _e( 'Font color', 'ultimate-social-media-plus' ); ?>
                         </label>
-                        <input type="text" name="sfsi_plus_form_button_fontcolor" class="small color-code" id="sfsi_plus_form_button_fontcolor" value="<?php echo ($option9['sfsi_plus_form_button_fontcolor']!='')
+                        <input type="text" name="sfsi_plus_form_button_fontcolor" data-default-color="#b5b5b5" id="sfsi_plus_form_button_fontcolor" value="<?php echo ($option9['sfsi_plus_form_button_fontcolor']!='')
 										? $option9['sfsi_plus_form_button_fontcolor'] : '' ;
 									?>">
-                        <div class="color_box">
+                        <!--div class="color_box">
                             <div class="corner"></div>
-                            <div class="color_box1" id="sfsiPlusFormButtonFontcolor" style="background: <?php echo ($option9['sfsi_plus_form_button_fontcolor']!='') ? $option9['sfsi_plus_form_button_fontcolor'] : '' ;
+                            <div class="color_box1" id="sfsiPlusFormButtonFontcolor" style="background: <?php //echo ($option9['sfsi_plus_form_button_fontcolor']!='') ? $option9['sfsi_plus_form_button_fontcolor'] : '' ;
 									?>"></div>
-                        </div>
+                        </div-->
                     </div>
                     <div class="sfsi_plus_field">
                     	<label>
@@ -457,14 +457,14 @@
                     	<label class="sfsi_plus_same_width"><b>
                         	<?php  _e( 'Button color:', 'ultimate-social-media-plus' ); ?>
                         </b></label>
-                        <input type="text" name="sfsi_plus_form_button_background" class="small color-code" id="sfsi_plus_form_button_background" value="<?php echo ($option9['sfsi_plus_form_button_background']!='')
+                        <input type="text" name="sfsi_plus_form_button_background" data-default-color="#b5b5b5" id="sfsi_plus_form_button_background" value="<?php echo ($option9['sfsi_plus_form_button_background']!='')
 										? $option9['sfsi_plus_form_button_background'] : '' ;
 									?>">
-                        <div class="color_box">
+                        <!--div class="color_box">
                             <div class="corner"></div>
-                            <div class="color_box1" id="sfsiPlusFormButtonBackground" style="background: <?php echo ($option9['sfsi_plus_form_button_background']!='') ? $option9['sfsi_plus_form_button_background'] : '' ;
+                            <div class="color_box1" id="sfsiPlusFormButtonBackground" style="background: <?php //echo ($option9['sfsi_plus_form_button_background']!='') ? $option9['sfsi_plus_form_button_background'] : '' ;
 									?>"></div>
-                        </div>
+                        </div-->
                     </div>
                 </div>    
                 <!--End Section-->

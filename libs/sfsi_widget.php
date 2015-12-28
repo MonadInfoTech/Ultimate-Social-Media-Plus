@@ -1455,7 +1455,7 @@ function sfsi_plus_postsprepairIcons($icon_name,$is_front=0)
     $sfsi_plus_section6_options=  unserialize(get_option('sfsi_plus_section6_options',false));
     $sfsi_plus_section7_options=  unserialize(get_option('sfsi_plus_section7_options',false));
 	$sfsi_plus_section8_options=  unserialize(get_option('sfsi_plus_section8_options',false));
-
+	$icons_language = $sfsi_plus_section5_options['sfsi_plus_icons_language'];
 	 /* get active theme */
      $border_radius='';
      $active_theme=$sfsi_plus_section3_options['sfsi_plus_actvite_theme'];
@@ -1821,11 +1821,11 @@ function sfsi_plus_postsprepairIcons($icon_name,$is_front=0)
 					 }
 					 if($sfsi_plus_section2_options['sfsi_plus_twitter_followme']=="yes" && !empty($twitter_user))
 					 {
-						 $hoverdiv.="<div  class='icon1'>".$socialObj->sfsi_twitterFollow($twitter_user)."</div>";
+						 $hoverdiv.="<div  class='icon1'>".$socialObj->sfsi_twitterFollow($twitter_user,$icons_language)."</div>";
 					 }    
 					 if($sfsi_plus_section2_options['sfsi_plus_twitter_aboutPage']=="yes")
 					 {
-						 $hoverdiv.="<div  class='icon2'>".$socialObj->sfsi_twitterShare($current_url,$twitter_text)."</div>";
+						 $hoverdiv.="<div  class='icon2'>".$socialObj->sfsi_twitterShare($current_url,$twitter_text,$icons_language)."</div>";
 					 } 
 					 
 				 }

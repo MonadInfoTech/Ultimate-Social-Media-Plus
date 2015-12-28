@@ -293,7 +293,7 @@ function sfsi_plus_footer_script()
 		<!--google share and  like and e js -->
 		<script type="text/javascript">
 			window.___gcfg = {
-			  lang: <?php echo $icons_language;?>
+			  lang: '<?php echo $icons_language;?>'
 			};
 			(function() {
 				var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
