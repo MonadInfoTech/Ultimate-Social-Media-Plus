@@ -235,7 +235,7 @@ function sfsi_plus_beforaftereposts( $content )
 	$org_content = $content;
 	$icons_before = '';
 	$icons_after = '';
-	if( is_single() )
+	if(is_single())
 	{
 		$option8=  unserialize(get_option('sfsi_plus_section8_options',false));
 		$lineheight = $option8['sfsi_plus_post_icons_size'];
@@ -341,9 +341,8 @@ function sfsi_plus_beforeafterblogposts( $content )
 		{
 			$sfsi_section8['sfsi_plus_recttwtr'] = 'no';
 		}
+		
 		//checking for standard icons
-		
-		
 		$txt=(isset($sfsi_section8['sfsi_plus_textBefor_icons']))? $sfsi_section8['sfsi_plus_textBefor_icons'] : "Please follow and like us:" ;
 		$float = $sfsi_section8['sfsi_plus_icons_alignment'];
 		if($float == "center")
@@ -362,38 +361,37 @@ function sfsi_plus_beforeafterblogposts( $content )
 			//icon selection
 			$icons_before .= "<div class='sfsibeforpstwpr' style='".$style_parent."'>";
 				$icons_before .= "<div class='sfsi_Sicons ".$float."' style='".$style."'>";
-					
 					if($sfsi_plus_display_button_type == 'standard_buttons')
 					{
 						if($sfsi_section8['sfsi_plus_rectsub'] == 'yes' || $sfsi_section8['sfsi_plus_rectfb'] == 'yes' || $sfsi_section8['sfsi_plus_rectgp'] == 'yes' || $sfsi_section8['sfsi_plus_rectshr'] == 'yes' || $sfsi_section8['sfsi_plus_recttwtr'] == 'yes')
 						{
-							$icons_before .= "<div style='float:left;margin:0px 8px 0px 0px; line-height:24px'><span>".$txt."</span></div>";
+							$icons_before .= "<div style='display: inline-block;margin-bottom: 0; margin-left: 0; margin-right: 8px; margin-top: 0; vertical-align: middle;width: auto;'><span>".$txt."</span></div>";
 						}
 						if($sfsi_section8['sfsi_plus_rectsub'] == 'yes')
 						{
 							if($show_count){$sfsiLikeWithsub = "93px";}else{$sfsiLikeWithsub = "64px";}
 							if(!isset($sfsiLikeWithsub)){$sfsiLikeWithsub = $sfsiLikeWith;}
-							$icons_before.="<div class='sf_subscrbe' style='float:left;width:".$sfsiLikeWithsub."'>".sfsi_plus_Subscribelike($permalink,$show_count)."</div>";
+							$icons_before.="<div class='sf_subscrbe' style='display: inline-block;vertical-align: middle;width: auto;'>".sfsi_plus_Subscribelike($permalink,$show_count)."</div>";
 						}
 						if($sfsi_section8['sfsi_plus_rectfb'] == 'yes')
 						{
 							if($show_count){}else{$sfsiLikeWithfb = "48px";}
 							if(!isset($sfsiLikeWithfb)){$sfsiLikeWithfb = $sfsiLikeWith;}
-							$icons_before .= "<div class='sf_fb' style='float:left;width:".$sfsiLikeWithfb."'>".sfsi_plus_FBlike($permalink,$show_count)."</div>";
+							$icons_before .= "<div class='sf_fb' style='display: inline-block;vertical-align: middle;width: auto;'>".sfsi_plus_FBlike($permalink,$show_count)."</div>";
 						}
 						if($sfsi_section8['sfsi_plus_rectgp'] == 'yes')
 						{
-							$icons_before .= "<div class='sf_google'  style='float:left;max-width:62px;min-width:35px;'>".sfsi_plus_googlePlus($permalink,$show_count)."</div>";
+							$icons_before .= "<div class='sf_google'  style='display: inline-block;vertical-align: middle; width:auto;'>".sfsi_plus_googlePlus($permalink,$show_count)."</div>";
 						}
 						if($sfsi_section8['sfsi_plus_recttwtr'] == 'yes')
 						{
 							if($show_count){$sfsiLikeWithtwtr = "77px";}else{$sfsiLikeWithtwtr = "56px";}
 							if(!isset($sfsiLikeWithtwtr)){$sfsiLikeWithtwtr = $sfsiLikeWith;}
-							$icons_before.="<div class='sf_twiter' style='float:left;width:".$sfsiLikeWithtwtr."'>".sfsi_plus_twitterlike($permalink,$show_count)."</div>";
+							$icons_before.="<div class='sf_twiter' style='display: inline-block;vertical-align: middle;width: auto;'>".sfsi_plus_twitterlike($permalink,$show_count)."</div>";
 						}
 						if($sfsi_section8['sfsi_plus_rectshr'] == 'yes')
 						{
-							$icons_before .= "<div class='sf_addthis'  style='float:left;'>".sfsi_plus_Addthis_blogpost($show_count, $permalink, $post_title)."</div>";
+							$icons_before .= "<div class='sf_addthis'  style='display: inline-block;vertical-align: middle;width: auto;margin-top: 6px;'>".sfsi_plus_Addthis_blogpost($show_count, $permalink, $post_title)."</div>";
 						}
 					}
 					else
@@ -423,33 +421,33 @@ function sfsi_plus_beforeafterblogposts( $content )
 					{
 						if($sfsi_section8['sfsi_plus_rectsub'] == 'yes' || $sfsi_section8['sfsi_plus_rectfb'] == 'yes' || $sfsi_section8['sfsi_plus_rectgp'] == 'yes' || $sfsi_section8['sfsi_plus_rectshr'] == 'yes' || $sfsi_section8['sfsi_plus_recttwtr'] == 'yes')
 						{
-							$icons_after .= "<div style='float:left;margin:0px 8px 0px 0px; line-height:24px'><span>".$txt."</span></div>";
+							$icons_after .= "<div style='display: inline-block;margin-bottom: 0; margin-left: 0; margin-right: 8px; margin-top: 0; vertical-align: middle;width: auto;'><span>".$txt."</span></div>";
 						}
 						if($sfsi_section8['sfsi_plus_rectsub'] == 'yes')
 						{
 							if($show_count){$sfsiLikeWithsub = "93px";}else{$sfsiLikeWithsub = "64px";}
 							if(!isset($sfsiLikeWithsub)){$sfsiLikeWithsub = $sfsiLikeWith;}
-							$icons_after.="<div class='sf_subscrbe' style='float:left;width:".$sfsiLikeWithsub."'>".sfsi_plus_Subscribelike($permalink,$show_count)."</div>";
+							$icons_after.="<div class='sf_subscrbe' style='display: inline-block;vertical-align: middle; width: auto;'>".sfsi_plus_Subscribelike($permalink,$show_count)."</div>";
 						}
 						if($sfsi_section8['sfsi_plus_rectfb'] == 'yes')
 						{
 							if($show_count){}else{$sfsiLikeWithfb = "48px";}
 							if(!isset($sfsiLikeWithfb)){$sfsiLikeWithfb = $sfsiLikeWith;}
-							$icons_after .= "<div class='sf_fb' style='float:left;width:".$sfsiLikeWithfb."'>".sfsi_plus_FBlike($permalink,$show_count)."</div>";
+							$icons_after .= "<div class='sf_fb' style='display: inline-block; vertical-align: middle;width: auto;'>".sfsi_plus_FBlike($permalink,$show_count)."</div>";
 						}
 						if($sfsi_section8['sfsi_plus_rectgp'] == 'yes')
 						{
-							$icons_after .= "<div class='sf_google'  style='float:left;max-width:62px;min-width:35px;'>".sfsi_plus_googlePlus($permalink,$show_count)."</div>";
+							$icons_after .= "<div class='sf_google'  style='display: inline-block;vertical-align: middle; width: auto;'>".sfsi_plus_googlePlus($permalink,$show_count)."</div>";
 						}
 						if($sfsi_section8['sfsi_plus_recttwtr'] == 'yes')
 						{
 							if($show_count){$sfsiLikeWithtwtr = "77px";}else{$sfsiLikeWithtwtr = "56px";}
 							if(!isset($sfsiLikeWithtwtr)){$sfsiLikeWithtwtr = $sfsiLikeWith;}
-							$icons_after.="<div class='sf_twiter' style='float:left;width:".$sfsiLikeWithtwtr."'>".sfsi_plus_twitterlike($permalink,$show_count)."</div>";
+							$icons_after.="<div class='sf_twiter' style='display: inline-block;vertical-align: middle;width: auto;'>".sfsi_plus_twitterlike($permalink,$show_count)."</div>";
 						}
 						if($sfsi_section8['sfsi_plus_rectshr'] == 'yes')
 						{
-							$icons_after .= "<div class='sf_addthis'  style='float:left;'>".sfsi_plus_Addthis_blogpost($show_count, $permalink, $post_title)."</div>";
+							$icons_after .= "<div class='sf_addthis'  style='display: inline-block;vertical-align: middle;width: auto;margin-top: 6px;'>".sfsi_plus_Addthis_blogpost($show_count, $permalink, $post_title)."</div>";
 						}
 					}
 					else

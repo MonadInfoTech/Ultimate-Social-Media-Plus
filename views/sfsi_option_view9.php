@@ -1,11 +1,15 @@
 <?php
     /* unserialize all saved option for Eight options */
     $option9=  unserialize(get_option('sfsi_plus_section9_options',false));
+	$feedId = get_option('sfsi_plus_feed_id',false);
 ?>
 <div class="tab9">
 	
     <p>
-		<?php  _e('In addition to the email- or follow-icon you can also show a subscription form which maximizes chances that people subscribe to your site.', 'ultimate-social-media-plus'); ?>
+		<?php  _e('In addition to the email- or follow-icon you can also show a subscription form which maximizes chances that people subscribe to your site. To get access to the emails who subscribe, please', 'ultimate-social-media-plus'); ?>
+		<a href="http://www.specificfeeds.com/<?php echo $feedId; ?>?getParam=feeds_claims" target="_blank">
+			<?php _e('claim your feed.','ultimate-social-media-plus'); ?>
+		</a>
     </p>
 	
     <div class="sfsi_plus_tab8_container">

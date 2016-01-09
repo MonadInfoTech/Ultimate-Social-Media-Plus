@@ -1046,3 +1046,12 @@ ul#adminmenu li.toplevel_page_sfsi-plus-options a.current, ul#adminmenu li.tople
     margin-top: 10px !important;
 }
 }
+
+/*poonam*/
+.follows-btn{float:left;width:25%;}
+.preview-btn{float:left;width:10%;}
+.social-img-link{float:left;width:15%;}
+.social-img-link img{vertical-align:middle;}
+.language-field{float:left;width:24%;}
+.language-field select{width:100%;}
+.icons_size{clear:both;}

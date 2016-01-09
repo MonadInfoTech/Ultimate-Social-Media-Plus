@@ -344,6 +344,14 @@ function sfsi_plus_options_updater5()
     
     $sfsi_plus_icons_perRow              = isset($_POST["sfsi_plus_icons_perRow"]) ? $_POST["sfsi_plus_icons_perRow"] : '5'; 
 	
+	$sfsi_plus_follow_icons_language        = isset($_POST["sfsi_plus_follow_icons_language"]) ? $_POST["sfsi_plus_follow_icons_language"] : 'Follow_en_US';
+	
+	$sfsi_plus_facebook_icons_language        = isset($_POST["sfsi_plus_facebook_icons_language"]) ? $_POST["sfsi_plus_facebook_icons_language"] : 'Visit_us_en_US';
+	
+	$sfsi_plus_twitter_icons_language        = isset($_POST["sfsi_plus_twitter_icons_language"]) ? $_POST["sfsi_plus_twitter_icons_language"] : 'Visit_us_en_US';
+	
+	$sfsi_plus_google_icons_language        = isset($_POST["sfsi_plus_google_icons_language"]) ? $_POST["sfsi_plus_google_icons_language"] : 'Visit_us_en_US';
+	
 	$sfsi_plus_icons_language            = isset($_POST["sfsi_plus_icons_language"]) ? $_POST["sfsi_plus_icons_language"] : 'en_US'; 
 	
     $sfsi_plus_icons_ClickPageOpen       = isset($_POST["sfsi_plus_icons_ClickPageOpen"]) ? $_POST["sfsi_plus_icons_ClickPageOpen"] : 'no'; 
@@ -393,6 +401,10 @@ function sfsi_plus_options_updater5()
         'sfsi_plus_icons_spacing'=>$sfsi_plus_icons_spacing,
         'sfsi_plus_icons_Alignment'=>$sfsi_plus_icons_Alignment,
         'sfsi_plus_icons_perRow'=>$sfsi_plus_icons_perRow,
+		'sfsi_plus_follow_icons_language'=>$sfsi_plus_follow_icons_language,
+		'sfsi_plus_facebook_icons_language'=>$sfsi_plus_facebook_icons_language,
+		'sfsi_plus_twitter_icons_language'=>$sfsi_plus_twitter_icons_language,
+		'sfsi_plus_google_icons_language'=>$sfsi_plus_google_icons_language,
 		'sfsi_plus_icons_language'=>$sfsi_plus_icons_language,
         'sfsi_plus_icons_ClickPageOpen'=>$sfsi_plus_icons_ClickPageOpen,
         'sfsi_plus_icons_float'=>$sfsi_plus_icons_float,
@@ -892,6 +904,13 @@ function sfsiplusremoveFooter()
    	}
     update_option('sfsi_plus_footer_sec', 'no');
     echo json_encode(array('res'=>'success'));exit;
+}
+add_action('wp_ajax_getIconPreview','sfsiPlusGetIconPreview');     
+function sfsiPlusGetIconPreview()
+{
+	extract($_POST);
+	echo '<img src="'.$iconname."/icon_".$iconValue.'.png" >';
+	die;
 }
 add_action('wp_ajax_getForm','sfsiPlusGetForm');     
 function sfsiPlusGetForm()

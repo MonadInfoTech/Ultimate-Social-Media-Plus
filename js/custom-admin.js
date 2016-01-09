@@ -503,7 +503,12 @@ function sfsi_plus_update_step5()
     var s = sfsi_plus_validationStep5();
     if (!s) return global_error = 1, !1;
     sfsiplus_beForeLoad();
-    var i = SFSI("input[name='sfsi_plus_icons_size']").val(), e = SFSI("input[name='sfsi_plus_icons_perRow']").val(), t = SFSI("input[name='sfsi_plus_icons_spacing']").val(), n = SFSI("#sfsi_plus_icons_Alignment").val(),lang = SFSI("#sfsi_plus_icons_language").val(), o = SFSI("input[name='sfsi_plus_icons_ClickPageOpen']:checked").val(), a = SFSI("input[name='sfsi_plus_icons_float']:checked").val(), dsb = SFSI("input[name='sfsi_plus_disable_floaticons']:checked").val(), dsbv = SFSI("input[name='sfsi_plus_disable_viewport']:checked").val(), r = SFSI("#sfsi_plus_icons_floatPosition").val(), c = SFSI("input[name='sfsi_plus_icons_stick']:checked").val(), p = SFSI("#sfsi_plus_rssIcon_order").attr("data-index"), _ = SFSI("#sfsi_plus_emailIcon_order").attr("data-index"), l = SFSI("#sfsi_plus_googleIcon_order").attr("data-index"), S = SFSI("#sfsi_plus_facebookIcon_order").attr("data-index"), u = SFSI("#sfsi_plus_twitterIcon_order").attr("data-index"), f = SFSI("#sfsi_plus_youtubeIcon_order").attr("data-index"), d = SFSI("#sfsi_plus_pinterestIcon_order").attr("data-index"), I = SFSI("#sfsi_plus_instagramIcon_order").attr("data-index"), m = SFSI("#sfsi_plus_shareIcon_order").attr("data-index"), F = SFSI("#sfsi_plus_linkedinIcon_order").attr("data-index"), houzzOrder = SFSI("#sfsi_plus_houzzIcon_order").attr("data-index"), h = new Array();
+    var i = SFSI("input[name='sfsi_plus_icons_size']").val(), e = SFSI("input[name='sfsi_plus_icons_perRow']").val(), t = SFSI("input[name='sfsi_plus_icons_spacing']").val(), n = SFSI("#sfsi_plus_icons_Alignment").val(),
+	followicon = SFSI("#sfsi_plus_follow_icons_language").val(),
+	facebookicon = SFSI("#sfsi_plus_facebook_icons_language").val(),
+	twittericon = SFSI("#sfsi_plus_twitter_icons_language").val(),
+	googleicon = SFSI("#sfsi_plus_google_icons_language").val(),
+	lang = SFSI("#sfsi_plus_icons_language").val(), o = SFSI("input[name='sfsi_plus_icons_ClickPageOpen']:checked").val(), a = SFSI("input[name='sfsi_plus_icons_float']:checked").val(), dsb = SFSI("input[name='sfsi_plus_disable_floaticons']:checked").val(), dsbv = SFSI("input[name='sfsi_plus_disable_viewport']:checked").val(), r = SFSI("#sfsi_plus_icons_floatPosition").val(), c = SFSI("input[name='sfsi_plus_icons_stick']:checked").val(), p = SFSI("#sfsi_plus_rssIcon_order").attr("data-index"), _ = SFSI("#sfsi_plus_emailIcon_order").attr("data-index"), l = SFSI("#sfsi_plus_googleIcon_order").attr("data-index"), S = SFSI("#sfsi_plus_facebookIcon_order").attr("data-index"), u = SFSI("#sfsi_plus_twitterIcon_order").attr("data-index"), f = SFSI("#sfsi_plus_youtubeIcon_order").attr("data-index"), d = SFSI("#sfsi_plus_pinterestIcon_order").attr("data-index"), I = SFSI("#sfsi_plus_instagramIcon_order").attr("data-index"), m = SFSI("#sfsi_plus_shareIcon_order").attr("data-index"), F = SFSI("#sfsi_plus_linkedinIcon_order").attr("data-index"), houzzOrder = SFSI("#sfsi_plus_houzzIcon_order").attr("data-index"), h = new Array();
     SFSI(".sfsiplus_custom_iconOrder").each(function()
 	{
         h.push({
@@ -520,6 +525,10 @@ function sfsi_plus_update_step5()
         sfsi_plus_icons_size:i,
         sfsi_plus_icons_Alignment:n,
         sfsi_plus_icons_perRow:e,
+		sfsi_plus_follow_icons_language:followicon,
+		sfsi_plus_facebook_icons_language:facebookicon,
+		sfsi_plus_twitter_icons_language:twittericon,
+		sfsi_plus_google_icons_language:googleicon,
 		sfsi_plus_icons_language:lang,
         sfsi_plus_icons_spacing:t,
         sfsi_plus_icons_ClickPageOpen:o,
@@ -1096,6 +1105,24 @@ function sfsi_plus_create_suscriber_form()
 var global_error = 0;
 SFSI(document).ready(function(s) {
     //changes done {Monad}
+	
+	SFSI(".lanOnchange").change(function(){
+		var currentDrpdown = SFSI(this).parents(".icons_size");
+		var data = {
+			action:"getIconPreview",
+			iconValue: SFSI(this).val(),
+			iconname: SFSI(this).attr( "data-iconUrl" )
+		};
+		SFSI.ajax({
+			url:ajax_object.ajax_url,
+			type:"post",
+			data:data,
+			success:function(s) {
+				currentDrpdown.children(".social-img-link").html(s);
+			}
+		});
+	});
+	
 	SFSI(".sfsiplus_tab_3_icns").on("click", ".cstomskins_upload", function() {
 		SFSI(".cstmskins-overlay").show("slow", function() {
             e = 0;

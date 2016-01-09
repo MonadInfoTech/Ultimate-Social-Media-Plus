@@ -1714,7 +1714,7 @@ ul.tab_3_list li span {
     display: block;
     float: left;
     margin: 0 0 0 -52px;
-    padding: 5px 14px 5px 14px;
+    /*padding: 5px 14px 5px 14px;*/
     position: absolute;
     z-index: 10000;
     border-bottom: #e5e5e5 solid 4px;
@@ -1738,7 +1738,7 @@ ul.tab_3_list li span {
     left: 50%;
     width: 15px;
     height: 21px;
-    margin-left: -5px;
+    margin-left: -10px;
 }
 .sfsi_tool_tip_2 .top_big_arow {
     position: absolute;
@@ -1748,7 +1748,7 @@ ul.tab_3_list li span {
     -o-transform: rotate(180deg);
     transform: rotate(180deg);
     top: -21px;
-    left: 50%;
+    left: 46%;
     width: 15px;
     height: 21px;
     margin-right: -5px;
@@ -1766,7 +1766,7 @@ ul.tab_3_list li span {
 .sfsiTlleft {
     bottom: 100%;
     left: 50%;
-    margin-left: -66px;
+    margin-left: -66px !important;
     margin-bottom: 2px;
 }
 .sfsi_plc_btm {
@@ -1774,7 +1774,7 @@ ul.tab_3_list li span {
     top: 100%;
     left: 50%;
     margin-left: -63px;
-    margin-top: -6px;
+    margin-top: 8px;
     margin-bottom: auto;
 }
 .sfsiplus_inerCnt {
@@ -1835,15 +1835,16 @@ ul.tab_3_list li span {
     left: 67px;
     line-height: 17px !important;
     margin-left: 0px;
-    margin-top: 9px;
+   /* margin-top: 9px;*/
     padding: 1px 0;
-    position: absolute;
+    /*position: absolute;*/
     text-align: center;
-    top: -8px;
+    /*top: -8px;*/
     white-space: pre;
     width: 33px;
 	height: 19px;
     z-index: 9;
+	display:inline-block;
 }
 .bot_no.sfsiSmBtn {
     font-size: 10px;
@@ -1901,24 +1902,25 @@ h2.optional {
     overflow: hidden;
 }
 .fb_tool_bdr .sfsi_inside .icon1 {
-    margin: 0px 0 0px 0;
+    margin: 2px 0 2px 0;
     height: 28px;
     display: inline-block;
     float: none;
-    width: 62px;
+   /* width: 62px;s*/
 }
+img {vertical-align:sub !important;}
 .fb_tool_bdr .sfsi_inside .icon2 {
-    margin: 1px 0 1px 0 ;
+    margin: 2px 0 2px 0 ;
     height: 20px;
-    width: 49px;
-    display: inline-block;
+   /* width: 49px;*/
+    display:block;
 	overflow: hidden;
 }
 .fb_tool_bdr .sfsi_inside .icon3 {
-    margin: 1px 0 0px 0;
+    margin: 2px 0 2px 0;
     height: 20px;
-    width: 62px;
-    display: inline-block;
+   /* width: 62px;*/
+    display:inline-block;
     float: none;
 }
 .fb_tool_bdr .sfsi_inside .fb_1, .fb_tool_bdr .sfsi_inside .fb_2, .fb_tool_bdr .sfsi_inside .fb_3 {
@@ -1934,15 +1936,15 @@ h2.optional {
     height: 24px;
     display: inline-block;
     float: none;
-    width: 73px;
+    /*width: 73px;*/
 }
 .printst_tool_bdr .sfsi_inside .icon2 {
     margin: 2px 0;
     height: 20px;
-    display: inline-block;
+    display:inline-block;
     float: none;
-    max-width: 73px;
-	width: auto;
+    /*max-width: 73px;*/
+	width: 100%;
 }
 .printst_tool_bdr .sfsi_inside .prints_visit, .printst_tool_bdr .sfsi_inside .prints_visit_1 {
     margin: 9px 0 0;
@@ -1951,7 +1953,7 @@ h2.optional {
     display: inline-block;
 }
 .printst_tool_bdr {
-    margin-left: -59px;
+   /* margin-left: -59px;*/
 }
 .fb_tool_bdr .sfsi_inside .icon1>a>img, .gpls_tool_bdr .sfsi_inside .icon1>a>img, .linkedin_tool_bdr .sfsi_inside .icon1>a>img, .linkedin_tool_bdr .sfsi_inside .icon4>a>img, .printst_tool_bdr .sfsi_inside .icon1>a>img, .printst_tool_bdr .sfsi_inside .icon2>a>img, .utube_tool_bdr .sfsi_inside .icon1>a>img {
     padding-top: 0;
@@ -1972,22 +1974,23 @@ h2.optional {
     display: inline-block;
     float: none;
     height: 29px;
-    width: 76px;
+    /*width: 76px;*/
 }
 .gpls_tool_bdr .sfsi_inside .icon2 {
-    margin: 2px 0 3px 0;
-    display: inline-block;
+    margin: 2px 0 2px 0;
+    display:inline-block;
     float: none;
     height: 24px;
-    width: 38px;
+	width:100%;
+  /*  width: 38px;*/
 }
 .gpls_tool_bdr .sfsi_inside .icon3 {
-    margin: 3px 0 2px 0;
-    display: inline-block;
+    margin: 2px 0 2px 0;
+    display:block;
     float: none;
     height: 24px;
-    width: 76px;
-}
+/*    width: 76px;
+*/}
 .gpls_tool_bdr .sfsi_inside .gpls_visit, .gpls_tool_bdr .sfsi_inside .gtalk_2, .gpls_tool_bdr .sfsi_inside .gtalk_3 {
     margin: 9px 0 0;
     height: 29px;
@@ -2006,29 +2009,37 @@ h2.optional {
     margin: 2px 0!important;
     display: inline-block;
     float: none;
-    width: 62px;
+	vertical-align: middle;
     overflow: hidden;
+	 /*width: 100%;*/
+}
+.twt_tool_bdr .sfsi_inside .cstmicon1 a {
+    display: inline-block;
+    vertical-align: middle;
+    /*width: 100%;*/
+	width:auto;
 }
 .twt_tool_bdr .sfsi_inside .cstmicon1 a img{
 	float: left;
 }
 .twt_tool_bdr .sfsi_inside .icon1 {
-    margin: 0px 0 0px !important;
+    margin: 2px 24px 2px !important;
     display: inline-block;
     float: none;
-    width: 61px;
+    /*width: 61px;*/
     overflow: hidden;
-    height: 21px;
+    height: 20px;
 }
 .twt_tool_bdr .sfsi_inside .icon1 iframe {
-    width: 61px!important;
+   /* width: 61px!important;*/
 }
+.sfsi_tool_tip_2, .fb_tool_bdr, .twt_tool_bdr, .linkedin_tool_bdr, .printst_tool_bdr, .gpls_tool_bdr,   .sfsiTlleft {width:140px !important; padding:6px 0;}
 .twt_tool_bdr .sfsi_inside .icon2 {
-    margin: 2px 0!important;
-    display: inline-block;
+    margin: 0px 0!important;
+    display:inline-block;
     float: none;
-    height: 19px;
-    width: 58px;
+    height: 20px;
+  /*  width: 58px;s*/
 }
 .twt_tool_bdr .sfsi_inside .twt_1 {
     margin: 9px 0 0;
@@ -2053,20 +2064,21 @@ h2.optional {
     width: 100%;
     float: left;
 }
+.sfsi_inside > div {}
 .utube_tool_bdr .sfsi_inside .icon1{
-    margin: 7px 0 0;
+    margin: 2px 0 2px;
     height: 24px;
     display: inline-block;
     float: none;
     width: 87px;
 }
 .utube_tool_bdr .sfsi_inside .icon2 {
-    margin: 3px 0 0;
+    margin: 2px 0 2;
     height: 24px;
-    display: inline-block;
+    display:inline-block;
     float: none;
-    max-width: 96px;
-	width: 82px;
+   /* max-width: 96px;*/
+	/*width: 82px;*/
 }
 .utube_tool_bdr {
     width: 93px;
@@ -2082,22 +2094,22 @@ h2.optional {
     float: left;
     width: 100%}
 .linkedin_tool_bdr .sfsi_inside .icon1{
-    margin: 0px 0;
+    margin: 2px 0;
     display: inline-block;
     float: none;
     height: 23px;
     width: 100%;
 }
 .linkedin_tool_bdr .sfsi_inside .icon2{
-    margin: 0px 0;
-    display: inline-block;
+    margin: 2px 0;
+    display:inline-block;
     float: none;
     height: 23px;
     width: 100%;
 }
 .linkedin_tool_bdr .sfsi_inside .icon3 {
-    margin: 0px 0;
-    display: inline-block;
+    margin: 2px 0;
+    display:inline-block;
     float: none;
     height: 23px;
     width: 100%;
@@ -2105,13 +2117,13 @@ h2.optional {
 
  
 .linkedin_tool_bdr .sfsi_inside .icon4 {
-    margin: 0px 0;
+    margin: 2px 0;
     display: inline-block;
     float: none;
     height: 28px;
     width: 66px;
 }
-.sfsi_plus_FrntInner .linkedin_tool_bdr .sfsi_inside .icon1{ margin: 7px 0;}
+.sfsi_plus_FrntInner .linkedin_tool_bdr .sfsi_inside .icon1{ margin: 2px 0;}
 .sfsi_plus_widget .linkedin_tool_bdr .sfsi_inside .icon4,
 .sfsi_plus_widget .gpls_tool_bdr .sfsi_inside .icon1,
 .sfsi_plus_widget .fb_tool_bdr .sfsi_inside .icon1 { height: auto}
@@ -2128,7 +2140,7 @@ h2.optional {
     height: auto;
 }
 .twt_tool_bdr .sfsi_inside .icon1>iframe {
-    margin: 0 auto!important;
+    margin: 0px auto!important;
     float: left !important;
     width: 100%}
 .twt_tool_bdr .sfsi_inside .icon1>iframe #widget {
@@ -2232,7 +2244,7 @@ h2.optional {
     margin-right: 8px;
 }
 .icon2 .fb_iframe_widget span {
-    width: 500px!important;
+   /* width: 500px!important; sunil*/
 }
 @media (max-width:767px) {
 		.icon2 .fb_iframe_widget span {
@@ -2300,7 +2312,6 @@ h2.optional {
 }
 .sfsi_Sicons .sf_subscrbe a img
 {
-	width: 65px;
 	float: left;
 }
 .sfsi_Sicons .sf_fb {
@@ -2308,8 +2319,9 @@ h2.optional {
     width: 75px;
 }
 .sfsi_Sicons .fb_iframe_widget {
-    float: left;
-    width: 73px;
+    float: none;
+    width: auto;
+    vertical-align: middle;
     margin: 2px 0 0;
 }
 /*absolute commented as for standard icon it was giving issue while icon was to be aligned centerd.*/
@@ -2320,6 +2332,14 @@ h2.optional {
 }
 .sfsi_Sicons .sf_addthis, .sfsi_Sicons .sf_google {
     position: relative;
+}
+.sf_google > div
+{
+	width: 70px !important;
+}
+.sf_google iframe
+{
+	width: 100% !important;
 }
 .sfsi_Sicons .sf_google>div
 {
@@ -2696,7 +2716,7 @@ ul.cstmskin_iconlist {
 	padding: 0px;
 	margin: 0px;
 	width: 100%;
-	float: left;
+	/*float: left;*/
 	border: medium none;
 }
 .sfsi_socialwpr
@@ -3190,3 +3210,6 @@ label.sfsiplus_toglpstpgsbttl { float: left; margin-top: 5px !important}
 .sfsiplus_tab_3_icns.sfsiplus_shwthmbfraftr {
     overflow: visible;
 }
+/*.twt_tool_bdr .sfsi_inside .icon1{margin: 2px 35px 2px !important;clear:both;}*/
+.twt_tool_bdr .sfsi_inside .cstmicon1 a img{margin: 2px 12px 2px !important;clear:both;text-align:center;float:none;}
+.cstmicon1{text-align:center;}

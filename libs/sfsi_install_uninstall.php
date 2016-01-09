@@ -75,6 +75,18 @@ function sfsi_plus_update_plugin()
 		$option8['sfsi_plus_icons_floatMargin_right'] = '';
 		update_option('sfsi_plus_section8_options', serialize($option8));
 	}
+	
+	/*Language icons*/
+	$option5 =  unserialize(get_option('sfsi_plus_section5_options',false));
+	if(isset($option5) && !empty($option5))
+	{
+		$option5['sfsi_plus_follow_icons_language'] = 'Follow_en_US';
+		$option5['sfsi_plus_facebook_icons_language'] = 'Visit_us_en_US';
+		$option5['sfsi_plus_twitter_icons_language'] = 'Visit_us_en_US';
+		$option5['sfsi_plus_google_icons_language'] = 'Visit_us_en_US';
+		$option5['sfsi_plus_icons_language'] = 'en_US';
+		update_option('sfsi_plus_section5_options', serialize($option5));
+	}
 }
 function sfsi_plus_activate_plugin()
 {
@@ -207,6 +219,10 @@ function sfsi_plus_activate_plugin()
         'sfsi_plus_icons_spacing'=>'5',
         'sfsi_plus_icons_Alignment'=>'left',
         'sfsi_plus_icons_perRow'=>'5',
+		'sfsi_plus_follow_icons_language'=>'Follow_en_US',
+		'sfsi_plus_facebook_icons_language'=>'Visit_us_en_US',
+		'sfsi_plus_twitter_icons_language'=>'Visit_us_en_US',
+		'sfsi_plus_google_icons_language'=>'Visit_us_en_US',
 		'sfsi_plus_icons_language'=>'en_US',
         'sfsi_plus_icons_ClickPageOpen'=>'yes',
         'sfsi_plus_icons_float'=>'no',
