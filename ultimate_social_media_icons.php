@@ -6,7 +6,7 @@ Description: The best social media plugin on the market. And 100% FREE. Allows y
 Author: UltimatelySocial
 Text Domain: ultimate-social-media-plus
 Author URI: http://ultimatelysocial.com
-Version: 2.2.5
+Version: 2.2.6
 License: GPLv2
 */
 
@@ -35,7 +35,7 @@ register_deactivation_hook(__FILE__, 'sfsi_plus_deactivate_plugin');
 register_uninstall_hook(__FILE__, 'sfsi_plus_Unistall_plugin');
 
 /*Plugin version setup*/
-if(!get_option('sfsi_plus_pluginVersion') || get_option('sfsi_plus_pluginVersion') < 2.25)
+if(!get_option('sfsi_plus_pluginVersion') || get_option('sfsi_plus_pluginVersion') < 2.26)
 {
 	add_action("init", "sfsi_plus_update_plugin");
 }
@@ -571,6 +571,7 @@ function sfsi_plus_admin_notice()
 		</div>
 	<?php }
 }
+
 add_action('admin_init', 'sfsi_plus_dismiss_admin_notice');
 function sfsi_plus_dismiss_admin_notice()
 {
@@ -586,10 +587,23 @@ function sfsi_plus_dismiss_admin_notice()
 		header("Location: ".site_url()."/wp-admin/admin.php?page=sfsi-plus-options");
 	}
 }
+
 add_action('plugins_loaded', 'sfsi_plus_load_domain');
 function sfsi_plus_load_domain() 
 {
 	$plugin_dir = basename(dirname(__FILE__)).'/languages';
 	load_plugin_textdomain( 'ultimate-social-media-plus', false, $plugin_dir );
+}
+
+function sfsi_plus_get_bloginfo($url)
+{
+	$web_url = get_bloginfo($url);
+	
+	//Block to use feedburner url
+	if (preg_match("/(feedburner)/im", $web_url, $match))
+	{
+		$web_url = site_url()."/feed";
+	}
+	return $web_url;
 }
 ?>

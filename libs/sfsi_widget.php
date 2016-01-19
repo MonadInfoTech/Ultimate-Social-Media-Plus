@@ -1466,62 +1466,62 @@ function sfsi_plus_check_posts_visiblity($isFloter=0)
 			case 'rss' :
 				if($sfsi_plus_section1_options['sfsi_plus_rss_display'] == 'yes')
 				{	
-					$icons.= sfsi_plus_prepairIcons('rss', 0, 'yes');
+					$icons.= sfsi_plus_prepairIcons('rss');
 				}	
 			break;
 			case 'email' :
 				if($sfsi_plus_section1_options['sfsi_plus_email_display']=='yes')
 				{
-					$icons.= sfsi_plus_prepairIcons('email', 0, 'yes' );
+					$icons.= sfsi_plus_prepairIcons('email');
 				}
 			break;
 			case 'facebook' :
 				if($sfsi_plus_section1_options['sfsi_plus_facebook_display'] == 'yes')
 				{
-					$icons.= sfsi_plus_prepairIcons('facebook', 0, 'yes' );
+					$icons.= sfsi_plus_prepairIcons('facebook');
 				}	
 			break;
 			case 'google' :
 				if($sfsi_plus_section1_options['sfsi_plus_google_display'] == 'yes')
 				{
-					$icons.= sfsi_plus_prepairIcons('google', 0, 'yes' );
+					$icons.= sfsi_plus_prepairIcons('google');
 				}
 			break;
 			case 'twitter' :
 				if($sfsi_plus_section1_options['sfsi_plus_twitter_display']=='yes')
 				{
-					$icons.= sfsi_plus_prepairIcons('twitter', 0, 'yes' );
+					$icons.= sfsi_plus_prepairIcons('twitter');
 				}
 			break;
 			case 'share' :
 				if($sfsi_plus_section1_options['sfsi_plus_share_display']=='yes')
 				{
-					$icons.= sfsi_plus_prepairIcons('share', 0, 'yes' );
+					$icons.= sfsi_plus_prepairIcons('share');
 				}
 			break;
 			case 'youtube' :
 				if($sfsi_plus_section1_options['sfsi_plus_youtube_display']=='yes')
 				{
-					$icons.= sfsi_plus_prepairIcons('youtube', 0, 'yes' );
+					$icons.= sfsi_plus_prepairIcons('youtube');
 				}	
 			break;
 			
 			case 'pinterest' :
 				if($sfsi_plus_section1_options['sfsi_plus_pinterest_display']=='yes')
 				{
-					$icons.= sfsi_plus_prepairIcons('pinterest', 0, 'yes' );
+					$icons.= sfsi_plus_prepairIcons('pinterest');
 				}
 			break;
 			case 'linkedin' :
 				if($sfsi_plus_section1_options['sfsi_plus_linkedin_display']=='yes')
 				{
-					$icons.= sfsi_plus_prepairIcons('linkedin', 0, 'yes' );
+					$icons.= sfsi_plus_prepairIcons('linkedin');
 				}
 			break;
 			case 'instagram' :
 				if($sfsi_plus_section1_options['sfsi_plus_instagram_display']=='yes')
 				{
-					$icons.= sfsi_plus_prepairIcons('instagram', 0, 'yes' );
+					$icons.= sfsi_plus_prepairIcons('instagram');
 				}
 			break;
 			case 'houzz' :
@@ -1530,7 +1530,7 @@ function sfsi_plus_check_posts_visiblity($isFloter=0)
 					$sfsi_plus_section1_options['sfsi_plus_houzz_display']=='yes'
 				)
 				{
-					$icons.= sfsi_plus_prepairIcons('houzz', 0, 'yes' ); 
+					$icons.= sfsi_plus_prepairIcons('houzz'); 
 				}
 			break;	  
 			case 'custom' :

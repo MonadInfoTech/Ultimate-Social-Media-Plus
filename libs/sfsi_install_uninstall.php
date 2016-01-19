@@ -12,7 +12,7 @@ function sfsi_plus_update_plugin()
 	}
 	
 	//Install version
-	update_option("sfsi_plus_pluginVersion", "2.25");
+	update_option("sfsi_plus_pluginVersion", "2.26");
 	
 	/*show notification*/
 	if(!get_option('sfsi_plus_show_notification'))
@@ -119,7 +119,7 @@ function sfsi_plus_activate_plugin()
 	}
 	
     /* Links and icons  options */	 
-    $options2=array('sfsi_plus_rss_url'=>get_bloginfo('rss2_url'),
+    $options2=array('sfsi_plus_rss_url'=>sfsi_plus_get_bloginfo('rss2_url'),
         'sfsi_plus_rss_icons'=>'subscribe', 
         'sfsi_plus_email_url'=>$sffeeds->redirect_url,
         'sfsi_plus_facebookPage_option'=>'no',
@@ -436,9 +436,9 @@ function SFSI_PLUS_getFeedUrl()
         CURLOPT_USERAGENT => 'sf rss request',
         CURLOPT_POST => 1,
         CURLOPT_POSTFIELDS => array(
-            'web_url' => get_bloginfo('url'),
-            'feed_url' => get_bloginfo('rss2_url'),
-            'email'=>get_bloginfo('admin_email')
+            'web_url'	=> get_bloginfo('url'),
+            'feed_url'	=> sfsi_plus_get_bloginfo('rss2_url'),
+            'email'		=> get_bloginfo('admin_email')
         )
     ));
     // Send the request & save response to $resp
@@ -466,10 +466,10 @@ function SFSI_PLUS_updateFeedUrl()
         CURLOPT_USERAGENT => 'sf rss request',
         CURLOPT_POST => 1,
         CURLOPT_POSTFIELDS => array(
-			'feed_id' => get_option('sfsi_plus_feed_id'),
-            'web_url' => get_bloginfo('url'),
-            'feed_url' => get_bloginfo('rss2_url'),
-            'email'=>get_bloginfo('admin_email')
+			'feed_id' 	=> get_option('sfsi_plus_feed_id'),
+            'web_url' 	=> get_bloginfo('url'),
+            'feed_url' 	=> sfsi_plus_get_bloginfo('rss2_url'),
+            'email'		=> get_bloginfo('admin_email')
         )
     ));
  	// Send the request & save response to $resp
@@ -653,7 +653,7 @@ function sfsi_plus_pingVendor( $post_id )
 			'author'	=> get_the_author_meta('user_login', $post_data['post_author']),
 			'category' 	=> $cats,
 			'pubDate'	=> $post_data['post_modified'],
-			'rssurl'	=> get_bloginfo('rss2_url')
+			'rssurl'	=> sfsi_plus_get_bloginfo('rss2_url')
 		);
 		
 		$curl = curl_init();  
