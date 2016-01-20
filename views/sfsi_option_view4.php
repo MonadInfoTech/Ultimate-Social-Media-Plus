@@ -518,10 +518,19 @@
 						<?php  _e( 'Retrieve the number of Subscribers', 'ultimate-social-media-plus' ); ?>
 					</li>
 					<li class="youtube_options" style="<?php echo ($option4['sfsi_plus_youtube_countsFrom']=='manual') ?  'display:none;' : '' ;?>">
-						<label>
-							<?php  _e( 'Enter Youtube User name', 'ultimate-social-media-plus' ); ?>
-						</label>
-						<input name="sfsi_plus_youtube_user" class="input_facebook" type="text" value="<?php echo (isset($option4['sfsi_plus_youtube_user']) && $option4['sfsi_plus_youtube_user']!='') ?  $option4['sfsi_plus_youtube_user'] : '' ;?>"  />
+                    	<div>
+                            <label>
+                                <?php  _e( 'Enter Youtube User name', 'ultimate-social-media-plus' ); ?>
+                            </label>
+                            <input name="sfsi_plus_youtube_user" class="input_facebook" type="text" value="<?php echo (isset($option4['sfsi_plus_youtube_user']) && $option4['sfsi_plus_youtube_user']!='') ?  $option4['sfsi_plus_youtube_user'] : '' ;?>"/>
+                        </div>
+                        
+                        <div>
+                            <label>
+                                <?php  _e( 'Enter Youtube Channel id', 'ultimate-social-media-plus' ); ?>
+                            </label>
+                            <input name="sfsi_plus_youtube_channelId" class="input_facebook" type="text" value="<?php echo (isset($option4['sfsi_plus_youtube_channelId']) && $option4['sfsi_plus_youtube_channelId']!='') ? $option4['sfsi_plus_youtube_channelId'] : '' ;?>"/>
+                        </div>    
 					</li>
 					<li>
 						<input name="sfsi_plus_youtube_countsFrom" type="radio" value="manual" <?php echo ($option4['sfsi_plus_youtube_countsFrom']=='manual') ?  'checked="true"' : '' ;?>  class="styled" />

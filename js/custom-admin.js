@@ -457,6 +457,7 @@ function sfsi_plus_update_step4()
         sfsi_plus_youtube_countsFrom:O,
         sfsi_plus_youtube_manualCounts:T,
         sfsi_plus_youtube_user:j,
+		sfsi_plus_youtube_channelId: SFSI("input[name='sfsi_plus_youtube_channelId']").val(),
         sfsi_plus_pinterest_countsDisplay:P,
         sfsi_plus_pinterest_countsFrom:M,
         sfsi_plus_pinterest_manualCounts:L,

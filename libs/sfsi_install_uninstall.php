@@ -87,6 +87,14 @@ function sfsi_plus_update_plugin()
 		$option5['sfsi_plus_icons_language'] = 'en_US';
 		update_option('sfsi_plus_section5_options', serialize($option5));
 	}
+	
+	/*Youtube Channelid settings*/
+	$option4 = unserialize(get_option('sfsi_plus_section4_options',false));
+	if(isset($option4) && !empty($option4) && !isset($option4['sfsi_plus_youtube_channelId']))
+	{
+		$option4['sfsi_plus_youtube_channelId'] = '';
+		update_option('sfsi_section4_options', serialize($option4));
+	}
 }
 function sfsi_plus_activate_plugin()
 {
@@ -195,6 +203,7 @@ function sfsi_plus_activate_plugin()
         'sfsi_plus_ln_oAuth_user_token'=>'',
         'sfsi_plus_ln_company'=>'',
 		'sfsi_plus_youtube_user'=>'',
+		'sfsi_plus_youtube_channelId'=>'',
 		'sfsi_plus_youtube_countsDisplay'=>'no',
         'sfsi_plus_youtube_countsFrom'=>'manual',
         'sfsi_plus_youtube_manualCounts'=>'20',
