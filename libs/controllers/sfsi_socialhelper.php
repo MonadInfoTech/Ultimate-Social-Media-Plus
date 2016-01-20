@@ -364,15 +364,15 @@ class sfsi_plus_SocialHelper
 	} 
 	
 	/* create on page twitter share icon with count */
- 	public function sfsi_twitterSharewithcount($permalink,$tweettext, $show_count)
+ 	public function sfsi_twitterSharewithcount($permalink,$tweettext, $show_count, $icons_language)
 	{
 		if($show_count)
 		{
-			$twitter_html = '<a href="http://twitter.com/share" class="sr-twitter-button twitter-share-button" lang="en" data-counturl="'.$permalink.'" data-url="'.$permalink.'" data-text="'.$tweettext.'" ></a>';
+			$twitter_html = '<a href="http://twitter.com/share" class="sr-twitter-button twitter-share-button" lang="'.$icons_language.'" data-counturl="'.$permalink.'" data-url="'.$permalink.'" data-text="'.$tweettext.'" ></a>';
 		}
 		else
 		{
-			$twitter_html = '<a href="http://twitter.com/share" data-count="none" class="sr-twitter-button twitter-share-button" lang="en" data-url="'.$permalink.'" data-text="'.$tweettext.'" ></a>';
+			$twitter_html = '<a href="http://twitter.com/share" data-count="none" class="sr-twitter-button twitter-share-button" lang="'.$icons_language.'" data-url="'.$permalink.'" data-text="'.$tweettext.'" ></a>';
 		}
 	   	return $twitter_html;
 	}

@@ -158,6 +158,8 @@ function sfsi_plus_twitterlike($permalink, $show_count)
 	global $socialObj;
 	$socialObj = new sfsi_plus_SocialHelper();
 	$twitter_text = '';
+	$sfsi_plus_section5_options = unserialize(get_option('sfsi_plus_section5_options',false));
+	$icons_language = $sfsi_plus_section5_options['sfsi_plus_icons_language'];
 	if(!empty($permalink))
 	{
 		$postid = url_to_postid( $permalink );
@@ -166,7 +168,7 @@ function sfsi_plus_twitterlike($permalink, $show_count)
 	{
 		$twitter_text = get_the_title($postid);
 	}
-	return $socialObj->sfsi_twitterSharewithcount($permalink,$twitter_text, $show_count);
+	return $socialObj->sfsi_twitterSharewithcount($permalink,$twitter_text, $show_count, $icons_language);
 }
 /*twitter like*/
 
