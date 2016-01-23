@@ -553,7 +553,7 @@ function sfsi_plus_prepairIcons($icon_name,$is_front=0, $onpost="no")
 			$width = 62;
 		    $totwith = $width+28+$icons_space;
 		    $twt_margin = $totwith/2;
-		    $toolClass = "fb_tool_bdr";
+		    $toolClass = "sfsi_plus_fb_tool_bdr";
 		    $arsfsiplus_row_class = "bot_fb_arow";
 		    
 			/* check for the over section */
@@ -654,7 +654,7 @@ function sfsi_plus_prepairIcons($icon_name,$is_front=0, $onpost="no")
         break;
 		
         case "google" :                    
-				$toolClass = "gpls_tool_bdr";
+				$toolClass = "sfsi_plus_gpls_tool_bdr";
 				$arsfsiplus_row_class = "bot_gpls_arow";
 				$socialObj = new sfsi_plus_SocialHelper();
 				$width = 76;
@@ -754,7 +754,7 @@ function sfsi_plus_prepairIcons($icon_name,$is_front=0, $onpost="no")
         break;
         
 		case "twitter" :
-				$toolClass = "twt_tool_bdr";
+				$toolClass = "sfsi_plus_twt_tool_bdr";
 				$arsfsiplus_row_class = "bot_twt_arow";
 				$socialObj = new sfsi_plus_SocialHelper();
 				$url = ($sfsi_plus_section2_options['sfsi_plus_twitter_pageURL'])?$sfsi_plus_section2_options['sfsi_plus_twitter_pageURL'] : 'javascript:void(0);';
@@ -989,7 +989,7 @@ function sfsi_plus_prepairIcons($icon_name,$is_front=0, $onpost="no")
 				$totwith = $width+28+$icons_space;
 				$twt_margin = $totwith/2;
 				$socialObj = new sfsi_plus_SocialHelper();			 
-				$toolClass = "printst_tool_bdr";
+				$toolClass = "sfsi_plus_printst_tool_bdr";
 				$arsfsiplus_row_class = "bot_pintst_arow";
 				
 				$pinterest_user = $sfsi_plus_section4_options['sfsi_plus_pinterest_user'];
@@ -1171,7 +1171,7 @@ function sfsi_plus_prepairIcons($icon_name,$is_front=0, $onpost="no")
 		case "linkedin" :
 				$width = 66;
 				$socialObj = new sfsi_plus_SocialHelper();		
-				$toolClass = "linkedin_tool_bdr";
+				$toolClass = "sfsi_plus_linkedin_tool_bdr";
 				$arsfsiplus_row_class = "bot_linkedin_arow";                
 				$linkedIn_compayId = $sfsi_plus_section2_options['sfsi_plus_linkedin_followCompany'];
 				$linkedIn_compay = $sfsi_plus_section2_options['sfsi_plus_linkedin_followCompany']; 
@@ -1325,17 +1325,17 @@ function sfsi_plus_prepairIcons($icon_name,$is_front=0, $onpost="no")
     if((int) $icon_width <=49 && (int) $icon_width >=30)
 	{
 		$bt_class="";
-	  	$toolT_cls="sfsiTlleft";
+	  	$toolT_cls="sfsi_plus_Tlleft";
     }
 	else if((int) $icon_width <=20)
     {
  	  $bt_class="sfsiSmBtn";
-	  $toolT_cls="sfsiTlleft";
+	  $toolT_cls="sfsi_plus_Tlleft";
     }
 	else
     {
       $bt_class="";
-	  $toolT_cls="sfsiTlleft";
+	  $toolT_cls="sfsi_plus_Tlleft";
     }
     
 	if($toolClass=="rss_tool_bdr" || $toolClass=='email_tool_bdr' || $toolClass=="custom_lkn" ||   $toolClass=="instagram_tool_bdr" )
@@ -1375,11 +1375,11 @@ function sfsi_plus_prepairIcons($icon_name,$is_front=0, $onpost="no")
 		 
 	   if($hoverSHow && !empty($hoverdiv))
 	   {	
-			//$icons.= '<div class="sfsi_tool_tip_2 '.$toolClass.' '.$toolT_cls.'" style="width:'.$width.'px ;opacity:0;z-index:-1;margin-left:-'.$twt_margin.'px;" id="sfsiplusid_'.$icon_name.'">';
+			//$icons.= '<div class="sfsi_plus_tool_tip_2 '.$toolClass.' '.$toolT_cls.'" style="width:'.$width.'px ;opacity:0;z-index:-1;margin-left:-'.$twt_margin.'px;" id="sfsiplusid_'.$icon_name.'">';
 			
-			$icons.= '<div class="sfsi_tool_tip_2 '.$toolClass.' '.$toolT_cls.'" style="width:'.$width.'px ;opacity:0;z-index:-1;" id="sfsiplusid_'.$icon_name.'">';
+			$icons.= '<div class="sfsi_plus_tool_tip_2 '.$toolClass.' '.$toolT_cls.'" style="width:'.$width.'px ;opacity:0;z-index:-1;" id="sfsiplusid_'.$icon_name.'">';
 			$icons.= '<span class="bot_arow '.$arsfsiplus_row_class.'"></span>';
-			$icons.= '<div class="sfsi_inside">'.$hoverdiv."</div>";
+			$icons.= '<div class="sfsi_plus_inside">'.$hoverdiv."</div>";
 			$icons.= "</div>";
 	   }
 	   $icons.="</div>";

@@ -810,11 +810,19 @@ function sfsi_plus_getCounts()
     /* get youtube counts */
    	if($sfsi_plus_section4_options['sfsi_plus_youtube_countsFrom']=="subscriber" )
    	{      
-       	if(isset($sfsi_plus_section4_options['sfsi_plus_youtube_user']))
+       	if(
+			isset($sfsi_plus_section4_options['sfsi_plus_youtube_user'])
+		)
        	{
-        	$youtube_user=$sfsi_plus_section4_options['sfsi_plus_youtube_user'];
-        	$followers=$socialObj->sfsi_get_youtube($youtube_user);
-        	$scounts['youtube_count']= $socialObj->format_num($followers);
+        	$youtube_user = $sfsi_plus_section4_options['sfsi_plus_youtube_user'];
+        	
+			$youtube_user = (
+				isset($sfsi_plus_section4_options['sfsi_plus_youtube_user']) &&
+				!empty($sfsi_plus_section4_options['sfsi_plus_youtube_user'])
+			)? $sfsi_plus_section4_options['sfsi_plus_youtube_user'] : 'SpecificFeeds';
+			
+			$followers = $socialObj->sfsi_get_youtube($youtube_user);
+        	$scounts['youtube_count'] = $socialObj->format_num($followers);
    		}
        	else
        	{

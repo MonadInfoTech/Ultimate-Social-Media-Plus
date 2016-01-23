@@ -1691,84 +1691,84 @@ SFSI(document).ready(function(s) {
     }), /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ? SFSI("img.sfsi_wicon").on("click", function(s) {
         s.stopPropagation();
         var i = SFSI("#sfsi_plus_floater_sec").val();
-        SFSI("div.sfsi_plus_wicons").css("z-index", "0"), SFSI(this).parent().parent().parent().siblings("div.sfsi_plus_wicons").find(".sfsiplus_inerCnt").find("div.sfsi_tool_tip_2").hide(), 
-        SFSI(this).parent().parent().parent().parent().siblings("li").length > 0 && (SFSI(this).parent().parent().parent().parent().siblings("li").find("div.sfsi_tool_tip_2").css("z-index", "0"), 
-        SFSI(this).parent().parent().parent().parent().siblings("li").find("div.sfsi_plus_wicons").find(".sfsiplus_inerCnt").find("div.sfsi_tool_tip_2").hide()), 
+        SFSI("div.sfsi_plus_wicons").css("z-index", "0"), SFSI(this).parent().parent().parent().siblings("div.sfsi_plus_wicons").find(".sfsiplus_inerCnt").find("div.sfsi_plus_tool_tip_2").hide(), 
+        SFSI(this).parent().parent().parent().parent().siblings("li").length > 0 && (SFSI(this).parent().parent().parent().parent().siblings("li").find("div.sfsi_plus_tool_tip_2").css("z-index", "0"), 
+        SFSI(this).parent().parent().parent().parent().siblings("li").find("div.sfsi_plus_wicons").find(".sfsiplus_inerCnt").find("div.sfsi_plus_tool_tip_2").hide()), 
         SFSI(this).parent().parent().parent().css("z-index", "1000000"), SFSI(this).parent().parent().css({
             "z-index":"999"
-        }), SFSI(this).attr("effect") && "fade_in" == SFSI(this).attr("effect") && (SFSI(this).parentsUntil("div").siblings("div.sfsi_tool_tip_2").css({
+        }), SFSI(this).attr("effect") && "fade_in" == SFSI(this).attr("effect") && (SFSI(this).parentsUntil("div").siblings("div.sfsi_plus_tool_tip_2").css({
             opacity:1,
             "z-index":10
         }), SFSI(this).parent().css("opacity", "1")), SFSI(this).attr("effect") && "scale" == SFSI(this).attr("effect") && (SFSI(this).parent().addClass("scale"), 
-        SFSI(this).parentsUntil("div").siblings("div.sfsi_tool_tip_2").css({
+        SFSI(this).parentsUntil("div").siblings("div.sfsi_plus_tool_tip_2").css({
             opacity:1,
             "z-index":10
         }), SFSI(this).parent().css("opacity", "1")), SFSI(this).attr("effect") && "combo" == SFSI(this).attr("effect") && (SFSI(this).parent().addClass("scale"), 
-        SFSI(this).parent().css("opacity", "1"), SFSI(this).parentsUntil("div").siblings("div.sfsi_tool_tip_2").css({
+        SFSI(this).parent().css("opacity", "1"), SFSI(this).parentsUntil("div").siblings("div.sfsi_plus_tool_tip_2").css({
             opacity:1,
             "z-index":10
-        })), ("top-left" == i || "top-right" == i) && SFSI(this).parent().parent().parent().parent("#sfsi_plus_floater").length > 0 && "sfsi_plus_floater" == SFSI(this).parent().parent().parent().parent().attr("id") ? (SFSI(this).parentsUntil("div").siblings("div.sfsi_tool_tip_2").addClass("sfsi_plc_btm"), 
-        SFSI(this).parentsUntil("div").siblings("div.sfsi_tool_tip_2").find("span.bot_arow").addClass("top_big_arow"), 
-        SFSI(this).parentsUntil("div").siblings("div.sfsi_tool_tip_2").css({
+        })), ("top-left" == i || "top-right" == i) && SFSI(this).parent().parent().parent().parent("#sfsi_plus_floater").length > 0 && "sfsi_plus_floater" == SFSI(this).parent().parent().parent().parent().attr("id") ? (SFSI(this).parentsUntil("div").siblings("div.sfsi_plus_tool_tip_2").addClass("sfsi_plc_btm"), 
+        SFSI(this).parentsUntil("div").siblings("div.sfsi_plus_tool_tip_2").find("span.bot_arow").addClass("top_big_arow"), 
+        SFSI(this).parentsUntil("div").siblings("div.sfsi_plus_tool_tip_2").css({
             opacity:1,
             "z-index":10
-        }), SFSI(this).parentsUntil("div").siblings("div.sfsi_tool_tip_2").show()) :(SFSI(this).parentsUntil("div").siblings("div.sfsi_tool_tip_2").find("span.bot_arow").removeClass("top_big_arow"), 
-        SFSI(this).parentsUntil("div").siblings("div.sfsi_tool_tip_2").removeClass("sfsi_plc_btm"), 
-        SFSI(this).parentsUntil("div").siblings("div.sfsi_tool_tip_2").css({
+        }), SFSI(this).parentsUntil("div").siblings("div.sfsi_plus_tool_tip_2").show()) :(SFSI(this).parentsUntil("div").siblings("div.sfsi_plus_tool_tip_2").find("span.bot_arow").removeClass("top_big_arow"), 
+        SFSI(this).parentsUntil("div").siblings("div.sfsi_plus_tool_tip_2").removeClass("sfsi_plc_btm"), 
+        SFSI(this).parentsUntil("div").siblings("div.sfsi_plus_tool_tip_2").css({
             opacity:1,
             "z-index":1e3
-        }), SFSI(this).parentsUntil("div").siblings("div.sfsi_tool_tip_2").show());
+        }), SFSI(this).parentsUntil("div").siblings("div.sfsi_plus_tool_tip_2").show());
     }) :SFSI("img.sfsi_wicon").on("mouseenter", function() {
         var s = SFSI("#sfsi_plus_floater_sec").val();
-        SFSI("div.sfsi_plus_wicons").css("z-index", "0"), SFSI(this).parent().parent().parent().siblings("div.sfsi_plus_wicons").find(".sfsiplus_inerCnt").find("div.sfsi_tool_tip_2").hide(), 
-        SFSI(this).parent().parent().parent().parent().siblings("li").length > 0 && (SFSI(this).parent().parent().parent().parent().siblings("li").find("div.sfsi_tool_tip_2").css("z-index", "0"), 
-        SFSI(this).parent().parent().parent().parent().siblings("li").find("div.sfsi_plus_wicons").find(".sfsiplus_inerCnt").find("div.sfsi_tool_tip_2").hide()), 
+        SFSI("div.sfsi_plus_wicons").css("z-index", "0"), SFSI(this).parent().parent().parent().siblings("div.sfsi_plus_wicons").find(".sfsiplus_inerCnt").find("div.sfsi_plus_tool_tip_2").hide(), 
+        SFSI(this).parent().parent().parent().parent().siblings("li").length > 0 && (SFSI(this).parent().parent().parent().parent().siblings("li").find("div.sfsi_plus_tool_tip_2").css("z-index", "0"), 
+        SFSI(this).parent().parent().parent().parent().siblings("li").find("div.sfsi_plus_wicons").find(".sfsiplus_inerCnt").find("div.sfsi_plus_tool_tip_2").hide()), 
         SFSI(this).parent().parent().parent().css("z-index", "1000000"), SFSI(this).parent().parent().css({
             "z-index":"999"
-        }), SFSI(this).attr("effect") && "fade_in" == SFSI(this).attr("effect") && (SFSI(this).parentsUntil("div").siblings("div.sfsi_tool_tip_2").css({
+        }), SFSI(this).attr("effect") && "fade_in" == SFSI(this).attr("effect") && (SFSI(this).parentsUntil("div").siblings("div.sfsi_plus_tool_tip_2").css({
             opacity:1,
             "z-index":10
         }), SFSI(this).parent().css("opacity", "1")), SFSI(this).attr("effect") && "scale" == SFSI(this).attr("effect") && (SFSI(this).parent().addClass("scale"), 
-        SFSI(this).parentsUntil("div").siblings("div.sfsi_tool_tip_2").css({
+        SFSI(this).parentsUntil("div").siblings("div.sfsi_plus_tool_tip_2").css({
             opacity:1,
             "z-index":10
         }), SFSI(this).parent().css("opacity", "1")), SFSI(this).attr("effect") && "combo" == SFSI(this).attr("effect") && (SFSI(this).parent().addClass("scale"), 
-        SFSI(this).parent().css("opacity", "1"), SFSI(this).parentsUntil("div").siblings("div.sfsi_tool_tip_2").css({
+        SFSI(this).parent().css("opacity", "1"), SFSI(this).parentsUntil("div").siblings("div.sfsi_plus_tool_tip_2").css({
             opacity:1,
             "z-index":10
-        })), ("top-left" == s || "top-right" == s) && SFSI(this).parent().parent().parent().parent("#sfsi_plus_floater").length > 0 && "sfsi_plus_floater" == SFSI(this).parent().parent().parent().parent().attr("id") ? (SFSI(this).parentsUntil("div").siblings("div.sfsi_tool_tip_2").addClass("sfsi_plc_btm"), 
-        SFSI(this).parentsUntil("div").siblings("div.sfsi_tool_tip_2").find("span.bot_arow").addClass("top_big_arow"), 
-        SFSI(this).parentsUntil("div").siblings("div.sfsi_tool_tip_2").css({
+        })), ("top-left" == s || "top-right" == s) && SFSI(this).parent().parent().parent().parent("#sfsi_plus_floater").length > 0 && "sfsi_plus_floater" == SFSI(this).parent().parent().parent().parent().attr("id") ? (SFSI(this).parentsUntil("div").siblings("div.sfsi_plus_tool_tip_2").addClass("sfsi_plc_btm"), 
+        SFSI(this).parentsUntil("div").siblings("div.sfsi_plus_tool_tip_2").find("span.bot_arow").addClass("top_big_arow"), 
+        SFSI(this).parentsUntil("div").siblings("div.sfsi_plus_tool_tip_2").css({
             opacity:1,
             "z-index":10
-        }), SFSI(this).parentsUntil("div").siblings("div.sfsi_tool_tip_2").show()) :(SFSI(this).parentsUntil("div").siblings("div.sfsi_tool_tip_2").find("span.bot_arow").removeClass("top_big_arow"), 
-        SFSI(this).parentsUntil("div").siblings("div.sfsi_tool_tip_2").removeClass("sfsi_plc_btm"), 
-        SFSI(this).parentsUntil("div").siblings("div.sfsi_tool_tip_2").css({
+        }), SFSI(this).parentsUntil("div").siblings("div.sfsi_plus_tool_tip_2").show()) :(SFSI(this).parentsUntil("div").siblings("div.sfsi_plus_tool_tip_2").find("span.bot_arow").removeClass("top_big_arow"), 
+        SFSI(this).parentsUntil("div").siblings("div.sfsi_plus_tool_tip_2").removeClass("sfsi_plc_btm"), 
+        SFSI(this).parentsUntil("div").siblings("div.sfsi_plus_tool_tip_2").css({
             opacity:1,
             "z-index":10
-        }), SFSI(this).parentsUntil("div").siblings("div.sfsi_tool_tip_2").show());
+        }), SFSI(this).parentsUntil("div").siblings("div.sfsi_plus_tool_tip_2").show());
     }), SFSI("div.sfsi_plus_wicons").on("mouseleave", function() {
         SFSI(this).children("div.sfsiplus_inerCnt").children("a.sficn").attr("effect") && "fade_in" == SFSI(this).children("div.sfsiplus_inerCnt").children("a.sficn").attr("effect") && SFSI(this).children("div.sfsiplus_inerCnt").find("a.sficn").css("opacity", "0.6"), 
         SFSI(this).children("div.sfsiplus_inerCnt").children("a.sficn").attr("effect") && "scale" == SFSI(this).children("div.sfsiplus_inerCnt").children("a.sficn").attr("effect") && SFSI(this).children("div.sfsiplus_inerCnt").find("a.sficn").removeClass("scale"), 
         SFSI(this).children("div.sfsiplus_inerCnt").children("a.sficn").attr("effect") && "combo" == SFSI(this).children("div.sfsiplus_inerCnt").children("a.sficn").attr("effect") && (SFSI(this).children("div.sfsiplus_inerCnt").find("a.sficn").css("opacity", "0.6"), 
         SFSI(this).children("div.sfsiplus_inerCnt").find("a.sficn").removeClass("scale")), "google" == SFSI(this).children("div.sfsiplus_inerCnt").find("a.sficn").attr("id") ? SFSI("body").on("click", function() {
-            SFSI(this).children(".sfsiplus_inerCnt").find("div.sfsi_tool_tip_2").hide();
+            SFSI(this).children(".sfsiplus_inerCnt").find("div.sfsi_plus_tool_tip_2").hide();
         }) :(SFSI(this).css({
             "z-index":"0"
-        }), SFSI(this).children(".sfsiplus_inerCnt").find("div.sfsi_tool_tip_2").hide());
+        }), SFSI(this).children(".sfsiplus_inerCnt").find("div.sfsi_plus_tool_tip_2").hide());
     }),
 	SFSI("body").on("click", function() {
-        SFSI(".sfsiplus_inerCnt").find("div.sfsi_tool_tip_2").hide();
+        SFSI(".sfsiplus_inerCnt").find("div.sfsi_plus_tool_tip_2").hide();
     }),
 	SFSI(".adminTooltip >a").on("hover", function() {
-        SFSI(this).offset().top, SFSI(this).parent("div").find("div.sfsi_tool_tip_2_inr").css("opacity", "1"), 
-        SFSI(this).parent("div").find("div.sfsi_tool_tip_2_inr").show();
+        SFSI(this).offset().top, SFSI(this).parent("div").find("div.sfsi_plus_tool_tip_2_inr").css("opacity", "1"), 
+        SFSI(this).parent("div").find("div.sfsi_plus_tool_tip_2_inr").show();
     }),
 	SFSI(".adminTooltip").on("mouseleave", function() {
-        "none" != SFSI(".gpls_tool_bdr").css("display") && 0 != SFSI(".gpls_tool_bdr").css("opacity") ? SFSI(".pop_up_box ").on("click", function() {
-            SFSI(this).parent("div").find("div.sfsi_tool_tip_2_inr").css("opacity", "0"), SFSI(this).parent("div").find("div.sfsi_tool_tip_2_inr").hide();
-        }) :(SFSI(this).parent("div").find("div.sfsi_tool_tip_2_inr").css("opacity", "0"), 
-        SFSI(this).parent("div").find("div.sfsi_tool_tip_2_inr").hide());
+        "none" != SFSI(".sfsi_plus_gpls_tool_bdr").css("display") && 0 != SFSI(".sfsi_plus_gpls_tool_bdr").css("opacity") ? SFSI(".pop_up_box ").on("click", function() {
+            SFSI(this).parent("div").find("div.sfsi_plus_tool_tip_2_inr").css("opacity", "0"), SFSI(this).parent("div").find("div.sfsi_plus_tool_tip_2_inr").hide();
+        }) :(SFSI(this).parent("div").find("div.sfsi_plus_tool_tip_2_inr").css("opacity", "0"), 
+        SFSI(this).parent("div").find("div.sfsi_plus_tool_tip_2_inr").hide());
     }),
 	SFSI(".expand-area").on("click", function() {
         object_name.Re_ad == SFSI(this).text() ? (SFSI(this).siblings("p").children("label").fadeIn("slow"), 

@@ -103,9 +103,9 @@ define('rss_readmore_text2', $rss_readmore_text2);
     
         <div class="adminTooltip" >
            <a href="javascript:"><img width="51" class="sfsi_wicon" src="<?php echo SFSI_PLUS_PLUGURL; ?>images/facebook.png" title="facebook" alt="facebook" /></a>
-           <div class="sfsi_tool_tip_2 sfsi_tool_tip_2_inr fb_tool_bdr" style="width: 59px;margin-left: -48.5px;">
+           <div class="sfsi_plus_tool_tip_2 sfsi_plus_tool_tip_2_inr sfsi_plus_fb_tool_bdr" style="width: 59px;margin-left: -48.5px;">
                <span class="bot_arow bot_fb_arow "></span>
-               <div class="sfsi_inside fbb">
+               <div class="sfsi_plus_inside fbb">
                    <div class="fb_1"><img src="<?php echo $visit_iconsUrl."facebook.png"; ?>" /></div>    
                    <div class="fb_2"><img src="<?php echo $visit_iconsUrl."fblike_bck.png"; ?>" /></div>
                    <div class="fb_3"><img src="<?php echo $visit_iconsUrl."fbshare_bck.png"; ?>" /></div>
@@ -154,9 +154,9 @@ define('rss_readmore_text2', $rss_readmore_text2);
     
         <div class="adminTooltip" >
         	<a href="javascript:"><img width="51" class="sfsi_wicon" src="<?php echo SFSI_PLUS_PLUGURL; ?>images/twitter.png" title="Twitter" alt="Twitter" /></a>
-            <div class="sfsi_tool_tip_2 sfsi_tool_tip_2_inr twt_tool_bdr" style="width: 59px;margin-left: -48.5px;">
+            <div class="sfsi_plus_tool_tip_2 sfsi_plus_tool_tip_2_inr sfsi_plus_twt_tool_bdr" style="width: 59px;margin-left: -48.5px;">
            		<span class="bot_arow bot_twt_arow"></span>
-           		<div class="sfsi_inside" >
+           		<div class="sfsi_plus_inside" >
            			<div class="twt_3"><img src="<?php echo $visit_iconsUrl."twitter.png"; ?>" /></div>
                     <div class="twt_1"><img src="<?php echo $visit_iconsUrl."twfollow_bck.png"; ?>" /></div>
            			<div class="twt_2"><img src="<?php echo $visit_iconsUrl."twtweet_bck.png"; ?>" /></div>
@@ -179,9 +179,9 @@ define('rss_readmore_text2', $rss_readmore_text2);
     
         <div class="adminTooltip" >
         	<a href="javascript:"><img width="51" class="sfsi_wicon" src="<?php echo SFSI_PLUS_PLUGURL; ?>images/google_plus.png" title="google+" alt="google"/></a>
-            <div class="sfsi_tool_tip_2 sfsi_tool_tip_2_inr gpls_tool_bdr" style="display: block;  margin-left: -76.5px; margin-left: -55.5px;">
+            <div class="sfsi_plus_tool_tip_2 sfsi_plus_tool_tip_2_inr sfsi_plus_gpls_tool_bdr" style="display: block;  margin-left: -76.5px; margin-left: -55.5px;">
            		<span class="bot_arow bot_gpls_arow"></span>
-           		<div class="sfsi_inside">
+           		<div class="sfsi_plus_inside">
            			<div class="gpls_visit"><img src="<?php echo $visit_iconsUrl."google.png"; ?>" /></div>    
            			<div class="gtalk_2"><img src="<?php echo $visit_iconsUrl."gplus_like.png"; ?>" /></div>
           	 		<div class="gtalk_3"><img src="<?php echo $visit_iconsUrl."gplus_share.png"; ?>" /></div>
@@ -205,9 +205,9 @@ define('rss_readmore_text2', $rss_readmore_text2);
     	
         <div class="adminTooltip" >
         	<a href="javascript:"><img width="51" class="sfsi_wicon" src="<?php echo SFSI_PLUS_PLUGURL; ?>images/youtube.png" title="youtube" alt="youtube" /></a>
-        	<div class="sfsi_tool_tip_2 sfsi_tool_tip_2_inr utube_tool_bdr"  style=" margin-left: -67px; width: 96px;" >
+        	<div class="sfsi_plus_tool_tip_2 sfsi_plus_tool_tip_2_inr utube_tool_bdr"  style=" margin-left: -67px; width: 96px;" >
            		<span class="bot_arow bot_utube_arow"></span>
-           		<div class="sfsi_inside">
+           		<div class="sfsi_plus_inside">
                		<div class="utub_visit"><img src="<?php echo $visit_iconsUrl."youtube.png"; ?>" /></div>
            			<div class="utub_2"><img src="<?php echo $visit_iconsUrl."youtube_bck.png"; ?>" /></div>
                 </div>    
@@ -228,9 +228,9 @@ $pin_url=($option2['sfsi_plus_pinterest_pageUrl']!='') ?  $option2['sfsi_plus_pi
     
      	<div class="adminTooltip" >
         <a href="javascript:"><img width="51" class="sfsi_wicon" src="<?php echo SFSI_PLUS_PLUGURL; ?>images/pinterest.png" title="pinterest" alt="pinterest" /></a>
-        <div class="sfsi_tool_tip_2 sfsi_tool_tip_2_inr printst_tool_bdr"  style=" width: 73px; margin-left: -55.5px;" >
+        <div class="sfsi_plus_tool_tip_2 sfsi_plus_tool_tip_2_inr sfsi_plus_printst_tool_bdr"  style=" width: 73px; margin-left: -55.5px;" >
            <span class="bot_arow bot_pintst_arow"></span>
-           <div class="sfsi_inside">
+           <div class="sfsi_plus_inside">
                <div class="prints_visit"><img src="<?php echo $visit_iconsUrl."pinterest.png"; ?>" /></div>
                <div class="prints_visit_1"><img src="<?php echo $visit_iconsUrl."pinit_bck.png"; ?>" /></div>
            </div>    
@@ -253,9 +253,9 @@ $pin_url=($option2['sfsi_plus_pinterest_pageUrl']!='') ?  $option2['sfsi_plus_pi
         </h4>
         <div class="adminTooltip" >
         	<a href="javascript:"><img width="51" class="sfsi_wicon" src="<?php echo SFSI_PLUS_PLUGURL;?>images/linked_in.png" title="LinkedIn" alt="LinkedIn"/></a>
-        	<div class="sfsi_tool_tip_2 sfsi_tool_tip_2_inr linkedin_tool_bdr"  style=" width: 99px; margin-left: -68.5px;">
+        	<div class="sfsi_plus_tool_tip_2 sfsi_plus_tool_tip_2_inr sfsi_plus_linkedin_tool_bdr"  style=" width: 99px; margin-left: -68.5px;">
            		<span class="bot_arow bot_linkedin_arow"></span>
-           		<div class="sfsi_inside">
+           		<div class="sfsi_plus_inside">
            		   <div style="margin:1px 5px;" class="linkin_1"><img src="<?php echo $visit_iconsUrl."linkedIn.png"; ?>" /></div>
                    <div class="linkin_2"><img src="<?php echo $visit_iconsUrl."linkinflw_bck.png"; ?>" /></div>
                    <div class="linkin_3"><img src="<?php echo $visit_iconsUrl."lnkdin_share_bck.png"; ?>" /></div>
