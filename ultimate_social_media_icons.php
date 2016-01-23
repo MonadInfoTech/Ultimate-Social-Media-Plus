@@ -262,7 +262,7 @@ function sfsi_plus_beforaftereposts( $content )
 				}
 				else
 				{
-					$icons_before .= "<div class='sfsi_Sicons' style='".$style."'>";
+					$icons_before .= "<div class='sfsi_plus_Sicons' style='".$style."'>";
 						$icons_before .= "<div style='float:left;margin:0 0px; line-height:".$lineheight."px'><span>".$txt."</span></div>";
 						$icons_before .= sfsi_plus_check_posts_visiblity(0);
 					$icons_before .= "</div>";
@@ -280,7 +280,7 @@ function sfsi_plus_beforaftereposts( $content )
 				}
 				else
 				{
-					$icons_after .= "<div class='sfsi_Sicons' style='".$style."'>";
+					$icons_after .= "<div class='sfsi_plus_Sicons' style='".$style."'>";
 						$icons_after .= "<div style='float:left;margin:0 0px; line-height:".$lineheight."px'><span>".$txt."</span></div>";
 						$icons_after .= sfsi_plus_check_posts_visiblity(0);
 					$icons_after .= "</div>";
@@ -360,7 +360,7 @@ function sfsi_plus_beforeafterblogposts( $content )
 		{
 			//icon selection
 			$icons_before .= "<div class='sfsibeforpstwpr' style='".$style_parent."'>";
-				$icons_before .= "<div class='sfsi_Sicons ".$float."' style='".$style."'>";
+				$icons_before .= "<div class='sfsi_plus_Sicons ".$float."' style='".$style."'>";
 					if($sfsi_plus_display_button_type == 'standard_buttons')
 					{
 						if($sfsi_section8['sfsi_plus_rectsub'] == 'yes' || $sfsi_section8['sfsi_plus_rectfb'] == 'yes' || $sfsi_section8['sfsi_plus_rectgp'] == 'yes' || $sfsi_section8['sfsi_plus_rectshr'] == 'yes' || $sfsi_section8['sfsi_plus_recttwtr'] == 'yes')
@@ -415,7 +415,7 @@ function sfsi_plus_beforeafterblogposts( $content )
 		{
 			//icon selection
 			$icons_after .= "<div class='sfsiaftrpstwpr' style='".$style_parent."'>";
-				$icons_after .= "<div class='sfsi_Sicons ".$float."' style='".$style."'>";
+				$icons_after .= "<div class='sfsi_plus_Sicons ".$float."' style='".$style."'>";
 					
 					if($sfsi_plus_display_button_type == 'standard_buttons')
 					{

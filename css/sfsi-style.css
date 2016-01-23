@@ -1402,7 +1402,7 @@ ul.sfsiplus_tab_3_icns li .sfsiplus_icns_tab_3, ul.sfsiplus_tab_3_icns li .radio
     -o-transform: scale(1.1);
     transform: scale(1.1);
 }
-.sfsi_Sicons {
+.sfsi_plus_Sicons {
     float: left;
 }
 .sfsi_pop_up .button a:hover {
@@ -2270,74 +2270,74 @@ h2.optional {
 .sfsiplus_specify_counts .listing li .high_prb {
     height: 41px;
 }
-.sfsi_Sicons {
+.sfsi_plus_Sicons {
     position: relative;
 }
-.sfsi_Sicons .sf_subscrbe{ margin: 2px 3px 3px 0; line-height: 20px;}
-.sfsi_Sicons .sf_fb{ margin: 0 4px 0 5px; line-height: 20px;}
-.sfsi_Sicons .sf_google{ margin: 0 5px 0 5px; line-height: 20px;}
-.sfsi_Sicons .sf_twiter{ margin: 1px 7px 0 4px; line-height: 20px;}
-.sfsi_Sicons .sf_addthis{ margin: 2px 7px 0 2px; line-height: 20px;}
+.sfsi_plus_Sicons .sf_subscrbe{ margin: 2px 3px 3px 0; line-height: 20px;}
+.sfsi_plus_Sicons .sf_fb{ margin: 0 4px 0 5px; line-height: 20px;}
+.sfsi_plus_Sicons .sf_google{ margin: 0 5px 0 5px; line-height: 20px;}
+.sfsi_plus_Sicons .sf_twiter{ margin: 1px 7px 0 4px; line-height: 20px;}
+.sfsi_plus_Sicons .sf_addthis{ margin: 2px 7px 0 2px; line-height: 20px;}
 
-.sfsi_Sicons.left .sf_subscrbe{ margin: 2px 8px 3px 0; }
-.sfsi_Sicons.left .sf_fb{ margin: 0 8px 0 0; }
-.sfsi_Sicons.left .sf_google{ margin: 0 8px 0 0; }
-.sfsi_Sicons.left .sf_twiter{ margin: 1px 8px 0 0; }
-.sfsi_Sicons.left .sf_addthis{ margin: 2px 7px 0 0; }
+.sfsi_plus_Sicons.left .sf_subscrbe{ margin: 2px 8px 3px 0; }
+.sfsi_plus_Sicons.left .sf_fb{ margin: 0 8px 0 0; }
+.sfsi_plus_Sicons.left .sf_google{ margin: 0 8px 0 0; }
+.sfsi_plus_Sicons.left .sf_twiter{ margin: 1px 8px 0 0; }
+.sfsi_plus_Sicons.left .sf_addthis{ margin: 2px 7px 0 0; }
 
-.sfsi_Sicons.right .sf_subscrbe{ margin: 2px 0 3px; }
-.sfsi_Sicons.right .sf_fb{ margin: 0 0 0 7px; }
-.sfsi_Sicons.right .sf_google{ margin: 0 0 0 8px; }
-.sfsi_Sicons.right .sf_twiter{ margin: 1px 0 0 8px; }
-.sfsi_Sicons.right .sf_addthis{ margin: 2px 0 0 8px; }
+.sfsi_plus_Sicons.right .sf_subscrbe{ margin: 2px 0 3px; }
+.sfsi_plus_Sicons.right .sf_fb{ margin: 0 0 0 7px; }
+.sfsi_plus_Sicons.right .sf_google{ margin: 0 0 0 8px; }
+.sfsi_plus_Sicons.right .sf_twiter{ margin: 1px 0 0 8px; }
+.sfsi_plus_Sicons.right .sf_addthis{ margin: 2px 0 0 8px; }
 
-.sfsi_Sicons .sf_subscrbe, .sfsi_Sicons .sf_twiter
+.sfsi_plus_Sicons .sf_subscrbe, .sfsi_plus_Sicons .sf_twiter
 {
 	position: relative;
 	width: 75px;
 }
-.sfsi_Sicons .sf_twiter iframe
+.sfsi_plus_Sicons .sf_twiter iframe
 {
 	margin: 0px;
 	height: 20px !important;
 	overflow: visible !important;
 }
-.sfsi_Sicons .sf_twiter iframe #widget
+.sfsi_plus_Sicons .sf_twiter iframe #widget
 {
 	overflow: visible !important;
 }
-.sfsi_Sicons .sf_subscrbe a
+.sfsi_plus_Sicons .sf_subscrbe a
 {
 	width: auto;
 	float: left;
 	border: medium none;
 	padding-top: 0px;
 }
-.sfsi_Sicons .sf_subscrbe a:focus
+.sfsi_plus_Sicons .sf_subscrbe a:focus
 {
 	outline: medium none;
 }
-.sfsi_Sicons .sf_subscrbe a img
+.sfsi_plus_Sicons .sf_subscrbe a img
 {
 	float: left;
 }
-.sfsi_Sicons .sf_fb {
+.sfsi_plus_Sicons .sf_fb {
     position: relative;
     width: 75px;
 }
-.sfsi_Sicons .fb_iframe_widget {
+.sfsi_plus_Sicons .fb_iframe_widget {
     float: none;
     width: auto;
     vertical-align: middle;
     margin: 2px 0 0;
 }
 /*absolute commented as for standard icon it was giving issue while icon was to be aligned centerd.*/
-.sfsi_Sicons .sf_fb .fb_iframe_widget>span {
+.sfsi_plus_Sicons .sf_fb .fb_iframe_widget>span {
     position: relative;
     /*width: 450px!important;*/
 	float: left;
 }
-.sfsi_Sicons .sf_addthis, .sfsi_Sicons .sf_google {
+.sfsi_plus_Sicons .sf_addthis, .sfsi_plus_Sicons .sf_google {
     position: relative;
 }
 .sf_google > div
@@ -2348,12 +2348,12 @@ h2.optional {
 {
 	width: 100% !important;
 }
-.sfsi_Sicons .sf_google>div
+.sfsi_plus_Sicons .sf_google>div
 {
 	float: left !important;
 	margin-top: 1px !important;	
 }
-.wrapper .sfsi_Sicons .sf_addthis {
+.wrapper .sfsi_plus_Sicons .sf_addthis {
     margin: 7px 0 0 4px!important;
 }
 .tab2 .utube_inn label {
@@ -3133,19 +3133,19 @@ label.sfsiplus_toglpstpgsbttl { float: left; margin-top: 5px !important}
 	line-height: 18px;
 	margin: 5px 0;
 }
-.sfsibeforpstwpr .sfsi_Sicons span
+.sfsibeforpstwpr .sfsi_plus_Sicons span
 {
 	font-size: 20px;
 }
-.sfsiaftrpstwpr .sfsi_Sicons span
+.sfsiaftrpstwpr .sfsi_plus_Sicons span
 {
 	font-size: 20px;
 }
-.sfsibeforpstwpr .sfsi_Sicons
+.sfsibeforpstwpr .sfsi_plus_Sicons
 {
 	
 }
-.sfsiaftrpstwpr .sfsi_Sicons
+.sfsiaftrpstwpr .sfsi_plus_Sicons
 {
 	
 }
