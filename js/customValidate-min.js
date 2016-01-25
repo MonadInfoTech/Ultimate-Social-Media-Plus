@@ -17,7 +17,8 @@ function sfsi_plus_validationStep2() {
     if (sfsi_validator(SFSI('input[name="sfsi_plus_linkedin_recommendBusines"]'), "activte") && sfsi_validator(SFSI('input[name="sfsi_plus_linkedin_recommendBusines"]'), "checked") && (!sfsi_validator(SFSI('input[name="sfsi_plus_linkedin_recommendProductId"]'), "blank") || !sfsi_validator(SFSI('input[name="sfsi_plus_linkedin_recommendCompany"]'), "blank"))) return sfsiplus_showErrorSuc("error", "Error : Please Enter Product Id and Company for LinkedIn Recommendation ", 2), SFSI('input[name="sfsi_plus_linkedin_recommendProductId"]').addClass("inputError"), SFSI('input[name="sfsi_plus_linkedin_recommendCompany"]').addClass("inputError"), !1;
     var s = 0;
     return SFSI("input[name='sfsi_plus_CustomIcon_links[]']").each(function() {
-        sfsi_validator(SFSI(this), "blank") && sfsi_validator(SFSI(SFSI(this)), "url") || (sfsiplus_showErrorSuc("error", "Error : Please Enter a valid Custom link ", 2), SFSI(this).addClass("inputError"), s = 1)
+        //sfsi_validator(SFSI(this), "blank") && sfsi_validator(SFSI(SFSI(this)), "url") || (sfsiplus_showErrorSuc("error", "Error : Please Enter a valid Custom link ", 2), SFSI(this).addClass("inputError"), s = 1)
+		sfsi_validator(SFSI(this), "blank") || (sfsiplus_showErrorSuc("error", "Error : Please Enter a valid Custom link ", 2), SFSI(this).addClass("inputError"), s = 1)
     }), s ? !1 : !0
 }
 

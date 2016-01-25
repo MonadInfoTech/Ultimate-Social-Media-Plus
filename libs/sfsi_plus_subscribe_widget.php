@@ -9,6 +9,9 @@ function sfsi_plus_addStyleFunction()
 	echo $return = '';
 	?>
     	<script>
+			jQuery(document).ready(function(e) {
+                jQuery("body").addClass("sfsi_plus_<?php echo get_option("sfsi_plus_pluginVersion");?>")
+            });
 			function sfsi_plus_processfurther(ref) {
 				var feed_id = '<?php echo $sfsi_plus_feediid?>';
 				var feedtype = 8;

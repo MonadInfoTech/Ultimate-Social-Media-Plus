@@ -356,14 +356,23 @@ function sfsi_plus_beforeafterblogposts( $content )
 			$style = 'float:'.$float;
 		}
 		
-		if($sfsi_section8['sfsi_plus_display_before_blogposts'] == "yes" && $sfsi_section8['sfsi_plus_show_item_onposts'] == "yes")
+		if(
+			$sfsi_section8['sfsi_plus_display_before_blogposts'] == "yes" &&
+			$sfsi_section8['sfsi_plus_show_item_onposts'] == "yes"
+		)
 		{
 			//icon selection
 			$icons_before .= "<div class='sfsibeforpstwpr' style='".$style_parent."'>";
 				$icons_before .= "<div class='sfsi_plus_Sicons ".$float."' style='".$style."'>";
 					if($sfsi_plus_display_button_type == 'standard_buttons')
 					{
-						if($sfsi_section8['sfsi_plus_rectsub'] == 'yes' || $sfsi_section8['sfsi_plus_rectfb'] == 'yes' || $sfsi_section8['sfsi_plus_rectgp'] == 'yes' || $sfsi_section8['sfsi_plus_rectshr'] == 'yes' || $sfsi_section8['sfsi_plus_recttwtr'] == 'yes')
+						if(
+							$sfsi_section8['sfsi_plus_rectsub'] == 'yes' ||
+							$sfsi_section8['sfsi_plus_rectfb'] == 'yes' ||
+							$sfsi_section8['sfsi_plus_rectgp'] == 'yes' ||
+							$sfsi_section8['sfsi_plus_rectshr'] == 'yes' ||
+							$sfsi_section8['sfsi_plus_recttwtr'] == 'yes'
+						)
 						{
 							$icons_before .= "<div style='display: inline-block;margin-bottom: 0; margin-left: 0; margin-right: 8px; margin-top: 0; vertical-align: middle;width: auto;'><span>".$txt."</span></div>";
 						}
@@ -371,7 +380,7 @@ function sfsi_plus_beforeafterblogposts( $content )
 						{
 							if($show_count){$sfsiLikeWithsub = "93px";}else{$sfsiLikeWithsub = "64px";}
 							if(!isset($sfsiLikeWithsub)){$sfsiLikeWithsub = $sfsiLikeWith;}
-							$icons_before.="<div class='sf_subscrbe' style='display: inline-block;vertical-align: middle;width: auto;'>".sfsi_plus_Subscribelike($permalink,$show_count)."</div>";
+							$icons_before.="<div class='sf_subscrbe' style='display: inline-block;vertical-align: top;width: auto;'>".sfsi_plus_Subscribelike($permalink,$show_count)."</div>";
 						}
 						if($sfsi_section8['sfsi_plus_rectfb'] == 'yes')
 						{
@@ -419,7 +428,13 @@ function sfsi_plus_beforeafterblogposts( $content )
 					
 					if($sfsi_plus_display_button_type == 'standard_buttons')
 					{
-						if($sfsi_section8['sfsi_plus_rectsub'] == 'yes' || $sfsi_section8['sfsi_plus_rectfb'] == 'yes' || $sfsi_section8['sfsi_plus_rectgp'] == 'yes' || $sfsi_section8['sfsi_plus_rectshr'] == 'yes' || $sfsi_section8['sfsi_plus_recttwtr'] == 'yes')
+						if(
+							$sfsi_section8['sfsi_plus_rectsub'] == 'yes' ||
+							$sfsi_section8['sfsi_plus_rectfb'] == 'yes' ||
+							$sfsi_section8['sfsi_plus_rectgp'] == 'yes' ||
+							$sfsi_section8['sfsi_plus_rectshr'] == 'yes' ||
+							$sfsi_section8['sfsi_plus_recttwtr'] == 'yes'
+						)
 						{
 							$icons_after .= "<div style='display: inline-block;margin-bottom: 0; margin-left: 0; margin-right: 8px; margin-top: 0; vertical-align: middle;width: auto;'><span>".$txt."</span></div>";
 						}
@@ -427,7 +442,7 @@ function sfsi_plus_beforeafterblogposts( $content )
 						{
 							if($show_count){$sfsiLikeWithsub = "93px";}else{$sfsiLikeWithsub = "64px";}
 							if(!isset($sfsiLikeWithsub)){$sfsiLikeWithsub = $sfsiLikeWith;}
-							$icons_after.="<div class='sf_subscrbe' style='display: inline-block;vertical-align: middle; width: auto;'>".sfsi_plus_Subscribelike($permalink,$show_count)."</div>";
+							$icons_after.="<div class='sf_subscrbe' style='display: inline-block;vertical-align: top; width: auto;'>".sfsi_plus_Subscribelike($permalink,$show_count)."</div>";
 						}
 						if($sfsi_section8['sfsi_plus_rectfb'] == 'yes')
 						{
@@ -437,7 +452,7 @@ function sfsi_plus_beforeafterblogposts( $content )
 						}
 						if($sfsi_section8['sfsi_plus_rectgp'] == 'yes')
 						{
-							$icons_after .= "<div class='sf_google'  style='display: inline-block;vertical-align: middle; width: auto;'>".sfsi_plus_googlePlus($permalink,$show_count)."</div>";
+							$icons_after .= "<div class='sf_google' style='display: inline-block;vertical-align: middle; width: auto;'>".sfsi_plus_googlePlus($permalink,$show_count)."</div>";
 						}
 						if($sfsi_section8['sfsi_plus_recttwtr'] == 'yes')
 						{

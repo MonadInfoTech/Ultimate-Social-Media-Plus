@@ -2081,8 +2081,8 @@ h2.optional {
     height: 24px;
     display:inline-block;
     float: none;
-   /* max-width: 96px;*/
-	/*width: 82px;*/
+   	min-width: 100px;
+	width: auto;
 }
 .utube_tool_bdr {
     width: 93px;
