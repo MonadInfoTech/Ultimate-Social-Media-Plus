@@ -380,13 +380,13 @@ function sfsi_plus_beforeafterblogposts( $content )
 						{
 							if($show_count){$sfsiLikeWithsub = "93px";}else{$sfsiLikeWithsub = "64px";}
 							if(!isset($sfsiLikeWithsub)){$sfsiLikeWithsub = $sfsiLikeWith;}
-							$icons_before.="<div class='sf_subscrbe' style='display: inline-block;vertical-align: top;width: auto;'>".sfsi_plus_Subscribelike($permalink,$show_count)."</div>";
+							$icons_before.="<div class='sf_subscrbe' style='display: inline-block;vertical-align: middle;width: auto;'>".sfsi_plus_Subscribelike($permalink,$show_count)."</div>";
 						}
 						if($sfsi_section8['sfsi_plus_rectfb'] == 'yes')
 						{
 							if($show_count){}else{$sfsiLikeWithfb = "48px";}
 							if(!isset($sfsiLikeWithfb)){$sfsiLikeWithfb = $sfsiLikeWith;}
-							$icons_before .= "<div class='sf_fb' style='display: inline-block;vertical-align: middle;width: auto;'>".sfsi_plus_FBlike($permalink,$show_count)."</div>";
+							$icons_before .= "<div class='sf_fb' style='display: inline-block; vertical-align: middle;width: auto;'>".sfsi_plus_FBlike($permalink,$show_count)."</div>";
 						}
 						if($sfsi_section8['sfsi_plus_rectgp'] == 'yes')
 						{
@@ -442,7 +442,7 @@ function sfsi_plus_beforeafterblogposts( $content )
 						{
 							if($show_count){$sfsiLikeWithsub = "93px";}else{$sfsiLikeWithsub = "64px";}
 							if(!isset($sfsiLikeWithsub)){$sfsiLikeWithsub = $sfsiLikeWith;}
-							$icons_after.="<div class='sf_subscrbe' style='display: inline-block;vertical-align: top; width: auto;'>".sfsi_plus_Subscribelike($permalink,$show_count)."</div>";
+							$icons_after.="<div class='sf_subscrbe' style='display: inline-block;vertical-align: middle; width: auto;'>".sfsi_plus_Subscribelike($permalink,$show_count)."</div>";
 						}
 						if($sfsi_section8['sfsi_plus_rectfb'] == 'yes')
 						{

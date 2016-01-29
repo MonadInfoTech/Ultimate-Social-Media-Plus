@@ -186,16 +186,11 @@
 					?>
 					<label class="sfsiplus_sub-subtitle ckckslctn" <?php echo $label_style;?>>
                     	<?php  _e( 'Place', 'ultimate-social-media-plus' ); ?>
-                    <label class="sfsi_ckckslctnlbl"><</label><label class="sfsi_ckckslctnlbl">?</label><label class="sfsi_ckckslctnlbl">
-                    	php echo DISPLAY_ULTIMATE_PLUS();
-                    	<?php  //_e( 'php echo DISPLAY_ULTIMATE_PLUS();', 'ultimate-social-media-plus' ); ?>
-                    
-                    </label><label class="sfsi_ckckslctnlbl">?</label><label class="sfsi_ckckslctnlbl">></label> 
+                    <label class="sfsi_ckckslctnlbl"><</label><label class="sfsi_ckckslctnlbl">?</label><label class="sfsi_ckckslctnlbl">php echo DISPLAY_ULTIMATE_PLUS();</label><label class="sfsi_ckckslctnlbl">?</label><label class="sfsi_ckckslctnlbl">></label> 
                     	<?php  _e( 'in your theme codes or use the shortcode', 'ultimate-social-media-plus' ); ?>
                     	<b>
                     		[DISPLAY_ULTIMATE_PLUS]
-							<?php  //_e( '[DISPLAY_ULTIMATE_PLUS]', 'ultimate-social-media-plus' ); ?>
-                    	</b> 
+						</b> 
                     	<?php  _e( 'to display them wherever you want.', 'ultimate-social-media-plus' ); ?>
                     </label>
 				</p>

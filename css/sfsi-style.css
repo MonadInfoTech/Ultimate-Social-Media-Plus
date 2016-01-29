@@ -2273,19 +2273,19 @@ h2.optional {
 .sfsi_plus_Sicons {
     position: relative;
 }
-.sfsi_plus_Sicons .sf_subscrbe{ margin: 2px 3px 3px 0; line-height: 20px;}
-.sfsi_plus_Sicons .sf_fb{ margin: 0 4px 0 5px; line-height: 20px;}
-.sfsi_plus_Sicons .sf_google{ margin: 0 5px 0 5px; line-height: 20px;}
-.sfsi_plus_Sicons .sf_twiter{ margin: 1px 7px 0 4px; line-height: 20px;}
-.sfsi_plus_Sicons .sf_addthis{ margin: 2px 7px 0 2px; line-height: 20px;}
+.sfsi_plus_Sicons .sf_subscrbe{ margin: 2px 3px 0 0; line-height: 0px;}
+.sfsi_plus_Sicons .sf_fb{ margin: 0 4px 0 5px; line-height: 0px;}
+.sfsi_plus_Sicons .sf_google{ margin: 0 5px 0 5px; line-height: 0px;}
+.sfsi_plus_Sicons .sf_twiter{ margin: 1px 7px 0 4px; line-height: 0px;}
+.sfsi_plus_Sicons .sf_addthis{ margin: 2px 7px 0 2px; line-height: 0px;}
 
-.sfsi_plus_Sicons.left .sf_subscrbe{ margin: 2px 8px 3px 0; }
-.sfsi_plus_Sicons.left .sf_fb{ margin: 0 8px 0 0; }
-.sfsi_plus_Sicons.left .sf_google{ margin: 0 8px 0 0; }
-.sfsi_plus_Sicons.left .sf_twiter{ margin: 1px 8px 0 0; }
-.sfsi_plus_Sicons.left .sf_addthis{ margin: 2px 7px 0 0; }
+.sfsi_plus_Sicons.left .sf_subscrbe{ margin: 2px 8px 0 0;}
+.sfsi_plus_Sicons.left .sf_fb{ margin: 0 8px 0 0;}
+.sfsi_plus_Sicons.left .sf_google{ margin: 0 8px 0 0;}
+.sfsi_plus_Sicons.left .sf_twiter{ margin: 1px 8px 0 0;}
+.sfsi_plus_Sicons.left .sf_addthis{ margin: 2px 7px 0 0;}
 
-.sfsi_plus_Sicons.right .sf_subscrbe{ margin: 2px 0 3px; }
+.sfsi_plus_Sicons.right .sf_subscrbe{ margin: 2px 0 0; }
 .sfsi_plus_Sicons.right .sf_fb{ margin: 0 0 0 7px; }
 .sfsi_plus_Sicons.right .sf_google{ margin: 0 0 0 8px; }
 .sfsi_plus_Sicons.right .sf_twiter{ margin: 1px 0 0 8px; }
@@ -2305,6 +2305,7 @@ h2.optional {
 .sfsi_plus_Sicons .sf_twiter iframe #widget
 {
 	overflow: visible !important;
+
 }
 .sfsi_plus_Sicons .sf_subscrbe a
 {
@@ -3174,6 +3175,7 @@ label.sfsiplus_toglpstpgsbttl { float: left; margin-top: 5px !important}
     font-size: 20px;
     margin: 62px 5px 0 20px;
 	font-family: 'helveticaneue-light';
+
     width: 120px;
 }
 
@@ -3220,3 +3222,4 @@ label.sfsiplus_toglpstpgsbttl { float: left; margin-top: 5px !important}
 /*.sfsi_plus_twt_tool_bdr .sfsi_plus_inside .icon1{margin: 2px 35px 2px !important;clear:both;}*/
 .sfsi_plus_twt_tool_bdr .sfsi_plus_inside .cstmicon1 a img{margin: 2px 12px 2px !important;clear:both;text-align:center;float:none;}
 .cstmicon1{text-align:center;}
+.sfsi_plus_Sicons img { height: 21px;}
