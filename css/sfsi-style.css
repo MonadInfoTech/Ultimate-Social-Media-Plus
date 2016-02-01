@@ -3222,4 +3222,4 @@ label.sfsiplus_toglpstpgsbttl { float: left; margin-top: 5px !important}
 /*.sfsi_plus_twt_tool_bdr .sfsi_plus_inside .icon1{margin: 2px 35px 2px !important;clear:both;}*/
 .sfsi_plus_twt_tool_bdr .sfsi_plus_inside .cstmicon1 a img{margin: 2px 12px 2px !important;clear:both;text-align:center;float:none;}
 .cstmicon1{text-align:center;}
-.sfsi_plus_Sicons img { height: 21px;}
+.sfsi_plus_Sicons img, #sfsiplusid_facebook img, #sfsiplusid_google img, #sfsiplusid_twitter img { height: 20px;}

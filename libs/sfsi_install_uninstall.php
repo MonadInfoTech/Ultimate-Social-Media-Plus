@@ -581,7 +581,7 @@ function sfsi_plus_rating_msg()
 	$datetime2 = new DateTime($display_date);
 	$diff_inrval = round(($datetime2->format('U') - $datetime1->format('U')) / (60*60*24));
 	
-    if($diff_inrval >= 30 && get_option('sfsi_plus_RatingDiv')=="no")
+	if($diff_inrval >= 30 && get_option('sfsi_plus_RatingDiv')=="no")
 	{
 	 echo '
 	<div class="sfwp_fivestar">
