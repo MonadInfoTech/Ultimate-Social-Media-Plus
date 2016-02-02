@@ -4,10 +4,12 @@
 	$feedId = get_option('sfsi_plus_feed_id',false);
 ?>
 <div class="tab9">
-	
+	<?php
+		$connectToFeed = "http://www.specificfeeds.com/?".base64_encode("userprofile=wordpress&feed_id=".$feedId);
+	?>
     <p>
 		<?php  _e('In addition to the email- or follow-icon you can also show a subscription form which maximizes chances that people subscribe to your site. To get access to the emails who subscribe, please', 'ultimate-social-media-plus'); ?>
-		<a href="http://www.specificfeeds.com/<?php echo $feedId; ?>?getParam=feeds_claims" target="_blank">
+		<a target="_new" href="<?php echo $connectToFeed; ?>">
 			<?php _e('claim your feed.','ultimate-social-media-plus'); ?>
 		</a>
     </p>
