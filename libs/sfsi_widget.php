@@ -4,7 +4,7 @@ class Sfsi_Plus_Widget extends WP_Widget
 {
 	function __construct()
 	{
-        $widget_ops = array( 'classname' => 'sfsi_plus', 'description' => __('Ultimate Social Media PLUS widgets', 'Ultimate Social Media PLUS ') );
+        $widget_ops = array( 'classname' => 'sfsi_plus', 'description' => 'Ultimate Social Media PLUS widgets');
         $control_ops = array( 'width' => 300, 'height' => 350, 'id_base' => 'sfsi-plus-widget' );
         
 		parent::__construct(
@@ -12,7 +12,7 @@ class Sfsi_Plus_Widget extends WP_Widget
 			'sfsi-plus-widget', 
 	
 			// Widget name will appear in UI
-			__('Ultimate Social Media PLUS', 'Ultimate Social Media PLUS'), 
+			'Ultimate Social Media PLUS', 
 	
 			// Widget description
 			$widget_ops,
@@ -96,17 +96,17 @@ class Sfsi_Plus_Widget extends WP_Widget
 		?>
 		<p>
 		    <label for="<?php echo $this->get_field_id( 'title' ); ?>">
-				<?php _e('Title:', 'Subscription and Social Icons'); ?>
+				<?php _e('Title', 'Subscription and Social Icons'); ?>:
             </label>
 		    <input id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" value="<?php echo $instance['title']; ?>" style="width:100%;" />
 		    <input type="hidden" value="<?php echo $instance['showf'] ?>" id="<?php echo $this->get_field_id( 'showf' ); ?>" name="<?php echo $this->get_field_name( 'showf' ); ?>" />
 		</p>
 		<p>
-			<?php  _e( 'Please go to  the', 'ultimate-social-media-plus' ); ?>
+			<?php  _e( 'Please go to the', 'ultimate-social-media-plus' ); ?>
             <a href="admin.php?page=sfsi-plus-options">
             	<?php  _e( 'plugin page', 'ultimate-social-media-plus' ); ?>
             </a> 
-            <?php  _e( 'to set your preferences', 'ultimate-social-media-plus' ); ?>
+            <?php _e( 'to set your preferences', 'ultimate-social-media-plus' ); ?>
 		</p>
 	<?php
 	}

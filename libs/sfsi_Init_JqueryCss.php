@@ -45,12 +45,12 @@ function sfsiplus_plugin_back_enqueue_script()
 			$translation_array = array(
 				'Re_ad'                 => __('Read more','ultimate-social-media-plus'),
 				'Sa_ve'                 => __('Save','ultimate-social-media-plus'),
-				'Sav_ing'               => __('Saving...','ultimate-social-media-plus'),
-				'Sa_ved'                => __('Saved !','ultimate-social-media-plus')
+				'Sav_ing'               => __('Saving','ultimate-social-media-plus'),
+				'Sa_ved'                => __('Saved','ultimate-social-media-plus')
 			);
 			$translation_array1 = array(
 				'Coll_apse'             => __('Collapse','ultimate-social-media-plus'),
-				'Save_All_Settings'     => __(' Save All Settings','ultimate-social-media-plus')
+				'Save_All_Settings'     => __('Save All Settings','ultimate-social-media-plus')
 			);
 			
 			wp_localize_script( 'SFSIPLUSCustomJs', 'object_name', $translation_array );

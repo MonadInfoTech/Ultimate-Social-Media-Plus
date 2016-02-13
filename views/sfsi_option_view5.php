@@ -64,363 +64,363 @@
 		?>
 		<select name="<?php echo $name; ?>" id="<?php echo $name; ?>" data-iconUrl="<?php echo $visit_icon; ?>" class="<?php echo $name; ?>-preview lanOnchange">
 			<option value="<?php echo $follow; ?>_ar" <?php echo ($option5[$name]== $follow.'_ar') ?  'selected="selected"' : '' ; ?>>
-				<?php  _e( 'العربية ', 'ultimate-social-media-plus' ); ?>
+				<?php  _e( 'العربية', 'ultimate-social-media-plus' ); ?>
 				<span> - << </span> 
 				<span><?php  _e($follow, 'ultimate-social-media-plus' ); ?></span>
 				<span> >> </span>
 			</option>
 			<option value="<?php echo $visitme; ?>_ar" <?php echo ($option5[$name]== $visitme.'_ar') ?  'selected="selected"' : '' ; ?>>
-				<?php  _e( 'العربية ', 'ultimate-social-media-plus' ); ?>
+				<?php  _e( 'العربية', 'ultimate-social-media-plus' ); ?>
 				<span> - << </span>
 				<span><?php  _e($visitme, 'ultimate-social-media-plus' ); ?></span>
 				<span> >> </span>
 			</option>
 			
 			<option value="<?php echo $follow; ?>_bg_BG" <?php echo ($option5[$name]== $follow.'_bg_BG') ?  'selected="selected"' : '' ; ?>>
-				<?php  _e( 'Български ', 'ultimate-social-media-plus' ); ?>
+				<?php  _e( 'Български', 'ultimate-social-media-plus' ); ?>
 				<span> - << </span> 
 				<span><?php  _e($follow, 'ultimate-social-media-plus' ); ?></span>
 				<span> >> </span>
 			</option>
 			<option value="<?php echo $visitme; ?>_bg_BG" <?php echo ($option5[$name]== $visitme.'_bg_BG') ?  'selected="selected"' : '' ; ?>>
-				<?php  _e( 'Български ', 'ultimate-social-media-plus' ); ?>
+				<?php  _e( 'Български', 'ultimate-social-media-plus' ); ?>
 				<span> - << </span>
 				<span><?php  _e($visitme, 'ultimate-social-media-plus' ); ?></span>
 				<span> >> </span>
 			</option>
 			
 			<option value="<?php echo $follow; ?>_zh_CN" <?php echo ($option5[$name]== $follow.'_zh_CN') ?  'selected="selected"' : '' ; ?>>
-				<?php  _e( '简体中文 ', 'ultimate-social-media-plus' ); ?>
+				<?php  _e( '简体中文', 'ultimate-social-media-plus' ); ?>
 				<span> - << </span> 
 				<span><?php  _e($follow, 'ultimate-social-media-plus' ); ?></span>
 				<span> >> </span>
 			</option>
 			<option value="<?php echo $visitme; ?>_zh_CN" <?php echo ($option5[$name]== $visitme.'_zh_CN') ?  'selected="selected"' : '' ; ?>>
-				<?php  _e( '简体中文 ', 'ultimate-social-media-plus' ); ?>
+				<?php  _e( '简体中文', 'ultimate-social-media-plus' ); ?>
 				<span> - << </span>
 				<span><?php  _e($visitme, 'ultimate-social-media-plus' ); ?></span>
 				<span> >> </span>
 			</option>
 			
 			<option value="<?php echo $follow; ?>_cs_CZ" <?php echo ($option5[$name]== $follow.'_cs_CZ') ?  'selected="selected"' : '' ; ?>>
-				<?php  _e( 'Čeština‎ ', 'ultimate-social-media-plus' ); ?>
+				<?php  _e( 'Čeština‎', 'ultimate-social-media-plus' ); ?>
 				<span> - << </span> 
 				<span><?php  _e($follow, 'ultimate-social-media-plus' ); ?></span>
 				<span> >> </span>
 			</option>
 			<option value="<?php echo $visitme; ?>_cs_CZ" <?php echo ($option5[$name]== $visitme.'_cs_CZ') ?  'selected="selected"' : '' ; ?>>
-				<?php  _e( 'Čeština‎ ', 'ultimate-social-media-plus' ); ?>
+				<?php  _e( 'Čeština‎', 'ultimate-social-media-plus' ); ?>
 				<span> - << </span>
 				<span><?php  _e($visitme, 'ultimate-social-media-plus' ); ?></span>
 				<span> >> </span>
 			</option>
 			
 			<option value="<?php echo $follow; ?>_da_DK" <?php echo ($option5[$name]== $follow.'_da_DK') ?  'selected="selected"' : '' ; ?>>
-				<?php  _e( 'Dansk ', 'ultimate-social-media-plus' ); ?>
+				<?php  _e( 'Dansk', 'ultimate-social-media-plus' ); ?>
 				<span> - << </span> 
 				<span><?php  _e($follow, 'ultimate-social-media-plus' ); ?></span>
 				<span> >> </span>	
 			</option>
 			<option value="<?php echo $visitme; ?>_da_DK" <?php echo ($option5[$name]== $visitme.'_da_DK') ?  'selected="selected"' : '' ; ?>>
-				<?php  _e( 'Dansk ', 'ultimate-social-media-plus' ); ?>
+				<?php  _e( 'Dansk', 'ultimate-social-media-plus' ); ?>
 				<span> - << </span>
 				<span><?php  _e($visitme, 'ultimate-social-media-plus' ); ?></span>
 				<span> >> </span>
 			</option>
 			
 			<option value="<?php echo $follow; ?>_nl_NL" <?php echo ($option5[$name]== $follow.'_nl_NL') ?  'selected="selected"' : '' ; ?>>
-				<?php  _e( 'Nederlands ', 'ultimate-social-media-plus' ); ?>
+				<?php  _e( 'Nederlands', 'ultimate-social-media-plus' ); ?>
 				<span> - << </span> 
 				<span><?php  _e($follow, 'ultimate-social-media-plus' ); ?></span>
 				<span> >> </span>
 			</option>
 			<option value="<?php echo $visitme; ?>_nl_NL" <?php echo ($option5[$name]== $visitme.'_nl_NL') ?  'selected="selected"' : '' ; ?>>
-				<?php  _e( 'Nederlands ', 'ultimate-social-media-plus' ); ?>
+				<?php  _e( 'Nederlands', 'ultimate-social-media-plus' ); ?>
 				<span> - << </span>
 				<span><?php  _e($visitme, 'ultimate-social-media-plus' ); ?></span>
 				<span> >> </span>
 			</option>
 			
 			<option value="<?php echo $follow; ?>_fi" <?php echo ($option5[$name]== $follow.'_fi') ?  'selected="selected"' : '' ; ?>>
-				<?php  _e( 'Suomi ', 'ultimate-social-media-plus' ); ?>
+				<?php  _e( 'Suomi', 'ultimate-social-media-plus' ); ?>
 				<span> - << </span> 
 				<span><?php  _e($follow, 'ultimate-social-media-plus' ); ?></span>
 				<span> >> </span>
 			</option>
 			<option value="<?php echo $visitme; ?>_fi" <?php echo ($option5[$name]== $visitme.'_fi') ?  'selected="selected"' : '' ; ?>>
-				<?php  _e( 'Suomi ', 'ultimate-social-media-plus' ); ?>
+				<?php  _e( 'Suomi', 'ultimate-social-media-plus' ); ?>
 				<span> - << </span>
 				<span><?php  _e($visitme, 'ultimate-social-media-plus' ); ?></span>
 				<span> >> </span>
 			</option>
 			
 			<option value="<?php echo $follow; ?>_fr_FR" <?php echo ($option5[$name]== $follow.'_fr_FR') ?  'selected="selected"' : '' ; ?>>
-				<?php  _e( 'Français ', 'ultimate-social-media-plus' ); ?>
+				<?php  _e( 'Français', 'ultimate-social-media-plus' ); ?>
 				<span> - << </span> 
 				<span><?php  _e($follow, 'ultimate-social-media-plus' ); ?></span>
 				<span> >> </span>	
 			</option>
 			<option value="<?php echo $visitme; ?>_fr_FR" <?php echo ($option5[$name]== $visitme.'_fr_FR') ?  'selected="selected"' : '' ; ?>>
-				<?php  _e( 'Français ', 'ultimate-social-media-plus' ); ?>
+				<?php  _e( 'Français', 'ultimate-social-media-plus' ); ?>
 				<span> - << </span>
 				<span><?php  _e($visitme, 'ultimate-social-media-plus' ); ?></span>
 				<span> >> </span>
 			</option>
 			
 			<option value="<?php echo $follow; ?>_de_DE" <?php echo ($option5[$name]== $follow.'_de_DE') ?  'selected="selected"' : '' ; ?>>
-				<?php  _e( 'Deutsch ', 'ultimate-social-media-plus' ); ?>
+				<?php  _e( 'Deutsch', 'ultimate-social-media-plus' ); ?>
 				<span> - << </span> 
 				<span><?php  _e($follow, 'ultimate-social-media-plus' ); ?></span>
 				<span> >> </span>	
 			</option>
 			<option value="<?php echo $visitme; ?>_de_DE" <?php echo ($option5[$name]== $visitme.'_de_DE') ?  'selected="selected"' : '' ; ?>>
-				<?php  _e( 'Deutsch ', 'ultimate-social-media-plus' ); ?>
+				<?php  _e( 'Deutsch', 'ultimate-social-media-plus' ); ?>
 				<span> - << </span>
 				<span><?php  _e($visitme, 'ultimate-social-media-plus' ); ?></span>
 				<span> >> </span>
 			</option>
 			
 			<option value="<?php echo $follow; ?>_en_US" <?php echo ($option5[$name]== $follow.'_en_US') ? 'selected="selected"' : '' ; ?>>
-				<?php  _e( 'English ', 'ultimate-social-media-plus' ); ?>
+				<?php  _e( 'English', 'ultimate-social-media-plus' ); ?>
 				<span> - << </span> 
 				<span><?php  _e($follow, 'ultimate-social-media-plus' ); ?></span>
 				<span> >> </span>
 			</option>
 			<option value="<?php echo $visitme; ?>_en_US" <?php echo ($option5[$name]== $visitme.'_en_US') ?  'selected="selected"' : '' ; ?>>
-				<?php  _e( 'English ', 'ultimate-social-media-plus' ); ?>
+				<?php  _e( 'English', 'ultimate-social-media-plus' ); ?>
 				<span> - << </span>
 				<span><?php  _e($visitme, 'ultimate-social-media-plus' ); ?></span>
 				<span> >> </span>	
 			</option>
 			
 			<option value="<?php echo $follow; ?>_el" <?php echo ($option5[$name]== $follow.'_el') ?  'selected="selected"' : '' ; ?>>
-				<?php  _e( 'Ελληνικά ', 'ultimate-social-media-plus' ); ?>
+				<?php  _e( 'Ελληνικά', 'ultimate-social-media-plus' ); ?>
 				<span> - << </span> 
 				<span><?php  _e($follow, 'ultimate-social-media-plus' ); ?></span>
 				<span> >> </span>	
 			</option>
 			<option value="<?php echo $visitme; ?>_el" <?php echo ($option5[$name]== $visitme.'_el') ?  'selected="selected"' : '' ; ?>>
-				<?php  _e( 'Ελληνικά ', 'ultimate-social-media-plus' ); ?>
+				<?php  _e( 'Ελληνικά', 'ultimate-social-media-plus' ); ?>
 				<span> - << </span>
 				<span><?php  _e($visitme, 'ultimate-social-media-plus' ); ?></span>
 				<span> >> </span>
 			</option>
 			
 			<option value="<?php echo $follow; ?>_hu_HU" <?php echo ($option5[$name]==$follow.'_hu_HU') ?  'selected="selected"' : '' ; ?>>
-				<?php  _e( 'Magyar ', 'ultimate-social-media-plus' ); ?>
+				<?php  _e( 'Magyar', 'ultimate-social-media-plus' ); ?>
 				<span> - << </span> 
 				<span><?php  _e($follow, 'ultimate-social-media-plus' ); ?></span>
 				<span> >> </span>	
 			</option>
 			<option value="<?php echo $visitme; ?>_hu_HU" <?php echo ($option5[$name]== $visitme.'_hu_HU') ?  'selected="selected"' : '' ; ?>>
-				<?php  _e( 'Magyar ', 'ultimate-social-media-plus' ); ?>
+				<?php  _e( 'Magyar', 'ultimate-social-media-plus' ); ?>
 				<span> - << </span>
 				<span><?php  _e($visitme, 'ultimate-social-media-plus' ); ?></span>
 				<span> >> </span>
 			</option>
 			
 			<option value="<?php echo $follow; ?>_id_ID" <?php echo ($option5[$name]== $follow.'_id_ID') ?  'selected="selected"' : '' ; ?>>
-				<?php  _e( 'Bahasa Indonesia ', 'ultimate-social-media-plus' ); ?>
+				<?php  _e( 'Bahasa Indonesia', 'ultimate-social-media-plus' ); ?>
 				<span> - << </span> 
 				<span><?php  _e($follow, 'ultimate-social-media-plus' ); ?></span>
 				<span> >> </span>
 			</option>
 			<option value="<?php echo $visitme; ?>_id_ID" <?php echo ($option5[$name]== $visitme.'_id_ID') ?  'selected="selected"' : '' ; ?>>
-				<?php  _e( 'Bahasa Indonesia ', 'ultimate-social-media-plus' ); ?>
+				<?php  _e( 'Bahasa Indonesia', 'ultimate-social-media-plus' ); ?>
 				<span> - << </span>
 				<span><?php  _e($visitme, 'ultimate-social-media-plus' ); ?></span>
 				<span> >> </span>
 			</option>
 			
 			<option value="<?php echo $follow; ?>_it_IT" <?php echo ($option5[$name]== $follow.'_it_IT') ?  'selected="selected"' : '' ; ?>>
-				<?php  _e( 'Italiano ', 'ultimate-social-media-plus' ); ?>
+				<?php  _e( 'Italiano', 'ultimate-social-media-plus' ); ?>
 				<span> - << </span> 
 				<span><?php  _e($follow, 'ultimate-social-media-plus' ); ?></span>
 				<span> >> </span>
 			</option>
 			<option value="<?php echo $visitme; ?>_it_IT" <?php echo ($option5[$name]== $visitme.'_it_IT') ?  'selected="selected"' : '' ; ?>>
-				<?php  _e( 'Italiano ', 'ultimate-social-media-plus' ); ?>
+				<?php  _e( 'Italiano', 'ultimate-social-media-plus' ); ?>
 				<span> - << </span>
 				<span><?php  _e($visitme, 'ultimate-social-media-plus' ); ?></span>
 				<span> >> </span>
 			</option>
 			
 			<option value="<?php echo $follow; ?>_ja" <?php echo ($option5[$name]== $follow.'_ja') ?  'selected="selected"' : '' ; ?>>
-				<?php  _e( '日本語 ', 'ultimate-social-media-plus' ); ?>
+				<?php  _e( '日本語', 'ultimate-social-media-plus' ); ?>
 				<span> - << </span> 
 				<span><?php  _e($follow, 'ultimate-social-media-plus' ); ?></span>
 				<span> >> </span>
 			</option>
 			<option value="<?php echo $visitme; ?>_ja" <?php echo ($option5[$name]== $visitme.'_ja') ?  'selected="selected"' : '' ; ?>>
-				<?php  _e( '日本語 ', 'ultimate-social-media-plus' ); ?>
+				<?php  _e( '日本語', 'ultimate-social-media-plus' ); ?>
 				<span> - << </span>
 				<span><?php  _e($visitme, 'ultimate-social-media-plus' ); ?></span>
 				<span> >> </span>
 			</option>
 			
 			<option value="<?php echo $follow; ?>_ko_KR" <?php echo ($option5[$name]== $follow.'_ko_KR') ?  'selected="selected"' : '' ; ?>>
-				<?php  _e( '한국어 ', 'ultimate-social-media-plus' ); ?>
+				<?php  _e( '한국어', 'ultimate-social-media-plus' ); ?>
 				<span> - << </span> 
 				<span><?php  _e($follow, 'ultimate-social-media-plus' ); ?></span>
 				<span> >> </span>
 			</option>
 			<option value="<?php echo $visitme; ?>_ko_KR" <?php echo ($option5[$name]== $visitme.'_ko_KR') ?  'selected="selected"' : '' ; ?>>
-				<?php  _e( '한국어 ', 'ultimate-social-media-plus' ); ?>
+				<?php  _e( '한국어', 'ultimate-social-media-plus' ); ?>
 				<span> - << </span>
 				<span><?php  _e($visitme, 'ultimate-social-media-plus' ); ?></span>
 				<span> >> </span>
 			</option>
 			
 			<option value="<?php echo $follow; ?>_nb_NO" <?php echo ($option5[$name]== $follow.'_nb_NO') ?  'selected="selected"' : '' ; ?>>
-				<?php  _e( 'Norsk bokmål ', 'ultimate-social-media-plus' ); ?>
+				<?php  _e( 'Norsk bokmål', 'ultimate-social-media-plus' ); ?>
 				<span> - << </span> 
 				<span><?php  _e($follow, 'ultimate-social-media-plus' ); ?></span>
 				<span> >> </span>
 			</option>
 			<option value="<?php echo $visitme; ?>_nb_NO" <?php echo ($option5[$name]== $visitme.'_nb_NO') ?  'selected="selected"' : '' ; ?>>
-				<?php  _e( 'Norsk bokmål ', 'ultimate-social-media-plus' ); ?>
+				<?php  _e( 'Norsk bokmål', 'ultimate-social-media-plus' ); ?>
 				<span> - << </span>
 				<span><?php  _e($visitme, 'ultimate-social-media-plus' ); ?></span>
 				<span> >> </span>
 			</option>
 			
 			<option value="<?php echo $follow; ?>_fa_IR" <?php echo ($option5[$name]== $follow.'_fa_IR') ?  'selected="selected"' : '' ; ?>>
-				<?php  _e( 'فارسی ', 'ultimate-social-media-plus' ); ?>
+				<?php  _e( 'فارسی', 'ultimate-social-media-plus' ); ?>
 				<span> - << </span> 
 				<span><?php  _e($follow, 'ultimate-social-media-plus' ); ?></span>
 				<span> >> </span>
 			</option>
-			<option value="<?php echo $visitme; ?>_fa_IR" <?php echo ($option5[$name]== $visitme.'_fa_IR') ?  'selected="selected"' : '' ; ?>><?php  _e( 'فارسی ', 'ultimate-social-media-plus' ); ?>
+			<option value="<?php echo $visitme; ?>_fa_IR" <?php echo ($option5[$name]== $visitme.'_fa_IR') ?  'selected="selected"' : '' ; ?>><?php  _e( 'فارسی', 'ultimate-social-media-plus' ); ?>
 				<span> - << </span>
 				<span><?php  _e($visitme, 'ultimate-social-media-plus' ); ?></span>
 				<span> >> </span>
 			</option>
 			
 			<option value="<?php echo $follow; ?>_pl_PL" <?php echo ($option5[$name]== $follow.'_pl_PL') ?  'selected="selected"' : '' ; ?>>
-				<?php  _e( 'Polski ', 'ultimate-social-media-plus' ); ?>
+				<?php  _e( 'Polski', 'ultimate-social-media-plus' ); ?>
 				<span> - << </span> 
 				<span><?php  _e($follow, 'ultimate-social-media-plus' ); ?></span>
 				<span> >> </span>
 			</option>
 			<option value="<?php echo $visitme; ?>_pl_PL" <?php echo ($option5[$name]== $visitme.'_pl_PL') ?  'selected="selected"' : '' ; ?>>
-				<?php  _e( 'Polski ', 'ultimate-social-media-plus' ); ?>
+				<?php  _e( 'Polski', 'ultimate-social-media-plus' ); ?>
 				<span> - << </span>
 				<span><?php  _e($visitme, 'ultimate-social-media-plus' ); ?></span>
 				<span> >> </span>
 			</option>
 			
 			<option value="<?php echo $follow; ?>_pt_PT" <?php echo ($option5[$name]== $follow.'_pt_PT') ?  'selected="selected"' : '' ; ?>>
-				<?php  _e( 'Português ', 'ultimate-social-media-plus' ); ?>
+				<?php  _e( 'Português', 'ultimate-social-media-plus' ); ?>
 				<span> - << </span> 
 				<span><?php  _e($follow, 'ultimate-social-media-plus' ); ?></span>
 				<span> >> </span>
 			</option>
 			<option value="<?php echo $visitme; ?>_pt_PT" <?php echo ($option5[$name]== $visitme.'_pt_PT') ?  'selected="selected"' : '' ; ?>>
-				<?php  _e( 'Português ', 'ultimate-social-media-plus' ); ?>
+				<?php  _e( 'Português', 'ultimate-social-media-plus' ); ?>
 				<span> - << </span>
 				<span><?php  _e($visitme, 'ultimate-social-media-plus' ); ?></span>
 				<span> >> </span>
 			</option>
 			
 			<option value="<?php echo $follow; ?>_ro_RO" <?php echo ($option5[$name]== $follow.'_ro_RO') ?  'selected="selected"' : '' ; ?>>
-				<?php  _e( 'Română ', 'ultimate-social-media-plus' ); ?>
+				<?php  _e( 'Română', 'ultimate-social-media-plus' ); ?>
 				<span> - << </span> 
 				<span><?php  _e($follow, 'ultimate-social-media-plus' ); ?></span>
 				<span> >> </span>
 			</option>
 			<option value="<?php echo $visitme; ?>_ro_RO" <?php echo ($option5[$name]== $visitme.'_ro_RO') ?  'selected="selected"' : '' ; ?>>
-				<?php  _e( 'Română ', 'ultimate-social-media-plus' ); ?>
+				<?php  _e( 'Română', 'ultimate-social-media-plus' ); ?>
 				<span> - << </span>
 				<span><?php  _e($visitme, 'ultimate-social-media-plus' ); ?></span>
 				<span> >> </span>
 			</option>
 			
 			<option value="<?php echo $follow; ?>_ru_RU" <?php echo ($option5[$name]== $follow.'_ru_RU') ?  'selected="selected"' : '' ; ?>>
-				<?php  _e( 'Русский ', 'ultimate-social-media-plus' ); ?>
+				<?php  _e( 'Русский', 'ultimate-social-media-plus' ); ?>
 				<span> - << </span> 
 				<span><?php  _e($follow, 'ultimate-social-media-plus' ); ?></span>
 				<span> >> </span>
 			</option>
 			<option value="<?php echo $visitme; ?>_ru_RU" <?php echo ($option5[$name]== $visitme.'_ru_RU') ?  'selected="selected"' : '' ; ?>>
-				<?php  _e( 'Русский ', 'ultimate-social-media-plus' ); ?>
+				<?php  _e( 'Русский', 'ultimate-social-media-plus' ); ?>
 				<span> - << </span>
 				<span><?php  _e($visitme, 'ultimate-social-media-plus' ); ?></span>
 				<span> >> </span>
 			</option>
 			
 			<option value="<?php echo $follow; ?>_sk_SK" <?php echo ($option5[$name]== $follow.'_sk_SK') ?  'selected="selected"' : '' ; ?>>
-				<?php  _e( 'Slovenčina ', 'ultimate-social-media-plus' ); ?>
+				<?php  _e( 'Slovenčina', 'ultimate-social-media-plus' ); ?>
 				<span> - << </span> 
 				<span><?php  _e($follow, 'ultimate-social-media-plus' ); ?></span>
 				<span> >> </span>
 			</option>
 			<option value="<?php echo $visitme; ?>_sk_SK" <?php echo ($option5[$name]== $visitme.'_sk_SK') ?  'selected="selected"' : '' ; ?>>
-				<?php  _e( 'Slovenčina ', 'ultimate-social-media-plus' ); ?>
+				<?php  _e( 'Slovenčina', 'ultimate-social-media-plus' ); ?>
 				<span> - << </span>
 				<span><?php  _e($visitme, 'ultimate-social-media-plus' ); ?></span>
 				<span> >> </span>
 			</option>
 			
 			<option value="<?php echo $follow; ?>_es_ES" <?php echo ($option5[$name]== $follow.'_es_ES') ?  'selected="selected"' : '' ; ?>>
-				<?php  _e( 'Español ', 'ultimate-social-media-plus' ); ?>
+				<?php  _e( 'Español', 'ultimate-social-media-plus' ); ?>
 				<span> - << </span> 
 				<span><?php  _e($follow, 'ultimate-social-media-plus' ); ?></span>
 				<span> >> </span>
 			</option>
 			<option value="<?php echo $visitme; ?>_es_ES" <?php echo ($option5[$name]== $visitme.'_es_ES') ?  'selected="selected"' : '' ; ?>>
-				<?php  _e( 'Español ', 'ultimate-social-media-plus' ); ?>
+				<?php  _e( 'Español', 'ultimate-social-media-plus' ); ?>
 				<span> - << </span>
 				<span><?php  _e($visitme, 'ultimate-social-media-plus' ); ?></span>
 				<span> >> </span>
 			</option>
 			
 			<option value="<?php echo $follow; ?>_sv_SE" <?php echo ($option5[$name]== $follow.'_sv_SE') ?  'selected="selected"' : '' ; ?>>
-				<?php  _e( 'Svenska ', 'ultimate-social-media-plus' ); ?>
+				<?php  _e( 'Svenska', 'ultimate-social-media-plus' ); ?>
 				<span> - << </span> 
 				<span><?php  _e($follow, 'ultimate-social-media-plus' ); ?></span>
 				<span> >> </span>
 			</option>
 			<option value="<?php echo $visitme; ?>_sv_SE" <?php echo ($option5[$name]== $visitme.'_sv_SE') ?  'selected="selected"' : '' ; ?>>
-				<?php  _e( 'Svenska ', 'ultimate-social-media-plus' ); ?>
+				<?php  _e( 'Svenska', 'ultimate-social-media-plus' ); ?>
 				<span> - << </span>
 				<span><?php  _e($visitme, 'ultimate-social-media-plus' ); ?></span>
 				<span> >> </span>
 			</option>
 			
 			<option value="<?php echo $follow; ?>_th" <?php echo ($option5[$name]== $follow.'_th') ?  'selected="selected"' : '' ; ?>>
-				<?php  _e( 'ไทย ', 'ultimate-social-media-plus' ); ?>
+				<?php  _e( 'ไทย', 'ultimate-social-media-plus' ); ?>
 				<span> - << </span> 
 				<span><?php  _e($follow, 'ultimate-social-media-plus' ); ?></span>
 				<span> >> </span>
 			</option>
 			<option value="<?php echo $visitme; ?>_th" <?php echo ($option5[$name]== $visitme.'_th') ?  'selected="selected"' : '' ; ?>>
-				<?php  _e( 'ไทย ', 'ultimate-social-media-plus' ); ?>
+				<?php  _e( 'ไทย', 'ultimate-social-media-plus' ); ?>
 				<span> - << </span>
 				<span><?php  _e($visitme, 'ultimate-social-media-plus' ); ?></span>
 				<span> >> </span>
 			</option>
 			
 			<option value="<?php echo $follow; ?>_tr_TR" <?php echo ($option5[$name]== $follow.'_tr_TR') ?  'selected="selected"' : '' ; ?>>
-				<?php  _e( 'Türkçe ', 'ultimate-social-media-plus' ); ?>
+				<?php  _e( 'Türkçe', 'ultimate-social-media-plus' ); ?>
 				<span> - << </span> 
 				<span><?php  _e($follow, 'ultimate-social-media-plus' ); ?></span>
 				<span> >> </span>
 			</option>
 			<option value="<?php echo $visitme; ?>_tr_TR" <?php echo ($option5[$name]== $visitme.'_tr_TR') ?  'selected="selected"' : '' ; ?>>
-				<?php  _e( 'Türkçe ', 'ultimate-social-media-plus' ); ?>
+				<?php  _e( 'Türkçe', 'ultimate-social-media-plus' ); ?>
 				<span> - << </span>
 				<span><?php  _e($visitme, 'ultimate-social-media-plus' ); ?></span>
 				<span> >> </span>
 			</option>
 			
 			<option value="<?php echo $follow; ?>_vi" <?php echo ($option5[$name]== $follow.'_vi') ?  'selected="selected"' : '' ; ?>>
-				<?php  _e( 'Tiếng Việt ', 'ultimate-social-media-plus' ); ?>
+				<?php  _e( 'Tiếng Việt', 'ultimate-social-media-plus' ); ?>
 				<span> - << </span> 
 				<span><?php  _e($follow, 'ultimate-social-media-plus' ); ?></span>
 				<span> >> </span>
 			</option>
 			<option value="<?php echo $visitme; ?>_vi" <?php echo ($option5[$name]== $visitme.'_vi') ?  'selected="selected"' : '' ; ?>>
-				<?php  _e( 'Tiếng Việt ', 'ultimate-social-media-plus' ); ?>
+				<?php  _e( 'Tiếng Việt', 'ultimate-social-media-plus' ); ?>
 				<span> - << </span>
 				<span><?php  _e($visitme, 'ultimate-social-media-plus' ); ?></span>
 				<span> >> </span>
@@ -523,23 +523,23 @@
     </ul> <!-- END icon drag drop section start here -->
     
     <span class="drag_drp">
-    	<?php  _e( '(Drag &amp; Drop)', 'ultimate-social-media-plus' ); ?>
+    	(<?php  _e( 'Drag', 'ultimate-social-media-plus' ); ?> &amp; <?php  _e( 'Drop', 'ultimate-social-media-plus' ); ?>)
     </span>
     <!-- icon's size and spacing section start here -->	
     <div class="row">
         <h4>
-        	<?php  _e( 'Size &amp; spacing of your icons', 'ultimate-social-media-plus' ); ?>
+        	<?php  _e( 'Size', 'ultimate-social-media-plus' ); ?> &amp; <?php  _e( 'spacing of your icons', 'ultimate-social-media-plus' ); ?>
         </h4>
         <div class="icons_size">
         	<span>
-        		<?php  _e( 'Size:', 'ultimate-social-media-plus' ); ?>
+        		<?php  _e( 'Size', 'ultimate-social-media-plus' ); ?>:
         	</span>
             <input name="sfsi_plus_icons_size" value="<?php echo ($option5['sfsi_plus_icons_size']!='') ?  $option5['sfsi_plus_icons_size'] : '' ;?>" type="text" />
         	<ins>
-        		<?php  _e( 'pixels wide &amp; tall', 'ultimate-social-media-plus' ); ?>
+        		<?php  _e( 'pixels wide', 'ultimate-social-media-plus' ); ?> &amp; <?php  _e( 'tall', 'ultimate-social-media-plus' ); ?>
         	</ins>
          	<span class="last">
-         		<?php  _e( 'Spacing between icons:', 'ultimate-social-media-plus' ); ?>
+         		<?php  _e( 'Spacing between icons', 'ultimate-social-media-plus' ); ?>:
          	</span>
             <input name="sfsi_plus_icons_spacing" type="text" value="<?php echo ($option5['sfsi_plus_icons_spacing']!='') ?  $option5['sfsi_plus_icons_spacing'] : '' ;?>" />
          	<ins>
@@ -554,7 +554,7 @@
         </h4>
         <div class="icons_size">
         	<span>
-        		<?php  _e( 'Alignment of icons:', 'ultimate-social-media-plus' ); ?>
+        		<?php  _e( 'Alignment of icons', 'ultimate-social-media-plus' ); ?>:
         	</span>
         	<div class="field">
                 <select name="sfsi_plus_icons_Alignment" id="sfsi_plus_icons_Alignment" class="styled">
@@ -570,7 +570,7 @@
                 </select>
        		</div> 
         	<span>
-        		<?php  _e( 'Icons per row:', 'ultimate-social-media-plus' ); ?>
+        		<?php  _e( 'Icons per row', 'ultimate-social-media-plus' ); ?>:
         	</span>
         	<input name="sfsi_plus_icons_perRow" type="text" value="<?php echo ($option5['sfsi_plus_icons_perRow']!='') ?  $option5['sfsi_plus_icons_perRow'] : '' ;?>" />
         	<ins class="leave_empty">
@@ -588,13 +588,13 @@
 		<!-- Follow button start here -->
 		<div class="icons_size">
         	<div class="follows-btn">
-				<span><?php  _e( 'Follow-button:', 'ultimate-social-media-plus' ); ?></span>
+				<span><?php  _e( 'Follow-button', 'ultimate-social-media-plus' ); ?>:</span>
         	</div>
 			<div class="field language-field">
 				 <?php selectoption("sfsi_plus_follow_icons_language" , "Follow" , "Subscribe"); ?>
 			</div>
 			<div class="preview-btn">
-        		<span><?php  _e( 'Preview:', 'ultimate-social-media-plus' ); ?></span>
+        		<span><?php  _e( 'Preview', 'ultimate-social-media-plus' ); ?>:</span>
 			</div>
 			<?php
 				$follow_icons = $option5['sfsi_plus_follow_icons_language'];
@@ -609,13 +609,13 @@
 		<!-- Facebook «Visit»-icon start here -->
 		<div class="icons_size">
         	<div class="follows-btn">
-        		<span><?php  _e( 'Facebook «Visit»-icon:', 'ultimate-social-media-plus' ); ?></span>
+        		<span>Facebook «<?php  _e( 'Visit', 'ultimate-social-media-plus' ); ?>»-<?php  _e( 'icon', 'ultimate-social-media-plus' ); ?>:</span>
 			</div>
 			<div class="field language-field">
 				<?php selectoption("sfsi_plus_facebook_icons_language" , "Visit_us" , "Visit_me"); ?>
 			</div>
 			<div class="preview-btn">
-        		<span><?php  _e( 'Preview:', 'ultimate-social-media-plus' ); ?></span>
+        		<span><?php  _e( 'Preview', 'ultimate-social-media-plus' ); ?>:</span>
         	</div>
 			<?php
 				$facebook_icons_lang = $option5['sfsi_plus_facebook_icons_language'];
@@ -630,13 +630,13 @@
 		<!-- Twitter «Visit»-icon start here -->
 		<div class="icons_size">
         	<div class="follows-btn">
-        		<span><?php  _e( 'Twitter «Visit»-icon:', 'ultimate-social-media-plus' ); ?></span>
+        		<span>Twitter «<?php  _e( 'Visit', 'ultimate-social-media-plus' ); ?>»-<?php  _e( 'icon', 'ultimate-social-media-plus' ); ?>:</span>
         	</div>
 			<div class="field language-field">
 				 <?php selectoption("sfsi_plus_twitter_icons_language" , "Visit_us" , "Visit_me"); ?>
 			</div>
 			<div class="preview-btn">
-        		<span><?php  _e( 'Preview:', 'ultimate-social-media-plus' ); ?></span>
+        		<span><?php  _e( 'Preview', 'ultimate-social-media-plus' ); ?>:</span>
         	</div>
 			<?php
 				$twitter_icons_lang = $option5['sfsi_plus_twitter_icons_language'];
@@ -651,13 +651,13 @@
 		<!-- Google+ «Visit»-icon start here -->
 		<div class="icons_size">
         	<div class="follows-btn">
-        		<span><?php  _e( 'Google+ «Visit»-icon:', 'ultimate-social-media-plus' ); ?></span>
+        		<span>Google+ «<?php  _e( 'Visit', 'ultimate-social-media-plus' ); ?>»-<?php  _e( 'icon', 'ultimate-social-media-plus' ); ?>:</span>
         	</div>
 			<div class="field language-field">
 				<?php selectoption("sfsi_plus_google_icons_language" , "Visit_us" , "Visit_me"); ?>
 			</div>
 			<div class="preview-btn">
-        		<span><?php  _e( 'Preview:', 'ultimate-social-media-plus' ); ?></span>
+        		<span><?php  _e( 'Preview', 'ultimate-social-media-plus' ); ?>:</span>
         	</div>
 			<?php
 				$google_icons_lang = $option5['sfsi_plus_google_icons_language'];
@@ -672,7 +672,7 @@
 		<!-- Like & Share buttons (Facebook, Twitter, Google+) start here -->
 		<div class="icons_size">
         	<span>
-        		<?php  _e( 'Select the language you want to show your icons on your website:', 'ultimate-social-media-plus' ); ?>
+        		<?php  _e( 'Language for Like & Share buttons', 'ultimate-social-media-plus' ); ?>(Facebook, Twitter, Google+):
         	</span>
 			<div class="language_field">
 				<select name="sfsi_plus_icons_language" id="sfsi_plus_icons_language" class="language">
@@ -742,10 +742,10 @@
         	<p>
 				<?php
 					_e(
-                    	'If user clicks on your icons, do you want to open the page in a new window?', 
+                    	'If user clicks on your icons, do you want to open the page in a new window', 
                         'ultimate-social-media-plus' 
                     );
-				?>
+				?>?
         	</p>
             <ul class="enough_waffling">
                 <li>
@@ -771,7 +771,7 @@
             <?php  _e( 'Sticking & Disable on mobile', 'ultimate-social-media-plus' ); ?>
         </h4>
         <p>
-            <?php  _e( 'If you decided to show your icons via a widget, you can add the effect that when the user scrolls down, the icons will stick at the  top of the screen so that they are still displayed even if the user scrolled all the way down. Do you want to do that?', 'ultimate-social-media-plus' ); ?>
+            <?php  _e( 'If you decided to show your icons via a widget', 'ultimate-social-media-plus' ); ?>, <?php  _e( 'you can add the effect that when the user scrolls down', 'ultimate-social-media-plus' ); ?>, <?php  _e( 'the icons will stick at the  top of the screen so that they are still displayed even if the user scrolled all the way down', 'ultimate-social-media-plus' ); ?>. <?php  _e( 'Do you want to do that', 'ultimate-social-media-plus' ); ?>?
         </p>
 	<!--<div class="space">
 	<p class="list">Make icons float?</p>	
@@ -822,7 +822,7 @@
     	<!--disabling view port meta tag-->
   		<div class="space disblfltonmbl">
             <p class="list">
-                <?php  _e( 'Disable auto-scaling feature for mobile devices("viewport" meta tag)', 'ultimate-social-media-plus' ); ?>
+                <?php  _e( 'Disable auto-scaling feature for mobile devices', 'ultimate-social-media-plus' ); ?>("<?php  _e( 'viewport', 'ultimate-social-media-plus' ); ?>" <?php  _e( 'meta tag', 'ultimate-social-media-plus' ); ?>)
             </p>	
             <ul class="enough_waffling">
             	<li>
@@ -849,33 +849,33 @@
             <?php  _e( 'Mouseover text', 'ultimate-social-media-plus' ); ?>
         </h4>
         <p>
-            <?php  _e('If you’ve given your icon only one function (i.e. no pop-up where user can perform different actions) then you can define here what text will be displayed if a user moves his mouse over the icon:', 'ultimate-social-media-plus' ); ?>
+            <?php  _e('If you’ve given your icon only one function', 'ultimate-social-media-plus' ); ?> (<?php  _e('i.e. no pop-up where user can perform different actions', 'ultimate-social-media-plus' ); ?>) <?php  _e('then you can define here what text will be displayed if a user moves his mouse over the icon', 'ultimate-social-media-plus' ); ?>:
         </p>
 		
         <div class="space">
 			<div class="clear"></div>
 			<div class="mouseover_field sfsiplus_rss_section">
                 <label>
-                    <?php  _e( 'RSS:', 'ultimate-social-media-plus' ); ?>
+                    RSS:
                 </label>
             	<input name="sfsi_plus_rss_MouseOverText" value="<?php echo ($option5['sfsi_plus_rss_MouseOverText']!='') ?  $option5['sfsi_plus_rss_MouseOverText'] : '' ;?>" type="text" />
 			</div>
             <div class="mouseover_field sfsiplus_email_section">
                 <label>
-                    <?php  _e( 'Email:', 'ultimate-social-media-plus' ); ?>
+                   Email:
                 </label>
                 <input name="sfsi_plus_email_MouseOverText" value="<?php echo ($option5['sfsi_plus_email_MouseOverText']!='') ?  $option5['sfsi_plus_email_MouseOverText'] : '' ;?>" type="text" />
             </div>
             <div class="clear">
             	<div class="mouseover_field sfsiplus_twitter_section">
                 	<label>
-                        <?php  _e( 'Twitter:', 'ultimate-social-media-plus' ); ?>
+                        Twitter:
                     </label>
                     <input name="sfsi_plus_twitter_MouseOverText" value="<?php echo ($option5['sfsi_plus_twitter_MouseOverText']!='') ?  $option5['sfsi_plus_twitter_MouseOverText'] : '' ;?>" type="text" />
                 </div>
                 <div class="mouseover_field sfsiplus_facebook_section">
                     <label>
-                        <?php  _e( 'Facebook:', 'ultimate-social-media-plus' ); ?>
+                        Facebook:
                     </label>
                     <input name="sfsi_plus_facebook_MouseOverText" value="<?php echo ($option5['sfsi_plus_facebook_MouseOverText']!='') ?  $option5['sfsi_plus_facebook_MouseOverText'] : '' ;?>" type="text" />
                 </div>
@@ -884,13 +884,13 @@
 			<div class="clear">
                 <div class="mouseover_field sfsiplus_google_section">
                     <label>
-                        <?php  _e( 'Google:', 'ultimate-social-media-plus' ); ?>
+                        Google:
                     </label>
                     <input name="sfsi_plus_google_MouseOverText" value="<?php echo ($option5['sfsi_plus_google_MouseOverText']!='') ?  $option5['sfsi_plus_google_MouseOverText'] : '' ;?>"  type="text" />
                 </div>
                 <div class="mouseover_field sfsiplus_linkedin_section">
                     <label>
-                        <?php  _e( 'LinkedIn:', 'ultimate-social-media-plus' ); ?>
+                        LinkedIn:
                     </label>
                     <input name="sfsi_plus_linkedIn_MouseOverText" value="<?php echo ($option5['sfsi_plus_linkedIn_MouseOverText']!='') ?  $option5['sfsi_plus_linkedIn_MouseOverText'] : '' ;?>"  type="text" />
                 </div>
@@ -899,13 +899,13 @@
         	<div class="clear">
                 <div class="mouseover_field sfsiplus_pinterest_section">
                     <label>
-                        <?php  _e( 'Pinterest:', 'ultimate-social-media-plus' ); ?>
+                        Pinterest:
                     </label>
                     <input name="sfsi_plus_pinterest_MouseOverText" value="<?php echo ($option5['sfsi_plus_pinterest_MouseOverText']!='') ?  $option5['sfsi_plus_pinterest_MouseOverText'] : '' ;?>" type="text" />
                 </div>
                 <div class="mouseover_field sfsiplus_youtube_section">
                     <label>
-                        <?php  _e( 'Youtube:', 'ultimate-social-media-plus' ); ?>
+                        Youtube:
                     </label>
                     <input name="sfsi_plus_youtube_MouseOverText" value="<?php echo ($option5['sfsi_plus_youtube_MouseOverText']!='') ?  $option5['sfsi_plus_youtube_MouseOverText'] : '' ;?>" type="text" />
                 </div>
@@ -914,13 +914,13 @@
         	<div class="clear">
                 <div class="mouseover_field sfsiplus_instagram_section">
                     <label>
-                        <?php  _e( 'Instagram:', 'ultimate-social-media-plus' ); ?>
+                        Instagram:
                     </label>
                     <input name="sfsi_plus_instagram_MouseOverText" value="<?php echo ($option5['sfsi_plus_instagram_MouseOverText']!='') ?  $option5['sfsi_plus_instagram_MouseOverText'] : '' ;?>" type="text" />
                 </div>
                 <div class="mouseover_field sfsiplus_houzz_section">
                     <label>
-                        <?php  _e( 'Houzz:', 'ultimate-social-media-plus' ); ?>
+                        Houzz:
                     </label>
                     <input name="sfsi_plus_houzz_MouseOverText" value="<?php echo (isset($option5['sfsi_plus_houzz_MouseOverText']) && $option5['sfsi_plus_houzz_MouseOverText']!='') ?  $option5['sfsi_plus_houzz_MouseOverText'] : 'Houzz' ;?>" type="text" />
                 </div>

@@ -159,10 +159,10 @@ class sfsiPlus_subscriber_widget extends WP_Widget {
 			'sfsiPlus_subscriber_widget', 
 	
 			// Widget name will appear in UI
-			__('Ultimate Social Plus Subscribe Form', 'sfsiPlus_subscriber_widget_domain'), 
+			'Ultimate Social Plus Subscribe Form', 
 	
 			// Widget description
-			array( 'description' => __( 'Ultimate Social Plus Subscribe Form', 'sfsiPlus_subscriber_widget_domain' ), ) 
+			array( 'description' => 'Ultimate Social Plus Subscribe Form') 
 		);
 	}
 
@@ -197,7 +197,7 @@ class sfsiPlus_subscriber_widget extends WP_Widget {
 		}
 		?>
 		<p>
-			<label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php _e( 'Title:' ); ?></label> 
+			<label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php _e( 'Title' ); ?>:</label> 
 			<input class="widefat" id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" type="text" value="<?php echo esc_attr( $title ); ?>" />
 		</p>
 		<?php 

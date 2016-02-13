@@ -6,7 +6,7 @@ Description: The best social media plugin on the market. And 100% FREE. Allows y
 Author: UltimatelySocial
 Text Domain: ultimate-social-media-plus
 Author URI: http://ultimatelysocial.com
-Version: 2.2.9
+Version: 2.3.1
 License: GPLv2
 */
 
@@ -35,7 +35,7 @@ register_deactivation_hook(__FILE__, 'sfsi_plus_deactivate_plugin');
 register_uninstall_hook(__FILE__, 'sfsi_plus_Unistall_plugin');
 
 /*Plugin version setup*/
-if(!get_option('sfsi_plus_pluginVersion') || get_option('sfsi_plus_pluginVersion') < 2.29)
+if(!get_option('sfsi_plus_pluginVersion') || get_option('sfsi_plus_pluginVersion') < 2.31)
 {
 	add_action("init", "sfsi_plus_update_plugin");
 }
@@ -537,19 +537,18 @@ function sfsi_plus_admin_notice()
 			<div class="alignleft" style="margin: 9px 0;">
 				<?php
 				_e(
-					'There seems to be an error on your website which prevents the plugin to work properly. Please contact us at ',
+					'There seems to be an error on your website which prevents the plugin to work properly. Please contact us at',
 					'ultimate-social-media-plus'
 				);
 				?>
                 <a href="mailto:support@ultimatelysocial.com">support@ultimatelysocial.com</a>
                 <?php
 				_e(
-					' and state the error code you see below.',
+					'and state the error code you see below',
 					'ultimate-social-media-plus'
 				);
-				?>
-                 
-                <p style="text-align:left"><b>Error : <?php echo ucfirst(get_option("sfsi_plus_curlErrorMessage")); ?></b></p>
+				?>.
+                <p style="text-align:left"><b><?php	_e('Error','ultimate-social-media-plus'); ?>: <?php echo ucfirst(get_option("sfsi_plus_curlErrorMessage")); ?></b></p>
 			</div>
 			<p class="alignright">
 				<a href="<?php echo $url; ?>">
@@ -568,19 +567,18 @@ function sfsi_plus_admin_notice()
 		<div class="updated" style="<?php echo $style; ?>"">
 			<div class="alignleft" style="margin: 9px 0;">
 				<b>
-                <?php _e( 'New feature in the Ultimate Social Media PLUS plugin:', 'ultimate-social-media-plus' ); ?>
-                
+                	<?php _e( 'New feature in the', 'ultimate-social-media-plus' ); ?> Ultimate Social Media PLUS <?php _e( 'plugin', 'ultimate-social-media-plus' ); ?>:
                 </b>  
-                 <?php _e( 'You can now add a subscription form to increase sign-ups (under question 8).', 'ultimate-social-media-plus' ); ?>
-                <a href="<?php echo site_url();?>/wp-admin/admin.php?page=sfsi-plus-options" style="color:#7AD03A; font-weight:bold;">
                 
-                <?php _e( 'Check it out', 'ultimate-social-media-plus' ); ?>
+				<?php _e( 'You can now add a subscription form to increase sign-ups', 'ultimate-social-media-plus' ); ?> (<?php _e("under question", "ultimate-social-media-plus"); ?> 8).
+                
+                <a href="<?php echo site_url();?>/wp-admin/admin.php?page=sfsi-plus-options" style="color:#7AD03A; font-weight:bold;">
+                	<?php _e( 'Check it out', 'ultimate-social-media-plus' ); ?>
                 </a>
 			</div>
 			<p class="alignright">
 				<a href="<?php echo $url; ?>">
-               
-                <?php _e( 'Dismiss', 'ultimate-social-media-plus' ); ?>
+                	<?php _e( 'Dismiss', 'ultimate-social-media-plus' ); ?>
                 </a>
 			</p>
 		</div>

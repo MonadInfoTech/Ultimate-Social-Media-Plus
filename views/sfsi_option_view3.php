@@ -11,13 +11,13 @@
         </p>
     	<ul class="tab_3_list">
         	<li>
-            	<?php  _e( 'It comes across as ', 'ultimate-social-media-plus' ); ?>
+            	<?php  _e( 'It comes across as', 'ultimate-social-media-plus' ); ?>
             	<span>
-            		<?php  _e( 'more professional/', 'ultimate-social-media-plus' ); ?>
+            		 <?php  _e( 'more professional/', 'ultimate-social-media-plus' ); ?>
             	</span> 
-            	<?php  _e( 'gives your site ', 'ultimate-social-media-plus' ); ?>
+            	<?php  _e( 'gives your site', 'ultimate-social-media-plus' ); ?>
             	<span>
-            		<?php  _e( 'more “credit”', 'ultimate-social-media-plus' ); ?>
+            		 <?php  _e( 'more “credit”', 'ultimate-social-media-plus' ); ?>
             	</span>
             </li>
             <li>
@@ -32,9 +32,9 @@
         <p style="padding:0px;">
         	<?php  _e( 'The icons have been compressed by', 'ultimate-social-media-plus' ); ?>
             <a href="https://goo.gl/IV5Q3z" target="_blank">
-            	<?php  _e( 'Shortpixel.com', 'ultimate-social-media-plus' ); ?>
+            	Shortpixel.com
             </a>
-			<?php  _e( 'for faster loading of your site. Thank you Shortpixel!', 'ultimate-social-media-plus' ); ?>
+			<?php  _e( 'for faster loading of your site', 'ultimate-social-media-plus' ); ?>. <?php  _e( 'Thank you Shortpixel', 'ultimate-social-media-plus' ); ?>!
         </p>
         
         <div class="row">
@@ -293,7 +293,7 @@
             <!--icon Animation section   start -->
             <div class="sub_row stand sec_new" style="margin-left: 0px;">
             	<h3>
-                	<?php  _e( 'Animate them (your main icons)', 'ultimate-social-media-plus' ); ?>
+                	<?php  _e( 'Animate them', 'ultimate-social-media-plus' ); ?> (<?php  _e( 'your main icons', 'ultimate-social-media-plus' ); ?>)
                 </h3>
                 
                 <p class="radio_section tab_3_option">

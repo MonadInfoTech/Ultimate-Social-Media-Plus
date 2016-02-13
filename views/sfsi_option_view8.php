@@ -47,7 +47,7 @@
                     	<a href="<?php echo admin_url('widgets.php');?>">
                     		<?php  _e( 'widgets area', 'ultimate-social-media-plus' ); ?>
                     	</a> 
-                    	<?php  _e( 'and drag & drop it where you want to have it!', 'ultimate-social-media-plus' ); ?>
+                    	<?php  _e( 'and drag & drop it where you want to have it', 'ultimate-social-media-plus' ); ?>!
                     </label>
 				</p>
 			</div>
@@ -121,12 +121,12 @@
                     </ul>
                     <div style="width: 88%; float: left; margin:25px 0 0 47px">
                     	<h4>
-                       		<?php  _e( 'Margin From :', 'ultimate-social-media-plus' ); ?>
+                       		<?php  _e( 'Margin From', 'ultimate-social-media-plus' ); ?> :
                         </h4>
                         <ul class="sfsi_plus_floaticon_margin_sec">
                             <li>
                                 <label>
-                                	<?php  _e( 'Top :', 'ultimate-social-media-plus' ); ?>
+                                	<?php  _e( 'Top', 'ultimate-social-media-plus' ); ?> :
                                 </label>
                                 <input name="sfsi_plus_icons_floatMargin_top" type="text" value="<?php echo ($option8['sfsi_plus_icons_floatMargin_top']!='') ?  $option8['sfsi_plus_icons_floatMargin_top'] : '' ;?>" />
                                 <ins>
@@ -135,7 +135,7 @@
                             </li>
                             <li>
                                 <label>
-                                	<?php  _e( 'Bottom :', 'ultimate-social-media-plus' ); ?>
+                                	<?php  _e( 'Bottom', 'ultimate-social-media-plus' ); ?> :
                                 </label>
                                 <input name="sfsi_plus_icons_floatMargin_bottom" type="text" value="<?php echo ($option8['sfsi_plus_icons_floatMargin_bottom'] != '') ?  $option8['sfsi_plus_icons_floatMargin_bottom'] : '' ;?>" />
                                 <ins>
@@ -144,7 +144,7 @@
                             </li>
                             <li>
                                 <label>
-                             		<?php  _e( 'Left :', 'ultimate-social-media-plus' ); ?>
+                             		<?php  _e( 'Left', 'ultimate-social-media-plus' ); ?> :
                                 </label>
                                 <input name="sfsi_plus_icons_floatMargin_left" type="text" value="<?php echo ($option8['sfsi_plus_icons_floatMargin_left']!='') ?  $option8['sfsi_plus_icons_floatMargin_left'] : '' ;?>" />
                                 <ins>
@@ -153,7 +153,7 @@
                             </li>
                             <li>
                                 <label>
-                                	<?php  _e( 'Right :', 'ultimate-social-media-plus' ); ?>
+                                	<?php  _e( 'Right', 'ultimate-social-media-plus' ); ?> :
                                 </label>
                                 <input name="sfsi_plus_icons_floatMargin_right" type="text" value="<?php echo ($option8['sfsi_plus_icons_floatMargin_right']!='') ?  $option8['sfsi_plus_icons_floatMargin_right'] : '' ;?>" />
                                 <ins>
@@ -191,7 +191,7 @@
                     	<b>
                     		[DISPLAY_ULTIMATE_PLUS]
 						</b> 
-                    	<?php  _e( 'to display them wherever you want.', 'ultimate-social-media-plus' ); ?>
+                    	<?php  _e( 'to display them wherever you want', 'ultimate-social-media-plus' ); ?>.
                     </label>
 				</p>
 			</div>
@@ -217,7 +217,7 @@
 					}
 					?>
                     <label class="sfsiplus_sub-subtitle sfsiplus_toglpstpgsbttl" <?php echo $style_float;?>>
-                    	<?php  _e( 'Here you have two options:', 'ultimate-social-media-plus' ); ?>
+                    	<?php  _e( 'Here you have two options', 'ultimate-social-media-plus' ); ?>:
                     </label>
 				</p>
 				
@@ -244,10 +244,10 @@
                                 <strong>
 								<?php  _e( 'call to action', 'ultimate-social-media-plus' ); ?></strong>
                                 <code>»</code> 
-                            	<?php  _e( 'which increases chances that visitors do it.', 'ultimate-social-media-plus' ); ?>
+                            	<?php  _e( 'which increases chances that visitors do it', 'ultimate-social-media-plus' ); ?>.
                             </p>
 							<p class="cstmdisplaysharingtxt">
-                            	<?php  _e( 'Select the icons you want to show:', 'ultimate-social-media-plus' ); ?>
+                            	<?php  _e( 'Select the icons you want to show', 'ultimate-social-media-plus' ); ?>:
                             </p>
                             <div class="social_icon_like1 cstmdsplyulwpr">
                                 <ul>
@@ -285,7 +285,7 @@
                                         </a>
                                         <p style="width:auto;float:left;padding: 0px!important;border:0px !important;">
                                         	
-                                            <?php  _e( '(may impact loading speed)', 'ultimate-social-media-plus' ); ?>
+                                           (<?php  _e( 'may impact loading speed', 'ultimate-social-media-plus' ); ?>)
                                         </p>
                                     </li>
 								</ul>	
@@ -299,7 +299,7 @@
                             </ul>-->
                             <div class="options">
                                 <label>
-                                	<?php  _e( 'Do you want to display the counts?', 'ultimate-social-media-plus' ); ?>
+                                	<?php  _e( 'Do you want to display the counts', 'ultimate-social-media-plus' ); ?>?
                                 </label><div class="field">
                                 <select name="sfsi_plus_icons_DisplayCounts" id="sfsi_plus_icons_DisplayCounts" class="styled"><option value="yes" <?php echo ($option8['sfsi_plus_icons_DisplayCounts']=='yes') ?  'selected="true"' : '' ;?>>
                                 	<?php  _e( 'YES', 'ultimate-social-media-plus' ); ?>
@@ -318,11 +318,11 @@
                             </h4>
 							<div class="icons_size">
                             <span>
-                            	<?php  _e( 'Size:', 'ultimate-social-media-plus' ); ?>
+                            	<?php  _e( 'Size', 'ultimate-social-media-plus' ); ?>:
                             </span><input name="sfsi_plus_post_icons_size" value="<?php echo ($option8['sfsi_plus_post_icons_size']!='') ?  $option8['sfsi_plus_post_icons_size'] : '' ;?>" type="text" /><ins>
                            		<?php  _e( 'pixels wide &amp; tall', 'ultimate-social-media-plus' ); ?>
                             </ins> <span class="last">
-                            	<?php  _e( 'Spacing between icons:', 'ultimate-social-media-plus' ); ?>
+                            	<?php  _e( 'Spacing between icons', 'ultimate-social-media-plus' ); ?>:
                             </span><input name="sfsi_plus_post_icons_spacing" type="text" value="<?php echo ($option8['sfsi_plus_post_icons_spacing']!='') ?  $option8['sfsi_plus_post_icons_spacing'] : '' ;?>" /><ins>
                             	<?php  _e( 'Pixels', 'ultimate-social-media-plus' ); ?>
                             </ins></div>
@@ -335,7 +335,7 @@
                     <!--Display them options-->
                     <div class="options sfsipluspstvwpr">
                         <label class="first chcklbl">
-                        	<?php  _e( 'Display them:', 'ultimate-social-media-plus' ); ?>
+                        	<?php  _e( 'Display them', 'ultimate-social-media-plus' ); ?>:
                         </label>
                         <label class="seconds chcklbl labelhdng4">
                         	<?php  _e( 'On Post Pages', 'ultimate-social-media-plus' ); ?>
@@ -398,12 +398,12 @@
                     
                     <div class="options shareicontextfld">
                         <label class="first">
-                        	<?php  _e( 'Text to appear before the sharing icons:', 'ultimate-social-media-plus' ); ?>
+                        	<?php  _e( 'Text to appear before the sharing icons', 'ultimate-social-media-plus' ); ?>:
                         </label><input name="sfsi_plus_textBefor_icons" type="text" value="<?php echo ($option8['sfsi_plus_textBefor_icons']!='') ?  $option8['sfsi_plus_textBefor_icons'] : '' ; ?>" />
                     </div>
                     <div class="options">
                         <label>
-                         	<?php  _e( 'Alignment of share icons:', 'ultimate-social-media-plus' ); ?>
+                         	<?php  _e( 'Alignment of share icons', 'ultimate-social-media-plus' ); ?>:
                         </label><div class="field">
                         <select name="sfsi_plus_icons_alignment" id="sfsi_plus_icons_alignment" class="styled">
                         	<option value="left" <?php echo ($option8['sfsi_plus_icons_alignment']=='left') ?  'selected="selected"' : '' ;?>>

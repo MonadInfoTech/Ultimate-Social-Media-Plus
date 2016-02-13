@@ -12,7 +12,7 @@ function sfsi_plus_update_plugin()
 	}
 	
 	//Install version
-	update_option("sfsi_plus_pluginVersion", "2.29");
+	update_option("sfsi_plus_pluginVersion", "2.31");
 	
 	/*show notification*/
 	if(!get_option('sfsi_plus_show_notification'))
@@ -168,7 +168,7 @@ function sfsi_plus_activate_plugin()
 	add_option('sfsi_plus_section2_options',  serialize($options2));
     
 	/* Design and animation option  */
-	$options3=array('sfsi_plus_mouseOver'=>'no',
+	$options3=array('sfsi_plus_mouseOver'=>'yes',
         'sfsi_plus_mouseOver_effect'=>'fade_in',
         'sfsi_plus_shuffle_icons'=>'no',
         'sfsi_plus_shuffle_Firstload'=>'no',
@@ -413,20 +413,19 @@ function sfsi_plus_Unistall_plugin()
 /* check CUrl */
 function sfsi_plus_curl_enable_notice(){
     if(!function_exists('curl_init')) {
-	echo '<div class="error"><p> Error: It seems that CURL is disabled on your server. Please contact your server administrator to install / enable CURL.</p></div>'; die;
+	echo '<div class="error"><p> '.__('Error','ultimate-social-media-plus').': '.__('It seems that CURL is disabled on your server', 'ultimate-social-media-plus').'. '.__('Please contact your server administrator to install / enable CURL','ultimate-social-media-plus').'.</p></div>'; die;
     }
 }
 	
 /* add admin menus */
 function sfsi_plus_admin_menu() {
 	add_menu_page(
-	 
-	__( 'Ultimate Social Media PLUS', 'ultimate-social-media-plus' ),
-	__( 'Ultimate Social Media PLUS', 'ultimate-social-media-plus' ),
-	'administrator',
-	'sfsi-plus-options',
-	'sfsi_plus_options_page',
-	plugins_url( 'images/logo.png' , dirname(__FILE__) )
+		'Ultimate Social Media PLUS',
+		'Ultimate Social Media PLUS',
+		'administrator',
+		'sfsi-plus-options',
+		'sfsi_plus_options_page',
+		plugins_url( 'images/logo.png' , dirname(__FILE__) )
 	);
 }
 function sfsi_plus_options_page(){ include SFSI_PLUS_DOCROOT . '/views/sfsi_options_view.php';	} /* end function  */
@@ -525,7 +524,7 @@ function sfsi_plus_check_wp_head() {
 	    $path=pathinfo($_SERVER['REQUEST_URI']);
 	    if($path['basename']=="themes.php" || $path['basename']=="theme-editor.php" || $path['basename']=="admin.php?page=sfsi-plus-options")
 	    {
-	    	echo "<div class=\"error\" >" . "<p> Error : Please fix your theme to make plugins work correctly: Go to the <a href=\"theme-editor.php\">Theme Editor</a> and insert <code>&lt;?php wp_head(); ?&gt;</code> just before the <code>&lt;/head&gt;</code> line of your theme's <code>header.php</code> file." . "</p></div>";
+	    	echo "<div class=\"error\" >" . "<p> ".__("Error","ultimate-social-media-plus")." : ".__("Please fix your theme to make plugins work correctly","ultimate-social-media-plus").": ".__("Go to the","ultimate-social-media-plus")." <a href=\"theme-editor.php\">".__("Theme Editor","ultimate-social-media-plus")."</a> ".__("and insert","ultimate-social-media-plus")." <code>&lt;?php wp_head(); ?&gt;</code> ".__("just before the","ultimate-social-media-plus")." <code>&lt;/head&gt;</code> ".__("line of your theme's","ultimate-social-media-plus")." <code>header.php</code> ".__("file","ultimate-social-media-plus")."." . "</p></div>";
 	    }		
 	}
 }
@@ -548,7 +547,7 @@ function sfsi_plus_check_wp_footer() {
 		
 		if($path['basename']=="themes.php" || $path['basename']=="theme-editor.php" || $path['basename']=="admin.php?page=sfsi-plus-options")
 		{
-			echo "<div class=\"error\" >" . "<p>Error : Please fix your theme to make plugins work correctly: Go to the <a href=\"theme-editor.php\">Theme Editor</a> and insert <code>&lt;?php wp_footer(); ?&gt;</code> as the first line of your theme's <code>footer.php</code> file. " . "</p></div>";
+			echo "<div class=\"error\" >" . "<p>Error : ".__("Please fix your theme to make plugins work correctly", "ultimate-social-media-plus").":" .__("Go to the", "ultimate-social-media-plus")." <a href=\"theme-editor.php\">".__("Theme Editor", "ultimate-social-media-plus")."</a> ".__("and insert", "ultimate-social-media-plus")." <code>&lt;?php wp_footer(); ?&gt;</code> ".__("as the first line of your theme's", "ultimate-social-media-plus")." <code>footer.php</code> ".__("file", "ultimate-social-media-plus").". " . "</p></div>";
 		} 	    
 	}
 }
@@ -559,16 +558,16 @@ function sfsi_plus_activation_msg()
 	
 	if(get_option('sfsi_plus_activate',false)==1)
 	{
-		_e("<div class='updated' ><p>Thank you for installing the <b>Ultimate Social Media PLUS</b> Plugin. Please go to the <a href='admin.php?page=sfsi-plus-options'>plugin`s settings page </a> to configure it. </p></div>", "ultimate-social-media-plus");
+		echo "<div class='updated' ><p>".__("Thank you for installing the", "ultimate-social-media-plus")." <b>Ultimate Social Media PLUS</b> ".__("Plugin. Please go to the", "ultimate-social-media-plus")." <a href='admin.php?page=sfsi-plus-options'>".__("plugin`s settings page", "ultimate-social-media-plus")."</a> ".__("to configure it", "ultimate-social-media-plus").".</p></div>";
 		update_option('sfsi_plus_activate',0);
 	}
 	
 	$path=pathinfo($_SERVER['REQUEST_URI']);
 	update_option('sfsi_plus_activate',0);		
 	
-	if($wp_version < 3.5 &&  $path['basename']=="admin.php?page=sfsi-plus-options")
+	if($wp_version < 3.5 && $path['basename'] == "admin.php?page=sfsi-plus-options")
 	{
-		echo "<div class=\"update-nag\" >" . "<p ><b>You're using an old Wordpress version, which may cause several of your plugins to not work correctly. Please upgrade</b></p></div>"; 
+		echo "<div class=\"update-nag\" >" . "<p ><b>".__('You`re using an old Wordpress version','ultimate-social-media-plus').", ".__('which may cause several of your plugins to not work correctly','ultimate-social-media-plus').". ". __('Please upgrade','ultimate-social-media-plus')."</b></p></div>"; 
 	}
 }
 /* admin notice for first time installation */
@@ -585,11 +584,11 @@ function sfsi_plus_rating_msg()
 	{
 	 echo '
 	<div class="sfwp_fivestar">
-    	<p>We noticed you\'ve been using the Ultimate Social Media PLUS Plugin for more than 30 days. For using it 100% for free, could you please do us a BIG favor and give it a 5-star rating on Wordpress?</p>
+    	<p>'.__('We noticed you\'ve been using the','ultimate-social-media-plus').' Ultimate Social Media PLUS Plugin '.__('for more than 30 days','ultimate-social-media-plus').'. '.__('If you\'re happy with it','ultimate-social-media-plus').', '.__('could you please do us a BIG favor and give it a 5-star rating on Wordpress','ultimate-social-media-plus').'?</p>
         <ul class="sfwp_fivestar_ul">
-        	<li><a href="https://wordpress.org/support/view/plugin-reviews/ultimate-social-media-plus" target="_new" title="Ok, you deserved it">Ok, you deserved it</a></li>
-            <li><a href="javascript:void(0);" class="sfsiHideRating" title="I already did">I already did</a></li>
-            <li><a href="javascript:void(0);" class="sfsiHideRating" title="No, not good enough">No, not good enough</a></li>
+        	<li><a href="https://wordpress.org/support/view/plugin-reviews/ultimate-social-media-plus" target="_new" title="Ok, you deserved it">'.__('Ok, you deserved it','ultimate-social-media-plus').'</a></li>
+            <li><a href="javascript:void(0);" class="sfsiHideRating" title="I already did">'.__('I already did','ultimate-social-media-plus').'</a></li>
+            <li><a href="javascript:void(0);" class="sfsiHideRating" title="No, not good enough">'.__('No, not good enough','ultimate-social-media-plus').'</a></li>
         </ul>
     </div>
     <script>

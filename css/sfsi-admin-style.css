@@ -27,7 +27,6 @@ body {
     margin: 0;
     padding: 0;
 }
-
 /*Tab 1*/
 .tab1 ul.plus_icn_listing li .custom, .tab1 ul.plus_icn_listing li .sfsicls_email, .tab1 ul.plus_icn_listing li .sfsicls_facebook, .tab1 ul.plus_icn_listing li .sfsicls_ggle_pls, .tab1 ul.plus_icn_listing li .sfsicls_instagram, .tab1 ul.plus_icn_listing li .sfsicls_houzz, .tab1 ul.plus_icn_listing li .sfsicls_linkdin, .tab1 ul.plus_icn_listing li .sfsicls_pinterest, .tab1 ul.plus_icn_listing li .sfsicls_rs_s, .tab1 ul.plus_icn_listing li .sfsicls_share, .tab1 ul.plus_icn_listing li .sfsicls_twt, .tab1 ul.plus_icn_listing li .sfsicls_utube {
     background: url(../images/tab_1_icn_list.png) no-repeat;
@@ -209,7 +208,6 @@ ul.tab_2_email_sec li .radio {
     float: left;
     margin: 0 4px 0 0;
 }
-
 .sfsiplus_icns_tab_3 .sfsiplus_row_1_1 {
     background-position: -1px 0;
 }
@@ -1014,7 +1012,6 @@ ul#adminmenu li.toplevel_page_sfsi-plus-options a.current, ul#adminmenu li.tople
     margin-left: 15px;
     text-decoration: none;
 }
-
 @media (max-width:1160px) {
 .sfsi_plus_subscription_html xmp {
     display: block;
@@ -1027,15 +1024,12 @@ ul#adminmenu li.toplevel_page_sfsi-plus-options a.current, ul#adminmenu li.tople
 .tab9 .sfsi_plus_left_container {
     width: 100% !important;
 }
-
 .tab9 .sfsi_plus_right_container {
     width: 100%;
 }
-
 .tab9 .border_shadow {
     margin-top: 10px;
 }
-
 .tab9 .row_tab div.sfsi_plus_field {
     margin-bottom: 10px;
 }
