@@ -197,7 +197,7 @@ function sfsi_plus_FBlike($permalink,$show_count)
 	} else {
 			$fb_like_html .= 'layout="button"';
 	}
-	$fb_like_html .= ' action="like"></fb:like>';
+	$fb_like_html .= ' action="like" data-share="true"></fb:like>';
 	return $fb_like_html;
 }
 
@@ -323,17 +323,15 @@ function sfsi_plus_footer_script()
 			})();
 		</script>
 	
-	<script type='text/javascript' src='https://apis.google.com/js/plusone.js'></script>
-	<script type='text/javascript' src='https://apis.google.com/js/platform.js'></script>
-	<!-- google share -->
-	<script type="text/javascript">
-		(function() {
-			var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
-			po.src = 'https://apis.google.com/js/platform.js';
-			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
-		})();
-	</script>
-	<?php
+        <!-- google share -->
+        <script type="text/javascript">
+            (function() {
+                var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+                po.src = 'https://apis.google.com/js/platform.js';
+                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+            })();
+        </script>
+        <?php
 	}
 	if($sfsi_section1['sfsi_plus_linkedin_display']=="yes")
 	{ 
