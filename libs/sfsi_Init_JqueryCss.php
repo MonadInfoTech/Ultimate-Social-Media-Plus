@@ -98,5 +98,54 @@ function sfsiplus_plugin_front_enqueue_script()
 		/* initilaize the ajax url in javascript */
 		wp_localize_script( 'SFSIPLUSCustomJs', 'ajax_object', array( 'ajax_url' => admin_url( 'admin-ajax.php' ),'plugin_url'=> SFSI_PLUS_PLUGURL) );
 }
-add_action( 'wp_enqueue_scripts', 'sfsiplus_plugin_front_enqueue_script' );		
+add_action( 'wp_enqueue_scripts', 'sfsiplus_plugin_front_enqueue_script' );	
+
+function sfsi_plus_footerFeedbackScript()
+{
+    wp_enqueue_style('wp-pointer');
+    wp_enqueue_script('wp-pointer');
+    wp_enqueue_script('utils'); // for user settings
+	
+	$html = '<div>';
+		$html .= '<label>Optional: Please tell us why you deactivate our plugin so that we can make it better!</label>';
+		$html .= '<textarea id="sfsi_plus_feedbackMsg" name="reason"></textarea>';
+	$html .= '</div>';
+	?>
+    <script type="text/javascript">
+		jQuery('#sfsi_plus_deactivateButton').click(function(){
+			jQuery('#sfsi_plus_deactivateButton').pointer({
+				content: '<form method="post" id="sfsi_plus_feedbackForm"><?php echo $html; ?><div><input type="button" name="sfsi_plus_sendFeedback" value="Deactivate" class="button primary-button" /></div><img id="sfsi_plus_loadergif" src="<?php echo site_url()."/wp-includes/images/spinner.gif"; ?>" /></form>',
+				position: {
+					edge:'top',
+					align:'left',
+				},
+				close: function() {
+					//
+				}
+			}).pointer('open');
+			return false;
+		});
+		jQuery("body").on("click","input[name='sfsi_plus_sendFeedback']", function(){
+			var ajaxurl = '<?php echo admin_url('admin-ajax.php'); ?>';
+			var deactivateUrl = jQuery('#ultimate-social-media-plus .deactivate a').attr('href');
+			var e = {
+				action:"sfsi_plus_feedbackForm",
+				email: '<?php echo get_option("admin_email"); ?>',
+				msg:jQuery("#sfsi_plus_feedbackMsg").val()
+			};
+			jQuery("#sfsi_plus_loadergif").show();
+			jQuery.ajax({
+				url:ajaxurl,
+				type:"post",
+				data:e,
+				success:function(responce) {
+					jQuery("#sfsi_plus_loadergif").hide();
+					window.location.href = deactivateUrl;
+				}
+			});
+		});
+	</script>
+	<?php
+}
+add_action( 'admin_footer', 'sfsi_plus_footerFeedbackScript' );		
 ?>

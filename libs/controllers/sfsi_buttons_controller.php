@@ -553,6 +553,7 @@ function sfsi_plus_options_updater8()
 	$sfsi_plus_rectgp    				= isset($_POST["sfsi_plus_rectgp"]) ? $_POST["sfsi_plus_rectgp"] : 'no';
 	$sfsi_plus_rectshr    				= isset($_POST["sfsi_plus_rectshr"]) ? $_POST["sfsi_plus_rectshr"] : 'no';
 	$sfsi_plus_recttwtr    				= isset($_POST["sfsi_plus_recttwtr"]) ? $_POST["sfsi_plus_recttwtr"] : 'no';
+	$sfsi_plus_rectpinit    			= isset($_POST["sfsi_plus_rectpinit"]) ? $_POST["sfsi_plus_rectpinit"] : 'no';
 	
 	
     //post options
@@ -591,7 +592,8 @@ function sfsi_plus_options_updater8()
 				'sfsi_plus_rectfb'	=> $sfsi_plus_rectfb,
 				'sfsi_plus_rectgp'	=> $sfsi_plus_rectgp,
 				'sfsi_plus_rectshr'	=> $sfsi_plus_rectshr,
-				'sfsi_plus_recttwtr'=> $sfsi_plus_recttwtr		
+				'sfsi_plus_recttwtr'=> $sfsi_plus_recttwtr,
+				'sfsi_plus_rectpinit'=>$sfsi_plus_rectpinit	
     );
     update_option('sfsi_plus_section8_options',serialize($up_option8));
     header('Content-Type: application/json');

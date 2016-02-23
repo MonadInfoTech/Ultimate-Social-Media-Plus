@@ -2343,7 +2343,7 @@ h2.optional {
 }
 .sf_google > div
 {
-	width: 70px !important;
+	/*width: 70px !important;*/
 }
 .sf_google iframe
 {
@@ -3228,4 +3228,28 @@ label.sfsiplus_toglpstpgsbttl { float: left; margin-top: 5px !important}
 {
 	box-shadow: none;
 	border: none;
+}
+
+.sfsi_plus_Sicons .sf_pinit
+{
+	margin-right: 4px;
+}
+.sfsi_plus_Sicons .sf_pinit > span
+{
+	height: 22px !important;
+	vertical-align: middle;
+}
+.sfsi_plus_Sicons .sf_pinit > span
+{
+	height: 22px !important;
+	vertical-align: middle;
+}
+.sfsi_plus_Sicons .sf_pinit > span > span
+{
+	display: inline-block;
+	width: 47px !important;
+	position: relative !important;
+	margin-left: 40px;
+	vertical-align: top;
+	right: 0 !important;
 }

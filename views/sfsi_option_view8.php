@@ -21,6 +21,10 @@
 	{
 		$option8['sfsi_plus_recttwtr'] = 'no';
 	}
+	if(!isset($option8['sfsi_plus_rectpinit']))
+	{
+		$option8['sfsi_plus_rectpinit'] = 'no';
+	}
 ?>
 <div class="tab8">
 	<ul class="sfsiplus_icn_listing8">
@@ -267,6 +271,12 @@
 										<div class="radio_section tb_4_ck"><input name="sfsi_plus_recttwtr" <?php echo ($option8['sfsi_plus_recttwtr']=='yes') ?  'checked="true"' : '' ;?>  id="sfsi_plus_recttwtr" type="checkbox" value="yes" class="styled"  /></div>
                                         <a href="#" title="twitter" class="cstmdspltwtr">
                                             <img src="<?php echo SFSI_PLUS_PLUGURL; ?>images/twiiter.png" alt="Twitter like" /><span style="display: none;">18k</span>
+                                        </a>
+                                    </li>
+									<li>
+										<div class="radio_section tb_4_ck"><input name="sfsi_plus_rectpinit" <?php echo ($option8['sfsi_plus_rectpinit']=='yes') ?  'checked="true"' : '' ;?>  id="sfsi_plus_rectpinit" type="checkbox" value="yes" class="styled"  /></div>
+                                        <a href="#" title="Pinit" class="cstmdsplpinit">
+                                            <img src="<?php echo SFSI_PLUS_PLUGURL; ?>images/pinit.png" alt="Pinit" /><span style="display: none;">18k</span>
                                         </a>
                                     </li>
 									<li>

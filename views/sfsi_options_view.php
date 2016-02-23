@@ -145,7 +145,7 @@
     
         <!-- step old 8 Start here -->
         <h3><span>8</span>
-            <?php  _e( 'Do you want to show a subscription form', 'ultimate-social-media-plus' ); ?> (<?php  _e( 'increases sign ups', 'ultimate-social-media-plus' ); ?>)?
+            <?php  _e( 'Do you want to show a subscription form', 'ultimate-social-media-plus' ); ?> (<b><?php  _e( 'increases sign ups', 'ultimate-social-media-plus' ); ?></b>)?
         </h3>
         <?php include(SFSI_PLUS_DOCROOT.'/views/sfsi_option_view9.php'); ?>
     <!-- step old 8 END here -->

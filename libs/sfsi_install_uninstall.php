@@ -75,6 +75,11 @@ function sfsi_plus_update_plugin()
 		$option8['sfsi_plus_icons_floatMargin_right'] = '';
 		update_option('sfsi_plus_section8_options', serialize($option8));
 	}
+	if(isset($option8) && !empty($option8) && !isset($option8['sfsi_plus_rectpinit']))
+	{
+		$option8['sfsi_plus_rectpinit'] = 'no';
+		update_option('sfsi_plus_section8_options', serialize($option8));
+	}
 	
 	/*Language icons*/
 	$option5 =  unserialize(get_option('sfsi_plus_section5_options',false));
@@ -338,7 +343,8 @@ function sfsi_plus_activate_plugin()
 		'sfsi_plus_rectfb'=>'yes',
 		'sfsi_plus_rectgp'=>'yes',
 		'sfsi_plus_rectshr'=>'no',
-		'sfsi_plus_recttwtr'=>'yes');
+		'sfsi_plus_recttwtr'=>'yes',
+		'sfsi_plus_rectpinit'=>'yes');
 	add_option('sfsi_plus_section8_options',  serialize($options8));		
 	
 	/*Some additional option added*/	

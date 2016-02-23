@@ -696,6 +696,7 @@ function sfsi_plus_update_step8()
 		rgp = SFSI("input[name='sfsi_plus_rectgp']:checked").val(),
 		rshr = SFSI("input[name='sfsi_plus_rectshr']:checked").val(),
 		rtwr = SFSI("input[name='sfsi_plus_recttwtr']:checked").val(),
+		rpin = SFSI("input[name='sfsi_plus_rectpinit']:checked").val(),
         _ = [];
     /*SFSI("#sfsi_plus_Show_popupOn_PageIDs :selected").each(function(s, i) {
         _[s] = SFSI(i).val()
@@ -731,6 +732,7 @@ function sfsi_plus_update_step8()
 			sfsi_plus_rectgp: rgp,
 			sfsi_plus_rectshr: rshr,
 			sfsi_plus_recttwtr: rtwr,
+			sfsi_plus_rectpinit: rpin,
 			nonce:nonce
         };
     SFSI.ajax({

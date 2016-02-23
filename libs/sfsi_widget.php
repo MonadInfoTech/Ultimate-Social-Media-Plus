@@ -1345,9 +1345,17 @@ function sfsi_plus_prepairIcons($icon_name,$is_front=0, $onpost="no")
     }
     else if($hoverSHow)
     {
-		$new_window = '';
-		$url = "javascript:void(0)";
-    }
+		if(!wp_is_mobile())
+		{
+			$new_window = sfsi_plus_checkNewWindow();
+			$url = $url;
+		}
+		else
+		{
+			$new_window = '';
+			$url = "javascript:void(0)";
+		}
+	}
     else
     {
 	 	$new_window = sfsi_plus_checkNewWindow();

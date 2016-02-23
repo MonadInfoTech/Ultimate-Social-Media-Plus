@@ -469,4 +469,25 @@ function sfsiplus_cropImage($CurWidth,$CurHeight,$iSize,$DestFolder,$SrcImage,$Q
 		return false;
 	}
 }
+
+add_action('wp_ajax_sfsi_plus_feedbackForm','sfsi_plus_feedbackForm');
+function sfsi_plus_feedbackForm()
+{
+	if(!empty($_POST["msg"]))
+	{
+		$useremail	= "uninstall@ultimatelysocial.com";
+		$subject 	= "Feedback from Ultimate Social Media Plus ".get_option('sfsi_plus_pluginVersion')." user";
+		$from    	= $_POST["email"];
+		$message    = $_POST["msg"];
+		$sitename 	= get_bloginfo("name");
+	
+		$headers = "MIME-Version: 1.0" . "\r\n";
+		$headers .= "Content-type:text;charset=iso-8859-1" . "\r\n";
+		$headers .= sprintf('From: %s <%s>', $sitename, $from). "\r\n";
+		$headers .= "X-Mailer: PHP/" . phpversion();
+		
+		mail($useremail,$subject,$message,$headers);
+	}
+	die;
+}
 ?>
