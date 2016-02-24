@@ -28,16 +28,10 @@
 <!-- Section 4 "Do you want to display "counts" next to your icons?" main div Start -->
 <div class="tab4">
 	<p>
-   		<?php  _e('It’s a psychological fact that people like to follow other people','ultimate-social-media-plus'); ?> (<?php  _e('as explained well in Robert Cialdini’s book','ultimate-social-media-plus'); ?> “
-        
-    	<a href="http://www.amazon.com/Influence-Psychology-Persuasion-Revised-Edition/dp/006124189X" target="_blank" class="lit_txt">
-        	<?php  _e( 'Influence', 'ultimate-social-media-plus' ); ?>
-    	</a>
-        
-        ”), <?php  _e( 'so when they see that your site has already a good number of Facebook likes', 'ultimate-social-media-plus' ); ?>, <?php  _e( 'it’s more likely that they will subscribe', 'ultimate-social-media-plus' ); ?>/<?php  _e( 'like','ultimate-social-media-plus'); ?>/<?php  _e( 'share your site than if it had', 'ultimate-social-media-plus' ); ?> 0.
+   		<?php  _e('It’s a psychological fact that people like to follow other people (as explained well in Robert Cialdini’s book “<a href="http://www.amazon.com/Influence-Psychology-Persuasion-Revised-Edition/dp/006124189X" target="_blank" class="lit_txt">Influence</a>”), so when they see that your site has already a good number of Facebook likes, it’s more likely that they will subscribe/like/share your site than if it had 0.', SFSI_PLUS_DOMAIN ); ?>
     </p>
 	<p>
-  	  	<?php  _e( 'Therefore, you can select to display the count next to your main icons', 'ultimate-social-media-plus' ); ?>, <?php  _e( 'for your main icons', 'ultimate-social-media-plus' ); ?>, <?php  _e( 'not those next to the posts which will look like this', 'ultimate-social-media-plus' ); ?>:
+  	  	<?php  _e( 'Therefore, you can select to display the count next to your main icons, for your main icons, not those next to the posts which will look like this:', SFSI_PLUS_DOMAIN ); ?>
     </p>
 	
     <!-- sample icons --> 
@@ -99,23 +93,23 @@
 		</li>
     </ul>  <!-- END sample icons -->
     <p>
-    	<?php  _e( 'Of course, if you start at', 'ultimate-social-media-plus' ); ?> 0, <?php  _e( 'you shoot yourself in the foot with that', 'ultimate-social-media-plus' ); ?>. <?php  _e( 'So we suggest that you only turn this feature on once you have a good number of followers/likes/shares', 'ultimate-social-media-plus' ); ?> (<?php  _e( 'min. of 20 – no worries if it’s not too many, it should just not be', 'ultimate-social-media-plus' ); ?> 0).
+    	<?php  _e( 'Of course, if you start at 0, you shoot yourself in the foot with that. So we suggest that you only turn this feature on once you have a good number of followers/likes/shares (min. of 20 – no worries if it’s not too many, it should just not be 0).', SFSI_PLUS_DOMAIN ); ?>
     </p>
   	<h4>
-   		<?php  _e( 'Enough waffling. So do you want to display counts', 'ultimate-social-media-plus' ); ?>?
+   		<?php  _e( 'Enough waffling. So do you want to display counts?', SFSI_PLUS_DOMAIN ); ?>
     </h4>
   	<!-- show/hide counts for icons section  START --> 
   	<ul class="enough_waffling">
   		<li>
 			<input name="sfsi_plus_display_counts" <?php echo ($option4['sfsi_plus_display_counts']=='yes') ?  'checked="true"' : '' ;?> type="radio" value="yes" class="styled"  />
         	<label>
-       			<?php  _e( 'Yes', 'ultimate-social-media-plus' ); ?>
+       			<?php  _e( 'Yes', SFSI_PLUS_DOMAIN ); ?>
         	</label>
 		</li>
     	<li>
 			<input name="sfsi_plus_display_counts" <?php echo ($option4['sfsi_plus_display_counts']=='no') ?  'checked="true"' : '' ;?> type="radio" value="no" class="styled"  />
         	<label>
-        		<?php  _e( 'No', 'ultimate-social-media-plus' ); ?>
+        		<?php  _e( 'No', SFSI_PLUS_DOMAIN ); ?>
         	</label>
 		</li>
   	</ul>
@@ -123,7 +117,7 @@
 	<!-- show/hide counts for all icons section  START --> 
 	<div class="sfsiplus_count_sections" style="display:none">
 		<h4>
-			<?php  _e( 'Please specify which counts should be shown', 'ultimate-social-media-plus' ); ?>:
+			<?php  _e( 'Please specify which counts should be shown:', SFSI_PLUS_DOMAIN ); ?>
 		</h4>
         
 		<!-- RSS ICON COUNT SECTION-->
@@ -145,11 +139,7 @@
 				<ul>
 					<li>
 						<?php 
-							_e(
-								'We cannot track this. So enter the figure here',
-								'ultimate-social-media-plus'
-							);
-						?>: 
+							_e('We cannot track this. So enter the figure here:',SFSI_PLUS_DOMAIN); ?> 
 						<input name="sfsi_plus_rss_manualCounts" type="text" class="input" value="<?php echo ($option4['sfsi_plus_rss_manualCounts']!='') ?  $option4['sfsi_plus_rss_manualCounts'] : '' ;?>" />
 					</li>
 				</ul>
@@ -177,15 +167,11 @@
 					<li>
 						<input name="sfsi_plus_email_countsFrom" <?php echo ($option4['sfsi_plus_email_countsFrom']=='source') ?  'checked="true"' : '' ;?>  type="radio" value="source" class="styled"  />
 						 <?php
-							_e(
-								'Retrieve the number of subscribers automatically',
-								'ultimate-social-media-plus'
-							);
-						 ?>
+							_e('Retrieve the number of subscribers automatically', SFSI_PLUS_DOMAIN); ?>
 					</li>
 					<li>
 						<input name="sfsi_plus_email_countsFrom" <?php echo ($option4['sfsi_plus_email_countsFrom']=='manual') ?  'checked="true"' : '' ;?>  type="radio" value="manual" class="styled" />
-						<?php  _e( 'Enter the figure manually', 'ultimate-social-media-plus' ); ?>
+						<?php  _e( 'Enter the figure manually', SFSI_PLUS_DOMAIN ); ?>
 						<input name="sfsi_plus_email_manualCounts" type="text" class="input" value="<?php echo ($option4['sfsi_plus_email_manualCounts']!='') ?  $option4['sfsi_plus_email_manualCounts'] : '' ;?>" style="<?php echo ($option4['sfsi_plus_email_countsFrom']=='source') ?  'display:none;' : '' ;?>" />
 					</li>
 				</ul>
@@ -212,34 +198,25 @@
 				<ul>
 					<li>
 						<input name="sfsi_plus_facebook_countsFrom" <?php echo ($option4['sfsi_plus_facebook_countsFrom']=='likes') ?  'checked="true"' : '' ;?>  type="radio" value="likes" class="styled"  />           
-						<?php  _e( 'Retrieve the number of likes', 'ultimate-social-media-plus' ); ?>
-						<strong>
-							 <?php  _e( 'of your blog', 'ultimate-social-media-plus' ); ?>
-						</strong>
+						<?php  _e( 'Retrieve the number of likes <b>of your blog</b>', SFSI_PLUS_DOMAIN ); ?>
 					</li>
 					<li>
 						<input name="sfsi_plus_facebook_countsFrom" <?php echo ($option4['sfsi_plus_facebook_countsFrom']=='mypage') ?  'checked="true"' : '' ;?>  type="radio" value="mypage" class="styled"  />
-						<?php  _e( 'Retrieve the number of likes', 'ultimate-social-media-plus' ); ?>
-						<strong>
-							<?php  _e( 'of your facebook page', 'ultimate-social-media-plus' ); ?>
-						</strong><br>
+						<?php  _e( 'Retrieve the number of likes <b>of your facebook page</b>', SFSI_PLUS_DOMAIN ); ?>
+						<br>
 						<div class="sfsiplus_fbpgiddesc">
 							<div class="sfsiplus_fbpgidwpr" style="<?php echo ($option4['sfsi_plus_facebook_countsFrom']=='likes' || $option4['sfsi_plus_facebook_countsFrom']=='followers' || $option4['sfsi_plus_facebook_countsFrom']=='manual') ?  'display:none;' : '' ;?>">
-								 Facebook <?php  _e( 'page ID', 'ultimate-social-media-plus' ); ?>:
+								 Facebook <?php  _e( 'page ID:', SFSI_PLUS_DOMAIN ); ?>
 							</div>
 							<input name="sfsi_plus_facebook_mypageCounts" type="text" class="input mypginpt" value="<?php echo ($option4['sfsi_plus_facebook_mypageCounts']!='') ?  $option4['sfsi_plus_facebook_mypageCounts'] : '' ;?>" style="<?php echo ($option4['sfsi_plus_facebook_countsFrom']=='likes' || $option4['sfsi_plus_facebook_countsFrom']=='followers' || $option4['sfsi_plus_facebook_countsFrom']=='manual') ?  'display:none;' : '' ;?>" />
 						</div>
 						<div class="sfsiplus_fbpgidwpr sfsiplus_fbpgiddesc" style="<?php echo ($option4['sfsi_plus_facebook_countsFrom']=='likes' || $option4['sfsi_plus_facebook_countsFrom']=='followers' || $option4['sfsi_plus_facebook_countsFrom']=='manual') ?  'display:none;' : '' ;?>">
-							(<?php  _e( 'Youll find it at the bottom of the', 'ultimate-social-media-plus' ); ?>
-							<code><<</code>
-							<?php  _e( 'About', 'ultimate-social-media-plus' ); ?>
-							<code>>></code>
-							 -<?php  _e( 'tab on your facebook page', 'ultimate-social-media-plus' ); ?>)
+							(<?php  _e( 'Youll find it at the bottom of the << About >> -tab on your facebook page', SFSI_PLUS_DOMAIN ); ?>)
 						</div>
 					</li>
 					<li>
 						<input name="sfsi_plus_facebook_countsFrom" <?php echo ($option4['sfsi_plus_facebook_countsFrom']=='manual') ?  'checked="true"' : '' ;?>  type="radio" value="manual" class="styled" />
-						<?php  _e( 'Enter the figure manually', 'ultimate-social-media-plus' ); ?>
+						<?php  _e( 'Enter the figure manually', SFSI_PLUS_DOMAIN ); ?>
 						<input name="sfsi_plus_facebook_manualCounts" type="text" class="input" value="<?php echo ($option4['sfsi_plus_facebook_manualCounts']!='') ?  $option4['sfsi_plus_facebook_manualCounts'] : '' ;?>"  style="<?php echo ($option4['sfsi_plus_facebook_countsFrom']=='likes' || $option4['sfsi_plus_facebook_countsFrom']=='followers' || $option4['sfsi_plus_facebook_countsFrom']=='mypage') ?  'display:none;' : '' ;?>" />
 					</li>
 				</ul>
@@ -266,76 +243,67 @@
 				<ul>
 					<li>
 						<input name="sfsi_plus_twitter_countsFrom" <?php echo ($option4['sfsi_plus_twitter_countsFrom']=='source') ?  'checked="true"' : '' ;?>  type="radio" value="source" class="styled" />
-						<?php  _e( 'Retrieve the number of Twitter followers', 'ultimate-social-media-plus' ); ?>
+						<?php  _e( 'Retrieve the number of Twitter followers', SFSI_PLUS_DOMAIN ); ?>
 					</li>
 					<li class="SFSI_tglli">
 						<ul class="SFSI_lsngfrm">
 							<li class="tw_follow_options" style="<?php echo ($option4['sfsi_plus_twitter_countsFrom']=='manual') ?  'display:none;' : '' ;?>">
 								<label>
-									<?php  _e( 'Enter Consumer Key', 'ultimate-social-media-plus' ); ?>
+									<?php  _e( 'Enter Consumer Key', SFSI_PLUS_DOMAIN ); ?>
 								</label>
 								<input name="sfsiplus_tw_consumer_key" class="input_facebook" type="text" value="<?php echo (isset($option4['sfsiplus_tw_consumer_key']) && $option4['sfsiplus_tw_consumer_key']!='') ?  $option4['sfsiplus_tw_consumer_key'] : '' ;?>"  />
 							</li>
 							<li class="tw_follow_options" style="<?php echo ($option4['sfsi_plus_twitter_countsFrom']=='manual') ?  'display:none;' : '' ;?>">
 								<label>
-									<?php  _e( 'Enter Consumer Secret', 'ultimate-social-media-plus' ); ?>
+									<?php  _e( 'Enter Consumer Secret', SFSI_PLUS_DOMAIN ); ?>
 							   </label>
 								<input name="sfsiplus_tw_consumer_secret" class="input_facebook" type="text" value="<?php echo (isset($option4['sfsiplus_tw_consumer_secret']) && $option4['sfsiplus_tw_consumer_secret']!='') ?  $option4['sfsiplus_tw_consumer_secret'] : '' ;?>"  />
 							</li>
 							<li class="tw_follow_options" style="<?php echo ($option4['sfsi_plus_twitter_countsFrom']=='manual') ?  'display:none;' : '' ;?>">
 								<label>
-									<?php  _e( 'Enter Access Token', 'ultimate-social-media-plus' ); ?>
+									<?php  _e( 'Enter Access Token', SFSI_PLUS_DOMAIN ); ?>
 								</label> 
 								<input name="sfsiplus_tw_oauth_access_token" class="input_facebook" type="text" value="<?php echo (isset($option4['sfsiplus_tw_oauth_access_token']) && $option4['sfsiplus_tw_oauth_access_token']!='') ?  $option4['sfsiplus_tw_oauth_access_token'] : '' ;?>"  />
 							</li>
 							<li class="tw_follow_options" style="<?php echo ($option4['sfsi_plus_twitter_countsFrom']=='manual') ?  'display:none;' : '' ;?>">
 								<label>
-									<?php  _e( 'Enter Access Token Secret', 'ultimate-social-media-plus' ); ?>
+									<?php  _e( 'Enter Access Token Secret', SFSI_PLUS_DOMAIN ); ?>
 								</label>
 								<input name="sfsiplus_tw_oauth_access_token_secret" class="input_facebook" type="text" value="<?php echo (isset($option4['sfsiplus_tw_oauth_access_token_secret']) && $option4['sfsiplus_tw_oauth_access_token_secret']!='') ?  $option4['sfsiplus_tw_oauth_access_token_secret'] : '' ;?>"  /> 	
 							</li>
 						 </ul>
 						<ul class="SFSI_instructions">
 							<li class="tw_follow_options" style="<?php echo ($option4['sfsi_plus_twitter_countsFrom']=='manual') ?  'display:none;' : '' ;?>">
-								<?php  _e( 'Please make sure you have entered the', 'ultimate-social-media-plus' ); ?><b>
-								<?php  _e( 'Username', 'ultimate-social-media-plus' ); ?></b> 
-								<?php  _e( 'for', 'ultimate-social-media-plus' ); ?><b>                   
-								"<?php  _e( 'Follow me on', 'ultimate-social-media-plus' ); ?> Twitter:"</b> 
-								<?php 
-									_e(
-										 'in twitter settings under question number',
-										 'ultimate-social-media-plus'
-									);
-								?> 2.
+								<?php  _e( 'Please make sure you have entered the <b>Username</b> for <b>"Follow me on Twitter:"</b> in twitter settings under question number 2.', SFSI_PLUS_DOMAIN ); ?>
 							</li>
 							<li class="tw_follow_options" style="<?php echo ($option4['sfsi_plus_twitter_countsFrom']=='manual') ?  'display:none;' : '' ;?>">
 								<h3>
-									<?php  _e( 'To get this information', 'ultimate-social-media-plus' ); ?> :
+									<?php  _e( 'To get this information:', SFSI_PLUS_DOMAIN ); ?> 
 								</h3>
 							</li>
 							<li class="tw_follow_options" style="<?php echo ($option4['sfsi_plus_twitter_countsFrom']=='manual') ?  'display:none;' : '' ;?>">
-								1: <?php  _e( 'Go to', 'ultimate-social-media-plus' ); ?>
+								1: <?php  _e( 'Go to', SFSI_PLUS_DOMAIN ); ?>
 								<a href="http://apps.twitter.com" target="_blank">
 								 apps.twitter.com
 								</a>
 							</li>
 							<li class="tw_follow_options" style="<?php echo ($option4['sfsi_plus_twitter_countsFrom']=='manual') ?  'display:none;' : '' ;?>">
-								2: <?php  _e( 'Click on', 'ultimate-social-media-plus' ); ?> "<?php  _e( 'Create new app', 'ultimate-social-media-plus' ); ?>"
+								2: <?php  _e( 'Click on "Create new app"', SFSI_PLUS_DOMAIN ); ?>
 							</li>
 							<li class="tw_follow_options" style="<?php echo ($option4['sfsi_plus_twitter_countsFrom']=='manual') ?  'display:none;' : '' ;?>">
-								3: <?php  _e( 'Enter a random Name, Descriptions and Website URL', 'ultimate-social-media-plus' ); ?> (<?php  _e( 'including the', 'ultimate-social-media-plus' ); ?> "http://", e.g. http://dummysitename.com)
+								3: <?php  _e( 'Enter a random Name, Descriptions and Website URL (including the "http://", e.g. http://dummysitename.com)', SFSI_PLUS_DOMAIN ); ?>
 							</li>
 							<li class="tw_follow_options" style="<?php echo ($option4['sfsi_plus_twitter_countsFrom']=='manual') ?  'display:none;' : '' ;?>">
-								4: <?php  _e( 'Go to','ultimate-social-media-plus'); ?> "<?php  _e( 'Keys and Access Tokens','ultimate-social-media-plus'); ?>" <?php  _e( 'tab and click on','ultimate-social-media-plus'); ?> "<?php  _e( 'Generate Token','ultimate-social-media-plus'); ?>" <?php  _e( 'in the', 'ultimate-social-media-plus' ); ?> "<?php  _e( 'Token actions', 'ultimate-social-media-plus' ); ?>" <?php  _e( 'section at the bottom', 'ultimate-social-media-plus' ); ?>
+								4: <?php  _e( 'Go to "Keys and Access Tokens" tab and click on "Generate Token" in the "Token actions" section at the bottom', SFSI_PLUS_DOMAIN ); ?>
 							</li>
 							<li class="tw_follow_options" style="<?php echo ($option4['sfsi_plus_twitter_countsFrom']=='manual') ?  'display:none;' : '' ;?>">
-								5: <?php _e('Then click on','ultimate-social-media-plus'); ?> "<?php _e('Test OAuth','ultimate-social-media-plus'); ?>" <?php _e('at the top right and you will see the 4 token key','ultimate-social-media-plus'); ?>
+								5: <?php _e('Then click on "Test OAuth" at the top right and you will see the 4 token key',SFSI_PLUS_DOMAIN ); ?>
 						   </li>
 						</ul>
 					</li>
 					<li>
 						<input name="sfsi_plus_twitter_countsFrom" <?php echo ($option4['sfsi_plus_twitter_countsFrom']=='manual') ?  'checked="true"' : '' ;?>  type="radio" value="manual" class="styled" />
-						<?php  _e( 'Enter the figure manually', 'ultimate-social-media-plus' ); ?>
+						<?php  _e( 'Enter the figure manually', SFSI_PLUS_DOMAIN ); ?>
 						<input name="sfsi_plus_twitter_manualCounts" type="text" class="input" value="<?php echo ($option4['sfsi_plus_twitter_manualCounts']!='') ?  $option4['sfsi_plus_twitter_manualCounts'] : '' ;?>" style="<?php echo ($option4['sfsi_plus_twitter_countsFrom']=='source') ?  'display:none;' : '' ;?>" />
 					</li>
 				</ul>
@@ -362,17 +330,17 @@
 				<ul>
 					<li>
 						<input name="sfsi_plus_google_countsFrom" <?php echo ($option4['sfsi_plus_google_countsFrom']=='likes') ?  'checked="true"' : '' ;?>  type="radio" value="likes" class="styled" />
-						<?php	_e('Retrieve the number of','ultimate-social-media-plus');	?> Google +1 (<?php	_e('on your blog','ultimate-social-media-plus');	?>)
+						<?php	_e('Retrieve the number of Google +1 (on your blog)',SFSI_PLUS_DOMAIN);	?>
 					</li>
 					<li>
 						<input name="sfsi_plus_google_countsFrom" <?php echo ($option4['sfsi_plus_google_countsFrom']=='follower') ?  'checked="true"' : '' ;?>  type="radio" value="follower" class="styled" />
-						 <?php  _e( 'Retrieve the number of google+ followers', 'ultimate-social-media-plus' ); ?>
+						 <?php  _e( 'Retrieve the number of google+ followers', SFSI_PLUS_DOMAIN ); ?>
 					</li>
 					<li>
 						<ul class="SFSI_lsngfrm">
 							<li class="google_option" style="<?php echo ($option4['sfsi_plus_google_countsFrom']=='manual') ?  'display:none;' : '' ;?>">
 								<label>
-									<?php  _e( 'Enter Google API Key', 'ultimate-social-media-plus' ); ?>
+									<?php  _e( 'Enter Google API Key', SFSI_PLUS_DOMAIN ); ?>
 								</label>
 								<input name="sfsi_plus_google_api_key" class="input_facebook" type="url" value="<?php echo (isset($option4['sfsi_plus_google_api_key']) && $option4['sfsi_plus_google_api_key']!='') ?  $option4['sfsi_plus_google_api_key'] : '' ;?>"  />
 							</li>
@@ -380,50 +348,35 @@
 						<ul class="SFSI_instructions">
 							<li class="google_option" style="<?php echo ($option4['sfsi_plus_twitter_countsFrom']=='manual') ?  'display:none;' : '' ;?>">
 								<?php
-									_e('Please make sure you have entered the','ultimate-social-media-plus');
-								?>
-                                <b>URL</b> 
-								<?php  _e( 'for', 'ultimate-social-media-plus' ); ?>
-                                <b><?php  _e( 'Visit my Google+ page at', 'ultimate-social-media-plus' ); ?>:</b>
-								 <?php  _e( 'like', 'ultimate-social-media-plus' ); ?>
-                                <b> https://plus.google.com/u/0/b/[pageid]</b> 
-								 <?php
-									_e(
-										'in Google+ settings under question number', 	
-										'ultimate-social-media-plus'
-									);
-								?> 2.
+									_e('Please make sure you have entered the <b>URL</b> for <b>Visit my Google+ page at:</b> like <b> https://plus.google.com/u/0/b/[pageid]</b> in Google+ settings under question number 2.',SFSI_PLUS_DOMAIN);	?>
+                                 
 							</li>
 							<li class="google_option" style="<?php echo ($option4['sfsi_plus_twitter_countsFrom']=='manual') ?  'display:none;' : '' ;?>">
 								<h3>
-									<?php  _e( 'To get the API key for', 'ultimate-social-media-plus' ); ?> G+:
+									<?php  _e( 'To get the API key for G+:', SFSI_PLUS_DOMAIN ); ?>
 								</h3>
 							</li>
 							<li class="google_option" style="<?php echo ($option4['sfsi_plus_twitter_countsFrom']=='manual') ?  'display:none;' : '' ;?>">
 								1: <?php
-										_e(
-											'Login to your Goolge account, go to',
-											'ultimate-social-media-plus'
-										);
-								?>
+										_e('Login to your Goolge account, go to', SFSI_PLUS_DOMAIN	); ?>
 								<a href="http://console.developers.google.com" target="_blank">
 									console.developers.google.com
 								</a>
-								<?php  _e( 'and create a new project', 'ultimate-social-media-plus' ); ?>
+								<?php  _e( 'and create a new project', SFSI_PLUS_DOMAIN ); ?>
 							</li>
 							<li class="google_option" style="<?php echo ($option4['sfsi_plus_twitter_countsFrom']=='manual') ?  'display:none;' : '' ;?>">
-								2: <?php  _e( 'Then on the left menu bar go to', 'ultimate-social-media-plus' ); ?> “<?php  _e( 'APIs & auth', 'ultimate-social-media-plus' ); ?>”, “<?php  _e( 'Credentials', 'ultimate-social-media-plus' ); ?>” <?php  _e( 'and click', 'ultimate-social-media-plus' ); ?> “<?php  _e( 'Create new key', 'ultimate-social-media-plus' ); ?>” <?php  _e( 'in the', 'ultimate-social-media-plus' ); ?> “<?php  _e( 'Public API access', 'ultimate-social-media-plus' ); ?>” <?php  _e( 'section', 'ultimate-social-media-plus' ); ?>
+								2: <?php  _e( 'Then on the left menu bar go to “APIs & auth”, “Credentials” and click “Create new key” in the “Public API access” section', SFSI_PLUS_DOMAIN ); ?>
 							</li>
 							<li class="google_option" style="<?php echo ($option4['sfsi_plus_twitter_countsFrom']=='manual') ?  'display:none;' : '' ;?>">
-								3: <?php  _e( 'There you select', 'ultimate-social-media-plus' ); ?> “<?php  _e( 'browser key', 'ultimate-social-media-plus' ); ?>” <?php  _e( 'and click', 'ultimate-social-media-plus' ); ?> “<?php  _e( 'Create', 'ultimate-social-media-plus' ); ?>”. <?php  _e( 'You will then be shown your API key', 'ultimate-social-media-plus' ); ?>.
+								3: <?php  _e( 'There you select “browser key” and click “Create”. You will then be shown your API key', SFSI_PLUS_DOMAIN ); ?>.
 							</li>
 							<li class="google_option" style="<?php echo ($option4['sfsi_plus_twitter_countsFrom']=='manual') ?  'display:none;' : '' ;?>">
-								<?php  _e( 'When you enter this key into the plugin for the first time', 'ultimate-social-media-plus' ); ?>, <?php  _e( 'it may take some time until the correct follower count is displayed on your website', 'ultimate-social-media-plus' ); ?>.
+								<?php  _e( 'When you enter this key into the plugin for the first time, it may take some time until the correct follower count is displayed on your website', SFSI_PLUS_DOMAIN ); ?>.
 							</li>
 						</ul>
 					</li>
 					<li><input name="sfsi_plus_google_countsFrom" <?php echo ($option4['sfsi_plus_google_countsFrom']=='manual') ?  'checked="true"' : '' ;?>  type="radio" value="manual" class="styled" />
-						 <?php  _e( 'Enter the figure manually', 'ultimate-social-media-plus' ); ?>
+						 <?php  _e( 'Enter the figure manually', SFSI_PLUS_DOMAIN ); ?>
 						 <input name="sfsi_plus_google_manualCounts" type="text" class="input" value="<?php echo ($option4['sfsi_plus_google_manualCounts']!='') ?  $option4['sfsi_plus_google_manualCounts'] : '' ;?>" style="<?php echo ($option4['sfsi_plus_google_countsFrom']=='follower' || $option4['sfsi_plus_google_countsFrom']=='likes') ?  'display:none;' : '' ;?>"  />
 					</li>
 				</ul>
@@ -468,7 +421,7 @@
 					</li><?php */?>
 					<li>
 						<input name="sfsi_plus_linkedIn_countsFrom" <?php echo ($option4['sfsi_plus_linkedIn_countsFrom']=='manual' || $option4['sfsi_plus_linkedIn_countsFrom']=='follower') ?  'checked="true"' : '' ;?>  type="radio" value="manual" class="styled" />
-						<?php  _e( 'Enter the figure manually', 'ultimate-social-media-plus' ); ?>
+						<?php  _e( 'Enter the figure manually', SFSI_PLUS_DOMAIN ); ?>
 						<input name="sfsi_plus_linkedIn_manualCounts" type="text" class="input" value="<?php echo ($option4['sfsi_plus_linkedIn_manualCounts']!='') ?  $option4['sfsi_plus_linkedIn_manualCounts'] : '' ;?>" style="<?php echo ($option4['sfsi_plus_linkedIn_countsFrom']=='follower') ?  'display:none;' : '' ;?>" />
 					</li>
 				</ul>
@@ -495,26 +448,26 @@
 				<ul>
 					<li>
 						<input name="sfsi_plus_youtube_countsFrom" type="radio" value="subscriber" <?php echo ($option4['sfsi_plus_youtube_countsFrom']=='subscriber') ?  'checked="true"' : '' ;?>  class="styled"  />
-						<?php  _e( 'Retrieve the number of Subscribers', 'ultimate-social-media-plus' ); ?>
+						<?php  _e( 'Retrieve the number of Subscribers', SFSI_PLUS_DOMAIN ); ?>
 					</li>
 					<li class="youtube_options" style="<?php echo ($option4['sfsi_plus_youtube_countsFrom']=='manual') ?  'display:none;' : '' ;?>">
                     	<div>
                             <label>
-                                <?php  _e( 'Enter Youtube User name', 'ultimate-social-media-plus' ); ?>
+                                <?php  _e( 'Enter Youtube User name', SFSI_PLUS_DOMAIN ); ?>
                             </label>
                             <input name="sfsi_plus_youtube_user" class="input_facebook" type="text" value="<?php echo (isset($option4['sfsi_plus_youtube_user']) && $option4['sfsi_plus_youtube_user']!='') ?  $option4['sfsi_plus_youtube_user'] : '' ;?>"/>
                         </div>
                         
                         <div>
                             <label>
-                                <?php  _e( 'Enter Youtube Channel id', 'ultimate-social-media-plus' ); ?>
+                                <?php  _e( 'Enter Youtube Channel id', SFSI_PLUS_DOMAIN ); ?>
                             </label>
                             <input name="sfsi_plus_youtube_channelId" class="input_facebook" type="text" value="<?php echo (isset($option4['sfsi_plus_youtube_channelId']) && $option4['sfsi_plus_youtube_channelId']!='') ? $option4['sfsi_plus_youtube_channelId'] : '' ;?>"/>
                         </div>    
 					</li>
 					<li>
 						<input name="sfsi_plus_youtube_countsFrom" type="radio" value="manual" <?php echo ($option4['sfsi_plus_youtube_countsFrom']=='manual') ?  'checked="true"' : '' ;?>  class="styled" />
-						<?php  _e( 'Enter the figure manually', 'ultimate-social-media-plus' ); ?>
+						<?php  _e( 'Enter the figure manually', SFSI_PLUS_DOMAIN ); ?>
 						<input name="sfsi_plus_youtube_manualCounts" type="text" class="input" value="<?php echo ($option4['sfsi_plus_youtube_manualCounts']!='') ?  $option4['sfsi_plus_youtube_manualCounts'] : '' ;?>" style="<?php echo ($option4['sfsi_plus_youtube_countsFrom']=='subscriber') ?  'display:none;' : '' ;?>" />
 					</li>
 				</ul>
@@ -541,12 +494,12 @@
 				<ul>
 					<li>
 						<input name="sfsi_plus_pinterest_countsFrom" <?php echo ($option4['sfsi_plus_pinterest_countsFrom']=='pins') ?  'checked="true"' : '' ;?>  type="radio" value="pins" class="styled"  />
-						<?php  _e( 'Retrieve the number of Pins', 'ultimate-social-media-plus' ); ?>
+						<?php  _e( 'Retrieve the number of Pins', SFSI_PLUS_DOMAIN ); ?>
 					</li>
 					<li>
 						<input name="sfsi_plus_pinterest_countsFrom" <?php echo ($option4['sfsi_plus_pinterest_countsFrom']=='manual') ?  'checked="true"' : '' ;?>  type="radio" value="manual" class="styled" />
 						<label class="high_prb">
-							<?php  _e( 'Enter the figure manually', 'ultimate-social-media-plus' ); ?>
+							<?php  _e( 'Enter the figure manually', SFSI_PLUS_DOMAIN ); ?>
 						</label>
 						<input name="sfsi_plus_pinterest_manualCounts" type="text" class="input" value="<?php echo ($option4['sfsi_plus_pinterest_manualCounts']!='') ?  $option4['sfsi_plus_pinterest_manualCounts'] : '' ;?>" style="<?php echo ($option4['sfsi_plus_pinterest_countsFrom']=='pins') ?  'display:none;' : '' ;?>" />
 					</li>
@@ -574,18 +527,18 @@
 				<ul>
 					<li>
 						<input name="sfsi_plus_instagram_countsFrom" <?php echo ($option4['sfsi_plus_instagram_countsFrom']=='followers') ?  'checked="true"' : '' ;?>  type="radio" value="followers" class="styled"  />
-						<?php  _e( 'Retrieve the number of Instagram followers', 'ultimate-social-media-plus' ); ?>
+						<?php  _e( 'Retrieve the number of Instagram followers', SFSI_PLUS_DOMAIN ); ?>
 					</li>
 					<li class="instagram_userLi" style="<?php echo ($option4['sfsi_plus_instagram_countsFrom']=='manual') ?  'display:none;' : '' ;?>">
 						<label>
-							<?php  _e( 'Enter Instagram User name', 'ultimate-social-media-plus' ); ?>
+							<?php  _e( 'Enter Instagram User name', SFSI_PLUS_DOMAIN ); ?>
 						</label>
 						<input name="sfsi_plus_instagram_User" class="input_facebook" type="text" value="<?php echo (isset($option4['sfsi_plus_instagram_User']) && $option4['sfsi_plus_instagram_User']!='') ?  $option4['sfsi_plus_instagram_User'] : '' ;?>"  />
 					</li>
 					<li>
 						<input name="sfsi_plus_instagram_countsFrom" <?php echo ($option4['sfsi_plus_instagram_countsFrom']=='manual') ?  'checked="true"' : '' ;?>  type="radio" value="manual" class="styled" />
 						<label class="high_prb">
-							<?php  _e( 'Enter the figure manually', 'ultimate-social-media-plus' ); ?>
+							<?php  _e( 'Enter the figure manually', SFSI_PLUS_DOMAIN ); ?>
 						</label>
 							<input name="sfsi_plus_instagram_manualCounts" type="text" class="input" value="<?php echo ($option4['sfsi_plus_instagram_manualCounts']!='') ?  $option4['sfsi_plus_instagram_manualCounts'] : '' ;?>" style="<?php echo ($option4['sfsi_plus_instagram_countsFrom']=='followers') ?  'display:none;' : '' ;?>" />
 					</li>
@@ -613,12 +566,12 @@
 				<ul>
 					<li>
 						<input name="sfsi_plus_shares_countsFrom" <?php echo ($option4['sfsi_plus_shares_countsFrom']=='shares') ?  'checked="true"' : '' ;?>  type="radio" value="shares" class="styled" />
-						<?php  _e( 'Retrieve the number of shares', 'ultimate-social-media-plus' ); ?>
+						<?php  _e( 'Retrieve the number of shares', SFSI_PLUS_DOMAIN ); ?>
 					</li>
 					<li>
 						<input name="sfsi_plus_shares_countsFrom" <?php echo ($option4['sfsi_plus_shares_countsFrom']=='manual') ?  'checked="true"' : '' ;?>  type="radio" value="manual" class="styled" />
 						<label class="high_prb">
-							 <?php  _e( 'Enter the figure manually', 'ultimate-social-media-plus' ); ?>
+							 <?php  _e( 'Enter the figure manually', SFSI_PLUS_DOMAIN ); ?>
 						</label>
 						<input name="sfsi_plus_shares_manualCounts" type="text" class="input" value="<?php echo ($option4['sfsi_plus_pinterest_manualCounts']!='') ?  $option4['sfsi_plus_pinterest_manualCounts'] : '' ;?>" style="<?php echo ($option4['sfsi_plus_shares_countsFrom']=='shares') ?  'display:none;' : '' ;?>" />
 					</li>
@@ -647,7 +600,7 @@
 					<li>
 						<input name="sfsi_plus_houzz_countsFrom" checked="true" type="radio" value="manual" class="styled" />
 						<label class="high_prb">
-							<?php  _e( 'Enter the figure manually', 'ultimate-social-media-plus' ); ?>
+							<?php  _e( 'Enter the figure manually', SFSI_PLUS_DOMAIN ); ?>
 						</label>
 						<input name="sfsi_plus_houzz_manualCounts" type="text" class="input" value="<?php echo (isset($option4['sfsi_plus_houzz_manualCounts']) && $option4['sfsi_plus_houzz_manualCounts']!='') ?  $option4['sfsi_plus_houzz_manualCounts'] : '20' ;?>" />
 					</li>
@@ -663,12 +616,12 @@
 		<img src="<?php echo SFSI_PLUS_PLUGURL ?>images/ajax-loader.gif" class="loader-img" />
 		<?php  $nonce = wp_create_nonce("update_plus_step4"); ?>
 		<a href="javascript:;" id="sfsi_plus_save4" title="Save" data-nonce="<?php echo $nonce;?>">
-			<?php  _e( 'Save', 'ultimate-social-media-plus' ); ?>
+			<?php  _e( 'Save', SFSI_PLUS_DOMAIN ); ?>
 		</a>
 	</div>
 	<!-- END SAVE BUTTON SECTION   -->
 	<a class="sfsiColbtn closeSec" href="javascript:;">
-		<?php  _e( 'Collapse area', 'ultimate-social-media-plus' ); ?>
+		<?php  _e( 'Collapse area', SFSI_PLUS_DOMAIN ); ?>
 	</a>
 	<label class="closeSec"></label>
 	<!-- ERROR AND SUCCESS MESSAGE AREA-->

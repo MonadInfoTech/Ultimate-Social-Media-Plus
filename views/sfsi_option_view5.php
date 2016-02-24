@@ -64,365 +64,365 @@
 		?>
 		<select name="<?php echo $name; ?>" id="<?php echo $name; ?>" data-iconUrl="<?php echo $visit_icon; ?>" class="<?php echo $name; ?>-preview lanOnchange">
 			<option value="<?php echo $follow; ?>_ar" <?php echo ($option5[$name]== $follow.'_ar') ?  'selected="selected"' : '' ; ?>>
-				<?php  _e( 'العربية', 'ultimate-social-media-plus' ); ?>
+				<?php  _e( 'العربية', SFSI_PLUS_DOMAIN ); ?>
 				<span> - << </span> 
-				<span><?php  _e($follow, 'ultimate-social-media-plus' ); ?></span>
+				<span><?php  _e($follow, SFSI_PLUS_DOMAIN ); ?></span>
 				<span> >> </span>
 			</option>
 			<option value="<?php echo $visitme; ?>_ar" <?php echo ($option5[$name]== $visitme.'_ar') ?  'selected="selected"' : '' ; ?>>
-				<?php  _e( 'العربية', 'ultimate-social-media-plus' ); ?>
+				<?php  _e( 'العربية', SFSI_PLUS_DOMAIN ); ?>
 				<span> - << </span>
-				<span><?php  _e($visitme, 'ultimate-social-media-plus' ); ?></span>
+				<span><?php  _e($visitme, SFSI_PLUS_DOMAIN ); ?></span>
 				<span> >> </span>
 			</option>
 			
 			<option value="<?php echo $follow; ?>_bg_BG" <?php echo ($option5[$name]== $follow.'_bg_BG') ?  'selected="selected"' : '' ; ?>>
-				<?php  _e( 'Български', 'ultimate-social-media-plus' ); ?>
+				<?php  _e( 'Български', SFSI_PLUS_DOMAIN ); ?>
 				<span> - << </span> 
-				<span><?php  _e($follow, 'ultimate-social-media-plus' ); ?></span>
+				<span><?php  _e($follow, SFSI_PLUS_DOMAIN ); ?></span>
 				<span> >> </span>
 			</option>
 			<option value="<?php echo $visitme; ?>_bg_BG" <?php echo ($option5[$name]== $visitme.'_bg_BG') ?  'selected="selected"' : '' ; ?>>
-				<?php  _e( 'Български', 'ultimate-social-media-plus' ); ?>
+				<?php  _e( 'Български', SFSI_PLUS_DOMAIN ); ?>
 				<span> - << </span>
-				<span><?php  _e($visitme, 'ultimate-social-media-plus' ); ?></span>
+				<span><?php  _e($visitme, SFSI_PLUS_DOMAIN ); ?></span>
 				<span> >> </span>
 			</option>
 			
 			<option value="<?php echo $follow; ?>_zh_CN" <?php echo ($option5[$name]== $follow.'_zh_CN') ?  'selected="selected"' : '' ; ?>>
-				<?php  _e( '简体中文', 'ultimate-social-media-plus' ); ?>
+				<?php  _e( '简体中文', SFSI_PLUS_DOMAIN ); ?>
 				<span> - << </span> 
-				<span><?php  _e($follow, 'ultimate-social-media-plus' ); ?></span>
+				<span><?php  _e($follow, SFSI_PLUS_DOMAIN ); ?></span>
 				<span> >> </span>
 			</option>
 			<option value="<?php echo $visitme; ?>_zh_CN" <?php echo ($option5[$name]== $visitme.'_zh_CN') ?  'selected="selected"' : '' ; ?>>
-				<?php  _e( '简体中文', 'ultimate-social-media-plus' ); ?>
+				<?php  _e( '简体中文', SFSI_PLUS_DOMAIN ); ?>
 				<span> - << </span>
-				<span><?php  _e($visitme, 'ultimate-social-media-plus' ); ?></span>
+				<span><?php  _e($visitme, SFSI_PLUS_DOMAIN ); ?></span>
 				<span> >> </span>
 			</option>
 			
 			<option value="<?php echo $follow; ?>_cs_CZ" <?php echo ($option5[$name]== $follow.'_cs_CZ') ?  'selected="selected"' : '' ; ?>>
-				<?php  _e( 'Čeština‎', 'ultimate-social-media-plus' ); ?>
+				<?php  _e( 'Čeština‎', SFSI_PLUS_DOMAIN ); ?>
 				<span> - << </span> 
-				<span><?php  _e($follow, 'ultimate-social-media-plus' ); ?></span>
+				<span><?php  _e($follow, SFSI_PLUS_DOMAIN ); ?></span>
 				<span> >> </span>
 			</option>
 			<option value="<?php echo $visitme; ?>_cs_CZ" <?php echo ($option5[$name]== $visitme.'_cs_CZ') ?  'selected="selected"' : '' ; ?>>
-				<?php  _e( 'Čeština‎', 'ultimate-social-media-plus' ); ?>
+				<?php  _e( 'Čeština‎', SFSI_PLUS_DOMAIN ); ?>
 				<span> - << </span>
-				<span><?php  _e($visitme, 'ultimate-social-media-plus' ); ?></span>
+				<span><?php  _e($visitme, SFSI_PLUS_DOMAIN ); ?></span>
 				<span> >> </span>
 			</option>
 			
 			<option value="<?php echo $follow; ?>_da_DK" <?php echo ($option5[$name]== $follow.'_da_DK') ?  'selected="selected"' : '' ; ?>>
-				<?php  _e( 'Dansk', 'ultimate-social-media-plus' ); ?>
+				<?php  _e( 'Dansk', SFSI_PLUS_DOMAIN ); ?>
 				<span> - << </span> 
-				<span><?php  _e($follow, 'ultimate-social-media-plus' ); ?></span>
+				<span><?php  _e($follow, SFSI_PLUS_DOMAIN ); ?></span>
 				<span> >> </span>	
 			</option>
 			<option value="<?php echo $visitme; ?>_da_DK" <?php echo ($option5[$name]== $visitme.'_da_DK') ?  'selected="selected"' : '' ; ?>>
-				<?php  _e( 'Dansk', 'ultimate-social-media-plus' ); ?>
+				<?php  _e( 'Dansk', SFSI_PLUS_DOMAIN ); ?>
 				<span> - << </span>
-				<span><?php  _e($visitme, 'ultimate-social-media-plus' ); ?></span>
+				<span><?php  _e($visitme, SFSI_PLUS_DOMAIN ); ?></span>
 				<span> >> </span>
 			</option>
 			
 			<option value="<?php echo $follow; ?>_nl_NL" <?php echo ($option5[$name]== $follow.'_nl_NL') ?  'selected="selected"' : '' ; ?>>
-				<?php  _e( 'Nederlands', 'ultimate-social-media-plus' ); ?>
+				<?php  _e( 'Nederlands', SFSI_PLUS_DOMAIN ); ?>
 				<span> - << </span> 
-				<span><?php  _e($follow, 'ultimate-social-media-plus' ); ?></span>
+				<span><?php  _e($follow, SFSI_PLUS_DOMAIN ); ?></span>
 				<span> >> </span>
 			</option>
 			<option value="<?php echo $visitme; ?>_nl_NL" <?php echo ($option5[$name]== $visitme.'_nl_NL') ?  'selected="selected"' : '' ; ?>>
-				<?php  _e( 'Nederlands', 'ultimate-social-media-plus' ); ?>
+				<?php  _e( 'Nederlands', SFSI_PLUS_DOMAIN ); ?>
 				<span> - << </span>
-				<span><?php  _e($visitme, 'ultimate-social-media-plus' ); ?></span>
+				<span><?php  _e($visitme, SFSI_PLUS_DOMAIN ); ?></span>
 				<span> >> </span>
 			</option>
 			
 			<option value="<?php echo $follow; ?>_fi" <?php echo ($option5[$name]== $follow.'_fi') ?  'selected="selected"' : '' ; ?>>
-				<?php  _e( 'Suomi', 'ultimate-social-media-plus' ); ?>
+				<?php  _e( 'Suomi', SFSI_PLUS_DOMAIN ); ?>
 				<span> - << </span> 
-				<span><?php  _e($follow, 'ultimate-social-media-plus' ); ?></span>
+				<span><?php  _e($follow, SFSI_PLUS_DOMAIN ); ?></span>
 				<span> >> </span>
 			</option>
 			<option value="<?php echo $visitme; ?>_fi" <?php echo ($option5[$name]== $visitme.'_fi') ?  'selected="selected"' : '' ; ?>>
-				<?php  _e( 'Suomi', 'ultimate-social-media-plus' ); ?>
+				<?php  _e( 'Suomi', SFSI_PLUS_DOMAIN ); ?>
 				<span> - << </span>
-				<span><?php  _e($visitme, 'ultimate-social-media-plus' ); ?></span>
+				<span><?php  _e($visitme, SFSI_PLUS_DOMAIN ); ?></span>
 				<span> >> </span>
 			</option>
 			
 			<option value="<?php echo $follow; ?>_fr_FR" <?php echo ($option5[$name]== $follow.'_fr_FR') ?  'selected="selected"' : '' ; ?>>
-				<?php  _e( 'Français', 'ultimate-social-media-plus' ); ?>
+				<?php  _e( 'Français', SFSI_PLUS_DOMAIN ); ?>
 				<span> - << </span> 
-				<span><?php  _e($follow, 'ultimate-social-media-plus' ); ?></span>
+				<span><?php  _e($follow, SFSI_PLUS_DOMAIN ); ?></span>
 				<span> >> </span>	
 			</option>
 			<option value="<?php echo $visitme; ?>_fr_FR" <?php echo ($option5[$name]== $visitme.'_fr_FR') ?  'selected="selected"' : '' ; ?>>
-				<?php  _e( 'Français', 'ultimate-social-media-plus' ); ?>
+				<?php  _e( 'Français', SFSI_PLUS_DOMAIN ); ?>
 				<span> - << </span>
-				<span><?php  _e($visitme, 'ultimate-social-media-plus' ); ?></span>
+				<span><?php  _e($visitme, SFSI_PLUS_DOMAIN ); ?></span>
 				<span> >> </span>
 			</option>
 			
 			<option value="<?php echo $follow; ?>_de_DE" <?php echo ($option5[$name]== $follow.'_de_DE') ?  'selected="selected"' : '' ; ?>>
-				<?php  _e( 'Deutsch', 'ultimate-social-media-plus' ); ?>
+				<?php  _e( 'Deutsch', SFSI_PLUS_DOMAIN ); ?>
 				<span> - << </span> 
-				<span><?php  _e($follow, 'ultimate-social-media-plus' ); ?></span>
+				<span><?php  _e($follow, SFSI_PLUS_DOMAIN ); ?></span>
 				<span> >> </span>	
 			</option>
 			<option value="<?php echo $visitme; ?>_de_DE" <?php echo ($option5[$name]== $visitme.'_de_DE') ?  'selected="selected"' : '' ; ?>>
-				<?php  _e( 'Deutsch', 'ultimate-social-media-plus' ); ?>
+				<?php  _e( 'Deutsch', SFSI_PLUS_DOMAIN ); ?>
 				<span> - << </span>
-				<span><?php  _e($visitme, 'ultimate-social-media-plus' ); ?></span>
+				<span><?php  _e($visitme, SFSI_PLUS_DOMAIN ); ?></span>
 				<span> >> </span>
 			</option>
 			
 			<option value="<?php echo $follow; ?>_en_US" <?php echo ($option5[$name]== $follow.'_en_US') ? 'selected="selected"' : '' ; ?>>
-				<?php  _e( 'English', 'ultimate-social-media-plus' ); ?>
+				<?php  _e( 'English', SFSI_PLUS_DOMAIN ); ?>
 				<span> - << </span> 
-				<span><?php  _e($follow, 'ultimate-social-media-plus' ); ?></span>
+				<span><?php  _e($follow, SFSI_PLUS_DOMAIN ); ?></span>
 				<span> >> </span>
 			</option>
 			<option value="<?php echo $visitme; ?>_en_US" <?php echo ($option5[$name]== $visitme.'_en_US') ?  'selected="selected"' : '' ; ?>>
-				<?php  _e( 'English', 'ultimate-social-media-plus' ); ?>
+				<?php  _e( 'English', SFSI_PLUS_DOMAIN ); ?>
 				<span> - << </span>
-				<span><?php  _e($visitme, 'ultimate-social-media-plus' ); ?></span>
+				<span><?php  _e($visitme, SFSI_PLUS_DOMAIN ); ?></span>
 				<span> >> </span>	
 			</option>
 			
 			<option value="<?php echo $follow; ?>_el" <?php echo ($option5[$name]== $follow.'_el') ?  'selected="selected"' : '' ; ?>>
-				<?php  _e( 'Ελληνικά', 'ultimate-social-media-plus' ); ?>
+				<?php  _e( 'Ελληνικά', SFSI_PLUS_DOMAIN ); ?>
 				<span> - << </span> 
-				<span><?php  _e($follow, 'ultimate-social-media-plus' ); ?></span>
+				<span><?php  _e($follow, SFSI_PLUS_DOMAIN ); ?></span>
 				<span> >> </span>	
 			</option>
 			<option value="<?php echo $visitme; ?>_el" <?php echo ($option5[$name]== $visitme.'_el') ?  'selected="selected"' : '' ; ?>>
-				<?php  _e( 'Ελληνικά', 'ultimate-social-media-plus' ); ?>
+				<?php  _e( 'Ελληνικά', SFSI_PLUS_DOMAIN ); ?>
 				<span> - << </span>
-				<span><?php  _e($visitme, 'ultimate-social-media-plus' ); ?></span>
+				<span><?php  _e($visitme, SFSI_PLUS_DOMAIN ); ?></span>
 				<span> >> </span>
 			</option>
 			
 			<option value="<?php echo $follow; ?>_hu_HU" <?php echo ($option5[$name]==$follow.'_hu_HU') ?  'selected="selected"' : '' ; ?>>
-				<?php  _e( 'Magyar', 'ultimate-social-media-plus' ); ?>
+				<?php  _e( 'Magyar', SFSI_PLUS_DOMAIN ); ?>
 				<span> - << </span> 
-				<span><?php  _e($follow, 'ultimate-social-media-plus' ); ?></span>
+				<span><?php  _e($follow, SFSI_PLUS_DOMAIN ); ?></span>
 				<span> >> </span>	
 			</option>
 			<option value="<?php echo $visitme; ?>_hu_HU" <?php echo ($option5[$name]== $visitme.'_hu_HU') ?  'selected="selected"' : '' ; ?>>
-				<?php  _e( 'Magyar', 'ultimate-social-media-plus' ); ?>
+				<?php  _e( 'Magyar', SFSI_PLUS_DOMAIN ); ?>
 				<span> - << </span>
-				<span><?php  _e($visitme, 'ultimate-social-media-plus' ); ?></span>
+				<span><?php  _e($visitme, SFSI_PLUS_DOMAIN ); ?></span>
 				<span> >> </span>
 			</option>
 			
 			<option value="<?php echo $follow; ?>_id_ID" <?php echo ($option5[$name]== $follow.'_id_ID') ?  'selected="selected"' : '' ; ?>>
-				<?php  _e( 'Bahasa Indonesia', 'ultimate-social-media-plus' ); ?>
+				<?php  _e( 'Bahasa Indonesia', SFSI_PLUS_DOMAIN ); ?>
 				<span> - << </span> 
-				<span><?php  _e($follow, 'ultimate-social-media-plus' ); ?></span>
+				<span><?php  _e($follow, SFSI_PLUS_DOMAIN ); ?></span>
 				<span> >> </span>
 			</option>
 			<option value="<?php echo $visitme; ?>_id_ID" <?php echo ($option5[$name]== $visitme.'_id_ID') ?  'selected="selected"' : '' ; ?>>
-				<?php  _e( 'Bahasa Indonesia', 'ultimate-social-media-plus' ); ?>
+				<?php  _e( 'Bahasa Indonesia', SFSI_PLUS_DOMAIN ); ?>
 				<span> - << </span>
-				<span><?php  _e($visitme, 'ultimate-social-media-plus' ); ?></span>
+				<span><?php  _e($visitme, SFSI_PLUS_DOMAIN ); ?></span>
 				<span> >> </span>
 			</option>
 			
 			<option value="<?php echo $follow; ?>_it_IT" <?php echo ($option5[$name]== $follow.'_it_IT') ?  'selected="selected"' : '' ; ?>>
-				<?php  _e( 'Italiano', 'ultimate-social-media-plus' ); ?>
+				<?php  _e( 'Italiano', SFSI_PLUS_DOMAIN ); ?>
 				<span> - << </span> 
-				<span><?php  _e($follow, 'ultimate-social-media-plus' ); ?></span>
+				<span><?php  _e($follow, SFSI_PLUS_DOMAIN ); ?></span>
 				<span> >> </span>
 			</option>
 			<option value="<?php echo $visitme; ?>_it_IT" <?php echo ($option5[$name]== $visitme.'_it_IT') ?  'selected="selected"' : '' ; ?>>
-				<?php  _e( 'Italiano', 'ultimate-social-media-plus' ); ?>
+				<?php  _e( 'Italiano', SFSI_PLUS_DOMAIN ); ?>
 				<span> - << </span>
-				<span><?php  _e($visitme, 'ultimate-social-media-plus' ); ?></span>
+				<span><?php  _e($visitme, SFSI_PLUS_DOMAIN ); ?></span>
 				<span> >> </span>
 			</option>
 			
 			<option value="<?php echo $follow; ?>_ja" <?php echo ($option5[$name]== $follow.'_ja') ?  'selected="selected"' : '' ; ?>>
-				<?php  _e( '日本語', 'ultimate-social-media-plus' ); ?>
+				<?php  _e( '日本語', SFSI_PLUS_DOMAIN ); ?>
 				<span> - << </span> 
-				<span><?php  _e($follow, 'ultimate-social-media-plus' ); ?></span>
+				<span><?php  _e($follow, SFSI_PLUS_DOMAIN ); ?></span>
 				<span> >> </span>
 			</option>
 			<option value="<?php echo $visitme; ?>_ja" <?php echo ($option5[$name]== $visitme.'_ja') ?  'selected="selected"' : '' ; ?>>
-				<?php  _e( '日本語', 'ultimate-social-media-plus' ); ?>
+				<?php  _e( '日本語', SFSI_PLUS_DOMAIN ); ?>
 				<span> - << </span>
-				<span><?php  _e($visitme, 'ultimate-social-media-plus' ); ?></span>
+				<span><?php  _e($visitme, SFSI_PLUS_DOMAIN ); ?></span>
 				<span> >> </span>
 			</option>
 			
 			<option value="<?php echo $follow; ?>_ko_KR" <?php echo ($option5[$name]== $follow.'_ko_KR') ?  'selected="selected"' : '' ; ?>>
-				<?php  _e( '한국어', 'ultimate-social-media-plus' ); ?>
+				<?php  _e( '한국어', SFSI_PLUS_DOMAIN ); ?>
 				<span> - << </span> 
-				<span><?php  _e($follow, 'ultimate-social-media-plus' ); ?></span>
+				<span><?php  _e($follow, SFSI_PLUS_DOMAIN ); ?></span>
 				<span> >> </span>
 			</option>
 			<option value="<?php echo $visitme; ?>_ko_KR" <?php echo ($option5[$name]== $visitme.'_ko_KR') ?  'selected="selected"' : '' ; ?>>
-				<?php  _e( '한국어', 'ultimate-social-media-plus' ); ?>
+				<?php  _e( '한국어', SFSI_PLUS_DOMAIN ); ?>
 				<span> - << </span>
-				<span><?php  _e($visitme, 'ultimate-social-media-plus' ); ?></span>
+				<span><?php  _e($visitme, SFSI_PLUS_DOMAIN ); ?></span>
 				<span> >> </span>
 			</option>
 			
 			<option value="<?php echo $follow; ?>_nb_NO" <?php echo ($option5[$name]== $follow.'_nb_NO') ?  'selected="selected"' : '' ; ?>>
-				<?php  _e( 'Norsk bokmål', 'ultimate-social-media-plus' ); ?>
+				<?php  _e( 'Norsk bokmål', SFSI_PLUS_DOMAIN ); ?>
 				<span> - << </span> 
-				<span><?php  _e($follow, 'ultimate-social-media-plus' ); ?></span>
+				<span><?php  _e($follow, SFSI_PLUS_DOMAIN ); ?></span>
 				<span> >> </span>
 			</option>
 			<option value="<?php echo $visitme; ?>_nb_NO" <?php echo ($option5[$name]== $visitme.'_nb_NO') ?  'selected="selected"' : '' ; ?>>
-				<?php  _e( 'Norsk bokmål', 'ultimate-social-media-plus' ); ?>
+				<?php  _e( 'Norsk bokmål', SFSI_PLUS_DOMAIN ); ?>
 				<span> - << </span>
-				<span><?php  _e($visitme, 'ultimate-social-media-plus' ); ?></span>
+				<span><?php  _e($visitme, SFSI_PLUS_DOMAIN ); ?></span>
 				<span> >> </span>
 			</option>
 			
 			<option value="<?php echo $follow; ?>_fa_IR" <?php echo ($option5[$name]== $follow.'_fa_IR') ?  'selected="selected"' : '' ; ?>>
-				<?php  _e( 'فارسی', 'ultimate-social-media-plus' ); ?>
+				<?php  _e( 'فارسی', SFSI_PLUS_DOMAIN ); ?>
 				<span> - << </span> 
-				<span><?php  _e($follow, 'ultimate-social-media-plus' ); ?></span>
+				<span><?php  _e($follow, SFSI_PLUS_DOMAIN ); ?></span>
 				<span> >> </span>
 			</option>
-			<option value="<?php echo $visitme; ?>_fa_IR" <?php echo ($option5[$name]== $visitme.'_fa_IR') ?  'selected="selected"' : '' ; ?>><?php  _e( 'فارسی', 'ultimate-social-media-plus' ); ?>
+			<option value="<?php echo $visitme; ?>_fa_IR" <?php echo ($option5[$name]== $visitme.'_fa_IR') ?  'selected="selected"' : '' ; ?>><?php  _e( 'فارسی', SFSI_PLUS_DOMAIN ); ?>
 				<span> - << </span>
-				<span><?php  _e($visitme, 'ultimate-social-media-plus' ); ?></span>
+				<span><?php  _e($visitme, SFSI_PLUS_DOMAIN ); ?></span>
 				<span> >> </span>
 			</option>
 			
 			<option value="<?php echo $follow; ?>_pl_PL" <?php echo ($option5[$name]== $follow.'_pl_PL') ?  'selected="selected"' : '' ; ?>>
-				<?php  _e( 'Polski', 'ultimate-social-media-plus' ); ?>
+				<?php  _e( 'Polski', SFSI_PLUS_DOMAIN ); ?>
 				<span> - << </span> 
-				<span><?php  _e($follow, 'ultimate-social-media-plus' ); ?></span>
+				<span><?php  _e($follow, SFSI_PLUS_DOMAIN ); ?></span>
 				<span> >> </span>
 			</option>
 			<option value="<?php echo $visitme; ?>_pl_PL" <?php echo ($option5[$name]== $visitme.'_pl_PL') ?  'selected="selected"' : '' ; ?>>
-				<?php  _e( 'Polski', 'ultimate-social-media-plus' ); ?>
+				<?php  _e( 'Polski', SFSI_PLUS_DOMAIN ); ?>
 				<span> - << </span>
-				<span><?php  _e($visitme, 'ultimate-social-media-plus' ); ?></span>
+				<span><?php  _e($visitme, SFSI_PLUS_DOMAIN ); ?></span>
 				<span> >> </span>
 			</option>
 			
 			<option value="<?php echo $follow; ?>_pt_PT" <?php echo ($option5[$name]== $follow.'_pt_PT') ?  'selected="selected"' : '' ; ?>>
-				<?php  _e( 'Português', 'ultimate-social-media-plus' ); ?>
+				<?php  _e( 'Português', SFSI_PLUS_DOMAIN ); ?>
 				<span> - << </span> 
-				<span><?php  _e($follow, 'ultimate-social-media-plus' ); ?></span>
+				<span><?php  _e($follow, SFSI_PLUS_DOMAIN ); ?></span>
 				<span> >> </span>
 			</option>
 			<option value="<?php echo $visitme; ?>_pt_PT" <?php echo ($option5[$name]== $visitme.'_pt_PT') ?  'selected="selected"' : '' ; ?>>
-				<?php  _e( 'Português', 'ultimate-social-media-plus' ); ?>
+				<?php  _e( 'Português', SFSI_PLUS_DOMAIN ); ?>
 				<span> - << </span>
-				<span><?php  _e($visitme, 'ultimate-social-media-plus' ); ?></span>
+				<span><?php  _e($visitme, SFSI_PLUS_DOMAIN ); ?></span>
 				<span> >> </span>
 			</option>
 			
 			<option value="<?php echo $follow; ?>_ro_RO" <?php echo ($option5[$name]== $follow.'_ro_RO') ?  'selected="selected"' : '' ; ?>>
-				<?php  _e( 'Română', 'ultimate-social-media-plus' ); ?>
+				<?php  _e( 'Română', SFSI_PLUS_DOMAIN ); ?>
 				<span> - << </span> 
-				<span><?php  _e($follow, 'ultimate-social-media-plus' ); ?></span>
+				<span><?php  _e($follow, SFSI_PLUS_DOMAIN ); ?></span>
 				<span> >> </span>
 			</option>
 			<option value="<?php echo $visitme; ?>_ro_RO" <?php echo ($option5[$name]== $visitme.'_ro_RO') ?  'selected="selected"' : '' ; ?>>
-				<?php  _e( 'Română', 'ultimate-social-media-plus' ); ?>
+				<?php  _e( 'Română', SFSI_PLUS_DOMAIN ); ?>
 				<span> - << </span>
-				<span><?php  _e($visitme, 'ultimate-social-media-plus' ); ?></span>
+				<span><?php  _e($visitme, SFSI_PLUS_DOMAIN ); ?></span>
 				<span> >> </span>
 			</option>
 			
 			<option value="<?php echo $follow; ?>_ru_RU" <?php echo ($option5[$name]== $follow.'_ru_RU') ?  'selected="selected"' : '' ; ?>>
-				<?php  _e( 'Русский', 'ultimate-social-media-plus' ); ?>
+				<?php  _e( 'Русский', SFSI_PLUS_DOMAIN ); ?>
 				<span> - << </span> 
-				<span><?php  _e($follow, 'ultimate-social-media-plus' ); ?></span>
+				<span><?php  _e($follow, SFSI_PLUS_DOMAIN ); ?></span>
 				<span> >> </span>
 			</option>
 			<option value="<?php echo $visitme; ?>_ru_RU" <?php echo ($option5[$name]== $visitme.'_ru_RU') ?  'selected="selected"' : '' ; ?>>
-				<?php  _e( 'Русский', 'ultimate-social-media-plus' ); ?>
+				<?php  _e( 'Русский', SFSI_PLUS_DOMAIN ); ?>
 				<span> - << </span>
-				<span><?php  _e($visitme, 'ultimate-social-media-plus' ); ?></span>
+				<span><?php  _e($visitme, SFSI_PLUS_DOMAIN ); ?></span>
 				<span> >> </span>
 			</option>
 			
 			<option value="<?php echo $follow; ?>_sk_SK" <?php echo ($option5[$name]== $follow.'_sk_SK') ?  'selected="selected"' : '' ; ?>>
-				<?php  _e( 'Slovenčina', 'ultimate-social-media-plus' ); ?>
+				<?php  _e( 'Slovenčina', SFSI_PLUS_DOMAIN ); ?>
 				<span> - << </span> 
-				<span><?php  _e($follow, 'ultimate-social-media-plus' ); ?></span>
+				<span><?php  _e($follow, SFSI_PLUS_DOMAIN ); ?></span>
 				<span> >> </span>
 			</option>
 			<option value="<?php echo $visitme; ?>_sk_SK" <?php echo ($option5[$name]== $visitme.'_sk_SK') ?  'selected="selected"' : '' ; ?>>
-				<?php  _e( 'Slovenčina', 'ultimate-social-media-plus' ); ?>
+				<?php  _e( 'Slovenčina', SFSI_PLUS_DOMAIN ); ?>
 				<span> - << </span>
-				<span><?php  _e($visitme, 'ultimate-social-media-plus' ); ?></span>
+				<span><?php  _e($visitme, SFSI_PLUS_DOMAIN ); ?></span>
 				<span> >> </span>
 			</option>
 			
 			<option value="<?php echo $follow; ?>_es_ES" <?php echo ($option5[$name]== $follow.'_es_ES') ?  'selected="selected"' : '' ; ?>>
-				<?php  _e( 'Español', 'ultimate-social-media-plus' ); ?>
+				<?php  _e( 'Español', SFSI_PLUS_DOMAIN ); ?>
 				<span> - << </span> 
-				<span><?php  _e($follow, 'ultimate-social-media-plus' ); ?></span>
+				<span><?php  _e($follow, SFSI_PLUS_DOMAIN ); ?></span>
 				<span> >> </span>
 			</option>
 			<option value="<?php echo $visitme; ?>_es_ES" <?php echo ($option5[$name]== $visitme.'_es_ES') ?  'selected="selected"' : '' ; ?>>
-				<?php  _e( 'Español', 'ultimate-social-media-plus' ); ?>
+				<?php  _e( 'Español', SFSI_PLUS_DOMAIN ); ?>
 				<span> - << </span>
-				<span><?php  _e($visitme, 'ultimate-social-media-plus' ); ?></span>
+				<span><?php  _e($visitme, SFSI_PLUS_DOMAIN ); ?></span>
 				<span> >> </span>
 			</option>
 			
 			<option value="<?php echo $follow; ?>_sv_SE" <?php echo ($option5[$name]== $follow.'_sv_SE') ?  'selected="selected"' : '' ; ?>>
-				<?php  _e( 'Svenska', 'ultimate-social-media-plus' ); ?>
+				<?php  _e( 'Svenska', SFSI_PLUS_DOMAIN ); ?>
 				<span> - << </span> 
-				<span><?php  _e($follow, 'ultimate-social-media-plus' ); ?></span>
+				<span><?php  _e($follow, SFSI_PLUS_DOMAIN ); ?></span>
 				<span> >> </span>
 			</option>
 			<option value="<?php echo $visitme; ?>_sv_SE" <?php echo ($option5[$name]== $visitme.'_sv_SE') ?  'selected="selected"' : '' ; ?>>
-				<?php  _e( 'Svenska', 'ultimate-social-media-plus' ); ?>
+				<?php  _e( 'Svenska', SFSI_PLUS_DOMAIN ); ?>
 				<span> - << </span>
-				<span><?php  _e($visitme, 'ultimate-social-media-plus' ); ?></span>
+				<span><?php  _e($visitme, SFSI_PLUS_DOMAIN ); ?></span>
 				<span> >> </span>
 			</option>
 			
 			<option value="<?php echo $follow; ?>_th" <?php echo ($option5[$name]== $follow.'_th') ?  'selected="selected"' : '' ; ?>>
-				<?php  _e( 'ไทย', 'ultimate-social-media-plus' ); ?>
+				<?php  _e( 'ไทย', SFSI_PLUS_DOMAIN ); ?>
 				<span> - << </span> 
-				<span><?php  _e($follow, 'ultimate-social-media-plus' ); ?></span>
+				<span><?php  _e($follow, SFSI_PLUS_DOMAIN ); ?></span>
 				<span> >> </span>
 			</option>
 			<option value="<?php echo $visitme; ?>_th" <?php echo ($option5[$name]== $visitme.'_th') ?  'selected="selected"' : '' ; ?>>
-				<?php  _e( 'ไทย', 'ultimate-social-media-plus' ); ?>
+				<?php  _e( 'ไทย', SFSI_PLUS_DOMAIN ); ?>
 				<span> - << </span>
-				<span><?php  _e($visitme, 'ultimate-social-media-plus' ); ?></span>
+				<span><?php  _e($visitme, SFSI_PLUS_DOMAIN ); ?></span>
 				<span> >> </span>
 			</option>
 			
 			<option value="<?php echo $follow; ?>_tr_TR" <?php echo ($option5[$name]== $follow.'_tr_TR') ?  'selected="selected"' : '' ; ?>>
-				<?php  _e( 'Türkçe', 'ultimate-social-media-plus' ); ?>
+				<?php  _e( 'Türkçe', SFSI_PLUS_DOMAIN ); ?>
 				<span> - << </span> 
-				<span><?php  _e($follow, 'ultimate-social-media-plus' ); ?></span>
+				<span><?php  _e($follow, SFSI_PLUS_DOMAIN ); ?></span>
 				<span> >> </span>
 			</option>
 			<option value="<?php echo $visitme; ?>_tr_TR" <?php echo ($option5[$name]== $visitme.'_tr_TR') ?  'selected="selected"' : '' ; ?>>
-				<?php  _e( 'Türkçe', 'ultimate-social-media-plus' ); ?>
+				<?php  _e( 'Türkçe', SFSI_PLUS_DOMAIN ); ?>
 				<span> - << </span>
-				<span><?php  _e($visitme, 'ultimate-social-media-plus' ); ?></span>
+				<span><?php  _e($visitme, SFSI_PLUS_DOMAIN ); ?></span>
 				<span> >> </span>
 			</option>
 			
 			<option value="<?php echo $follow; ?>_vi" <?php echo ($option5[$name]== $follow.'_vi') ?  'selected="selected"' : '' ; ?>>
-				<?php  _e( 'Tiếng Việt', 'ultimate-social-media-plus' ); ?>
+				<?php  _e( 'Tiếng Việt', SFSI_PLUS_DOMAIN ); ?>
 				<span> - << </span> 
-				<span><?php  _e($follow, 'ultimate-social-media-plus' ); ?></span>
+				<span><?php  _e($follow, SFSI_PLUS_DOMAIN ); ?></span>
 				<span> >> </span>
 			</option>
 			<option value="<?php echo $visitme; ?>_vi" <?php echo ($option5[$name]== $visitme.'_vi') ?  'selected="selected"' : '' ; ?>>
-				<?php  _e( 'Tiếng Việt', 'ultimate-social-media-plus' ); ?>
+				<?php  _e( 'Tiếng Việt', SFSI_PLUS_DOMAIN ); ?>
 				<span> - << </span>
-				<span><?php  _e($visitme, 'ultimate-social-media-plus' ); ?></span>
+				<span><?php  _e($visitme, SFSI_PLUS_DOMAIN ); ?></span>
 				<span> >> </span>
 			</option>
 		</select>
@@ -434,7 +434,7 @@
 <!-- Section 5 "Any other wishes for your main icons?" main div Start -->
 <div class="tab5">
 	<h4>
-		<?php  _e( 'Order of your icons', 'ultimate-social-media-plus' ); ?>
+		<?php  _e( 'Order of your icons', SFSI_PLUS_DOMAIN ); ?>
     </h4>
     <!-- icon drag drop  section start here -->	
     <ul class="plus_share_icon_order" >
@@ -523,78 +523,76 @@
     </ul> <!-- END icon drag drop section start here -->
     
     <span class="drag_drp">
-    	(<?php  _e( 'Drag', 'ultimate-social-media-plus' ); ?> &amp; <?php  _e( 'Drop', 'ultimate-social-media-plus' ); ?>)
+    	(<?php  _e( 'Drag &amp; Drop', SFSI_PLUS_DOMAIN); ?>)
     </span>
     <!-- icon's size and spacing section start here -->	
     <div class="row">
         <h4>
-        	<?php  _e( 'Size', 'ultimate-social-media-plus' ); ?> &amp; <?php  _e( 'spacing of your icons', 'ultimate-social-media-plus' ); ?>
+        	<?php  _e( 'Size &amp; spacing of your icons', SFSI_PLUS_DOMAIN ); ?>
         </h4>
         <div class="icons_size">
         	<span>
-        		<?php  _e( 'Size', 'ultimate-social-media-plus' ); ?>:
+        		<?php  _e( 'Size:', SFSI_PLUS_DOMAIN ); ?>
         	</span>
             <input name="sfsi_plus_icons_size" value="<?php echo ($option5['sfsi_plus_icons_size']!='') ?  $option5['sfsi_plus_icons_size'] : '' ;?>" type="text" />
         	<ins>
-        		<?php  _e( 'pixels wide', 'ultimate-social-media-plus' ); ?> &amp; <?php  _e( 'tall', 'ultimate-social-media-plus' ); ?>
+        		<?php  _e( 'pixels wide &amp; tall', SFSI_PLUS_DOMAIN ); ?>
         	</ins>
          	<span class="last">
-         		<?php  _e( 'Spacing between icons', 'ultimate-social-media-plus' ); ?>:
+         		<?php  _e( 'Spacing between icons:', SFSI_PLUS_DOMAIN ); ?>
          	</span>
             <input name="sfsi_plus_icons_spacing" type="text" value="<?php echo ($option5['sfsi_plus_icons_spacing']!='') ?  $option5['sfsi_plus_icons_spacing'] : '' ;?>" />
          	<ins>
-         		<?php  _e( 'Pixels', 'ultimate-social-media-plus' ); ?>
+         		<?php  _e( 'Pixels', SFSI_PLUS_DOMAIN ); ?>
          	</ins>
     	</div>
     </div>
     
     <div class="row">
         <h4>
-        	<?php  _e( 'Alignments', 'ultimate-social-media-plus' ); ?>
+        	<?php  _e( 'Alignments', SFSI_PLUS_DOMAIN ); ?>
         </h4>
         <div class="icons_size">
         	<span>
-        		<?php  _e( 'Alignment of icons', 'ultimate-social-media-plus' ); ?>:
+        		<?php  _e( 'Alignment of icons:', SFSI_PLUS_DOMAIN ); ?>
         	</span>
         	<div class="field">
                 <select name="sfsi_plus_icons_Alignment" id="sfsi_plus_icons_Alignment" class="styled">
                     <option value="center" <?php echo ($option5['sfsi_plus_icons_Alignment']=='center') ?  'selected="selected"' : '' ;?>>
-                        <?php  _e( 'Centered', 'ultimate-social-media-plus' ); ?>
+                        <?php  _e( 'Centered', SFSI_PLUS_DOMAIN ); ?>
                     </option>
                     <option value="right" <?php echo ($option5['sfsi_plus_icons_Alignment']=='right') ?  'selected="selected"' : '' ;?>>
-                    	<?php  _e( 'Right', 'ultimate-social-media-plus' ); ?>
+                    	<?php  _e( 'Right', SFSI_PLUS_DOMAIN ); ?>
                     </option>
                     <option value="left" <?php echo ($option5['sfsi_plus_icons_Alignment']=='left') ?  'selected="selected"' : '' ;?>>
-                    	<?php  _e( 'Left', 'ultimate-social-media-plus' ); ?>
+                    	<?php  _e( 'Left', SFSI_PLUS_DOMAIN ); ?>
                     </option>
                 </select>
        		</div> 
         	<span>
-        		<?php  _e( 'Icons per row', 'ultimate-social-media-plus' ); ?>:
+        		<?php  _e( 'Icons per row:', SFSI_PLUS_DOMAIN ); ?>
         	</span>
         	<input name="sfsi_plus_icons_perRow" type="text" value="<?php echo ($option5['sfsi_plus_icons_perRow']!='') ?  $option5['sfsi_plus_icons_perRow'] : '' ;?>" />
         	<ins class="leave_empty">
-        		<?php  _e( 'Leave empty if you dont want to', 'ultimate-social-media-plus' ); ?>
-        		<br />
-        		<?php  _e( 'define this', 'ultimate-social-media-plus' ); ?>
+        		<?php  _e( 'Leave empty if you dont want to<br /> define this', SFSI_PLUS_DOMAIN ); ?>
         	</ins>
         </div>
     </div>
 	<!-- icon's select language optins start here -->
     <div class="row">
 		<h4>
-    	    <?php  _e( 'Language & Button-text', 'ultimate-social-media-plus' ); ?>
+    	    <?php  _e( 'Language & Button-text', SFSI_PLUS_DOMAIN ); ?>
     	</h4>
 		<!-- Follow button start here -->
 		<div class="icons_size">
         	<div class="follows-btn">
-				<span><?php  _e( 'Follow-button', 'ultimate-social-media-plus' ); ?>:</span>
+				<span><?php  _e( 'Follow-button:', SFSI_PLUS_DOMAIN ); ?></span>
         	</div>
 			<div class="field language-field">
 				 <?php selectoption("sfsi_plus_follow_icons_language" , "Follow" , "Subscribe"); ?>
 			</div>
 			<div class="preview-btn">
-        		<span><?php  _e( 'Preview', 'ultimate-social-media-plus' ); ?>:</span>
+        		<span><?php  _e( 'Preview:', SFSI_PLUS_DOMAIN ); ?></span>
 			</div>
 			<?php
 				$follow_icons = $option5['sfsi_plus_follow_icons_language'];
@@ -609,13 +607,13 @@
 		<!-- Facebook «Visit»-icon start here -->
 		<div class="icons_size">
         	<div class="follows-btn">
-        		<span>Facebook «<?php  _e( 'Visit', 'ultimate-social-media-plus' ); ?>»-<?php  _e( 'icon', 'ultimate-social-media-plus' ); ?>:</span>
+        		<span><?php  _e( 'Facebook «Visit»-icon:', SFSI_PLUS_DOMAIN ); ?></span>
 			</div>
 			<div class="field language-field">
 				<?php selectoption("sfsi_plus_facebook_icons_language" , "Visit_us" , "Visit_me"); ?>
 			</div>
 			<div class="preview-btn">
-        		<span><?php  _e( 'Preview', 'ultimate-social-media-plus' ); ?>:</span>
+        		<span><?php  _e( 'Preview:', SFSI_PLUS_DOMAIN ); ?></span>
         	</div>
 			<?php
 				$facebook_icons_lang = $option5['sfsi_plus_facebook_icons_language'];
@@ -630,13 +628,13 @@
 		<!-- Twitter «Visit»-icon start here -->
 		<div class="icons_size">
         	<div class="follows-btn">
-        		<span>Twitter «<?php  _e( 'Visit', 'ultimate-social-media-plus' ); ?>»-<?php  _e( 'icon', 'ultimate-social-media-plus' ); ?>:</span>
+        		<span><?php  _e( 'Twitter «Visit»-icon:', SFSI_PLUS_DOMAIN ); ?></span>
         	</div>
 			<div class="field language-field">
 				 <?php selectoption("sfsi_plus_twitter_icons_language" , "Visit_us" , "Visit_me"); ?>
 			</div>
 			<div class="preview-btn">
-        		<span><?php  _e( 'Preview', 'ultimate-social-media-plus' ); ?>:</span>
+        		<span><?php  _e( 'Preview:', SFSI_PLUS_DOMAIN ); ?></span>
         	</div>
 			<?php
 				$twitter_icons_lang = $option5['sfsi_plus_twitter_icons_language'];
@@ -651,13 +649,13 @@
 		<!-- Google+ «Visit»-icon start here -->
 		<div class="icons_size">
         	<div class="follows-btn">
-        		<span>Google+ «<?php  _e( 'Visit', 'ultimate-social-media-plus' ); ?>»-<?php  _e( 'icon', 'ultimate-social-media-plus' ); ?>:</span>
+        		<span><?php  _e( 'Google+ «Visit»-icon:', SFSI_PLUS_DOMAIN ); ?></span>
         	</div>
 			<div class="field language-field">
 				<?php selectoption("sfsi_plus_google_icons_language" , "Visit_us" , "Visit_me"); ?>
 			</div>
 			<div class="preview-btn">
-        		<span><?php  _e( 'Preview', 'ultimate-social-media-plus' ); ?>:</span>
+        		<span><?php  _e( 'Preview:', SFSI_PLUS_DOMAIN ); ?></span>
         	</div>
 			<?php
 				$google_icons_lang = $option5['sfsi_plus_google_icons_language'];
@@ -672,92 +670,88 @@
 		<!-- Like & Share buttons (Facebook, Twitter, Google+) start here -->
 		<div class="icons_size">
         	<span>
-        		<?php  _e( 'Language for Like & Share buttons', 'ultimate-social-media-plus' ); ?>(Facebook, Twitter, Google+):
+        		<?php  _e( 'Language for Like & Share buttons(Facebook, Twitter, Google+):', SFSI_PLUS_DOMAIN ); ?>
         	</span>
 			<div class="language_field">
 				<select name="sfsi_plus_icons_language" id="sfsi_plus_icons_language" class="language">
-					<option value="ar_AR" <?php echo ($option5['sfsi_plus_icons_language']=='ar_AR') ?  'selected="selected"' : '' ;?>><?php  _e( 'العربية', 'ultimate-social-media-plus' ); ?></option>
-					<option value="az_AZ" <?php echo ($option5['sfsi_plus_icons_language']=='az_AZ') ?  'selected="selected"' : '' ;?>><?php  _e( 'Azərbaycan dili', 'ultimate-social-media-plus' ); ?></option>
-					<option value="af_ZA" <?php echo ($option5['sfsi_plus_icons_language']=='af_ZA') ?  'selected="selected"' : '' ;?>><?php  _e( 'Afrikaans', 'ultimate-social-media-plus' ); ?></option>
-					<option value="bg_BG" <?php echo ($option5['sfsi_plus_icons_language']=='bg_BG') ?  'selected="selected"' : '' ;?>><?php  _e( 'Български', 'ultimate-social-media-plus' ); ?></option>
-					<option value="ms_MY" <?php echo ($option5['sfsi_plus_icons_language']=='ms_MY') ?  'selected="selected"' : '' ;?>><?php  _e( 'Bahasa Melayu‎', 'ultimate-social-media-plus' ); ?></option>
-					<option value="bn_IN" <?php echo ($option5['sfsi_plus_icons_language']=='bn_IN') ?  'selected="selected"' : '' ;?>><?php  _e( 'বাংলা', 'ultimate-social-media-plus' ); ?></option>
-					<option value="bs_BA" <?php echo ($option5['sfsi_plus_icons_language']=='bs_BA') ?  'selected="selected"' : '' ;?>><?php  _e( 'Bosanski', 'ultimate-social-media-plus' ); ?></option>
-					<option value="ca_ES" <?php echo ($option5['sfsi_plus_icons_language']=='ca_ES') ?  'selected="selected"' : '' ;?>><?php  _e( 'Català', 'ultimate-social-media-plus' ); ?></option>
-					<option value="cy_GB" <?php echo ($option5['sfsi_plus_icons_language']=='cy_GB') ?  'selected="selected"' : '' ;?>><?php  _e( 'Cymraeg', 'ultimate-social-media-plus' ); ?></option>
-					<option value="da_DK" <?php echo ($option5['sfsi_plus_icons_language']=='da_DK') ?  'selected="selected"' : '' ;?>><?php  _e( 'Dansk', 'ultimate-social-media-plus' ); ?></option>
-					<option value="de_DE" <?php echo ($option5['sfsi_plus_icons_language']=='de_DE') ?  'selected="selected"' : '' ;?>><?php  _e( 'Deutsch', 'ultimate-social-media-plus' ); ?></option>
-					<option value="en_US" <?php echo ($option5['sfsi_plus_icons_language']=='en_US') ?  'selected="selected"' : '' ;?>><?php  _e( 'English (United States)', 'ultimate-social-media-plus' ); ?></option>
-					<option value="el_GR" <?php echo ($option5['sfsi_plus_icons_language']=='el_GR') ?  'selected="selected"' : '' ;?>><?php  _e( 'Ελληνικά', 'ultimate-social-media-plus' ); ?></option>
-					<option value="eo_EO" <?php echo ($option5['sfsi_plus_icons_language']=='eo_EO') ?  'selected="selected"' : '' ;?>><?php  _e( 'Esperanto', 'ultimate-social-media-plus' ); ?></option>
-					<option value="es_ES" <?php echo ($option5['sfsi_plus_icons_language']=='es_ES') ?  'selected="selected"' : '' ;?>><?php  _e( 'Español', 'ultimate-social-media-plus' ); ?></option>
-					<option value="et_EE" <?php echo ($option5['sfsi_plus_icons_language']=='et_EE') ?  'selected="selected"' : '' ;?>><?php  _e( 'Eesti', 'ultimate-social-media-plus' ); ?></option>
-					<option value="eu_ES" <?php echo ($option5['sfsi_plus_icons_language']=='eu_ES') ?  'selected="selected"' : '' ;?>><?php  _e( 'Euskara', 'ultimate-social-media-plus' ); ?></option>
-					<option value="fa_IR" <?php echo ($option5['sfsi_plus_icons_language']=='fa_IR') ?  'selected="selected"' : '' ;?>><?php  _e( 'فارسی', 'ultimate-social-media-plus' ); ?></option>
-					<option value="fi_FI" <?php echo ($option5['sfsi_plus_icons_language']=='fi_FI') ?  'selected="selected"' : '' ;?>><?php  _e( 'Suomi', 'ultimate-social-media-plus' ); ?></option>
-					<option value="fr_FR" <?php echo ($option5['sfsi_plus_icons_language']=='fr_FR') ?  'selected="selected"' : '' ;?>><?php  _e( 'Français', 'ultimate-social-media-plus' ); ?></option>
-					<option value="gl_ES" <?php echo ($option5['sfsi_plus_icons_language']=='gl_ES') ?  'selected="selected"' : '' ;?>><?php  _e( 'Galego', 'ultimate-social-media-plus' ); ?></option>
-					<option value="he_IL" <?php echo ($option5['sfsi_plus_icons_language']=='he_IL') ?  'selected="selected"' : '' ;?>><?php  _e( 'עִבְרִית', 'ultimate-social-media-plus' ); ?></option>
-					<option value="hi_IN" <?php echo ($option5['sfsi_plus_icons_language']=='hi_IN') ?  'selected="selected"' : '' ;?>><?php  _e( 'हिन्दी', 'ultimate-social-media-plus' ); ?></option>
-					<option value="hr_HR" <?php echo ($option5['sfsi_plus_icons_language']=='hr_HR') ?  'selected="selected"' : '' ;?>><?php  _e( 'Hrvatski', 'ultimate-social-media-plus' ); ?></option>
-					<option value="hu_HU" <?php echo ($option5['sfsi_plus_icons_language']=='hu_HU') ?  'selected="selected"' : '' ;?>><?php  _e( 'Magyar', 'ultimate-social-media-plus' ); ?></option>
-					<option value="hy_AM" <?php echo ($option5['sfsi_plus_icons_language']=='hy_AM') ?  'selected="selected"' : '' ;?>><?php  _e( 'Հայերեն', 'ultimate-social-media-plus' ); ?></option>
-					<option value="id_ID" <?php echo ($option5['sfsi_plus_icons_language']=='id_ID') ?  'selected="selected"' : '' ;?>><?php  _e( 'Bahasa Indonesia', 'ultimate-social-media-plus' ); ?></option>
-					<option value="is_IS" <?php echo ($option5['sfsi_plus_icons_language']=='is_IS') ?  'selected="selected"' : '' ;?>><?php  _e( 'Íslenska', 'ultimate-social-media-plus' ); ?></option>
-					<option value="it_IT" <?php echo ($option5['sfsi_plus_icons_language']=='it_IT') ?  'selected="selected"' : '' ;?>><?php  _e( 'Italiano', 'ultimate-social-media-plus' ); ?></option>
-					<option value="ja_JP" <?php echo ($option5['sfsi_plus_icons_language']=='ja_JP') ?  'selected="selected"' : '' ;?>><?php  _e( '日本語', 'ultimate-social-media-plus' ); ?></option>
-					<option value="ko_KR" <?php echo ($option5['sfsi_plus_icons_language']=='ko_KR') ?  'selected="selected"' : '' ;?>><?php  _e( '한국어', 'ultimate-social-media-plus' ); ?></option>
-					<option value="lt_LT" <?php echo ($option5['sfsi_plus_icons_language']=='lt_LT') ?  'selected="selected"' : '' ;?>><?php  _e( 'Lietuvių kalba', 'ultimate-social-media-plus' ); ?></option>
-					<option value="my_MM" <?php echo ($option5['sfsi_plus_icons_language']=='my_MM') ?  'selected="selected"' : '' ;?>><?php  _e( 'ဗမာစာ', 'ultimate-social-media-plus' ); ?></option>
-					<option value="nl_NL" <?php echo ($option5['sfsi_plus_icons_language']=='nl_NL') ?  'selected="selected"' : '' ;?>><?php  _e( 'Nederlands', 'ultimate-social-media-plus' ); ?></option>
-					<option value="nn_NO" <?php echo ($option5['sfsi_plus_icons_language']=='nn_NO') ?  'selected="selected"' : '' ;?>><?php  _e( 'Norsk nynorsk', 'ultimate-social-media-plus' ); ?></option>
-					<option value="pl_PL" <?php echo ($option5['sfsi_plus_icons_language']=='pl_PL') ?  'selected="selected"' : '' ;?>><?php  _e( 'Polski', 'ultimate-social-media-plus' ); ?></option>
-					<option value="ps_AF" <?php echo ($option5['sfsi_plus_icons_language']=='ps_AF') ?  'selected="selected"' : '' ;?>><?php  _e( 'پښتو', 'ultimate-social-media-plus' ); ?></option>
-					<option value="pt_BR" <?php echo ($option5['sfsi_plus_icons_language']=='pt_BR') ?  'selected="selected"' : '' ;?>><?php  _e( 'Português do Brasil', 'ultimate-social-media-plus' ); ?></option>
-					<option value="ro_RO" <?php echo ($option5['sfsi_plus_icons_language']=='ro_RO') ?  'selected="selected"' : '' ;?>><?php  _e( 'Română', 'ultimate-social-media-plus' ); ?></option>
-					<option value="ru_RU" <?php echo ($option5['sfsi_plus_icons_language']=='ru_RU') ?  'selected="selected"' : '' ;?>><?php  _e( 'Русский', 'ultimate-social-media-plus' ); ?></option>
-					<option value="sk_SK" <?php echo ($option5['sfsi_plus_icons_language']=='sk_SK') ?  'selected="selected"' : '' ;?>><?php  _e( 'Slovenčina', 'ultimate-social-media-plus' ); ?></option>
-					<option value="sl_SI" <?php echo ($option5['sfsi_plus_icons_language']=='sl_SI') ?  'selected="selected"' : '' ;?>><?php  _e( 'Slovenščina', 'ultimate-social-media-plus' ); ?></option>
-					<option value="sq_AL" <?php echo ($option5['sfsi_plus_icons_language']=='sq_AL') ?  'selected="selected"' : '' ;?>><?php  _e( 'Shqip', 'ultimate-social-media-plus' ); ?></option>
-					<option value="sr_RS" <?php echo ($option5['sfsi_plus_icons_language']=='sr_RS') ?  'selected="selected"' : '' ;?>><?php  _e( 'Српски језик', 'ultimate-social-media-plus' ); ?></option>
-					<option value="sv_SE" <?php echo ($option5['sfsi_plus_icons_language']=='sv_SE') ?  'selected="selected"' : '' ;?>><?php  _e( 'Svenska', 'ultimate-social-media-plus' ); ?></option>
-					<option value="th_TH" <?php echo ($option5['sfsi_plus_icons_language']=='th_TH') ?  'selected="selected"' : '' ;?>><?php  _e( 'ไทย', 'ultimate-social-media-plus' ); ?></option>
-					<option value="tl_PH" <?php echo ($option5['sfsi_plus_icons_language']=='tl_PH') ?  'selected="selected"' : '' ;?>><?php  _e( 'Tagalog', 'ultimate-social-media-plus' ); ?></option>
-					<option value="tr_TR" <?php echo ($option5['sfsi_plus_icons_language']=='tr_TR') ?  'selected="selected"' : '' ;?>><?php  _e( 'Türkçe', 'ultimate-social-media-plus' ); ?></option>
-					<option value="ug_CN" <?php echo ($option5['sfsi_plus_icons_language']=='ug_CN') ?  'selected="selected"' : '' ;?>><?php  _e( 'Uyƣurqə', 'ultimate-social-media-plus' ); ?></option>
-					<option value="uk_UA" <?php echo ($option5['sfsi_plus_icons_language']=='uk_UA') ?  'selected="selected"' : '' ;?>><?php  _e( 'Українська', 'ultimate-social-media-plus' ); ?></option>
-					<option value="vi_VN" <?php echo ($option5['sfsi_plus_icons_language']=='vi_VN') ?  'selected="selected"' : '' ;?>><?php  _e( 'Tiếng Việt', 'ultimate-social-media-plus' ); ?></option>
-					<option value="zh_CN" <?php echo ($option5['sfsi_plus_icons_language']=='zh_CN') ?  'selected="selected"' : '' ;?>><?php  _e( '简体中文', 'ultimate-social-media-plus' ); ?></option>
-					<option value="cs_CZ" <?php echo ($option5['sfsi_plus_icons_language']=='cs_CZ') ?  'selected="selected"' : '' ;?>><?php  _e( 'Čeština‎', 'ultimate-social-media-plus' ); ?></option>
-					<option value="ur_PK" <?php echo ($option5['sfsi_plus_icons_language']=='ur_PK') ?  'selected="selected"' : '' ;?>><?php  _e( 'اردو‎', 'ultimate-social-media-plus' ); ?></option>
+					<option value="ar_AR" <?php echo ($option5['sfsi_plus_icons_language']=='ar_AR') ?  'selected="selected"' : '' ;?>><?php  _e( 'العربية', SFSI_PLUS_DOMAIN ); ?></option>
+					<option value="az_AZ" <?php echo ($option5['sfsi_plus_icons_language']=='az_AZ') ?  'selected="selected"' : '' ;?>><?php  _e( 'Azərbaycan dili', SFSI_PLUS_DOMAIN ); ?></option>
+					<option value="af_ZA" <?php echo ($option5['sfsi_plus_icons_language']=='af_ZA') ?  'selected="selected"' : '' ;?>><?php  _e( 'Afrikaans', SFSI_PLUS_DOMAIN ); ?></option>
+					<option value="bg_BG" <?php echo ($option5['sfsi_plus_icons_language']=='bg_BG') ?  'selected="selected"' : '' ;?>><?php  _e( 'Български', SFSI_PLUS_DOMAIN ); ?></option>
+					<option value="ms_MY" <?php echo ($option5['sfsi_plus_icons_language']=='ms_MY') ?  'selected="selected"' : '' ;?>><?php  _e( 'Bahasa Melayu‎', SFSI_PLUS_DOMAIN ); ?></option>
+					<option value="bn_IN" <?php echo ($option5['sfsi_plus_icons_language']=='bn_IN') ?  'selected="selected"' : '' ;?>><?php  _e( 'বাংলা', SFSI_PLUS_DOMAIN ); ?></option>
+					<option value="bs_BA" <?php echo ($option5['sfsi_plus_icons_language']=='bs_BA') ?  'selected="selected"' : '' ;?>><?php  _e( 'Bosanski', SFSI_PLUS_DOMAIN ); ?></option>
+					<option value="ca_ES" <?php echo ($option5['sfsi_plus_icons_language']=='ca_ES') ?  'selected="selected"' : '' ;?>><?php  _e( 'Català', SFSI_PLUS_DOMAIN ); ?></option>
+					<option value="cy_GB" <?php echo ($option5['sfsi_plus_icons_language']=='cy_GB') ?  'selected="selected"' : '' ;?>><?php  _e( 'Cymraeg', SFSI_PLUS_DOMAIN ); ?></option>
+					<option value="da_DK" <?php echo ($option5['sfsi_plus_icons_language']=='da_DK') ?  'selected="selected"' : '' ;?>><?php  _e( 'Dansk', SFSI_PLUS_DOMAIN ); ?></option>
+					<option value="de_DE" <?php echo ($option5['sfsi_plus_icons_language']=='de_DE') ?  'selected="selected"' : '' ;?>><?php  _e( 'Deutsch', SFSI_PLUS_DOMAIN ); ?></option>
+					<option value="en_US" <?php echo ($option5['sfsi_plus_icons_language']=='en_US') ?  'selected="selected"' : '' ;?>><?php  _e( 'English (United States)', SFSI_PLUS_DOMAIN ); ?></option>
+					<option value="el_GR" <?php echo ($option5['sfsi_plus_icons_language']=='el_GR') ?  'selected="selected"' : '' ;?>><?php  _e( 'Ελληνικά', SFSI_PLUS_DOMAIN ); ?></option>
+					<option value="eo_EO" <?php echo ($option5['sfsi_plus_icons_language']=='eo_EO') ?  'selected="selected"' : '' ;?>><?php  _e( 'Esperanto', SFSI_PLUS_DOMAIN ); ?></option>
+					<option value="es_ES" <?php echo ($option5['sfsi_plus_icons_language']=='es_ES') ?  'selected="selected"' : '' ;?>><?php  _e( 'Español', SFSI_PLUS_DOMAIN ); ?></option>
+					<option value="et_EE" <?php echo ($option5['sfsi_plus_icons_language']=='et_EE') ?  'selected="selected"' : '' ;?>><?php  _e( 'Eesti', SFSI_PLUS_DOMAIN ); ?></option>
+					<option value="eu_ES" <?php echo ($option5['sfsi_plus_icons_language']=='eu_ES') ?  'selected="selected"' : '' ;?>><?php  _e( 'Euskara', SFSI_PLUS_DOMAIN ); ?></option>
+					<option value="fa_IR" <?php echo ($option5['sfsi_plus_icons_language']=='fa_IR') ?  'selected="selected"' : '' ;?>><?php  _e( 'فارسی', SFSI_PLUS_DOMAIN ); ?></option>
+					<option value="fi_FI" <?php echo ($option5['sfsi_plus_icons_language']=='fi_FI') ?  'selected="selected"' : '' ;?>><?php  _e( 'Suomi', SFSI_PLUS_DOMAIN ); ?></option>
+					<option value="fr_FR" <?php echo ($option5['sfsi_plus_icons_language']=='fr_FR') ?  'selected="selected"' : '' ;?>><?php  _e( 'Français', SFSI_PLUS_DOMAIN ); ?></option>
+					<option value="gl_ES" <?php echo ($option5['sfsi_plus_icons_language']=='gl_ES') ?  'selected="selected"' : '' ;?>><?php  _e( 'Galego', SFSI_PLUS_DOMAIN ); ?></option>
+					<option value="he_IL" <?php echo ($option5['sfsi_plus_icons_language']=='he_IL') ?  'selected="selected"' : '' ;?>><?php  _e( 'עִבְרִית', SFSI_PLUS_DOMAIN ); ?></option>
+					<option value="hi_IN" <?php echo ($option5['sfsi_plus_icons_language']=='hi_IN') ?  'selected="selected"' : '' ;?>><?php  _e( 'हिन्दी', SFSI_PLUS_DOMAIN ); ?></option>
+					<option value="hr_HR" <?php echo ($option5['sfsi_plus_icons_language']=='hr_HR') ?  'selected="selected"' : '' ;?>><?php  _e( 'Hrvatski', SFSI_PLUS_DOMAIN ); ?></option>
+					<option value="hu_HU" <?php echo ($option5['sfsi_plus_icons_language']=='hu_HU') ?  'selected="selected"' : '' ;?>><?php  _e( 'Magyar', SFSI_PLUS_DOMAIN ); ?></option>
+					<option value="hy_AM" <?php echo ($option5['sfsi_plus_icons_language']=='hy_AM') ?  'selected="selected"' : '' ;?>><?php  _e( 'Հայերեն', SFSI_PLUS_DOMAIN ); ?></option>
+					<option value="id_ID" <?php echo ($option5['sfsi_plus_icons_language']=='id_ID') ?  'selected="selected"' : '' ;?>><?php  _e( 'Bahasa Indonesia', SFSI_PLUS_DOMAIN ); ?></option>
+					<option value="is_IS" <?php echo ($option5['sfsi_plus_icons_language']=='is_IS') ?  'selected="selected"' : '' ;?>><?php  _e( 'Íslenska', SFSI_PLUS_DOMAIN ); ?></option>
+					<option value="it_IT" <?php echo ($option5['sfsi_plus_icons_language']=='it_IT') ?  'selected="selected"' : '' ;?>><?php  _e( 'Italiano', SFSI_PLUS_DOMAIN ); ?></option>
+					<option value="ja_JP" <?php echo ($option5['sfsi_plus_icons_language']=='ja_JP') ?  'selected="selected"' : '' ;?>><?php  _e( '日本語', SFSI_PLUS_DOMAIN ); ?></option>
+					<option value="ko_KR" <?php echo ($option5['sfsi_plus_icons_language']=='ko_KR') ?  'selected="selected"' : '' ;?>><?php  _e( '한국어', SFSI_PLUS_DOMAIN ); ?></option>
+					<option value="lt_LT" <?php echo ($option5['sfsi_plus_icons_language']=='lt_LT') ?  'selected="selected"' : '' ;?>><?php  _e( 'Lietuvių kalba', SFSI_PLUS_DOMAIN ); ?></option>
+					<option value="my_MM" <?php echo ($option5['sfsi_plus_icons_language']=='my_MM') ?  'selected="selected"' : '' ;?>><?php  _e( 'ဗမာစာ', SFSI_PLUS_DOMAIN ); ?></option>
+					<option value="nl_NL" <?php echo ($option5['sfsi_plus_icons_language']=='nl_NL') ?  'selected="selected"' : '' ;?>><?php  _e( 'Nederlands', SFSI_PLUS_DOMAIN ); ?></option>
+					<option value="nn_NO" <?php echo ($option5['sfsi_plus_icons_language']=='nn_NO') ?  'selected="selected"' : '' ;?>><?php  _e( 'Norsk nynorsk', SFSI_PLUS_DOMAIN ); ?></option>
+					<option value="pl_PL" <?php echo ($option5['sfsi_plus_icons_language']=='pl_PL') ?  'selected="selected"' : '' ;?>><?php  _e( 'Polski', SFSI_PLUS_DOMAIN ); ?></option>
+					<option value="ps_AF" <?php echo ($option5['sfsi_plus_icons_language']=='ps_AF') ?  'selected="selected"' : '' ;?>><?php  _e( 'پښتو', SFSI_PLUS_DOMAIN ); ?></option>
+					<option value="pt_BR" <?php echo ($option5['sfsi_plus_icons_language']=='pt_BR') ?  'selected="selected"' : '' ;?>><?php  _e( 'Português do Brasil', SFSI_PLUS_DOMAIN ); ?></option>
+					<option value="ro_RO" <?php echo ($option5['sfsi_plus_icons_language']=='ro_RO') ?  'selected="selected"' : '' ;?>><?php  _e( 'Română', SFSI_PLUS_DOMAIN ); ?></option>
+					<option value="ru_RU" <?php echo ($option5['sfsi_plus_icons_language']=='ru_RU') ?  'selected="selected"' : '' ;?>><?php  _e( 'Русский', SFSI_PLUS_DOMAIN ); ?></option>
+					<option value="sk_SK" <?php echo ($option5['sfsi_plus_icons_language']=='sk_SK') ?  'selected="selected"' : '' ;?>><?php  _e( 'Slovenčina', SFSI_PLUS_DOMAIN ); ?></option>
+					<option value="sl_SI" <?php echo ($option5['sfsi_plus_icons_language']=='sl_SI') ?  'selected="selected"' : '' ;?>><?php  _e( 'Slovenščina', SFSI_PLUS_DOMAIN ); ?></option>
+					<option value="sq_AL" <?php echo ($option5['sfsi_plus_icons_language']=='sq_AL') ?  'selected="selected"' : '' ;?>><?php  _e( 'Shqip', SFSI_PLUS_DOMAIN ); ?></option>
+					<option value="sr_RS" <?php echo ($option5['sfsi_plus_icons_language']=='sr_RS') ?  'selected="selected"' : '' ;?>><?php  _e( 'Српски језик', SFSI_PLUS_DOMAIN ); ?></option>
+					<option value="sv_SE" <?php echo ($option5['sfsi_plus_icons_language']=='sv_SE') ?  'selected="selected"' : '' ;?>><?php  _e( 'Svenska', SFSI_PLUS_DOMAIN ); ?></option>
+					<option value="th_TH" <?php echo ($option5['sfsi_plus_icons_language']=='th_TH') ?  'selected="selected"' : '' ;?>><?php  _e( 'ไทย', SFSI_PLUS_DOMAIN ); ?></option>
+					<option value="tl_PH" <?php echo ($option5['sfsi_plus_icons_language']=='tl_PH') ?  'selected="selected"' : '' ;?>><?php  _e( 'Tagalog', SFSI_PLUS_DOMAIN ); ?></option>
+					<option value="tr_TR" <?php echo ($option5['sfsi_plus_icons_language']=='tr_TR') ?  'selected="selected"' : '' ;?>><?php  _e( 'Türkçe', SFSI_PLUS_DOMAIN ); ?></option>
+					<option value="ug_CN" <?php echo ($option5['sfsi_plus_icons_language']=='ug_CN') ?  'selected="selected"' : '' ;?>><?php  _e( 'Uyƣurqə', SFSI_PLUS_DOMAIN ); ?></option>
+					<option value="uk_UA" <?php echo ($option5['sfsi_plus_icons_language']=='uk_UA') ?  'selected="selected"' : '' ;?>><?php  _e( 'Українська', SFSI_PLUS_DOMAIN ); ?></option>
+					<option value="vi_VN" <?php echo ($option5['sfsi_plus_icons_language']=='vi_VN') ?  'selected="selected"' : '' ;?>><?php  _e( 'Tiếng Việt', SFSI_PLUS_DOMAIN ); ?></option>
+					<option value="zh_CN" <?php echo ($option5['sfsi_plus_icons_language']=='zh_CN') ?  'selected="selected"' : '' ;?>><?php  _e( '简体中文', SFSI_PLUS_DOMAIN ); ?></option>
+					<option value="cs_CZ" <?php echo ($option5['sfsi_plus_icons_language']=='cs_CZ') ?  'selected="selected"' : '' ;?>><?php  _e( 'Čeština‎', SFSI_PLUS_DOMAIN ); ?></option>
+					<option value="ur_PK" <?php echo ($option5['sfsi_plus_icons_language']=='ur_PK') ?  'selected="selected"' : '' ;?>><?php  _e( 'اردو‎', SFSI_PLUS_DOMAIN ); ?></option>
 				</select>
 			</div>
 		</div>
 	</div>
     <div class="row new_wind">
         <h4>
-			<?php  _e( 'New window', 'ultimate-social-media-plus' ); ?>
+			<?php  _e( 'New window', SFSI_PLUS_DOMAIN ); ?>
         </h4>
         <div class="sfsiplus_row_onl">
         	<p>
 				<?php
-					_e(
-                    	'If user clicks on your icons, do you want to open the page in a new window', 
-                        'ultimate-social-media-plus' 
-                    );
-				?>?
+					_e( 'If user clicks on your icons, do you want to open the page in a new window?',SFSI_PLUS_DOMAIN ); ?>
         	</p>
             <ul class="enough_waffling">
                 <li>
                     <input name="sfsi_plus_icons_ClickPageOpen" <?php echo ($option5['sfsi_plus_icons_ClickPageOpen']=='yes') ?  'checked="true"' : '' ;?> type="radio" value="yes" class="styled"  />
                     <label>
-                    	<?php  _e( 'Yes', 'ultimate-social-media-plus' ); ?>
+                    	<?php  _e( 'Yes', SFSI_PLUS_DOMAIN ); ?>
                     </label>
                 </li>
                 <li>
                     <input name="sfsi_plus_icons_ClickPageOpen" <?php echo ($option5['sfsi_plus_icons_ClickPageOpen']=='no') ?  'checked="true"' : '' ;?> type="radio" value="no" class="styled" />
                     <label>
-                    	<?php  _e( 'No', 'ultimate-social-media-plus' ); ?>
+                    	<?php  _e( 'No', SFSI_PLUS_DOMAIN ); ?>
                     </label>
                 </li>
             </ul>
@@ -768,10 +762,10 @@
      <!-- icon's floating and stick section start here -->	
     <div class="row sticking">
     	<h4>
-            <?php  _e( 'Sticking & Disable on mobile', 'ultimate-social-media-plus' ); ?>
+            <?php  _e( 'Sticking & Disable on mobile', SFSI_PLUS_DOMAIN ); ?>
         </h4>
         <p>
-            <?php  _e( 'If you decided to show your icons via a widget', 'ultimate-social-media-plus' ); ?>, <?php  _e( 'you can add the effect that when the user scrolls down', 'ultimate-social-media-plus' ); ?>, <?php  _e( 'the icons will stick at the  top of the screen so that they are still displayed even if the user scrolled all the way down', 'ultimate-social-media-plus' ); ?>. <?php  _e( 'Do you want to do that', 'ultimate-social-media-plus' ); ?>?
+            <?php  _e( 'If you decided to show your icons via a widget, you can add the effect that when the user scrolls down, the icons will stick at the  top of the screen so that they are still displayed even if the user scrolled all the way down. Do you want to do that?', SFSI_PLUS_DOMAIN ); ?>
         </p>
 	<!--<div class="space">
 	<p class="list">Make icons float?</p>	
@@ -785,13 +779,13 @@
             	<li>
                 	<input name="sfsi_plus_icons_stick" <?php echo ($option5['sfsi_plus_icons_stick']=='yes') ?  'checked="true"' : '' ;?> type="radio" value="yes" class="styled"  />
                     <label>
-                    	<?php  _e( 'Yes', 'ultimate-social-media-plus' ); ?>
+                    	<?php  _e( 'Yes', SFSI_PLUS_DOMAIN ); ?>
                     </label>
                 </li>
                 <li>
                 	<input name="sfsi_plus_icons_stick" <?php echo ($option5['sfsi_plus_icons_stick']=='no') ?  'checked="true"' : '' ;?>  type="radio" value="no" class="styled" />
                     <label>
-                    	<?php  _e( 'No', 'ultimate-social-media-plus' ); ?>
+                    	<?php  _e( 'No', SFSI_PLUS_DOMAIN ); ?>
                     </label>
                	</li>
             </ul>
@@ -800,19 +794,19 @@
     	<!--disable float icons-->
   		<div class="space disblfltonmbl">
             <p class="list">
-            	<?php  _e( 'Disable float icons on mobile devices', 'ultimate-social-media-plus' ); ?>
+            	<?php  _e( 'Disable float icons on mobile devices', SFSI_PLUS_DOMAIN ); ?>
             </p>	
             <ul class="enough_waffling">
                 <li>
                 	<input name="sfsi_plus_disable_floaticons" <?php echo ($option5['sfsi_plus_disable_floaticons']=='yes') ?  'checked="true"' : '' ;?> type="radio" value="yes" class="styled"  />
                     <label>
-                    	<?php  _e( 'Yes', 'ultimate-social-media-plus' ); ?>
+                    	<?php  _e( 'Yes', SFSI_PLUS_DOMAIN ); ?>
                     </label>
                 </li>
                 <li>
                     <input name="sfsi_plus_disable_floaticons" <?php echo ($option5['sfsi_plus_disable_floaticons']=='no') ?  'checked="true"' : '' ;?>  type="radio" value="no" class="styled" />
                     <label>
-                    	<?php  _e( 'No', 'ultimate-social-media-plus' ); ?>
+                    	<?php  _e( 'No', SFSI_PLUS_DOMAIN ); ?>
                     </label>
                 </li>
             </ul>
@@ -822,19 +816,19 @@
     	<!--disabling view port meta tag-->
   		<div class="space disblfltonmbl">
             <p class="list">
-                <?php  _e( 'Disable auto-scaling feature for mobile devices', 'ultimate-social-media-plus' ); ?>("<?php  _e( 'viewport', 'ultimate-social-media-plus' ); ?>" <?php  _e( 'meta tag', 'ultimate-social-media-plus' ); ?>)
+                <?php  _e( 'Disable auto-scaling feature for mobile devices ("viewport" meta tag)', SFSI_PLUS_DOMAIN ); ?>
             </p>	
             <ul class="enough_waffling">
             	<li>
                     <input name="sfsi_plus_disable_viewport" <?php echo ($sfsi_plus_disable_viewport=='yes') ?  'checked="true"' : '' ;?> type="radio" value="yes" class="styled"  />
                     <label>
-                    	<?php  _e( 'Yes', 'ultimate-social-media-plus' ); ?>
+                    	<?php  _e( 'Yes', SFSI_PLUS_DOMAIN ); ?>
                     </label>
                 </li>
                 <li>
                     <input name="sfsi_plus_disable_viewport" <?php echo ($sfsi_plus_disable_viewport=='no') ?  'checked="true"' : '' ;?>  type="radio" value="no" class="styled" />
                     <label>
-                    	<?php  _e( 'No', 'ultimate-social-media-plus' ); ?>
+                    	<?php  _e( 'No', SFSI_PLUS_DOMAIN ); ?>
                     </label>
                 </li>
             </ul>
@@ -846,10 +840,10 @@
 	<!-- mouse over text section start here -->
 	<div class="row mouse_txt">
         <h4>
-            <?php  _e( 'Mouseover text', 'ultimate-social-media-plus' ); ?>
+            <?php  _e( 'Mouseover text', SFSI_PLUS_DOMAIN ); ?>
         </h4>
         <p>
-            <?php  _e('If you’ve given your icon only one function', 'ultimate-social-media-plus' ); ?> (<?php  _e('i.e. no pop-up where user can perform different actions', 'ultimate-social-media-plus' ); ?>) <?php  _e('then you can define here what text will be displayed if a user moves his mouse over the icon', 'ultimate-social-media-plus' ); ?>:
+            <?php  _e('If you’ve given your icon only one function (i.e. no pop-up where user can perform different actions) then you can define here what text will be displayed if a user moves his mouse over the icon:', SFSI_PLUS_DOMAIN ); ?>
         </p>
 		
         <div class="space">
@@ -943,7 +937,7 @@
                     
                     <div class="mouseover_field sfsiplus_custom_section sfsiICON_<?php echo $i; ?>">
                         <label>
-                            <?php  _e( 'Custom', 'ultimate-social-media-plus' ); ?>
+                            <?php  _e( 'Custom', SFSI_PLUS_DOMAIN ); ?>
                             <?php echo $count; ?>:
                         </label>
                         <input name="sfsi_plus_custom_MouseOverTexts[]" value="<?php echo (isset($sfsiMouseOverTexts[$i]) && $sfsiMouseOverTexts[$i]!='') ?  $sfsiMouseOverTexts[$i] : '' ;?>" type="text" file-id="<?php echo $i; ?>" />
@@ -962,12 +956,12 @@
     <div class="save_button">
         <img src="<?php echo SFSI_PLUS_PLUGURL ?>images/ajax-loader.gif" class="loader-img" />
         <?php  $nonce = wp_create_nonce("update_plus_step5"); ?>
-        <a href="javascript:;" id="sfsi_plus_save5" title="Save" data-nonce="<?php echo $nonce;?>"><?php  _e( 'Save', 'ultimate-social-media-plus' ); ?></a>
+        <a href="javascript:;" id="sfsi_plus_save5" title="Save" data-nonce="<?php echo $nonce;?>"><?php  _e( 'Save', SFSI_PLUS_DOMAIN ); ?></a>
     </div>
     <!-- END SAVE BUTTON SECTION   -->
     
     <a class="sfsiColbtn closeSec" href="javascript:;" >
-  		<?php  _e( 'Collapse area', 'ultimate-social-media-plus' ); ?>
+  		<?php  _e( 'Collapse area', SFSI_PLUS_DOMAIN ); ?>
     </a>
     <label class="closeSec"></label>
     

@@ -6,16 +6,13 @@
 <!-- Section 7 "Do you want to display a pop-up, asking people to subscribe?" main div Start -->
 <div class="tab7">
 	<p>
-    	<?php  _e( 
-					'You can increase chances that people share or follow you by displaying a pop-up asking them to. You can define the design and layout below', 
-					'ultimate-social-media-plus' 
-				); ?>:
+    	<?php  _e( 'You can increase chances that people share or follow you by displaying a pop-up asking them to. You can define the design and layout below:', SFSI_PLUS_DOMAIN  ); ?>
     </p>
 <!-- icons preview section -->
 <div class="like_pop_box">
 	<div class="sfsi_plus_Popinner">
 	<h2>
-		<?php  _e( 'Enjoy this site', 'ultimate-social-media-plus' ); ?>? <?php  _e( 'Please follow and like us', 'ultimate-social-media-plus' ); ?>!
+		<?php  _e( 'Enjoy this site? Please follow and like us!', SFSI_PLUS_DOMAIN ); ?>
 	</h2>
 	<ul class="like_icon plus_sfsi_sample_icons">
     	 <li class="sfsiplus_rss_section"><div><img src="<?php echo SFSI_PLUS_PLUGURL ?>images/rss.png" alt="RSS" /><span class="sfsi_Cdisplay" id="sfsi_plus_rss_countsDisplay">12k</span></div></li>
@@ -47,61 +44,61 @@
 
 <!-- icons controllers section -->
 <div class="space">
-	<h4><?php  _e( 'Text', 'ultimate-social-media-plus' ); ?> &amp; <?php  _e( 'Design', 'ultimate-social-media-plus' ); ?></h4>
+	<h4><?php  _e( 'Text &amp; Design', SFSI_PLUS_DOMAIN ); ?></h4>
 	<div class="text_options">
-		<h3><?php  _e( 'Text Options', 'ultimate-social-media-plus' ); ?></h3>
+		<h3><?php  _e( 'Text Options', SFSI_PLUS_DOMAIN ); ?></h3>
 		<div class="sfsiplus_row_tab">
-                    <label><?php  _e( 'Text', 'ultimate-social-media-plus' ); ?>:</label>
+                    <label><?php  _e( 'Text:', SFSI_PLUS_DOMAIN ); ?></label>
                     <input class="mkPop" name="sfsi_plus_popup_text" type="text" value="<?php echo ($option7['sfsi_plus_popup_text']!='') ?  $option7['sfsi_plus_popup_text'] : '' ;?>" />
 		</div>
 		<div class="sfsiplus_row_tab">
-			<label><?php  _e( 'Font', 'ultimate-social-media-plus' ); ?>:</label>
+			<label><?php  _e( 'Font:', SFSI_PLUS_DOMAIN ); ?></label>
                         <div class="field">
                             <select name="sfsi_plus_popup_font" id="sfsi_plus_popup_font" class="styled">
                                 <option value="Arial, Helvetica, sans-serif" <?php echo ($option7['sfsi_plus_popup_font']=='Arial, Arial, Helvetica, sans-serif') ?  'selected="true"' : '' ;?>>
-                                	<?php  _e( 'Arial', 'ultimate-social-media-plus' ); ?>
+                                	<?php  _e( 'Arial', SFSI_PLUS_DOMAIN ); ?>
                                 </option>
                                 <option value="Arial Black, Gadget, sans-serif" <?php echo ($option7['sfsi_plus_popup_font']=='Arial Black, Gadget, sans-serif') ?  'selected="true"' : '' ;?>>
                                
-                                 <?php  _e( 'Arial Black', 'ultimate-social-media-plus' ); ?>
+                                 <?php  _e( 'Arial Black', SFSI_PLUS_DOMAIN ); ?>
                                 </option>
                                 <option value="Calibri" <?php echo ($option7['sfsi_plus_popup_font']=='Calibri') ?  'selected="true"' : '' ;?>>
                                 
-                                 <?php  _e( 'Calibri', 'ultimate-social-media-plus' ); ?>
+                                 <?php  _e( 'Calibri', SFSI_PLUS_DOMAIN ); ?>
                                 </option>
                                 <option value="Comic Sans MS" <?php echo ($option7['sfsi_plus_popup_font']=='Comic Sans MS') ?  'selected="true"' : '' ;?>>
                                
-                                 <?php  _e( 'Comic Sans MS', 'ultimate-social-media-plus' ); ?>
+                                 <?php  _e( 'Comic Sans MS', SFSI_PLUS_DOMAIN ); ?>
                                 </option>
                                 <option value="Courier New" <?php echo ($option7['sfsi_plus_popup_font']=='Courier New') ?  'selected="true"' : '' ;?>>
                                 
-                                 <?php  _e( 'Courier New', 'ultimate-social-media-plus' ); ?>
+                                 <?php  _e( 'Courier New', SFSI_PLUS_DOMAIN ); ?>
                                 </option>
                                 <option value="Georgia" <?php echo ($option7['sfsi_plus_popup_font']=='Georgia') ?  'selected="true"' : '' ;?>>
                                 
-                                 <?php  _e( 'Georgia', 'ultimate-social-media-plus' ); ?>
+                                 <?php  _e( 'Georgia', SFSI_PLUS_DOMAIN ); ?>
                                 </option>
                                 <option value="Helvetica,Arial,sans-serif" <?php echo ($option7['sfsi_plus_popup_font']=='Helvetica,Arial,sans-serif') ?  'selected="true"' : '' ;?>>
                                 
-                                 <?php  _e( 'Helvetica', 'ultimate-social-media-plus' ); ?>
+                                 <?php  _e( 'Helvetica', SFSI_PLUS_DOMAIN ); ?>
                                 </option>
 								<option value="Impact" <?php echo ($option7['sfsi_plus_popup_font']=='Impact') ?  'selected="true"' : '' ;?>>
-                					<?php  _e( 'Impact', 'ultimate-social-media-plus' ); ?>
+                					<?php  _e( 'Impact', SFSI_PLUS_DOMAIN ); ?>
                 				</option>
                                 <option value="Lucida Console" <?php echo ($option7['sfsi_plus_popup_font']=='Lucida Console') ?  'selected="true"' : '' ;?>>
-                                	<?php  _e( 'Lucida Console', 'ultimate-social-media-plus' ); ?>
+                                	<?php  _e( 'Lucida Console', SFSI_PLUS_DOMAIN ); ?>
                                 </option>
                                 <option value="Tahoma,Geneva" <?php echo ($option7['sfsi_plus_popup_font']=='Tahoma,Geneva') ?  'selected="true"' : '' ;?>>
-                                	<?php  _e( 'Tahoma', 'ultimate-social-media-plus' ); ?>
+                                	<?php  _e( 'Tahoma', SFSI_PLUS_DOMAIN ); ?>
                                 </option>
                          		<option value="Times New Roman" <?php echo ($option7['sfsi_plus_popup_font']=='Times New Roman') ?  'selected="true"' : '' ;?>>
-                                	<?php  _e( 'Times New Roman', 'ultimate-social-media-plus' ); ?>
+                                	<?php  _e( 'Times New Roman', SFSI_PLUS_DOMAIN ); ?>
                                 </option>
                                 <option value="Trebuchet MS" <?php echo ($option7['sfsi_plus_popup_font']=='Trebuchet MS') ?  'selected="true"' : '' ;?>>
-                                	<?php  _e( 'Trebuchet MS', 'ultimate-social-media-plus' ); ?>
+                                	<?php  _e( 'Trebuchet MS', SFSI_PLUS_DOMAIN ); ?>
                                 </option>
                                 <option value="Verdana" <?php echo ($option7['sfsi_plus_popup_font']=='Verdana') ?  'selected="true"' : '' ;?>>
-                                	<?php  _e( 'Verdana', 'ultimate-social-media-plus' ); ?>
+                                	<?php  _e( 'Verdana', SFSI_PLUS_DOMAIN ); ?>
                                 </option>
                             
                             </select>
@@ -109,28 +106,28 @@
 		</div>
 		<div class="sfsiplus_row_tab">
 			<label>
-				<?php  _e( 'Font style', 'ultimate-social-media-plus' ); ?>:
+				<?php  _e( 'Font style:', SFSI_PLUS_DOMAIN ); ?>
             </label>
 			<div class="field">
                             <select name="sfsi_plus_popup_fontStyle" id="sfsi_plus_popup_fontStyle" class="styled">
                                 <option value="normal" <?php echo ($option7['sfsi_plus_popup_fontStyle']=='normal') ?  'selected="true"' : '' ;?>>
-                                	<?php  _e( 'Normal', 'ultimate-social-media-plus' ); ?>
+                                	<?php  _e( 'Normal', SFSI_PLUS_DOMAIN ); ?>
                                 </option>
                                 <option value="inherit" <?php echo ($option7['sfsi_plus_popup_fontStyle']=='inherit') ?  'selected="true"' : '' ;?>>
-                                	<?php  _e( 'Inherit', 'ultimate-social-media-plus' ); ?>
+                                	<?php  _e( 'Inherit',SFSI_PLUS_DOMAIN ); ?>
                                 </option>
                                 <option value="oblique" <?php echo ($option7['sfsi_plus_popup_fontStyle']=='oblique') ?  'selected="true"' : '' ;?>>
-                                	<?php  _e( 'Oblique', 'ultimate-social-media-plus' ); ?>
+                                	<?php  _e( 'Oblique', SFSI_PLUS_DOMAIN ); ?>
                                 </option>
                                 <option value="italic" <?php echo ($option7['sfsi_plus_popup_fontStyle']=='italic') ?  'selected="true"' : '' ;?>>
-                                	<?php  _e( 'Italic', 'ultimate-social-media-plus' ); ?>
+                                	<?php  _e( 'Italic', SFSI_PLUS_DOMAIN ); ?>
                                 </option>
                             </select>
                         </div>
 		</div>
 		<div class="sfsiplus_row_tab">
 			<label>
-            	<?php  _e( 'Font color', 'ultimate-social-media-plus' ); ?>:
+            	<?php  _e( 'Font color:', SFSI_PLUS_DOMAIN ); ?>
             </label>
             <input name="sfsi_plus_popup_fontColor" data-default-color="#b5b5b5" id="sfsi_plus_popup_fontColor" type="text" value="<?php echo ($option7['sfsi_plus_popup_fontColor']!='') ?  $option7['sfsi_plus_popup_fontColor'] : '' ;?>" />
 			<!--div class="color_box">
@@ -140,19 +137,19 @@
 		</div>
 		<div class="sfsiplus_row_tab">
 			<label>
-            	<?php  _e( 'Font size', 'ultimate-social-media-plus' ); ?>:
+            	<?php  _e( 'Font size:', SFSI_PLUS_DOMAIN ); ?>
             </label>
             <input name="sfsi_plus_popup_fontSize" type="text" value="<?php echo ($option7['sfsi_plus_popup_fontSize']!='') ?  $option7['sfsi_plus_popup_fontSize'] : '' ;?>" class="small" />
 		</div>
 	</div>
 	<div class="text_options layout">
 		<h3>
-        	<?php  _e( 'Icon Box Layout', 'ultimate-social-media-plus' ); ?>
+        	<?php  _e( 'Icon Box Layout', SFSI_PLUS_DOMAIN ); ?>
         </h3>
 		<div class="sfsiplus_row_tab">
 			<label>
-            	<?php  _e( 'Backgroud', 'ultimate-social-media-plus' ); ?><br />
-				<?php  _e( 'Color', 'ultimate-social-media-plus' ); ?>:
+            	<?php  _e( 'Backgroud<br />Color:', SFSI_PLUS_DOMAIN ); ?>
+				 
             </label>
             <input name="sfsi_plus_popup_background_color" data-default-color="#b5b5b5" id="sfsi_plus_popup_background_color" type="text" value="<?php echo ($option7['sfsi_plus_popup_background_color']!='') ?  $option7['sfsi_plus_popup_background_color'] : '' ;?>" />
 			<!--div class="color_box">
@@ -162,7 +159,7 @@
 		</div>
 		<div class="sfsiplus_row_tab">
 			<label class="border">
-           		<?php  _e( 'Border Color', 'ultimate-social-media-plus' ); ?>:
+           		<?php  _e( 'Border Color:', SFSI_PLUS_DOMAIN ); ?>
             </label>
 			<div class="field"><input name="sfsi_plus_popup_border_color" data-default-color="#b5b5b5" id="sfsi_plus_popup_border_color" type="text" value="<?php echo ($option7['sfsi_plus_popup_border_color']!='') ?  $option7['sfsi_plus_popup_border_color'] : '' ;?>"  />
 			<!--div class="color_box">
@@ -173,25 +170,24 @@
 		</div>
 		<div class="sfsiplus_row_tab">
 			<label>
-            	<?php  _e( 'Border', 'ultimate-social-media-plus' ); ?><br />
-				<?php  _e( 'Thinckness', 'ultimate-social-media-plus' ); ?>:
+            	<?php  _e( 'Border<br />Thinckness:', SFSI_PLUS_DOMAIN ); ?>
+				 
             </label>
 			<div class="field"><input name="sfsi_plus_popup_border_thickness" type="text" value="<?php echo ($option7['sfsi_plus_popup_border_thickness']!='') ?  $option7['sfsi_plus_popup_border_thickness'] : '' ;?>" class="small" />
 			</div>
 		</div>
 		<div class="sfsiplus_row_tab">
 			<label>
-             	<?php  _e( 'Border', 'ultimate-social-media-plus' ); ?><br />
-				<?php  _e( 'Shadow', 'ultimate-social-media-plus' ); ?>:
+             	<?php  _e( 'Border<br /> Shadow:', SFSI_PLUS_DOMAIN ); ?>
             </label>
 			<ul class="border_shadow">
   	<li><input name="sfsi_plus_popup_border_shadow" <?php echo ($option7['sfsi_plus_popup_border_shadow']=='yes') ?  'checked="true"' : '' ;?> type="radio" value="yes" class="styled"  />
     <label> 
-    	<?php  _e( 'On', 'ultimate-social-media-plus' ); ?>
+    	<?php  _e( 'On', SFSI_PLUS_DOMAIN ); ?>
     </label></li>
     <li><input name="sfsi_plus_popup_border_shadow" <?php echo ($option7['sfsi_plus_popup_border_shadow']=='no') ?  'checked="true"' : '' ;?>  type="radio" value="no" class="styled" />
     <label>
-    	<?php  _e( 'Off', 'ultimate-social-media-plus' ); ?>
+    	<?php  _e( 'Off', SFSI_PLUS_DOMAIN ); ?>
     </label></li>
   </ul>
 		</div>
@@ -200,24 +196,24 @@
 </div>
 <div class="row">
 	<h4>
-    	<?php  _e( 'Where shall the pop-up be shown', 'ultimate-social-media-plus' ); ?>?
+    	<?php  _e( 'Where shall the pop-up be shown?', SFSI_PLUS_DOMAIN ); ?>
     </h4>
         <div class="pop_up_show"><input name="sfsi_plus_Show_popupOn" <?php echo ($option7['sfsi_plus_Show_popupOn']=='none') ?  'checked="true"' : '' ;?> type="radio" value="none" class="styled" />
         <label>
-        	<?php  _e( 'Nowhere', 'ultimate-social-media-plus' ); ?>
+        	<?php  _e( 'Nowhere', SFSI_PLUS_DOMAIN ); ?>
         </label>
         </div>
 	<div class="pop_up_show"><input name="sfsi_plus_Show_popupOn" <?php echo ($option7['sfsi_plus_Show_popupOn']=='everypage') ?  'checked="true"' : '' ;?> type="radio" value="everypage" class="styled" />
     <label>
-    	<?php  _e( 'On every page', 'ultimate-social-media-plus' ); ?>
+    	<?php  _e( 'On every page', SFSI_PLUS_DOMAIN ); ?>
     </label></div>
 	<div class="pop_up_show"><input name="sfsi_plus_Show_popupOn" <?php echo ($option7['sfsi_plus_Show_popupOn']=='blogpage') ?  'checked="true"' : '' ;?> type="radio" value="blogpage" class="styled"/>
     <label>
-    	<?php  _e( 'On blog posts only', 'ultimate-social-media-plus' ); ?>
+    	<?php  _e( 'On blog posts only', SFSI_PLUS_DOMAIN ); ?>
     </label></div>
 	<div class="pop_up_show"><input name="sfsi_plus_Show_popupOn" <?php echo ($option7['sfsi_plus_Show_popupOn']=='selectedpage') ?  'checked="true"' : '' ;?>  type="radio" value="selectedpage" class="styled"/>
     <label>
-   		<?php  _e( 'On selected pages only', 'ultimate-social-media-plus' ); ?>
+   		<?php  _e( 'On selected pages only', SFSI_PLUS_DOMAIN ); ?>
     </label>
             <div class="field" style="width:50%"><select multiple="multiple" name="sfsi_plus_Show_popupOn_PageIDs" id="sfsi_plus_Show_popupOn_PageIDs" style="width:60%;min-height: 150px;"  >
              <?php $select=  (isset($option7['sfsi_plus_Show_popupOn_PageIDs'])) ? unserialize($option7['sfsi_plus_Show_popupOn_PageIDs']) :array();
@@ -264,23 +260,23 @@
         } ?>   
                 
             </select><br/>
-            <?php  _e( 'Please hold CTRL key to select multiple pages', 'ultimate-social-media-plus' ); ?>.
+            <?php  _e( 'Please hold CTRL key to select multiple pages', SFSI_PLUS_DOMAIN ); ?>.
         </div>
         </div>
 </div>
 <div class="row">
 	<h4>
-    	<?php  _e( 'When shall the pop-up be shown', 'ultimate-social-media-plus' ); ?>?
+    	<?php  _e( 'When shall the pop-up be shown?', SFSI_PLUS_DOMAIN ); ?>
     </h4>
 	<div class="pop_up_show"><input name="sfsi_plus_Shown_pop" <?php echo ($option7['sfsi_plus_Shown_pop']=='once') ?  'checked="true"' : '' ;?> type="radio" value="once" class="styled" />
     <label>
-    	<?php  _e( 'Once', 'ultimate-social-media-plus' ); ?> 
+    	<?php  _e( 'Once', SFSI_PLUS_DOMAIN ); ?> 
     	<input name="sfsi_plus_Shown_popupOnceTime" type="text" value="<?php echo ($option7['sfsi_plus_Shown_popupOnceTime']!='') ?  $option7['sfsi_plus_Shown_popupOnceTime'] : '' ;?>" class="seconds" /> 
-    		<?php  _e( 'seconds after the user arrived on the site', 'ultimate-social-media-plus' ); ?>
+    		<?php  _e( 'seconds after the user arrived on the site', SFSI_PLUS_DOMAIN ); ?>
     </label></div>
 	<div class="pop_up_show"><input name="sfsi_plus_Shown_pop" <?php echo ($option7['sfsi_plus_Shown_pop']=='ETscroll') ?  'checked="true"' : '' ;?> type="radio" value="ETscroll" class="styled"/>
     <label>
-   		<?php  _e( 'Every time user scrolls to the end of the page', 'ultimate-social-media-plus' ); ?>
+   		<?php  _e( 'Every time user scrolls to the end of the page', SFSI_PLUS_DOMAIN ); ?>
     </label>
     </div>
         <!--<div class="pop_up_show"><input name="sfsi_plus_Shown_pop" <?php //echo ($option7['sfsi_plus_Shown_pop']=='LimitPopUp') ?  'checked="true"' : '' ;?> type="radio" value="LimitPopUp" class="styled"/><label>Limit popup impression per user to once per</label><div class="field" style="margin-top: -3px;">
@@ -299,11 +295,11 @@
 	     <img src="<?php echo SFSI_PLUS_PLUGURL ?>images/ajax-loader.gif" class="loader-img" />
          <?php  $nonce = wp_create_nonce("update_plus_step7"); ?>
 	    <a href="javascript:;" id="sfsi_plus_save7" title="Save" data-nonce="<?php echo $nonce;?>">
-        	<?php  _e( 'Save', 'ultimate-social-media-plus' ); ?>
+        	<?php  _e( 'Save', SFSI_PLUS_DOMAIN ); ?>
         </a>
 	</div><!-- END SAVE BUTTON SECTION   -->
 	<a class="sfsiColbtn closeSec" href="javascript:;" class="closeSec">
-    	<?php  _e( 'Collapse area', 'ultimate-social-media-plus' ); ?>
+    	<?php  _e( 'Collapse area', SFSI_PLUS_DOMAIN ); ?>
     </a>
 	<label class="closeSec"></label>
 	 <!-- ERROR AND SUCCESS MESSAGE AREA-->

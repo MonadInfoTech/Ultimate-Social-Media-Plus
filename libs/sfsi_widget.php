@@ -96,17 +96,15 @@ class Sfsi_Plus_Widget extends WP_Widget
 		?>
 		<p>
 		    <label for="<?php echo $this->get_field_id( 'title' ); ?>">
-				<?php _e('Title', 'Subscription and Social Icons'); ?>:
+				<?php _e('Title', SFSI_PLUS_DOMAIN); ?>:
             </label>
 		    <input id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" value="<?php echo $instance['title']; ?>" style="width:100%;" />
 		    <input type="hidden" value="<?php echo $instance['showf'] ?>" id="<?php echo $this->get_field_id( 'showf' ); ?>" name="<?php echo $this->get_field_name( 'showf' ); ?>" />
 		</p>
 		<p>
-			<?php  _e( 'Please go to the', 'ultimate-social-media-plus' ); ?>
-            <a href="admin.php?page=sfsi-plus-options">
-            	<?php  _e( 'plugin page', 'ultimate-social-media-plus' ); ?>
-            </a> 
-            <?php _e( 'to set your preferences', 'ultimate-social-media-plus' ); ?>
+			<?php
+				_e( 'Please go to the <a href="admin.php?page=sfsi-plus-options">plugin page</a> to set your preferences', SFSI_PLUS_DOMAIN);
+			?>
 		</p>
 	<?php
 	}
@@ -603,7 +601,10 @@ function sfsi_plus_prepairIcons($icon_name,$is_front=0, $onpost="no")
 			 }
 			 
 			 /* fecth no of counts if active in admin section */
-			 if($sfsi_plus_section4_options['sfsi_plus_facebook_countsDisplay']=="yes" && $sfsi_plus_section4_options['sfsi_plus_display_counts']=="yes" )
+			 if(
+			 	$sfsi_plus_section4_options['sfsi_plus_facebook_countsDisplay']=="yes" &&
+				$sfsi_plus_section4_options['sfsi_plus_display_counts']=="yes"
+			 )
 			 {
 				 if($sfsi_plus_section4_options['sfsi_plus_facebook_countsFrom']=="manual")
 				 {    
@@ -629,7 +630,6 @@ function sfsi_plus_prepairIcons($icon_name,$is_front=0, $onpost="no")
 					 $current_url = $sfsi_plus_section4_options['sfsi_plus_facebook_mypageCounts'];
 					 $fb_data=$socialObj->sfsi_get_fb_pagelike($current_url);
 					 $counts=$socialObj->format_num($fb_data);
-					
 				 }
 			 } 
 			

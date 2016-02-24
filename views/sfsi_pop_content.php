@@ -1,8 +1,8 @@
 <?php 
 
-$rss_readmore_text=__('Note: Also if you already offer a newsletter it makes sense to offer this option too, because it will get you more readers, as expained here', 'ultimate-social-media-plus' ).'.';
-$ress_readmore_button=__('Ok, keep it active for the time being,I want to see how it works', 'ultimate-social-media-plus' );
-$rss_readmore_text2=__('Deactivate it', 'ultimate-social-media-plus' );
+$rss_readmore_text=__('Note: Also if you already offer a newsletter it makes sense to offer this option too, because it will get you more readers, as expained here.', SFSI_PLUS_DOMAIN );
+$ress_readmore_button=__('Ok, keep it active for the time being,I want to see how it works', SFSI_PLUS_DOMAIN );
+$rss_readmore_text2=__('Deactivate it', SFSI_PLUS_DOMAIN );
 
 define('rss_readmore', $rss_readmore_text);
 define('ress_readmore_button', $ress_readmore_button);
@@ -14,7 +14,7 @@ define('rss_readmore_text2', $rss_readmore_text2);
     <div class="pop_up_box sfsi_pop_up"  >
         <img src="<?php echo SFSI_PLUS_PLUGURL; ?>images/close.jpg" id="close_popup" class="sfsicloseBtn" />
         <h4 id="readmore_text">
-        	Note: <?php  echo __( "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum", 'ultimate-social-media-plus' ); ?>.
+        	Note: <?php  echo __( "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum", SFSI_PLUS_DOMAIN ); ?>.
         </h4>
 </div>
 </div>
@@ -28,29 +28,18 @@ define('rss_readmore_text2', $rss_readmore_text2);
 	    <div class="sfsi_uploader">
             <div class="sfsi_popupcntnr">
             	<h3>
-               		<?php  _e( 'Steps', 'ultimate-social-media-plus' ); ?>:
+               		<?php  _e( 'Steps:', SFSI_PLUS_DOMAIN ); ?>
                 </h3>
                 <ul class="flwstep">
                 	<li>
-                    	1. <?php  _e( 'Click on', 'ultimate-social-media-plus' ); ?> 
-                    	<span> << </span> 
-                        <span>
-                            <?php  _e( 'Upload', 'ultimate-social-media-plus' ); ?>
-                        </span> 
-                    	<span> >> </span>
-                      	<?php  _e( 'below', 'ultimate-social-media-plus' ); ?>
+                    	1. <?php  _e( 'Click on << Upload >> below', SFSI_PLUS_DOMAIN ); ?>
                     </li>
                     <li>
-                    	2. <?php  _e( 'Upload the icon into the media gallery', 'ultimate-social-media-plus' ); ?>
+                    	2. <?php  _e( 'Upload the icon into the media gallery', SFSI_PLUS_DOMAIN ); ?>
                     </li>
 					<li>
-                    	3. <?php  _e( 'Click on', 'ultimate-social-media-plus' ); ?>
-                    	<span> << </span> 
-                        <span>
-                            <?php  _e( 'Insert into post', 'ultimate-social-media-plus' ); ?>
-                        </span>
-                        <span> >> </span> 
-                    </li>
+                    	3. <?php  _e( 'Click on << Insert into post >> ', SFSI_PLUS_DOMAIN ); ?>
+                   </li>
                 </ul>    
                 <div class="upldbtn"><input name=""  type="button" value="Upload" class="upload_butt" onclick="upload_image_icon(this)" /></div>
             </div>
@@ -98,7 +87,7 @@ define('rss_readmore_text2', $rss_readmore_text2);
     <div class="pop_up_box_ex sfsi_pop_up adPopWidth" >
         <img src="<?php echo SFSI_PLUS_PLUGURL; ?>images/close.jpg" id="close_popup" class="sfsicloseBtn" />
 	    <h4 id="readmore_text">
-        	<?php  _e( 'Move over the', 'ultimate-social-media-plus' ); ?> Facebook-icon…
+        	<?php  _e( 'Move over the Facebook-icon…', SFSI_PLUS_DOMAIN ); ?>
         </h4>
     
         <div class="adminTooltip" >
@@ -122,7 +111,7 @@ define('rss_readmore_text2', $rss_readmore_text2);
         <img src="<?php echo SFSI_PLUS_PLUGURL; ?>images/close.jpg" id="close_popup" class="sfsicloseBtn" />
     	<h4 id="readmore_text">
         	<?php
-				_e( 'Move over the', 'ultimate-social-media-plus' );?> “+ icon” <?php _e( 'to see the sharing options','ultimate-social-media-plus');
+				_e( 'Move over the “+ icon” to see the sharing options',SFSI_PLUS_DOMAIN );
 			?>
         </h4>
     	<div style="margin: 0px auto;">
@@ -151,7 +140,7 @@ define('rss_readmore_text2', $rss_readmore_text2);
     <div class="pop_up_box_ex sfsi_pop_up adPopWidth" >
         <img src="<?php echo SFSI_PLUS_PLUGURL; ?>images/close.jpg" id="close_popup" class="sfsicloseBtn" />
     	<h4 id="readmore_text">
-        	<?php  _e( 'Move over the', 'ultimate-social-media-plus' ); ?> Twiiter-icon…
+        	<?php  _e( 'Move over the Twiiter-icon…', SFSI_PLUS_DOMAIN ); ?>
         </h4>
     
         <div class="adminTooltip" >
@@ -178,7 +167,7 @@ define('rss_readmore_text2', $rss_readmore_text2);
     <div class="pop_up_box_ex sfsi_pop_up adPopWidth" style="display: block;" >
         <img src="<?php echo SFSI_PLUS_PLUGURL; ?>images/close.jpg" id="close_popup" class="sfsicloseBtn" />
     	<h4 id="readmore_text">
-        	<?php  _e( 'Move over the', 'ultimate-social-media-plus' ); ?> Google+ icon…
+        	<?php  _e( 'Move over the Google+ icon…', SFSI_PLUS_DOMAIN ); ?>
         </h4>
     
         <div class="adminTooltip" >
@@ -204,7 +193,7 @@ define('rss_readmore_text2', $rss_readmore_text2);
     <div class="pop_up_box_ex sfsi_pop_up adPopWidth" >
         <img src="<?php echo SFSI_PLUS_PLUGURL; ?>images/close.jpg" id="close_popup" class="sfsicloseBtn" />
     	<h4 id="readmore_text">
-        	<?php  _e( 'Move over the', 'ultimate-social-media-plus' ); ?> YouTube-icon…
+        	<?php  _e( 'Move over the YouTube-icon…', SFSI_PLUS_DOMAIN ); ?>
         </h4>
     	
         <div class="adminTooltip" >
@@ -227,7 +216,7 @@ $pin_url=($option2['sfsi_plus_pinterest_pageUrl']!='') ?  $option2['sfsi_plus_pi
     <div class="pop_up_box_ex sfsi_pop_up adPopWidth" >
         <img src="<?php echo SFSI_PLUS_PLUGURL; ?>images/close.jpg" id="close_popup" class="sfsicloseBtn" />
     	<h4 id="readmore_text">
-        	<?php  _e( 'Move over the', 'ultimate-social-media-plus' ); ?> Pinterest-icon… 
+        	<?php  _e( 'Move over the Pinterest-icon…', SFSI_PLUS_DOMAIN ); ?>
         </h4>
     
      	<div class="adminTooltip" >
@@ -255,7 +244,7 @@ $pin_url=($option2['sfsi_plus_pinterest_pageUrl']!='') ?  $option2['sfsi_plus_pi
     <div class="pop_up_box_ex sfsi_pop_up adPopWidth" >
     	<img src="<?php echo SFSI_PLUS_PLUGURL; ?>images/close.jpg" id="close_popup" class="sfsicloseBtn" />
     	<h4 id="readmore_text">
-        	<?php  _e( 'Move over the', 'ultimate-social-media-plus' ); ?> LinkedIn-icon…
+        	<?php  _e( 'Move over the LinkedIn-icon…', SFSI_PLUS_DOMAIN ); ?>
         </h4>
         <div class="adminTooltip" >
         	<a href="javascript:"><img width="51" class="sfsi_wicon" src="<?php echo SFSI_PLUS_PLUGURL;?>images/linked_in.png" title="LinkedIn" alt="LinkedIn"/></a>
@@ -277,7 +266,7 @@ $pin_url=($option2['sfsi_plus_pinterest_pageUrl']!='') ?  $option2['sfsi_plus_pi
     <div class="pop_up_box sfsi_pop_up adPopWidth" >
         <img src="<?php echo SFSI_PLUS_PLUGURL; ?>images/close.jpg" id="close_popup" class="sfsicloseBtn" />
     	<h4 id="readmore_text">
-        	<?php _e('Move over the','ultimate-social-media-plus'); ?> “+ icon” <?php _e('to see the sharing options','ultimate-social-media-plus');?>
+        	<?php _e('Move over the “+ icon” to see the sharing options',SFSI_PLUS_DOMAIN);?>
         </h4>
  	    <div style="float: right;opacity: 1;position: relative;right: 215px;top: 10px;width: 52px; text-align: center;" ><a alt="share"  href="http://www.addthis.com/bookmark.php?v=250"  effect="" class="addthis_button"><img width="51" class="sfsi_wicon" src="<?php echo SFSI_PLUS_PLUGURL; ?>images/share.png" title="share" alt="share" /></a>
     </div>
@@ -291,24 +280,18 @@ $pin_url=($option2['sfsi_plus_pinterest_pageUrl']!='') ?  $option2['sfsi_plus_pi
 <div class="pop-overlay read-overlay demail-1" >
     <div class="pop_up_box sfsi_pop_up" >
        <h4>
-       		Note: <?php _e('Also if you already offer a newsletter it makes sense to offer this option too, because it will get you', 'ultimate-social-media-plus' ); ?>
-       		<span class="mediam_txt">
-           		 <?php _e( 'more readers', 'ultimate-social-media-plus' ); ?>
-       		</span>, 
-            <?php  _e( 'as explained', 'ultimate-social-media-plus' ); ?>
+       		Note: <?php _e('Also if you already offer a newsletter it makes sense to offer this option too, because it will get you <span class="mediam_txt">more readers</span> as explained', SFSI_PLUS_DOMAIN ); ?>
            	<a href="http://www.specificfeeds.com/rss" target="_new" style="color:#5A6570;display: inline;text-decoration:underline">
-                <?php  _e( 'here', 'ultimate-social-media-plus' ); ?>
+                <?php  _e( 'here', SFSI_PLUS_DOMAIN ); ?>
            	</a>. 
        </h4>
        <div class="button">
            <a href="javascript:;" class="hideemailpop" title="Ok, keep it active for the time being,I want to see how it works">
-                <?php  _e( 'Ok, keep it active for the time being', 'ultimate-social-media-plus' ); ?>,
-                <br />
-                <?php  _e( 'I want to see how it works', 'ultimate-social-media-plus' ); ?>
+                <?php  _e( 'Ok, keep it active for the time being<br />,I want to see how it works', SFSI_PLUS_DOMAIN ); ?>
             </a>
        </div>
        <a href="javascript:;" id="deac_email2" title="Deactivate it">
-              <?php  _e( 'Deactivate it', 'ultimate-social-media-plus' ); ?>
+              <?php  _e( 'Deactivate it', SFSI_PLUS_DOMAIN ); ?>
        </a>
   </div>
 </div>
@@ -316,16 +299,16 @@ $pin_url=($option2['sfsi_plus_pinterest_pageUrl']!='') ?  $option2['sfsi_plus_pi
 <div class="pop-overlay read-overlay demail-2" >
     <div class="pop_up_box sfsi_pop_up" >
        <h4 class="activate">
-              <?php  _e( 'Ok, fine', 'ultimate-social-media-plus' ); ?>, <?php  _e( 'however for using this plugin for FREE', 'ultimate-social-media-plus' ); ?>, <?php  _e( 'please support us by activating a link back to our site', 'ultimate-social-media-plus' ); ?>:
+              <?php  _e( 'Ok, fine, however for using this plugin for FREE, please support us by activating a link back to our site:', SFSI_PLUS_DOMAIN ); ?>
        </h4>
 		<?php $nonce = wp_create_nonce("active_plusfooter");?>
         <div class="button">
             <a href="javascript:;" class="sfsiplus_activate_footer activate" title="Ok, activate link" data-nonce="<?php echo $nonce;?>">
-                <?php  _e( 'Ok, activate link', 'ultimate-social-media-plus' ); ?>
+                <?php  _e( 'Ok, activate link', SFSI_PLUS_DOMAIN ); ?>
             </a>
         </div>
         <a href="javascript:;" id="deac_email3" title="Don’t activate link">
-            <?php  _e( 'Don’t activate link', 'ultimate-social-media-plus' ); ?>
+            <?php  _e( 'Don’t activate link', SFSI_PLUS_DOMAIN ); ?>
         </a>
   </div>
 </div>
@@ -333,15 +316,15 @@ $pin_url=($option2['sfsi_plus_pinterest_pageUrl']!='') ?  $option2['sfsi_plus_pi
 <div class="pop-overlay read-overlay demail-3" >
     <div class="pop_up_box sfsi_pop_up" >
        <h4>
-              <?php  _e( 'You’re a toughie', 'ultimate-social-media-plus' ); ?>. <?php  _e( 'Last try', 'ultimate-social-media-plus' ); ?>: <?php  _e( 'As a minimum, could you please review this plugin', 'ultimate-social-media-plus' ); ?> (<?php  _e( 'with 5 stars', 'ultimate-social-media-plus' ); ?>)? <?php  _e( 'It only takes a minute. Thank you', 'ultimate-social-media-plus' ); ?>!
+              <?php  _e( 'You’re a toughie. Last try: As a minimum, could you please review this plugin (with 5 stars)? It only takes a minute. Thank you!', SFSI_PLUS_DOMAIN ); ?>
        </h4>
         <div class="button">
             <a href="https://wordpress.org/support/view/plugin-reviews/ultimate-social-media-plus" target="_new" class="hidePop activate" title="Ok, Review it" >
-                <?php  _e( 'Ok, Review it', 'ultimate-social-media-plus' ); ?>
+                <?php  _e( 'Ok, Review it', SFSI_PLUS_DOMAIN ); ?>
             </a>
         </div>
         <a href="javascript:;" class="hidePop" title="Don’t review and exit">
-            <?php  _e( 'Don’t review and exit', 'ultimate-social-media-plus' ); ?>
+            <?php  _e( 'Don’t review and exit', SFSI_PLUS_DOMAIN ); ?>
         </a>
       </div>
 </div> <!-- END email deactivate pop-ups -->
@@ -353,27 +336,20 @@ $pin_url=($option2['sfsi_plus_pinterest_pageUrl']!='') ?  $option2['sfsi_plus_pi
         
         <div class="cstomskins_wrpr">
             <h3>
-           		<?php  _e( 'Upload custom icons', 'ultimate-social-media-plus' ); ?>
+           		<?php  _e( 'Upload custom icons', SFSI_PLUS_DOMAIN ); ?>
             </h3>
             <div class="custskinmsg">
-            	<?php  _e( 'Here you can upload custom icons which perform the same actions as the standard icons', 'ultimate-social-media-plus' ); ?>.
+            	<?php  _e( 'Here you can upload custom icons which perform the same actions as the standard icons.', SFSI_PLUS_DOMAIN ); ?>
                 <ul>
                     <li>
-                		1. <?php  _e( 'Click on', 'ultimate-social-media-plus' ); ?> 
-                    	<span> << </span>
-                     	<span> <?php  _e( 'Upload', 'ultimate-social-media-plus' ); ?> </span> 
-                     	<span> >> </span> 
-                     	<?php  _e( 'below', 'ultimate-social-media-plus' ); ?>
+                		1. <?php  _e( 'Click on << Upload >> below', SFSI_PLUS_DOMAIN ); ?>
                     </li>
                     <li>
-                    	2. <?php  _e( 'Upload the icon into the media gallery', 'ultimate-social-media-plus' ); ?>
+                    	2. <?php  _e( 'Upload the icon into the media gallery', SFSI_PLUS_DOMAIN ); ?>
                     </li>
                     <li>
-                     	3. <?php  _e( 'Click on', 'ultimate-social-media-plus' ); ?>
-                     	<span> << </span> 
-                     	<span> <?php  _e( 'Insert into post', 'ultimate-social-media-plus' ); ?> </span> 
-                     	<span> >> </span> 
-                    </li>
+                     	3. <?php  _e( 'Click on << Insert into post >>', SFSI_PLUS_DOMAIN ); ?>
+					</li>
                 </ul>
             </div>
             
@@ -602,7 +578,7 @@ $pin_url=($option2['sfsi_plus_pinterest_pageUrl']!='') ?  $option2['sfsi_plus_pi
             </ul>
             <div class="cstmskins_sbmt">
             	<a href="javascript:" class="done_btn" onclick="SFSI_plus_done();">
-                	<?php  _e( "I'm done", 'ultimate-social-media-plus' ); ?>!
+                	<?php  _e( "I'm done!", SFSI_PLUS_DOMAIN ); ?>
                 </a> 
             </div>
            

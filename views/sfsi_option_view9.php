@@ -8,9 +8,9 @@
 		$connectToFeed = "http://www.specificfeeds.com/?".base64_encode("userprofile=wordpress&feed_id=".$feedId);
 	?>
     <p>
-		<?php  _e('In addition to the email- or follow-icon you can also show a subscription form which maximizes chances that people subscribe to your site', 'ultimate-social-media-plus'); ?>. <?php  _e('To get access to the emails who subscribe, please', 'ultimate-social-media-plus'); ?>
+		<?php  _e('In addition to the email- or follow-icon you can also show a subscription form which maximizes chances that people subscribe to your site. To get access to the emails who subscribe, please', SFSI_PLUS_DOMAIN); ?>
 		<a target="_new" href="<?php echo $connectToFeed; ?>">
-			<?php _e('claim your feed','ultimate-social-media-plus'); ?>.
+			<?php _e('claim your feed',SFSI_PLUS_DOMAIN); ?>.
 		</a>
     </p>
 	
@@ -18,7 +18,7 @@
     	<!--Section 1-->
         <div class="sfsi_plus_tab8_subcontainer">
     		<h3 class="sfsi_plus_section_title">
-            	<?php  _e( 'Preview', 'ultimate-social-media-plus' ); ?>:
+            	<?php  _e( 'Preview:', SFSI_PLUS_DOMAIN ); ?>
             </h3>
             <div class="like_pop_box">
             	<?php get_sfsi_plus_SubscriptionForm(); ?>
@@ -28,10 +28,10 @@
         <!--Section 2-->
         <div class="sfsi_plus_tab8_subcontainer sfsi_plus_seprater">
     		<h3 class="sfsi_plus_section_title">
-            	<?php  _e( 'Place it on your site', 'ultimate-social-media-plus' ); ?>
+            	<?php  _e( 'Place it on your site', SFSI_PLUS_DOMAIN ); ?>
             </h3>
             <label class="sfsi_plus_label_text">
-            	<?php  _e( 'You can place the form by different methods', 'ultimate-social-media-plus' ); ?>:
+            	<?php  _e( 'You can place the form by different methods:', SFSI_PLUS_DOMAIN ); ?>
             </label>
             
             <ul class="sfsi_plus_form_info">
@@ -50,18 +50,18 @@
                 </li>
                 <li>
                 	<b>
-                		2. <?php  _e( 'Shortcode', 'ultimate-social-media-plus' ); ?>:
+                		2. <?php  _e( 'Shortcode:', SFSI_PLUS_DOMAIN ); ?>
                 	</b>
                  	
-					<?php  _e( 'Use the shortcode', 'ultimate-social-media-plus' ); ?>
+					<?php  _e( 'Use the shortcode', SFSI_PLUS_DOMAIN ); ?>
                   	
                     <b>[USM_plus_form]</b> 
                   	
-					<?php  _e( 'to place it into your codes', 'ultimate-social-media-plus' ); ?>
+					<?php  _e( 'to place it into your codes', SFSI_PLUS_DOMAIN ); ?>
                	</li>
                 <li>
                     <b>
-                        3. <?php  _e( 'Copy & paste HTML code', 'ultimate-social-media-plus' ); ?>:
+                        3. <?php  _e( 'Copy & paste HTML code:', SFSI_PLUS_DOMAIN ); ?>
                     </b>
                 </li>
             </ul>
@@ -75,7 +75,7 @@
                 <div class="sfsi_plus_subscribe_Popinner" style="padding: 18px 0px;">
                     <form method="post" onsubmit="return sfsi_plus_processfurther(this);" target="popupwindow" action="<?php echo $url?>" style="margin: 0px 20px;">
                         <h5 style="margin: 0 0 10px; padding: 0;">
-                        	<?php  _e( 'Get new posts by email', 'ultimate-social-media-plus' ); ?>:
+                        	<?php  _e( 'Get new posts by email:', SFSI_PLUS_DOMAIN ); ?>
                         </h5>
                         <div style="margin: 5px 0; width: 100%;">
                             <input style="padding: 10px 0px !important; width: 100% !important;" type="email" placeholder="Enter your email" value="" name="data[Widget][email]" />
@@ -97,10 +97,10 @@
         <!--Section 3-->
         <div class="sfsi_plus_tab8_subcontainer sfsi_plus_seprater">
         	<h3 class="sfsi_plus_section_title">
-            	<?php  _e( 'Define text & design', 'ultimate-social-media-plus' ); ?> (<?php  _e( 'optional', 'ultimate-social-media-plus' ); ?>)
+            	<?php  _e( 'Define text & design (optional)', SFSI_PLUS_DOMAIN ); ?>
             </h3>
             <h5 class="sfsi_plus_section_subtitle">
-            	<?php  _e( 'Overall size & border', 'ultimate-social-media-plus' ); ?>
+            	<?php  _e( 'Overall size & border', SFSI_PLUS_DOMAIN ); ?>
             </h5>
             
             <!--Left Section-->
@@ -112,21 +112,21 @@
             <div class="sfsi_plus_right_container">
             	<div class="row_tab">
                     <label class="sfsi_plus_heding">
-                    	<?php  _e( 'Adjust size to space on website', 'ultimate-social-media-plus' ); ?>?
+                    	<?php  _e( 'Adjust size to space on website?', SFSI_PLUS_DOMAIN ); ?>
                     </label>
 					<ul class="border_shadow">
                     	<li>
                         	<input type="radio" class="styled" value="yes" name="sfsi_plus_form_adjustment"
                             	<?php echo sfsi_plus_isChecked($option9['sfsi_plus_form_adjustment'], 'yes'); ?> >
                             <label>
-                         		<?php  _e( 'Yes', 'ultimate-social-media-plus' ); ?>
+                         		<?php  _e( 'Yes', SFSI_PLUS_DOMAIN ); ?>
                             </label>
                         </li>
                         <li>
                         	<input type="radio" class="styled" value="no" name="sfsi_plus_form_adjustment"
                             	<?php echo sfsi_plus_isChecked($option9['sfsi_plus_form_adjustment'], 'no'); ?> >
                             <label>
-                            	<?php  _e( 'No', 'ultimate-social-media-plus' ); ?>
+                            	<?php  _e( 'No', SFSI_PLUS_DOMAIN ); ?>
                             </label>
                         </li>
                     </ul>
@@ -135,44 +135,44 @@
                 <div class="row_tab" style="<?php echo ($option9['sfsi_plus_form_adjustment'] == 'yes')? "display:none": ''; ?>">
                     <div class="sfsi_plus_field">
                     	<label>
-                        	<?php  _e( 'Height', 'ultimate-social-media-plus' ); ?>
+                        	<?php  _e( 'Height', SFSI_PLUS_DOMAIN ); ?>
                         </label>
                         <input name="sfsi_plus_form_height" type="text"
                         	value="<?php echo ($option9['sfsi_plus_form_height']!='') ?  $option9['sfsi_plus_form_height'] : '' ;?>"
                             class="small rec-inp" />
                             <span class="pix">
-                            	<?php  _e( 'pixels', 'ultimate-social-media-plus' ); ?>
+                            	<?php  _e( 'pixels', SFSI_PLUS_DOMAIN ); ?>
                             </span>
                     </div>
                     <div class="sfsi_plus_field">
                     	<label>
-                        	<?php  _e( 'Width', 'ultimate-social-media-plus' ); ?>
+                        	<?php  _e( 'Width', SFSI_PLUS_DOMAIN ); ?>
                         </label>
                         <input name="sfsi_plus_form_width" type="text"
                         	value="<?php echo ($option9['sfsi_plus_form_width']!='') ?  $option9['sfsi_plus_form_width'] : '' ;?>" class="small rec-inp" />
                             <span class="pix">
-                            	<?php  _e( 'pixels', 'ultimate-social-media-plus' ); ?>
+                            	<?php  _e( 'pixels', SFSI_PLUS_DOMAIN ); ?>
                             </span>
                     </div>
                 </div>
                 <!--Row Section-->
                 <div class="row_tab">
                     <label class="sfsi_plus_heding">
-                    	<?php  _e( 'Border', 'ultimate-social-media-plus' ); ?>?
+                    	<?php  _e( 'Border?', SFSI_PLUS_DOMAIN ); ?>
                     </label>
 					<ul class="border_shadow">
                     	<li>
                         	<input type="radio" class="styled" value="yes" name="sfsi_plus_form_border"
                             	<?php echo sfsi_plus_isChecked($option9['sfsi_plus_form_border'], 'yes'); ?> >
                             <label>
-                            	<?php  _e( 'Yes', 'ultimate-social-media-plus' ); ?>
+                            	<?php  _e( 'Yes', SFSI_PLUS_DOMAIN ); ?>
                             </label>
                         </li>
                         <li>
                         	<input type="radio" class="styled" value="no" name="sfsi_plus_form_border"
                             	<?php echo sfsi_plus_isChecked($option9['sfsi_plus_form_border'], 'no'); ?> >
                             <label>
-                            	<?php  _e( 'No', 'ultimate-social-media-plus' ); ?>
+                            	<?php  _e( 'No', SFSI_PLUS_DOMAIN ); ?>
                             </label>
                         </li>
                     </ul>
@@ -181,18 +181,18 @@
                 <div class="row_tab" style="<?php echo ($option9['sfsi_plus_form_border'] == 'no')? "display:none": ''; ?>">
                 	<div class="sfsi_plus_field">
                     	<label>
-                        	<?php  _e( 'Thickness', 'ultimate-social-media-plus' ); ?>
+                        	<?php  _e( 'Thickness', SFSI_PLUS_DOMAIN ); ?>
                         </label>
                         <input name="sfsi_plus_form_border_thickness" type="text" value="<?php echo ($option9['sfsi_plus_form_border_thickness']!='')
 										? $option9['sfsi_plus_form_border_thickness'] : '' ;
 									?>" class="small rec-inp" />
                         <span class="pix">
-                        	<?php  _e( 'pixels', 'ultimate-social-media-plus' ); ?>
+                        	<?php  _e( 'pixels', SFSI_PLUS_DOMAIN ); ?>
                         </span>
                     </div>
                     <div class="sfsi_plus_field">
                     	<label>
-                        	<?php  _e( 'Color', 'ultimate-social-media-plus' ); ?>
+                        	<?php  _e( 'Color', SFSI_PLUS_DOMAIN ); ?>
                         </label>
                         <input id="sfsi_plus_form_border_color" data-default-color="#b5b5b5" type="text" name="sfsi_plus_form_border_color"
                         	value="<?php echo ($option9['sfsi_plus_form_border_color']!='')
@@ -207,7 +207,7 @@
                 <!--Row Section-->
                 <div class="row_tab">
                     <label class="sfsi_plus_heding autowidth">
-                    	<?php  _e( 'Background color', 'ultimate-social-media-plus' ); ?>:
+                    	<?php  _e( 'Background color:', SFSI_PLUS_DOMAIN ); ?>
                     </label>
 					<div class="sfsi_plus_field">
                     	<input id="sfsi_plus_form_background" data-default-color="#b5b5b5" type="text" name="sfsi_plus_form_background"
@@ -228,7 +228,7 @@
         <!--Section 4-->
         <div class="sfsi_plus_tab8_subcontainer sfsi_plus_seprater">
         	<h5 class="sfsi_plus_section_subtitle">
-            	<?php  _e( 'Text above entry field', 'ultimate-social-media-plus' ); ?>
+            	<?php  _e( 'Text above entry field', SFSI_PLUS_DOMAIN ); ?>
             </h5>
             
             <!--Left Section-->
@@ -240,7 +240,7 @@
             <div class="sfsi_plus_right_container">
             	<div class="row_tab">
                     <label class="sfsi_plus_heding fixwidth sfsi_plus_same_width">
-                    	<?php  _e( 'Text', 'ultimate-social-media-plus' ); ?>:
+                    	<?php  _e( 'Text:', SFSI_PLUS_DOMAIN ); ?>
                     </label>
                     <div class="sfsi_plus_field">
                         <input type="text" class="small new-inp" name="sfsi_plus_form_heading_text"
@@ -253,13 +253,13 @@
                 <div class="row_tab">
                 	<div class="sfsi_plus_field">
                     	<label class="sfsi_plus_same_width">
-                        	<?php  _e( 'Font', 'ultimate-social-media-plus' ); ?>:
+                        	<?php  _e( 'Font:', SFSI_PLUS_DOMAIN ); ?>
                         </label>
                         <?php sfsi_plus_get_font("sfsi_plus_form_heading_font", $option9['sfsi_plus_form_heading_font']); ?>
                     </div>
                     <div class="sfsi_plus_field">
                     	<label>
-                       		<?php  _e( ' Font style', 'ultimate-social-media-plus' ); ?>:
+                       		<?php  _e( ' Font style:', SFSI_PLUS_DOMAIN ); ?>
                         </label>
                         <?php sfsi_plus_get_fontstyle("sfsi_plus_form_heading_fontstyle", $option9['sfsi_plus_form_heading_fontstyle']); ?>
                     </div>
@@ -268,7 +268,7 @@
                 <div class="row_tab">
                 	<div class="sfsi_plus_field">
                     	<label class="sfsi_plus_same_width">
-                        	<?php  _e( 'Font color', 'ultimate-social-media-plus' ); ?>
+                        	<?php  _e( 'Font color', SFSI_PLUS_DOMAIN ); ?>
                         </label>
                         <input type="text" name="sfsi_plus_form_heading_fontcolor" data-default-color="#b5b5b5" id="sfsi_plus_form_heading_fontcolor" value="<?php echo ($option9['sfsi_plus_form_heading_fontcolor']!='')
 										? $option9['sfsi_plus_form_heading_fontcolor'] : '' ;
@@ -281,13 +281,13 @@
                     </div>
                     <div class="sfsi_plus_field">
                     	<label>
-                        	<?php  _e( 'Font size', 'ultimate-social-media-plus' ); ?>
+                        	<?php  _e( 'Font size', SFSI_PLUS_DOMAIN ); ?>
                        	</label>
                         <input type="text" class="small rec-inp" name="sfsi_plus_form_heading_fontsize"
                         	value="<?php echo ($option9['sfsi_plus_form_heading_fontsize']!='')
 										? $option9['sfsi_plus_form_heading_fontsize'] : '' ;?>"/>
                         <span class="pix">
-                        	<?php  _e( 'pixels', 'ultimate-social-media-plus' ); ?>
+                        	<?php  _e( 'pixels', SFSI_PLUS_DOMAIN ); ?>
                         </span>
                     </div>
                 </div>
@@ -295,7 +295,7 @@
                 <div class="row_tab">
                 	<div class="sfsi_plus_field">
                     	<label class="sfsi_plus_same_width">
-                        	<?php  _e( 'Alignment', 'ultimate-social-media-plus' ); ?>:
+                        	<?php  _e( 'Alignment:', SFSI_PLUS_DOMAIN ); ?>
                         </label>
                         <?php sfsi_plus_get_alignment("sfsi_plus_form_heading_fontalign", $option9['sfsi_plus_form_heading_fontalign']); ?>
                     </div>
@@ -308,7 +308,7 @@
         <!--Section 5-->
         <div class="sfsi_plus_tab8_subcontainer sfsi_plus_seprater">
         	<h5 class="sfsi_plus_section_subtitle">
-            	<?php  _e( 'Entry field', 'ultimate-social-media-plus' ); ?>
+            	<?php  _e( 'Entry field', SFSI_PLUS_DOMAIN ); ?>
             </h5>
             
             <!--Left Section-->
@@ -320,7 +320,7 @@
             <div class="sfsi_plus_right_container">
             	<div class="row_tab">
                     <label class="sfsi_plus_heding fixwidth sfsi_plus_same_width">
-                    	<?php  _e( 'Text', 'ultimate-social-media-plus' ); ?>:
+                    	<?php  _e( 'Text:', SFSI_PLUS_DOMAIN ); ?>
                     </label>
                     <div class="sfsi_plus_field">
                         <input type="text" class="small new-inp" name="sfsi_plus_form_field_text"
@@ -333,13 +333,13 @@
                 <div class="row_tab">
                 	<div class="sfsi_plus_field">
                     	<label class="sfsi_plus_same_width">
-                       		<?php  _e( 'Font', 'ultimate-social-media-plus' ); ?>:
+                       		<?php  _e( 'Font:', SFSI_PLUS_DOMAIN ); ?>
                         </label>
                         <?php sfsi_plus_get_font("sfsi_plus_form_field_font", $option9['sfsi_plus_form_field_font']); ?>
                     </div>
                     <div class="sfsi_plus_field">
                     	<label>
-                       		<?php  _e( 'Font style', 'ultimate-social-media-plus' ); ?>:
+                       		<?php  _e( 'Font style:', SFSI_PLUS_DOMAIN ); ?>
                         </label>
                         <?php sfsi_plus_get_fontstyle("sfsi_plus_form_field_fontstyle", $option9['sfsi_plus_form_field_fontstyle']); ?>
                     </div>
@@ -360,20 +360,20 @@
                     </div>-->
                     <div class="sfsi_plus_field">
                     	<label class="sfsi_plus_same_width">
-                        	<?php  _e( 'Alignment', 'ultimate-social-media-plus' ); ?>:
+                        	<?php  _e( 'Alignment:', SFSI_PLUS_DOMAIN ); ?>
                         </label>
                         <?php sfsi_plus_get_alignment("sfsi_plus_form_field_fontalign", $option9['sfsi_plus_form_field_fontalign']); ?>
                     </div>
                     
                     <div class="sfsi_plus_field">
                     	<label>
-                        	<?php  _e( 'Font size', 'ultimate-social-media-plus' ); ?>
+                        	<?php  _e( 'Font size', SFSI_PLUS_DOMAIN ); ?>
                         </label>
                         <input type="text" class="small rec-inp" name="sfsi_plus_form_field_fontsize"
                         	value="<?php echo ($option9['sfsi_plus_form_field_fontsize']!='')
 										? $option9['sfsi_plus_form_field_fontsize'] : '' ;?>"/>
                         <span class="pix">
-                        	<?php  _e( 'pixels', 'ultimate-social-media-plus' ); ?>
+                        	<?php  _e( 'pixels', SFSI_PLUS_DOMAIN ); ?>
                         </span>
                     </div>
                 </div>
@@ -385,7 +385,7 @@
         <!--Section 6-->
         <div class="sfsi_plus_tab8_subcontainer">
         	<h5 class="sfsi_plus_section_subtitle">
-            	<?php  _e( 'Subscribe button', 'ultimate-social-media-plus' ); ?>
+            	<?php  _e( 'Subscribe button', SFSI_PLUS_DOMAIN ); ?>
             </h5>
             
             <!--Left Section-->
@@ -397,7 +397,7 @@
             <div class="sfsi_plus_right_container">
             	<div class="row_tab">
                     <label class="sfsi_plus_heding fixwidth sfsi_plus_same_width">
-                    	<?php  _e( 'Text', 'ultimate-social-media-plus' ); ?>:
+                    	<?php  _e( 'Text:', SFSI_PLUS_DOMAIN ); ?>
                     </label>
                     <div class="sfsi_plus_field">
                         <input type="text" class="small new-inp" name="sfsi_plus_form_button_text"
@@ -410,13 +410,13 @@
                 <div class="row_tab">
                 	<div class="sfsi_plus_field">
                     	<label class="sfsi_plus_same_width">
-                        	<?php  _e( 'Font', 'ultimate-social-media-plus' ); ?>:
+                        	<?php  _e( 'Font:', SFSI_PLUS_DOMAIN ); ?>
                         </label>
                         <?php sfsi_plus_get_font("sfsi_plus_form_button_font", $option9['sfsi_plus_form_button_font']); ?>
                     </div>
                     <div class="sfsi_plus_field">
                     	<label>
-                        	<?php  _e( 'Font style', 'ultimate-social-media-plus' ); ?>:
+                        	<?php  _e( 'Font style:', SFSI_PLUS_DOMAIN ); ?>
                         </label>
                         <?php sfsi_plus_get_fontstyle("sfsi_plus_form_button_fontstyle", $option9['sfsi_plus_form_button_fontstyle']); ?>
                     </div>
@@ -425,7 +425,7 @@
                 <div class="row_tab">
                 	<div class="sfsi_plus_field">
                     	<label class="sfsi_plus_same_width">
-                        	<?php  _e( 'Font color', 'ultimate-social-media-plus' ); ?>
+                        	<?php  _e( 'Font color', SFSI_PLUS_DOMAIN ); ?>
                         </label>
                         <input type="text" name="sfsi_plus_form_button_fontcolor" data-default-color="#b5b5b5" id="sfsi_plus_form_button_fontcolor" value="<?php echo ($option9['sfsi_plus_form_button_fontcolor']!='')
 										? $option9['sfsi_plus_form_button_fontcolor'] : '' ;
@@ -438,13 +438,13 @@
                     </div>
                     <div class="sfsi_plus_field">
                     	<label>
-                        	<?php  _e( 'Font size', 'ultimate-social-media-plus' ); ?>
+                        	<?php  _e( 'Font size', SFSI_PLUS_DOMAIN ); ?>
                         </label>
                         <input type="text" class="small rec-inp" name="sfsi_plus_form_button_fontsize"
                         	value="<?php echo ($option9['sfsi_plus_form_button_fontsize']!='')
 										? $option9['sfsi_plus_form_button_fontsize'] : '' ;?>"/>
                         <span class="pix">
-                        	<?php  _e( 'pixels', 'ultimate-social-media-plus' ); ?>
+                        	<?php  _e( 'pixels', SFSI_PLUS_DOMAIN ); ?>
                         </span>
                     </div>
                 </div>
@@ -452,7 +452,7 @@
                 <div class="row_tab">
                 	<div class="sfsi_plus_field">
                     	<label class="sfsi_plus_same_width">
-                        	<?php  _e( 'Alignment', 'ultimate-social-media-plus' ); ?>:
+                        	<?php  _e( 'Alignment:', SFSI_PLUS_DOMAIN ); ?>
                         </label>
                         <?php sfsi_plus_get_alignment("sfsi_plus_form_button_fontalign", $option9['sfsi_plus_form_button_fontalign']); ?>
                     </div>
@@ -461,7 +461,7 @@
                 <div class="row_tab">
                 	<div class="sfsi_plus_field">
                     	<label class="sfsi_plus_same_width"><b>
-                        	<?php  _e( 'Button color', 'ultimate-social-media-plus' ); ?>:
+                        	<?php  _e( 'Button color:', SFSI_PLUS_DOMAIN ); ?>
                         </b></label>
                         <input type="text" name="sfsi_plus_form_button_background" data-default-color="#b5b5b5" id="sfsi_plus_form_button_background" value="<?php echo ($option9['sfsi_plus_form_button_background']!='')
 										? $option9['sfsi_plus_form_button_background'] : '' ;
@@ -485,13 +485,13 @@
        <img src="<?php echo SFSI_PLUS_PLUGURL ?>images/ajax-loader.gif" class="loader-img" />
        <?php $nonce = wp_create_nonce("update_plus_step9"); ?>
        <a  href="javascript:;" id="sfsi_plus_save9" title="Save" data-nonce="<?php echo $nonce;?>">
-       	<?php  _e( 'Save', 'ultimate-social-media-plus' ); ?>
+       	<?php  _e( 'Save', SFSI_PLUS_DOMAIN ); ?>
        </a>
 	</div>
     <!-- END SAVE BUTTON SECTION   -->
 	
     <a class="sfsiColbtn closeSec" href="javascript:;">
-    	<?php  _e( 'Collapse area', 'ultimate-social-media-plus' ); ?>
+    	<?php  _e( 'Collapse area', SFSI_PLUS_DOMAIN ); ?>
     </a>
 	<label class="closeSec"></label>
     
@@ -522,45 +522,45 @@ function sfsi_plus_get_font($name, $value)
 		<select name="<?php echo $name; ?>" id="<?php echo $name; ?>" class="select-same">
 			<option value="Arial, Helvetica, sans-serif"
 				<?php echo sfsi_plus_isSeletcted("Arial, Helvetica, sans-serif", $value) ?> >
-				<?php  _e( 'Arial', 'ultimate-social-media-plus' ); ?>
+				<?php  _e( 'Arial', SFSI_PLUS_DOMAIN ); ?>
 			</option>
 			<option value="Arial Black, Gadget, sans-serif"
 				<?php echo sfsi_plus_isSeletcted("Arial Black, Gadget, sans-serif", $value) ?> >
-				<?php  _e( 'Arial Black', 'ultimate-social-media-plus' ); ?>
+				<?php  _e( 'Arial Black', SFSI_PLUS_DOMAIN ); ?>
 			</option>
 			<option value="Calibri" <?php echo sfsi_plus_isSeletcted("Calibri", $value) ?> >
-           		<?php  _e( 'Calibri', 'ultimate-social-media-plus' ); ?>
+           		<?php  _e( 'Calibri', SFSI_PLUS_DOMAIN ); ?>
             </option>
 			<option value="Comic Sans MS" <?php echo sfsi_plus_isSeletcted("Comic Sans MS", $value) ?> >
-            	<?php  _e( 'Comic Sans MS', 'ultimate-social-media-plus' ); ?>
+            	<?php  _e( 'Comic Sans MS', SFSI_PLUS_DOMAIN ); ?>
             </option>
 			<option value="Courier New" <?php echo sfsi_plus_isSeletcted("Courier New", $value) ?> >
-            	<?php  _e( 'Courier New', 'ultimate-social-media-plus' ); ?>
+            	<?php  _e( 'Courier New', SFSI_PLUS_DOMAIN ); ?>
             </option>
 			<option value="Georgia" <?php echo sfsi_plus_isSeletcted("Georgia", $value) ?> >
-            	<?php  _e( 'Georgia', 'ultimate-social-media-plus' ); ?>
+            	<?php  _e( 'Georgia', SFSI_PLUS_DOMAIN ); ?>
             </option>
 			<option value="Helvetica,Arial,sans-serif"
 				<?php echo sfsi_plus_isSeletcted("Helvetica,Arial,sans-serif", $value) ?> >
-				<?php  _e( 'Helvetica', 'ultimate-social-media-plus' ); ?>
+				<?php  _e( 'Helvetica', SFSI_PLUS_DOMAIN ); ?>
 			</option>
 			<option value="Impact" <?php echo sfsi_plus_isSeletcted("Impact", $value) ?> >
-                <?php  _e( 'Impact', 'ultimate-social-media-plus' ); ?>
+                <?php  _e( 'Impact', SFSI_PLUS_DOMAIN ); ?>
             </option>
 			<option value="Lucida Console" <?php echo sfsi_plus_isSeletcted("Lucida Console", $value) ?> >
-                <?php  _e( 'Lucida Console', 'ultimate-social-media-plus' ); ?>
+                <?php  _e( 'Lucida Console', SFSI_PLUS_DOMAIN ); ?>
             </option>
 			<option value="Tahoma,Geneva" <?php echo sfsi_plus_isSeletcted("Tahoma,Geneva", $value) ?> >
-                <?php  _e( 'Tahoma', 'ultimate-social-media-plus' ); ?>
+                <?php  _e( 'Tahoma', SFSI_PLUS_DOMAIN ); ?>
             </option>
 			<option value="Times New Roman" <?php echo sfsi_plus_isSeletcted("Times New Roman", $value) ?> >
-            	<?php  _e( 'Times New Roman', 'ultimate-social-media-plus' ); ?>
+            	<?php  _e( 'Times New Roman', SFSI_PLUS_DOMAIN ); ?>
             </option>
 			<option value="Trebuchet MS" <?php echo sfsi_plus_isSeletcted("Trebuchet MS", $value) ?> >
-            	<?php  _e( 'Trebuchet MS', 'ultimate-social-media-plus' ); ?>
+            	<?php  _e( 'Trebuchet MS', SFSI_PLUS_DOMAIN ); ?>
             </option>
 			<option value="Verdana" <?php echo sfsi_plus_isSeletcted("Verdana", $value) ?> >
-            	<?php  _e( 'Verdana', 'ultimate-social-media-plus' ); ?>
+            	<?php  _e( 'Verdana', SFSI_PLUS_DOMAIN ); ?>
             </option>
 		</select>
 	<?php
@@ -570,19 +570,19 @@ function sfsi_plus_get_fontstyle($name, $value)
 	?>
 	<select name="<?php echo $name; ?>" id="<?php echo $name; ?>" class="select-same">
 		<option value="normal" <?php echo sfsi_plus_isSeletcted("normal", $value) ?> >
-        	<?php  _e( 'Normal', 'ultimate-social-media-plus' ); ?>
+        	<?php  _e( 'Normal', SFSI_PLUS_DOMAIN ); ?>
         </option>
 		<option value="inherit" <?php echo sfsi_plus_isSeletcted("inherit", $value) ?> >
-        	<?php  _e( 'Inherit', 'ultimate-social-media-plus' ); ?>
+        	<?php  _e( 'Inherit', SFSI_PLUS_DOMAIN ); ?>
         </option>
 		<option value="oblique" <?php echo sfsi_plus_isSeletcted("oblique", $value) ?> >
-        	<?php  _e( 'Oblique', 'ultimate-social-media-plus' ); ?>
+        	<?php  _e( 'Oblique', SFSI_PLUS_DOMAIN ); ?>
         </option>
 		<option value="italic" <?php echo sfsi_plus_isSeletcted("italic", $value) ?> >
-        	<?php  _e( 'Italic', 'ultimate-social-media-plus' ); ?>
+        	<?php  _e( 'Italic', SFSI_PLUS_DOMAIN ); ?>
         </option>
         <option value="bold" <?php echo sfsi_plus_isSeletcted("bold", $value) ?> >
-        	<?php  _e( 'Bold', 'ultimate-social-media-plus' ); ?>
+        	<?php  _e( 'Bold', SFSI_PLUS_DOMAIN ); ?>
         </option>
 	</select>
 	<?php                     
@@ -592,13 +592,13 @@ function sfsi_plus_get_alignment($name, $value)
 	?>
 	<select name="<?php echo $name; ?>" id="<?php echo $name; ?>" class="select-same">
 		<option value="left" <?php echo sfsi_plus_isSeletcted("left", $value) ?> >
-        	<?php  _e( 'Left Align', 'ultimate-social-media-plus' ); ?>
+        	<?php  _e( 'Left Align', SFSI_PLUS_DOMAIN ); ?>
         </option>
 		<option value="center" <?php echo sfsi_plus_isSeletcted("center", $value) ?> >
-        	<?php  _e( 'Centered', 'ultimate-social-media-plus' ); ?>
+        	<?php  _e( 'Centered', SFSI_PLUS_DOMAIN ); ?>
         </option>
 		<option value="right" <?php echo sfsi_plus_isSeletcted("right", $value) ?> >
-        	<?php  _e( 'Right Align', 'ultimate-social-media-plus' ); ?>
+        	<?php  _e( 'Right Align', SFSI_PLUS_DOMAIN ); ?>
         </option>
 	</select>	
 	<?php
@@ -610,7 +610,7 @@ function get_sfsi_plus_SubscriptionForm($hglht=null)
             <div class="form-overlay"></div>
             <form method="post">
                 <h5 <?php if($hglht=="h5"){ echo 'class="sfsi_plus_highlight"';}?> >
-               		<?php  _e( 'Get new posts by email', 'ultimate-social-media-plus' ); ?>:
+               		<?php  _e( 'Get new posts by email:', SFSI_PLUS_DOMAIN ); ?>
                 </h5>
                 <div class="sfsi_plus_subscription_form_field">
                     <input type="email" name="data[Widget][email]" placeholder="Enter your email" value=""

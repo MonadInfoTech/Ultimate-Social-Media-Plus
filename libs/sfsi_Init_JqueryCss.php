@@ -43,14 +43,14 @@ function sfsiplus_plugin_back_enqueue_script()
 			
 			// Localize the script with new data
 			$translation_array = array(
-				'Re_ad'                 => __('Read more','ultimate-social-media-plus'),
-				'Sa_ve'                 => __('Save','ultimate-social-media-plus'),
-				'Sav_ing'               => __('Saving','ultimate-social-media-plus'),
-				'Sa_ved'                => __('Saved','ultimate-social-media-plus')
+				'Re_ad'                 => __('Read more',SFSI_PLUS_DOMAIN),
+				'Sa_ve'                 => __('Save',SFSI_PLUS_DOMAIN),
+				'Sav_ing'               => __('Saving',SFSI_PLUS_DOMAIN),
+				'Sa_ved'                => __('Saved',SFSI_PLUS_DOMAIN)
 			);
 			$translation_array1 = array(
-				'Coll_apse'             => __('Collapse','ultimate-social-media-plus'),
-				'Save_All_Settings'     => __('Save All Settings','ultimate-social-media-plus')
+				'Coll_apse'             => __('Collapse',SFSI_PLUS_DOMAIN),
+				'Save_All_Settings'     => __('Save All Settings',SFSI_PLUS_DOMAIN)
 			);
 			
 			wp_localize_script( 'SFSIPLUSCustomJs', 'object_name', $translation_array );
@@ -107,7 +107,7 @@ function sfsi_plus_footerFeedbackScript()
     wp_enqueue_script('utils'); // for user settings
 	
 	$html = '<div>';
-		$html .= '<label>Optional: Please tell us why you deactivate our plugin so that we can make it better!</label>';
+		$html .= '<label>'.__('Optional: Please tell us why you deactivate our plugin so that we can make it better!',SFSI_PLUS_DOMAIN).'</label>';
 		$html .= '<textarea id="sfsi_plus_feedbackMsg" name="reason"></textarea>';
 	$html .= '</div>';
 	?>

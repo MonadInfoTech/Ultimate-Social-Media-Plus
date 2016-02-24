@@ -16,6 +16,7 @@ global $wpdb;
 define('SFSI_PLUS_DOCROOT',    dirname(__FILE__));
 define('SFSI_PLUS_PLUGURL',    plugin_dir_url(__FILE__));
 define('SFSI_PLUS_WEBROOT',    str_replace(getcwd(), home_url(), dirname(__FILE__)));
+define('SFSI_PLUS_DOMAIN',	   'ultimate-social-media-plus');
 
 /* load all files  */
 include(SFSI_PLUS_DOCROOT.'/libs/controllers/sfsi_socialhelper.php');
@@ -72,7 +73,7 @@ function DISPLAY_ULTIMATE_PLUS($args = null, $content = null)
 	}
 	else
 	{
-		return 'Kindly go to setting page and check the option "Place them manually"';
+		return __('Kindly go to setting page and check the option "Place them manually"', SFSI_PLUS_DOMAIN);
 	}
 }
 //adding some meta tags for facebook news feed {Monad}
@@ -274,17 +275,17 @@ function sfsi_plus_beforaftereposts( $content )
 		{
 			/*$icons_after .= '</br>';*/
 			$icons_after .= '<div class="sfsiaftrpstwpr"  style="'.$style_parent.'">';
-				if($sfsi_plus_display_button_type == 'standard_buttons')
-				{
-					$icons_after .= sfsi_plus_social_buttons_below($content = null);
-				}
-				else
-				{
-					$icons_after .= "<div class='sfsi_plus_Sicons' style='".$style."'>";
-						$icons_after .= "<div style='float:left;margin:0 0px; line-height:".$lineheight."px'><span>".$txt."</span></div>";
-						$icons_after .= sfsi_plus_check_posts_visiblity(0);
-					$icons_after .= "</div>";
-				}
+			if($sfsi_plus_display_button_type == 'standard_buttons')
+			{
+				$icons_after .= sfsi_plus_social_buttons_below($content = null);
+			}
+			else
+			{
+				$icons_after .= "<div class='sfsi_plus_Sicons' style='".$style."'>";
+					$icons_after .= "<div style='float:left;margin:0 0px; line-height:".$lineheight."px'><span>".$txt."</span></div>";
+					$icons_after .= sfsi_plus_check_posts_visiblity(0);
+				$icons_after .= "</div>";
+			}
 			$icons_after .= '</div>';
 		}
 	}
@@ -371,12 +372,12 @@ function sfsi_plus_beforeafterblogposts( $content )
 					if($sfsi_plus_display_button_type == 'standard_buttons')
 					{
 						if(
-							$sfsi_section8['sfsi_plus_rectsub'] == 'yes' ||
-							$sfsi_section8['sfsi_plus_rectfb'] == 'yes' ||
-							$sfsi_section8['sfsi_plus_rectgp'] == 'yes' ||
-							$sfsi_section8['sfsi_plus_rectshr'] == 'yes' ||
-							$sfsi_section8['sfsi_plus_recttwtr'] == 'yes' ||
-							$sfsi_section8['sfsi_plus_rectpinit'] == 'yes'
+							$sfsi_section8['sfsi_plus_rectsub']		== 'yes' ||
+							$sfsi_section8['sfsi_plus_rectfb']		== 'yes' ||
+							$sfsi_section8['sfsi_plus_rectgp']		== 'yes' ||
+							$sfsi_section8['sfsi_plus_rectshr'] 	== 'yes' ||
+							$sfsi_section8['sfsi_plus_recttwtr'] 	== 'yes' ||
+							$sfsi_section8['sfsi_plus_rectpinit'] 	== 'yes'
 						)
 						{
 							$icons_before .= "<div style='display: inline-block;margin-bottom: 0; margin-left: 0; margin-right: 8px; margin-top: 0; vertical-align: middle;width: auto;'><span>".$txt."</span></div>";
@@ -441,12 +442,12 @@ function sfsi_plus_beforeafterblogposts( $content )
 					if($sfsi_plus_display_button_type == 'standard_buttons')
 					{
 						if(
-							$sfsi_section8['sfsi_plus_rectsub'] == 'yes' ||
-							$sfsi_section8['sfsi_plus_rectfb'] == 'yes' ||
-							$sfsi_section8['sfsi_plus_rectgp'] == 'yes' ||
-							$sfsi_section8['sfsi_plus_rectshr'] == 'yes' ||
-							$sfsi_section8['sfsi_plus_recttwtr'] == 'yes' ||
-							$sfsi_section8['sfsi_plus_rectpinit'] == 'yes'
+							$sfsi_section8['sfsi_plus_rectsub'] 	== 'yes' ||
+							$sfsi_section8['sfsi_plus_rectfb'] 		== 'yes' ||
+							$sfsi_section8['sfsi_plus_rectgp'] 		== 'yes' ||
+							$sfsi_section8['sfsi_plus_rectshr'] 	== 'yes' ||
+							$sfsi_section8['sfsi_plus_recttwtr'] 	== 'yes' ||
+							$sfsi_section8['sfsi_plus_rectpinit'] 	== 'yes'
 						)
 						{
 							$icons_after .= "<div style='display: inline-block;margin-bottom: 0; margin-left: 0; margin-right: 8px; margin-top: 0; vertical-align: middle;width: auto;'><span>".$txt."</span></div>";
@@ -558,22 +559,24 @@ function sfsi_plus_admin_notice()
 				<?php
 				_e(
 					'There seems to be an error on your website which prevents the plugin to work properly. Please contact us at',
-					'ultimate-social-media-plus'
+					SFSI_PLUS_DOMAIN
 				);
 				?>
                 <a href="mailto:support@ultimatelysocial.com">support@ultimatelysocial.com</a>
                 <?php
 				_e(
-					'and state the error code you see below',
-					'ultimate-social-media-plus'
+					'and state the error code you see below.',
+					SFSI_PLUS_DOMAIN
 				);
-				?>.
-                <p style="text-align:left"><b><?php	_e('Error','ultimate-social-media-plus'); ?>: <?php echo ucfirst(get_option("sfsi_plus_curlErrorMessage")); ?></b></p>
+				?>
+                <p style="text-align:left">
+                	<b><?php _e('Error', SFSI_PLUS_DOMAIN); ?>: <?php echo ucfirst(get_option("sfsi_plus_curlErrorMessage")); ?></b>
+                </p>
 			</div>
 			<p class="alignright">
 				<a href="<?php echo $url; ?>">
                 <?php
-					_e('Dismiss','ultimate-social-media-plus');
+					_e('Dismiss', SFSI_PLUS_DOMAIN);
 				?>
                 </a>
 			</p>
@@ -587,18 +590,18 @@ function sfsi_plus_admin_notice()
 		<div class="updated" style="<?php echo $style; ?>"">
 			<div class="alignleft" style="margin: 9px 0;">
 				<b>
-                	<?php _e( 'New feature in the', 'ultimate-social-media-plus' ); ?> Ultimate Social Media PLUS <?php _e( 'plugin', 'ultimate-social-media-plus' ); ?>:
+                	<?php _e( 'New feature in the Ultimate Social Media PLUS plugin : ', SFSI_PLUS_DOMAIN); ?>
                 </b>  
                 
-				<?php _e( 'You can now add a subscription form to increase sign-ups', 'ultimate-social-media-plus' ); ?> (<?php _e("under question", "ultimate-social-media-plus"); ?> 8).
+				<?php _e( 'You can now add a subscription form to increase sign-ups (under question 8).', SFSI_PLUS_DOMAIN); ?>
                 
                 <a href="<?php echo site_url();?>/wp-admin/admin.php?page=sfsi-plus-options" style="color:#7AD03A; font-weight:bold;">
-                	<?php _e( 'Check it out', 'ultimate-social-media-plus' ); ?>
+                	<?php _e( 'Check it out', SFSI_PLUS_DOMAIN); ?>
                 </a>
 			</div>
 			<p class="alignright">
 				<a href="<?php echo $url; ?>">
-                	<?php _e( 'Dismiss', 'ultimate-social-media-plus' ); ?>
+                	<?php _e( 'Dismiss', SFSI_PLUS_DOMAIN); ?>
                 </a>
 			</p>
 		</div>
@@ -643,8 +646,13 @@ function sfsi_plus_get_bloginfo($url)
 add_filter( 'plugin_action_links_' . plugin_basename( __FILE__ ), "sfsi_plus_actionLinks", -10 );
 function sfsi_plus_actionLinks($links)
 {
-	$links[] = '<a href="javascript:" id="sfsi_plus_deactivateButton">Deactivate with feedback</a>';
-	$links[] = '<a href="http://www.ultimatelysocial.com/faq" target="_blank">Have issues? Check the FAQ</a>';
+	$links[] = '<a href="javascript:" id="sfsi_plus_deactivateButton">'.__( 'Deactivate with feedback', SFSI_PLUS_DOMAIN ).'</a>';
+	$links[] = $links["deactivate"];
+	$links[] = $links["edit"];
+	$links[] = '<a href="http://www.ultimatelysocial.com/faq" target="_blank">'.__('Have issues? Check the FAQ', SFSI_PLUS_DOMAIN ).'</a>';
+	
+	unset($links['deactivate']);
+	unset($links['edit']);
 	return $links;
 }
 ?>

@@ -126,17 +126,14 @@ function sfsi_plus_Subscribelike($permalink, $show_count)
 	$visit_icon1 = SFSI_PLUS_DOCROOT.'/images/visit_icons/Follow/icon_'.$post_icons.'.png';
 	$visit_iconsUrl = SFSI_PLUS_PLUGURL."images/";
 		   
-   if(file_exists($visit_icon1))
-   {
+	if(file_exists($visit_icon1))
+	{
 		$visit_icon = $visit_iconsUrl."visit_icons/Follow/icon_".$post_icons.".png";
-   }
-   else
-   {
+	}
+	else
+	{
 		$visit_icon = $visit_iconsUrl."follow_subscribe.png";
-   }
-		   
-	 
-	 
+	}
 	
 	$url = (isset($sfsi_plus_section2_options['sfsi_plus_email_url'])) ? $sfsi_plus_section2_options['sfsi_plus_email_url'] : 'javascript:void(0);';
 	
@@ -404,7 +401,7 @@ function sfsi_plus_footer_script()
             //$footer_link='<div class="sfsiplus_footerLnk" style="margin: 0 auto;z-index:1000; absolute; text-align: center;">Social media & sharing icons powered by  <a href="https://wordpress.org/plugins/ultimate-social-media-icons/" target="_new">UltimatelySocial</a> ';
 			$footer_link='<div class="sfsiplus_footerLnk" style="margin: 0 auto;z-index:1000; absolute; text-align: center;">Social media & sharing icons powered by  <a href="http://ultimatelysocial.com/" target="_new">UltimatelySocial</a> ';
 	    	$footer_link.="</div>";
-	    echo $footer_link;
+	    	echo $footer_link;
 	    }
 	}    
         

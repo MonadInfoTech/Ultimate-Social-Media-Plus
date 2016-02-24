@@ -6,7 +6,7 @@
 <!-- Section 6 "Do you want to display icons at the end of every post?" main div Start -->
 <div class="tab6">
 	<p>
-    	<?php  _e('The selections you made so far were to display the subscriptions', 'ultimate-social-media-plus' ); ?>/ <?php  _e('social media icons for your site in general', 'ultimate-social-media-plus' ); ?> (<?php  _e('in a widget on the sidebar', 'ultimate-social-media-plus' ); ?>). <?php  _e('You can also display icons at the end of every post, encouraging users to subscribe/like/share after they’ve read it', 'ultimate-social-media-plus' ); ?>. <?php  _e('The following buttons will be added', 'ultimate-social-media-plus' ); ?>: 
+    	<?php  _e('The selections you made so far were to display the subscriptions/ social media icons for your site in general (in a widget on the sidebar). You can also display icons at the end of every post, encouraging users to subscribe/like/share after they’ve read it. The following buttons will be added:', SFSI_PLUS_DOMAIN ); ?> 
     </p>
 	<!-- icons example  section -->	
 	<div class="social_icon_like1">
@@ -19,34 +19,34 @@
 	</div><!-- icons position section -->
 	
 	<p class="clear">
-    	<?php _e( 'Those are usually all you need', 'ultimate-social-media-plus' ); ?>:
+    	<?php _e( 'Those are usually all you need:', SFSI_PLUS_DOMAIN ); ?>
     </p>
 	<ul class="usually">
 		<li>
-        	1. Facebook <?php _e( 'is No.1 in liking, so it’s a must have', 'ultimate-social-media-plus' ); ?>
+        	1. <?php _e( 'Facebook is No.1 in liking, so it’s a must have', SFSI_PLUS_DOMAIN ); ?>
         </li>
 		<li>
-        	2. Google+ <?php _e( 'is also important due to SEO reasons, so important to have as well', 'ultimate-social-media-plus' ); ?>
+        	2. <?php _e( 'Google+ is also important due to SEO reasons, so important to have as well', SFSI_PLUS_DOMAIN ); ?>
         </li>
 		<li>
-        	3. <?php _e( 'Share-button covers all other platforms for sharing', 'ultimate-social-media-plus' ); ?>
+        	3. <?php _e( 'Share-button covers all other platforms for sharing', SFSI_PLUS_DOMAIN ); ?>
         </li>
 	</ul>
 	<!-- icons display section -->
 	<h4>
-    	<?php _e( 'So', 'ultimate-social-media-plus' ); ?>: <?php _e( 'do you want to display those at the end of every post', 'ultimate-social-media-plus' ); ?>?
+    	<?php _e( 'So: do you want to display those at the end of every post?', SFSI_PLUS_DOMAIN ); ?>
     </h4>
 	<ul class="enough_waffling">
 		<li>
         	<input name="sfsi_plus_show_Onposts" <?php echo ($option6['sfsi_plus_show_Onposts']=='yes') ?  'checked="true"' : '' ;?> type="radio" value="yes" class="styled"  />
         	<label>
-        		<?php  _e( 'Yes', 'ultimate-social-media-plus' ); ?>
+        		<?php  _e( 'Yes', SFSI_PLUS_DOMAIN ); ?>
         	</label>
        	</li>
 		<li>
         	<input name="sfsi_plus_show_Onposts" <?php echo ($option6['sfsi_plus_show_Onposts']=='no') ?  'checked="true"' : '' ;?> type="radio" value="no" class="styled" />
         	<label>
-        		<?php  _e( 'No', 'ultimate-social-media-plus' ); ?>
+        		<?php  _e( 'No', SFSI_PLUS_DOMAIN ); ?>
         	</label>
         </li>
     </ul><!-- icons display section -->
@@ -54,30 +54,30 @@
   	<!-- icons position section -->	
   	<div class="row sfsiplus_PostsSettings_section">
   		<h4>
-    		<?php  _e( 'Options', 'ultimate-social-media-plus' ); ?>:
+    		<?php  _e( 'Options:', SFSI_PLUS_DOMAIN ); ?>
     	</h4>
 		<div class="options">
             <label class="first">
-            	<?php  _e( 'Text to appear before the sharing icons', 'ultimate-social-media-plus' ); ?>:
+            	<?php  _e( 'Text to appear before the sharing icons:', SFSI_PLUS_DOMAIN ); ?>
             </label><input name="sfsi_plus_textBefor_icons" type="text" value="<?php echo ($option6['sfsi_plus_textBefor_icons']!='') ?  $option6['sfsi_plus_textBefor_icons'] : '' ; ?>" />
 		</div>
 		<div class="options">
             <label>
-            	<?php  _e( 'Alignment of share icons', 'ultimate-social-media-plus' ); ?>:
+            	<?php  _e( 'Alignment of share icons:', SFSI_PLUS_DOMAIN ); ?>
             </label>
             <div class="field"><select name="sfsi_plus_icons_alignment" id="sfsi_plus_icons_alignment" class="styled"><option value="left" <?php echo ($option6['sfsi_plus_icons_alignment']=='left') ?  'selected="selected"' : '' ;?>>
-            	<?php  _e( 'Left', 'ultimate-social-media-plus' ); ?>
+            	<?php  _e( 'Left', SFSI_PLUS_DOMAIN ); ?>
             </option><!--<option value="center" <?php //echo ($option6['sfsi_plus_icons_alignment']=='center') ?  'selected="selected"' : '' ;?>>Center</option>--><option value="right" <?php echo ($option6['sfsi_plus_icons_alignment']=='right') ?  'selected="selected"' : '' ;?>>
-            	<?php  _e( 'Right', 'ultimate-social-media-plus' ); ?>
+            	<?php  _e( 'Right', SFSI_PLUS_DOMAIN ); ?>
             </option></select></div>
 	</div>
 	<div class="options">
             <label>
-            	<?php  _e( 'Do you want to display the counts', 'ultimate-social-media-plus' ); ?>?
+            	<?php  _e( 'Do you want to display the counts?', SFSI_PLUS_DOMAIN ); ?>
             </label><div class="field"><select name="sfsi_plus_icons_DisplayCounts" id="sfsi_plus_icons_DisplayCounts" class="styled"><option value="yes" <?php echo ($option6['sfsi_plus_icons_DisplayCounts']=='yes') ?  'selected="true"' : '' ;?>>
-            	<?php  _e( 'YES', 'ultimate-social-media-plus' ); ?>
+            	<?php  _e( 'YES', SFSI_PLUS_DOMAIN ); ?>
             </option><option value="no" <?php echo ($option6['sfsi_plus_icons_DisplayCounts']=='no') ?  'selected="true"' : '' ;?>>
-            	<?php  _e( 'NO', 'ultimate-social-media-plus' ); ?>
+            	<?php  _e( 'NO', SFSI_PLUS_DOMAIN ); ?>
             </option></select></div>
 	</div>
 	
@@ -88,12 +88,12 @@
        <img src="<?php echo SFSI_PLUS_PLUGURL ?>images/ajax-loader.gif" class="loader-img" />
        <?php  $nonce = wp_create_nonce("update_plus_step6"); ?>
         <a  href="javascript:;" id="sfsi_plus_save6" title="Save" data-nonce="<?php echo $nonce;?>">
-        	<?php  _e( 'Save', 'ultimate-social-media-plus' ); ?>
+        	<?php  _e( 'Save', SFSI_PLUS_DOMAIN ); ?>
         </a>
   
   </div>  <!-- END SAVE BUTTON SECTION   -->
   <a class="sfsiColbtn closeSec" href="javascript:;">
-  	<?php  _e( 'Collapse area', 'ultimate-social-media-plus' ); ?>
+  	<?php  _e( 'Collapse area', SFSI_PLUS_DOMAIN ); ?>
   </a>
   <label class="closeSec"></label>
   <!-- ERROR AND SUCCESS MESSAGE AREA-->
