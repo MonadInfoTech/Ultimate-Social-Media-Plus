@@ -64,366 +64,199 @@
 		?>
 		<select name="<?php echo $name; ?>" id="<?php echo $name; ?>" data-iconUrl="<?php echo $visit_icon; ?>" class="<?php echo $name; ?>-preview lanOnchange">
 			<option value="<?php echo $follow; ?>_ar" <?php echo ($option5[$name]== $follow.'_ar') ?  'selected="selected"' : '' ; ?>>
-				<?php  _e( 'العربية', SFSI_PLUS_DOMAIN ); ?>
-				<span> - << </span> 
-				<span><?php  _e($follow, SFSI_PLUS_DOMAIN ); ?></span>
-				<span> >> </span>
+				العربية<span> - << </span><span><?php echo $follow ?></span><span> >> </span>
 			</option>
 			<option value="<?php echo $visitme; ?>_ar" <?php echo ($option5[$name]== $visitme.'_ar') ?  'selected="selected"' : '' ; ?>>
-				<?php  _e( 'العربية', SFSI_PLUS_DOMAIN ); ?>
-				<span> - << </span>
-				<span><?php  _e($visitme, SFSI_PLUS_DOMAIN ); ?></span>
-				<span> >> </span>
+				العربية<span> - << </span><span><?php echo $visitme ?></span><span> >> </span>
 			</option>
 			
 			<option value="<?php echo $follow; ?>_bg_BG" <?php echo ($option5[$name]== $follow.'_bg_BG') ?  'selected="selected"' : '' ; ?>>
-				<?php  _e( 'Български', SFSI_PLUS_DOMAIN ); ?>
-				<span> - << </span> 
-				<span><?php  _e($follow, SFSI_PLUS_DOMAIN ); ?></span>
-				<span> >> </span>
+				Български<span> - << </span><span><?php echo $follow ?></span><span> >> </span>
 			</option>
 			<option value="<?php echo $visitme; ?>_bg_BG" <?php echo ($option5[$name]== $visitme.'_bg_BG') ?  'selected="selected"' : '' ; ?>>
-				<?php  _e( 'Български', SFSI_PLUS_DOMAIN ); ?>
-				<span> - << </span>
-				<span><?php  _e($visitme, SFSI_PLUS_DOMAIN ); ?></span>
-				<span> >> </span>
+				Български<span> - << </span><span><?php echo $visitme ?></span><span> >> </span>
 			</option>
 			
 			<option value="<?php echo $follow; ?>_zh_CN" <?php echo ($option5[$name]== $follow.'_zh_CN') ?  'selected="selected"' : '' ; ?>>
-				<?php  _e( '简体中文', SFSI_PLUS_DOMAIN ); ?>
-				<span> - << </span> 
-				<span><?php  _e($follow, SFSI_PLUS_DOMAIN ); ?></span>
-				<span> >> </span>
+				简体中文<span> - << </span><span><?php echo $follow ?></span><span> >> </span>
 			</option>
 			<option value="<?php echo $visitme; ?>_zh_CN" <?php echo ($option5[$name]== $visitme.'_zh_CN') ?  'selected="selected"' : '' ; ?>>
-				<?php  _e( '简体中文', SFSI_PLUS_DOMAIN ); ?>
-				<span> - << </span>
-				<span><?php  _e($visitme, SFSI_PLUS_DOMAIN ); ?></span>
-				<span> >> </span>
+				简体中文<span> - << </span><span><?php echo $visitme ?></span><span> >> </span>
 			</option>
 			
 			<option value="<?php echo $follow; ?>_cs_CZ" <?php echo ($option5[$name]== $follow.'_cs_CZ') ?  'selected="selected"' : '' ; ?>>
-				<?php  _e( 'Čeština‎', SFSI_PLUS_DOMAIN ); ?>
-				<span> - << </span> 
-				<span><?php  _e($follow, SFSI_PLUS_DOMAIN ); ?></span>
-				<span> >> </span>
+				Čeština‎<span> - << </span><span><?php echo $follow ?></span><span> >> </span>
 			</option>
 			<option value="<?php echo $visitme; ?>_cs_CZ" <?php echo ($option5[$name]== $visitme.'_cs_CZ') ?  'selected="selected"' : '' ; ?>>
-				<?php  _e( 'Čeština‎', SFSI_PLUS_DOMAIN ); ?>
-				<span> - << </span>
-				<span><?php  _e($visitme, SFSI_PLUS_DOMAIN ); ?></span>
-				<span> >> </span>
+				Čeština‎<span> - << </span><span><?php echo $visitme ?></span><span> >> </span>
 			</option>
 			
 			<option value="<?php echo $follow; ?>_da_DK" <?php echo ($option5[$name]== $follow.'_da_DK') ?  'selected="selected"' : '' ; ?>>
-				<?php  _e( 'Dansk', SFSI_PLUS_DOMAIN ); ?>
-				<span> - << </span> 
-				<span><?php  _e($follow, SFSI_PLUS_DOMAIN ); ?></span>
-				<span> >> </span>	
+				Dansk<span> - << </span><span><?php echo $follow ?></span><span> >> </span>	
 			</option>
 			<option value="<?php echo $visitme; ?>_da_DK" <?php echo ($option5[$name]== $visitme.'_da_DK') ?  'selected="selected"' : '' ; ?>>
-				<?php  _e( 'Dansk', SFSI_PLUS_DOMAIN ); ?>
-				<span> - << </span>
-				<span><?php  _e($visitme, SFSI_PLUS_DOMAIN ); ?></span>
-				<span> >> </span>
+				Dansk<span> - << </span><span><?php echo $visitme ?></span><span> >> </span>
 			</option>
 			
 			<option value="<?php echo $follow; ?>_nl_NL" <?php echo ($option5[$name]== $follow.'_nl_NL') ?  'selected="selected"' : '' ; ?>>
-				<?php  _e( 'Nederlands', SFSI_PLUS_DOMAIN ); ?>
-				<span> - << </span> 
-				<span><?php  _e($follow, SFSI_PLUS_DOMAIN ); ?></span>
-				<span> >> </span>
+				Nederlands<span> - << </span><span><?php echo $follow ?></span><span> >> </span>
 			</option>
 			<option value="<?php echo $visitme; ?>_nl_NL" <?php echo ($option5[$name]== $visitme.'_nl_NL') ?  'selected="selected"' : '' ; ?>>
-				<?php  _e( 'Nederlands', SFSI_PLUS_DOMAIN ); ?>
-				<span> - << </span>
-				<span><?php  _e($visitme, SFSI_PLUS_DOMAIN ); ?></span>
-				<span> >> </span>
+				Nederlands<span> - << </span><span><?php echo $visitme ?></span><span> >> </span>
 			</option>
 			
 			<option value="<?php echo $follow; ?>_fi" <?php echo ($option5[$name]== $follow.'_fi') ?  'selected="selected"' : '' ; ?>>
-				<?php  _e( 'Suomi', SFSI_PLUS_DOMAIN ); ?>
-				<span> - << </span> 
-				<span><?php  _e($follow, SFSI_PLUS_DOMAIN ); ?></span>
-				<span> >> </span>
+				Suomi<span> - << </span><span><?php echo $follow ?></span><span> >> </span>
 			</option>
 			<option value="<?php echo $visitme; ?>_fi" <?php echo ($option5[$name]== $visitme.'_fi') ?  'selected="selected"' : '' ; ?>>
-				<?php  _e( 'Suomi', SFSI_PLUS_DOMAIN ); ?>
-				<span> - << </span>
-				<span><?php  _e($visitme, SFSI_PLUS_DOMAIN ); ?></span>
-				<span> >> </span>
+				Suomi<span> - << </span><span><?php echo $visitme ?></span><span> >> </span>
 			</option>
 			
 			<option value="<?php echo $follow; ?>_fr_FR" <?php echo ($option5[$name]== $follow.'_fr_FR') ?  'selected="selected"' : '' ; ?>>
-				<?php  _e( 'Français', SFSI_PLUS_DOMAIN ); ?>
-				<span> - << </span> 
-				<span><?php  _e($follow, SFSI_PLUS_DOMAIN ); ?></span>
-				<span> >> </span>	
+				Français<span> - << </span><span><?php echo $follow ?></span><span> >> </span>	
 			</option>
 			<option value="<?php echo $visitme; ?>_fr_FR" <?php echo ($option5[$name]== $visitme.'_fr_FR') ?  'selected="selected"' : '' ; ?>>
-				<?php  _e( 'Français', SFSI_PLUS_DOMAIN ); ?>
-				<span> - << </span>
-				<span><?php  _e($visitme, SFSI_PLUS_DOMAIN ); ?></span>
-				<span> >> </span>
+				Français<span> - << </span><span><?php echo $visitme ?></span><span> >> </span>
 			</option>
 			
 			<option value="<?php echo $follow; ?>_de_DE" <?php echo ($option5[$name]== $follow.'_de_DE') ?  'selected="selected"' : '' ; ?>>
-				<?php  _e( 'Deutsch', SFSI_PLUS_DOMAIN ); ?>
-				<span> - << </span> 
-				<span><?php  _e($follow, SFSI_PLUS_DOMAIN ); ?></span>
-				<span> >> </span>	
+				Deutsch<span> - << </span><span><?php echo $follow ?></span><span> >> </span>	
 			</option>
 			<option value="<?php echo $visitme; ?>_de_DE" <?php echo ($option5[$name]== $visitme.'_de_DE') ?  'selected="selected"' : '' ; ?>>
-				<?php  _e( 'Deutsch', SFSI_PLUS_DOMAIN ); ?>
-				<span> - << </span>
-				<span><?php  _e($visitme, SFSI_PLUS_DOMAIN ); ?></span>
-				<span> >> </span>
+				Deutsch<span> - << </span><span><?php echo $visitme ?></span><span> >> </span>
 			</option>
 			
 			<option value="<?php echo $follow; ?>_en_US" <?php echo ($option5[$name]== $follow.'_en_US') ? 'selected="selected"' : '' ; ?>>
-				<?php  _e( 'English', SFSI_PLUS_DOMAIN ); ?>
-				<span> - << </span> 
-				<span><?php  _e($follow, SFSI_PLUS_DOMAIN ); ?></span>
-				<span> >> </span>
+				English<span> - << </span><span><?php echo $follow ?></span><span> >> </span>
 			</option>
 			<option value="<?php echo $visitme; ?>_en_US" <?php echo ($option5[$name]== $visitme.'_en_US') ?  'selected="selected"' : '' ; ?>>
-				<?php  _e( 'English', SFSI_PLUS_DOMAIN ); ?>
-				<span> - << </span>
-				<span><?php  _e($visitme, SFSI_PLUS_DOMAIN ); ?></span>
-				<span> >> </span>	
+				English<span> - << </span><span><?php echo $visitme ?></span><span> >> </span>	
 			</option>
 			
 			<option value="<?php echo $follow; ?>_el" <?php echo ($option5[$name]== $follow.'_el') ?  'selected="selected"' : '' ; ?>>
-				<?php  _e( 'Ελληνικά', SFSI_PLUS_DOMAIN ); ?>
-				<span> - << </span> 
-				<span><?php  _e($follow, SFSI_PLUS_DOMAIN ); ?></span>
-				<span> >> </span>	
+				Ελληνικά<span> - << </span><span><?php echo $follow ?></span><span> >> </span>	
 			</option>
 			<option value="<?php echo $visitme; ?>_el" <?php echo ($option5[$name]== $visitme.'_el') ?  'selected="selected"' : '' ; ?>>
-				<?php  _e( 'Ελληνικά', SFSI_PLUS_DOMAIN ); ?>
-				<span> - << </span>
-				<span><?php  _e($visitme, SFSI_PLUS_DOMAIN ); ?></span>
-				<span> >> </span>
+				Ελληνικά<span> - << </span><span><?php echo $visitme ?></span><span> >> </span>
 			</option>
 			
 			<option value="<?php echo $follow; ?>_hu_HU" <?php echo ($option5[$name]==$follow.'_hu_HU') ?  'selected="selected"' : '' ; ?>>
-				<?php  _e( 'Magyar', SFSI_PLUS_DOMAIN ); ?>
-				<span> - << </span> 
-				<span><?php  _e($follow, SFSI_PLUS_DOMAIN ); ?></span>
-				<span> >> </span>	
+				Magyar<span> - << </span><span><?php echo $follow ?></span><span> >> </span>	
 			</option>
 			<option value="<?php echo $visitme; ?>_hu_HU" <?php echo ($option5[$name]== $visitme.'_hu_HU') ?  'selected="selected"' : '' ; ?>>
-				<?php  _e( 'Magyar', SFSI_PLUS_DOMAIN ); ?>
-				<span> - << </span>
-				<span><?php  _e($visitme, SFSI_PLUS_DOMAIN ); ?></span>
-				<span> >> </span>
+				Magyar<span> - << </span><span><?php echo $visitme ?></span><span> >> </span>
 			</option>
 			
 			<option value="<?php echo $follow; ?>_id_ID" <?php echo ($option5[$name]== $follow.'_id_ID') ?  'selected="selected"' : '' ; ?>>
-				<?php  _e( 'Bahasa Indonesia', SFSI_PLUS_DOMAIN ); ?>
-				<span> - << </span> 
-				<span><?php  _e($follow, SFSI_PLUS_DOMAIN ); ?></span>
-				<span> >> </span>
+				Bahasa Indonesia<span> - << </span><span><?php echo $follow ?></span><span> >> </span>
 			</option>
 			<option value="<?php echo $visitme; ?>_id_ID" <?php echo ($option5[$name]== $visitme.'_id_ID') ?  'selected="selected"' : '' ; ?>>
-				<?php  _e( 'Bahasa Indonesia', SFSI_PLUS_DOMAIN ); ?>
-				<span> - << </span>
-				<span><?php  _e($visitme, SFSI_PLUS_DOMAIN ); ?></span>
-				<span> >> </span>
+				Bahasa Indonesia<span> - << </span><span><?php echo $visitme ?></span><span> >> </span>
 			</option>
 			
 			<option value="<?php echo $follow; ?>_it_IT" <?php echo ($option5[$name]== $follow.'_it_IT') ?  'selected="selected"' : '' ; ?>>
-				<?php  _e( 'Italiano', SFSI_PLUS_DOMAIN ); ?>
-				<span> - << </span> 
-				<span><?php  _e($follow, SFSI_PLUS_DOMAIN ); ?></span>
-				<span> >> </span>
+				Italiano<span> - << </span><span><?php echo $follow ?></span><span> >> </span>
 			</option>
 			<option value="<?php echo $visitme; ?>_it_IT" <?php echo ($option5[$name]== $visitme.'_it_IT') ?  'selected="selected"' : '' ; ?>>
-				<?php  _e( 'Italiano', SFSI_PLUS_DOMAIN ); ?>
-				<span> - << </span>
-				<span><?php  _e($visitme, SFSI_PLUS_DOMAIN ); ?></span>
-				<span> >> </span>
+				Italiano<span> - << </span><span><?php echo $visitme ?></span><span> >> </span>
 			</option>
 			
 			<option value="<?php echo $follow; ?>_ja" <?php echo ($option5[$name]== $follow.'_ja') ?  'selected="selected"' : '' ; ?>>
-				<?php  _e( '日本語', SFSI_PLUS_DOMAIN ); ?>
-				<span> - << </span> 
-				<span><?php  _e($follow, SFSI_PLUS_DOMAIN ); ?></span>
-				<span> >> </span>
+				日本語<span> - << </span><span><?php echo $follow ?></span><span> >> </span>
 			</option>
 			<option value="<?php echo $visitme; ?>_ja" <?php echo ($option5[$name]== $visitme.'_ja') ?  'selected="selected"' : '' ; ?>>
-				<?php  _e( '日本語', SFSI_PLUS_DOMAIN ); ?>
-				<span> - << </span>
-				<span><?php  _e($visitme, SFSI_PLUS_DOMAIN ); ?></span>
-				<span> >> </span>
+				日本語<span> - << </span><span><?php echo $visitme ?></span><span> >> </span>
 			</option>
 			
 			<option value="<?php echo $follow; ?>_ko_KR" <?php echo ($option5[$name]== $follow.'_ko_KR') ?  'selected="selected"' : '' ; ?>>
-				<?php  _e( '한국어', SFSI_PLUS_DOMAIN ); ?>
-				<span> - << </span> 
-				<span><?php  _e($follow, SFSI_PLUS_DOMAIN ); ?></span>
-				<span> >> </span>
+				한국어<span> - << </span><span><?php echo $follow ?></span><span> >> </span>
 			</option>
 			<option value="<?php echo $visitme; ?>_ko_KR" <?php echo ($option5[$name]== $visitme.'_ko_KR') ?  'selected="selected"' : '' ; ?>>
-				<?php  _e( '한국어', SFSI_PLUS_DOMAIN ); ?>
-				<span> - << </span>
-				<span><?php  _e($visitme, SFSI_PLUS_DOMAIN ); ?></span>
-				<span> >> </span>
+				한국어<span> - << </span><span><?php echo $visitme ?></span><span> >> </span>
 			</option>
 			
 			<option value="<?php echo $follow; ?>_nb_NO" <?php echo ($option5[$name]== $follow.'_nb_NO') ?  'selected="selected"' : '' ; ?>>
-				<?php  _e( 'Norsk bokmål', SFSI_PLUS_DOMAIN ); ?>
-				<span> - << </span> 
-				<span><?php  _e($follow, SFSI_PLUS_DOMAIN ); ?></span>
-				<span> >> </span>
+				Norsk bokmål<span> - << </span><span><?php echo $follow ?></span><span> >> </span>
 			</option>
 			<option value="<?php echo $visitme; ?>_nb_NO" <?php echo ($option5[$name]== $visitme.'_nb_NO') ?  'selected="selected"' : '' ; ?>>
-				<?php  _e( 'Norsk bokmål', SFSI_PLUS_DOMAIN ); ?>
-				<span> - << </span>
-				<span><?php  _e($visitme, SFSI_PLUS_DOMAIN ); ?></span>
-				<span> >> </span>
+				Norsk bokmål<span> - << </span><span><?php echo $visitme ?></span><span> >> </span>
 			</option>
 			
 			<option value="<?php echo $follow; ?>_fa_IR" <?php echo ($option5[$name]== $follow.'_fa_IR') ?  'selected="selected"' : '' ; ?>>
-				<?php  _e( 'فارسی', SFSI_PLUS_DOMAIN ); ?>
-				<span> - << </span> 
-				<span><?php  _e($follow, SFSI_PLUS_DOMAIN ); ?></span>
-				<span> >> </span>
+				فارسی<span> - << </span><span><?php echo $follow ?></span><span> >> </span>
 			</option>
-			<option value="<?php echo $visitme; ?>_fa_IR" <?php echo ($option5[$name]== $visitme.'_fa_IR') ?  'selected="selected"' : '' ; ?>><?php  _e( 'فارسی', SFSI_PLUS_DOMAIN ); ?>
-				<span> - << </span>
-				<span><?php  _e($visitme, SFSI_PLUS_DOMAIN ); ?></span>
-				<span> >> </span>
+			<option value="<?php echo $visitme; ?>_fa_IR" <?php echo ($option5[$name]== $visitme.'_fa_IR') ?  'selected="selected"' : '' ; ?>>
+				فارسی<span> - << </span><span><?php echo $visitme ?></span><span> >> </span>
 			</option>
 			
 			<option value="<?php echo $follow; ?>_pl_PL" <?php echo ($option5[$name]== $follow.'_pl_PL') ?  'selected="selected"' : '' ; ?>>
-				<?php  _e( 'Polski', SFSI_PLUS_DOMAIN ); ?>
-				<span> - << </span> 
-				<span><?php  _e($follow, SFSI_PLUS_DOMAIN ); ?></span>
-				<span> >> </span>
+				Polski<span> - << </span><span><?php echo $follow ?></span><span> >> </span>
 			</option>
 			<option value="<?php echo $visitme; ?>_pl_PL" <?php echo ($option5[$name]== $visitme.'_pl_PL') ?  'selected="selected"' : '' ; ?>>
-				<?php  _e( 'Polski', SFSI_PLUS_DOMAIN ); ?>
-				<span> - << </span>
-				<span><?php  _e($visitme, SFSI_PLUS_DOMAIN ); ?></span>
-				<span> >> </span>
+				Polski<span> - << </span><span><?php echo $visitme ?></span><span> >> </span>
 			</option>
 			
 			<option value="<?php echo $follow; ?>_pt_PT" <?php echo ($option5[$name]== $follow.'_pt_PT') ?  'selected="selected"' : '' ; ?>>
-				<?php  _e( 'Português', SFSI_PLUS_DOMAIN ); ?>
-				<span> - << </span> 
-				<span><?php  _e($follow, SFSI_PLUS_DOMAIN ); ?></span>
-				<span> >> </span>
+				Português<span> - << </span><span><?php echo $follow ?></span><span> >> </span>
 			</option>
 			<option value="<?php echo $visitme; ?>_pt_PT" <?php echo ($option5[$name]== $visitme.'_pt_PT') ?  'selected="selected"' : '' ; ?>>
-				<?php  _e( 'Português', SFSI_PLUS_DOMAIN ); ?>
-				<span> - << </span>
-				<span><?php  _e($visitme, SFSI_PLUS_DOMAIN ); ?></span>
-				<span> >> </span>
+				Português<span> - << </span><span><?php echo $visitme ?></span><span> >> </span>
 			</option>
 			
 			<option value="<?php echo $follow; ?>_ro_RO" <?php echo ($option5[$name]== $follow.'_ro_RO') ?  'selected="selected"' : '' ; ?>>
-				<?php  _e( 'Română', SFSI_PLUS_DOMAIN ); ?>
-				<span> - << </span> 
-				<span><?php  _e($follow, SFSI_PLUS_DOMAIN ); ?></span>
-				<span> >> </span>
+				Română<span> - << </span><span><?php echo $follow ?></span><span> >> </span>
 			</option>
 			<option value="<?php echo $visitme; ?>_ro_RO" <?php echo ($option5[$name]== $visitme.'_ro_RO') ?  'selected="selected"' : '' ; ?>>
-				<?php  _e( 'Română', SFSI_PLUS_DOMAIN ); ?>
-				<span> - << </span>
-				<span><?php  _e($visitme, SFSI_PLUS_DOMAIN ); ?></span>
-				<span> >> </span>
+				Română<span> - << </span><span><?php echo $visitme ?></span><span> >> </span>
 			</option>
 			
 			<option value="<?php echo $follow; ?>_ru_RU" <?php echo ($option5[$name]== $follow.'_ru_RU') ?  'selected="selected"' : '' ; ?>>
-				<?php  _e( 'Русский', SFSI_PLUS_DOMAIN ); ?>
-				<span> - << </span> 
-				<span><?php  _e($follow, SFSI_PLUS_DOMAIN ); ?></span>
-				<span> >> </span>
+				Русский<span> - << </span><span><?php echo $follow ?></span><span> >> </span>
 			</option>
 			<option value="<?php echo $visitme; ?>_ru_RU" <?php echo ($option5[$name]== $visitme.'_ru_RU') ?  'selected="selected"' : '' ; ?>>
-				<?php  _e( 'Русский', SFSI_PLUS_DOMAIN ); ?>
-				<span> - << </span>
-				<span><?php  _e($visitme, SFSI_PLUS_DOMAIN ); ?></span>
-				<span> >> </span>
+				Русский<span> - << </span><span><?php echo $visitme ?></span><span> >> </span>
 			</option>
 			
 			<option value="<?php echo $follow; ?>_sk_SK" <?php echo ($option5[$name]== $follow.'_sk_SK') ?  'selected="selected"' : '' ; ?>>
-				<?php  _e( 'Slovenčina', SFSI_PLUS_DOMAIN ); ?>
-				<span> - << </span> 
-				<span><?php  _e($follow, SFSI_PLUS_DOMAIN ); ?></span>
-				<span> >> </span>
+				Slovenčina<span> - << </span><span><?php echo $follow ?></span><span> >> </span>
 			</option>
 			<option value="<?php echo $visitme; ?>_sk_SK" <?php echo ($option5[$name]== $visitme.'_sk_SK') ?  'selected="selected"' : '' ; ?>>
-				<?php  _e( 'Slovenčina', SFSI_PLUS_DOMAIN ); ?>
-				<span> - << </span>
-				<span><?php  _e($visitme, SFSI_PLUS_DOMAIN ); ?></span>
-				<span> >> </span>
+				Slovenčina<span> - << </span><span><?php echo $visitme ?></span><span> >> </span>
 			</option>
 			
 			<option value="<?php echo $follow; ?>_es_ES" <?php echo ($option5[$name]== $follow.'_es_ES') ?  'selected="selected"' : '' ; ?>>
-				<?php  _e( 'Español', SFSI_PLUS_DOMAIN ); ?>
-				<span> - << </span> 
-				<span><?php  _e($follow, SFSI_PLUS_DOMAIN ); ?></span>
-				<span> >> </span>
+				Español<span> - << </span><span><?php echo $follow ?></span><span> >> </span>
 			</option>
 			<option value="<?php echo $visitme; ?>_es_ES" <?php echo ($option5[$name]== $visitme.'_es_ES') ?  'selected="selected"' : '' ; ?>>
-				<?php  _e( 'Español', SFSI_PLUS_DOMAIN ); ?>
-				<span> - << </span>
-				<span><?php  _e($visitme, SFSI_PLUS_DOMAIN ); ?></span>
-				<span> >> </span>
+				Español<span> - << </span><span><?php echo $visitme ?></span><span> >> </span>
 			</option>
 			
 			<option value="<?php echo $follow; ?>_sv_SE" <?php echo ($option5[$name]== $follow.'_sv_SE') ?  'selected="selected"' : '' ; ?>>
-				<?php  _e( 'Svenska', SFSI_PLUS_DOMAIN ); ?>
-				<span> - << </span> 
-				<span><?php  _e($follow, SFSI_PLUS_DOMAIN ); ?></span>
-				<span> >> </span>
+				Svenska<span> - << </span><span><?php echo $follow ?></span><span> >> </span>
 			</option>
 			<option value="<?php echo $visitme; ?>_sv_SE" <?php echo ($option5[$name]== $visitme.'_sv_SE') ?  'selected="selected"' : '' ; ?>>
-				<?php  _e( 'Svenska', SFSI_PLUS_DOMAIN ); ?>
-				<span> - << </span>
-				<span><?php  _e($visitme, SFSI_PLUS_DOMAIN ); ?></span>
-				<span> >> </span>
+				Svenska<span> - << </span><span><?php echo $visitme ?></span><span> >> </span>
 			</option>
 			
 			<option value="<?php echo $follow; ?>_th" <?php echo ($option5[$name]== $follow.'_th') ?  'selected="selected"' : '' ; ?>>
-				<?php  _e( 'ไทย', SFSI_PLUS_DOMAIN ); ?>
-				<span> - << </span> 
-				<span><?php  _e($follow, SFSI_PLUS_DOMAIN ); ?></span>
-				<span> >> </span>
+				ไทย<span> - << </span><span><?php echo $follow ?></span><span> >> </span>
 			</option>
 			<option value="<?php echo $visitme; ?>_th" <?php echo ($option5[$name]== $visitme.'_th') ?  'selected="selected"' : '' ; ?>>
-				<?php  _e( 'ไทย', SFSI_PLUS_DOMAIN ); ?>
-				<span> - << </span>
-				<span><?php  _e($visitme, SFSI_PLUS_DOMAIN ); ?></span>
-				<span> >> </span>
+				ไทย<span> - << </span><span><?php echo $visitme ?></span><span> >> </span>
 			</option>
 			
 			<option value="<?php echo $follow; ?>_tr_TR" <?php echo ($option5[$name]== $follow.'_tr_TR') ?  'selected="selected"' : '' ; ?>>
-				<?php  _e( 'Türkçe', SFSI_PLUS_DOMAIN ); ?>
-				<span> - << </span> 
-				<span><?php  _e($follow, SFSI_PLUS_DOMAIN ); ?></span>
-				<span> >> </span>
+				Türkçe<span> - << </span><span><?php echo $follow ?></span><span> >> </span>
 			</option>
 			<option value="<?php echo $visitme; ?>_tr_TR" <?php echo ($option5[$name]== $visitme.'_tr_TR') ?  'selected="selected"' : '' ; ?>>
-				<?php  _e( 'Türkçe', SFSI_PLUS_DOMAIN ); ?>
-				<span> - << </span>
-				<span><?php  _e($visitme, SFSI_PLUS_DOMAIN ); ?></span>
-				<span> >> </span>
+				Türkçe<span> - << </span><span><?php echo $visitme ?></span><span> >> </span>
 			</option>
 			
 			<option value="<?php echo $follow; ?>_vi" <?php echo ($option5[$name]== $follow.'_vi') ?  'selected="selected"' : '' ; ?>>
-				<?php  _e( 'Tiếng Việt', SFSI_PLUS_DOMAIN ); ?>
-				<span> - << </span> 
-				<span><?php  _e($follow, SFSI_PLUS_DOMAIN ); ?></span>
-				<span> >> </span>
+				Tiếng Việt<span> - << </span><span><?php echo $follow ?></span><span> >> </span>
 			</option>
 			<option value="<?php echo $visitme; ?>_vi" <?php echo ($option5[$name]== $visitme.'_vi') ?  'selected="selected"' : '' ; ?>>
-				<?php  _e( 'Tiếng Việt', SFSI_PLUS_DOMAIN ); ?>
-				<span> - << </span>
-				<span><?php  _e($visitme, SFSI_PLUS_DOMAIN ); ?></span>
-				<span> >> </span>
+				Tiếng Việt<span> - << </span><span><?php echo $visitme ?></span><span> >> </span>
 			</option>
 		</select>
 	<?php
@@ -674,60 +507,167 @@
         	</span>
 			<div class="language_field">
 				<select name="sfsi_plus_icons_language" id="sfsi_plus_icons_language" class="language">
-					<option value="ar_AR" <?php echo ($option5['sfsi_plus_icons_language']=='ar_AR') ?  'selected="selected"' : '' ;?>><?php  _e( 'العربية', SFSI_PLUS_DOMAIN ); ?></option>
-					<option value="az_AZ" <?php echo ($option5['sfsi_plus_icons_language']=='az_AZ') ?  'selected="selected"' : '' ;?>><?php  _e( 'Azərbaycan dili', SFSI_PLUS_DOMAIN ); ?></option>
-					<option value="af_ZA" <?php echo ($option5['sfsi_plus_icons_language']=='af_ZA') ?  'selected="selected"' : '' ;?>><?php  _e( 'Afrikaans', SFSI_PLUS_DOMAIN ); ?></option>
-					<option value="bg_BG" <?php echo ($option5['sfsi_plus_icons_language']=='bg_BG') ?  'selected="selected"' : '' ;?>><?php  _e( 'Български', SFSI_PLUS_DOMAIN ); ?></option>
-					<option value="ms_MY" <?php echo ($option5['sfsi_plus_icons_language']=='ms_MY') ?  'selected="selected"' : '' ;?>><?php  _e( 'Bahasa Melayu‎', SFSI_PLUS_DOMAIN ); ?></option>
-					<option value="bn_IN" <?php echo ($option5['sfsi_plus_icons_language']=='bn_IN') ?  'selected="selected"' : '' ;?>><?php  _e( 'বাংলা', SFSI_PLUS_DOMAIN ); ?></option>
-					<option value="bs_BA" <?php echo ($option5['sfsi_plus_icons_language']=='bs_BA') ?  'selected="selected"' : '' ;?>><?php  _e( 'Bosanski', SFSI_PLUS_DOMAIN ); ?></option>
-					<option value="ca_ES" <?php echo ($option5['sfsi_plus_icons_language']=='ca_ES') ?  'selected="selected"' : '' ;?>><?php  _e( 'Català', SFSI_PLUS_DOMAIN ); ?></option>
-					<option value="cy_GB" <?php echo ($option5['sfsi_plus_icons_language']=='cy_GB') ?  'selected="selected"' : '' ;?>><?php  _e( 'Cymraeg', SFSI_PLUS_DOMAIN ); ?></option>
-					<option value="da_DK" <?php echo ($option5['sfsi_plus_icons_language']=='da_DK') ?  'selected="selected"' : '' ;?>><?php  _e( 'Dansk', SFSI_PLUS_DOMAIN ); ?></option>
-					<option value="de_DE" <?php echo ($option5['sfsi_plus_icons_language']=='de_DE') ?  'selected="selected"' : '' ;?>><?php  _e( 'Deutsch', SFSI_PLUS_DOMAIN ); ?></option>
-					<option value="en_US" <?php echo ($option5['sfsi_plus_icons_language']=='en_US') ?  'selected="selected"' : '' ;?>><?php  _e( 'English (United States)', SFSI_PLUS_DOMAIN ); ?></option>
-					<option value="el_GR" <?php echo ($option5['sfsi_plus_icons_language']=='el_GR') ?  'selected="selected"' : '' ;?>><?php  _e( 'Ελληνικά', SFSI_PLUS_DOMAIN ); ?></option>
-					<option value="eo_EO" <?php echo ($option5['sfsi_plus_icons_language']=='eo_EO') ?  'selected="selected"' : '' ;?>><?php  _e( 'Esperanto', SFSI_PLUS_DOMAIN ); ?></option>
-					<option value="es_ES" <?php echo ($option5['sfsi_plus_icons_language']=='es_ES') ?  'selected="selected"' : '' ;?>><?php  _e( 'Español', SFSI_PLUS_DOMAIN ); ?></option>
-					<option value="et_EE" <?php echo ($option5['sfsi_plus_icons_language']=='et_EE') ?  'selected="selected"' : '' ;?>><?php  _e( 'Eesti', SFSI_PLUS_DOMAIN ); ?></option>
-					<option value="eu_ES" <?php echo ($option5['sfsi_plus_icons_language']=='eu_ES') ?  'selected="selected"' : '' ;?>><?php  _e( 'Euskara', SFSI_PLUS_DOMAIN ); ?></option>
-					<option value="fa_IR" <?php echo ($option5['sfsi_plus_icons_language']=='fa_IR') ?  'selected="selected"' : '' ;?>><?php  _e( 'فارسی', SFSI_PLUS_DOMAIN ); ?></option>
-					<option value="fi_FI" <?php echo ($option5['sfsi_plus_icons_language']=='fi_FI') ?  'selected="selected"' : '' ;?>><?php  _e( 'Suomi', SFSI_PLUS_DOMAIN ); ?></option>
-					<option value="fr_FR" <?php echo ($option5['sfsi_plus_icons_language']=='fr_FR') ?  'selected="selected"' : '' ;?>><?php  _e( 'Français', SFSI_PLUS_DOMAIN ); ?></option>
-					<option value="gl_ES" <?php echo ($option5['sfsi_plus_icons_language']=='gl_ES') ?  'selected="selected"' : '' ;?>><?php  _e( 'Galego', SFSI_PLUS_DOMAIN ); ?></option>
-					<option value="he_IL" <?php echo ($option5['sfsi_plus_icons_language']=='he_IL') ?  'selected="selected"' : '' ;?>><?php  _e( 'עִבְרִית', SFSI_PLUS_DOMAIN ); ?></option>
-					<option value="hi_IN" <?php echo ($option5['sfsi_plus_icons_language']=='hi_IN') ?  'selected="selected"' : '' ;?>><?php  _e( 'हिन्दी', SFSI_PLUS_DOMAIN ); ?></option>
-					<option value="hr_HR" <?php echo ($option5['sfsi_plus_icons_language']=='hr_HR') ?  'selected="selected"' : '' ;?>><?php  _e( 'Hrvatski', SFSI_PLUS_DOMAIN ); ?></option>
-					<option value="hu_HU" <?php echo ($option5['sfsi_plus_icons_language']=='hu_HU') ?  'selected="selected"' : '' ;?>><?php  _e( 'Magyar', SFSI_PLUS_DOMAIN ); ?></option>
-					<option value="hy_AM" <?php echo ($option5['sfsi_plus_icons_language']=='hy_AM') ?  'selected="selected"' : '' ;?>><?php  _e( 'Հայերեն', SFSI_PLUS_DOMAIN ); ?></option>
-					<option value="id_ID" <?php echo ($option5['sfsi_plus_icons_language']=='id_ID') ?  'selected="selected"' : '' ;?>><?php  _e( 'Bahasa Indonesia', SFSI_PLUS_DOMAIN ); ?></option>
-					<option value="is_IS" <?php echo ($option5['sfsi_plus_icons_language']=='is_IS') ?  'selected="selected"' : '' ;?>><?php  _e( 'Íslenska', SFSI_PLUS_DOMAIN ); ?></option>
-					<option value="it_IT" <?php echo ($option5['sfsi_plus_icons_language']=='it_IT') ?  'selected="selected"' : '' ;?>><?php  _e( 'Italiano', SFSI_PLUS_DOMAIN ); ?></option>
-					<option value="ja_JP" <?php echo ($option5['sfsi_plus_icons_language']=='ja_JP') ?  'selected="selected"' : '' ;?>><?php  _e( '日本語', SFSI_PLUS_DOMAIN ); ?></option>
-					<option value="ko_KR" <?php echo ($option5['sfsi_plus_icons_language']=='ko_KR') ?  'selected="selected"' : '' ;?>><?php  _e( '한국어', SFSI_PLUS_DOMAIN ); ?></option>
-					<option value="lt_LT" <?php echo ($option5['sfsi_plus_icons_language']=='lt_LT') ?  'selected="selected"' : '' ;?>><?php  _e( 'Lietuvių kalba', SFSI_PLUS_DOMAIN ); ?></option>
-					<option value="my_MM" <?php echo ($option5['sfsi_plus_icons_language']=='my_MM') ?  'selected="selected"' : '' ;?>><?php  _e( 'ဗမာစာ', SFSI_PLUS_DOMAIN ); ?></option>
-					<option value="nl_NL" <?php echo ($option5['sfsi_plus_icons_language']=='nl_NL') ?  'selected="selected"' : '' ;?>><?php  _e( 'Nederlands', SFSI_PLUS_DOMAIN ); ?></option>
-					<option value="nn_NO" <?php echo ($option5['sfsi_plus_icons_language']=='nn_NO') ?  'selected="selected"' : '' ;?>><?php  _e( 'Norsk nynorsk', SFSI_PLUS_DOMAIN ); ?></option>
-					<option value="pl_PL" <?php echo ($option5['sfsi_plus_icons_language']=='pl_PL') ?  'selected="selected"' : '' ;?>><?php  _e( 'Polski', SFSI_PLUS_DOMAIN ); ?></option>
-					<option value="ps_AF" <?php echo ($option5['sfsi_plus_icons_language']=='ps_AF') ?  'selected="selected"' : '' ;?>><?php  _e( 'پښتو', SFSI_PLUS_DOMAIN ); ?></option>
-					<option value="pt_BR" <?php echo ($option5['sfsi_plus_icons_language']=='pt_BR') ?  'selected="selected"' : '' ;?>><?php  _e( 'Português do Brasil', SFSI_PLUS_DOMAIN ); ?></option>
-					<option value="ro_RO" <?php echo ($option5['sfsi_plus_icons_language']=='ro_RO') ?  'selected="selected"' : '' ;?>><?php  _e( 'Română', SFSI_PLUS_DOMAIN ); ?></option>
-					<option value="ru_RU" <?php echo ($option5['sfsi_plus_icons_language']=='ru_RU') ?  'selected="selected"' : '' ;?>><?php  _e( 'Русский', SFSI_PLUS_DOMAIN ); ?></option>
-					<option value="sk_SK" <?php echo ($option5['sfsi_plus_icons_language']=='sk_SK') ?  'selected="selected"' : '' ;?>><?php  _e( 'Slovenčina', SFSI_PLUS_DOMAIN ); ?></option>
-					<option value="sl_SI" <?php echo ($option5['sfsi_plus_icons_language']=='sl_SI') ?  'selected="selected"' : '' ;?>><?php  _e( 'Slovenščina', SFSI_PLUS_DOMAIN ); ?></option>
-					<option value="sq_AL" <?php echo ($option5['sfsi_plus_icons_language']=='sq_AL') ?  'selected="selected"' : '' ;?>><?php  _e( 'Shqip', SFSI_PLUS_DOMAIN ); ?></option>
-					<option value="sr_RS" <?php echo ($option5['sfsi_plus_icons_language']=='sr_RS') ?  'selected="selected"' : '' ;?>><?php  _e( 'Српски језик', SFSI_PLUS_DOMAIN ); ?></option>
-					<option value="sv_SE" <?php echo ($option5['sfsi_plus_icons_language']=='sv_SE') ?  'selected="selected"' : '' ;?>><?php  _e( 'Svenska', SFSI_PLUS_DOMAIN ); ?></option>
-					<option value="th_TH" <?php echo ($option5['sfsi_plus_icons_language']=='th_TH') ?  'selected="selected"' : '' ;?>><?php  _e( 'ไทย', SFSI_PLUS_DOMAIN ); ?></option>
-					<option value="tl_PH" <?php echo ($option5['sfsi_plus_icons_language']=='tl_PH') ?  'selected="selected"' : '' ;?>><?php  _e( 'Tagalog', SFSI_PLUS_DOMAIN ); ?></option>
-					<option value="tr_TR" <?php echo ($option5['sfsi_plus_icons_language']=='tr_TR') ?  'selected="selected"' : '' ;?>><?php  _e( 'Türkçe', SFSI_PLUS_DOMAIN ); ?></option>
-					<option value="ug_CN" <?php echo ($option5['sfsi_plus_icons_language']=='ug_CN') ?  'selected="selected"' : '' ;?>><?php  _e( 'Uyƣurqə', SFSI_PLUS_DOMAIN ); ?></option>
-					<option value="uk_UA" <?php echo ($option5['sfsi_plus_icons_language']=='uk_UA') ?  'selected="selected"' : '' ;?>><?php  _e( 'Українська', SFSI_PLUS_DOMAIN ); ?></option>
-					<option value="vi_VN" <?php echo ($option5['sfsi_plus_icons_language']=='vi_VN') ?  'selected="selected"' : '' ;?>><?php  _e( 'Tiếng Việt', SFSI_PLUS_DOMAIN ); ?></option>
-					<option value="zh_CN" <?php echo ($option5['sfsi_plus_icons_language']=='zh_CN') ?  'selected="selected"' : '' ;?>><?php  _e( '简体中文', SFSI_PLUS_DOMAIN ); ?></option>
-					<option value="cs_CZ" <?php echo ($option5['sfsi_plus_icons_language']=='cs_CZ') ?  'selected="selected"' : '' ;?>><?php  _e( 'Čeština‎', SFSI_PLUS_DOMAIN ); ?></option>
-					<option value="ur_PK" <?php echo ($option5['sfsi_plus_icons_language']=='ur_PK') ?  'selected="selected"' : '' ;?>><?php  _e( 'اردو‎', SFSI_PLUS_DOMAIN ); ?></option>
+					<option value="ar_AR" <?php echo ($option5['sfsi_plus_icons_language']=='ar_AR') ?  'selected="selected"' : '' ;?>>
+						العربية 
+					</option>
+					<option value="az_AZ" <?php echo ($option5['sfsi_plus_icons_language']=='az_AZ') ?  'selected="selected"' : '' ;?>>
+						Azərbaycan dili
+					</option>
+					<option value="af_ZA" <?php echo ($option5['sfsi_plus_icons_language']=='af_ZA') ?  'selected="selected"' : '' ;?>>
+						Afrikaans
+					<option value="bg_BG" <?php echo ($option5['sfsi_plus_icons_language']=='bg_BG') ?  'selected="selected"' : '' ;?>>
+						Български
+					</option>
+					<option value="ms_MY" <?php echo ($option5['sfsi_plus_icons_language']=='ms_MY') ?  'selected="selected"' : '' ;?>>
+						Bahasa Melayu‎
+					</option>
+					<option value="bn_IN" <?php echo ($option5['sfsi_plus_icons_language']=='bn_IN') ?  'selected="selected"' : '' ;?>>
+						বাংলা
+					</option>
+					<option value="bs_BA" <?php echo ($option5['sfsi_plus_icons_language']=='bs_BA') ?  'selected="selected"' : '' ;?>>
+						Bosanski
+					</option>
+					<option value="ca_ES" <?php echo ($option5['sfsi_plus_icons_language']=='ca_ES') ?  'selected="selected"' : '' ;?>>
+						Català
+					</option>
+					<option value="cy_GB" <?php echo ($option5['sfsi_plus_icons_language']=='cy_GB') ?  'selected="selected"' : '' ;?>>
+						Cymraeg
+					</option>
+					<option value="da_DK" <?php echo ($option5['sfsi_plus_icons_language']=='da_DK') ?  'selected="selected"' : '' ;?>>
+						Dansk
+					</option>
+					<option value="de_DE" <?php echo ($option5['sfsi_plus_icons_language']=='de_DE') ?  'selected="selected"' : '' ;?>>
+						Deutsch
+					</option>
+					<option value="en_US" <?php echo ($option5['sfsi_plus_icons_language']=='en_US') ?  'selected="selected"' : '' ;?>>
+						English (United States)
+					</option>
+					<option value="el_GR" <?php echo ($option5['sfsi_plus_icons_language']=='el_GR') ?  'selected="selected"' : '' ;?>>
+						Ελληνικά
+					</option>
+					<option value="eo_EO" <?php echo ($option5['sfsi_plus_icons_language']=='eo_EO') ?  'selected="selected"' : '' ;?>>
+						Esperanto
+					</option>
+					<option value="es_ES" <?php echo ($option5['sfsi_plus_icons_language']=='es_ES') ?  'selected="selected"' : '' ;?>>
+						Español
+					</option>
+					<option value="et_EE" <?php echo ($option5['sfsi_plus_icons_language']=='et_EE') ?  'selected="selected"' : '' ;?>>
+						Eesti
+					</option>
+					<option value="eu_ES" <?php echo ($option5['sfsi_plus_icons_language']=='eu_ES') ?  'selected="selected"' : '' ;?>>
+						Euskara
+					</option>
+					<option value="fa_IR" <?php echo ($option5['sfsi_plus_icons_language']=='fa_IR') ?  'selected="selected"' : '' ;?>>
+						فارسی
+					</option>
+					<option value="fi_FI" <?php echo ($option5['sfsi_plus_icons_language']=='fi_FI') ?  'selected="selected"' : '' ;?>>
+						Suomi
+					</option>
+					<option value="fr_FR" <?php echo ($option5['sfsi_plus_icons_language']=='fr_FR') ?  'selected="selected"' : '' ;?>>
+						Français
+					</option>
+					<option value="gl_ES" <?php echo ($option5['sfsi_plus_icons_language']=='gl_ES') ?  'selected="selected"' : '' ;?>>
+						Galego
+					</option>
+					<option value="he_IL" <?php echo ($option5['sfsi_plus_icons_language']=='he_IL') ?  'selected="selected"' : '' ;?>>
+						עִבְרִית
+					</option>
+					<option value="hi_IN" <?php echo ($option5['sfsi_plus_icons_language']=='hi_IN') ?  'selected="selected"' : '' ;?>>
+						हिन्दी
+					</option>
+					<option value="hr_HR" <?php echo ($option5['sfsi_plus_icons_language']=='hr_HR') ?  'selected="selected"' : '' ;?>>
+						Hrvatski
+					</option>
+					<option value="hu_HU" <?php echo ($option5['sfsi_plus_icons_language']=='hu_HU') ?  'selected="selected"' : '' ;?>>
+						Magyar
+					</option>
+					<option value="hy_AM" <?php echo ($option5['sfsi_plus_icons_language']=='hy_AM') ?  'selected="selected"' : '' ;?>>
+						Հայերեն
+					</option>
+					<option value="id_ID" <?php echo ($option5['sfsi_plus_icons_language']=='id_ID') ?  'selected="selected"' : '' ;?>>
+						Bahasa Indonesia
+					</option>
+					<option value="is_IS" <?php echo ($option5['sfsi_plus_icons_language']=='is_IS') ?  'selected="selected"' : '' ;?>>
+						Íslenska
+					</option>
+					<option value="it_IT" <?php echo ($option5['sfsi_plus_icons_language']=='it_IT') ?  'selected="selected"' : '' ;?>>
+						Italiano
+					</option>
+					<option value="ja_JP" <?php echo ($option5['sfsi_plus_icons_language']=='ja_JP') ?  'selected="selected"' : '' ;?>>
+						日本語
+					</option>
+					<option value="ko_KR" <?php echo ($option5['sfsi_plus_icons_language']=='ko_KR') ?  'selected="selected"' : '' ;?>>
+						한국어
+					</option>
+					<option value="lt_LT" <?php echo ($option5['sfsi_plus_icons_language']=='lt_LT') ?  'selected="selected"' : '' ;?>>
+						Lietuvių kalba
+					</option>
+					<option value="my_MM" <?php echo ($option5['sfsi_plus_icons_language']=='my_MM') ?  'selected="selected"' : '' ;?>>
+						ဗမာစာ
+					</option>
+					<option value="nl_NL" <?php echo ($option5['sfsi_plus_icons_language']=='nl_NL') ?  'selected="selected"' : '' ;?>>
+						Nederlands
+					</option>
+					<option value="nn_NO" <?php echo ($option5['sfsi_plus_icons_language']=='nn_NO') ?  'selected="selected"' : '' ;?>>
+						Norsk nynorsk
+					</option>
+					<option value="pl_PL" <?php echo ($option5['sfsi_plus_icons_language']=='pl_PL') ?  'selected="selected"' : '' ;?>>
+						Polski
+					</option>
+					<option value="ps_AF" <?php echo ($option5['sfsi_plus_icons_language']=='ps_AF') ?  'selected="selected"' : '' ;?>>
+						پښتو
+					</option>
+					<option value="pt_BR" <?php echo ($option5['sfsi_plus_icons_language']=='pt_BR') ?  'selected="selected"' : '' ;?>>
+						Português do Brasil
+					</option>
+					<option value="ro_RO" <?php echo ($option5['sfsi_plus_icons_language']=='ro_RO') ?  'selected="selected"' : '' ;?>>
+						Română
+					</option>
+					<option value="ru_RU" <?php echo ($option5['sfsi_plus_icons_language']=='ru_RU') ?  'selected="selected"' : '' ;?>>
+						Русский
+					</option>
+					<option value="sk_SK" <?php echo ($option5['sfsi_plus_icons_language']=='sk_SK') ?  'selected="selected"' : '' ;?>>
+						Slovenčina
+					</option>
+					<option value="sl_SI" <?php echo ($option5['sfsi_plus_icons_language']=='sl_SI') ?  'selected="selected"' : '' ;?>>
+						Slovenščina
+					</option>
+					<option value="sq_AL" <?php echo ($option5['sfsi_plus_icons_language']=='sq_AL') ?  'selected="selected"' : '' ;?>>
+						Shqip
+					</option>
+					<option value="sr_RS" <?php echo ($option5['sfsi_plus_icons_language']=='sr_RS') ?  'selected="selected"' : '' ;?>>
+						Српски језик
+					</option>
+					<option value="sv_SE" <?php echo ($option5['sfsi_plus_icons_language']=='sv_SE') ?  'selected="selected"' : '' ;?>>
+						Svenska
+					</option>
+					<option value="th_TH" <?php echo ($option5['sfsi_plus_icons_language']=='th_TH') ?  'selected="selected"' : '' ;?>>
+						ไทย
+					</option>
+					<option value="tl_PH" <?php echo ($option5['sfsi_plus_icons_language']=='tl_PH') ?  'selected="selected"' : '' ;?>>
+						Tagalog
+					</option>
+					<option value="tr_TR" <?php echo ($option5['sfsi_plus_icons_language']=='tr_TR') ?  'selected="selected"' : '' ;?>>
+						Türkçe
+					</option>
+					<option value="ug_CN" <?php echo ($option5['sfsi_plus_icons_language']=='ug_CN') ?  'selected="selected"' : '' ;?>>
+						Uyƣurqə
+					</option>
+					<option value="uk_UA" <?php echo ($option5['sfsi_plus_icons_language']=='uk_UA') ?  'selected="selected"' : '' ;?>>
+						Українська
+					</option>
+					<option value="vi_VN" <?php echo ($option5['sfsi_plus_icons_language']=='vi_VN') ?  'selected="selected"' : '' ;?>>
+						Tiếng Việt
+					</option>
+					<option value="zh_CN" <?php echo ($option5['sfsi_plus_icons_language']=='zh_CN') ?  'selected="selected"' : '' ;?>>
+						简体中文
+					</option>
+					<option value="cs_CZ" <?php echo ($option5['sfsi_plus_icons_language']=='cs_CZ') ?  'selected="selected"' : '' ;?>>
+						Čeština
+					</option>
+					<option value="ur_PK" <?php echo ($option5['sfsi_plus_icons_language']=='ur_PK') ?  'selected="selected"' : '' ;?>>
+						اردو‎
+					</option>
 				</select>
 			</div>
 		</div>

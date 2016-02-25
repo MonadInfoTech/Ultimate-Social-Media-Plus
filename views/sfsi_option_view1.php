@@ -81,7 +81,7 @@
             </span> 
             <div class="sfsiplus_right_info">
             	<p>
-            		<?php  _e( '<span>Strongly recommended</span>: Facebook is crucial, esp. for sharing.', SFSI_PLUS_DOMAIN); ?>
+            		<?php  _e( '<span>Strongly recommended:</span> Facebook is crucial, esp. for sharing.', SFSI_PLUS_DOMAIN); ?>
   
                     <label class="expanded-area" >
   				    	<?php  _e( 'Facebook is the giant in the social media world, and even if you don’t have a Facebook account yourself you should display this icon, so that Facebook users can share your site on Facebook.', SFSI_PLUS_DOMAIN); ?>
@@ -102,7 +102,7 @@
             </span> 
             <div class="sfsiplus_right_info">
             	<p>
-                	<?php  _e( '<span>Strongly recommended</span>: Can have a strong promotional effect.', SFSI_PLUS_DOMAIN); ?>
+                	<?php  _e( '<span>Strongly recommended:</span> Can have a strong promotional effect.', SFSI_PLUS_DOMAIN); ?>
             		
                     <label class="expanded-area" >
             			<?php  _e( 'If you have a Twitter-account then adding this icon is a no-brainer. However, similar as with facebook, even if you don’t have one you should still show this icon so that Twitter-users can share your site.', SFSI_PLUS_DOMAIN); ?>
@@ -124,7 +124,7 @@
             </span> 
             <div class="sfsiplus_right_info">
             	<p>
-                	<?php  _e( '<span>Strongly recommended</span>: Increasingly important and beneficial for SEO.', SFSI_PLUS_DOMAIN); ?>
+                	<?php  _e( '<span>Strongly recommended:</span> Increasingly important and beneficial for SEO.', SFSI_PLUS_DOMAIN); ?>
                 	<label class="expanded-area" ></label>
             	</p>
             </div>

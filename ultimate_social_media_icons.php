@@ -409,7 +409,7 @@ function sfsi_plus_beforeafterblogposts( $content )
 						if($sfsi_section8['sfsi_plus_rectgp'] == 'yes')
 						{
 							if($show_count){$sfsiLikeWithpingogl = "63px";}else{$sfsiLikeWithpingogl = "auto";}
-							$icons_before .= "<div class='sf_google'  style='display: inline-block;vertical-align: middle; ".$sfsiLikeWithpingogl.";'>".sfsi_plus_googlePlus($permalink,$show_count)."</div>";
+							$icons_before .= "<div class='sf_google'  style='display: inline-block;vertical-align: middle;width: ".$sfsiLikeWithpingogl.";'>".sfsi_plus_googlePlus($permalink,$show_count)."</div>";
 						}
 						if($sfsi_section8['sfsi_plus_rectshr'] == 'yes')
 						{
@@ -479,7 +479,7 @@ function sfsi_plus_beforeafterblogposts( $content )
 						if($sfsi_section8['sfsi_plus_rectgp'] == 'yes')
 						{
 							if($show_count){$sfsiLikeWithpingogl = "63px";}else{$sfsiLikeWithpingogl = "auto";}
-							$icons_after .= "<div class='sf_google' style='display: inline-block;vertical-align: middle; ".$sfsiLikeWithpingogl.";'>".sfsi_plus_googlePlus($permalink,$show_count)."</div>";
+							$icons_after .= "<div class='sf_google' style='display: inline-block;vertical-align: middle;width: ".$sfsiLikeWithpingogl.";'>".sfsi_plus_googlePlus($permalink,$show_count)."</div>";
 						}
 						if($sfsi_section8['sfsi_plus_rectshr'] == 'yes')
 						{
@@ -590,7 +590,7 @@ function sfsi_plus_admin_notice()
 		<div class="updated" style="<?php echo $style; ?>"">
 			<div class="alignleft" style="margin: 9px 0;">
 				<b>
-                	<?php _e( 'New feature in the Ultimate Social Media PLUS plugin : ', SFSI_PLUS_DOMAIN); ?>
+                	<?php _e( 'New feature in the Ultimate Social Media PLUS plugin: ', SFSI_PLUS_DOMAIN); ?>
                 </b>  
                 
 				<?php _e( 'You can now add a subscription form to increase sign-ups (under question 8).', SFSI_PLUS_DOMAIN); ?>

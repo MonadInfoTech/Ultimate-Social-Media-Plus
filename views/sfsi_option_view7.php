@@ -53,82 +53,71 @@
 		</div>
 		<div class="sfsiplus_row_tab">
 			<label><?php  _e( 'Font:', SFSI_PLUS_DOMAIN ); ?></label>
-                        <div class="field">
-                            <select name="sfsi_plus_popup_font" id="sfsi_plus_popup_font" class="styled">
-                                <option value="Arial, Helvetica, sans-serif" <?php echo ($option7['sfsi_plus_popup_font']=='Arial, Arial, Helvetica, sans-serif') ?  'selected="true"' : '' ;?>>
-                                	<?php  _e( 'Arial', SFSI_PLUS_DOMAIN ); ?>
-                                </option>
-                                <option value="Arial Black, Gadget, sans-serif" <?php echo ($option7['sfsi_plus_popup_font']=='Arial Black, Gadget, sans-serif') ?  'selected="true"' : '' ;?>>
-                               
-                                 <?php  _e( 'Arial Black', SFSI_PLUS_DOMAIN ); ?>
-                                </option>
-                                <option value="Calibri" <?php echo ($option7['sfsi_plus_popup_font']=='Calibri') ?  'selected="true"' : '' ;?>>
-                                
-                                 <?php  _e( 'Calibri', SFSI_PLUS_DOMAIN ); ?>
-                                </option>
-                                <option value="Comic Sans MS" <?php echo ($option7['sfsi_plus_popup_font']=='Comic Sans MS') ?  'selected="true"' : '' ;?>>
-                               
-                                 <?php  _e( 'Comic Sans MS', SFSI_PLUS_DOMAIN ); ?>
-                                </option>
-                                <option value="Courier New" <?php echo ($option7['sfsi_plus_popup_font']=='Courier New') ?  'selected="true"' : '' ;?>>
-                                
-                                 <?php  _e( 'Courier New', SFSI_PLUS_DOMAIN ); ?>
-                                </option>
-                                <option value="Georgia" <?php echo ($option7['sfsi_plus_popup_font']=='Georgia') ?  'selected="true"' : '' ;?>>
-                                
-                                 <?php  _e( 'Georgia', SFSI_PLUS_DOMAIN ); ?>
-                                </option>
-                                <option value="Helvetica,Arial,sans-serif" <?php echo ($option7['sfsi_plus_popup_font']=='Helvetica,Arial,sans-serif') ?  'selected="true"' : '' ;?>>
-                                
-                                 <?php  _e( 'Helvetica', SFSI_PLUS_DOMAIN ); ?>
-                                </option>
-								<option value="Impact" <?php echo ($option7['sfsi_plus_popup_font']=='Impact') ?  'selected="true"' : '' ;?>>
-                					<?php  _e( 'Impact', SFSI_PLUS_DOMAIN ); ?>
-                				</option>
-                                <option value="Lucida Console" <?php echo ($option7['sfsi_plus_popup_font']=='Lucida Console') ?  'selected="true"' : '' ;?>>
-                                	<?php  _e( 'Lucida Console', SFSI_PLUS_DOMAIN ); ?>
-                                </option>
-                                <option value="Tahoma,Geneva" <?php echo ($option7['sfsi_plus_popup_font']=='Tahoma,Geneva') ?  'selected="true"' : '' ;?>>
-                                	<?php  _e( 'Tahoma', SFSI_PLUS_DOMAIN ); ?>
-                                </option>
-                         		<option value="Times New Roman" <?php echo ($option7['sfsi_plus_popup_font']=='Times New Roman') ?  'selected="true"' : '' ;?>>
-                                	<?php  _e( 'Times New Roman', SFSI_PLUS_DOMAIN ); ?>
-                                </option>
-                                <option value="Trebuchet MS" <?php echo ($option7['sfsi_plus_popup_font']=='Trebuchet MS') ?  'selected="true"' : '' ;?>>
-                                	<?php  _e( 'Trebuchet MS', SFSI_PLUS_DOMAIN ); ?>
-                                </option>
-                                <option value="Verdana" <?php echo ($option7['sfsi_plus_popup_font']=='Verdana') ?  'selected="true"' : '' ;?>>
-                                	<?php  _e( 'Verdana', SFSI_PLUS_DOMAIN ); ?>
-                                </option>
-                            
-                            </select>
-                        </div>
-		</div>
-		<div class="sfsiplus_row_tab">
-			<label>
-				<?php  _e( 'Font style:', SFSI_PLUS_DOMAIN ); ?>
-            </label>
 			<div class="field">
-                            <select name="sfsi_plus_popup_fontStyle" id="sfsi_plus_popup_fontStyle" class="styled">
-                                <option value="normal" <?php echo ($option7['sfsi_plus_popup_fontStyle']=='normal') ?  'selected="true"' : '' ;?>>
-                                	<?php  _e( 'Normal', SFSI_PLUS_DOMAIN ); ?>
-                                </option>
-                                <option value="inherit" <?php echo ($option7['sfsi_plus_popup_fontStyle']=='inherit') ?  'selected="true"' : '' ;?>>
-                                	<?php  _e( 'Inherit',SFSI_PLUS_DOMAIN ); ?>
-                                </option>
-                                <option value="oblique" <?php echo ($option7['sfsi_plus_popup_fontStyle']=='oblique') ?  'selected="true"' : '' ;?>>
-                                	<?php  _e( 'Oblique', SFSI_PLUS_DOMAIN ); ?>
-                                </option>
-                                <option value="italic" <?php echo ($option7['sfsi_plus_popup_fontStyle']=='italic') ?  'selected="true"' : '' ;?>>
-                                	<?php  _e( 'Italic', SFSI_PLUS_DOMAIN ); ?>
-                                </option>
-                            </select>
-                        </div>
+				<select name="sfsi_plus_popup_font" id="sfsi_plus_popup_font" class="styled">
+					<option value="Arial, Helvetica, sans-serif" <?php echo ($option7['sfsi_plus_popup_font']=='Arial, Arial, Helvetica, sans-serif') ?  'selected="true"' : '' ;?>>
+						Arial
+					</option>
+					<option value="Arial Black, Gadget, sans-serif" <?php echo ($option7['sfsi_plus_popup_font']=='Arial Black, Gadget, sans-serif') ?  'selected="true"' : '' ;?>>
+						Arial Black
+					</option>
+					<option value="Calibri" <?php echo ($option7['sfsi_plus_popup_font']=='Calibri') ?  'selected="true"' : '' ;?>>
+						Calibri
+					</option>
+					<option value="Comic Sans MS" <?php echo ($option7['sfsi_plus_popup_font']=='Comic Sans MS') ?  'selected="true"' : '' ;?>>
+						Comic Sans MS
+					</option>
+					<option value="Courier New" <?php echo ($option7['sfsi_plus_popup_font']=='Courier New') ?  'selected="true"' : '' ;?>>
+						Courier New
+					</option>
+					<option value="Georgia" <?php echo ($option7['sfsi_plus_popup_font']=='Georgia') ?  'selected="true"' : '' ;?>>
+						Georgia
+					</option>
+					<option value="Helvetica,Arial,sans-serif" <?php echo ($option7['sfsi_plus_popup_font']=='Helvetica,Arial,sans-serif') ?  'selected="true"' : '' ;?>>
+						Helvetica
+					</option>
+					<option value="Impact" <?php echo ($option7['sfsi_plus_popup_font']=='Impact') ?  'selected="true"' : '' ;?>>
+						Impact
+					</option>
+					<option value="Lucida Console" <?php echo ($option7['sfsi_plus_popup_font']=='Lucida Console') ?  'selected="true"' : '' ;?>>
+						Lucida Console
+					</option>
+					<option value="Tahoma,Geneva" <?php echo ($option7['sfsi_plus_popup_font']=='Tahoma,Geneva') ?  'selected="true"' : '' ;?>>
+						Tahoma
+					</option>
+					<option value="Times New Roman" <?php echo ($option7['sfsi_plus_popup_font']=='Times New Roman') ?  'selected="true"' : '' ;?>>
+						Times New Roman
+					</option>
+					<option value="Trebuchet MS" <?php echo ($option7['sfsi_plus_popup_font']=='Trebuchet MS') ?  'selected="true"' : '' ;?>>
+						Trebuchet MS
+					</option>
+					<option value="Verdana" <?php echo ($option7['sfsi_plus_popup_font']=='Verdana') ?  'selected="true"' : '' ;?>>
+						Verdana
+					</option>
+				</select>
+			</div>
 		</div>
 		<div class="sfsiplus_row_tab">
-			<label>
-            	<?php  _e( 'Font color:', SFSI_PLUS_DOMAIN ); ?>
-            </label>
+			<label><?php  _e( 'Font style:', SFSI_PLUS_DOMAIN ); ?></label>
+			<div class="field">
+				<select name="sfsi_plus_popup_fontStyle" id="sfsi_plus_popup_fontStyle" class="styled">
+					<option value="normal" <?php echo ($option7['sfsi_plus_popup_fontStyle']=='normal') ?  'selected="true"' : '' ;?>>
+						Normal
+					</option>
+					<option value="inherit" <?php echo ($option7['sfsi_plus_popup_fontStyle']=='inherit') ?  'selected="true"' : '' ;?>>
+						Inherit
+					</option>
+					<option value="oblique" <?php echo ($option7['sfsi_plus_popup_fontStyle']=='oblique') ?  'selected="true"' : '' ;?>>
+						Oblique
+					</option>
+					<option value="italic" <?php echo ($option7['sfsi_plus_popup_fontStyle']=='italic') ?  'selected="true"' : '' ;?>>
+						Italic
+					</option>
+				</select>
+			</div>
+		</div>
+		<div class="sfsiplus_row_tab">
+			<label><?php  _e( 'Font color:', SFSI_PLUS_DOMAIN ); ?></label>
             <input name="sfsi_plus_popup_fontColor" data-default-color="#b5b5b5" id="sfsi_plus_popup_fontColor" type="text" value="<?php echo ($option7['sfsi_plus_popup_fontColor']!='') ?  $option7['sfsi_plus_popup_fontColor'] : '' ;?>" />
 			<!--div class="color_box">
 			<div class="corner"></div>

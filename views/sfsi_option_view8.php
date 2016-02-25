@@ -190,7 +190,7 @@
 					?>
 					<label class="sfsiplus_sub-subtitle ckckslctn" <?php echo $label_style;?>>
                     	<?php  _e( 'Place', SFSI_PLUS_DOMAIN ); ?>
-                    <label class="sfsi_ckckslctnlbl"><</label><label class="sfsi_ckckslctnlbl">?</label><label class="sfsi_ckckslctnlbl">php echo DISPLAY_ULTIMATE_PLUS();</label><label class="sfsi_ckckslctnlbl">?</label><label class="sfsi_ckckslctnlbl">></label> 
+                    <label class="sfsi_ckckslctnlbl"><</label><label class="sfsi_ckckslctnlbl">?</label><label class="sfsi_ckckslctnlbl">php echo DISPLAY_ULTIMATE_PLUS(); </label><label class="sfsi_ckckslctnlbl">?</label><label class="sfsi_ckckslctnlbl">></label> 
                     	<?php  _e( 'in your theme codes or use the shortcode', SFSI_PLUS_DOMAIN ); ?>
                     	<b>
                     		[DISPLAY_ULTIMATE_PLUS]
@@ -243,7 +243,7 @@
 						<div class="radiodisplaysection" style="<?php echo $display; ?>">
 
                             <p class="cstmdisplaysharingtxt cstmdisextrpdng">
-                            	<?php  _e( 'Rectangle icons spell out the «<b>call to action</b>» which increases chances that visitors do it.', SFSI_PLUS_DOMAIN ); ?>
+                            	<?php  _e( 'Rectangle icons spell out the « <b>call to action</b> » which increases chances that visitors do it.', SFSI_PLUS_DOMAIN ); ?>
                             </p>
 							<p class="cstmdisplaysharingtxt">
                             	<?php  _e( 'Select the icons you want to show:', SFSI_PLUS_DOMAIN ); ?>

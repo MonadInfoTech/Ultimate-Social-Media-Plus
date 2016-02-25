@@ -522,45 +522,45 @@ function sfsi_plus_get_font($name, $value)
 		<select name="<?php echo $name; ?>" id="<?php echo $name; ?>" class="select-same">
 			<option value="Arial, Helvetica, sans-serif"
 				<?php echo sfsi_plus_isSeletcted("Arial, Helvetica, sans-serif", $value) ?> >
-				<?php  _e( 'Arial', SFSI_PLUS_DOMAIN ); ?>
+				Arial
 			</option>
 			<option value="Arial Black, Gadget, sans-serif"
 				<?php echo sfsi_plus_isSeletcted("Arial Black, Gadget, sans-serif", $value) ?> >
-				<?php  _e( 'Arial Black', SFSI_PLUS_DOMAIN ); ?>
+				Arial Black
 			</option>
 			<option value="Calibri" <?php echo sfsi_plus_isSeletcted("Calibri", $value) ?> >
-           		<?php  _e( 'Calibri', SFSI_PLUS_DOMAIN ); ?>
+           		Calibri
             </option>
 			<option value="Comic Sans MS" <?php echo sfsi_plus_isSeletcted("Comic Sans MS", $value) ?> >
-            	<?php  _e( 'Comic Sans MS', SFSI_PLUS_DOMAIN ); ?>
+            	Comic Sans MS
             </option>
 			<option value="Courier New" <?php echo sfsi_plus_isSeletcted("Courier New", $value) ?> >
-            	<?php  _e( 'Courier New', SFSI_PLUS_DOMAIN ); ?>
+            	Courier New
             </option>
 			<option value="Georgia" <?php echo sfsi_plus_isSeletcted("Georgia", $value) ?> >
-            	<?php  _e( 'Georgia', SFSI_PLUS_DOMAIN ); ?>
+            	Georgia
             </option>
 			<option value="Helvetica,Arial,sans-serif"
 				<?php echo sfsi_plus_isSeletcted("Helvetica,Arial,sans-serif", $value) ?> >
-				<?php  _e( 'Helvetica', SFSI_PLUS_DOMAIN ); ?>
+				Helvetica
 			</option>
 			<option value="Impact" <?php echo sfsi_plus_isSeletcted("Impact", $value) ?> >
-                <?php  _e( 'Impact', SFSI_PLUS_DOMAIN ); ?>
+                Impact
             </option>
 			<option value="Lucida Console" <?php echo sfsi_plus_isSeletcted("Lucida Console", $value) ?> >
-                <?php  _e( 'Lucida Console', SFSI_PLUS_DOMAIN ); ?>
+                Lucida Console
             </option>
 			<option value="Tahoma,Geneva" <?php echo sfsi_plus_isSeletcted("Tahoma,Geneva", $value) ?> >
-                <?php  _e( 'Tahoma', SFSI_PLUS_DOMAIN ); ?>
+                Tahoma
             </option>
 			<option value="Times New Roman" <?php echo sfsi_plus_isSeletcted("Times New Roman", $value) ?> >
-            	<?php  _e( 'Times New Roman', SFSI_PLUS_DOMAIN ); ?>
+            	Times New Roman
             </option>
 			<option value="Trebuchet MS" <?php echo sfsi_plus_isSeletcted("Trebuchet MS", $value) ?> >
-            	<?php  _e( 'Trebuchet MS', SFSI_PLUS_DOMAIN ); ?>
+            	Trebuchet MS
             </option>
 			<option value="Verdana" <?php echo sfsi_plus_isSeletcted("Verdana", $value) ?> >
-            	<?php  _e( 'Verdana', SFSI_PLUS_DOMAIN ); ?>
+            	Verdana
             </option>
 		</select>
 	<?php
@@ -570,19 +570,19 @@ function sfsi_plus_get_fontstyle($name, $value)
 	?>
 	<select name="<?php echo $name; ?>" id="<?php echo $name; ?>" class="select-same">
 		<option value="normal" <?php echo sfsi_plus_isSeletcted("normal", $value) ?> >
-        	<?php  _e( 'Normal', SFSI_PLUS_DOMAIN ); ?>
+        	Normal
         </option>
 		<option value="inherit" <?php echo sfsi_plus_isSeletcted("inherit", $value) ?> >
-        	<?php  _e( 'Inherit', SFSI_PLUS_DOMAIN ); ?>
+        	Inherit
         </option>
 		<option value="oblique" <?php echo sfsi_plus_isSeletcted("oblique", $value) ?> >
-        	<?php  _e( 'Oblique', SFSI_PLUS_DOMAIN ); ?>
+        	Oblique
         </option>
 		<option value="italic" <?php echo sfsi_plus_isSeletcted("italic", $value) ?> >
-        	<?php  _e( 'Italic', SFSI_PLUS_DOMAIN ); ?>
+        	Italic
         </option>
         <option value="bold" <?php echo sfsi_plus_isSeletcted("bold", $value) ?> >
-        	<?php  _e( 'Bold', SFSI_PLUS_DOMAIN ); ?>
+        	Bold
         </option>
 	</select>
 	<?php                     

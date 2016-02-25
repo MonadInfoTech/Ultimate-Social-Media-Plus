@@ -191,8 +191,9 @@
             <p>
             	<?php  _e( 'The Google+ icon can perform several actions. Pick below which ones it should perform. If you select several options, then users can select what they want to do', SFSI_PLUS_DOMAIN ); ?>
             	<a class="rit_link pop-up" href="javascript:;"  data-id="googlex-s2">
-                	(<?php  _e( 'see an example', SFSI_PLUS_DOMAIN ); ?>)
-                </a>.</p>
+                	(<?php  _e( 'see an example', SFSI_PLUS_DOMAIN ); ?>).
+                </a>
+			</p>
             <p>
             	<?php  _e( 'The Google+ icon should allow users to...', SFSI_PLUS_DOMAIN ); ?>
             </p> 
@@ -232,8 +233,8 @@
             <p>
             	<?php  _e( 'The Youtube icon can perform several actions. Pick below which ones it should perform. If you select several options, then users can select what they want to do', SFSI_PLUS_DOMAIN ); ?>
             	<a class="rit_link pop-up" href="javascript:;"  data-id="ytex-s2">
-            		(<?php  _e( 'see an example', SFSI_PLUS_DOMAIN ); ?>)
-            	</a>.
+            		(<?php  _e( 'see an example', SFSI_PLUS_DOMAIN ); ?>).
+            	</a>
             </p> 
             <p>
             	<?php  _e( 'The youtube icon should allow users to...', SFSI_PLUS_DOMAIN ); ?>
@@ -439,7 +440,7 @@
         </h2>
         <div class="inr_cont">
             <p>
-            	<?php  _e( 'Please provide the url to your Houzz profile(e.g. http://www.houzz.com/user/your_username).', SFSI_PLUS_DOMAIN ); ?>  
+            	<?php  _e( 'Please provide the url to your Houzz profile (e.g. http://www.houzz.com/user/your_username).', SFSI_PLUS_DOMAIN ); ?>  
             </p> 
             <p class="radio_section fb_url  cus_link instagram_space" >
             	<label>

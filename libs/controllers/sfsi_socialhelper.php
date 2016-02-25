@@ -76,12 +76,12 @@ class sfsi_plus_SocialHelper
 	/* get facebook page likes */
 	function sfsi_get_fb_pagelike($url)
 	{
-	   $appid = '959456867427268';
-	   $appsecret = '7cc27f382c47fd5cc3a7203e40d70bf1';
-	   $json_url ='https://graph.facebook.com/'.$url.'?access_token='.$appid.'|'.$appsecret;
-	   $json_string = $this->file_get_contents_curl($json_url);
-	   $json = json_decode($json_string, true);
-	   return isset($json['likes'])? $json['likes']:0;
+		$appid = '954871214567352';
+   		$appsecret = 'a780eb3d3687a084d6e5919585cc6a12';
+    	$json_url ='https://graph.facebook.com/'.$url.'?fields=likes&access_token='.$appid.'|'.$appsecret;
+        $json_string = $this->file_get_contents_curl($json_url);
+	    $json = json_decode($json_string, true);
+	    return isset($json['likes'])? $json['likes']:0;
 	}
 
 	/* get google+ follwers  */
