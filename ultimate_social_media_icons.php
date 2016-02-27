@@ -6,7 +6,7 @@ Description: The best social media plugin on the market. And 100% FREE. Allows y
 Author: UltimatelySocial
 Text Domain: ultimate-social-media-plus
 Author URI: http://ultimatelysocial.com
-Version: 2.3.1
+Version: 2.3.2
 License: GPLv2
 */
 
@@ -36,7 +36,7 @@ register_deactivation_hook(__FILE__, 'sfsi_plus_deactivate_plugin');
 register_uninstall_hook(__FILE__, 'sfsi_plus_Unistall_plugin');
 
 /*Plugin version setup*/
-if(!get_option('sfsi_plus_pluginVersion') || get_option('sfsi_plus_pluginVersion') < 2.31)
+if(!get_option('sfsi_plus_pluginVersion') || get_option('sfsi_plus_pluginVersion') < 2.32)
 {
 	add_action("init", "sfsi_plus_update_plugin");
 }
@@ -641,18 +641,5 @@ function sfsi_plus_get_bloginfo($url)
 		$web_url = site_url()."/feed";
 	}
 	return $web_url;
-}
-
-add_filter( 'plugin_action_links_' . plugin_basename( __FILE__ ), "sfsi_plus_actionLinks", -10 );
-function sfsi_plus_actionLinks($links)
-{
-	$links[] = '<a href="javascript:" id="sfsi_plus_deactivateButton">'.__( 'Deactivate with feedback', SFSI_PLUS_DOMAIN ).'</a>';
-	$links[] = $links["deactivate"];
-	$links[] = $links["edit"];
-	$links[] = '<a href="http://www.ultimatelysocial.com/faq" target="_blank">'.__('Have issues? Check the FAQ', SFSI_PLUS_DOMAIN ).'</a>';
-	
-	unset($links['deactivate']);
-	unset($links['edit']);
-	return $links;
 }
 ?>
