@@ -2343,7 +2343,7 @@ h2.optional {
 }
 .sf_google > div
 {
-	/*width: 70px !important;*/
+	width: 70px !important;
 }
 .sf_google iframe
 {
