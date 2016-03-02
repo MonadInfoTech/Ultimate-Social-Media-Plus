@@ -3,9 +3,9 @@
 add_action("wp_head", "sfsi_plus_addStyleFunction");
 function sfsi_plus_addStyleFunction()
 {
-	$option9 = unserialize(get_option('sfsi_plus_section9_options',false));
-	$sfsi_plus_feediid = get_option('sfsi_plus_feed_id');
-	$url = "http://www.specificfeeds.com/widgets/subscribeWidget/";
+	$option9 			= unserialize(get_option('sfsi_plus_section9_options',false));
+	$sfsi_plus_feediid 	= sanitize_text_field(get_option('sfsi_plus_feed_id'));
+	$url 				= "http://www.specificfeeds.com/widgets/subscribeWidget/";
 	echo $return = '';
 	?>
     	<script>
@@ -224,8 +224,8 @@ add_action( 'widgets_init', 'sfsiPlus_subscriber_load_widget' );
 add_shortcode("USM_plus_form", "sfsi_plus_get_subscriberForm");
 function sfsi_plus_get_subscriberForm()
 {
-	$option9 = unserialize(get_option('sfsi_plus_section9_options',false));
-	$sfsi_plus_feediid = get_option('sfsi_plus_feed_id');
+	$option9 			= unserialize(get_option('sfsi_plus_section9_options',false));
+	$sfsi_plus_feediid 	= sanitize_text_field(get_option('sfsi_plus_feed_id'));
 	$url = "http://www.specificfeeds.com/widgets/subscribeWidget/";
 	
 	$return = '';

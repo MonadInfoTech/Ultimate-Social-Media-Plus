@@ -1,14 +1,102 @@
 <?php
     /* unserialize all saved option for Eight options */
-    $option9=  unserialize(get_option('sfsi_plus_section9_options',false));
-	$feedId = get_option('sfsi_plus_feed_id',false);
+    $option9	= unserialize(get_option('sfsi_plus_section9_options',false));
+	$feedId 	= sanitize_text_field(get_option('sfsi_plus_feed_id',false));
+	
+	/*
+	 * Sanitize, escape and validate values
+	 */
+	$option9['sfsi_plus_form_adjustment'] 		= 	(isset($option9['sfsi_plus_form_adjustment']))
+														? sanitize_text_field($option9['sfsi_plus_form_adjustment'])
+														: '';
+	$option9['sfsi_plus_form_height'] 			= 	(isset($option9['sfsi_plus_form_height']))
+														? intval($option9['sfsi_plus_form_height'])
+														: '';
+	$option9['sfsi_plus_form_width'] 			= 	(isset($option9['sfsi_plus_form_width']))
+														? intval($option9['sfsi_plus_form_width'])
+														: '';
+	$option9['sfsi_plus_form_border'] 			= 	(isset($option9['sfsi_plus_form_border']))
+														? sanitize_text_field($option9['sfsi_plus_form_border'])
+														: '';
+	$option9['sfsi_plus_form_border_thickness'] = 	(isset($option9['sfsi_plus_form_border_thickness']))
+														? intval($option9['sfsi_plus_form_border_thickness'])
+														: '';
+	$option9['sfsi_plus_form_border_color'] 	= 	(isset($option9['sfsi_plus_form_border_color']))
+														? sfsi_plus_sanitize_hex_color($option9['sfsi_plus_form_border_color'])
+														: '';
+	$option9['sfsi_plus_form_background'] 		= 	(isset($option9['sfsi_plus_form_background']))
+														? sfsi_plus_sanitize_hex_color($option9['sfsi_plus_form_background'])
+														: '';
+	
+	$option9['sfsi_plus_form_heading_text'] 	= 	(isset($option9['sfsi_plus_form_heading_text']))
+														? sanitize_text_field($option9['sfsi_plus_form_heading_text'])
+														: '';
+	$option9['sfsi_plus_form_heading_font'] 	= 	(isset($option9['sfsi_plus_form_heading_font']))
+														? sanitize_text_field($option9['sfsi_plus_form_heading_font'])
+														: '';
+	$option9['sfsi_plus_form_heading_fontstyle']= 	(isset($option9['sfsi_plus_form_heading_fontstyle']))
+														? sanitize_text_field($option9['sfsi_plus_form_heading_fontstyle'])
+														: '';
+	$option9['sfsi_plus_form_heading_fontcolor']= 	(isset($option9['sfsi_plus_form_heading_fontcolor']))
+														? sfsi_plus_sanitize_hex_color($option9['sfsi_plus_form_heading_fontcolor'])
+														: '';
+	$option9['sfsi_plus_form_heading_fontsize'] = 	(isset($option9['sfsi_plus_form_heading_fontsize']))
+														? intval($option9['sfsi_plus_form_heading_fontsize'])
+														: '';
+	$option9['sfsi_plus_form_heading_fontalign']= 	(isset($option9['sfsi_plus_form_heading_fontalign']))
+														? sanitize_text_field($option9['sfsi_plus_form_heading_fontalign'])
+														: '';
+	
+	$option9['sfsi_plus_form_field_text'] 		= 	(isset($option9['sfsi_plus_form_field_text']))
+														? sanitize_text_field($option9['sfsi_plus_form_field_text'])
+														: '';
+	$option9['sfsi_plus_form_field_font'] 		= 	(isset($option9['sfsi_plus_form_field_font']))
+														? sanitize_text_field($option9['sfsi_plus_form_field_font'])
+														: '';
+	$option9['sfsi_plus_form_field_fontstyle'] 	= 	(isset($option9['sfsi_plus_form_field_fontstyle']))
+														? sanitize_text_field($option9['sfsi_plus_form_field_fontstyle'])
+														: '';
+	$option9['sfsi_plus_form_field_fontcolor'] 	= 	(isset($option9['sfsi_plus_form_field_fontcolor']))
+														? sfsi_plus_sanitize_hex_color($option9['sfsi_plus_form_field_fontcolor'])
+														: '';
+	$option9['sfsi_plus_form_field_fontsize'] 	= 	(isset($option9['sfsi_plus_form_field_fontsize']))
+														? intval($option9['sfsi_plus_form_field_fontsize'])
+														: '';
+	$option9['sfsi_plus_form_field_fontalign']	= 	(isset($option9['sfsi_plus_form_field_fontalign']))
+														? sanitize_text_field($option9['sfsi_plus_form_field_fontalign'])
+														: '';
+	
+	$option9['sfsi_plus_form_button_text'] 		= 	(isset($option9['sfsi_plus_form_button_text']))
+														? sanitize_text_field($option9['sfsi_plus_form_button_text'])
+														: '';
+	$option9['sfsi_plus_form_button_font'] 		= 	(isset($option9['sfsi_plus_form_button_font']))
+														? sanitize_text_field($option9['sfsi_plus_form_button_font'])
+														: '';
+	$option9['sfsi_plus_form_button_fontstyle'] = 	(isset($option9['sfsi_plus_form_button_fontstyle']))
+														? sanitize_text_field($option9['sfsi_plus_form_button_fontstyle'])
+														: '';
+	$option9['sfsi_plus_form_button_fontcolor'] = 	(isset($option9['sfsi_plus_form_button_fontcolor']))
+														? sfsi_plus_sanitize_hex_color($option9['sfsi_plus_form_button_fontcolor'])
+														: '';
+	$option9['sfsi_plus_form_button_fontsize'] 	= 	(isset($option9['sfsi_plus_form_button_fontsize']))
+														? intval($option9['sfsi_plus_form_button_fontsize'])
+														: '';
+	$option9['sfsi_plus_form_button_fontalign'] = 	(isset($option9['sfsi_plus_form_button_fontalign']))
+														? sanitize_text_field($option9['sfsi_plus_form_button_fontalign'])
+														: '';
+	$option9['sfsi_plus_form_button_background']= 	(isset($option9['sfsi_plus_form_button_background']))
+														? sfsi_plus_sanitize_hex_color($option9['sfsi_plus_form_button_background'])
+														: '';
+
 ?>
 <div class="tab9">
 	<?php
 		$connectToFeed = "http://www.specificfeeds.com/?".base64_encode("userprofile=wordpress&feed_id=".$feedId);
 	?>
     <p>
-		<?php  _e('In addition to the email- or follow-icon you can also show a subscription form which maximizes chances that people subscribe to your site. To get access to the emails who subscribe, please', SFSI_PLUS_DOMAIN); ?>
+		<?php
+			_e('In addition to the email- or follow-icon you can also show a subscription form which maximizes chances that people subscribe to your site. To get access to the emails who subscribe, please', SFSI_PLUS_DOMAIN);
+		?>
 		<a target="_new" href="<?php echo $connectToFeed; ?>">
 			<?php _e('claim your feed',SFSI_PLUS_DOMAIN); ?>.
 		</a>
@@ -18,7 +106,7 @@
     	<!--Section 1-->
         <div class="sfsi_plus_tab8_subcontainer">
     		<h3 class="sfsi_plus_section_title">
-            	<?php  _e( 'Preview:', SFSI_PLUS_DOMAIN ); ?>
+            	<?php _e( 'Preview:', SFSI_PLUS_DOMAIN ); ?>
             </h3>
             <div class="like_pop_box">
             	<?php get_sfsi_plus_SubscriptionForm(); ?>
@@ -28,10 +116,10 @@
         <!--Section 2-->
         <div class="sfsi_plus_tab8_subcontainer sfsi_plus_seprater">
     		<h3 class="sfsi_plus_section_title">
-            	<?php  _e( 'Place it on your site', SFSI_PLUS_DOMAIN ); ?>
+            	<?php _e( 'Place it on your site', SFSI_PLUS_DOMAIN ); ?>
             </h3>
             <label class="sfsi_plus_label_text">
-            	<?php  _e( 'You can place the form by different methods:', SFSI_PLUS_DOMAIN ); ?>
+            	<?php _e( 'You can place the form by different methods:', SFSI_PLUS_DOMAIN ); ?>
             </label>
             
             <ul class="sfsi_plus_form_info">
@@ -68,9 +156,9 @@
             
             <div class="sfsi_plus_html" style="display: none;">
             	<?php
-					$sfsi_plus_feediid = get_option('sfsi_plus_feed_id');
-					$url = "http://www.specificfeeds.com/widgets/subscribeWidget/";
-					$url = $url.$sfsi_plus_feediid.'/8/';
+					$sfsi_plus_feediid 	= sanitize_text_field(get_option('sfsi_plus_feed_id'));
+					$url 				= "http://www.specificfeeds.com/widgets/subscribeWidget/";
+					$url 				= $url.$sfsi_plus_feediid.'/8/';
 				?>
                 <div class="sfsi_plus_subscribe_Popinner" style="padding: 18px 0px;">
                     <form method="post" onsubmit="return sfsi_plus_processfurther(this);" target="popupwindow" action="<?php echo $url?>" style="margin: 0px 20px;">

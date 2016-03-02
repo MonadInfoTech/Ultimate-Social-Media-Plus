@@ -1,5 +1,5 @@
 <?php
-/* unserialize all saved option for  section 6 options */
+	/* unserialize all saved option for  section 6 options */
     $option6=  unserialize(get_option('sfsi_plus_section6_options',false));
    
 ?>
@@ -11,10 +11,13 @@
 	<!-- icons example  section -->	
 	<div class="social_icon_like1">
 	<ul>
-		<li><a href="#" title="Facebook Like"><img src="<?php echo SFSI_PLUS_PLUGURL; ?>images/like.jpg" alt="Facebook Like" /><span>18k</span></a></li>
-		<li><a href="#" title="Google Plus"><img src="<?php echo SFSI_PLUS_PLUGURL; ?>images/google_plus1.jpg" alt="Google Plus" /><span>18k</span></a></li>
+		<li>
+        	<a href="#" title="Facebook Like"><img src="<?php echo SFSI_PLUS_PLUGURL; ?>images/like.jpg" alt="Facebook Like" /><span>18k</span></a>
+        </li>
+		<li>
+        	<a href="#" title="Google Plus"><img src="<?php echo SFSI_PLUS_PLUGURL; ?>images/google_plus1.jpg" alt="Google Plus" /><span>18k</span></a>
+        </li>
 		<li><a href="#" title="Share"><img src="<?php echo SFSI_PLUS_PLUGURL; ?>images/share1.jpg" alt="Share" /><span>18k</span></a></li>
-		
 	</ul>	
 	</div><!-- icons position section -->
 	

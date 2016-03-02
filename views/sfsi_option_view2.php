@@ -1,8 +1,128 @@
 <?php
-  /* unserialize all saved option for second section options */
+	/* unserialize all saved option for second section options */
 	$option4=  unserialize(get_option('sfsi_plus_section4_options',false));
-    $option2=  unserialize(get_option('sfsi_plus_section2_options',false));
-  
+	$option2=  unserialize(get_option('sfsi_plus_section2_options',false));
+	
+	/*
+	 * Sanitize, escape and validate values
+	 */
+	$option2['sfsi_plus_rss_url'] 				=	(isset($option2['sfsi_plus_rss_url']))
+														? esc_url($option2['sfsi_plus_rss_url'])
+														: '';
+	$option2['sfsi_plus_rss_icons'] 			=	(isset($option2['sfsi_plus_rss_icons']))
+														? sanitize_text_field($option2['sfsi_plus_rss_icons'])
+														: '';
+	$option2['sfsi_plus_email_url']				=	(isset($option2['sfsi_plus_email_url']))
+														? sanitize_text_field(	$option2['sfsi_plus_email_url'])
+														: '';
+	
+	$option2['sfsi_plus_facebookPage_option']	=	(isset($option2['sfsi_plus_facebookPage_option']))
+														? sanitize_text_field($option2['sfsi_plus_facebookPage_option'])
+														: '';
+	$option2['sfsi_plus_facebookPage_url'] 		=	(isset($option2['sfsi_plus_facebookPage_url']))
+														? esc_url($option2['sfsi_plus_facebookPage_url'])
+														: '';
+	$option2['sfsi_plus_facebookLike_option']	=	(isset($option2['sfsi_plus_facebookLike_option']))
+														? sanitize_text_field($option2['sfsi_plus_facebookLike_option'])
+														: ' ';
+	$option2['sfsi_plus_facebookShare_option'] 	=	(isset($option2['sfsi_plus_facebookShare_option']))
+														? sanitize_text_field($option2['sfsi_plus_facebookShare_option'])
+														: '';
+	
+	$option2['sfsi_plus_twitter_followme'] 		=	(isset($option2['sfsi_plus_twitter_followme']))
+														? sanitize_text_field($option2['sfsi_plus_twitter_followme'])
+														: '';
+	$option2['sfsi_plus_twitter_followUserName']=	(isset($option2['sfsi_plus_twitter_followUserName']))
+														? sanitize_text_field($option2['sfsi_plus_twitter_followUserName'])
+														: '';
+	$option2['sfsi_plus_twitter_aboutPage'] 	=	(isset($option2['sfsi_plus_twitter_aboutPage']))
+														? sanitize_text_field($option2['sfsi_plus_twitter_aboutPage'])
+														: '';
+	$option2['sfsi_plus_twitter_page'] 			=	(isset($option2['sfsi_plus_twitter_page']))
+														? sanitize_text_field($option2['sfsi_plus_twitter_page'])
+														: '';
+	$option2['sfsi_plus_twitter_pageURL'] 		=	(isset($option2['sfsi_plus_twitter_pageURL']))
+														? esc_url($option2['sfsi_plus_twitter_pageURL'])
+														: '';
+	$option2['sfsi_plus_twitter_aboutPageText'] =	(isset($option2['sfsi_plus_twitter_aboutPageText']))
+														? sanitize_text_field($option2['sfsi_plus_twitter_aboutPageText'])
+														: '';
+	
+	$option2['sfsi_plus_google_page'] 			=	(isset($option2['sfsi_plus_google_page']))
+														? sanitize_text_field($option2['sfsi_plus_google_page'])
+														: '';
+	$option2['sfsi_plus_google_pageURL'] 		=	(isset($option2['sfsi_plus_google_pageURL']))
+														? esc_url($option2['sfsi_plus_google_pageURL'])
+														: '';
+	$option2['sfsi_plus_googleLike_option'] 	=	(isset($option2['sfsi_plus_googleLike_option']))
+														? sanitize_text_field($option2['sfsi_plus_googleLike_option'])
+														: '';
+	$option2['sfsi_plus_googleShare_option'] 	=	(isset($option2['sfsi_plus_googleShare_option']))
+														? sanitize_text_field($option2['sfsi_plus_googleShare_option'])
+														: '';
+	
+	$option2['sfsi_plus_youtube_pageUrl'] 		=	(isset($option2['sfsi_plus_youtube_pageUrl']))
+														? esc_url($option2['sfsi_plus_youtube_pageUrl'])
+														: '';
+	$option2['sfsi_plus_youtube_page'] 			=	(isset($option2['sfsi_plus_youtube_page']))
+														? sanitize_text_field($option2['sfsi_plus_youtube_page'])
+														: '';
+	$option2['sfsi_plus_youtube_follow'] 		=	(isset($option2['sfsi_plus_youtube_follow']))
+														? sanitize_text_field($option2['sfsi_plus_youtube_follow'])
+														: '';
+	$option2['sfsi_plus_ytube_user'] 			=	(isset($option2['sfsi_plus_ytube_user']))
+														? sanitize_text_field($option2['sfsi_plus_ytube_user'])
+														: '';
+	
+	$option2['sfsi_plus_pinterest_page'] 		=	(isset($option2['sfsi_plus_pinterest_page']))
+														? sanitize_text_field($option2['sfsi_plus_pinterest_page'])
+														: '';
+	$option2['sfsi_plus_pinterest_pageUrl']		=	(isset($option2['sfsi_plus_pinterest_pageUrl']))
+														? esc_url($option2['sfsi_plus_pinterest_pageUrl'])
+														: '';
+	$option2['sfsi_plus_pinterest_pingBlog'] 	=	(isset($option2['sfsi_plus_pinterest_pingBlog']))
+														? sanitize_text_field($option2['sfsi_plus_pinterest_pingBlog'])
+														: '';
+	
+	$option2['sfsi_plus_instagram_pageUrl']		=	(isset($option2['sfsi_plus_instagram_pageUrl']))
+														? esc_url($option2['sfsi_plus_instagram_pageUrl'])
+														: '';
+	
+	$option2['sfsi_plus_linkedin_page'] 		=	(isset($option2['sfsi_plus_linkedin_page']))
+														? sanitize_text_field($option2['sfsi_plus_linkedin_page'])
+														: '';
+	$option2['sfsi_plus_linkedin_pageURL'] 		=	(isset($option2['sfsi_plus_linkedin_pageURL']))
+														? esc_url($option2['sfsi_plus_linkedin_pageURL'])
+														: '';
+	$option2['sfsi_plus_linkedin_follow'] 		= 	(isset($option2['sfsi_plus_linkedin_follow']))
+														? sanitize_text_field($option2['sfsi_plus_linkedin_follow'])
+														: '';
+	$option2['sfsi_plus_linkedin_followCompany']=	(isset($option2['sfsi_plus_linkedin_followCompany']))
+														? intval($option2['sfsi_plus_linkedin_followCompany'])
+														: '';
+	$option2['sfsi_plus_linkedin_SharePage'] 	= 	(isset($option2['sfsi_plus_linkedin_SharePage']))
+														? sanitize_text_field($option2['sfsi_plus_linkedin_SharePage'])
+														: '';
+	$option2['sfsi_plus_linkedin_recommendBusines']		= 	(isset($option2['sfsi_plus_linkedin_recommendBusines']))
+																? sanitize_text_field($option2['sfsi_plus_linkedin_recommendBusines'])
+																: '';
+	$option2['sfsi_plus_linkedin_recommendCompany'] 	= 	(isset($option2['sfsi_plus_linkedin_recommendCompany']))
+																? sanitize_text_field($option2['sfsi_plus_linkedin_recommendCompany'])
+																: '';
+	$option2['sfsi_plus_linkedin_recommendProductId'] 	= 	(isset($option2['sfsi_plus_linkedin_recommendProductId']))
+																? intval($option2['sfsi_plus_linkedin_recommendProductId'])
+																: '';
+	
+	$option2['sfsi_plus_houzz_pageUrl'] 		= 	(isset($option2['sfsi_plus_houzz_pageUrl']))
+														? esc_url($option2['sfsi_plus_houzz_pageUrl'])
+														: '';
+	$option4['sfsi_plus_youtubeusernameorid'] 	= 	(isset($option4['sfsi_plus_youtubeusernameorid'])) 
+														? sanitize_text_field($option4['sfsi_plus_youtubeusernameorid'])
+														: '';
+	$option4['sfsi_plus_ytube_chnlid'] 			= 	(isset($option4['sfsi_plus_ytube_chnlid']))
+														? strip_tags(trim($option4['sfsi_plus_ytube_chnlid']))
+														: '';
+		
 ?>
 <!-- Section 2 "What do you want the icons to do?" main div Start -->
 <div class="tab2">
@@ -31,8 +151,8 @@
     
     <!-- EMAIL ICON -->
     <?php
-		$feedId = get_option('sfsi_plus_feed_id',false);
-		$connectToFeed = "http://www.specificfeeds.com/?".base64_encode("userprofile=wordpress&feed_id=".$feedId);
+		$feedId 		= sanitize_text_field(get_option('sfsi_plus_feed_id',false));
+		$connectToFeed 	= "http://www.specificfeeds.com/?".base64_encode("userprofile=wordpress&feed_id=".$feedId);
 	?>
     <div class="row sfsiplus_email_section">
         <h2 class="sfsicls_email">
@@ -456,13 +576,14 @@
     <div class="plus_custom-links sfsiplus_custom_section">
 	<?php 
 	  	$costom_links=  unserialize($option2['sfsi_plus_CustomIcon_links']);
-	  	$count=1;
-		for($i=$first_key;$i<=$endkey;$i++) : ?> 
-        <?php if(!empty( $icons[$i])) : ?>
-           <div class="row  sfsiICON_<?php echo $i; ?> cm_lnk">
+	  	$count = 1;
+		for($i = $first_key; $i <= $endkey; $i++) :
+		if(!empty( $icons[$i])) :
+			?>
+           	<div class="row  sfsiICON_<?php echo $i; ?> cm_lnk">
                	<h2 class="custom">
                		<span class="customstep2-img">
-                    	<img src="<?php echo (!empty($icons[$i])) ?  $icons[$i] : SFSI_PLUS_PLUGURL.'images/custom.png';?>" id="CImg_<?php echo $new_element; ?>" style="border-radius:48%"  />
+                    	<img src="<?php echo (!empty($icons[$i])) ?  esc_url($icons[$i]) : SFSI_PLUS_PLUGURL.'images/custom.png';?>" id="CImg_<?php echo $new_element; ?>" style="border-radius:48%"  />
                     </span>
                     <span class="sfsiCtxt">
                			<?php  _e( 'Custom', SFSI_PLUS_DOMAIN ); ?>
@@ -477,11 +598,14 @@
                    		<label>
                    			<?php  _e( 'Link:', SFSI_PLUS_DOMAIN ); ?>
                    		</label>
-                        <input name="sfsi_plus_CustomIcon_links[]" type="text" value="<?php echo (isset($costom_links[$i]) && $costom_links[$i]!='') ?  $costom_links[$i] : '' ;?>" placeholder="http://" class="add" file-id="<?php echo $i; ?>" />
+                        <input name="sfsi_plus_CustomIcon_links[]" type="text" value="<?php echo (isset($costom_links[$i]) && $costom_links[$i]!='') ?  esc_url($costom_links[$i]) : '' ;?>" placeholder="http://" class="add" file-id="<?php echo $i; ?>" />
                     </p>
         		</div>
-           </div>
-	 	<?php $count++; endif; endfor; ?>
+           	</div>
+	 		<?php
+			$count++;
+		endif; endfor;
+	?>
     </div> 
     <!-- END Custom icon section here -->
     <!-- SAVE BUTTON SECTION   --> 

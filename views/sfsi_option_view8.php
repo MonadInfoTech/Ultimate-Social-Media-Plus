@@ -25,6 +25,74 @@
 	{
 		$option8['sfsi_plus_rectpinit'] = 'no';
 	}
+	
+	/**
+	 * Sanitize, escape and validate values
+	 */
+	$option8['sfsi_plus_show_via_widget'] 			= 	(isset($option8['sfsi_plus_show_via_widget']))
+															? sanitize_text_field($option8['sfsi_plus_show_via_widget'])
+															: '';
+	$option8['sfsi_plus_float_on_page'] 			= 	(isset($option8['sfsi_plus_float_on_page']))
+															? sanitize_text_field($option8['sfsi_plus_float_on_page'])
+															: '';
+	$option8['sfsi_plus_float_page_position'] 		= 	(isset($option8['sfsi_plus_float_page_position']))
+															? sanitize_text_field($option8['sfsi_plus_float_page_position'])
+															: '';
+	$option8['sfsi_plus_icons_floatMargin_top'] 	= 	(isset($option8['sfsi_plus_icons_floatMargin_top']))
+															? intval($option8['sfsi_plus_icons_floatMargin_top'])
+															: '';
+	$option8['sfsi_plus_icons_floatMargin_bottom'] 	= 	(isset($option8['sfsi_plus_icons_floatMargin_bottom']))
+															? intval($option8['sfsi_plus_icons_floatMargin_bottom'])
+															: '';
+	$option8['sfsi_plus_icons_floatMargin_left'] 	= 	(isset($option8['sfsi_plus_icons_floatMargin_left']))
+															? intval($option8['sfsi_plus_icons_floatMargin_left'])
+															: '';
+	$option8['sfsi_plus_icons_floatMargin_right'] 	= 	(isset($option8['sfsi_plus_icons_floatMargin_right']))
+															? intval($option8['sfsi_plus_icons_floatMargin_right'])
+															: '';														
+	$option8['sfsi_plus_place_item_manually'] 		= 	(isset($option8['sfsi_plus_place_item_manually']))
+															? sanitize_text_field($option8['sfsi_plus_place_item_manually'])
+															: '';
+	$option8['sfsi_plus_display_button_type'] 		= 	(isset($option8['sfsi_plus_display_button_type']))
+															? sanitize_text_field($option8['sfsi_plus_display_button_type'])
+															: '';
+	$option8['sfsi_plus_post_icons_size'] 			= 	(isset($option8['sfsi_plus_post_icons_size']))
+															? intval($option8['sfsi_plus_post_icons_size'])
+															: '';
+	$option8['sfsi_plus_post_icons_spacing'] 		= 	(isset($option8['sfsi_plus_post_icons_spacing']))
+															? intval($option8['sfsi_plus_post_icons_spacing'])
+															: '';
+															
+	$option8['sfsi_plus_show_item_onposts'] 		= 	(isset($option8['sfsi_plus_show_item_onposts']))
+															? sanitize_text_field($option8['sfsi_plus_show_item_onposts'])
+															: '';
+	$option8['sfsi_plus_icons_alignment'] 			= 	(isset($option8['sfsi_plus_icons_alignment']))
+															? sanitize_text_field($option8['sfsi_plus_icons_alignment'])
+															: '';
+	$option8['sfsi_plus_textBefor_icons'] 			= 	(isset($option8['sfsi_plus_textBefor_icons']))
+															? sanitize_text_field($option8['sfsi_plus_textBefor_icons'])
+															: '';
+	$option8['sfsi_plus_icons_DisplayCounts']		= 	(isset($option8['sfsi_plus_icons_DisplayCounts']))
+															? sanitize_text_field($option8['sfsi_plus_icons_DisplayCounts'])
+															: '';
+	$option8['sfsi_plus_rectsub'] 					= 	(isset($option8['sfsi_plus_rectsub']))
+															? sanitize_text_field($option8['sfsi_plus_rectsub'])
+															: '';
+	$option8['sfsi_plus_rectfb'] 					= 	(isset($option8['sfsi_plus_rectfb']))
+															? sanitize_text_field($option8['sfsi_plus_rectfb'])
+															: '';
+	$option8['sfsi_plus_rectgp'] 					= 	(isset($option8['sfsi_plus_rectgp']))
+															? sanitize_text_field($option8['sfsi_plus_rectgp'])
+															: '';
+	$option8['sfsi_plus_rectshr'] 					= 	(isset($option8['sfsi_plus_rectshr']))
+															? sanitize_text_field($option8['sfsi_plus_rectshr'])
+															: '';
+	$option8['sfsi_plus_recttwtr'] 					= 	(isset($option8['sfsi_plus_recttwtr']))
+															? sanitize_text_field($option8['sfsi_plus_recttwtr'])
+															: '';
+	$option8['sfsi_plus_rectpinit'] 				= 	(isset($option8['sfsi_plus_rectpinit']))
+															? sanitize_text_field($option8['sfsi_plus_rectpinit'])
+															: '';
 ?>
 <div class="tab8">
 	<ul class="sfsiplus_icn_listing8">

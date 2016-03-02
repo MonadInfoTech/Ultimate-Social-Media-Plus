@@ -5,24 +5,95 @@
 	$option5 =  unserialize(get_option('sfsi_plus_section5_options',false));
 	$custom_icons_order = unserialize($option5['sfsi_plus_CustomIcons_order']);
 	$icons_order = array(
-					$option5['sfsi_plus_rssIcon_order']=>'rss',
-					$option5['sfsi_plus_emailIcon_order']=>'email',
-					$option5['sfsi_plus_facebookIcon_order']=>'facebook',
-					$option5['sfsi_plus_googleIcon_order']=>'google',
-					$option5['sfsi_plus_twitterIcon_order']=>'twitter',
-					$option5['sfsi_plus_shareIcon_order']=>'share',
-					$option5['sfsi_plus_youtubeIcon_order']=>'youtube',
-					$option5['sfsi_plus_pinterestIcon_order']=>'pinterest',
-					$option5['sfsi_plus_linkedinIcon_order']=>'linkedin',
-					$option5['sfsi_plus_instagramIcon_order']=>'instagram',
-					(isset($option5['sfsi_plus_houzzIcon_order']))
-					? $option5['sfsi_plus_houzzIcon_order']
-					: 11 => 'houzz'
-				);
+			$option5['sfsi_plus_rssIcon_order']			=>'rss',
+			$option5['sfsi_plus_emailIcon_order']		=>'email',
+			$option5['sfsi_plus_facebookIcon_order']	=>'facebook',
+			$option5['sfsi_plus_googleIcon_order']		=>'google',
+			$option5['sfsi_plus_twitterIcon_order']		=>'twitter',
+			$option5['sfsi_plus_shareIcon_order']		=>'share',
+			$option5['sfsi_plus_youtubeIcon_order']		=>'youtube',
+			$option5['sfsi_plus_pinterestIcon_order']	=>'pinterest',
+			$option5['sfsi_plus_linkedinIcon_order']	=>'linkedin',
+			$option5['sfsi_plus_instagramIcon_order']	=>'instagram',
+			(isset($option5['sfsi_plus_houzzIcon_order']))
+			? $option5['sfsi_plus_houzzIcon_order']
+			: 11 => 'houzz'
+	);
+	
+	/*
+	 * Sanitize, escape and validate values
+	 */
+	$option5['sfsi_plus_icons_size'] 			= 	(isset($option5['sfsi_plus_icons_size']))
+														? intval($option5['sfsi_plus_icons_size'])
+														: '';
+	$option5['sfsi_plus_icons_spacing'] 		= 	(isset($option5['sfsi_plus_icons_spacing']))
+														? intval($option5['sfsi_plus_icons_spacing'])
+														: '';
+	$option5['sfsi_plus_icons_Alignment'] 		= 	(isset($option5['sfsi_plus_icons_Alignment']))
+														? sanitize_text_field($option5['sfsi_plus_icons_Alignment'])
+														: '';
+	$option5['sfsi_plus_icons_perRow'] 			= 	(isset($option5['sfsi_plus_icons_perRow']))
+														? intval($option5['sfsi_plus_icons_perRow'])
+														: '';
+	$option5['sfsi_plus_follow_icons_language'] = 	(isset($option5['sfsi_plus_follow_icons_language']))
+														? sanitize_text_field($option5['sfsi_plus_follow_icons_language'])
+														: '';
+	$option5['sfsi_plus_facebook_icons_language']= 	(isset($option5['sfsi_plus_facebook_icons_language']))
+														? sanitize_text_field($option5['sfsi_plus_facebook_icons_language'])
+														: '';
+	$option5['sfsi_plus_twitter_icons_language']= 	(isset($option5['sfsi_plus_twitter_icons_language']))
+														? sanitize_text_field($option5['sfsi_plus_twitter_icons_language'])
+														: '';
+	$option5['sfsi_plus_google_icons_language'] = 	(isset($option5['sfsi_plus_google_icons_language']))
+														? sanitize_text_field($option5['sfsi_plus_google_icons_language'])
+														: '';
+	$option5['sfsi_plus_icons_ClickPageOpen']	= 	(isset($option5['sfsi_plus_icons_ClickPageOpen']))
+														? sanitize_text_field($option5['sfsi_plus_icons_ClickPageOpen'])
+														: '';
+	$option5['sfsi_plus_disable_floaticons'] 	= 	(isset($option5['sfsi_plus_disable_floaticons']))
+														? sanitize_text_field($option5['sfsi_plus_disable_floaticons'])
+														: '';
+	$option5['sfsi_plus_icons_stick'] 			= 	(isset($option5['sfsi_plus_icons_stick']))
+														? sanitize_text_field($option5['sfsi_plus_icons_stick'])
+														: '';
+														
+	$option5['sfsi_plus_rss_MouseOverText'] 	= 	(isset($option5['sfsi_plus_rss_MouseOverText']))
+														? sanitize_text_field($option5['sfsi_plus_rss_MouseOverText'])
+														: '';
+	$option5['sfsi_plus_email_MouseOverText'] 	= 	(isset($option5['sfsi_plus_email_MouseOverText']))
+														? sanitize_text_field($option5['sfsi_plus_email_MouseOverText'])
+														: '';
+	$option5['sfsi_plus_twitter_MouseOverText'] = 	(isset($option5['sfsi_plus_twitter_MouseOverText']))
+														? sanitize_text_field($option5['sfsi_plus_twitter_MouseOverText'])
+														: '';
+	$option5['sfsi_plus_facebook_MouseOverText']= 	(isset($option5['sfsi_plus_facebook_MouseOverText']))
+														? sanitize_text_field($option5['sfsi_plus_facebook_MouseOverText'])
+														: '';
+	$option5['sfsi_plus_google_MouseOverText'] 	= 	(isset($option5['sfsi_plus_google_MouseOverText']))
+														? sanitize_text_field($option5['sfsi_plus_google_MouseOverText'])
+														: '';
+	$option5['sfsi_plus_linkedIn_MouseOverText']= 	(isset($option5['sfsi_plus_linkedIn_MouseOverText']))
+														? sanitize_text_field($option5['sfsi_plus_linkedIn_MouseOverText'])
+														: '';
+	$option5['sfsi_plus_pinterest_MouseOverText']= 	(isset($option5['sfsi_plus_pinterest_MouseOverText']))
+														? sanitize_text_field($option5['sfsi_plus_pinterest_MouseOverText'])
+														: '';
+	$option5['sfsi_plus_youtube_MouseOverText'] = 	(isset($option5['sfsi_plus_youtube_MouseOverText']))
+														? sanitize_text_field($option5['sfsi_plus_youtube_MouseOverText'])
+														: '';
+	$option5['sfsi_plus_share_MouseOverText'] 	= 	(isset($option5['sfsi_plus_share_MouseOverText']))
+														? sanitize_text_field($option5['sfsi_plus_share_MouseOverText'])
+														: '';
+	$option5['sfsi_plus_instagram_MouseOverText']= 	(isset($option5['sfsi_plus_instagram_MouseOverText']))
+														? sanitize_text_field($option5['sfsi_plus_instagram_MouseOverText'])
+														: '';
+	$option5['sfsi_plus_houzz_MouseOverText']	= 	(isset($option5['sfsi_plus_houzz_MouseOverText']))
+														? sanitize_text_field($option5['sfsi_plus_houzz_MouseOverText'])
+														: '';
+
 				
 	$visit_iconsUrl = SFSI_PLUS_PLUGURL."images/visit_icons/";
-  
-	if(is_array($custom_icons_order) ) 
+  	if(is_array($custom_icons_order) ) 
 	{
 		foreach($custom_icons_order as $data)
 		{
@@ -707,13 +778,7 @@
         <p>
             <?php  _e( 'If you decided to show your icons via a widget, you can add the effect that when the user scrolls down, the icons will stick at the  top of the screen so that they are still displayed even if the user scrolled all the way down. Do you want to do that?', SFSI_PLUS_DOMAIN ); ?>
         </p>
-	<!--<div class="space">
-	<p class="list">Make icons float?</p>	
-	<ul class="enough_waffling"><li><input name="sfsi_plus_icons_float" <?php //echo ($option5['sfsi_plus_icons_float']=='yes') ?  'checked="true"' : '' ;?>  type="radio" value="yes" class="styled"  /><label>Yes</label></li><li><input name="sfsi_plus_icons_float" <?php //echo ($option5['sfsi_plus_icons_float']=='no') ?  'checked="true"' : '' ;?>  type="radio" value="no" class="styled" /><label>No</label></li></ul>
-      </div>
-      <div class="clear float_options" <?php //if($option5['sfsi_plus_icons_stick']=='yes' || $option5['sfsi_plus_icons_float']=='no') :?> style="display:none" <?php //endif;?>><div class="float">Where shall they float?</div><select name="sfsi_plus_icons_floatPosition" id="sfsi_plus_icons_floatPosition" class="styled"><option value="top-left" <?php //echo ($option5['sfsi_plus_icons_floatPosition']=='top-left') ?  'selected="selected"' : '' ;?> >Top - Left</option><option value="top-right" <?php //echo ($option5['sfsi_plus_icons_floatPosition']=='top-right') ?  'selected="selected"' : '' ;?> >Top - Right</option><option value="center-left" <?php //echo ($option5['sfsi_plus_icons_floatPosition']=='center-left') ?  'selected="selected"' : '' ;?> >Center - Left</option><option value="center-right" <?php //echo ($option5['sfsi_plus_icons_floatPosition']=='center-right') ?  'selected="selected"' : '' ;?> >Center - Right</option><option value="bottom-left" <?php //echo ($option5['sfsi_plus_icons_floatPosition']=='bottom-left') ?  'selected="selected"' : '' ;?> >Bottom - Left</option><option value="bottom-right" <?php //echo ($option5['sfsi_plus_icons_floatPosition']=='bottom-right') ?  'selected="selected"' : '' ;?> >Bottom - Right</option></select></div></div>-->
-  
-    	<div class="space">
+		<div class="space">
         	<!--<p class="list">Make icons stick?</p>-->	
             <ul class="enough_waffling">
             	<li>
@@ -860,13 +925,6 @@
                 </div>
 			</div>
         
-        <!--<div class="clear">
-            <div class="mouseover_field sfsiplus_share_section">
-                <label>Share:</label>
-                <input name="sfsi_plus_share_MouseOverText" value="<?php //echo ($option5['sfsi_plus_share_MouseOverText']!='') ?  $option5['sfsi_plus_share_MouseOverText'] : '' ;?>" type="text" />
-            </div>
-        </div>-->
-         	
         	<div class="clear"> </div>
         	<div class="plus_custom_m">
 				<?php 
@@ -880,10 +938,10 @@
                             <?php  _e( 'Custom', SFSI_PLUS_DOMAIN ); ?>
                             <?php echo $count; ?>:
                         </label>
-                        <input name="sfsi_plus_custom_MouseOverTexts[]" value="<?php echo (isset($sfsiMouseOverTexts[$i]) && $sfsiMouseOverTexts[$i]!='') ?  $sfsiMouseOverTexts[$i] : '' ;?>" type="text" file-id="<?php echo $i; ?>" />
+                        <input name="sfsi_plus_custom_MouseOverTexts[]" value="<?php echo (isset($sfsiMouseOverTexts[$i]) && $sfsiMouseOverTexts[$i]!='') ?  sanitize_text_field($sfsiMouseOverTexts[$i]) : '' ;?>" type="text" file-id="<?php echo $i; ?>" />
                     </div>
                 	<?php if($count%2==0): ?>
-                		<div class="clear"> </div>  
+                		<div class="clear"></div>  
 					<?php endif; ?>
             		<?php $count++; 
 				endif; endfor; ?>

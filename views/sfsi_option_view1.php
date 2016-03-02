@@ -1,7 +1,45 @@
 <?php
-     /* unserialize all saved option for first options */
-    $option1=  unserialize(get_option('sfsi_plus_section1_options',false));
+	/* unserialize all saved option for first options */
+	$option1=  unserialize(get_option('sfsi_plus_section1_options',false));
+	
+	/**
+	 * Sanitize, escape and validate values
+	 */
+	$option1['sfsi_plus_rss_display'] 		=	(isset($option1['sfsi_plus_rss_display']))
+													? sanitize_text_field($option1['sfsi_plus_rss_display'])
+													: '';
+	$option1['sfsi_plus_email_display']		=	(isset($option1['sfsi_plus_email_display']))
+													? sanitize_text_field($option1['sfsi_plus_email_display'])
+													: '';
+	$option1['sfsi_plus_facebook_display'] 	=	(isset($option1['sfsi_plus_facebook_display']))
+													? sanitize_text_field($option1['sfsi_plus_facebook_display'])
+													: '';
+	$option1['sfsi_plus_twitter_display'] 	=	(isset($option1['sfsi_plus_twitter_display']))
+													? sanitize_text_field($option1['sfsi_plus_twitter_display'])
+													: '';
+	$option1['sfsi_plus_google_display'] 	=	(isset($option1['sfsi_plus_google_display']))
+													? sanitize_text_field($option1['sfsi_plus_google_display'])
+													: '';
+	$option1['sfsi_plus_share_display'] 	=	(isset($option1['sfsi_plus_share_display']))
+													? sanitize_text_field($option1['sfsi_plus_share_display'])
+													: '';
+	$option1['sfsi_plus_youtube_display'] 	=	(isset($option1['sfsi_plus_youtube_display']))
+													? sanitize_text_field($option1['sfsi_plus_youtube_display'])
+													: '';
+	$option1['sfsi_plus_pinterest_display'] =	(isset($option1['sfsi_plus_pinterest_display']))
+													? sanitize_text_field($option1['sfsi_plus_pinterest_display'])
+													: '';
+	$option1['sfsi_plus_linkedin_display'] 	=	(isset($option1['sfsi_plus_linkedin_display']))
+													? sanitize_text_field($option1['sfsi_plus_linkedin_display'])
+													: '';
+	$option1['sfsi_plus_instagram_display'] =	(isset($option1['sfsi_plus_instagram_display']))
+													? sanitize_text_field($option1['sfsi_plus_instagram_display'])
+													: '';
+	$option1['sfsi_plus_houzz_display'] 	=	(isset($option1['sfsi_plus_houzz_display']))
+													? sanitize_text_field($option1['sfsi_plus_houzz_display'])
+													: '';
 ?>
+
 <!-- Section 1 "Which icons do you want to show on your site? " main div Start -->
 <div class="tab1" >
 	<p class="top_txt">
@@ -272,28 +310,28 @@
 			}     
        	?>
        	<!-- Display all custom icons  -->
-       	<?php $count=1; for($i=$first_key;$i<=$endkey;$i++) : ?> 
+       	<?php $count=1; for($i=$first_key; $i<=$endkey; $i++) : ?> 
        	<?php if(!empty( $icons[$i])) : ?>
-       	<li id="plus_c<?php echo $i; ?>" class="plus_custom">
-			<div class="radio_section tb_4_ck">
-                <input name="plussfsiICON_<?php echo $i; ?>"  checked="true" type="checkbox" value="yes" class="styled" element-type="sfsiplus-cusotm-icon"  />
-            </div>
-            <span class="plus_custom-img">
-              <img class="plus_sfcm" src="<?php echo (!empty($icons[$i]))? $icons[$i] : SFSI_PLUS_PLUGURL.'images/custom.png';?>" id="plus_CImg_<?php echo $i;?>"/>
-            </span> 
-            <span class="custom sfsiplus_custom-txt">
-            	<?php  _e( 'Custom', SFSI_PLUS_DOMAIN); ?>  
-				<?php echo $count;?> 
-            </span> 
-            <div class="sfsiplus_right_info">
-                <p>
-                	<?php
-						_e('<span>It depends:</span> Upload a custom icon if you have other accounts/websites you want to link to.', SFSI_PLUS_DOMAIN);
-					?>
-               </p>
-            </div>
-        </li>
-        <?php $count++; endif;    endfor; ?>
+            <li id="plus_c<?php echo $i; ?>" class="plus_custom">
+                <div class="radio_section tb_4_ck">
+					<input name="plussfsiICON_<?php echo $i; ?>"  checked="true" type="checkbox" value="yes" class="styled" element-type="sfsiplus-cusotm-icon"  />
+                </div>
+                <span class="plus_custom-img">
+					<img class="plus_sfcm" src="<?php echo (!empty($icons[$i]))? esc_url($icons[$i]) : SFSI_PLUS_PLUGURL.'images/custom.png';?>" id="plus_CImg_<?php echo $i;?>"/>
+                </span> 
+                <span class="custom sfsiplus_custom-txt">
+                    <?php  _e( 'Custom', SFSI_PLUS_DOMAIN); ?>  
+                    <?php echo $count;?> 
+                </span> 
+                <div class="sfsiplus_right_info">
+                    <p>
+					<?php
+                        _e('<span>It depends:</span> Upload a custom icon if you have other accounts/websites you want to link to.', SFSI_PLUS_DOMAIN);
+                    ?>
+                   </p>
+                </div>
+            </li>
+        <?php $count++; endif; endfor; ?>
         
         <!-- Create a custom icon if total uploaded icons are less than 5 -->
         <?php if($count <=5) : ?>

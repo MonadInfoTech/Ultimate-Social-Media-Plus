@@ -6,7 +6,7 @@ Description: The best social media plugin on the market. And 100% FREE. Allows y
 Author: UltimatelySocial
 Text Domain: ultimate-social-media-plus
 Author URI: http://ultimatelysocial.com
-Version: 2.3.2
+Version: 2.3.3
 License: GPLv2
 */
 
@@ -36,7 +36,7 @@ register_deactivation_hook(__FILE__, 'sfsi_plus_deactivate_plugin');
 register_uninstall_hook(__FILE__, 'sfsi_plus_Unistall_plugin');
 
 /*Plugin version setup*/
-if(!get_option('sfsi_plus_pluginVersion') || get_option('sfsi_plus_pluginVersion') < 2.32)
+if(!get_option('sfsi_plus_pluginVersion') || get_option('sfsi_plus_pluginVersion') < 2.33)
 {
 	add_action("init", "sfsi_plus_update_plugin");
 }
@@ -111,7 +111,7 @@ function ultimateplusfbmetatags()
 	$metarequest = get_option("adding_plustags");
 	$post_id = get_the_ID();
 	
-	$feed_id = get_option('sfsi_plus_feed_id');
+	$feed_id = sanitize_text_field(get_option('sfsi_plus_feed_id'));
 	$verification_code = get_option('sfsi_plus_verificatiom_code');
 	if(!empty($feed_id) && !empty($verification_code) && $verification_code != "no" )
 	{
@@ -201,8 +201,8 @@ function ultimateplusfbmetatags()
 //Get verification code
 if(is_admin())
 {	
-	$code = get_option('sfsi_plus_verificatiom_code');
-	$feed_id = get_option('sfsi_plus_feed_id');
+	$code 		= sanitize_text_field(get_option('sfsi_plus_verificatiom_code'));
+	$feed_id 	= sanitize_text_field(get_option('sfsi_plus_feed_id'));
 	if(empty($code) && !empty($feed_id))
 	{
 		add_action("init", "sfsi_plus_getverification_code");
@@ -210,7 +210,7 @@ if(is_admin())
 }
 function sfsi_plus_getverification_code()
 {
-	$feed_id = get_option('sfsi_plus_feed_id');
+	$feed_id = sanitize_text_field(get_option('sfsi_plus_feed_id'));
 	$curl = curl_init();  
     curl_setopt_array($curl, array(
         CURLOPT_RETURNTRANSFER => 1,

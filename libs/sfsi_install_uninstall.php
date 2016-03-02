@@ -1,18 +1,18 @@
 <?php
 function sfsi_plus_update_plugin()
 {
-	if($feed_id = get_option('sfsi_plus_feed_id'))
+	if($feed_id = sanitize_text_field(get_option('sfsi_plus_feed_id')))
 	{
 		if(is_numeric($feed_id))
 		{
 			$sfsiId = SFSI_PLUS_updateFeedUrl();
-			update_option('sfsi_plus_feed_id', $sfsiId->feed_id);
-			update_option('sfsi_plus_redirect_url', $sfsiId->redirect_url);
+			update_option('sfsi_plus_feed_id'		, sanitize_text_field($sfsiId->feed_id));
+			update_option('sfsi_plus_redirect_url'	, sanitize_text_field($sfsiId->redirect_url));
 		}
 	}
 	
 	//Install version
-	update_option("sfsi_plus_pluginVersion", "2.32");
+	update_option("sfsi_plus_pluginVersion", "2.33");
 	
 	/*show notification*/
 	if(!get_option('sfsi_plus_show_notification'))
@@ -122,8 +122,8 @@ function sfsi_plus_activate_plugin()
     
 	if(get_option('sfsi_plus_feed_id') && get_option('sfsi_plus_redirect_url'))
 	{
-		$sffeeds["feed_id"] = get_option('sfsi_plus_feed_id');
-		$sffeeds["redirect_url"] = get_option('sfsi_plus_redirect_url');
+		$sffeeds["feed_id"] 		= sanitize_text_field(get_option('sfsi_plus_feed_id'));
+		$sffeeds["redirect_url"] 	= sanitize_text_field(get_option('sfsi_plus_redirect_url'));
 		$sffeeds = (object)$sffeeds;
 	}
     else
@@ -348,8 +348,8 @@ function sfsi_plus_activate_plugin()
 	add_option('sfsi_plus_section8_options',  serialize($options8));		
 	
 	/*Some additional option added*/	
-	update_option('sfsi_plus_feed_id',$sffeeds->feed_id);
-	update_option('sfsi_plus_redirect_url',$sffeeds->redirect_url);
+	update_option('sfsi_plus_feed_id'		, sanitize_text_field($sffeeds->feed_id));
+	update_option('sfsi_plus_redirect_url'	, sanitize_text_field($sffeeds->redirect_url));
 	
 	add_option('sfsi_plus_installDate',date('Y-m-d h:i:s'));
 	add_option('sfsi_plus_RatingDiv','no');
@@ -370,7 +370,7 @@ function sfsi_plus_activate_plugin()
 function sfsi_plus_deactivate_plugin()
 {
      global $wpdb;
-     sfsi_plus_updateFeedPing('Y',get_option('sfsi_plus_feed_id'));
+     sfsi_plus_updateFeedPing('Y',sanitize_text_field(get_option('sfsi_plus_feed_id')));
      
 } /* end function  */
 function sfsi_plus_updateFeedPing($status,$feed_id)
@@ -480,7 +480,7 @@ function SFSI_PLUS_updateFeedUrl()
         CURLOPT_USERAGENT => 'sf rss request',
         CURLOPT_POST => 1,
         CURLOPT_POSTFIELDS => array(
-			'feed_id' 	=> get_option('sfsi_plus_feed_id'),
+			'feed_id' 	=> sanitize_text_field(get_option('sfsi_plus_feed_id')),
             'web_url' 	=> get_bloginfo('url'),
             'feed_url' 	=> sfsi_plus_get_bloginfo('rss2_url'),
             'email'		=> ''
@@ -662,7 +662,7 @@ function sfsi_plus_pingVendor( $post_id )
 			$count++;	
 		}
 		$postto_array = array(
-			'feed_id'	=> get_option('sfsi_plus_feed_id'),
+			'feed_id'	=> sanitize_text_field(get_option('sfsi_plus_feed_id')),
 			'title'		=> $post_data['post_title'],
 			'description' => $post_data['post_content'],
 			'link'		=> $post_data['guid'],

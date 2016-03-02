@@ -3,11 +3,6 @@
 add_action('wp_ajax_plus_UploadSkins','sfsi_plus_UploadSkins');
 function sfsi_plus_UploadSkins()
 {
-	//require(ABSPATH.'/wp-load.php');
-	if ( defined('ABSPATH') )
-     	require_once(ABSPATH . 'wp-load.php');
-    else
-        require_once('../../../../../wp-load.php');
 	extract($_REQUEST);
 	$upload_dir = wp_upload_dir();
 	
@@ -85,11 +80,6 @@ function sfsi_plus_UploadSkins()
 add_action('wp_ajax_plus_DeleteSkin','sfsi_plus_DeleteSkin');
 function sfsi_plus_DeleteSkin()
 {
-	//require(ABSPATH.'/wp-load.php');
-	if ( defined('ABSPATH') )
-     	require_once(ABSPATH . 'wp-load.php');
-    else
-        require_once('../../../../../wp-load.php');
 	$upload_dir = wp_upload_dir();
 	
 	if($_REQUEST['action'] == 'plus_DeleteSkin' && isset($_REQUEST['iconname']) && !empty($_REQUEST['iconname']))
@@ -222,11 +212,6 @@ add_action('wp_ajax_plus_UploadIcons','sfsi_plus_UploadIcons');
 /* uplaod custom icon {change by monad}*/
 function sfsi_plus_UploadIcons()
 {
-	if ( defined('ABSPATH') )
-     	require_once(ABSPATH . 'wp-load.php');
-    else
-        require_once('../../../../../wp-load.php');
-	
 	extract($_POST);
 	
 	$upload_dir	= wp_upload_dir();

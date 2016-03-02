@@ -1,6 +1,31 @@
 <?php
   	/* unserialize all saved option for second section options */
     $option3=  unserialize(get_option('sfsi_plus_section3_options',false));
+	
+	/*
+	 * Sanitize, escape and validate values
+	 */
+	$option3['sfsi_plus_actvite_theme'] 		= 	(isset($option3['sfsi_plus_actvite_theme']))
+														? sanitize_text_field($option3['sfsi_plus_actvite_theme'])
+														: '';
+	$option3['sfsi_plus_mouseOver'] 			= 	(isset($option3['sfsi_plus_mouseOver']))
+														? sanitize_text_field($option3['sfsi_plus_mouseOver'])
+														: '';
+	$option3['sfsi_plus_mouseOver_effect'] 		= 	(isset($option3['sfsi_plus_mouseOver_effect']))
+														? sanitize_text_field($option3['sfsi_plus_mouseOver_effect'])
+														: '';
+	$option3['sfsi_plus_shuffle_icons'] 		= 	(isset($option3['sfsi_plus_shuffle_icons']))
+														? sanitize_text_field($option3['sfsi_plus_shuffle_icons'])
+														: '';
+	$option3['sfsi_plus_shuffle_Firstload'] 	= 	(isset($option3['sfsi_plus_shuffle_Firstload']))
+														? sanitize_text_field($option3['sfsi_plus_shuffle_Firstload'])
+														: '';
+	$option3['sfsi_plus_shuffle_interval'] 		= 	(isset($option3['sfsi_plus_shuffle_interval']))
+														? sanitize_text_field($option3['sfsi_plus_shuffle_interval'])
+														: '';
+	$option3['sfsi_plus_shuffle_intervalTime'] 	=	(isset($option3['sfsi_plus_shuffle_intervalTime']))
+														? intval($option3['sfsi_plus_shuffle_intervalTime'])
+														: '';
 ?>
 <!-- Section 3 "What design & animation do you want to give your icons?" main div Start -->
 <div class="tab3">
@@ -12,7 +37,6 @@
     	<ul class="tab_3_list">
         	<li>
             	<?php  _e( 'It comes across as <span>more professional/</span> gives your site<span> more “credit”</span>', SFSI_PLUS_DOMAIN ); ?>
-            	
             </li>
             <li>
             	<?php  _e( 'A smart automatic animation can <span>make your visitors aware of your icons</span> in an unintrusive manner', SFSI_PLUS_DOMAIN ); ?>

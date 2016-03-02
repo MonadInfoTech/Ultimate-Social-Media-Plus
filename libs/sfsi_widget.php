@@ -489,7 +489,7 @@ function sfsi_plus_prepairIcons($icon_name,$is_front=0, $onpost="no")
 			   	 }
 				 else
 				 {
-					$counts= $socialObj->SFSI_getFeedSubscriber(get_option('sfsi_plus_feed_id',false));           
+					$counts= $socialObj->SFSI_getFeedSubscriber(sanitize_text_field(get_option('sfsi_plus_feed_id',false)));           
 				 }  
 			   }
 			   

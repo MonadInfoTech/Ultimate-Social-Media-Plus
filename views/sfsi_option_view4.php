@@ -1,11 +1,130 @@
 <?php
   	/* unserialize all saved option for  section 4 options */
-    $option4=  unserialize(get_option('sfsi_plus_section4_options',false));
+	$option2 =  unserialize(get_option('sfsi_plus_section2_options',false));
+    $option4 =  unserialize(get_option('sfsi_plus_section4_options',false));
 	if(!isset($option4['sfsi_plus_facebook_mypageCounts']))
 	{
 		$option4['sfsi_plus_facebook_mypageCounts'] = '';
 	}
-    $option2 =  unserialize(get_option('sfsi_plus_section2_options',false));
+    
+	/*
+	 * Sanitize, escape and validate values
+	 */
+	$option4['sfsi_plus_display_counts'] 			= 	(isset($option4['sfsi_plus_display_counts']))
+															? sanitize_text_field($option4['sfsi_plus_display_counts'])
+															: '';
+	$option4['sfsi_plus_email_countsFrom'] 			= 	(isset($option4['sfsi_plus_email_countsFrom']))
+															? sanitize_text_field($option4['sfsi_plus_email_countsFrom'])
+															: '';
+	$option4['sfsi_plus_email_manualCounts'] 		= 	(isset($option4['sfsi_plus_email_manualCounts']))
+															? intval($option4['sfsi_plus_email_manualCounts'])
+															: '';
+	$option4['sfsi_plus_rss_countsDisplay'] 		= 	(isset($option4['sfsi_plus_rss_countsDisplay']))
+															? sanitize_text_field($option4['sfsi_plus_rss_countsDisplay'])
+															: '';
+	$option4['sfsi_plus_rss_manualCounts'] 			= 	(isset($option4['sfsi_plus_rss_manualCounts']))
+															? intval($option4['sfsi_plus_rss_manualCounts'])
+															: '';
+	$option4['sfsi_plus_email_countsDisplay'] 		= 	(isset($option4['sfsi_plus_email_countsDisplay']))
+															? sanitize_text_field($option4['sfsi_plus_email_countsDisplay'])
+															: '';
+	
+	$option4['sfsi_plus_facebook_countsDisplay']	= 	(isset($option4['sfsi_plus_facebook_countsDisplay']))
+															? sanitize_text_field($option4['sfsi_plus_facebook_countsDisplay'])
+															: '';
+	$option4['sfsi_plus_facebook_countsFrom'] 		= 	(isset($option4['sfsi_plus_facebook_countsFrom']))
+															? sanitize_text_field($option4['sfsi_plus_facebook_countsFrom'])
+															: '';
+	$option4['sfsi_plus_facebook_mypageCounts'] 	= 	(isset($option4['sfsi_plus_facebook_mypageCounts']))
+															? sfsi_plus_sanitize_field($option4['sfsi_plus_facebook_mypageCounts'])
+															: '';
+	$option4['sfsi_plus_facebook_manualCounts'] 	= 	(isset($option4['sfsi_plus_facebook_manualCounts']))
+															? intval($option4['sfsi_plus_facebook_manualCounts'])
+															: '';
+	
+	
+	$option4['sfsi_plus_twitter_countsDisplay'] 	= 	(isset($option4['sfsi_plus_twitter_countsDisplay']))
+															? sanitize_text_field($option4['sfsi_plus_twitter_countsDisplay'])
+															: '';
+	$option4['sfsi_plus_twitter_countsFrom'] 		= 	(isset($option4['sfsi_plus_twitter_countsFrom']))
+															? sanitize_text_field($option4['sfsi_plus_twitter_countsFrom'])
+															: '';
+	$option4['sfsi_plus_twitter_manualCounts'] 		= 	(isset($option4['sfsi_plus_twitter_manualCounts']))
+															? intval($option4['sfsi_plus_twitter_manualCounts'])
+															: '';
+	$option4['sfsiplus_tw_consumer_key'] 			= 	(isset($option4['sfsiplus_tw_consumer_key']))
+															? sfsi_plus_sanitize_field($option4['sfsiplus_tw_consumer_key'])
+															: '';
+	$option4['sfsiplus_tw_consumer_secret'] 		= 	(isset($option4['sfsiplus_tw_consumer_secret']))
+															? sfsi_plus_sanitize_field($option4['sfsiplus_tw_consumer_secret'])
+															: '';
+	$option4['sfsiplus_tw_oauth_access_token'] 		= 	(isset($option4['sfsiplus_tw_oauth_access_token']))
+															? sfsi_plus_sanitize_field($option4['sfsiplus_tw_oauth_access_token'])
+															: '';
+	$option4['sfsiplus_tw_oauth_access_token_secret']= 	(isset($option4['sfsiplus_tw_oauth_access_token_secret']))
+															? sfsi_plus_sanitize_field($option4['sfsiplus_tw_oauth_access_token_secret'])
+															: '';
+	
+	
+	$option4['sfsi_plus_google_countsFrom'] 		= 	(isset($option4['sfsi_plus_google_countsFrom']))
+															? sanitize_text_field($option4['sfsi_plus_google_countsFrom'])
+															: '';
+	$option4['sfsi_plus_google_manualCounts'] 		= 	(isset($option4['sfsi_plus_google_manualCounts']))
+															? intval($option4['sfsi_plus_google_manualCounts'])
+															: '';
+	$option4['sfsi_plus_google_api_key'] 			= 	(isset($option4['sfsi_plus_google_api_key']))
+															? sfsi_plus_sanitize_field($option4['sfsi_plus_google_api_key'])
+															: '';
+	$option4['sfsi_plus_google_countsDisplay'] 		= 	(isset($option4['sfsi_plus_google_countsDisplay']))
+															? sanitize_text_field($option4['sfsi_plus_google_countsDisplay'])
+															: '';
+	
+	$option4['sfsi_plus_youtube_countsDisplay'] 	= 	(isset($option4['sfsi_plus_youtube_countsDisplay']))
+															? sanitize_text_field($option4['sfsi_plus_youtube_countsDisplay'])
+															: '';
+	$option4['sfsi_plus_youtube_countsFrom'] 		= 	(isset($option4['sfsi_plus_youtube_countsFrom']))
+															? sanitize_text_field($option4['sfsi_plus_youtube_countsFrom'])
+															: '';
+	$option4['sfsi_plus_youtubeusernameorid'] 		= 	(isset($option4['sfsi_plus_youtubeusernameorid']))
+															? sanitize_text_field($option4['sfsi_plus_youtubeusernameorid'])
+															: '';
+	$option4['sfsi_plus_youtube_manualCounts'] 		= 	(isset($option4['sfsi_plus_youtube_manualCounts']))
+															? intval($option4['sfsi_plus_youtube_manualCounts'])
+															: '';
+	$option4['sfsi_plus_youtube_user'] 				= 	(isset($option4['sfsi_plus_youtube_user']))
+															? sfsi_plus_sanitize_field($option4['sfsi_plus_youtube_user'])
+															: '';
+	$option4['sfsi_plus_youtube_channelId'] 		= 	(isset($option4['sfsi_plus_youtube_channelId']))
+															? sfsi_plus_sanitize_field($option4['sfsi_plus_youtube_channelId'])
+															: '';
+	
+	
+	$option4['sfsi_plus_instagram_manualCounts'] 	= 	(isset($option4['sfsi_plus_instagram_manualCounts']))
+															? intval($option4['sfsi_plus_instagram_manualCounts'])
+															: '';
+	$option4['sfsi_plus_instagram_User'] 			= 	(isset($option4['sfsi_plus_instagram_User']))
+															? sfsi_plus_sanitize_field($option4['sfsi_plus_instagram_User'])
+															: '';
+	$option4['sfsi_plus_instagram_countsFrom'] 		= 	(isset($option4['sfsi_plus_instagram_countsFrom']))
+															? sanitize_text_field($option4['sfsi_plus_instagram_countsFrom'])
+															: '';
+	$option4['sfsi_plus_instagram_countsDisplay']	= 	(isset($option4['sfsi_plus_instagram_countsDisplay']))
+															? sanitize_text_field($option4['sfsi_plus_instagram_countsDisplay'])
+															: '';
+	
+	$option4['sfsi_plus_linkedIn_manualCounts'] 	= 	(isset($option4['sfsi_plus_linkedIn_manualCounts']))
+															? intval($option4['sfsi_plus_linkedIn_manualCounts'])
+															: '';
+	$option4['sfsi_plus_houzz_manualCounts'] 		= 	(isset($option4['sfsi_plus_houzz_manualCounts']))
+															? intval($option4['sfsi_plus_houzz_manualCounts'])
+															: ''; 													
+	$option4['sfsi_plus_pinterest_manualCounts'] 	= 	(isset($option4['sfsi_plus_pinterest_manualCounts']))
+															? intval($option4['sfsi_plus_pinterest_manualCounts'])
+															: '';
+	$option4['sfsi_plus_shares_manualCounts'] 		= 	(isset($option4['sfsi_plus_shares_manualCounts']))
+															? intval($option4['sfsi_plus_shares_manualCounts'])
+															: '';
+
     $counts = sfsi_plus_getCounts();
 	/* fetch counts for admin sections */
     
@@ -573,7 +692,7 @@
 						<label class="high_prb">
 							 <?php  _e( 'Enter the figure manually', SFSI_PLUS_DOMAIN ); ?>
 						</label>
-						<input name="sfsi_plus_shares_manualCounts" type="text" class="input" value="<?php echo ($option4['sfsi_plus_pinterest_manualCounts']!='') ?  $option4['sfsi_plus_pinterest_manualCounts'] : '' ;?>" style="<?php echo ($option4['sfsi_plus_shares_countsFrom']=='shares') ?  'display:none;' : '' ;?>" />
+						<input name="sfsi_plus_shares_manualCounts" type="text" class="input" value="<?php echo ($option4['sfsi_plus_shares_manualCounts']!='') ?  $option4['sfsi_plus_shares_manualCounts'] : '' ;?>" style="<?php echo ($option4['sfsi_plus_shares_countsFrom']=='shares') ?  'display:none;' : '' ;?>" />
 					</li>
 				</ul>
 			</div>    
