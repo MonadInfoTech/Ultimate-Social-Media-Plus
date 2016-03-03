@@ -105,6 +105,7 @@ function sfsi_plus_DeleteSkin()
 add_action('wp_ajax_plus_Iamdone','sfsi_plus_Iamdone');
 function sfsi_plus_Iamdone()
 {
+	 $return = '';
 	 if(get_option("plus_rss_skin"))
 	 {
 		$icon = get_option("plus_rss_skin");
