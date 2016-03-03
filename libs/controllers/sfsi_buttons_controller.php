@@ -4,7 +4,7 @@
 add_action('wp_ajax_plus_updateSrcn1','sfsi_plus_options_updater1');        
 function sfsi_plus_options_updater1()
 {
-  	if ( !wp_verify_nonce( $_POST['nonce'], "update_plus_step1")) {
+	if ( !wp_verify_nonce( $_POST['nonce'], "update_plus_step1")) {
       echo  json_encode(array("wrong_nonce")); exit;
    	}
     $option1=  unserialize(get_option('sfsi_plus_section1_options',false));
@@ -20,7 +20,7 @@ function sfsi_plus_options_updater1()
 	$sfsi_plus_houzz_display	= isset($_POST["sfsi_plus_houzz_display"]) ? $_POST["sfsi_plus_houzz_display"] : 'no';
     $sfsi_plus_linkedin_display = isset($_POST["sfsi_plus_linkedin_display"]) ? $_POST["sfsi_plus_linkedin_display"] : 'no';
     $sfsi_custom_icons          = isset($option1['sfsi_custom_files']) ? $option1['sfsi_custom_files'] : '';
-    $up_option1=array(
+	$up_option1=array(
         'sfsi_plus_rss_display'			=> sanitize_text_field($sfsi_plus_rss_display),
         'sfsi_plus_email_display'		=> sanitize_text_field($sfsi_plus_email_display),
         'sfsi_plus_facebook_display'	=> sanitize_text_field($sfsi_plus_facebook_display),
@@ -32,9 +32,11 @@ function sfsi_plus_options_updater1()
         'sfsi_plus_linkedin_display'	=> sanitize_text_field($sfsi_plus_linkedin_display),
         'sfsi_plus_instagram_display'	=> sanitize_text_field($sfsi_plus_instagram_display),
 		'sfsi_plus_houzz_display'		=> sanitize_text_field($sfsi_plus_houzz_display),
-        'sfsi_custom_files'				=> sanitize_text_field($sfsi_custom_icons)
+        'sfsi_custom_files'				=> $sfsi_custom_icons
     );
-    update_option('sfsi_plus_section1_options',  serialize($up_option1));
+	
+    $c = update_option('sfsi_plus_section1_options',  serialize($up_option1));
+	
     header('Content-Type: application/json');
     echo  json_encode(array("success")); exit;
 }
@@ -153,8 +155,8 @@ function sfsi_plus_options_updater2()
 		'sfsi_plus_youtube_page'			=> sanitize_text_field($sfsi_plus_youtube_page),
 		'sfsi_plus_youtube_follow'			=> sanitize_text_field($sfsi_plus_youtube_follow),
 		'sfsi_plus_ytube_user'				=> sanitize_text_field($sfsi_plus_ytube_user),
-		//'sfsi_plus_youtubeusernameorid'	=> $sfsi_plus_youtubeusernameorid,
-		//'sfsi_plus_ytube_chnlid'			=> $sfsi_plus_ytube_chnlid,
+		'sfsi_plus_youtubeusernameorid'		=> sanitize_text_field($sfsi_plus_youtubeusernameorid),
+		'sfsi_plus_ytube_chnlid'			=> sanitize_text_field($sfsi_plus_ytube_chnlid),
 		
 		/* pinterest options */
 		'sfsi_plus_pinterest_page'			=> sanitize_text_field($sfsi_plus_pinterest_page),
@@ -174,7 +176,7 @@ function sfsi_plus_options_updater2()
 		'sfsi_plus_linkedin_recommendBusines'=> sanitize_text_field($sfsi_plus_linkedin_recommendBusines),
 		'sfsi_plus_linkedin_recommendCompany'=> sanitize_text_field($sfsi_plus_linkedin_recommendCompany),
 		'sfsi_plus_linkedin_recommendProductId'=> intval($sfsi_plus_linkedin_recommendProductId),
-		'sfsi_plus_CustomIcon_links'		=>$sfsi_plus_CustomIcon_links
+		'sfsi_plus_CustomIcon_links'		=> $sfsi_plus_CustomIcon_links
     );
     update_option('sfsi_plus_section2_options',serialize($up_option2));
     $option4	= unserialize(get_option('sfsi_plus_section4_options',false));     
@@ -311,7 +313,7 @@ function sfsi_plus_options_updater4()
 	
     $sfsi_plus_facebookPage_url          = isset($_POST["sfsi_plus_facebookPage_url"]) ? trim($_POST["sfsi_plus_facebookPage_url"]) : ''; 
     
-   $up_option4 = array(
+	$up_option4 = array(
 	   'sfsi_plus_display_counts'			=> sanitize_text_field($sfsi_plus_display_counts),
 			
 	   'sfsi_plus_email_countsDisplay'		=> sanitize_text_field($sfsi_plus_email_countsDisplay),
@@ -512,43 +514,48 @@ function sfsi_plus_options_updater6()
 /* save settings for section 7 */ 
 add_action('wp_ajax_plus_updateSrcn7','sfsi_plus_options_updater7');        
 function sfsi_plus_options_updater7()
-{
+{	
 	if ( !wp_verify_nonce( $_POST['nonce'], "update_plus_step7")) {
       echo  json_encode(array("wrong_nonce")); exit;
    	}
-    $sfsi_plus_popup_text                    = isset($_POST["sfsi_plus_popup_text"]) ? $_POST["sfsi_plus_popup_text"] : ''; 
-    $sfsi_plus_popup_background_color        = isset($_POST["sfsi_plus_popup_background_color"]) ? $_POST["sfsi_plus_popup_background_color"] : '#fffff'; 
-    $sfsi_plus_popup_border_color            = isset($_POST["sfsi_plus_popup_border_color"]) ? $_POST["sfsi_plus_popup_border_color"] : 'center-right'; 
-    $sfsi_plus_popup_border_thickness        = isset($_POST["sfsi_plus_popup_border_thickness"]) ? $_POST["sfsi_plus_popup_border_thickness"] : ''; 
-    $sfsi_plus_popup_border_shadow           = isset($_POST["sfsi_plus_popup_border_shadow"]) ? $_POST["sfsi_plus_popup_border_shadow"] : 'no'; 
-    $sfsi_plus_popup_font                    = isset($_POST["sfsi_plus_popup_font"]) ? $_POST["sfsi_plus_popup_font"] : ''; 
-    $sfsi_plus_popup_fontSize                = isset($_POST["sfsi_plus_popup_fontSize"]) ? $_POST["sfsi_plus_popup_fontSize"] : 'no'; 
-    $sfsi_plus_popup_fontStyle               = isset($_POST["sfsi_plus_popup_fontStyle"]) ? $_POST["sfsi_plus_popup_fontStyle"] : ''; 
-    $sfsi_plus_popup_fontColor               = isset($_POST["sfsi_plus_popup_fontColor"]) ? $_POST["sfsi_plus_popup_fontColor"] : 'no'; 
-    $sfsi_plus_Show_popupOn                  = isset($_POST["sfsi_plus_Show_popupOn"]) ? $_POST["sfsi_plus_Show_popupOn"] : ''; 
-    $sfsi_plus_Show_popupOn_PageIDs          = isset($_POST["sfsi_plus_Show_popupOn_PageIDs"]) ? serialize($_POST["sfsi_plus_Show_popupOn_PageIDs"]) : ''; 
-    $sfsi_plus_Shown_pop                     = isset($_POST["sfsi_plus_Shown_pop"]) ? $_POST["sfsi_plus_Shown_pop"] : ''; 
-    $sfsi_plus_Shown_popupOnceTime           = isset($_POST["sfsi_plus_Shown_popupOnceTime"]) ? $_POST["sfsi_plus_Shown_popupOnceTime"] : 'no'; 
-    $sfsi_plus_Shown_popuplimitPerUserTime   = isset($_POST["sfsi_plus_Shown_popuplimitPerUserTime"]) ? $_POST["sfsi_plus_Shown_popuplimitPerUserTime"] : ''; 
-  		
-    /* icons pop options */
+    $sfsi_plus_popup_text                    = 	isset($_POST["sfsi_plus_popup_text"]) ? $_POST["sfsi_plus_popup_text"] : ''; 
+    $sfsi_plus_popup_background_color        = 	isset($_POST["sfsi_plus_popup_background_color"])
+													? $_POST["sfsi_plus_popup_background_color"]
+													: '#fffff'; 
+    $sfsi_plus_popup_border_color            = 	isset($_POST["sfsi_plus_popup_border_color"])
+													? $_POST["sfsi_plus_popup_border_color"]
+													: 'center-right'; 
+    $sfsi_plus_popup_border_thickness        = 	isset($_POST["sfsi_plus_popup_border_thickness"]) ? $_POST["sfsi_plus_popup_border_thickness"] : ''; 
+    $sfsi_plus_popup_border_shadow           = 	isset($_POST["sfsi_plus_popup_border_shadow"]) ? $_POST["sfsi_plus_popup_border_shadow"] : 'no'; 
+    $sfsi_plus_popup_font                    = 	isset($_POST["sfsi_plus_popup_font"]) ? $_POST["sfsi_plus_popup_font"] : ''; 
+    $sfsi_plus_popup_fontSize                = 	isset($_POST["sfsi_plus_popup_fontSize"]) ? $_POST["sfsi_plus_popup_fontSize"] : 'no'; 
+    $sfsi_plus_popup_fontStyle               = 	isset($_POST["sfsi_plus_popup_fontStyle"]) ? $_POST["sfsi_plus_popup_fontStyle"] : ''; 
+    $sfsi_plus_popup_fontColor               = 	isset($_POST["sfsi_plus_popup_fontColor"]) ? $_POST["sfsi_plus_popup_fontColor"] : 'no'; 
+    $sfsi_plus_Show_popupOn                  = 	isset($_POST["sfsi_plus_Show_popupOn"]) ? $_POST["sfsi_plus_Show_popupOn"] : ''; 
+    $sfsi_plus_Show_popupOn_PageIDs          = 	isset($_POST["sfsi_plus_Show_popupOn_PageIDs"])
+													? serialize($_POST["sfsi_plus_Show_popupOn_PageIDs"])
+													: ''; 
+    $sfsi_plus_Shown_pop                     = 	isset($_POST["sfsi_plus_Shown_pop"]) ? $_POST["sfsi_plus_Shown_pop"] : ''; 
+    $sfsi_plus_Shown_popupOnceTime           = 	isset($_POST["sfsi_plus_Shown_popupOnceTime"]) ? $_POST["sfsi_plus_Shown_popupOnceTime"] : 'no'; 
+    $sfsi_plus_Shown_popuplimitPerUserTime   = 	isset($_POST["sfsi_plus_Shown_popuplimitPerUserTime"])
+													? $_POST["sfsi_plus_Shown_popuplimitPerUserTime"]
+													: ''; 
+  	/* icons pop options */
 	$up_option7=array(	
 		'sfsi_plus_popup_text'				=> sanitize_text_field(stripslashes($sfsi_plus_popup_text)),
-		'sfsi_plus_popup_background_color'	=> sanitize_text_field($sfsi_plus_popup_background_color),
-		'sfsi_plus_popup_border_color'		=> sanitize_text_field($sfsi_plus_popup_border_color),
-		'sfsi_plus_popup_border_thickness'	=> intval($sfsi_plus_popup_border_thickness),
-		'sfsi_plus_popup_border_shadow'		=> sanitize_text_field($sfsi_plus_popup_border_shadow),
 		'sfsi_plus_popup_font'				=> sanitize_text_field($sfsi_plus_popup_font),
+		'sfsi_plus_popup_fontColor'			=> sfsi_plus_sanitize_hex_color($sfsi_plus_popup_fontColor),
 		'sfsi_plus_popup_fontSize'			=> intval($sfsi_plus_popup_fontSize),
 		'sfsi_plus_popup_fontStyle'			=> sanitize_text_field($sfsi_plus_popup_fontStyle),
-        'sfsi_plus_popup_fontColor'			=> sanitize_text_field($sfsi_plus_popup_fontColor),
-		
-		'sfsi_plus_Show_popupOn'			=> intval($sfsi_plus_Show_popupOn),
+		'sfsi_plus_popup_background_color'	=> sfsi_plus_sanitize_hex_color($sfsi_plus_popup_background_color),
+		'sfsi_plus_popup_border_color'		=> sfsi_plus_sanitize_hex_color($sfsi_plus_popup_border_color),
+		'sfsi_plus_popup_border_thickness'	=> intval($sfsi_plus_popup_border_thickness),
+		'sfsi_plus_popup_border_shadow'		=> sanitize_text_field($sfsi_plus_popup_border_shadow),
+		'sfsi_plus_Show_popupOn'			=> sanitize_text_field($sfsi_plus_Show_popupOn),
 		'sfsi_plus_Show_popupOn_PageIDs'	=> $sfsi_plus_Show_popupOn_PageIDs,
-		
 		'sfsi_plus_Shown_pop'				=> sanitize_text_field($sfsi_plus_Shown_pop),
 		'sfsi_plus_Shown_popupOnceTime'		=> intval($sfsi_plus_Shown_popupOnceTime),
-		//'sfsi_plus_Shown_popuplimitPerUserTime'=>$sfsi_plus_Shown_popuplimitPerUserTime,
+		//'sfsi_plus_Shown_popuplimitPerUserTime'	=> $sfsi_plus_Shown_popuplimitPerUserTime,
 	);
     update_option('sfsi_plus_section7_options',serialize($up_option7)); 
     header('Content-Type: application/json');
@@ -583,7 +590,7 @@ function sfsi_plus_options_updater8()
 	$sfsi_plus_display_before_posts = isset($_POST["sfsi_plus_display_before_posts"]) ? $_POST["sfsi_plus_display_before_posts"] : 'no'; 
 	$sfsi_plus_display_after_posts  = isset($_POST["sfsi_plus_display_after_posts"]) ? $_POST["sfsi_plus_display_after_posts"] : 'no'; 
 	
-	//$sfsi_plus_display_on_postspage = isset($_POST["sfsi_plus_display_on_postspage"]) ? $_POST["sfsi_plus_display_on_postspage"] : 'no'; 
+	//$sfsi_plus_display_on_postspage 	= isset($_POST["sfsi_plus_display_on_postspage"]) ? $_POST["sfsi_plus_display_on_postspage"] : 'no'; 
 	//$sfsi_plus_display_on_homepage    = isset($_POST["sfsi_plus_display_on_homepage"]) ? $_POST["sfsi_plus_display_on_homepage"] : 'no'; 
 	
 	$sfsi_plus_display_before_blogposts	= isset($_POST["sfsi_plus_display_before_blogposts"]) ? $_POST["sfsi_plus_display_before_blogposts"] : 'no'; 
@@ -615,8 +622,8 @@ function sfsi_plus_options_updater8()
 		'sfsi_plus_display_before_posts'	=> sanitize_text_field($sfsi_plus_display_before_posts),
 		'sfsi_plus_display_after_posts'		=> sanitize_text_field($sfsi_plus_display_after_posts),
 		
-		//'sfsi_plus_display_on_postspage'=>$sfsi_plus_display_on_postspage,
-		//'sfsi_plus_display_on_homepage'	=>$sfsi_plus_display_on_homepage,
+		//'sfsi_plus_display_on_postspage'	=> $sfsi_plus_display_on_postspage,
+		//'sfsi_plus_display_on_homepage'	=> $sfsi_plus_display_on_homepage,
 		
 		'sfsi_plus_display_before_blogposts'=> sanitize_text_field($sfsi_plus_display_before_blogposts),
 		'sfsi_plus_display_after_blogposts'	=> sanitize_text_field($sfsi_plus_display_after_blogposts),
@@ -676,30 +683,30 @@ function sfsi_plus_options_updater9()
 		'sfsi_plus_form_width'			 =>	intval($sfsi_plus_form_width),
 		'sfsi_plus_form_border'			 =>	sanitize_text_field($sfsi_plus_form_border),
 		'sfsi_plus_form_border_thickness'=>	intval($sfsi_plus_form_border_thickness),
-		'sfsi_plus_form_border_color'	 =>	sanitize_text_field($sfsi_plus_form_border_color),
-		'sfsi_plus_form_background'		 =>	sanitize_text_field($sfsi_plus_form_background),
+		'sfsi_plus_form_border_color'	 =>	sfsi_plus_sanitize_hex_color($sfsi_plus_form_border_color),
+		'sfsi_plus_form_background'		 =>	sfsi_plus_sanitize_hex_color($sfsi_plus_form_background),
 		
 		'sfsi_plus_form_heading_text'	 =>	sanitize_text_field(stripslashes($sfsi_plus_form_heading_text)),
 		'sfsi_plus_form_heading_font'	 =>	sanitize_text_field($sfsi_plus_form_heading_font),
 		'sfsi_plus_form_heading_fontstyle'=> sanitize_text_field($sfsi_plus_form_heading_fontstyle),
-		'sfsi_plus_form_heading_fontcolor'=> sanitize_text_field($sfsi_plus_form_heading_fontcolor),
+		'sfsi_plus_form_heading_fontcolor'=> sfsi_plus_sanitize_hex_color($sfsi_plus_form_heading_fontcolor),
 		'sfsi_plus_form_heading_fontsize' => intval($sfsi_plus_form_heading_fontsize),
 		'sfsi_plus_form_heading_fontalign'=> sanitize_text_field($sfsi_plus_form_heading_fontalign),
 		
 		'sfsi_plus_form_field_text'		=>	sanitize_text_field(stripslashes($sfsi_plus_form_field_text)),
 		'sfsi_plus_form_field_font'		=>	sanitize_text_field($sfsi_plus_form_field_font),
 		'sfsi_plus_form_field_fontstyle'=>	sanitize_text_field($sfsi_plus_form_field_fontstyle),
-		'sfsi_plus_form_field_fontcolor'=>	sanitize_text_field($sfsi_plus_form_field_fontcolor),
+		'sfsi_plus_form_field_fontcolor'=>	sfsi_plus_sanitize_hex_color($sfsi_plus_form_field_fontcolor),
 		'sfsi_plus_form_field_fontsize'	=>	intval($sfsi_plus_form_field_fontsize),
 		'sfsi_plus_form_field_fontalign'=>	sanitize_text_field($sfsi_plus_form_field_fontalign),
 		
 		'sfsi_plus_form_button_text'	=>	sanitize_text_field(stripslashes($sfsi_plus_form_button_text)),
 		'sfsi_plus_form_button_font'	=>	sanitize_text_field($sfsi_plus_form_button_font),
 		'sfsi_plus_form_button_fontstyle'=>	sanitize_text_field($sfsi_plus_form_button_fontstyle),
-		'sfsi_plus_form_button_fontcolor'=>	sanitize_text_field($sfsi_plus_form_button_fontcolor),
+		'sfsi_plus_form_button_fontcolor'=>	sfsi_plus_sanitize_hex_color($sfsi_plus_form_button_fontcolor),
 		'sfsi_plus_form_button_fontsize'=>	intval($sfsi_plus_form_button_fontsize),
 		'sfsi_plus_form_button_fontalign'=>	 sanitize_text_field($sfsi_plus_form_button_fontalign),
-		'sfsi_plus_form_button_background'=> sanitize_text_field($sfsi_plus_form_button_background),
+		'sfsi_plus_form_button_background'=> sfsi_plus_sanitize_hex_color($sfsi_plus_form_button_background),
 	);
 	
     update_option('sfsi_plus_section9_options',serialize($up_option9));

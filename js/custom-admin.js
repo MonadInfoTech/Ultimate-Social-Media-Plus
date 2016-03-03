@@ -257,10 +257,10 @@ function sfsi_plus_update_step1()
         url:ajax_object.ajax_url,
         type:"post",
         data:I,
-        async:!0,
+       	async:!0,
         dataType:"json",
         success:function(i) {
-            if(i=="wrong_nonce")
+			if(i=="wrong_nonce")
 			{
 				sfsiplus_showErrorSuc("error", "Unauthorised Request, Try again after refreshing page", 1);
             	s = !1;

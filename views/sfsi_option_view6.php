@@ -1,6 +1,24 @@
 <?php
 	/* unserialize all saved option for  section 6 options */
     $option6=  unserialize(get_option('sfsi_plus_section6_options',false));
+	/*
+	 * Sanitize, escape and validate values
+	 */
+	$option6['sfsi_plus_show_Onposts'] 			= 	(isset($option6['sfsi_plus_show_Onposts']))
+														? sanitize_text_field($option6['sfsi_plus_show_Onposts'])
+														: '';
+	$option6['sfsi_plus_icons_postPositon'] 	= 	(isset($option6['sfsi_plus_icons_postPositon']))
+														? sanitize_text_field($option6['sfsi_plus_icons_postPositon'])
+														: '';
+	$option6['sfsi_plus_icons_alignment'] 		= 	(isset($option6['sfsi_plus_icons_alignment']))
+														? sanitize_text_field($option6['sfsi_plus_icons_alignment'])
+														: '';
+	$option6['sfsi_plus_textBefor_icons'] 		= 	(isset($option6['sfsi_plus_textBefor_icons']))
+														? sanitize_text_field($option6['sfsi_plus_textBefor_icons'])
+														: '';
+	$option6['sfsi_plus_icons_DisplayCounts'] 	= 	(isset($option6['sfsi_plus_icons_DisplayCounts']))
+														? sanitize_text_field($option6['sfsi_plus_icons_DisplayCounts'])
+														: '';
    
 ?>
 <!-- Section 6 "Do you want to display icons at the end of every post?" main div Start -->

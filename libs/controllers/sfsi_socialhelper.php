@@ -143,11 +143,11 @@ class sfsi_plus_SocialHelper
 				!empty($sfsi_plus_section4_options['sfsi_plus_youtube_channelId'])
 			) ? $sfsi_plus_section4_options['sfsi_plus_youtube_channelId'] : 'UCYQyWnJPrY4XY3Avc7BU9aA';
 			
-			$xmlData = @file_get_contents('https://www.googleapis.com/youtube/v3/channels?part=statistics&id='.$user.'&key=AIzaSyA_SqAZGCpZ22vHzOUr3St5xf5XMy78oTY');
+			$xmlData = $this->file_get_contents_curl('https://www.googleapis.com/youtube/v3/channels?part=statistics&id='.$user.'&key=AIzaSyA_SqAZGCpZ22vHzOUr3St5xf5XMy78oTY');
 		}
 		else
 		{
-			$xmlData = @file_get_contents('https://www.googleapis.com/youtube/v3/channels?part=statistics&forUsername='.$user.'&key=AIzaSyA_SqAZGCpZ22vHzOUr3St5xf5XMy78oTY');
+			$xmlData = $this->file_get_contents_curl('https://www.googleapis.com/youtube/v3/channels?part=statistics&forUsername='.$user.'&key=AIzaSyA_SqAZGCpZ22vHzOUr3St5xf5XMy78oTY');
 		}
 		
 		if($xmlData)
@@ -179,7 +179,7 @@ class sfsi_plus_SocialHelper
 	{
 		$scheme = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off' || $_SERVER['SERVER_PORT'] == 443) ? "https" :"http";
 		$url=$scheme.'://'.$_SERVER['SERVER_NAME'].$_SERVER['REQUEST_URI'];
-		$json_string = @file_get_contents('http://api-public.addthis.com/url/shares.json?url='.$url);
+		$json_string = $this->file_get_contents_curl('http://api-public.addthis.com/url/shares.json?url='.$url);
 		$json = json_decode($json_string, true);
 		return isset($json['shares'])? $this->format_num((int) $json['shares']):0;    
 	}

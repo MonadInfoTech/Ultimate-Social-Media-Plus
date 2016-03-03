@@ -401,7 +401,7 @@
             	<div class="cstmutbchnlnmewpr" <?php if($sfsi_plus_youtubeusernameorid != 'id'){echo 'style="display: block;"';}?>>
                 	<p class="extra_pp">
                     	<label><?php  _e( 'UserName:', SFSI_PLUS_DOMAIN ); ?></label>
-                        <input name="sfsi_plus_ytube_user" type="url" value="<?php echo (isset($option4['sfsi_plus_ytube_user']) && $option2['sfsi_plus_ytube_user']!='') ?  $option2['sfsi_plus_ytube_user'] : '' ;?>" placeholder="Youtube username" class="add" />
+                        <input name="sfsi_plus_ytube_user" type="url" value="<?php echo (isset($option2['sfsi_plus_ytube_user']) && $option2['sfsi_plus_ytube_user']!='') ?  $option2['sfsi_plus_ytube_user'] : '' ;?>" placeholder="Youtube username" class="add" />
                     </p>
                     <div class="utbe_instruction">
                     	<?php _e( 'To find your Username go to "My channel" in Youtube menu bar on the left & Select the "About" tab and take your user name from URL there (e.g. https://www.youtube.com/user/<b>Myusername</b>/about).', SFSI_PLUS_DOMAIN ); ?>
