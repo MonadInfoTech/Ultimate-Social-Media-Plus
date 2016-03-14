@@ -427,12 +427,12 @@
     </ul> <!-- END icon drag drop section start here -->
     
     <span class="drag_drp">
-    	(<?php  _e( 'Drag &amp; Drop', SFSI_PLUS_DOMAIN); ?>)
+    	(<?php  _e( 'Drag and Drop', SFSI_PLUS_DOMAIN); ?>)
     </span>
     <!-- icon's size and spacing section start here -->	
     <div class="row">
         <h4>
-        	<?php  _e( 'Size &amp; spacing of your icons', SFSI_PLUS_DOMAIN ); ?>
+        	<?php  _e( 'Size and spacing of your icons', SFSI_PLUS_DOMAIN ); ?>
         </h4>
         <div class="icons_size">
         	<span>
@@ -440,7 +440,7 @@
         	</span>
             <input name="sfsi_plus_icons_size" value="<?php echo ($option5['sfsi_plus_icons_size']!='') ?  $option5['sfsi_plus_icons_size'] : '' ;?>" type="text" />
         	<ins>
-        		<?php  _e( 'pixels wide &amp; tall', SFSI_PLUS_DOMAIN ); ?>
+        		<?php  _e( 'pixels wide and tall', SFSI_PLUS_DOMAIN ); ?>
         	</ins>
          	<span class="last">
          		<?php  _e( 'Spacing between icons:', SFSI_PLUS_DOMAIN ); ?>
@@ -478,7 +478,7 @@
         	</span>
         	<input name="sfsi_plus_icons_perRow" type="text" value="<?php echo ($option5['sfsi_plus_icons_perRow']!='') ?  $option5['sfsi_plus_icons_perRow'] : '' ;?>" />
         	<ins class="leave_empty">
-        		<?php  _e( 'Leave empty if you dont want to<br /> define this', SFSI_PLUS_DOMAIN ); ?>
+        		<?php  _e( 'Leave empty if you dont want to define this', SFSI_PLUS_DOMAIN ); ?>
         	</ins>
         </div>
     </div>

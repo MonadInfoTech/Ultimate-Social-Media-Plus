@@ -70,7 +70,10 @@
         	<?php  _e( 'Simply answer the questions below (at least the first 3) by clicking on them - that`s it!', SFSI_PLUS_DOMAIN ); ?>
         </p>
         <p> 
-        	<?php  _e( 'If you have questions, or <b>something doesn`t work as it should</b>, please <a  href="mailto:support@ultimatelysocial.com" title="support@ultimatelysocial.com" alt="support@ultimatelysocial.com" class="lit_txt">get in touch with us</a>, we‘re happy to sort it out!', SFSI_PLUS_DOMAIN ); ?>
+        	<?php  _e( 'If you have questions, or something doesn`t work as it should, please read the FAQ:', SFSI_PLUS_DOMAIN ); ?>
+			<a href="http://ultimatelysocial.com/faq/" class="lit_txt">
+				<?php _e('Click here',SFSI_PLUS_DOMAIN); ?>
+			</a>
        </p>
     </div>
     <!-- END Top content area of plugin -->
@@ -137,7 +140,7 @@
     
         <!-- step old 8 Start here -->
         <h3><span>8</span>
-            <?php  _e( 'Do you want to show a subscription form (<b>increases sign ups</b>)?', SFSI_PLUS_DOMAIN ); ?>
+            <?php  _e( 'Do you want to show a subscription form (increases sign ups)?', SFSI_PLUS_DOMAIN ); ?>
         </h3>
         <?php include(SFSI_PLUS_DOCROOT.'/views/sfsi_option_view9.php'); ?>
     <!-- step old 8 END here -->
@@ -157,12 +160,12 @@
             <a href="https://wordpress.org/support/view/plugin-reviews/ultimate-social-media-plus" target="_new">
             	<?php  _e( 'here', SFSI_PLUS_DOMAIN ); ?>
             </a>.
-             <?php  _e( 'If you`re not happy, please <a href="mailto:support@ultimatelysocial.com">get in touch with us</a>, so that we can sort it out.Thank you!', SFSI_PLUS_DOMAIN ); ?>
+             <?php  _e( 'If you`re not happy, please get in touch with us at support@ultimatelysocial.com, so that we can sort it out.Thank you!', SFSI_PLUS_DOMAIN ); ?>
          </p>
          <p class="bldtxtmsg">
-         	<?php  _e( 'Need top-notch Wordpress development work at a competitive price? Visit us at', SFSI_PLUS_DOMAIN ); ?>
+         	<?php  _e( 'Need top-notch Wordpress development work at a competitive price?', SFSI_PLUS_DOMAIN ); ?>
          	<a href="http://www.ultimatelysocial.com">
-        		ultimatelysocial.com
+        		<?php _e('Visit us on ultimatelysocial.com',SFSI_PLUS_DOMAIN); ?>
          	</a>
          </p>
 	</div>

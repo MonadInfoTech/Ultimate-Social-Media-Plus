@@ -141,8 +141,7 @@
                 </h4>
                 <input name="sfsi_plus_rss_url"  id="sfsi_plus_rss_url" class="add" type="url" value="<?php echo ($option2['sfsi_plus_rss_url']!='') ?  $option2['sfsi_plus_rss_url'] : '' ;?>" placeholder="E.g http://www.yoursite.com/feed" />
                 <span class="sfrsTxt" >
-                	<?php  _e( 'For most blogs it’s', SFSI_PLUS_DOMAIN); ?>  
-                 	<strong> http://blogname.com/feed </strong>
+                	<?php  _e( 'For most blogs it’s http://blogname.com/feed', SFSI_PLUS_DOMAIN); ?>  
                 </span>
             </div>
         </div>    
@@ -159,26 +158,17 @@
         	Email
         </h2>
         <div class="inr_cont">
-            <p>
-            	<?php
-                	_e( 'Allows people to subscribe to your site on', SFSI_PLUS_DOMAIN );
-					$url = "http://www.specificfeeds.com/widgets/emailSubscribeEncFeed/".$feedId."/".base64_encode(8);
-				?>
-            	<a href="<?php echo $url; ?>" target="_new">
-            		<?php  _e( 'this screen', SFSI_PLUS_DOMAIN ); ?>
-            	</a> 
-            	
-				<?php _e('and receive new posts automatically. The service is 100% FREE, you get full access to the emails & interesting statistics (please', SFSI_PLUS_DOMAIN ); ?>
-            	<a target="_new" href="<?php echo $connectToFeed; ?>">
-            		<?php  _e('claim your feed', SFSI_PLUS_DOMAIN ); ?>
-            	</a> 
-                <?php _e('for that) and it also make sense if you already offer an email newsletter',SFSI_PLUS_DOMAIN);?>
-             	<a href="http://specificfeeds.com/rss" target="_new">
-             		<?php _e('(learn more)', SFSI_PLUS_DOMAIN ); ?>
-             	</a>.
-            </p>
-            
-            <p><?php _e( 'Please pick which icon type you want to use:', SFSI_PLUS_DOMAIN); ?></p>
+			<p>
+				<?php _e('Sends your new posts automatically to subscribers. It`s FREE and you get full access to your subscriber`s emails and interesting statistics:', SFSI_PLUS_DOMAIN ); ?>
+				<a target="_new" href="<?php echo $connectToFeed; ?>">
+					<?php _e('Claim your feed to get full access.', SFSI_PLUS_DOMAIN ); ?>
+				</a>
+				<?php _e('It also makes sense if you already offer an email newsletter:', SFSI_PLUS_DOMAIN ); ?>
+				<a href="http://specificfeeds.com/rss" target="_new">
+					<?php _e('Learn more.', SFSI_PLUS_DOMAIN ); ?>
+				</a>
+			</p>
+           	<p><?php _e( 'Please pick which icon type you want to use:', SFSI_PLUS_DOMAIN); ?></p>
             
             <ul class="tab_2_email_sec">
                 <li>
@@ -186,7 +176,7 @@
 						<input name="sfsi_plus_rss_icons" <?php echo ($option2['sfsi_plus_rss_icons']=='email') ?  'checked="true"' : '' ;?> type="radio" value="email" class="styled" /><span class="email_icn"></span>
 					</div>
 					<label>
-                    	<?php  _e( 'Email-icon', SFSI_PLUS_DOMAIN); ?>
+                    	<?php  _e( 'Email icon', SFSI_PLUS_DOMAIN); ?>
                     </label>
                 </li>
 				<li>
@@ -404,13 +394,13 @@
                         <input name="sfsi_plus_ytube_user" type="url" value="<?php echo (isset($option2['sfsi_plus_ytube_user']) && $option2['sfsi_plus_ytube_user']!='') ?  $option2['sfsi_plus_ytube_user'] : '' ;?>" placeholder="Youtube username" class="add" />
                     </p>
                     <div class="utbe_instruction">
-                    	<?php _e( 'To find your Username go to "My channel" in Youtube menu bar on the left & Select the "About" tab and take your user name from URL there (e.g. https://www.youtube.com/user/<b>Myusername</b>/about).', SFSI_PLUS_DOMAIN ); ?>
+                    	<?php _e( 'To find your Username go to "My channel" in Youtube menu bar on the left & Select the "About" tab and take your user name from URL there (e.g. https://www.youtube.com/user/Tommy it is "Tommy").', SFSI_PLUS_DOMAIN ); ?>
                     </div>
                 </div>
                 <div class="cstmutbchnlidwpr" <?php if($sfsi_plus_youtubeusernameorid == 'id'){echo 'style="display: block"';}?>>
                 	<p class="extra_pp">
                     	<label>
-                       		<?php  _e( 'ChannelId:', SFSI_PLUS_DOMAIN ); ?>
+                       		<?php  _e( 'Channel Id:', SFSI_PLUS_DOMAIN ); ?>
                         </label>
                         <input name="sfsi_plus_ytube_chnlid" type="url" value="<?php echo (isset($option2['sfsi_plus_ytube_chnlid']) && $option2['sfsi_plus_ytube_chnlid']!='') ?  $option2['sfsi_plus_ytube_chnlid'] : '' ;?>" placeholder="youtube_channel_id" class="add" />
                     </p>

@@ -102,9 +102,8 @@ class Sfsi_Plus_Widget extends WP_Widget
 		    <input type="hidden" value="<?php echo $instance['showf'] ?>" id="<?php echo $this->get_field_id( 'showf' ); ?>" name="<?php echo $this->get_field_name( 'showf' ); ?>" />
 		</p>
 		<p>
-			<?php
-				_e( 'Please go to the <a href="admin.php?page=sfsi-plus-options">plugin page</a> to set your preferences', SFSI_PLUS_DOMAIN);
-			?>
+			<?php	_e('Please go to the plugin page to set your preferences:',SFSI_PLUS_DOMAIN); ?>
+			<a href="admin.php?page=sfsi-plus-options"><?php _e('Click here', SFSI_PLUS_DOMAIN); ?></a>
 		</p>
 	<?php
 	}

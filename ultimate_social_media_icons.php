@@ -6,7 +6,7 @@ Description: The best social media plugin on the market. And 100% FREE. Allows y
 Author: UltimatelySocial
 Text Domain: ultimate-social-media-plus
 Author URI: http://ultimatelysocial.com
-Version: 2.3.3
+Version: 2.3.4
 License: GPLv2
 */
 
@@ -36,7 +36,7 @@ register_deactivation_hook(__FILE__, 'sfsi_plus_deactivate_plugin');
 register_uninstall_hook(__FILE__, 'sfsi_plus_Unistall_plugin');
 
 /*Plugin version setup*/
-if(!get_option('sfsi_plus_pluginVersion') || get_option('sfsi_plus_pluginVersion') < 2.33)
+if(!get_option('sfsi_plus_pluginVersion') || get_option('sfsi_plus_pluginVersion') < 2.34)
 {
 	add_action("init", "sfsi_plus_update_plugin");
 }
@@ -346,6 +346,10 @@ function sfsi_plus_beforeafterblogposts( $content )
 		{
 			$sfsi_section8['sfsi_plus_rectpinit'] = 'no';
 		}
+		if(!isset($sfsi_section8['sfsi_plus_rectfbshare']))
+		{
+			$sfsi_section8['sfsi_plus_rectfbshare'] = 'no';
+		}
 		
 		//checking for standard icons
 		$txt=(isset($sfsi_section8['sfsi_plus_textBefor_icons']))? $sfsi_section8['sfsi_plus_textBefor_icons'] : "Please follow and like us:" ;
@@ -377,7 +381,8 @@ function sfsi_plus_beforeafterblogposts( $content )
 							$sfsi_section8['sfsi_plus_rectgp']		== 'yes' ||
 							$sfsi_section8['sfsi_plus_rectshr'] 	== 'yes' ||
 							$sfsi_section8['sfsi_plus_recttwtr'] 	== 'yes' ||
-							$sfsi_section8['sfsi_plus_rectpinit'] 	== 'yes'
+							$sfsi_section8['sfsi_plus_rectpinit'] 	== 'yes' ||
+							$sfsi_section8['sfsi_plus_rectfbshare'] == 'yes' 
 						)
 						{
 							$icons_before .= "<div style='display: inline-block;margin-bottom: 0; margin-left: 0; margin-right: 8px; margin-top: 0; vertical-align: middle;width: auto;'><span>".$txt."</span></div>";
@@ -388,12 +393,18 @@ function sfsi_plus_beforeafterblogposts( $content )
 							if(!isset($sfsiLikeWithsub)){$sfsiLikeWithsub = $sfsiLikeWith;}
 							$icons_before.="<div class='sf_subscrbe' style='display: inline-block;vertical-align: middle;width: auto;'>".sfsi_plus_Subscribelike($permalink,$show_count)."</div>";
 						}
-						if($sfsi_section8['sfsi_plus_rectfb'] == 'yes')
+						if($sfsi_section8['sfsi_plus_rectfb'] == 'yes' || $sfsi_section8['sfsi_plus_rectfbshare'] == 'yes')
 						{
 							if($show_count){}else{$sfsiLikeWithfb = "48px";}
 							if(!isset($sfsiLikeWithfb)){$sfsiLikeWithfb = $sfsiLikeWith;}
 							$icons_before .= "<div class='sf_fb' style='display: inline-block; vertical-align: middle;width: auto;'>".sfsi_plus_FBlike($permalink,$show_count)."</div>";
 						}
+						/*if($sfsi_section8['sfsi_plus_rectfbshare'] == 'yes')
+						{
+							if($show_count){}else{$sfsiLikeWithfbshare = "48px";}
+							if(!isset($sfsiLikeWithfbshare)){$sfsiLikeWithfbshare = $sfsiLikeWith;}
+							$icons_before .= "<div class='sf_fbshare' style='display: inline-block; vertical-align: middle;width: auto;'>".sfsi_plus_FBlike($permalink,$show_count)."</div>";
+						}*/
 						if($sfsi_section8['sfsi_plus_recttwtr'] == 'yes')
 						{
 							if($show_count){$sfsiLikeWithtwtr = "77px";}else{$sfsiLikeWithtwtr = "56px";}
@@ -447,7 +458,8 @@ function sfsi_plus_beforeafterblogposts( $content )
 							$sfsi_section8['sfsi_plus_rectgp'] 		== 'yes' ||
 							$sfsi_section8['sfsi_plus_rectshr'] 	== 'yes' ||
 							$sfsi_section8['sfsi_plus_recttwtr'] 	== 'yes' ||
-							$sfsi_section8['sfsi_plus_rectpinit'] 	== 'yes'
+							$sfsi_section8['sfsi_plus_rectpinit'] 	== 'yes' ||
+							$sfsi_section8['sfsi_plus_rectfbshare'] == 'yes' 
 						)
 						{
 							$icons_after .= "<div style='display: inline-block;margin-bottom: 0; margin-left: 0; margin-right: 8px; margin-top: 0; vertical-align: middle;width: auto;'><span>".$txt."</span></div>";
@@ -458,12 +470,18 @@ function sfsi_plus_beforeafterblogposts( $content )
 							if(!isset($sfsiLikeWithsub)){$sfsiLikeWithsub = $sfsiLikeWith;}
 							$icons_after.="<div class='sf_subscrbe' style='display: inline-block;vertical-align: middle; width: auto;'>".sfsi_plus_Subscribelike($permalink,$show_count)."</div>";
 						}
-						if($sfsi_section8['sfsi_plus_rectfb'] == 'yes')
+						if($sfsi_section8['sfsi_plus_rectfb'] == 'yes' || $sfsi_section8['sfsi_plus_rectfbshare'] == 'yes')
 						{
 							if($show_count){}else{$sfsiLikeWithfb = "48px";}
 							if(!isset($sfsiLikeWithfb)){$sfsiLikeWithfb = $sfsiLikeWith;}
 							$icons_after .= "<div class='sf_fb' style='display: inline-block; vertical-align: middle;width: auto;'>".sfsi_plus_FBlike($permalink,$show_count)."</div>";
 						}
+						/*if($sfsi_section8['sfsi_plus_rectfbshare'] == 'yes')
+						{
+							if($show_count){}else{$sfsiLikeWithfbshare = "48px";}
+							if(!isset($sfsiLikeWithfbshare)){$sfsiLikeWithfbshare = $sfsiLikeWith;}
+							$icons_before .= "<div class='sf_fbshare' style='display: inline-block; vertical-align: middle;width: auto;'>".sfsi_plus_FBlike($permalink,$show_count)."</div>";
+						}*/
 						if($sfsi_section8['sfsi_plus_recttwtr'] == 'yes')
 						{
 							if($show_count){$sfsiLikeWithtwtr = "77px";}else{$sfsiLikeWithtwtr = "56px";}
@@ -556,19 +574,10 @@ function sfsi_plus_admin_notice()
 		?>
 		<div class="error" style="<?php echo $style; ?>">
 			<div class="alignleft" style="margin: 9px 0;">
-				<?php
-				_e(
-					'There seems to be an error on your website which prevents the plugin to work properly. Please contact us at',
-					SFSI_PLUS_DOMAIN
-				);
-				?>
-                <a href="mailto:support@ultimatelysocial.com">support@ultimatelysocial.com</a>
-                <?php
-				_e(
-					'and state the error code you see below.',
-					SFSI_PLUS_DOMAIN
-				);
-				?>
+				<?php	_e('There seems to be an error on your website which prevents the plugin to work properly. Please check the FAQ:', SFSI_PLUS_DOMAIN ); ?>
+                <a href="http://www.ultimatelysocial.com/faq">
+					<?php _e('Click here',SFSI_PLUS_DOMAIN); ?>
+				</a>
                 <p style="text-align:left">
                 	<b><?php _e('Error', SFSI_PLUS_DOMAIN); ?>: <?php echo ucfirst(get_option("sfsi_plus_curlErrorMessage")); ?></b>
                 </p>

@@ -12,7 +12,7 @@ function sfsi_plus_update_plugin()
 	}
 	
 	//Install version
-	update_option("sfsi_plus_pluginVersion", "2.33");
+	update_option("sfsi_plus_pluginVersion", "2.34");
 	
 	/*show notification*/
 	if(!get_option('sfsi_plus_show_notification'))
@@ -75,9 +75,16 @@ function sfsi_plus_update_plugin()
 		$option8['sfsi_plus_icons_floatMargin_right'] = '';
 		update_option('sfsi_plus_section8_options', serialize($option8));
 	}
-	if(isset($option8) && !empty($option8) && !isset($option8['sfsi_plus_rectpinit']))
+	if(isset($option8) && !empty($option8))
 	{
-		$option8['sfsi_plus_rectpinit'] = 'no';
+		if(!isset($option8['sfsi_plus_rectpinit']))
+		{
+			$option8['sfsi_plus_rectpinit'] = 'no';
+		}
+		if(!isset($option8['sfsi_plus_rectfbshare']))
+		{
+			$option8['sfsi_plus_rectfbshare'] = 'no';
+		}
 		update_option('sfsi_plus_section8_options', serialize($option8));
 	}
 	
@@ -344,7 +351,8 @@ function sfsi_plus_activate_plugin()
 		'sfsi_plus_rectgp'=>'yes',
 		'sfsi_plus_rectshr'=>'no',
 		'sfsi_plus_recttwtr'=>'yes',
-		'sfsi_plus_rectpinit'=>'yes');
+		'sfsi_plus_rectpinit'=>'yes',
+		'sfsi_plus_rectfbshare'=>'yes');
 	add_option('sfsi_plus_section8_options',  serialize($options8));		
 	
 	/*Some additional option added*/	
@@ -530,9 +538,9 @@ function sfsi_plus_check_wp_head() {
 	    $path=pathinfo($_SERVER['REQUEST_URI']);
 	    if($path['basename']=="themes.php" || $path['basename']=="theme-editor.php" || $path['basename']=="admin.php?page=sfsi-plus-options")
 	    {
-	    	//echo "<div class=\"error\" ><p> ".__("Error : Please fix your theme to make plugins work correctly. Go to the", SFSI_PLUS_DOMAIN)." <a href=\"theme-editor.php\">".__("Theme Editor", SFSI_PLUS_DOMAIN)."</a> ".__("and insert", SFSI_PLUS_DOMAIN)." <code>&lt;?php wp_head(); ?&gt;</code> ".__("just before the", SFSI_PLUS_DOMAIN)." <code>&lt;/head&gt;</code> ".__("line of your theme's", SFSI_PLUS_DOMAIN)." <code>header.php</code> ".__("file.", SFSI_PLUS_DOMAIN). "</p></div>";
-			echo "<div class=\"error\" ><p> ".__("Error : Please fix your theme to make plugins work correctly. Go to the <a href=\"theme-editor.php\">Theme Editor</a> and insert <code>&lt;?php wp_head(); ?&gt;</code> just before the <code>&lt;/head&gt;</code> line of your theme's <code>header.php</code> file.", SFSI_PLUS_DOMAIN). "</p></div>";	
-	    }		
+	    	echo "<div class=\"error\" ><p>". __( 'Error : Please fix your theme to make plugins work correctly. Go to the Theme Editor and insert &lt;?php wp_head();  ?&gt; just before the &lt;/head&gt; line of your theme`s header.php file.', SFSI_PLUS_DOMAIN )."<a href=\"theme-editor.php\">".__('Go to your theme editor: click here.', SFSI_PLUS_DOMAIN )."</a></p></div>";
+			
+	   }		
 	}
 }
 /* admin notice if wp_footer is missing in active theme */
@@ -554,8 +562,7 @@ function sfsi_plus_check_wp_footer() {
 		
 		if($path['basename']=="themes.php" || $path['basename']=="theme-editor.php" || $path['basename']=="admin.php?page=sfsi-plus-options")
 		{
-			//echo "<div class=\"error\" ><p>".__("Error : Please fix your theme to make plugins work correctly. Go to the", SFSI_PLUS_DOMAIN)." <a href=\"theme-editor.php\">".__("Theme Editor", SFSI_PLUS_DOMAIN)."</a> ".__("and insert", SFSI_PLUS_DOMAIN)." <code>&lt;?php wp_footer(); ?&gt;</code> ".__("as the first line of your theme's", SFSI_PLUS_DOMAIN)." <code>footer.php</code> ".__("file.", SFSI_PLUS_DOMAIN)."</p></div>";
-			echo "<div class=\"error\" ><p>".__("Error : Please fix your theme to make plugins work correctly. Go to the <a href=\"theme-editor.php\">Theme Editor</a> and insert <code>&lt;?php wp_footer(); ?&gt;</code> as the first line of your theme's <code>footer.php</code> file.", SFSI_PLUS_DOMAIN)."</p></div>";
+			echo "<div class=\"error\" ><p>".	__("Error : Please fix your theme to make plugins work correctly. Go to the Theme Editor and insert &lt;?php wp_footer(); ?&gt; as the first line of your theme's footer.php file.", SFSI_PLUS_DOMAIN)."<a href=\"theme-editor.php\">".__('Go to your theme editor: click here.', SFSI_PLUS_DOMAIN )."</a></p></div>";
 		} 	    
 	}
 }
@@ -566,7 +573,7 @@ function sfsi_plus_activation_msg()
 	
 	if(get_option('sfsi_plus_activate',false)==1)
 	{
-		echo "<div class='updated' ><p>".__("Thank you for installing the <b>Ultimate Social Media PLUS</b> Plugin. Please go to the <a href='admin.php?page=sfsi-plus-options'>plugin`s settings page</a> to configure it", SFSI_PLUS_DOMAIN).".</p></div>";
+		echo "<div class='updated'><p>".__("Thank you for installing the Ultimate Social Media PLUS plugin. Please go to the plugin's settings page to configure it: ",SFSI_PLUS_DOMAIN)."<b><a href='admin.php?page=sfsi-plus-options'>".__("Click here",SFSI_PLUS_DOMAIN)."</a></b></p></div>";
 		update_option('sfsi_plus_activate',0);
 	}
 	

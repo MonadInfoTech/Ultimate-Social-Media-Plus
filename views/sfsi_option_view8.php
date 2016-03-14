@@ -25,6 +25,10 @@
 	{
 		$option8['sfsi_plus_rectpinit'] = 'no';
 	}
+	if(!isset($option8['sfsi_plus_rectfbshare']))
+	{
+		$option8['sfsi_plus_rectfbshare'] = 'no';
+	}
 	
 	/**
 	 * Sanitize, escape and validate values
@@ -93,6 +97,9 @@
 	$option8['sfsi_plus_rectpinit'] 				= 	(isset($option8['sfsi_plus_rectpinit']))
 															? sanitize_text_field($option8['sfsi_plus_rectpinit'])
 															: '';
+	$option8['sfsi_plus_rectfbshare'] 				= 	(isset($option8['sfsi_plus_rectfbshare']))
+															? sanitize_text_field($option8['sfsi_plus_rectfbshare'])
+															: '';														
 ?>
 <div class="tab8">
 	<ul class="sfsiplus_icn_listing8">
@@ -115,11 +122,10 @@
 					}
 					?>
 					<label class="sfsiplus_sub-subtitle ckckslctn" <?php echo $label_style;?>>
-                    	<?php  _e( 'Go to the', 'ultimate-social-media-plus' ); ?>
+                    	<?php  _e( 'Go to the widget area and drag & drop it where you want to have it!' , SFSI_PLUS_DOMAIN ); ?>
                     	<a href="<?php echo admin_url('widgets.php');?>">
-                    		<?php  _e( 'widgets area', 'ultimate-social-media-plus' ); ?>
+                    		<?php  _e( 'Click here', SFSI_PLUS_DOMAIN ); ?>
                     	</a> 
-                    	<?php  _e( 'and drag & drop it where you want to have it', 'ultimate-social-media-plus' ); ?>!
                     </label>
 				</p>
 			</div>
@@ -257,13 +263,7 @@
 					}
 					?>
 					<label class="sfsiplus_sub-subtitle ckckslctn" <?php echo $label_style;?>>
-                    	<?php  _e( 'Place', SFSI_PLUS_DOMAIN ); ?>
-                    <label class="sfsi_ckckslctnlbl"><</label><label class="sfsi_ckckslctnlbl">?</label><label class="sfsi_ckckslctnlbl">php echo DISPLAY_ULTIMATE_PLUS(); </label><label class="sfsi_ckckslctnlbl">?</label><label class="sfsi_ckckslctnlbl">></label> 
-                    	<?php  _e( 'in your theme codes or use the shortcode', SFSI_PLUS_DOMAIN ); ?>
-                    	<b>
-                    		[DISPLAY_ULTIMATE_PLUS]
-						</b> 
-                    	<?php  _e( 'to display them wherever you want.', SFSI_PLUS_DOMAIN ); ?>
+                    	<?php  _e( 'Place &lt;?php echo DISPLAY_ULTIMATE_PLUS(); ?&gt; in your theme codes or use the shortcode [DISPLAY_ULTIMATE_PLUS] to display them wherever you want.', SFSI_PLUS_DOMAIN ); ?>
                     </label>
 				</p>
 			</div>
@@ -311,7 +311,7 @@
 						<div class="radiodisplaysection" style="<?php echo $display; ?>">
 
                             <p class="cstmdisplaysharingtxt cstmdisextrpdng">
-                            	<?php  _e( 'Rectangle icons spell out the « <b>call to action</b> » which increases chances that visitors do it.', SFSI_PLUS_DOMAIN ); ?>
+                            	<?php  _e( 'Rectangle icons spell out the «call to action» which increases chances that visitors do it.', SFSI_PLUS_DOMAIN ); ?>
                             </p>
 							<p class="cstmdisplaysharingtxt">
                             	<?php  _e( 'Select the icons you want to show:', SFSI_PLUS_DOMAIN ); ?>
@@ -328,6 +328,12 @@
 										<div class="radio_section tb_4_ck"><input name="sfsi_plus_rectfb" <?php echo ($option8['sfsi_plus_rectfb']=='yes') ?  'checked="true"' : '' ;?>  id="sfsi_plus_rectfb" type="checkbox" value="yes" class="styled"  /></div>
                                         <a href="#" title="Facebook Like" class="cstmdspllke">
                                             <img src="<?php echo SFSI_PLUS_PLUGURL; ?>images/like.jpg" alt="Facebook Like" /><span style="display: none;">18k</span>
+                                        </a>
+                                    </li>
+									<li>
+										<div class="radio_section tb_4_ck"><input name="sfsi_plus_rectfbshare" <?php echo ($option8['sfsi_plus_rectfbshare']=='yes') ?  'checked="true"' : '' ;?>  id="sfsi_plus_rectfbshare" type="checkbox" value="yes" class="styled"  /></div>
+                                        <a href="#" title="Facebook Share" class="cstmdsplfbshare">
+                                            <img src="<?php echo SFSI_PLUS_PLUGURL; ?>images/fbshare.png" alt="Facebook Share" /><span style="display: none;">18k</span>
                                         </a>
                                     </li>
                                     <li>

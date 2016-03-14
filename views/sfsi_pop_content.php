@@ -1,8 +1,8 @@
 <?php 
 
-$rss_readmore_text=__('Note: Also if you already offer a newsletter it makes sense to offer this option too, because it will get you more readers, as expained here.', SFSI_PLUS_DOMAIN );
-$ress_readmore_button=__('Ok, keep it active for the time being,I want to see how it works', SFSI_PLUS_DOMAIN );
-$rss_readmore_text2=__('Deactivate it', SFSI_PLUS_DOMAIN );
+$rss_readmore_text='Note: Also if you already offer a newsletter it makes sense to offer this option too, because it will get you more readers, as expained here.';
+$ress_readmore_button='Ok, keep it active for the time being,I want to see how it works';
+$rss_readmore_text2='Deactivate it';
 
 define('rss_readmore', $rss_readmore_text);
 define('ress_readmore_button', $ress_readmore_button);
@@ -14,7 +14,7 @@ define('rss_readmore_text2', $rss_readmore_text2);
     <div class="pop_up_box sfsi_pop_up"  >
         <img src="<?php echo SFSI_PLUS_PLUGURL; ?>images/close.jpg" id="close_popup" class="sfsicloseBtn" />
         <h4 id="readmore_text">
-        	Note: <?php  echo __( "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum", SFSI_PLUS_DOMAIN ); ?>.
+        	Note: Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
         </h4>
 </div>
 </div>
@@ -91,7 +91,9 @@ define('rss_readmore_text2', $rss_readmore_text2);
         </h4>
     
         <div class="adminTooltip" >
-           <a href="javascript:"><img width="51" class="sfsi_wicon" src="<?php echo SFSI_PLUS_PLUGURL; ?>images/facebook.png" title="facebook" alt="facebook" /></a>
+           <a href="javascript:">
+		   		<img width="51" class="sfsi_wicon" src="<?php echo SFSI_PLUS_PLUGURL; ?>images/facebook.png" title="facebook" alt="facebook" />
+		   </a>
            <div class="sfsi_plus_tool_tip_2 sfsi_plus_tool_tip_2_inr sfsi_plus_fb_tool_bdr" style="width: 59px;margin-left: -48.5px;">
                <span class="bot_arow bot_fb_arow "></span>
                <div class="sfsi_plus_inside fbb">

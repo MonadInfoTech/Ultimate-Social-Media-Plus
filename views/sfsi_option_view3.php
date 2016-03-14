@@ -36,15 +36,15 @@
         </p>
     	<ul class="tab_3_list">
         	<li>
-            	<?php  _e( 'It comes across as <span>more professional/</span> gives your site<span> more “credit”</span>', SFSI_PLUS_DOMAIN ); ?>
+            	<?php  _e( 'It comes across as more professional gives your site more “credit”', SFSI_PLUS_DOMAIN ); ?>
             </li>
             <li>
-            	<?php  _e( 'A smart automatic animation can <span>make your visitors aware of your icons</span> in an unintrusive manner', SFSI_PLUS_DOMAIN ); ?>
+            	<?php  _e( 'A smart automatic animation can make your visitors aware of your icons in an unintrusive manner', SFSI_PLUS_DOMAIN ); ?>
             </li> 
        	</ul>
         
         <p style="padding:0px;">
-        	<?php  _e( 'The icons have been compressed by <a href="https://goo.gl/IV5Q3z" target="_blank">Shortpixel.com</a> for faster loading of your site. Thank you Shortpixel!', SFSI_PLUS_DOMAIN ); ?>
+        	<?php  _e( 'The icons have been compressed by Shortpixel.com for faster loading of your site. Thank you Shortpixel!', SFSI_PLUS_DOMAIN ); ?>
         </p>
         
         <div class="row">
@@ -303,7 +303,7 @@
             <!--icon Animation section   start -->
             <div class="sub_row stand sec_new" style="margin-left: 0px;">
             	<h3>
-                	<?php  _e( 'Animate them (your main icons', SFSI_PLUS_DOMAIN ); ?>)
+                	<?php  _e( 'Animate them (your main icons)', SFSI_PLUS_DOMAIN ); ?>
                 </h3>
                 
                 <p class="radio_section tab_3_option">

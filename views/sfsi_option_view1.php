@@ -44,7 +44,7 @@
 <div class="tab1" >
 	<p class="top_txt">
     	<?php
-			_e( 'In general, <span>the more icons you offer the better</span> because people have different preferences, and more options means that there’s something for everybody, increasing the chances that you get followed and/or shared.', SFSI_PLUS_DOMAIN);
+			_e( 'In general, the more icons you offer the better because people have different preferences, and more options means that there’s something for everybody, increasing the chances that you get followed and/or shared.', SFSI_PLUS_DOMAIN);
 		?>
     </p> 
  	<ul class="plus_icn_listing">
@@ -119,7 +119,8 @@
             </span> 
             <div class="sfsiplus_right_info">
             	<p>
-            		<?php  _e( '<span>Strongly recommended:</span> Facebook is crucial, esp. for sharing.', SFSI_PLUS_DOMAIN); ?>
+            		<span><?php  _e( 'Strongly recommended:', SFSI_PLUS_DOMAIN); ?></span> 
+					<?php  _e( 'Facebook is crucial, esp. for sharing.', SFSI_PLUS_DOMAIN); ?>
   
                     <label class="expanded-area" >
   				    	<?php  _e( 'Facebook is the giant in the social media world, and even if you don’t have a Facebook account yourself you should display this icon, so that Facebook users can share your site on Facebook.', SFSI_PLUS_DOMAIN); ?>
@@ -140,7 +141,8 @@
             </span> 
             <div class="sfsiplus_right_info">
             	<p>
-                	<?php  _e( '<span>Strongly recommended:</span> Can have a strong promotional effect.', SFSI_PLUS_DOMAIN); ?>
+                	<span><?php  _e( 'Strongly recommended:', SFSI_PLUS_DOMAIN); ?></span> 
+					<?php  _e( 'Can have a strong promotional effect.', SFSI_PLUS_DOMAIN); ?>
             		
                     <label class="expanded-area" >
             			<?php  _e( 'If you have a Twitter-account then adding this icon is a no-brainer. However, similar as with facebook, even if you don’t have one you should still show this icon so that Twitter-users can share your site.', SFSI_PLUS_DOMAIN); ?>
@@ -162,7 +164,8 @@
             </span> 
             <div class="sfsiplus_right_info">
             	<p>
-                	<?php  _e( '<span>Strongly recommended:</span> Increasingly important and beneficial for SEO.', SFSI_PLUS_DOMAIN); ?>
+                	<span><?php  _e( 'Strongly recommended:', SFSI_PLUS_DOMAIN); ?></span>
+					<?php  _e( 'Increasingly important and beneficial for SEO.', SFSI_PLUS_DOMAIN); ?>
                 	<label class="expanded-area" ></label>
             	</p>
             </div>
@@ -179,9 +182,8 @@
             </span> 
             <div class="sfsiplus_right_info">
             	<p>
-                	<?php
-						_e( '<span>It depends:</span> Show this icon if you have a youtube account (and you should set up one if you have video content – that can increase your traffic significantly).', SFSI_PLUS_DOMAIN);
-					?>
+                	<span><?php _e( 'It depends:', SFSI_PLUS_DOMAIN); ?></span> 
+					<?php _e( 'Show this icon if you have a youtube account (and you should set up one if you have video content – that can increase your traffic significantly).', SFSI_PLUS_DOMAIN); ?>
             	</p>
             </div>
        </li>
@@ -197,9 +199,8 @@
             </span> 
             <div class="sfsiplus_right_info">
             	<p>
-					<?php
-						_e( '<span>It depends:</span> No.1 network for business purposes. Use this icon if you’re a LinkedInner.', SFSI_PLUS_DOMAIN); 
-					?>
+					<span><?php	_e( 'It depends:', SFSI_PLUS_DOMAIN); ?></span> 
+					<?php	_e( 'No.1 network for business purposes. Use this icon if you’re a LinkedInner.', SFSI_PLUS_DOMAIN); ?>
             	</p>
             </div>
        	</li>
@@ -215,7 +216,8 @@
         	</span> 
         	<div class="sfsiplus_right_info">
             	<p>
-                	<?php  _e( '<span>It depends:</span> Show this icon if you have a Pinterest account (and you should set up one if you have publish new pictures regularly – that can increase your traffic significantly).', SFSI_PLUS_DOMAIN); ?>
+                	<span><?php  _e( 'It depends:', SFSI_PLUS_DOMAIN); ?></span> 
+					<?php _e('Show this icon if you have a Pinterest account (and you should set up one if you have publish new pictures regularly – that can increase your traffic significantly).', SFSI_PLUS_DOMAIN); ?>
             	</p>
         	</div>
        	</li>
@@ -229,7 +231,8 @@
             </span> 
             <div class="sfsiplus_right_info">
             	<p>
-                	<?php  _e( '<span>It depends:</span> Show this icon if you have a Instagram account.', SFSI_PLUS_DOMAIN); ?>
+                	<span><?php  _e( 'It depends:', SFSI_PLUS_DOMAIN); ?></span> 
+					<?php _e('Show this icon if you have a Instagram account.', SFSI_PLUS_DOMAIN); ?>
             	</p>
             </div>
         </li>
@@ -245,7 +248,8 @@
             </span> 
             <div class="sfsiplus_right_info">
             	<p>
-                	<?php  _e( '<span>It depends:</span> Third-party service AddThis allows your visitors to share via many other social networks, however it may also slow down your site a bit.', SFSI_PLUS_DOMAIN); ?>
+                	<span><?php  _e( 'It depends:', SFSI_PLUS_DOMAIN); ?></span> 
+					<?php _e('Third-party service AddThis allows your visitors to share via many other social networks, however it may also slow down your site a bit.', SFSI_PLUS_DOMAIN); ?>
                 
                 	<label class="expanded-area" >
                 		<?php  _e( 'Everybody uses email – that’s why it’s', SFSI_PLUS_DOMAIN); ?>
@@ -280,13 +284,13 @@
             </span> 
             <div class="sfsiplus_right_info">
             	<p>
-                	<?php  _e( '<span>It depends:</span> Show this icon if you have a Houzz account.', SFSI_PLUS_DOMAIN); ?>
-					    
-            		<a href="http://www.houzz.com/" target="_blank">
-						Houzz
-                    </a> 
-            
-            		<?php  _e( 'is the No.1 site & community in the world of architecture and interior design.', SFSI_PLUS_DOMAIN); ?>
+                	<span><?php  _e( 'It depends:', SFSI_PLUS_DOMAIN); ?></span> 
+					<?php _e('Show this icon if you have a Houzz account.', SFSI_PLUS_DOMAIN); ?>
+					 
+            <?php  _e( 'Houzz is the No.1 site & community in the world of architecture and interior design.', SFSI_PLUS_DOMAIN); ?>
+			<a href="http://www.houzz.com/" target="_blank">
+						<?php _e('click here',SFSI_PLUS_DOMAIN); ?>
+                    </a>
             	</p>
             </div>
        	</li>
@@ -325,9 +329,8 @@
                 </span> 
                 <div class="sfsiplus_right_info">
                     <p>
-					<?php
-                        _e('<span>It depends:</span> Upload a custom icon if you have other accounts/websites you want to link to.', SFSI_PLUS_DOMAIN);
-                    ?>
+					<span><?php  _e('It depends:', SFSI_PLUS_DOMAIN); ?></span> 
+					<?php  _e('Upload a custom icon if you have other accounts/websites you want to link to.', SFSI_PLUS_DOMAIN); ?>
                    </p>
                 </div>
             </li>
@@ -351,9 +354,8 @@
             
             <div class="sfsiplus_right_info">
                 <p>
-                	<?php
-						_e('<span>It depends:</span> Upload a custom icon if you have other accounts/websites you want to link to.', SFSI_PLUS_DOMAIN);
-					?>
+                	<span><?php	_e('It depends:', SFSI_PLUS_DOMAIN); ?></span> 
+					<?php	_e('Upload a custom icon if you have other accounts/websites you want to link to.', SFSI_PLUS_DOMAIN); ?>
                 </p>
             </div>
         </li>

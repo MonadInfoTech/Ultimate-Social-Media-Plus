@@ -601,6 +601,7 @@ function sfsi_plus_options_updater8()
 	$sfsi_plus_rectshr    				= isset($_POST["sfsi_plus_rectshr"]) ? $_POST["sfsi_plus_rectshr"] : 'no';
 	$sfsi_plus_recttwtr    				= isset($_POST["sfsi_plus_recttwtr"]) ? $_POST["sfsi_plus_recttwtr"] : 'no';
 	$sfsi_plus_rectpinit    			= isset($_POST["sfsi_plus_rectpinit"]) ? $_POST["sfsi_plus_rectpinit"] : 'no';
+	$sfsi_plus_rectfbshare    			= isset($_POST["sfsi_plus_rectfbshare"]) ? $_POST["sfsi_plus_rectfbshare"] : 'no';
 	
     $up_option8=array(
 		'sfsi_plus_show_via_widget'			=> sanitize_text_field($sfsi_plus_show_via_widget),
@@ -632,7 +633,8 @@ function sfsi_plus_options_updater8()
 		'sfsi_plus_rectgp'					=> sanitize_text_field($sfsi_plus_rectgp),
 		'sfsi_plus_rectshr'					=> sanitize_text_field($sfsi_plus_rectshr),
 		'sfsi_plus_recttwtr'				=> sanitize_text_field($sfsi_plus_recttwtr),
-		'sfsi_plus_rectpinit'				=> sanitize_text_field($sfsi_plus_rectpinit)	
+		'sfsi_plus_rectpinit'				=> sanitize_text_field($sfsi_plus_rectpinit),
+		'sfsi_plus_rectfbshare'				=> sanitize_text_field($sfsi_plus_rectfbshare)
     );
     update_option('sfsi_plus_section8_options',serialize($up_option8));
     header('Content-Type: application/json');
@@ -1003,7 +1005,7 @@ function sfsi_plus_sanitize_field($value)
 	return strip_tags(trim($value));
 }
 //Sanitize color code
-if(@!function_exists(sfsi_plus_sanitize_hex_color))
+if(@!function_exists("sfsi_plus_sanitize_hex_color"))
 {
 	function sfsi_plus_sanitize_hex_color( $color )
 	{

@@ -140,7 +140,7 @@
 <!-- icons controllers section -->
 <div class="space">
 	
-    <h4><?php  _e( 'Text &amp; Design', SFSI_PLUS_DOMAIN ); ?></h4>
+    <h4><?php  _e( 'Text and Design', SFSI_PLUS_DOMAIN ); ?></h4>
 	
     <div class="text_options">
 		
@@ -232,7 +232,7 @@
         </h3>
 		<div class="sfsiplus_row_tab">
 			<label>
-            	<?php  _e( 'Backgroud<br />Color:', SFSI_PLUS_DOMAIN ); ?>
+            	<?php  _e( 'Backgroud Color:', SFSI_PLUS_DOMAIN ); ?>
 			</label>
             <input name="sfsi_plus_popup_background_color" data-default-color="#b5b5b5" id="sfsi_plus_popup_background_color" type="text" value="<?php echo ($option7['sfsi_plus_popup_background_color']!='') ?  $option7['sfsi_plus_popup_background_color'] : '' ;?>" />
 		</div>
@@ -246,7 +246,7 @@
 		</div>
 		<div class="sfsiplus_row_tab">
 			<label>
-            	<?php  _e( 'Border<br />Thinckness:', SFSI_PLUS_DOMAIN ); ?>
+            	<?php  _e( 'Border Thinckness:', SFSI_PLUS_DOMAIN ); ?>
 			</label>
 			<div class="field">
             	<input name="sfsi_plus_popup_border_thickness" type="text" value="<?php echo ($option7['sfsi_plus_popup_border_thickness']!='') ?  $option7['sfsi_plus_popup_border_thickness'] : '' ;?>" class="small" />
@@ -254,7 +254,7 @@
 		</div>
 		<div class="sfsiplus_row_tab">
 			<label>
-             	<?php  _e( 'Border<br /> Shadow:', SFSI_PLUS_DOMAIN ); ?>
+             	<?php  _e( 'Border Shadow:', SFSI_PLUS_DOMAIN ); ?>
             </label>
 			<ul class="border_shadow">
   				<li>

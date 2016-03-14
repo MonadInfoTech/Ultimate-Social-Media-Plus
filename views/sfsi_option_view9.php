@@ -97,9 +97,11 @@
 		<?php
 			_e('In addition to the email- or follow-icon you can also show a subscription form which maximizes chances that people subscribe to your site. To get access to the emails who subscribe, please', SFSI_PLUS_DOMAIN);
 		?>
-		<a target="_new" href="<?php echo $connectToFeed; ?>">
-			<?php _e('claim your feed',SFSI_PLUS_DOMAIN); ?>.
-		</a>
+		<b>
+			<a target="_new" href="<?php echo $connectToFeed; ?>">
+				<?php _e('claim your feed.',SFSI_PLUS_DOMAIN); ?>
+			</a>
+		</b>
     </p>
 	
     <div class="sfsi_plus_tab8_container">
@@ -125,16 +127,12 @@
             <ul class="sfsi_plus_form_info">
             	<li>
                     <b>
-                        1. <?php  _e( 'Widget', 'ultimate-social-media-plus' ); ?>:
+                        1. <?php  _e( 'Widget:', SFSI_PLUS_DOMAIN ); ?>
                     </b> 
-                    
-					<?php  _e( 'Go to the', 'ultimate-social-media-plus' ); ?>
-                    
-                    <a target="_blank" href="<?php echo site_url()?>/wp-admin/widgets.php">
-                        <?php  _e( 'widget settings', 'ultimate-social-media-plus' ); ?>
+                   <?php  _e( 'Go to the widget settings and drag and drop it to the sidebar:', SFSI_PLUS_DOMAIN ); ?>
+                   <a target="_blank" href="<?php echo site_url()?>/wp-admin/widgets.php">
+                        <?php  _e( 'Click here', SFSI_PLUS_DOMAIN ); ?>
                     </a> 
-                    
-					<?php  _e( 'and drag & drop it to the sidebar', 'ultimate-social-media-plus' ); ?>.
                 </li>
                 <li>
                 	<b>

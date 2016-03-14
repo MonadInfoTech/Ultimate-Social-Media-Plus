@@ -147,10 +147,10 @@
 <!-- Section 4 "Do you want to display "counts" next to your icons?" main div Start -->
 <div class="tab4">
 	<p>
-   		<?php  _e('It’s a psychological fact that people like to follow other people (as explained well in Robert Cialdini’s book “<a href="http://www.amazon.com/Influence-Psychology-Persuasion-Revised-Edition/dp/006124189X" target="_blank" class="lit_txt">Influence</a>”), so when they see that your site has already a good number of Facebook likes, it’s more likely that they will subscribe/like/share your site than if it had 0.', SFSI_PLUS_DOMAIN ); ?>
+   		<?php  _e('It’s a psychological fact that people like to follow other people, so when they see that your site has already a good number of Facebook likes, it’s more likely that they will subscribe/like/share your site than if it had 0.', SFSI_PLUS_DOMAIN ); ?>
     </p>
 	<p>
-  	  	<?php  _e( 'Therefore, you can select to display the count next to your main icons, for your main icons, not those next to the posts which will look like this:', SFSI_PLUS_DOMAIN ); ?>
+  	  	<?php  _e( 'Therefore, you can select to display the count next to your icons which will look like this:', SFSI_PLUS_DOMAIN ); ?>
     </p>
 	
     <!-- sample icons --> 
@@ -317,11 +317,11 @@
 				<ul>
 					<li>
 						<input name="sfsi_plus_facebook_countsFrom" <?php echo ($option4['sfsi_plus_facebook_countsFrom']=='likes') ?  'checked="true"' : '' ;?>  type="radio" value="likes" class="styled"  />           
-						<?php  _e( 'Retrieve the number of likes <b>of your blog</b>', SFSI_PLUS_DOMAIN ); ?>
+						<?php  _e( 'Retrieve the number of likes of your blog', SFSI_PLUS_DOMAIN ); ?>
 					</li>
 					<li>
 						<input name="sfsi_plus_facebook_countsFrom" <?php echo ($option4['sfsi_plus_facebook_countsFrom']=='mypage') ?  'checked="true"' : '' ;?>  type="radio" value="mypage" class="styled"  />
-						<?php  _e( 'Retrieve the number of likes <b>of your facebook page</b>', SFSI_PLUS_DOMAIN ); ?>
+						<?php  _e( 'Retrieve the number of likes your facebook page', SFSI_PLUS_DOMAIN ); ?>
 						<br>
 						<div class="sfsiplus_fbpgiddesc">
 							<div class="sfsiplus_fbpgidwpr" style="<?php echo ($option4['sfsi_plus_facebook_countsFrom']=='likes' || $option4['sfsi_plus_facebook_countsFrom']=='followers' || $option4['sfsi_plus_facebook_countsFrom']=='manual') ?  'display:none;' : '' ;?>">
@@ -393,7 +393,7 @@
 						 </ul>
 						<ul class="SFSI_instructions">
 							<li class="tw_follow_options" style="<?php echo ($option4['sfsi_plus_twitter_countsFrom']=='manual') ?  'display:none;' : '' ;?>">
-								<?php  _e( 'Please make sure you have entered the <b>Username</b> for <b>"Follow me on Twitter:"</b> in twitter settings under question number 2.', SFSI_PLUS_DOMAIN ); ?>
+								<?php  _e( 'Please make sure you have entered the Username for "Follow me on Twitter:" in twitter settings under question number 2.', SFSI_PLUS_DOMAIN ); ?>
 							</li>
 							<li class="tw_follow_options" style="<?php echo ($option4['sfsi_plus_twitter_countsFrom']=='manual') ?  'display:none;' : '' ;?>">
 								<h3>
@@ -467,7 +467,7 @@
 						<ul class="SFSI_instructions">
 							<li class="google_option" style="<?php echo ($option4['sfsi_plus_twitter_countsFrom']=='manual') ?  'display:none;' : '' ;?>">
 								<?php
-									_e('Please make sure you have entered the <b>URL</b> for <b>Visit my Google+ page at:</b> like <b> https://plus.google.com/u/0/b/[pageid]</b> in Google+ settings under question number 2.',SFSI_PLUS_DOMAIN);	?>
+									_e('Please make sure you have entered the URL for Visit my Google+ page at: like https://plus.google.com/u/0/b/[pageid] in Google+ settings under question number 2.',SFSI_PLUS_DOMAIN);	?>
                                  
 							</li>
 							<li class="google_option" style="<?php echo ($option4['sfsi_plus_twitter_countsFrom']=='manual') ?  'display:none;' : '' ;?>">
