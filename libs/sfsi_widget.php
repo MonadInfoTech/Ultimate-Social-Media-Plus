@@ -991,8 +991,12 @@ function sfsi_plus_prepairIcons($icon_name,$is_front=0, $onpost="no")
 				$toolClass = "sfsi_plus_printst_tool_bdr";
 				$arsfsiplus_row_class = "bot_pintst_arow";
 				
-				$pinterest_user = $sfsi_plus_section4_options['sfsi_plus_pinterest_user'];
-				$pinterest_board = $sfsi_plus_section4_options['sfsi_plus_pinterest_board'];
+				$pinterest_user = 	(isset($sfsi_plus_section4_options['sfsi_plus_pinterest_user']))
+									? $sfsi_plus_section4_options['sfsi_plus_pinterest_user'] : '';
+				
+				$pinterest_board = 	(isset($sfsi_plus_section4_options['sfsi_plus_pinterest_board']))
+									? $sfsi_plus_section4_options['sfsi_plus_pinterest_board'] : '';
+									
 				$visit_icon = $visit_iconsUrl."pinterest.png";
 				
 		        $url = (isset($sfsi_plus_section2_options['sfsi_plus_pinterest_pageUrl'])) ? $sfsi_plus_section2_options['sfsi_plus_pinterest_pageUrl'] : 'javascript:void(0);';

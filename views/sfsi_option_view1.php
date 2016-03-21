@@ -65,9 +65,9 @@
                     <?php  _e( 'RSS is still popular, esp. among the tech-savvy crowd.', SFSI_PLUS_DOMAIN); ?>
                     
                     <label class="expanded-area" >
-                        <?php  _e( 'RSS stands for Really Simply Syndication and is an easy way for people to read your content. You can learn more about it', SFSI_PLUS_DOMAIN); ?> 
+                        <?php  _e( 'RSS stands for Really Simply Syndication and is an easy way for people to read your content. ', SFSI_PLUS_DOMAIN); ?> 
                     	<a href="http://en.wikipedia.org/wiki/RSS" target="_new" title="Syndication">
-                            <?php  _e( 'here', SFSI_PLUS_DOMAIN); ?> 
+                            <?php  _e( 'Learn more about RSS', SFSI_PLUS_DOMAIN); ?> 
                         </a>.
                     </label>
                 </p>
@@ -97,11 +97,11 @@
                      	<?php } ?>
                    </span>
                 	<label class="expanded-area" >
-                		<?php  _e( 'Everybody uses email – that’s why it’s', SFSI_PLUS_DOMAIN); ?> 
-                		<a href="http://www.entrepreneur.com/article/230949" target="_new">
-                			<?php  _e( 'much more effective than social media', SFSI_PLUS_DOMAIN); ?>
-                		</a> 
-                		<?php  _e( 'to make people follow you. Not offering an email subscription option means losing out on future traffic to your site.', SFSI_PLUS_DOMAIN); ?>
+                		<?php  _e( 'Everybody uses email – that’s why it’s much more effective than social media to make people follow you', SFSI_PLUS_DOMAIN); ?> 
+                		(<a href="http://www.entrepreneur.com/article/230949" target="_new">
+                			<?php  _e( 'learn more', SFSI_PLUS_DOMAIN); ?>
+                		</a>)
+                		<?php  _e( 'Not offering an email subscription option means losing out on future traffic to your site.', SFSI_PLUS_DOMAIN); ?>
                 	</label>
             	</p>
              	<a href="javascript:;" class="expand-area"><?php  _e( 'Read more', SFSI_PLUS_DOMAIN); ?></a>	 
@@ -260,14 +260,10 @@
                 
                 		<?php  _e( 'to make people follow you. Not offering an email subscription option means losing out on future traffic to your site.', SFSI_PLUS_DOMAIN); ?>
                		</label>
-                    <?php  _e( 'See an', SFSI_PLUS_DOMAIN); ?>
-                    <a href="javascript:;" class="pop-up" data-id="athis-s1" >
-                    	<?php  _e( 'Example', SFSI_PLUS_DOMAIN); ?>
-                    </a> 
-                    <?php  _e( 'and checkout their', SFSI_PLUS_DOMAIN); ?>
+                    <?php  _e( 'Check out their reviews:', SFSI_PLUS_DOMAIN); ?>
                     <a href="https://wordpress.org/support/view/plugin-reviews/addthis" target="_blank">
-                    	<?php  _e( 'reviews', SFSI_PLUS_DOMAIN); ?>
-                    </a>
+                    	<?php  _e( 'Click here', SFSI_PLUS_DOMAIN); ?>
+                    </a>.
                 	
             	</p>
             </div>
@@ -289,7 +285,7 @@
 					 
             <?php  _e( 'Houzz is the No.1 site & community in the world of architecture and interior design.', SFSI_PLUS_DOMAIN); ?>
 			<a href="http://www.houzz.com/" target="_blank">
-						<?php _e('click here',SFSI_PLUS_DOMAIN); ?>
+						<?php _e('Visit Houzz',SFSI_PLUS_DOMAIN); ?>
                     </a>
             	</p>
             </div>

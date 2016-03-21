@@ -107,7 +107,7 @@
 	<div id="accordion1">
 	<!-- step old 3 start here -->
         <h3><span>4</span>
-            <?php  _e( 'What design &amp; animation do you want to give your icons?', SFSI_PLUS_DOMAIN ); ?>
+            <?php  _e( 'What design and animation do you want to give your icons?', SFSI_PLUS_DOMAIN ); ?>
         </h3>
         <?php include(SFSI_PLUS_DOCROOT.'/views/sfsi_option_view3.php'); ?>
         <!-- step old 3 END here -->

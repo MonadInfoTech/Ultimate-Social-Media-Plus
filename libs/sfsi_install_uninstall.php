@@ -12,7 +12,7 @@ function sfsi_plus_update_plugin()
 	}
 	
 	//Install version
-	update_option("sfsi_plus_pluginVersion", "2.34");
+	update_option("sfsi_plus_pluginVersion", "2.35");
 	
 	/*show notification*/
 	if(!get_option('sfsi_plus_show_notification'))
@@ -538,7 +538,7 @@ function sfsi_plus_check_wp_head() {
 	    $path=pathinfo($_SERVER['REQUEST_URI']);
 	    if($path['basename']=="themes.php" || $path['basename']=="theme-editor.php" || $path['basename']=="admin.php?page=sfsi-plus-options")
 	    {
-	    	echo "<div class=\"error\" ><p>". __( 'Error : Please fix your theme to make plugins work correctly. Go to the Theme Editor and insert &lt;?php wp_head();  ?&gt; just before the &lt;/head&gt; line of your theme`s header.php file.', SFSI_PLUS_DOMAIN )."<a href=\"theme-editor.php\">".__('Go to your theme editor: click here.', SFSI_PLUS_DOMAIN )."</a></p></div>";
+	    	echo "<div class=\"error\" ><p>". __( 'Error : Please fix your theme to make plugins work correctly. Go to the Theme Editor and insert &lt;?php wp_head();  ?&gt; just before the &lt;/head&gt; line of your theme`s header.php file. Go to your theme editor: ', SFSI_PLUS_DOMAIN )."<a href=\"theme-editor.php\">".__('click here', SFSI_PLUS_DOMAIN )."</a>.</p></div>";
 			
 	   }		
 	}
@@ -562,7 +562,7 @@ function sfsi_plus_check_wp_footer() {
 		
 		if($path['basename']=="themes.php" || $path['basename']=="theme-editor.php" || $path['basename']=="admin.php?page=sfsi-plus-options")
 		{
-			echo "<div class=\"error\" ><p>".	__("Error : Please fix your theme to make plugins work correctly. Go to the Theme Editor and insert &lt;?php wp_footer(); ?&gt; as the first line of your theme's footer.php file.", SFSI_PLUS_DOMAIN)."<a href=\"theme-editor.php\">".__('Go to your theme editor: click here.', SFSI_PLUS_DOMAIN )."</a></p></div>";
+			echo "<div class=\"error\" ><p>".	__("Error : Please fix your theme to make plugins work correctly. Go to the Theme Editor and insert &lt;?php wp_footer(); ?&gt; as the first line of your theme's footer.php file. Go to your theme editor: ", SFSI_PLUS_DOMAIN)."<a href=\"theme-editor.php\">".__('click here', SFSI_PLUS_DOMAIN )."</a>.</p></div>";
 		} 	    
 	}
 }

@@ -282,14 +282,14 @@ $pin_url=($option2['sfsi_plus_pinterest_pageUrl']!='') ?  $option2['sfsi_plus_pi
 <div class="pop-overlay read-overlay demail-1" >
     <div class="pop_up_box sfsi_pop_up" >
        <h4>
-       		Note: <?php _e('Also if you already offer a newsletter it makes sense to offer this option too, because it will get you <span class="mediam_txt">more readers</span> as explained', SFSI_PLUS_DOMAIN ); ?>
-           	<a href="http://www.specificfeeds.com/rss" target="_new" style="color:#5A6570;display: inline;text-decoration:underline">
-                <?php  _e( 'here', SFSI_PLUS_DOMAIN ); ?>
-           	</a>. 
+       		 <?php _e('Note: Also if you already offer a newsletter it makes sense to offer this option too, because it will get you more readers as explained', SFSI_PLUS_DOMAIN ); ?>
+           	(<a href="http://www.specificfeeds.com/rss" target="_new" style="color:#5A6570;display: inline;text-decoration:underline">
+                <?php  _e( 'learn more', SFSI_PLUS_DOMAIN ); ?>
+           	</a>). 
        </h4>
        <div class="button">
            <a href="javascript:;" class="hideemailpop" title="Ok, keep it active for the time being,I want to see how it works">
-                <?php  _e( 'Ok, keep it active for the time being<br />,I want to see how it works', SFSI_PLUS_DOMAIN ); ?>
+                <?php  _e( 'Ok, keep it active for the time being, I want to see how it works', SFSI_PLUS_DOMAIN ); ?>
             </a>
        </div>
        <a href="javascript:;" id="deac_email2" title="Deactivate it">

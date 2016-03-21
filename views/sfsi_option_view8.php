@@ -393,13 +393,13 @@
                     	<?php if ($option8['sfsi_plus_display_button_type']=='normal_button'): $display = "display:block"; else:  $display = "display:none"; endif;?>
 						<div class="row radiodisplaysection" style="<?php echo $display; ?>">
 							<h4>
-                            	<?php  _e( 'Size &amp; spacing of your icons', SFSI_PLUS_DOMAIN ); ?>
+                            	<?php  _e( 'Size and spacing of your icons', SFSI_PLUS_DOMAIN ); ?>
                             </h4>
 							<div class="icons_size">
                             <span>
                             	<?php  _e( 'Size:', SFSI_PLUS_DOMAIN ); ?>
                             </span><input name="sfsi_plus_post_icons_size" value="<?php echo ($option8['sfsi_plus_post_icons_size']!='') ?  $option8['sfsi_plus_post_icons_size'] : '' ;?>" type="text" /><ins>
-                           		<?php  _e( 'pixels wide &amp; tall', SFSI_PLUS_DOMAIN ); ?>
+                           		<?php  _e( 'pixels wide and tall', SFSI_PLUS_DOMAIN ); ?>
                             </ins> <span class="last">
                             	<?php  _e( 'Spacing between icons:', SFSI_PLUS_DOMAIN ); ?>
                             </span><input name="sfsi_plus_post_icons_spacing" type="text" value="<?php echo ($option8['sfsi_plus_post_icons_spacing']!='') ?  $option8['sfsi_plus_post_icons_spacing'] : '' ;?>" /><ins>

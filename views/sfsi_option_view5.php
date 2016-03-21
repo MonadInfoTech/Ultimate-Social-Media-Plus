@@ -574,7 +574,7 @@
 		<!-- Like & Share buttons (Facebook, Twitter, Google+) start here -->
 		<div class="icons_size">
         	<span>
-        		<?php  _e( 'Language for Like & Share buttons(Facebook, Twitter, Google+):', SFSI_PLUS_DOMAIN ); ?>
+        		<?php  _e( 'Language for Like & Share buttons (Facebook, Twitter, Google+):', SFSI_PLUS_DOMAIN ); ?>
         	</span>
 			<div class="language_field">
 				<select name="sfsi_plus_icons_language" id="sfsi_plus_icons_language" class="language">
