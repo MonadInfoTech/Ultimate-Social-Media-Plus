@@ -41,9 +41,11 @@ class sfsi_plus_SocialHelper
 	/* get linkedIn counts */
 	function sfsi_get_linkedin($url)
 	{
-	   $json_string = $this->file_get_contents_curl("http://www.linkedin.com/countserv/count/share?url=$url&format=json");
-	   $json = json_decode($json_string, true);
-	   return isset($json['count'])? intval($json['count']):0;
+		$json_string = $this->file_get_contents_curl(
+			'https://www.linkedin.com/countserv/count/share?format=json&url='.$url
+		);
+		$json = json_decode($json_string, true);
+		return isset($json['count'])? intval($json['count']):0;
 	}
 
 	/* get linkedIn follower */
@@ -558,7 +560,7 @@ class sfsi_plus_SocialHelper
     private function sfsi_get_http_response_code($url)
 	{
 		$headers = get_headers($url);
-		return substr($headers[0], 9, 3);
+		return substr(@$headers[0], 9, 3);
 	} 
 }
 /* end of class */

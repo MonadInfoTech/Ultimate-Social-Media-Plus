@@ -265,7 +265,7 @@ function sfsi_plus_beforaftereposts( $content )
 				{
 					$icons_before .= "<div class='sfsi_plus_Sicons' style='".$style."'>";
 						$icons_before .= "<div style='float:left;margin:0 0px; line-height:".$lineheight."px'><span>".$txt."</span></div>";
-						$icons_before .= sfsi_plus_check_posts_visiblity(0);
+						$icons_before .= sfsi_plus_check_posts_visiblity(0 , "yes");
 					$icons_before .= "</div>";
 				}
 			$icons_before .= '</div>';
@@ -283,7 +283,7 @@ function sfsi_plus_beforaftereposts( $content )
 			{
 				$icons_after .= "<div class='sfsi_plus_Sicons' style='".$style."'>";
 					$icons_after .= "<div style='float:left;margin:0 0px; line-height:".$lineheight."px'><span>".$txt."</span></div>";
-					$icons_after .= sfsi_plus_check_posts_visiblity(0);
+					$icons_after .= sfsi_plus_check_posts_visiblity(0 , "yes");
 				$icons_after .= "</div>";
 			}
 			$icons_after .= '</div>';
@@ -414,7 +414,7 @@ function sfsi_plus_beforeafterblogposts( $content )
 						if($sfsi_section8['sfsi_plus_rectpinit'] == 'yes')
 						{
 							if($show_count){$sfsiLikeWithpinit = "90px";}else{$sfsiLikeWithpinit = "auto";}
-							$icons_before.="<div class='sf_pinit' style='display: inline-block;vertical-align: middle;width: ".$sfsiLikeWithpinit."'>".sfsi_plus_pinitpinterest($permalink,$show_count)."</div>";
+							$icons_before.="<div class='sf_pinit' style='display: inline-block;vertical-align: middle;text-align:left;width: ".$sfsiLikeWithpinit."'>".sfsi_plus_pinitpinterest($permalink,$show_count)."</div>";
 						}
 						
 						if($sfsi_section8['sfsi_plus_rectgp'] == 'yes')
@@ -430,7 +430,7 @@ function sfsi_plus_beforeafterblogposts( $content )
 					else
 					{
 						$icons_before .= "<div style='float:left;margin:0 0px; line-height:".$lineheight."px'><span>".$txt."</span></div>";
-						$icons_before .= sfsi_plus_check_posts_visiblity(0);
+						$icons_before .= sfsi_plus_check_posts_visiblity(0 , "yes");
 					}
 				$icons_before .= "</div>";
 			$icons_before .= "</div>";
@@ -491,7 +491,7 @@ function sfsi_plus_beforeafterblogposts( $content )
 						if($sfsi_section8['sfsi_plus_rectpinit'] == 'yes')
 						{
 							if($show_count){$sfsiLikeWithpinit = "90px";}else{$sfsiLikeWithpinit = "auto";}
-						 	$icons_after.="<div class='sf_pinit' style='display: inline-block;vertical-align: middle;width: ".$sfsiLikeWithpinit."'>".sfsi_plus_pinitpinterest($permalink,$show_count)."</div>";
+						 	$icons_after.="<div class='sf_pinit' style='display: inline-block;text-align:left;vertical-align: middle;width: ".$sfsiLikeWithpinit."'>".sfsi_plus_pinitpinterest($permalink,$show_count)."</div>";
 						}
 						
 						if($sfsi_section8['sfsi_plus_rectgp'] == 'yes')
@@ -507,7 +507,7 @@ function sfsi_plus_beforeafterblogposts( $content )
 					else
 					{
 						$icons_after .= "<div style='float:left;margin:0 0px; line-height:".$lineheight."px'><span>".$txt."</span></div>";
-						$icons_after .= sfsi_plus_check_posts_visiblity(0);
+						$icons_after .= sfsi_plus_check_posts_visiblity(0 , "yes");
 					}
 				$icons_after .= "</div>";
 			$icons_after .= "</div>";

@@ -95,7 +95,7 @@ function sfsi_plus_social_buttons_below($content)
 	if($sfsi_section8['sfsi_plus_rectpinit'] == 'yes')
 	{
 		if($show_count){$sfsiLikeWithpinit = "90px";}else{$sfsiLikeWithpinit = "auto";}
-	 	$icons.="<div class='sf_pinit' style='display: inline-block;vertical-align: middle;width: ".$sfsiLikeWithpinit.";'>".sfsi_plus_pinitpinterest($permalink,$show_count)."</div>";
+	 	$icons.="<div class='sf_pinit' style='display: inline-block;text-align:left;vertical-align: middle;width: ".$sfsiLikeWithpinit.";'>".sfsi_plus_pinitpinterest($permalink,$show_count)."</div>";
 	}
 	if($sfsi_section8['sfsi_plus_rectgp'] == 'yes')
 	{
