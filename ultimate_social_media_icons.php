@@ -6,7 +6,7 @@ Description: The best social media plugin on the market. And 100% FREE. Allows y
 Author: UltimatelySocial
 Text Domain: ultimate-social-media-plus
 Author URI: http://ultimatelysocial.com
-Version: 2.3.6
+Version: 2.3.7
 License: GPLv2
 */
 
@@ -36,7 +36,7 @@ register_deactivation_hook(__FILE__, 'sfsi_plus_deactivate_plugin');
 register_uninstall_hook(__FILE__, 'sfsi_plus_Unistall_plugin');
 
 /*Plugin version setup*/
-if(!get_option('sfsi_plus_pluginVersion') || get_option('sfsi_plus_pluginVersion') < 2.36)
+if(!get_option('sfsi_plus_pluginVersion') || get_option('sfsi_plus_pluginVersion') < 2.37)
 {
 	add_action("init", "sfsi_plus_update_plugin");
 }

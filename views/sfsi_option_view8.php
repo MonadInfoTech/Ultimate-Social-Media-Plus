@@ -263,7 +263,11 @@
 					}
 					?>
 					<label class="sfsiplus_sub-subtitle ckckslctn" <?php echo $label_style;?>>
-                    	<?php  _e( 'Place &lt;?php echo DISPLAY_ULTIMATE_PLUS(); ?&gt; in your theme codes or use the shortcode [DISPLAY_ULTIMATE_PLUS] to display them wherever you want.', SFSI_PLUS_DOMAIN ); ?>
+                    	<?php _e('Place the following string into your theme codes: ',SFSI_PLUS_DOMAIN);?> 
+						
+                        &lt;?php echo DISPLAY_ULTIMATE_PLUS(); ?&gt;
+                        
+						<?php _e('Or use the shortcode [DISPLAY_ULTIMATE_PLUS] to display them wherever you want.',SFSI_PLUS_DOMAIN); ?>
                     </label>
 				</p>
 			</div>

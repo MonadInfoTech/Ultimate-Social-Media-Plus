@@ -410,7 +410,7 @@
 								2: <?php  _e( 'Click on "Create new app"', SFSI_PLUS_DOMAIN ); ?>
 							</li>
 							<li class="tw_follow_options" style="<?php echo ($option4['sfsi_plus_twitter_countsFrom']=='manual') ?  'display:none;' : '' ;?>">
-								3: <?php  _e( 'Enter a random Name, Descriptions and Website URL (including the "http://", e.g. http://dummysitename.com)', SFSI_PLUS_DOMAIN ); ?>
+								3: <?php  _e( 'Enter a random Name, Description and Website URL (including the "http://", e.g. http://dummysitename.com)', SFSI_PLUS_DOMAIN ); ?>
 							</li>
 							<li class="tw_follow_options" style="<?php echo ($option4['sfsi_plus_twitter_countsFrom']=='manual') ?  'display:none;' : '' ;?>">
 								4: <?php  _e( 'Go to "Keys and Access Tokens" tab and click on "Generate Token" in the "Token actions" section at the bottom', SFSI_PLUS_DOMAIN ); ?>
