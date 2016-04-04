@@ -168,6 +168,19 @@
         		<?php _e('Visit us on ultimatelysocial.com',SFSI_PLUS_DOMAIN); ?>
          	</a>
          </p>
+		 <?php 
+			 $tra_lan = get_bloginfo( 'language' );
+			 if($tra_lan == "en-US" )
+			 {}
+			 else 
+			 { 
+				 ?>
+				 <p class="translatelilne">
+					<?php  _e( 'The plugin was translated by (your name). Need translation work to get done? Contact (your name) at (your email)', SFSI_PLUS_DOMAIN ); ?>
+				 </p>
+		 		<?php
+			}
+		?>
 	</div>
  <!-- all pops of plugin under sfsi_pop_content.php file --> 
  <?php include(SFSI_PLUS_DOCROOT.'/views/sfsi_pop_content.php'); ?>
