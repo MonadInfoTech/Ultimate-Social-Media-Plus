@@ -217,7 +217,7 @@
         	<div class="sfsiplus_right_info">
             	<p>
                 	<span><?php  _e( 'It depends:', SFSI_PLUS_DOMAIN); ?></span> 
-					<?php _e('Show this icon if you have a Pinterest account (and you should set up one if you have publish new pictures regularly – that can increase your traffic significantly).', SFSI_PLUS_DOMAIN); ?>
+					<?php _e('Show this icon if you have a Pinterest account (and you should set up one if you publish new pictures regularly – that can increase your traffic significantly).', SFSI_PLUS_DOMAIN); ?>
             	</p>
         	</div>
        	</li>

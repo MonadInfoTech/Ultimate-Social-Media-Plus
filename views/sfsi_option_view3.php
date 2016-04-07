@@ -36,7 +36,7 @@
         </p>
     	<ul class="tab_3_list">
         	<li>
-            	<?php  _e( 'It comes across as more professional gives your site more “credit”', SFSI_PLUS_DOMAIN ); ?>
+            	<?php  _e( 'It comes across as more professional and gives your site more “credit”', SFSI_PLUS_DOMAIN ); ?>
             </li>
             <li>
             	<?php  _e( 'A smart automatic animation can make your visitors aware of your icons in an unintrusive manner', SFSI_PLUS_DOMAIN ); ?>
@@ -316,7 +316,10 @@
                         	<option value="fade_in" <?php echo ( $option3['sfsi_plus_mouseOver_effect']=='fade_in') ?  'selected="true"' : '' ;?>>
                         		<?php  _e( 'Fade In', SFSI_PLUS_DOMAIN ); ?>
                         	</option>
-                            <option value="scale" <?php echo ( $option3['sfsi_plus_mouseOver_effect']=='scale') ?  'selected="true"' : '' ;?>>Scale</option><option value="combo" <?php echo ( $option3['sfsi_plus_mouseOver_effect']=='combo') ?  'selected="true"' : '' ;?>>
+                            <option value="scale" <?php echo ( $option3['sfsi_plus_mouseOver_effect']=='scale') ?  'selected="true"' : '' ;?>>
+								<?php  _e( 'Scale', SFSI_PLUS_DOMAIN ); ?>
+							</option>
+							<option value="combo" <?php echo ( $option3['sfsi_plus_mouseOver_effect']=='combo') ?  'selected="true"' : '' ;?>>
                         		<?php  _e( 'Combo', SFSI_PLUS_DOMAIN ); ?>
                         	</option>
                     	</select>

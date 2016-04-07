@@ -232,7 +232,7 @@
         </h3>
 		<div class="sfsiplus_row_tab">
 			<label>
-            	<?php  _e( 'Backgroud Color:', SFSI_PLUS_DOMAIN ); ?>
+            	<?php  _e( 'Background Color:', SFSI_PLUS_DOMAIN ); ?>
 			</label>
             <input name="sfsi_plus_popup_background_color" data-default-color="#b5b5b5" id="sfsi_plus_popup_background_color" type="text" value="<?php echo ($option7['sfsi_plus_popup_background_color']!='') ?  $option7['sfsi_plus_popup_background_color'] : '' ;?>" />
 		</div>

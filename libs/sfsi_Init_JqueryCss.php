@@ -50,7 +50,9 @@ function sfsiplus_plugin_back_enqueue_script()
 			);
 			$translation_array1 = array(
 				'Coll_apse'             => __('Collapse',SFSI_PLUS_DOMAIN),
-				'Save_All_Settings'     => __('Save All Settings',SFSI_PLUS_DOMAIN)
+				'Save_All_Settings'     => __('Save All Settings',SFSI_PLUS_DOMAIN),
+				'Upload_a'    			=> __('Upload a custom icon if you have other accounts/websites you want to link to.',SFSI_PLUS_DOMAIN),
+				'It_depends'     		=> __('It depends',SFSI_PLUS_DOMAIN)
 			);
 			
 			wp_localize_script( 'SFSIPLUSCustomJs', 'object_name', $translation_array );

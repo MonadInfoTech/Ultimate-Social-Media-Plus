@@ -321,7 +321,7 @@
 					</li>
 					<li>
 						<input name="sfsi_plus_facebook_countsFrom" <?php echo ($option4['sfsi_plus_facebook_countsFrom']=='mypage') ?  'checked="true"' : '' ;?>  type="radio" value="mypage" class="styled"  />
-						<?php  _e( 'Retrieve the number of likes your facebook page', SFSI_PLUS_DOMAIN ); ?>
+						<?php  _e( 'Retrieve the number of likes of your facebook page', SFSI_PLUS_DOMAIN ); ?>
 						<br>
 						<div class="sfsiplus_fbpgiddesc">
 							<div class="sfsiplus_fbpgidwpr" style="<?php echo ($option4['sfsi_plus_facebook_countsFrom']=='likes' || $option4['sfsi_plus_facebook_countsFrom']=='followers' || $option4['sfsi_plus_facebook_countsFrom']=='manual') ?  'display:none;' : '' ;?>">
@@ -330,7 +330,7 @@
 							<input name="sfsi_plus_facebook_mypageCounts" type="text" class="input mypginpt" value="<?php echo ($option4['sfsi_plus_facebook_mypageCounts']!='') ?  $option4['sfsi_plus_facebook_mypageCounts'] : '' ;?>" style="<?php echo ($option4['sfsi_plus_facebook_countsFrom']=='likes' || $option4['sfsi_plus_facebook_countsFrom']=='followers' || $option4['sfsi_plus_facebook_countsFrom']=='manual') ?  'display:none;' : '' ;?>" />
 						</div>
 						<div class="sfsiplus_fbpgidwpr sfsiplus_fbpgiddesc" style="<?php echo ($option4['sfsi_plus_facebook_countsFrom']=='likes' || $option4['sfsi_plus_facebook_countsFrom']=='followers' || $option4['sfsi_plus_facebook_countsFrom']=='manual') ?  'display:none;' : '' ;?>">
-							(<?php  _e( 'Youll find it at the bottom of the << About >> -tab on your facebook page', SFSI_PLUS_DOMAIN ); ?>)
+							(<?php  _e( "You'll find it at the bottom of the << About >> -tab on your facebook page", SFSI_PLUS_DOMAIN ); ?>)
 						</div>
 					</li>
 					<li>
@@ -477,7 +477,7 @@
 							</li>
 							<li class="google_option" style="<?php echo ($option4['sfsi_plus_twitter_countsFrom']=='manual') ?  'display:none;' : '' ;?>">
 								1: <?php
-										_e('Login to your Goolge account, go to', SFSI_PLUS_DOMAIN	); ?>
+										_e('Login to your Google account, go to', SFSI_PLUS_DOMAIN	); ?>
 								<a href="http://console.developers.google.com" target="_blank">
 									console.developers.google.com
 								</a>
