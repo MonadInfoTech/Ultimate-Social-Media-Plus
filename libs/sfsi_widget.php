@@ -608,7 +608,11 @@ function sfsi_plus_prepairIcons($icon_name,$is_front=0, $onpost="no", $fromPost 
 			 }
 			 
 			 /* fecth no of counts if active in admin section */
-			 if($fromPost == 'yes' && !empty($post))
+			 if(
+			 	$fromPost == 'yes' && !empty($post) &&
+				$sfsi_plus_section4_options['sfsi_plus_facebook_countsDisplay']=="yes" &&
+				$sfsi_plus_section4_options['sfsi_plus_display_counts']=="yes"
+			 )
 			{
 				$fb_data=$socialObj->sfsi_get_fb($current_url);   
 				$counts=$socialObj->format_num($fb_data['total_count']);
@@ -1228,7 +1232,11 @@ function sfsi_plus_prepairIcons($icon_name,$is_front=0, $onpost="no", $fromPost 
                  }
 				  
                  /* fecth no of counts if active in admin section */ 
-				if($fromPost == 'yes' && !empty($post))
+				if(	
+					$fromPost == 'yes' && !empty($post) &&
+					$sfsi_plus_section4_options['sfsi_plus_linkedIn_countsDisplay']=="yes" &&
+					$sfsi_plus_section4_options['sfsi_plus_display_counts']=="yes"
+				)
 				{
 					$followers=$socialObj->sfsi_get_linkedin($current_url);
 					$counts=$socialObj->format_num($followers);

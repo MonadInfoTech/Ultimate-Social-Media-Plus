@@ -142,7 +142,7 @@ define('rss_readmore_text2', $rss_readmore_text2);
     <div class="pop_up_box_ex sfsi_pop_up adPopWidth" >
         <img src="<?php echo SFSI_PLUS_PLUGURL; ?>images/close.jpg" id="close_popup" class="sfsicloseBtn" />
     	<h4 id="readmore_text">
-        	<?php  _e( 'Move over the Twiiter-icon…', SFSI_PLUS_DOMAIN ); ?>
+        	<?php  _e( 'Move over the Twitter-icon…', SFSI_PLUS_DOMAIN ); ?>
         </h4>
     
         <div class="adminTooltip" >
