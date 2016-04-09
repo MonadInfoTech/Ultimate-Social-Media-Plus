@@ -1048,3 +1048,6 @@ ul#adminmenu li.toplevel_page_sfsi-plus-options a.current, ul#adminmenu li.tople
 .language-field{float:left;width:24%;}
 .language-field select{width:100%;}
 .icons_size{clear:both;}
+.plus_custom-img img, .sfsiplus_custom_section img, .sfsiplus_custom_iconOrder img, .plus_sfsi_sample_icons img{
+    width: 51px;
+}

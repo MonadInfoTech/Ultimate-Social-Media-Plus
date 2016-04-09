@@ -6,8 +6,8 @@ function sfsi_plus_UploadSkins()
 	extract($_REQUEST);
 	$upload_dir = wp_upload_dir();
 	
-	$ThumbSquareSize 		= 51; //Thumbnail will be 57X57
-	$Quality 			= 90; //jpeg quality
+	$ThumbSquareSize 		= 100; //Thumbnail will be 57X57
+	$Quality 				= 90; //jpeg quality
 	$DestinationDirectory   = $upload_dir['path'].'/'; //specify upload directory ends with / (slash)
 	$AcceessUrl             = $upload_dir['url'].'/';
 	$ThumbPrefix			= "cmicon_";
@@ -216,7 +216,7 @@ function sfsi_plus_UploadIcons()
 	extract($_POST);
 	
 	$upload_dir	= wp_upload_dir();
-	$ThumbSquareSize 		= 51; //Thumbnail will be 57X57
+	$ThumbSquareSize 		= 100; //Thumbnail will be 57X57
 	$Quality 			    = 90; //jpeg quality
 	$DestinationDirectory   = $upload_dir['path'].'/'; //specify upload directory ends with / (slash)
 	$AcceessUrl             = $upload_dir['url'].'/';
