@@ -1051,3 +1051,7 @@ ul#adminmenu li.toplevel_page_sfsi-plus-options a.current, ul#adminmenu li.tople
 .plus_custom-img img, .sfsiplus_custom_section img, .sfsiplus_custom_iconOrder img, .plus_sfsi_sample_icons img{
     width: 51px;
 }
+.cstomskins_upload span.sfsi_plus-bgimage
+{
+	background-size: 51px 51px !important;
+}

@@ -197,8 +197,10 @@
                          if(get_option("plus_rss_skin"))
                          {
                             $icon = get_option("plus_rss_skin");
-                            echo '<span class="sfsiplus_row_17_1 sfsiplus_rss_section" style="background: url('.$icon.') no-repeat;"></span>';
-                         }else
+                            echo '<span class="sfsiplus_row_17_1 sfsiplus_rss_section sfsi_plus-bgimage" style="background: url('.$icon.') no-repeat;">		
+							</span>';
+                         }
+						 else
                          {
                              echo '<span class="sfsiplus_row_17_1 sfsiplus_rss_section" style="background-position:-1px 0;"></span>';
                          }
@@ -206,17 +208,19 @@
                          if(get_option("plus_email_skin"))
                          {
                             $icon = get_option("plus_email_skin");
-                            echo '<span class="sfsiplus_row_17_2 sfsiplus_email_section" style="background: url('.$icon.') no-repeat;"></span>';
-                         }else
+                            echo '<span class="sfsiplus_row_17_2 sfsiplus_email_section sfsi_plus-bgimage" style="background: url('.$icon.') no-repeat;"></span>';
+                         }
+						 else
                          {
                              echo '<span class="sfsiplus_row_17_2 sfsiplus_email_section" style="background-position:-58px 0;"></span>';
                          }
                          
-                         if(get_option("plus_facebook_skin"))
+						 if(get_option("plus_facebook_skin"))
                          {
-                            $icon = get_option("plus_facebook_skins");
-                            echo '<span class="sfsiplus_row_17_3 sfsiplus_facebook_section" style="background: url('.$icon.') no-repeat;"></span>';
-                         }else
+                            $icon = get_option("plus_facebook_skin");
+                            echo '<span class="sfsiplus_row_17_3 sfsiplus_facebook_section sfsi_plus-bgimage" style="background: url('.$icon.') no-repeat;"></span>';
+                         }
+						 else
                          {
                              echo '<span class="sfsiplus_row_17_3 sfsiplus_facebook_section" style="background-position:-118px 0;"></span>';
                          }
@@ -224,8 +228,9 @@
                          if(get_option("plus_google_skin"))
                          {
                             $icon = get_option("plus_google_skin");
-                            echo '<span class="sfsiplus_row_17_4 sfsiplus_google_section" style="background: url('.$icon.') no-repeat;"></span>';
-                         }else
+                            echo '<span class="sfsiplus_row_17_4 sfsiplus_google_section sfsi_plus-bgimage" style="background: url('.$icon.') no-repeat;"></span>';
+                         }
+						 else
                          {
                              echo '<span class="sfsiplus_row_17_4 sfsiplus_google_section" style="background-position:-176px 0;"></span>';
                          }
@@ -233,8 +238,9 @@
                          if(get_option("plus_twitter_skin"))
                          {
                             $icon = get_option("plus_twitter_skin");
-                            echo '<span class="sfsiplus_row_17_5 sfsiplus_twitter_section" style="background: url('.$icon.') no-repeat;"></span>';
-                         }else
+                            echo '<span class="sfsiplus_row_17_5 sfsiplus_twitter_section sfsi_plus-bgimage" style="background: url('.$icon.') no-repeat;"></span>';
+                         }
+						 else
                          {
                              echo '<span class="sfsiplus_row_17_5 sfsiplus_twitter_section" style="background-position:-235px 0;"></span>';
                          }
@@ -242,8 +248,9 @@
                          if(get_option("plus_share_skin"))
                          {
                             $icon = get_option("plus_share_skin");
-                            echo '<span class="sfsiplus_row_17_6 sfsiplus_share_section" style="background: url('.$icon.') no-repeat;"></span>';
-                         }else
+                            echo '<span class="sfsiplus_row_17_6 sfsiplus_share_section sfsi_plus-bgimage" style="background: url('.$icon.') no-repeat;"></span>';
+                         }
+						 else
                          {
                              echo '<span class="sfsiplus_row_17_6 sfsiplus_share_section" style="background-position:-293px 0;"></span>';
                          }
@@ -251,8 +258,9 @@
                          if(get_option("plus_youtube_skin"))
                          {
                             $icon = get_option("plus_youtube_skin");
-                            echo '<span class="sfsiplus_row_17_7 sfsiplus_youtube_section" style="background: url('.$icon.') no-repeat;"></span>';
-                         }else
+                            echo '<span class="sfsiplus_row_17_7 sfsiplus_youtube_section sfsi_plus-bgimage" style="background: url('.$icon.') no-repeat;"></span>';
+                         }
+						 else
                          {
                              echo '<span class="sfsiplus_row_17_7 sfsiplus_youtube_section" style="background-position:-350px 0;"></span>';
                          }
@@ -260,8 +268,9 @@
                          if(get_option("plus_pintrest_skin"))
                          {
                             $icon = get_option("plus_pintrest_skin");
-                            echo '<span class="sfsiplus_row_17_8 sfsiplus_pinterest_section" style="background: url('.$icon.') no-repeat;"></span>';
-                         }else
+                            echo '<span class="sfsiplus_row_17_8 sfsiplus_pinterest_section sfsi_plus-bgimage" style="background: url('.$icon.') no-repeat;"></span>';
+                         }
+						 else
                          {
                              echo '<span class="sfsiplus_row_17_8 sfsiplus_pinterest_section" style="background-position:-409px 0;"></span>';
                          }
@@ -269,17 +278,19 @@
                          if(get_option("plus_linkedin_skin"))
                          {
                             $icon = get_option("plus_linkedin_skin");
-                            echo '<span class="sfsiplus_row_17_9 sfsiplus_linkedin_section" style="background: url('.$icon.') no-repeat;"></span>';
-                         }else
+                            echo '<span class="sfsiplus_row_17_9 sfsiplus_linkedin_section sfsi_plus-bgimage" style="background: url('.$icon.') no-repeat;"></span>';
+                         }
+						 else
                          {
-                             echo '<span class="sfsiplus_row_17_9 sfsiplus_linkedin_section" style="background-position:-476px 0;"></span>';
+                             echo '<span class="sfsiplus_row_17_9 sfsiplus_linkedin_section" style="background-position:-467px 0;"></span>';
                          }
                          
                          if(get_option("plus_instagram_skin"))
                          {
                             $icon = get_option("plus_instagram_skin");
-                            echo '<span class="sfsiplus_row_17_10 sfsiplus_instagram_section" style="background: url('.$icon.') no-repeat;"></span>';
-                         }else
+                            echo '<span class="sfsiplus_row_17_10 sfsiplus_instagram_section sfsi_plus-bgimage" style="background: url('.$icon.') no-repeat;"></span>';
+                         }
+						 else
                          {
                              echo '<span class="sfsiplus_row_17_10 sfsiplus_instagram_section" style="background-position:-526px 0;"></span>';
                          }
@@ -287,8 +298,9 @@
 						 if(get_option("plus_houzz_skin"))
                          {
                             $icon = get_option("plus_houzz_skin");
-                            echo '<span class="sfsiplus_row_17_11 sfsiplus_houzz_section" style="background: url('.$icon.') no-repeat;"></span>';
-                         }else
+                            echo '<span class="sfsiplus_row_17_11 sfsiplus_houzz_section sfsi_plus-bgimage" style="background: url('.$icon.') no-repeat;"></span>';
+                         }
+						 else
                          {
                              echo '<span class="sfsiplus_row_17_11 sfsiplus_houzz_section" style="background-position:-711px 0;"></span>';
                          }
