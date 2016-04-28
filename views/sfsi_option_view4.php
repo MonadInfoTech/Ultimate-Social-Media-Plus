@@ -465,12 +465,12 @@
 							</li>
 						</ul>
 						<ul class="SFSI_instructions">
-							<li class="google_option" style="<?php echo ($option4['sfsi_plus_twitter_countsFrom']=='manual') ?  'display:none;' : '' ;?>">
+							<li class="google_option" style="<?php echo ($option4['sfsi_plus_google_countsFrom']=='manual') ?  'display:none;' : '' ;?>">
 								<?php
 									_e('Please make sure you have entered the URL for Visit my Google+ page at: like https://plus.google.com/u/0/b/[pageid] in Google+ settings under question number 2.',SFSI_PLUS_DOMAIN);	?>
                                  
 							</li>
-							<li class="google_option" style="<?php echo ($option4['sfsi_plus_twitter_countsFrom']=='manual') ?  'display:none;' : '' ;?>">
+							<?php /*?><li class="google_option" style="<?php echo ($option4['sfsi_plus_twitter_countsFrom']=='manual') ?  'display:none;' : '' ;?>">
 								<h3>
 									<?php  _e( 'To get the API key for G+:', SFSI_PLUS_DOMAIN ); ?>
 								</h3>
@@ -491,6 +491,17 @@
 							</li>
 							<li class="google_option" style="<?php echo ($option4['sfsi_plus_twitter_countsFrom']=='manual') ?  'display:none;' : '' ;?>">
 								<?php  _e( 'When you enter this key into the plugin for the first time, it may take some time until the correct follower count is displayed on your website', SFSI_PLUS_DOMAIN ); ?>.
+							</li><?php */?>
+                            <li class="google_option" style="<?php echo ($option4['sfsi_plus_google_countsFrom']=='manual') ?  'display:none;' : '' ;?>">
+								<h3>
+									<?php  _e( 'Video how to get the Google+ API key:', SFSI_PLUS_DOMAIN ); ?>
+                                    
+								</h3>
+							</li>
+                            <li class="google_option" style="<?php echo ($option4['sfsi_plus_google_countsFrom']=='manual') ?  'display:none;' : '' ;?>">
+								<a href="https://youtu.be/O1xM9qMGbE0" target="_blank">
+									https://youtu.be/O1xM9qMGbE0
+								</a>
 							</li>
 						</ul>
 					</li>

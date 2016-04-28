@@ -169,7 +169,7 @@
          	</a>
          </p>
 		 <?php 
-			 $tra_lan = get_bloginfo( 'language' );
+			 /*$tra_lan = get_bloginfo( 'language' );
 			 if($tra_lan == "en-US" )
 			 {}
 			 else 
@@ -179,8 +179,15 @@
 					<?php  _e( 'The plugin was translated by (your name). Need translation work to get done? Contact (your name) at (your email)', SFSI_PLUS_DOMAIN ); ?>
 				 </p>
 		 		<?php
-			}
+			}*/
 		?>
+        <p class="translatelilne">
+			<?php  _e( 'You speak a language different than English? Please help us translate it! Please contact us at', SFSI_PLUS_DOMAIN ); ?>
+            <a href="mailto:support@ultimatelysocial.com" target="_new">
+            	<?php  _e( 'support@ultimatelysocial.com', SFSI_PLUS_DOMAIN ); ?>
+            </a>
+			<?php _e('for that so that we can send you the instructions. Thank you :)', SFSI_PLUS_DOMAIN);?>
+		</p>
 	</div>
  <!-- all pops of plugin under sfsi_pop_content.php file --> 
  <?php include(SFSI_PLUS_DOCROOT.'/views/sfsi_pop_content.php'); ?>
