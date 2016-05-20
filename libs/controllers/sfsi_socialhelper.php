@@ -494,7 +494,7 @@ class sfsi_plus_SocialHelper
 		$sfsi_plus_instagram_sf_count = unserialize(get_option('sfsi_plus_instagram_sf_count',false));
 		
 		/*if date is empty (for decrease request count)*/
-		if(empty($sfsi_plus_instagram_sf_count["date"]) || empty($sfsi_plus_instagram_sf_count["sfsi_plus_sf_count"]))
+		if(empty($sfsi_plus_instagram_sf_count["date"]))
 		{
 			$sfsi_plus_instagram_sf_count["date"] = strtotime(date("Y-m-d"));
 			$counts = $this->sfsi_plus_getFeedSubscriberCount($feedid);
@@ -510,7 +510,7 @@ class sfsi_plus_SocialHelper
 				date_create(
 					date("Y-m-d")
 			 ));
-			 if($diff->format("%a") > 1)
+			 if($diff->format("%a") >= 1)
 			 {
 				 $sfsi_plus_instagram_sf_count["date"] = strtotime(date("Y-m-d"));
 				 $counts = $this->sfsi_plus_getFeedSubscriberCount($feedid);
