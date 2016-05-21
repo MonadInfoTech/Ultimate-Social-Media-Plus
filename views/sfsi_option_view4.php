@@ -283,13 +283,13 @@
 			</div>
 			<div class="listing">
 				<ul>
-					<li>
-						<input name="sfsi_plus_email_countsFrom" <?php echo ($option4['sfsi_plus_email_countsFrom']=='source') ?  'checked="true"' : '' ;?>  type="radio" value="source" class="styled"  />
+					<!--<li>
+						<input name="sfsi_plus_email_countsFrom" <?php //echo ($option4['sfsi_plus_email_countsFrom']=='source') ?  'checked="true"' : '' ;?>  type="radio" value="source" class="styled"  />
 						 <?php
-							_e('Retrieve the number of subscribers automatically', SFSI_PLUS_DOMAIN); ?>
-					</li>
+							//_e('Retrieve the number of subscribers automatically', SFSI_PLUS_DOMAIN); ?>
+					</li>-->
 					<li>
-						<input name="sfsi_plus_email_countsFrom" <?php echo ($option4['sfsi_plus_email_countsFrom']=='manual') ?  'checked="true"' : '' ;?>  type="radio" value="manual" class="styled" />
+                    	<input name="sfsi_plus_email_countsFrom" <?php echo ($option4['sfsi_plus_email_countsFrom']=='manual') ?  'checked="true"' : '' ;?>  type="radio" value="manual" class="styled" />
 						<?php  _e( 'Enter the figure manually', SFSI_PLUS_DOMAIN ); ?>
 						<input name="sfsi_plus_email_manualCounts" type="text" class="input" value="<?php echo ($option4['sfsi_plus_email_manualCounts']!='') ?  $option4['sfsi_plus_email_manualCounts'] : '' ;?>" style="<?php echo ($option4['sfsi_plus_email_countsFrom']=='source') ?  'display:none;' : '' ;?>" />
 					</li>

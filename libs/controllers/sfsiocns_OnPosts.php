@@ -148,7 +148,7 @@ function sfsi_plus_Subscribelike($permalink, $show_count)
 	}
 	else
 	{
-		$counts= $socialObj->SFSI_getFeedSubscriber(sanitize_text_field(get_option('sfsi_plus_feed_id',false)));           
+		$counts= (string) "0";           
 	}
 	 
 	if($sfsi_plus_section8_options['sfsi_plus_icons_DisplayCounts']=="yes")
