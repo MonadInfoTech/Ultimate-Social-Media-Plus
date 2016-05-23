@@ -75,7 +75,7 @@ function sfsi_plus_social_buttons_below($content)
 	}
 	if($sfsi_section8['sfsi_plus_rectsub'] == 'yes')
 	{
-		if($show_count){$sfsiLikeWithsub = "93px";}else{$sfsiLikeWithsub = "64px";}
+		if($show_count){$sfsiLikeWithsub = "64px";}else{$sfsiLikeWithsub = "64px";}
 		if(!isset($sfsiLikeWithsub)){$sfsiLikeWithsub = $sfsiLikeWith;}
 		$icons.="<div class='sf_subscrbe' style='display: inline-block;vertical-align: middle;width: auto;'>".sfsi_plus_Subscribelike($permalink,$show_count)."</div>";
 	}
@@ -153,8 +153,7 @@ function sfsi_plus_Subscribelike($permalink, $show_count)
 	 
 	if($sfsi_plus_section8_options['sfsi_plus_icons_DisplayCounts']=="yes")
 	{
-	 	$icon = '<a href="'.$url.'" target="_blank"><img src="'.$visit_icon.'" /></a>
-		<span class="bot_no">'.$counts.'</span>';
+	 	$icon = '<a href="'.$url.'" target="_blank"><img src="'.$visit_icon.'" /></a>';
 	}
 	else
 	{
