@@ -23,10 +23,7 @@ function sfsi_plus_update_plugin()
 	{
 		add_option("sfsi_plus_show_notification_plugin", "yes");
 	}
-	if(!get_option('sfsi_plus_subscriber_count'))
-	{
-		add_option("sfsi_plus_subscriber_count", "yes");
-	}
+	
 	/* subscription form */
     $options9 = array('sfsi_plus_form_adjustment'=>'yes',
         'sfsi_plus_form_height'=>'180',
@@ -62,7 +59,7 @@ function sfsi_plus_update_plugin()
 	
 	/*Extra important options*/
 	$sfsi_plus_instagram_sf_count = array(
-		"date" => "",
+		"date" => strtotime(date("Y-m-d")),
 		"sfsi_plus_sf_count" => "",
 		"sfsi_plus_instagram_count" => ""
 	);
@@ -110,13 +107,6 @@ function sfsi_plus_update_plugin()
 		$option4['sfsi_plus_youtube_channelId'] = '';
 		update_option('sfsi_plus_section4_options', serialize($option4));
 	}
-	
-	if(isset($option4) && !empty($option4) && $option4['sfsi_plus_email_countsFrom'] == 'source')
-	{
-		$option4['sfsi_plus_email_countsFrom'] = 'manual';
-		update_option('sfsi_plus_section4_options', serialize($option4));
-	}
-	
 }
 function sfsi_plus_activate_plugin()
 {
@@ -202,7 +192,7 @@ function sfsi_plus_activate_plugin()
 	/* display counts options */         
     $options4=array('sfsi_plus_display_counts'=>'no',
         'sfsi_plus_email_countsDisplay'=>'no',
-        'sfsi_plus_email_countsFrom'=>'manual',
+        'sfsi_plus_email_countsFrom'=>'source',
         'sfsi_plus_email_manualCounts'=>'20',
         'sfsi_plus_rss_countsDisplay'=>'no',
         'sfsi_plus_rss_manualCounts'=>'20',
@@ -382,6 +372,14 @@ function sfsi_plus_activate_plugin()
 	/*Activation Setup for (specificfeed)*/
 	sfsi_plus_setUpfeeds($sffeeds->feed_id);
 	sfsi_plus_updateFeedPing('N',$sffeeds->feed_id);
+	
+	/*Extra important options*/
+	$sfsi_plus_instagram_sf_count = array(
+		"date" => strtotime(date("Y-m-d")),
+		"sfsi_plus_sf_count" => "",
+		"sfsi_plus_instagram_count" => ""
+	);
+	add_option('sfsi_plus_instagram_sf_count',  serialize($sfsi_plus_instagram_sf_count));
 }
 /* end function  */
 /* deactivate plugin */

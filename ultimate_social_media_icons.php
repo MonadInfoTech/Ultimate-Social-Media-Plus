@@ -616,27 +616,6 @@ function sfsi_plus_admin_notice()
 			</p>
 		</div>
 	<?php }
-	
-	if(get_option("sfsi_plus_subscriber_count") == "yes")
-	{ 
-		$url = "?sfsiPlus-dismiss-subsciber-notice=true";
-		?>
-		<div class="updated" style="<?php echo $style; ?>"">
-			<div class="alignleft" style="margin: 9px 0;">
-				<b>
-                	<?php _e( 'Note:', SFSI_PLUS_DOMAIN); ?>
-                </b>  
-                
-				<?php _e( 'Counts for your SpecificFeeds subscribers is disabled currently as it caused high server load. We are working hard on bringing them back to you soon.', SFSI_PLUS_DOMAIN); ?>
-                
-            </div>
-			<p class="alignright">
-				<a href="<?php echo $url; ?>">
-                	<?php _e( 'Dismiss', SFSI_PLUS_DOMAIN); ?>
-                </a>
-			</p>
-		</div>
-	<?php }
 }
 
 add_action('admin_init', 'sfsi_plus_dismiss_admin_notice');
@@ -651,11 +630,6 @@ function sfsi_plus_dismiss_admin_notice()
 	if ( isset($_REQUEST['sfsiPlus-dismiss-notice']) && $_REQUEST['sfsiPlus-dismiss-notice'] == 'true' )
 	{
 		update_option( 'sfsi_plus_show_notification_plugin', "no" );
-		header("Location: ".site_url()."/wp-admin/admin.php?page=sfsi-plus-options");
-	}
-	if ( isset($_REQUEST['sfsiPlus-dismiss-subsciber-notice']) && $_REQUEST['sfsiPlus-dismiss-subsciber-notice'] == 'true' )
-	{
-		update_option( 'sfsi_plus_subscriber_count', "no" );
 		header("Location: ".site_url()."/wp-admin/admin.php?page=sfsi-plus-options");
 	}
 }
