@@ -94,7 +94,7 @@ function sfsi_plus_social_buttons_below($content)
 	}
 	if($sfsi_section8['sfsi_plus_rectpinit'] == 'yes')
 	{
-		if($show_count){$sfsiLikeWithpinit = "90px";}else{$sfsiLikeWithpinit = "auto";}
+		if($show_count){$sfsiLikeWithpinit = "100px";}else{$sfsiLikeWithpinit = "auto";}
 	 	$icons.="<div class='sf_pinit' style='display: inline-block;text-align:left;vertical-align: middle;width: ".$sfsiLikeWithpinit.";'>".sfsi_plus_pinitpinterest($permalink,$show_count)."</div>";
 	}
 	if($sfsi_section8['sfsi_plus_rectgp'] == 'yes')
@@ -231,16 +231,16 @@ return $fb_like_html;
 /* create pinit button */
 function sfsi_plus_pinitpinterest($permalink,$show_count)
 {
-	$pinit_html = '<a href="//www.pinterest.com/pin/create/button/" data-pin-do="buttonBookmark" ';
+	$pinit_html = '<script async defer src="//assets.pinterest.com/js/pinit.js"></script><a href="https://www.pinterest.com/pin/create/button/?url=&media=&description=" data-pin-do="buttonPin" data-pin-save="true"';
 	if($show_count)
 	{
-		$pinit_html .= 'count-layout="horizontal"';
+		$pinit_html .= 'data-pin-count="beside"';
 	}
 	else
 	{
-		$pinit_html .= 'count-layout="none"';
+		$pinit_html .= 'data-pin-count="none"';
 	}
-	$pinit_html .= '><img src="//assets.pinterest.com/images/pidgets/pinit_fg_en_rect_gray_20.png" /></a>';
+	$pinit_html .= '></a>';
 	
 	return $pinit_html;
 }

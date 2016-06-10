@@ -3137,14 +3137,14 @@ label.sfsiplus_toglpstpgsbttl { float: left; margin-top: 5px !important}
 	line-height: 18px;
 	margin: 5px 0;
 }
-.sfsibeforpstwpr .sfsi_plus_Sicons span
+/*.sfsibeforpstwpr .sfsi_plus_Sicons span
 {
 	font-size: 20px;
-}
-.sfsiaftrpstwpr .sfsi_plus_Sicons span
+}*/
+/*.sfsiaftrpstwpr .sfsi_plus_Sicons span
 {
 	font-size: 20px;
-}
+}*/
 .sfsibeforpstwpr .sfsi_plus_Sicons
 {
 	
@@ -3244,10 +3244,11 @@ label.sfsiplus_toglpstpgsbttl { float: left; margin-top: 5px !important}
 }
 .sfsi_plus_Sicons .sf_pinit > span
 {
-	height: 22px !important;
+	height: 20px !important;
 	vertical-align: middle;
 }
-.sfsi_plus_Sicons .sf_pinit > span > span
+
+/*.sfsi_plus_Sicons .sf_pinit > span > span
 {
 	display: inline-block;
 	width: 47px !important;
@@ -3255,4 +3256,4 @@ label.sfsiplus_toglpstpgsbttl { float: left; margin-top: 5px !important}
 	margin-left: 40px;
 	vertical-align: top;
 	right: 0 !important;
-}
+}*/
