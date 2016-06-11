@@ -3137,14 +3137,14 @@ label.sfsiplus_toglpstpgsbttl { float: left; margin-top: 5px !important}
 	line-height: 18px;
 	margin: 5px 0;
 }
-/*.sfsibeforpstwpr .sfsi_plus_Sicons span
+.sfsibeforpstwpr .sfsi_plus_Sicons span
 {
 	font-size: 20px;
-}*/
-/*.sfsiaftrpstwpr .sfsi_plus_Sicons span
+}
+.sfsiaftrpstwpr .sfsi_plus_Sicons span
 {
 	font-size: 20px;
-}*/
+}
 .sfsibeforpstwpr .sfsi_plus_Sicons
 {
 	
@@ -3257,3 +3257,7 @@ label.sfsiplus_toglpstpgsbttl { float: left; margin-top: 5px !important}
 	vertical-align: top;
 	right: 0 !important;
 }*/
+.sfsibeforpstwpr .sfsi_plus_Sicons .sf_pinit span{font-size:11px !important;}
+.sfsiaftrpstwpr .sfsi_plus_Sicons .sf_pinit span{font-size:11px !important;}
+.sfsibeforpstwpr .sfsi_plus_Sicons .sfsi_plus_inside .icon2 span{font-size:11px !important;}
+.sfsiaftrpstwpr .sfsi_plus_Sicons .sfsi_plus_inside .icon2 span{font-size:11px !important;}

@@ -491,7 +491,7 @@ function sfsi_plus_beforeafterblogposts( $content )
 						}
 						if($sfsi_section8['sfsi_plus_rectpinit'] == 'yes')
 						{
-							if($show_count){$sfsiLikeWithpinit = "90px";}else{$sfsiLikeWithpinit = "auto";}
+							if($show_count){$sfsiLikeWithpinit = "100px";}else{$sfsiLikeWithpinit = "auto";}
 						 	$icons_after.="<div class='sf_pinit' style='display: inline-block;text-align:left;vertical-align: middle;width: ".$sfsiLikeWithpinit."'>".sfsi_plus_pinitpinterest($permalink,$show_count)."</div>";
 						}
 						
