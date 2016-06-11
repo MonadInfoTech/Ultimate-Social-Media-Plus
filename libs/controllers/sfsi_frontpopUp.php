@@ -21,10 +21,13 @@ function sfsi_plus_check_PopUp($content)
      }
 	 else if($sfsi_plus_section7_options['sfsi_plus_Show_popupOn']=="selectedpage")
      {
-	 	if(is_page() && in_array($post->ID,  unserialize($sfsi_plus_section7_options['sfsi_plus_Show_popupOn_PageIDs'])))
+	 	if(!empty($post->ID) && !empty($sfsi_plus_section7_options['sfsi_plus_Show_popupOn_PageIDs']))
 		{
-		     $content=  sfsi_plus_frontPopUp ().$content;
-	    }
+			if(is_page() && in_array($post->ID,  unserialize($sfsi_plus_section7_options['sfsi_plus_Show_popupOn_PageIDs'])))
+			{
+				 $content=  sfsi_plus_frontPopUp ().$content;
+			}
+		}
      }
      else if($sfsi_plus_section7_options['sfsi_plus_Show_popupOn']=="everypage")
 	 {
