@@ -423,7 +423,7 @@ class sfsi_plus_SocialHelper
 		$sfsi_plus_instagram_sf_count = unserialize(get_option('sfsi_plus_instagram_sf_count',false));
 		
 		/*if date is empty (for decrease request count)*/
-		if(empty($sfsi_plus_instagram_sf_count["date"]) || empty($sfsi_plus_instagram_sf_count["sfsi_plus_instagram_count"]))
+		if(empty($sfsi_plus_instagram_sf_count["date"]))
 		{
 			$sfsi_plus_instagram_sf_count["date"] = strtotime(date("Y-m-d"));
 			$counts = $this->sfsi_plus_get_instagramFollowersCount($user_name);
@@ -461,7 +461,7 @@ class sfsi_plus_SocialHelper
     	$return_data = $this->get_content_curl('https://api.instagram.com/v1/users/search?q='.$user_name.'&client_id=12d8dcc9abd74f83b0899756adccedc2');
 		$json_string = preg_replace('/^receiveCount\((.*)\)$/', "\\1", $return_data);
 		$json = json_decode($json_string, true);
-		$user_id=$json['data'][0]['id'];
+		$user_id=@$json['data'][0]['id'];
 		
 		$return_data = $this->get_content_curl('https://api.instagram.com/v1/users/'.$user_id.'/?access_token=53042481.ab103e5.0c6f8f50471a4e1f97595f8db529a47a');
 		$json_string = preg_replace('/^receiveCount\((.*)\)$/', "\\1", $return_data);
