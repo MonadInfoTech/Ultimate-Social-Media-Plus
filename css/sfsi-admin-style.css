@@ -1041,6 +1041,13 @@ ul#adminmenu li.toplevel_page_sfsi-plus-options a.current, ul#adminmenu li.tople
 }
 }
 /*poonam Style*/
+.feedClaiming-overlay h1 {margin-top: 7px !important;}
+.feedClaiming-overlay input[type="email"] {font-size: 20px;margin: 20px 0 0;padding: 7px;width: 85%;}
+.feedClaiming-overlay .save_button {padding: 0 !important;width: 55%;}
+.feedClaiming-overlay p {font-size: 13px !important;line-height: 20px !important;padding: 22px 0 0 !important;}
+.feedClaiming-overlay p a {display: inline-block;font-size: 13px;margin: 0;padding: 0;width: auto;}
+.feedClaiming-overlay .pop_up_box{padding: 20px 25px !important;}
+
 .follows-btn{float:left;width:25%;}
 .preview-btn{float:left;width:10%;}
 .social-img-link{float:left;width:15%;}

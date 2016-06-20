@@ -160,8 +160,8 @@
         <div class="inr_cont">
 			<p>
 				<?php _e('Sends your new posts automatically to subscribers. It`s FREE and you get full access to your subscriber`s emails and interesting statistics:', SFSI_PLUS_DOMAIN ); ?>
-				<a target="_new" href="<?php echo $connectToFeed; ?>">
-					<?php _e('Claim your feed to get full access.', SFSI_PLUS_DOMAIN ); ?>
+				<a class="pop-up" href="javascript:" data-id="feedClaiming-overlay">
+					<?php _e('Get full access now.', SFSI_PLUS_DOMAIN ); ?>
 				</a>
 				<?php _e('It also makes sense if you already offer an email newsletter:', SFSI_PLUS_DOMAIN ); ?>
 				<a href="http://specificfeeds.com/rss" target="_new">
