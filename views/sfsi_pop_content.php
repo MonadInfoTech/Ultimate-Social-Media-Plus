@@ -17,7 +17,7 @@ $connectFeedLgn	= "http://www.specificfeeds.com/?".base64_encode("userprofile=wo
     <div class="pop_up_box sfsi_pop_up"  >
         <img src="<?php echo SFSI_PLUS_PLUGURL; ?>images/close.jpg" id="close_popup" class="sfsicloseBtn" />
         <center>
-            <form method="get" action="https://www.specificfeeds.com/wpclaimfeeds/getFullAccess" target="_blank">
+            <form id="calimingOptimizationForm" method="get" action="https://www.specificfeeds.com/wpclaimfeeds/getFullAccess" target="_blank">
                 <h1><?php  _e( 'Please enter your email', SFSI_PLUS_DOMAIN ); ?></h1>
                 <div class="form-field">
                     <input type="hidden" name="feed_id" value="<?php echo $feedId; ?>" />

@@ -98,8 +98,8 @@
 			_e('In addition to the email- or follow-icon you can also show a subscription form which maximizes chances that people subscribe to your site. To get access to the emails who subscribe, please', SFSI_PLUS_DOMAIN);
 		?>
 		<b>
-			<a target="_new" href="<?php echo $connectToFeed; ?>">
-				<?php _e('claim your feed.',SFSI_PLUS_DOMAIN); ?>
+			<a class="pop-up" href="javascript:" data-id="feedClaiming-overlay">
+				<?php _e('click here.',SFSI_PLUS_DOMAIN); ?>
 			</a>
 		</b>
     </p>
