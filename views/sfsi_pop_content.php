@@ -15,13 +15,13 @@ $connectFeedLgn	= "http://www.specificfeeds.com/?".base64_encode("userprofile=wo
 
 <div class="pop-overlay read-overlay feedClaiming-overlay" >
     <div class="pop_up_box sfsi_pop_up"  >
-        <img src="<?php echo SFSI_PLUS_PLUGURL; ?>images/close.jpg" id="close_popup" class="sfsicloseBtn" />
+        <img src="<?php echo SFSI_PLUS_PLUGURL; ?>images/newclose.png" id="close_popup" class="sfsicloseBtn" />
         <center>
             <form id="calimingOptimizationForm" method="get" action="https://www.specificfeeds.com/wpclaimfeeds/getFullAccess" target="_blank">
                 <h1><?php  _e( 'Please enter your email', SFSI_PLUS_DOMAIN ); ?></h1>
                 <div class="form-field">
                     <input type="hidden" name="feed_id" value="<?php echo $feedId; ?>" />
-                    <input type="email" name="email" value="<?php //echo get_option("admin_email");?>" placeholder="Your email" />
+                    <input type="email" name="email" value="<?php ?>" placeholder="Your email" style="color: #bebebe !important;" />
                 </div>
                 <div class="save_button">
                     <a href="javascript:;" id="getMeFullAccess" title="Give me access">
