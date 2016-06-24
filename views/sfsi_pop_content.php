@@ -21,7 +21,7 @@ $connectFeedLgn	= "http://www.specificfeeds.com/?".base64_encode("userprofile=wo
                 <h1><?php  _e( 'Please enter your email', SFSI_PLUS_DOMAIN ); ?></h1>
                 <div class="form-field">
                     <input type="hidden" name="feed_id" value="<?php echo $feedId; ?>" />
-                    <input type="email" name="email" value="<?php ?>" placeholder="Your email" style="color: #bebebe !important;" />
+                    <input type="email" name="email" value="<?php ?>" placeholder="Your email" style="color: #000 !important;" />
                 </div>
                 <div class="save_button">
                     <a href="javascript:;" id="getMeFullAccess" title="Give me access">
@@ -391,18 +391,19 @@ $pin_url=($option2['sfsi_plus_pinterest_pageUrl']!='') ?  $option2['sfsi_plus_pi
                     </div>
                     <div class="cstmskins_btn">
                     	<?php 
+							$nonce = wp_create_nonce("sfsi_plus_deleteCustomSkin");
 							if(get_option("plus_rss_skin"))
 							{
 								$rss_skin = get_option("plus_rss_skin");
 								echo "<img src='".$rss_skin."' width='30px' height='30px' class='imgskin'>";
 								echo '<a href="javascript:" onclick="upload_image(this);" title="plus_rss_skin" class="cstmskin_btn">Update</a>';
-								echo '<a href="javascript:" onclick="sfsiplus_deleteskin_icon(this);" title="plus_rss_skin" class="cstmskin_btn">Delete</a>';
+								echo '<a href="javascript:" onclick="sfsiplus_deleteskin_icon(this);" title="plus_rss_skin" data-nonce="'.$nonce.'" class="cstmskin_btn">Delete</a>';
 							}
 							else
 							{
 								echo "<img src='' width='30px' height='30px' class='imgskin skswrpr'>";
 								echo '<a href="javascript:" onclick="upload_image(this);" title="plus_rss_skin" class="cstmskin_btn">Upload</a>';
-								echo '<a href="javascript:" onclick="sfsiplus_deleteskin_icon(this);" title="plus_rss_skin" class="cstmskin_btn dlt_btn">Delete</a>';
+								echo '<a href="javascript:" onclick="sfsiplus_deleteskin_icon(this);" title="plus_rss_skin" data-nonce="'.$nonce.'" class="cstmskin_btn dlt_btn">Delete</a>';
 							}
 						?>
                     </div>
@@ -418,13 +419,13 @@ $pin_url=($option2['sfsi_plus_pinterest_pageUrl']!='') ?  $option2['sfsi_plus_pi
 								$email_skin = get_option("plus_email_skin");
 								echo "<img src='".$email_skin."' width='30px' height='30px' class='imgskin'>";
 								echo '<a href="javascript:" onclick="upload_image(this);" title="plus_email_skin" class="cstmskin_btn">Update</a>';
-								echo '<a href="javascript:" onclick="sfsiplus_deleteskin_icon(this);" title="plus_email_skin" class="cstmskin_btn">Delete</a>';
+								echo '<a href="javascript:" onclick="sfsiplus_deleteskin_icon(this);" title="plus_email_skin" data-nonce="'.$nonce.'" class="cstmskin_btn">Delete</a>';
 							}
 							else
 							{
 								echo "<img src='' width='30px' height='30px' class='imgskin skswrpr'>";
 								echo '<a href="javascript:" onclick="upload_image(this);" title="plus_email_skin" class="cstmskin_btn">Upload</a>';
-								echo '<a href="javascript:" onclick="sfsiplus_deleteskin_icon(this);" title="plus_email_skin" class="cstmskin_btn dlt_btn">Delete</a>';
+								echo '<a href="javascript:" onclick="sfsiplus_deleteskin_icon(this);" title="plus_email_skin" data-nonce="'.$nonce.'" class="cstmskin_btn dlt_btn">Delete</a>';
 							}
 						?>
                     </div>
@@ -440,13 +441,13 @@ $pin_url=($option2['sfsi_plus_pinterest_pageUrl']!='') ?  $option2['sfsi_plus_pi
 								$facebook_skin = get_option("plus_facebook_skin");
 								echo "<img src='".$facebook_skin."' width='30px' height='30px'  class='imgskin'>";
 								echo '<a href="javascript:" onclick="upload_image(this);" title="plus_facebook_skin" class="cstmskin_btn">Update</a>';
-								echo '<a href="javascript:" onclick="sfsiplus_deleteskin_icon(this);" title="plus_facebook_skin" class="cstmskin_btn">Delete</a>';
+								echo '<a href="javascript:" onclick="sfsiplus_deleteskin_icon(this);" title="plus_facebook_skin" data-nonce="'.$nonce.'" class="cstmskin_btn">Delete</a>';
 							}
 							else
 							{
 								echo "<img src='' width='30px' height='30px' class='imgskin skswrpr'>";
 								echo '<a href="javascript:" onclick="upload_image(this);" title="plus_facebook_skin" class="cstmskin_btn">Upload</a>';
-								echo '<a href="javascript:" onclick="sfsiplus_deleteskin_icon(this);" title="plus_facebook_skin" class="cstmskin_btn dlt_btn">Delete</a>';
+								echo '<a href="javascript:" onclick="sfsiplus_deleteskin_icon(this);" title="plus_facebook_skin" data-nonce="'.$nonce.'" class="cstmskin_btn dlt_btn">Delete</a>';
 							}
 						?>
                     </div>
@@ -462,13 +463,13 @@ $pin_url=($option2['sfsi_plus_pinterest_pageUrl']!='') ?  $option2['sfsi_plus_pi
 								$twitter_skin = get_option("plus_twitter_skin");
 								echo "<img src='".$twitter_skin."' width='30px' height='30px' class='imgskin'>";
 								echo '<a href="javascript:" onclick="upload_image(this);" title="plus_twitter_skin" class="cstmskin_btn">Update</a>';
-								echo '<a href="javascript:" onclick="sfsiplus_deleteskin_icon(this);" title="plus_twitter_skin" class="cstmskin_btn">Delete</a>';
+								echo '<a href="javascript:" onclick="sfsiplus_deleteskin_icon(this);" title="plus_twitter_skin" data-nonce="'.$nonce.'" class="cstmskin_btn">Delete</a>';
 							}
 							else
 							{
 								echo "<img src='' width='30px' height='30px' class='imgskin skswrpr'>";
 								echo '<a href="javascript:" onclick="upload_image(this);" title="plus_twitter_skin" class="cstmskin_btn">Upload</a>';
-								echo '<a href="javascript:" onclick="sfsiplus_deleteskin_icon(this);" title="plus_twitter_skin" class="cstmskin_btn dlt_btn">Delete</a>';
+								echo '<a href="javascript:" onclick="sfsiplus_deleteskin_icon(this);" title="plus_twitter_skin" data-nonce="'.$nonce.'" class="cstmskin_btn dlt_btn">Delete</a>';
 							}
 						?>
                     </div>
@@ -484,13 +485,13 @@ $pin_url=($option2['sfsi_plus_pinterest_pageUrl']!='') ?  $option2['sfsi_plus_pi
 								$google_skin = get_option("plus_google_skin");
 								echo "<img src='".$google_skin."' width='30px' height='30px'  class='imgskin'>";
 								echo '<a href="javascript:" onclick="upload_image(this);" title="plus_google_skin" class="cstmskin_btn">Update</a>';
-								echo '<a href="javascript:" onclick="sfsiplus_deleteskin_icon(this);" title="plus_google_skin" class="cstmskin_btn">Delete</a>';
+								echo '<a href="javascript:" onclick="sfsiplus_deleteskin_icon(this);" title="plus_google_skin" data-nonce="'.$nonce.'" class="cstmskin_btn">Delete</a>';
 							}
 							else
 							{
 								echo "<img src='' width='30px' height='30px' class='imgskin skswrpr'>";
 								echo '<a href="javascript:" onclick="upload_image(this);" title="plus_google_skin" class="cstmskin_btn">Upload</a>';
-								echo '<a href="javascript:" onclick="sfsiplus_deleteskin_icon(this);" title="plus_google_skin" class="cstmskin_btn dlt_btn">Delete</a>';
+								echo '<a href="javascript:" onclick="sfsiplus_deleteskin_icon(this);" title="plus_google_skin" data-nonce="'.$nonce.'" class="cstmskin_btn dlt_btn">Delete</a>';
 							}
 						?>
                     </div>
@@ -506,13 +507,13 @@ $pin_url=($option2['sfsi_plus_pinterest_pageUrl']!='') ?  $option2['sfsi_plus_pi
 								$share_skin = get_option("plus_share_skin");
 								echo "<img src='".$share_skin."' width='30px' height='30px' class='imgskin'>";
 								echo '<a href="javascript:" onclick="upload_image(this);" title="plus_share_skin" class="cstmskin_btn">Update</a>';
-								echo '<a href="javascript:" onclick="sfsiplus_deleteskin_icon(this);" title="plus_share_skin" class="cstmskin_btn">Delete</a>';
+								echo '<a href="javascript:" onclick="sfsiplus_deleteskin_icon(this);" title="plus_share_skin" data-nonce="'.$nonce.'" class="cstmskin_btn">Delete</a>';
 							}
 							else
 							{
 								echo "<img src='' width='30px' height='30px' class='imgskin skswrpr'>";
 								echo '<a href="javascript:" onclick="upload_image(this);" title="plus_share_skin" class="cstmskin_btn">Upload</a>';
-								echo '<a href="javascript:" onclick="sfsiplus_deleteskin_icon(this);" title="plus_share_skin" class="cstmskin_btn dlt_btn">Delete</a>';
+								echo '<a href="javascript:" onclick="sfsiplus_deleteskin_icon(this);" title="plus_share_skin" data-nonce="'.$nonce.'" class="cstmskin_btn dlt_btn">Delete</a>';
 							}
 						?>
                     </div>
@@ -528,13 +529,13 @@ $pin_url=($option2['sfsi_plus_pinterest_pageUrl']!='') ?  $option2['sfsi_plus_pi
 								$youtube_skin = get_option("plus_youtube_skin");
 								echo "<img src='".$youtube_skin."' width='30px' height='30px'  class='imgskin'>";
 								echo '<a href="javascript:" onclick="upload_image(this);" title="plus_youtube_skin" class="cstmskin_btn">Update</a>';
-								echo '<a href="javascript:" onclick="sfsiplus_deleteskin_icon(this);" title="plus_youtube_skin" class="cstmskin_btn">Delete</a>';
+								echo '<a href="javascript:" onclick="sfsiplus_deleteskin_icon(this);" title="plus_youtube_skin" data-nonce="'.$nonce.'" class="cstmskin_btn">Delete</a>';
 							}
 							else
 							{
 								echo "<img src='' width='30px' height='30px' class='imgskin skswrpr'>";
 								echo '<a href="javascript:" onclick="upload_image(this);" title="plus_youtube_skin" class="cstmskin_btn">Upload</a>';
-								echo '<a href="javascript:" onclick="sfsiplus_deleteskin_icon(this);" title="plus_youtube_skin" class="cstmskin_btn dlt_btn">Delete</a>';
+								echo '<a href="javascript:" onclick="sfsiplus_deleteskin_icon(this);" title="plus_youtube_skin" data-nonce="'.$nonce.'" class="cstmskin_btn dlt_btn">Delete</a>';
 							}
 						?>
                     </div>
@@ -550,13 +551,13 @@ $pin_url=($option2['sfsi_plus_pinterest_pageUrl']!='') ?  $option2['sfsi_plus_pi
 								$linkedin_skin = get_option("plus_linkedin_skin");
 								echo "<img src='".$linkedin_skin."' width='30px' height='30px'  class='imgskin'>";
 								echo '<a href="javascript:" onclick="upload_image(this);" title="plus_linkedin_skin" class="cstmskin_btn">Update</a>';
-								echo '<a href="javascript:" onclick="sfsiplus_deleteskin_icon(this);" title="plus_linkedin_skin" class="cstmskin_btn">Delete</a>';
+								echo '<a href="javascript:" onclick="sfsiplus_deleteskin_icon(this);" title="plus_linkedin_skin" data-nonce="'.$nonce.'" class="cstmskin_btn">Delete</a>';
 							}
 							else
 							{
 								echo "<img src='' width='30px' height='30px' class='imgskin skswrpr'>";
 								echo '<a href="javascript:" onclick="upload_image(this);" title="plus_linkedin_skin" class="cstmskin_btn">Upload</a>';	
-								echo '<a href="javascript:" onclick="sfsiplus_deleteskin_icon(this);" title="plus_linkedin_skin" class="cstmskin_btn dlt_btn">Delete</a>';
+								echo '<a href="javascript:" onclick="sfsiplus_deleteskin_icon(this);" title="plus_linkedin_skin" data-nonce="'.$nonce.'" class="cstmskin_btn dlt_btn">Delete</a>';
 							}
 						?>
                     </div>
@@ -572,13 +573,13 @@ $pin_url=($option2['sfsi_plus_pinterest_pageUrl']!='') ?  $option2['sfsi_plus_pi
 								$pintrest_skin = get_option("plus_pintrest_skin");
 								echo "<img src='".$pintrest_skin."' width='30px' height='30px' class='imgskin'>";
 								echo '<a href="javascript:" onclick="upload_image(this);" title="plus_pintrest_skin" class="cstmskin_btn">Update</a>';
-								echo '<a href="javascript:" onclick="sfsiplus_deleteskin_icon(this);" title="plus_pintrest_skin" class="cstmskin_btn">Delete</a>';
+								echo '<a href="javascript:" onclick="sfsiplus_deleteskin_icon(this);" title="plus_pintrest_skin" data-nonce="'.$nonce.'" class="cstmskin_btn">Delete</a>';
 							}
 							else
 							{
 								echo "<img src='' width='30px' height='30px' class='imgskin skswrpr'>";
 								echo '<a href="javascript:" onclick="upload_image(this);" title="plus_pintrest_skin" class="cstmskin_btn">Upload</a>';
-								echo '<a href="javascript:" onclick="sfsiplus_deleteskin_icon(this);" title="plus_pintrest_skin" class="cstmskin_btn dlt_btn">Delete</a>';
+								echo '<a href="javascript:" onclick="sfsiplus_deleteskin_icon(this);" title="plus_pintrest_skin" data-nonce="'.$nonce.'" class="cstmskin_btn dlt_btn">Delete</a>';
 							}
 						?>
                     </div>
@@ -594,13 +595,13 @@ $pin_url=($option2['sfsi_plus_pinterest_pageUrl']!='') ?  $option2['sfsi_plus_pi
 								$instagram_skin = get_option("plus_instagram_skin");
 								echo "<img src='".$instagram_skin."' width='30px' height='30px' class='imgskin'>";
 								echo '<a href="javascript:" onclick="upload_image(this);" title="plus_instagram_skin" class="cstmskin_btn">Update</a>';
-								echo '<a href="javascript:" onclick="sfsiplus_deleteskin_icon(this);" title="plus_instagram_skin" class="cstmskin_btn">Delete</a>';
+								echo '<a href="javascript:" onclick="sfsiplus_deleteskin_icon(this);" title="plus_instagram_skin" data-nonce="'.$nonce.'" class="cstmskin_btn">Delete</a>';
 							}
 							else
 							{
 								echo "<img src='' width='30px' height='30px' class='imgskin skswrpr'>";
 								echo '<a href="javascript:" onclick="upload_image(this);" title="plus_instagram_skin" class="cstmskin_btn">Upload</a>';
-								echo '<a href="javascript:" onclick="sfsiplus_deleteskin_icon(this);" title="plus_instagram_skin" class="cstmskin_btn dlt_btn">Delete</a>';		
+								echo '<a href="javascript:" onclick="sfsiplus_deleteskin_icon(this);" title="plus_instagram_skin" data-nonce="'.$nonce.'" class="cstmskin_btn dlt_btn">Delete</a>';		
 							}
 						?>
                     </div>

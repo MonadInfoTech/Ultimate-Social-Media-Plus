@@ -165,23 +165,30 @@ function plus_sfsi_customskin_upload(s, ref)
 function sfsiplus_deleteskin_icon(s)
 {
 	var iconname = jQuery(s).attr("title");
+	var nonce = jQuery(s).attr("data-nonce");
 	var i = iconname, e = {
         action:"plus_DeleteSkin",
-        iconname:i
+        iconname:i,
+		nonce:nonce
     };
 	
 	SFSI.ajax({
         url:ajax_object.ajax_url,
         type:"post",
         data:e,
-        success:function(msg) {
-			 if (msg.res = "success")
-			 {
-				 SFSI(s).prev("a").text("Upload");
-				 SFSI(s).prev("a").prev("img").attr("src",'');
-				 SFSI(s).prev("a").prev("img").css("display","none");
-				 SFSI(s).css("display","none");
-			 }
+		dataType: "json",
+		success:function(msg) {
+			if (msg.res === "success")
+			{
+				SFSI(s).prev("a").text("Upload");
+				SFSI(s).prev("a").prev("img").attr("src",'');
+				SFSI(s).prev("a").prev("img").css("display","none");
+				SFSI(s).css("display","none");
+			}
+			else
+			{
+				alert("Whoops! something went wrong.")
+			}
         }
     });
 }
