@@ -510,6 +510,7 @@ class sfsi_plus_SocialHelper
 				date_create(
 					date("Y-m-d")
 			 ));
+			
 			 if($diff->format("%a") >= 1)
 			 {
 				 $sfsi_plus_instagram_sf_count["date"] = strtotime(date("Y-m-d"));
@@ -522,6 +523,12 @@ class sfsi_plus_SocialHelper
 				 $counts = $sfsi_plus_instagram_sf_count["sfsi_plus_sf_count"];
 			 }
 		}
+		
+		if(empty($counts) || $counts == "O")
+		{
+			$counts = 0;
+		}
+		
 		return $counts;
 	}
 	

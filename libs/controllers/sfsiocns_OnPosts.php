@@ -150,7 +150,7 @@ function sfsi_plus_Subscribelike($permalink, $show_count)
 	{
 		$counts= $socialObj->SFSI_getFeedSubscriber(sanitize_text_field(get_option('sfsi_plus_feed_id',false)));           
 	}
-	 
+	
 	if($sfsi_plus_section8_options['sfsi_plus_icons_DisplayCounts']=="yes")
 	{
 	 	$icon = '<a href="'.$url.'" target="_blank"><img src="'.$visit_icon.'" /></a>
