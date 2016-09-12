@@ -288,7 +288,7 @@
              	<label>
              		<?php  _e( 'Tweet about my page:', SFSI_PLUS_DOMAIN ); ?>
              	</label>
-                <textarea name="sfsi_plus_twitter_aboutPageText" id="sfsi_plus_twitter_aboutPageText" type="text" class="add_txt" placeholder="Hey, check out this cool site I found: www.yourname.com #Topic via@my_twitter_name" /><?php echo ($option2['sfsi_plus_twitter_aboutPageText']!='') ?  $option2['sfsi_plus_twitter_aboutPageText'] : 'Hey check out this cool site I found' ;?></textarea>
+                <textarea name="sfsi_plus_twitter_aboutPageText" id="sfsi_plus_twitter_aboutPageText" type="text" class="add_txt" placeholder="Hey, check out this cool site I found: www.yourname.com #Topic via@my_twitter_name" /><?php echo ($option2['sfsi_plus_twitter_aboutPageText']!='') ?  stripslashes($option2['sfsi_plus_twitter_aboutPageText']) : 'Hey check out this cool site I found' ;?></textarea>
              </div>
         </div>
     </div>
