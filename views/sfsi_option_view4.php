@@ -314,7 +314,7 @@
 				</ul>
 			</div>
 			<div class="listing">
-				<ul>
+				<ul class="sfsi_plus_fb_popup_contain">
 					<li>
 						<input name="sfsi_plus_facebook_countsFrom" <?php echo ($option4['sfsi_plus_facebook_countsFrom']=='likes') ?  'checked="true"' : '' ;?>  type="radio" value="likes" class="styled"  />           
 						<?php  _e( 'Retrieve the number of likes of your blog', SFSI_PLUS_DOMAIN ); ?>
@@ -323,13 +323,13 @@
 						<input name="sfsi_plus_facebook_countsFrom" <?php echo ($option4['sfsi_plus_facebook_countsFrom']=='mypage') ?  'checked="true"' : '' ;?>  type="radio" value="mypage" class="styled"  />
 						<?php  _e( 'Retrieve the number of likes of your facebook page', SFSI_PLUS_DOMAIN ); ?>
 						<br>
-						<div class="sfsiplus_fbpgiddesc">
-							<div class="sfsiplus_fbpgidwpr" style="<?php echo ($option4['sfsi_plus_facebook_countsFrom']=='likes' || $option4['sfsi_plus_facebook_countsFrom']=='followers' || $option4['sfsi_plus_facebook_countsFrom']=='manual') ?  'display:none;' : '' ;?>">
+						<div class="sfsiplus_fbpgiddesc sfsi_plus_fbpaget">
+							<div class="sfsiplus_fbpgidwpr sfsi_plus_count" style="<?php echo ($option4['sfsi_plus_facebook_countsFrom']=='likes' || $option4['sfsi_plus_facebook_countsFrom']=='followers' || $option4['sfsi_plus_facebook_countsFrom']=='manual') ?  'display:none;' : '' ;?>">
 								 Facebook <?php  _e( 'page ID:', SFSI_PLUS_DOMAIN ); ?>
 							</div>
 							<input name="sfsi_plus_facebook_mypageCounts" type="text" class="input mypginpt" value="<?php echo ($option4['sfsi_plus_facebook_mypageCounts']!='') ?  $option4['sfsi_plus_facebook_mypageCounts'] : '' ;?>" style="<?php echo ($option4['sfsi_plus_facebook_countsFrom']=='likes' || $option4['sfsi_plus_facebook_countsFrom']=='followers' || $option4['sfsi_plus_facebook_countsFrom']=='manual') ?  'display:none;' : '' ;?>" />
 						</div>
-						<div class="sfsiplus_fbpgidwpr sfsiplus_fbpgiddesc" style="<?php echo ($option4['sfsi_plus_facebook_countsFrom']=='likes' || $option4['sfsi_plus_facebook_countsFrom']=='followers' || $option4['sfsi_plus_facebook_countsFrom']=='manual') ?  'display:none;' : '' ;?>">
+						<div class="sfsiplus_fbpgidwpr sfsiplus_fbpgiddesc sfsi_plus_facebook_count" style="<?php echo ($option4['sfsi_plus_facebook_countsFrom']=='likes' || $option4['sfsi_plus_facebook_countsFrom']=='followers' || $option4['sfsi_plus_facebook_countsFrom']=='manual') ?  'display:none;' : '' ;?>">
 							(<?php  _e( "You'll find it at the bottom of the << About >> -tab on your facebook page", SFSI_PLUS_DOMAIN ); ?>)
 						</div>
 					</li>
@@ -339,6 +339,12 @@
 						<input name="sfsi_plus_facebook_manualCounts" type="text" class="input" value="<?php echo ($option4['sfsi_plus_facebook_manualCounts']!='') ?  $option4['sfsi_plus_facebook_manualCounts'] : '' ;?>"  style="<?php echo ($option4['sfsi_plus_facebook_countsFrom']=='likes' || $option4['sfsi_plus_facebook_countsFrom']=='followers' || $option4['sfsi_plus_facebook_countsFrom']=='mypage') ?  'display:none;' : '' ;?>" />
 					</li>
 				</ul>
+				<div class="sfsi_plus_facebook_pagedeasc" style="<?php echo (isset($option4['sfsi_plus_facebook_countsFrom']) && $option4['sfsi_plus_facebook_countsFrom'] =='manual') ?  'display:none;' : '' ;?>">
+                    <p class="sfsi_plus_shared_premium">
+						<?php  _e( 'Note :', SFSI_PLUS_DOMAIN ); ?><?php  _e( 'This plugin uses ', SFSI_PLUS_DOMAIN ); ?><u><?php  _e( 'one', SFSI_PLUS_DOMAIN ); ?></u><?php  _e( ' API shared by all users of this plugin. There is a limit (set by Facebook) how often this API can get the counts per day, so it may happen that it returns “0 counts” later in the day.', SFSI_PLUS_DOMAIN ); ?><br><br><?php  _e( 'Therefore we implemented a solution as part of our Premium Plugin where you can ', SFSI_PLUS_DOMAIN ); ?><b><?php  _e( 'easily ', SFSI_PLUS_DOMAIN ); ?></b><?php  _e( 'set up your own API in a few steps, which will fix this problem.', SFSI_PLUS_DOMAIN ); ?><br><br><a href="https://www.ultimatelysocial.com/usm-premium" target="_blank"><?php  _e( 'See all features of the premium plugin', SFSI_PLUS_DOMAIN ); ?></a>
+						</p>
+                </div>
+				
 			</div>    
 		</div>
 		<!-- END FACEBOOK ICON COUNT SECTION-->
@@ -495,8 +501,7 @@
                             <li class="google_option" style="<?php echo ($option4['sfsi_plus_google_countsFrom']=='manual') ?  'display:none;' : '' ;?>">
 								<h3>
 									<?php  _e( 'Video how to get the Google+ API key:', SFSI_PLUS_DOMAIN ); ?>
-                                    
-								</h3>
+                                </h3>
 							</li>
                             <li class="google_option" style="<?php echo ($option4['sfsi_plus_google_countsFrom']=='manual') ?  'display:none;' : '' ;?>">
 								<a href="https://youtu.be/O1xM9qMGbE0" target="_blank">
@@ -664,6 +669,10 @@
 							<?php  _e( 'Enter Instagram User name', SFSI_PLUS_DOMAIN ); ?>
 						</label>
 						<input name="sfsi_plus_instagram_User" class="input_facebook" type="text" value="<?php echo (isset($option4['sfsi_plus_instagram_User']) && $option4['sfsi_plus_instagram_User']!='') ?  $option4['sfsi_plus_instagram_User'] : '' ;?>"  />
+					    <p class="sfsi_plus_instagram_shared_premium" >
+							<?php  _e( 'Note :', SFSI_PLUS_DOMAIN ); ?><?php  _e( 'This plugin uses ', SFSI_PLUS_DOMAIN ); ?><u><?php  _e( 'one', SFSI_PLUS_DOMAIN ); ?></u><?php  _e( ' API shared by all users of this plugin. There is a limit (set by Instagram) how often this API can get the counts per day, so it may happen that it returns “0 counts” later in the day.', SFSI_PLUS_DOMAIN ); ?><br><br><?php  _e( 'Therefore we implemented a solution as part of our Premium Plugin where you can ', SFSI_PLUS_DOMAIN ); ?><b><?php  _e( 'easily ', SFSI_PLUS_DOMAIN ); ?></b><?php  _e( 'set up your own API in a few steps, which will fix this problem.', SFSI_PLUS_DOMAIN ); ?><br><br><a href="https://www.ultimatelysocial.com/usm-premium" target="_blank"><?php  _e( 'See all features of the premium plugin', SFSI_PLUS_DOMAIN ); ?></a>
+							</p> 
+
 					</li>
 					<li>
 						<input name="sfsi_plus_instagram_countsFrom" <?php echo ($option4['sfsi_plus_instagram_countsFrom']=='manual') ?  'checked="true"' : '' ;?>  type="radio" value="manual" class="styled" />

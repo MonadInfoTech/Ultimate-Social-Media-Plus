@@ -7,7 +7,7 @@ Author: UltimatelySocial
 Text Domain: ultimate-social-media-plus
 Domain Path: /languages
 Author URI: http://ultimatelysocial.com
-Version: 2.5.1
+Version: 2.5.2
 License: GPLv2
 */
 
@@ -37,11 +37,10 @@ register_deactivation_hook(__FILE__, 'sfsi_plus_deactivate_plugin');
 register_uninstall_hook(__FILE__, 'sfsi_plus_Unistall_plugin');
 
 /*Plugin version setup*/
-if(!get_option('sfsi_plus_pluginVersion') || get_option('sfsi_plus_pluginVersion') < 2.51)
+if(!get_option('sfsi_plus_pluginVersion') || get_option('sfsi_plus_pluginVersion') < 2.52)
 {
 	add_action("init", "sfsi_plus_update_plugin");
 }
-
 //shortcode for the ultimate social icons {Monad}
 add_shortcode("DISPLAY_ULTIMATE_PLUS", "DISPLAY_ULTIMATE_PLUS");
 function DISPLAY_ULTIMATE_PLUS($args = null, $content = null)
@@ -616,6 +615,43 @@ function sfsi_plus_admin_notice()
 			</p>
 		</div>
 	<?php }
+	?>
+	<?php
+	if(get_option("sfsi_plus_show_premium_notification") == "yes")
+	{
+		?>
+		<style type="text/css">
+			.sfsi_plus_show_prem_notification a{
+			   	color: #fff;
+			}
+			form.sfsi_plus_premiumNoticeDismiss {
+			    display: inline-block;
+			    margin: 5px 0 0;
+			    vertical-align: middle;
+			}
+			.sfsi_plus_premiumNoticeDismiss input[type='submit']{
+				background-color: transparent;
+			    border: medium none;
+			    color: #fff;
+			    margin: 0;
+			    padding: 0;
+			    cursor: pointer;
+			}
+			
+		</style>
+	    <div class="updated sfsi_plus_show_prem_notification" style="<?php echo $style; ?>background-color: #38B54A; color: #fff; font-size: 18px;">
+			<div class="alignleft" style="margin: 9px 0;">
+			<?php _e( 'BIG NEWS : There is now a ', SFSI_PLUS_DOMAIN); ?><b><a href="http://www.ultimatelysocial.com/usm-premium/" target="_blank"><?php _e( 'Premium Ultimate Social Media Plugin', SFSI_PLUS_DOMAIN); ?></a></b><?php _e( ' available with many more cool features: ', SFSI_PLUS_DOMAIN); ?><a href="http://www.ultimatelysocial.com/usm-premium/" target="_blank"><?php _e( 'Check it out', SFSI_PLUS_DOMAIN); ?></a>	
+			</div>
+			<div class="alignright">
+				<form method="post" class="sfsi_plus_premiumNoticeDismiss">
+					<input type="hidden" name="sfsi-plus_dismiss-premiumNotice" value="true">
+					<input type="submit" name="dismiss" value="Dismiss" />
+				</form>
+			</div>
+		</div>
+		<?php
+	} 
 }
 
 add_action('admin_init', 'sfsi_plus_dismiss_admin_notice');
@@ -631,6 +667,12 @@ function sfsi_plus_dismiss_admin_notice()
 	{
 		update_option( 'sfsi_plus_show_notification_plugin', "no" );
 		header("Location: ".site_url()."/wp-admin/admin.php?page=sfsi-plus-options");
+	}
+	
+	if ( isset($_REQUEST['sfsi-plus_dismiss-premiumNotice']) && $_REQUEST['sfsi-plus_dismiss-premiumNotice'] == 'true' )
+	{
+		update_option( 'sfsi_plus_show_premium_notification', "no" );
+		//header("Location: ".site_url()."/wp-admin/admin.php?page=sfsi-options");die;
 	}
 }
 

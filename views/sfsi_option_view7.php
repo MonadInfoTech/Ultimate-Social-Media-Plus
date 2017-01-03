@@ -363,7 +363,18 @@
         <label>
             <?php  _e( 'Every time user scrolls to the end of the page', SFSI_PLUS_DOMAIN ); ?>
         </label>
-    </div>        
+    </div>  
+    <div class="sfsi_plus_prem_show">
+        <p class=sfsi_plus_prem_plu_desc>
+			<b><?php  _e( 'New :', SFSI_PLUS_DOMAIN ); ?></b>
+            <?php  _e( 'The Premium Plugin also allows you to show the pop-up when a user tries to ', SFSI_PLUS_DOMAIN ); ?>
+           <b><?php  _e( 'leave your page', SFSI_PLUS_DOMAIN ); ?></b>
+           <?php  _e( '. Also, you can ', SFSI_PLUS_DOMAIN ); ?>
+           <b> <?php  _e( 'limit how often the pop-up is shown ', SFSI_PLUS_DOMAIN ); ?></b>
+           <?php  _e( 'to the same user (e.g. only once per day)  ', SFSI_PLUS_DOMAIN ); ?>
+           <a href="https://www.ultimatelysocial.com/usm-premium" target="_blank"> <?php  _e( 'Check it out', SFSI_PLUS_DOMAIN ); ?></a>
+		</p>
+    </div>       
 </div>
  <!-- SAVE BUTTON SECTION   --> 
 <div class="save_button">

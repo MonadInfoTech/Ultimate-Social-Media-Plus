@@ -1671,6 +1671,9 @@ SFSI(document).ready(function(s) {
         SFSI('input[name="sfsi_plus_facebook_countsDisplay"]').parent().find("span.checkbox").attr("style", "background-position:0px -36px;"),
 		"mypage" == SFSI("input[name='sfsi_plus_facebook_countsFrom']:checked").val() ? (SFSI("input[name='sfsi_plus_facebook_mypageCounts']").slideDown(),SFSI(".sfsiplus_fbpgidwpr").slideDown()) :(SFSI("input[name='sfsi_plus_facebook_mypageCounts']").slideUp(),SFSI(".sfsiplus_fbpgidwpr").slideUp()), 
         "manual" == SFSI("input[name='sfsi_plus_facebook_countsFrom']:checked").val() ? SFSI("input[name='sfsi_plus_facebook_manualCounts']").slideDown() :SFSI("input[name='sfsi_plus_facebook_manualCounts']").slideUp()), 
+        "sfsi_plus_facebook_countsFrom" == s.attr("name") && (("mypage" == SFSI("input[name='sfsi_plus_facebook_countsFrom']:checked").val() || "likes" == SFSI("input[name='sfsi_plus_facebook_countsFrom']:checked").val()) ? (SFSI(".sfsi_plus_facebook_pagedeasc").slideDown()) : (SFSI(".sfsi_plus_facebook_pagedeasc").slideUp())),
+
+       
         "sfsi_plus_twitter_countsFrom" == s.attr("name") && (SFSI('input[name="sfsi_plus_twitter_countsDisplay"]').prop("checked", !0), 
         SFSI('input[name="sfsi_plus_twitter_countsDisplay"]').parent().find("span.checkbox").attr("style", "background-position:0px -36px;"), 
         "manual" == SFSI("input[name='sfsi_plus_twitter_countsFrom']:checked").val() ? (SFSI("input[name='sfsi_plus_twitter_manualCounts']").slideDown(), 
