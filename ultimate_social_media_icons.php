@@ -623,6 +623,7 @@ function sfsi_plus_admin_notice()
 		<style type="text/css">
 			.sfsi_plus_show_prem_notification a{
 			   	color: #fff;
+			   	text-decoration: underline;
 			}
 			form.sfsi_plus_premiumNoticeDismiss {
 			    display: inline-block;
