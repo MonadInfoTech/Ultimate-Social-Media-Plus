@@ -12,7 +12,7 @@ function sfsi_plus_update_plugin()
 	}
 	
 	//Install version
-	update_option("sfsi_plus_pluginVersion", "2.52");
+	update_option("sfsi_plus_pluginVersion", "2.53");
 	/* show premium notification */
 	if(!get_option('sfsi_plus_show_premium_notification'))
 	{
