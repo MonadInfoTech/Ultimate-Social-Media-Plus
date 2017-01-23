@@ -640,7 +640,7 @@ function sfsi_plus_admin_notice()
 			}
 			
 		</style>
-	    <div class="updated sfsi_plus_show_prem_notification" style="<?php echo $style; ?>background-color: #38B54A; color: #fff; font-size: 18px;">
+	    <!-- <div class="updated sfsi_plus_show_prem_notification" style="<?php echo $style; ?>background-color: #38B54A; color: #fff; font-size: 18px;">
 			<div class="alignleft" style="margin: 9px 0;">
 			<?php _e( 'BIG NEWS : There is now a ', SFSI_PLUS_DOMAIN); ?><b><a href="http://www.ultimatelysocial.com/usm-premium/" target="_blank"><?php _e( 'Premium Ultimate Social Media Plugin', SFSI_PLUS_DOMAIN); ?></a></b><?php _e( ' available with many more cool features: ', SFSI_PLUS_DOMAIN); ?><a href="http://www.ultimatelysocial.com/usm-premium/" target="_blank"><?php _e( 'Check it out', SFSI_PLUS_DOMAIN); ?></a>	
 			</div>
@@ -650,7 +650,7 @@ function sfsi_plus_admin_notice()
 					<input type="submit" name="dismiss" value="Dismiss" />
 				</form>
 			</div>
-		</div>
+		</div> -->
 		<?php
 	} 
 }

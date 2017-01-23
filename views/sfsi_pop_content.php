@@ -52,53 +52,51 @@ $connectFeedLgn	= "http://www.specificfeeds.com/?".base64_encode("userprofile=wo
 <div class="pop-overlay upload-overlay" >
      
     <form id="customIconFrm" method="post" action="<?php echo admin_url( 'admin-ajax.php?action=UploadIcons' ); ?>" enctype="multipart/form-data" >
-        <div class="pop_up_box upload_pop_up" id="tab1" style="min-height: 100px;">
+        <div class="pop_up_box upload_pop_up" id="tab1" style="min-height: 175px;">
             <img src="<?php echo SFSI_PLUS_PLUGURL; ?>images/close.jpg" id="close_Uploadpopup" class="sfsicloseBtn" />
-	    <div class="sfsi_uploader">
-            <div class="sfsi_popupcntnr">
-            	<h3>
-               		<?php  _e( 'Steps:', SFSI_PLUS_DOMAIN ); ?>
-                </h3>
-                <ul class="flwstep">
-                	<li>
-                    	1. <?php  _e( 'Click on << Upload >> below', SFSI_PLUS_DOMAIN ); ?>
-                    </li>
-                    <li>
-                    	2. <?php  _e( 'Upload the icon into the media gallery', SFSI_PLUS_DOMAIN ); ?>
-                    </li>
-					<li>
-                    	3. <?php  _e( 'Click on << Insert into post >> ', SFSI_PLUS_DOMAIN ); ?>
-                   </li>
-                </ul>    
-                <div class="upldbtn"><input name=""  type="button" value="Upload" class="upload_butt" onclick="upload_image_icon(this)" /></div>
+    	    <div class="sfsi_uploader">
+                <div class="sfsi_popupcntnr">
+                	<h3>
+                   		<?php  _e( 'Steps:', SFSI_PLUS_DOMAIN ); ?>
+                    </h3>
+                    <ul class="flwstep">
+                    	<li>
+                        	1. <?php  _e( 'Click on << Upload >> below', SFSI_PLUS_DOMAIN ); ?>
+                        </li>
+                        <li>
+                        	2. <?php  _e( 'Upload the icon into the media gallery', SFSI_PLUS_DOMAIN ); ?>
+                        </li>
+    					<li>
+                        	3. <?php  _e( 'Click on << Insert into post >> ', SFSI_PLUS_DOMAIN ); ?>
+                       </li>
+                    </ul>    
+                    <div class="upldbtn"><input name=""  type="button" value="Upload" class="upload_butt" onclick="upload_image_icon(this)" /></div>
+                </div>
             </div>
+          
+            <input type="hidden" name="total_cusotm_icons" value="<?php echo $count;?>" id="plus_total_cusotm_icons" class="mediam_txt" />
+            <!--<a href="javascript:;" id="close_Uploadpopup" title="Done">Done</a>-->
+            <label style="color:red" class="uperror"></label>
         </div>
-      
-        <input type="hidden" name="total_cusotm_icons" value="<?php echo $count;?>" id="plus_total_cusotm_icons" class="mediam_txt" />
-        <!--<a href="javascript:;" id="close_Uploadpopup" title="Done">Done</a>-->
-	<label style="color:red" class="uperror"></label>
-	</div>
-	
-   </form>
+    </form>
    
-   <script type="text/javascript">
-   function upload_image_icon(ref)
-   {
-	    formfield = jQuery(ref).attr('name');
-		tb_show('', 'media-upload.php?type=image&amp;TB_iframe=true');
-		window.send_to_editor = function(html) {
-			var url = jQuery('img',html).attr('src');
-			if(url == undefined) 
-			{
-				var url = jQuery(html).attr('src');
-			}
-			tb_remove();
-			plus_sfsi_newcustomicon_upload(url);
-		}
-		return false;
-	}
-   </script>
-   
+    <script type="text/javascript">
+        function upload_image_icon(ref)
+        {
+            formfield = jQuery(ref).attr('name');
+        	tb_show('', 'media-upload.php?type=image&amp;TB_iframe=true');
+        	window.send_to_editor = function(html) {
+        		var url = jQuery('img',html).attr('src');
+        		if(url == undefined) 
+        		{
+        			var url = jQuery(html).attr('src');
+        		}
+        		tb_remove();
+        		plus_sfsi_newcustomicon_upload(url);
+        	}
+        	return false;
+        }
+    </script>
 </div><!-- Custom icon upload  Pop-up-->
 
 
