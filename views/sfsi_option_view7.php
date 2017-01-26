@@ -363,7 +363,8 @@
         <label>
             <?php  _e( 'Every time user scrolls to the end of the page', SFSI_PLUS_DOMAIN ); ?>
         </label>
-    </div>  
+    </div> 
+    <?php if($option7['sfsi_plus_premium_popup_box'] =='yes'){ ?> 
     <div class="sfsi_plus_prem_show">
         <p class=sfsi_plus_prem_plu_desc>
 			<b><?php  _e( 'New :', SFSI_PLUS_DOMAIN ); ?></b>
@@ -372,9 +373,10 @@
            <?php  _e( '. Also, you can ', SFSI_PLUS_DOMAIN ); ?>
            <b> <?php  _e( 'limit how often the pop-up is shown ', SFSI_PLUS_DOMAIN ); ?></b>
            <?php  _e( 'to the same user (e.g. only once per day)  ', SFSI_PLUS_DOMAIN ); ?>
-           <a href="https://www.ultimatelysocial.com/usm-premium" target="_blank"> <?php  _e( 'Check it out', SFSI_PLUS_DOMAIN ); ?></a>
+           <a href="https://www.ultimatelysocial.com/usm-premium/?utm_source=usmplus_settings_page&utm_campaign=more_popup_options&utm_medium=banner" target="_blank"> <?php  _e( 'Check it out', SFSI_PLUS_DOMAIN ); ?></a>
 		</p>
-    </div>       
+    </div>  
+    <?php } ?>     
 </div>
  <!-- SAVE BUTTON SECTION   --> 
 <div class="save_button">

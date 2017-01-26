@@ -12,7 +12,7 @@ function sfsi_plus_update_plugin()
 	}
 	
 	//Install version
-	update_option("sfsi_plus_pluginVersion", "2.53");
+	update_option("sfsi_plus_pluginVersion", "2.54");
 	/* show premium notification */
 	if(!get_option('sfsi_plus_show_premium_notification'))
 	{
@@ -112,6 +112,58 @@ function sfsi_plus_update_plugin()
 		$option4['sfsi_plus_youtube_channelId'] = '';
 		update_option('sfsi_plus_section4_options', serialize($option4));
 	}
+	/* section1 */
+	$option1 = unserialize(get_option('sfsi_plus_section1_options',false));
+	if(isset($option1) && !empty($option1) && !isset($option1['sfsi_plus_premium_icons_box']))
+	{
+		$option1['sfsi_plus_premium_icons_box'] = 'no';
+		update_option('sfsi_plus_section1_options', serialize($option1));
+	}
+	/* section2 */
+	$option2 = unserialize(get_option('sfsi_plus_section2_options',false));
+	if(isset($option2) && !empty($option2) && !isset($option2['sfsi_plus_premium_email_box']))
+	{
+		$option2['sfsi_plus_premium_email_box'] = 'no';
+		$option2['sfsi_plus_premium_facebook_box'] = 'no';
+		$option2['sfsi_plus_premium_twitter_box'] = 'no';
+		$option2['sfsi_plus_premium_google_box'] = 'no';
+		update_option('sfsi_plus_section2_options', serialize($option2));
+	}
+	/* section3 */
+	$option3 = unserialize(get_option('sfsi_plus_section3_options',false));
+	if(isset($option3) && !empty($option3) && !isset($option3['sfsi_plus_premium_icons_design_box']))
+	{
+		$option3['sfsi_plus_premium_icons_design_box'] = 'no';
+		update_option('sfsi_plus_section3_options', serialize($option3));
+	}
+	/* section4 */
+	$option4 = unserialize(get_option('sfsi_plus_section4_options',false));
+	if(isset($option4) && !empty($option4) && !isset($option4['sfsi_plus_premium_count_box']))
+	{
+		$option4['sfsi_plus_premium_count_box'] = 'no';
+		update_option('sfsi_plus_section4_options', serialize($option4));
+	}
+	/* section5 */
+	$option5 = unserialize(get_option('sfsi_plus_section5_options',false));
+	if(isset($option5) && !empty($option5) && !isset($option5['sfsi_plus_premium_size_box']))
+	{
+		$option5['sfsi_plus_premium_size_box'] = 'no';
+		update_option('sfsi_plus_section5_options', serialize($option5));
+	}
+	/* section7 */
+	$option7 = unserialize(get_option('sfsi_plus_section7_options',false));
+	if(isset($option7) && !empty($option7) && !isset($option7['sfsi_plus_premium_popup_box']))
+	{
+		$option7['sfsi_plus_premium_popup_box'] = 'no';
+		update_option('sfsi_plus_section7_options', serialize($option7));
+	}
+	/* section8 */
+	$option8 = unserialize(get_option('sfsi_plus_section8_options',false));
+	if(isset($option8) && !empty($option8) && !isset($option8['sfsi_plus_show_premium_placement_box']))
+	{
+		$option8['sfsi_plus_show_premium_placement_box'] = 'no';
+		update_option('sfsi_plus_section8_options', serialize($option8));
+	}
 }
 function sfsi_plus_activate_plugin()
 {
@@ -129,7 +181,9 @@ function sfsi_plus_activate_plugin()
           'sfsi_plus_youtube_display'=>'no',
 		  'sfsi_plus_houzz_display'=>'no',
           'sfsi_custom_display'=>'',
-          'sfsi_custom_files'=>'');
+          'sfsi_custom_files'=>'',
+          'sfsi_plus_premium_icons_box' =>'yes',
+          );
 	add_option('sfsi_plus_section1_options',  serialize($options1));
     
 	if(get_option('sfsi_plus_feed_id') && get_option('sfsi_plus_redirect_url'))
@@ -181,7 +235,12 @@ function sfsi_plus_activate_plugin()
         'sfsi_plus_linkedin_recommendBusines'=>'no',
         'sfsi_plus_linkedin_recommendCompany'=>'',
         'sfsi_plus_linkedin_recommendProductId'=>'',
-        'sfsi_plus_CustomIcon_links'=>'');
+        'sfsi_plus_CustomIcon_links'=>'',
+        'sfsi_plus_premium_email_box'=>'yes',
+        'sfsi_plus_premium_facebook_box'=>'yes',
+        'sfsi_plus_premium_twitter_box'=>'yes',
+        'sfsi_plus_premium_google_box'=>'yes',
+        );
 	add_option('sfsi_plus_section2_options',  serialize($options2));
     
 	/* Design and animation option  */
@@ -191,7 +250,10 @@ function sfsi_plus_activate_plugin()
         'sfsi_plus_shuffle_Firstload'=>'no',
         'sfsi_plus_shuffle_interval'=>'no',
         'sfsi_plus_shuffle_intervalTime'=>'',                              
-        'sfsi_plus_actvite_theme'=>'default');
+        'sfsi_plus_actvite_theme'=>'default',
+        'sfsi_plus_premium_icons_design_box'=>'yes',
+        
+        );
 	add_option('sfsi_plus_section3_options',  serialize($options3));
 	
 	/* display counts options */         
@@ -238,7 +300,9 @@ function sfsi_plus_activate_plugin()
         'sfsi_plus_shares_manualCounts'=>'20',
 		'sfsi_plus_houzz_countsDisplay'=>'no',
         'sfsi_plus_houzz_countsFrom'=>'manual',
-        'sfsi_plus_houzz_manualCounts'=>'20');
+        'sfsi_plus_houzz_manualCounts'=>'20',
+         'sfsi_plus_premium_count_box'=>'yes',
+        );
 	add_option('sfsi_plus_section4_options',  serialize($options4));
   
     $options5=array('sfsi_plus_icons_size'=>'40',
@@ -279,7 +343,9 @@ function sfsi_plus_activate_plugin()
 		'sfsi_plus_houzz_MouseOverText'=>'Houzz',
         'sfsi_plus_youtube_MouseOverText'=>'YouTube',
         'sfsi_plus_share_MouseOverText'=>'Share',
-        'sfsi_plus_custom_MouseOverTexts'=>'');
+        'sfsi_plus_custom_MouseOverTexts'=>'',
+         'sfsi_plus_premium_size_box'=>'yes',
+        );
 	add_option('sfsi_plus_section5_options',  serialize($options5));
     
 	/* post options */	                
@@ -307,7 +373,10 @@ function sfsi_plus_activate_plugin()
         'sfsi_plus_Show_popupOn_PageIDs'=>'',
         'sfsi_plus_Shown_pop'=>'ETscroll',
         'sfsi_plus_Shown_popupOnceTime'=>'',
-        'sfsi_plus_Shown_popuplimitPerUserTime'=>'');
+        'sfsi_plus_Shown_popuplimitPerUserTime'=>'',
+        'sfsi_plus_premium_popup_box' =>'yes',
+        
+        );
 	add_option('sfsi_plus_section7_options',  serialize($options7));
 	
 	/*options that are added in the third question*/
@@ -357,7 +426,9 @@ function sfsi_plus_activate_plugin()
 		'sfsi_plus_rectshr'=>'no',
 		'sfsi_plus_recttwtr'=>'yes',
 		'sfsi_plus_rectpinit'=>'yes',
-		'sfsi_plus_rectfbshare'=>'yes');
+		'sfsi_plus_rectfbshare'=>'yes',
+	    'sfsi_plus_show_premium_placement_box'=>'yes');
+
 	add_option('sfsi_plus_section8_options',  serialize($options8));		
 	
 	/*Some additional option added*/	

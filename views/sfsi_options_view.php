@@ -71,7 +71,7 @@
         </p>
         <p> 
         	<?php  _e( 'If you have questions, or something doesn`t work as it should, please read the FAQ:', SFSI_PLUS_DOMAIN ); ?>
-			<a href="http://ultimatelysocial.com/faq/" class="lit_txt">
+			<a href="https://www.ultimatelysocial.com/faq?utm_source=usmplus_settings_page&utm_campaign=top_introduction&utm_medium=banner" class="lit_txt">
 				<?php _e('Click here',SFSI_PLUS_DOMAIN); ?>
 			</a>
        </p>
@@ -163,7 +163,7 @@
          </p>
          <p class="bldtxtmsg">
          	<?php  _e( 'Need top-notch Wordpress development work at a competitive price?', SFSI_PLUS_DOMAIN ); ?>
-         	<a href="http://www.ultimatelysocial.com">
+         	<a href="https://www.ultimatelysocial.com/usm-premium/?utm_source=usmplus_settings_page&utm_campaign=footer_credit&utm_medium=banner">
         		<?php _e('Visit us on ultimatelysocial.com',SFSI_PLUS_DOMAIN); ?>
          	</a>
          </p>

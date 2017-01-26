@@ -7,7 +7,7 @@ Author: UltimatelySocial
 Text Domain: ultimate-social-media-plus
 Domain Path: /languages
 Author URI: http://ultimatelysocial.com
-Version: 2.5.3
+Version: 2.5.4
 License: GPLv2
 */
 
@@ -37,7 +37,7 @@ register_deactivation_hook(__FILE__, 'sfsi_plus_deactivate_plugin');
 register_uninstall_hook(__FILE__, 'sfsi_plus_Unistall_plugin');
 
 /*Plugin version setup*/
-if(!get_option('sfsi_plus_pluginVersion') || get_option('sfsi_plus_pluginVersion') < 2.53)
+if(!get_option('sfsi_plus_pluginVersion') || get_option('sfsi_plus_pluginVersion') < 2.54)
 {
 	add_action("init", "sfsi_plus_update_plugin");
 }
@@ -642,7 +642,7 @@ function sfsi_plus_admin_notice()
 		</style>
 	    <!-- <div class="updated sfsi_plus_show_prem_notification" style="<?php echo $style; ?>background-color: #38B54A; color: #fff; font-size: 18px;">
 			<div class="alignleft" style="margin: 9px 0;">
-			<?php _e( 'BIG NEWS : There is now a ', SFSI_PLUS_DOMAIN); ?><b><a href="http://www.ultimatelysocial.com/usm-premium/" target="_blank"><?php _e( 'Premium Ultimate Social Media Plugin', SFSI_PLUS_DOMAIN); ?></a></b><?php _e( ' available with many more cool features: ', SFSI_PLUS_DOMAIN); ?><a href="http://www.ultimatelysocial.com/usm-premium/" target="_blank"><?php _e( 'Check it out', SFSI_PLUS_DOMAIN); ?></a>	
+			<?php _e( 'BIG NEWS : There is now a ', SFSI_PLUS_DOMAIN); ?><b><a href="https://www.ultimatelysocial.com/usm-premium/?utm_source=usmplus_settings_page&utm_campaign=notification_banner&utm_medium=banner" target="_blank"><?php _e( 'Premium Ultimate Social Media Plugin', SFSI_PLUS_DOMAIN); ?></a></b><?php _e( ' available with many more cool features: ', SFSI_PLUS_DOMAIN); ?><a href="https://www.ultimatelysocial.com/usm-premium/?utm_source=usmplus_settings_page&utm_campaign=notification_banner&utm_medium=banner" target="_blank"><?php _e( 'Check it out', SFSI_PLUS_DOMAIN); ?></a>	
 			</div>
 			<div class="alignright">
 				<form method="post" class="sfsi_plus_premiumNoticeDismiss">

@@ -308,7 +308,7 @@
                         
                     </div>
                	</li>
-                
+                <?php if($option3['sfsi_plus_premium_icons_design_box'] =='yes'){ ?>
                 <li>
         			<div class="sf_si_plus_our_prmium_plugin-add">
         			    <div class="sf_si_plus_prmium_head"><h2><?php _e("New: ", SFSI_PLUS_DOMAIN); ?><span><?php _e("In our Premium Plugin we added:", SFSI_PLUS_DOMAIN); ?></span></h2></div>
@@ -400,11 +400,11 @@
                             </ul>
         			    </div>
         				<div class="sf_si_plus_all_features_premium">
-        					<a  href="https://www.ultimatelysocial.com/usm-premium" target="_blank"><?php _e("See all features Premium Plugin", SFSI_PLUS_DOMAIN); ?></a>
+        					<a  href="https://www.ultimatelysocial.com/usm-premium/?utm_source=usmplus_settings_page&utm_campaign=more_icons_designs&utm_medium=banner" target="_blank"><?php _e("See all features Premium Plugin", SFSI_PLUS_DOMAIN); ?></a>
         				</div>
         		    </div>
                 </li>
-                
+                <?php } ?>
           		<li>
                 	<p style="font-weight: bold; margin: 12px 0 0;">
 						<?php _e("Are you an icon designer?", SFSI_PLUS_DOMAIN); ?>
