@@ -15,7 +15,7 @@
 <!-- START Admin view for plugin-->
 <div class="wapper sfsi_mainContainer">
 	
-     <!-- Get notification bar-->
+     <!-- Get notification bar -->
 	<?php if(get_option("sfsi_plus_show_notification") == "yes") { ?>
     <script type="text/javascript">
 		jQuery(document).ready(function(e) {
