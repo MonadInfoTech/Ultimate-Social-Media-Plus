@@ -124,6 +124,9 @@
 	$option4['sfsi_plus_shares_manualCounts'] 		= 	(isset($option4['sfsi_plus_shares_manualCounts']))
 															? intval($option4['sfsi_plus_shares_manualCounts'])
 															: '';
+	$option4['sfsi_plus_premium_count_box'] 		= 	(isset($option4['sfsi_plus_premium_count_box']))
+															? sanitize_text_field($option4['sfsi_plus_premium_count_box'])
+															: 'yes';														
 
     $counts = sfsi_plus_getCounts();
 	/* fetch counts for admin sections */
@@ -342,7 +345,7 @@
 				<?php if($option4['sfsi_plus_premium_count_box'] =='yes') { ?>
 				<div class="sfsi_plus_facebook_pagedeasc" style="<?php echo (isset($option4['sfsi_plus_facebook_countsFrom']) && $option4['sfsi_plus_facebook_countsFrom'] =='manual') ?  'display:none;' : '' ;?>">
                     <p class="sfsi_plus_shared_premium">
-						<?php  _e( 'Note :', SFSI_PLUS_DOMAIN ); ?><?php  _e( 'This plugin uses ', SFSI_PLUS_DOMAIN ); ?><u><?php  _e( 'one', SFSI_PLUS_DOMAIN ); ?></u><?php  _e( ' API shared by all users of this plugin. There is a limit (set by Facebook) how often this API can get the counts per day, so it may happen that it returns “0 counts” later in the day.', SFSI_PLUS_DOMAIN ); ?><br><br><?php  _e( 'Therefore we implemented a solution as part of our Premium Plugin where you can ', SFSI_PLUS_DOMAIN ); ?><b><?php  _e( 'easily ', SFSI_PLUS_DOMAIN ); ?></b><?php  _e( 'set up your own API in a few steps, which will fix this problem.', SFSI_PLUS_DOMAIN ); ?><br><br><a href="https://www.ultimatelysocial.com/usm-premium/?utm_source=usmplus_settings_page&utm_campaign=facebook_counts&utm_medium=banner" target="_blank"><?php  _e( 'See all features of the premium plugin', SFSI_PLUS_DOMAIN ); ?></a>
+						<?php  _e( 'Note: ', SFSI_PLUS_DOMAIN ); ?><?php  _e( 'This plugin uses one API shared by all users of this plugin. There is a limit (set by Facebook) how often this API can get the counts per day, so it may happen that it returns “0 counts” later in the day.', SFSI_PLUS_DOMAIN ); ?><br><br><?php  _e( 'Therefore we implemented a solution as part of our Premium Plugin where you can easily set up your own API in a few steps, which will fix this problem.', SFSI_PLUS_DOMAIN ); ?><br><br><a href="https://www.ultimatelysocial.com/usm-premium/?utm_source=usmplus_settings_page&utm_campaign=facebook_counts&utm_medium=banner" target="_blank"><?php  _e( 'See all features of the premium plugin', SFSI_PLUS_DOMAIN ); ?></a>
 						</p>
                 </div>
 				<?php } ?>
@@ -672,7 +675,7 @@
 						<input name="sfsi_plus_instagram_User" class="input_facebook" type="text" value="<?php echo (isset($option4['sfsi_plus_instagram_User']) && $option4['sfsi_plus_instagram_User']!='') ?  $option4['sfsi_plus_instagram_User'] : '' ;?>"  />
 					    <?php if($option4['sfsi_plus_premium_count_box'] =='yes'){ ?>
 					    <p class="sfsi_plus_instagram_shared_premium" >
-							<?php  _e( 'Note :', SFSI_PLUS_DOMAIN ); ?><?php  _e( 'This plugin uses ', SFSI_PLUS_DOMAIN ); ?><u><?php  _e( 'one', SFSI_PLUS_DOMAIN ); ?></u><?php  _e( ' API shared by all users of this plugin. There is a limit (set by Instagram) how often this API can get the counts per day, so it may happen that it returns “0 counts” later in the day.', SFSI_PLUS_DOMAIN ); ?><br><br><?php  _e( 'Therefore we implemented a solution as part of our Premium Plugin where you can ', SFSI_PLUS_DOMAIN ); ?><b><?php  _e( 'easily ', SFSI_PLUS_DOMAIN ); ?></b><?php  _e( 'set up your own API in a few steps, which will fix this problem.', SFSI_PLUS_DOMAIN ); ?><br><br><a href="https://www.ultimatelysocial.com/usm-premium/?utm_source=usmplus_settings_page&utm_campaign=instagram_counts&utm_medium=banner" target="_blank"><?php  _e( 'See all features of the premium plugin', SFSI_PLUS_DOMAIN ); ?></a>
+							<?php  _e( 'Note: ', SFSI_PLUS_DOMAIN ); ?><?php  _e( 'This plugin uses one API shared by all users of this plugin. There is a limit (set by Instagram) how often this API can get the counts per day, so it may happen that it returns “0 counts” later in the day.', SFSI_PLUS_DOMAIN ); ?><br><br><?php  _e( 'Therefore we implemented a solution as part of our Premium Plugin where you can easily set up your own API in a few steps, which will fix this problem. ', SFSI_PLUS_DOMAIN ); ?><br><br><a href="https://www.ultimatelysocial.com/usm-premium/?utm_source=usmplus_settings_page&utm_campaign=instagram_counts&utm_medium=banner" target="_blank"><?php  _e( 'See all features of the premium plugin', SFSI_PLUS_DOMAIN ); ?></a>
 						</p>
 						<?php } ?>
 					</li>

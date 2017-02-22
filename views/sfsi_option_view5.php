@@ -90,7 +90,9 @@
 	$option5['sfsi_plus_houzz_MouseOverText']	= 	(isset($option5['sfsi_plus_houzz_MouseOverText']))
 														? sanitize_text_field($option5['sfsi_plus_houzz_MouseOverText'])
 														: '';
-
+    $option5['sfsi_plus_premium_size_box']	= 	(isset($option5['sfsi_plus_premium_size_box']))
+														? sanitize_text_field($option5['sfsi_plus_premium_size_box'])
+														: 'yes';
 				
 	$visit_iconsUrl = SFSI_PLUS_PLUGURL."images/visit_icons/";
   	if(is_array($custom_icons_order) ) 

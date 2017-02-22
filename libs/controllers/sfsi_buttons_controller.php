@@ -491,7 +491,7 @@ function sfsi_plus_options_updater5()
 add_action('wp_ajax_plus_updateSrcn6','sfsi_plus_options_updater6');        
 function sfsi_plus_options_updater6()
 {
-	if ( !wp_verify_nonce( $_POST['nonce'], "update_plus_step6")) {
+	if ( !wp_verify_nonce( $_POST['nonce'], "update_plus_step6")){
       echo  json_encode(array("wrong_nonce")); exit;
    	}
     $sfsi_plus_show_Onposts                = isset($_POST["sfsi_plus_show_Onposts"]) ? $_POST["sfsi_plus_show_Onposts"] : 'no'; 

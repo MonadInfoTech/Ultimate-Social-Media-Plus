@@ -12,12 +12,18 @@ function sfsi_plus_update_plugin()
 	}
 	
 	//Install version
-	update_option("sfsi_plus_pluginVersion", "2.55");
+	update_option("sfsi_plus_pluginVersion", "2.56");
 	/* show premium notification */
 	if(!get_option('sfsi_plus_show_premium_notification'))
 	{
 		add_option("sfsi_plus_show_premium_notification", "yes");
 	}
+	/* show notification on about mobile setting */
+	if(!get_option('sfsi_plus_show_Setting_mobile_notification'))
+	{
+		add_option("sfsi_plus_show_Setting_mobile_notification", "yes");
+	}
+	
 	
 	/*show notification*/
 	if(!get_option('sfsi_plus_show_notification'))
@@ -434,7 +440,6 @@ function sfsi_plus_activate_plugin()
 	/*Some additional option added*/	
 	update_option('sfsi_plus_feed_id'		, sanitize_text_field($sffeeds->feed_id));
 	update_option('sfsi_plus_redirect_url'	, sanitize_text_field($sffeeds->redirect_url));
-	
 	add_option('sfsi_plus_installDate',date('Y-m-d h:i:s'));
 	add_option('sfsi_plus_RatingDiv','no');
 	add_option('sfsi_plus_footer_sec','no');
