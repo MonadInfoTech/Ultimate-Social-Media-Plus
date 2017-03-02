@@ -26,6 +26,9 @@
 	$option3['sfsi_plus_shuffle_intervalTime'] 	=	(isset($option3['sfsi_plus_shuffle_intervalTime']))
 														? intval($option3['sfsi_plus_shuffle_intervalTime'])
 														: '';
+    $option3['sfsi_plus_premium_icons_design_box'] 	=	(isset($option3['sfsi_plus_premium_icons_design_box']))
+														? intval($option3['sfsi_plus_premium_icons_design_box'])
+														: 'yes';
 ?>
 <!-- Section 3 "What design & animation do you want to give your icons?" main div Start -->
 <div class="tab3">
