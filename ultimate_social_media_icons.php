@@ -7,7 +7,7 @@ Author: UltimatelySocial
 Text Domain: ultimate-social-media-plus
 Domain Path: /languages
 Author URI: http://ultimatelysocial.com
-Version: 2.5.6
+Version: 2.5.7
 License: GPLv2
 */
 
@@ -37,7 +37,7 @@ register_deactivation_hook(__FILE__, 'sfsi_plus_deactivate_plugin');
 register_uninstall_hook(__FILE__, 'sfsi_plus_Unistall_plugin');
 
 /*Plugin version setup*/
-if(!get_option('sfsi_plus_pluginVersion') || get_option('sfsi_plus_pluginVersion') < 2.56)
+if(!get_option('sfsi_plus_pluginVersion') || get_option('sfsi_plus_pluginVersion') < 2.57)
 {
 	add_action("init", "sfsi_plus_update_plugin");
 }
@@ -753,7 +753,9 @@ function sfsi_plus_action_links ( $mylinks )
 {
 	$mylinks[] = '<a href="https://www.ultimatelysocial.com/usm-premium/?utm_source=usmplus_manage_plugin_page&utm_campaign=upgrade_to_pro&utm_medium=banner" style="color:#FF0000;"><b>Upgrade to pro</b></a>';
 	$mylinks[] = $mylinks['deactivate'];
+	$mylinks[] = $mylinks['edit'];
 	unset ($mylinks['deactivate']);
+	unset ($mylinks['edit']);
 	return $mylinks;
 }
 ?>

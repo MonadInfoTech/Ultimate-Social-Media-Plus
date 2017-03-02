@@ -41,6 +41,7 @@
     $option1['sfsi_plus_premium_icons_box'] =	(isset($option1['sfsi_plus_premium_icons_box']))
 													? sanitize_text_field($option1['sfsi_plus_premium_icons_box'])
 													: 'yes';
+
 ?>
 
 <!-- Section 1 "Which icons do you want to show on your site? " main div Start -->

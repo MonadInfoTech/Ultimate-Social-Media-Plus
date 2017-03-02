@@ -481,7 +481,7 @@
                     	<?php  _e( 'Left', SFSI_PLUS_DOMAIN ); ?>
                     </option>
                 </select>
-                
+                 <p class="sfsi_plus_icons_align_other"><?php  _e( '(with respect to each other)', SFSI_PLUS_DOMAIN ); ?></p>
        		</div> 
         	<span>
         		<?php  _e( 'Icons per row:', SFSI_PLUS_DOMAIN ); ?>
@@ -491,6 +491,15 @@
         		<?php  _e( 'Leave empty if you dont want to define this', SFSI_PLUS_DOMAIN ); ?>
         	</ins>
         </div>
+        <?php if($option5['sfsi_plus_premium_size_box'] == 'no') { ?>
+		<div class ="sfsi_plus_new_prmium_follw">
+		<p>
+			<b><?php  _e( 'New: ', SFSI_PLUS_DOMAIN ); ?></b><?php  _e( 'The Premium Plugin gives several more alignment options:', SFSI_PLUS_DOMAIN ); ?><br>- &nbsp;&nbsp;<?php  _e( ' Show icons vertically', SFSI_PLUS_DOMAIN ); ?><br>- &nbsp;&nbsp;<?php  _e( ' Align icons within a widget (left, right, centered)', SFSI_PLUS_DOMAIN ); ?><br>- &nbsp;&nbsp;<?php  _e( ' Align icons within the «container» where you place them via shortcode (left, right, centered)  ', SFSI_PLUS_DOMAIN ); ?>
+			<br>
+			<a href="https://www.ultimatelysocial.com/usm-premium/?utm_source=usmplus_settings_page&utm_campaign=more_alignment_options&utm_medium=banner&utm_expid=92383224-1.3LePDLfOStifx6fliEmuWg.0" target="_blank"><?php  _e( 'See all features', SFSI_PLUS_DOMAIN ); ?></a>
+		</p>
+		</div>
+		<?php } ?>
     </div>
 	<!-- icon's select language optins start here -->
     <div class="row">

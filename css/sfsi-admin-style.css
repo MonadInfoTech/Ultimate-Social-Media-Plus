@@ -1151,3 +1151,4 @@ p.sfsi_plus_shared_premium a ,p.sfsi_plus_instagram_shared_premium a{text-decora
 p.sfsi_plus_shared_premium b,p.sfsi_plus_instagram_shared_premium b{font-weight:bold;}
 p.sfsi_plus_instagram_shared_premium{float: right;width: 41%;line-height: 20px;color: #1f1d1d;font-size: 13px;}
 .sfsi_plus_fb_popup_contain{width:50%;display:inline-block;}
+.sfsi_plus_icons_align_other{width:auto; font-size: 15px !important;}
