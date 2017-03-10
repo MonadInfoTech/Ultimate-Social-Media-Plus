@@ -64,9 +64,6 @@
 			<?php  _e( 'Welcome to the Ultimate Social Media Icons PLUS plugin!', SFSI_PLUS_DOMAIN ); ?>
         </h1>
         <p>
-        	<?php  _e( 'This plugin is 100% FREE and will fulfill all your subscription/sharing/liking needs!', SFSI_PLUS_DOMAIN ); ?>
-        </p>
-        <p>
         	<?php  _e( 'Simply answer the questions below (at least the first 3) by clicking on them - that`s it!', SFSI_PLUS_DOMAIN ); ?>
         </p>
         <p> 
