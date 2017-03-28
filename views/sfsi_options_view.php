@@ -36,7 +36,6 @@
 	</script>
     <style type="text/css">
 	.sfsi_plus_show_notification {
-		float: left;
 		margin-bottom: 45px;
 		padding: 12px 13px;
 		width: 98%;
@@ -57,6 +56,39 @@
 	<?php } ?>
     <!-- Get notification bar-->
     
+    <?php if(get_option("sfsi_plus_new_show_notification") == "yes") { ?>
+    <script type="text/javascript">
+        jQuery(document).ready(function(e) {
+            jQuery(".sfsi_plus_new_notification_cross").click(function(){
+                SFSI.ajax({
+                    url:ajax_object.ajax_url,
+                    type:"post",
+                    data: {action: "sfsiPlus_new_notification_read"},
+                    success:function(msg){
+                        if(jQuery.trim(msg) == 'success')
+                        {
+                            jQuery(".sfsi_plus_new_notification").hide("fast");
+                        }
+                    }
+                });
+            });
+        });
+    </script>
+    <div class="sfsi_plus_new_notification">
+        <div class="sfsi_plus_new_notification_header">
+            <h1>Time limited offer: We’ll create tailor-made icons which match your theme...</h1>
+            <div class="sfsi_plus_new_notification_cross">X</div>
+        </div>
+        <div class="sfsi_plus_new_notification_body">
+            <div class="sfsi_plus_new_notification_image">
+                <img src="<?php  echo SFSI_PLUS_PLUGURL.'images/WPPlugin_V3.png';?>" id="newImg" />
+            </div>
+            <div class="sfsi_plus_new_notification_learnmore">
+                <a href="https://www.ultimatelysocial.com/usm-premium/?utm_source=usmplus_settings_page&utm_campaign=tailored_icons&utm_medium=banner" target="_blank">Learn more</a>
+            </div>
+        </div>
+    </div>
+    <?php } ?>
     
     <!-- Top content area of plugin -->
     <div class="main_contant">

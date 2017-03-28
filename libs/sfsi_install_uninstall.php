@@ -29,9 +29,10 @@ function sfsi_plus_update_plugin()
 	{
 		add_option("sfsi_plus_show_notification", "yes");
 	}
-	if(!get_option('sfsi_plus_show_notification_plugin'))
+	/* show new notification*/
+	if(!get_option('sfsi_plus_new_show_notification'))
 	{
-		add_option("sfsi_plus_show_notification_plugin", "yes");
+		add_option("sfsi_plus_new_show_notification", "no");
 	}
 	
 	/* subscription form */
@@ -174,6 +175,11 @@ function sfsi_plus_activate_plugin()
 {
     /* check for CURL enable at server */
     sfsi_plus_curl_enable_notice();	
+    if(!get_option('sfsi_plus_new_show_notification'))
+	{
+		add_option("sfsi_plus_new_show_notification", "yes");
+	}
+    
     $options1=array('sfsi_plus_rss_display'=>'yes',
           'sfsi_plus_email_display'=>'yes',
           'sfsi_plus_facebook_display'=>'yes',

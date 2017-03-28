@@ -1000,6 +1000,14 @@ function sfsiPlus_notification_read()
 	die;
 }
 
+add_action("wp_ajax_sfsiPlus_new_notification_read", "sfsiPlus_new_notification_read");
+function sfsiPlus_new_notification_read()
+{
+	update_option("sfsi_plus_new_show_notification", "no");
+	echo "success";
+	die;
+}
+
 function sfsi_plus_sanitize_field($value)
 {
 	return strip_tags(trim($value));
