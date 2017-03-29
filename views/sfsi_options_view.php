@@ -46,13 +46,13 @@
 		text-align:center;
 	}
 	</style>	
-	<div class="sfsi_plus_show_notification" style="background-color: #38B54A; color: #fff; font-size: 18px;">
+	<!-- <div class="sfsi_plus_show_notification" style="background-color: #38B54A; color: #fff; font-size: 18px;">
     	
-        <?php  _e( 'New: You can now also show a subscription form on your site, increasing sign-ups! (Question 8)', SFSI_PLUS_DOMAIN); ?>
+        <?php  //_e( 'New: You can now also show a subscription form on your site, increasing sign-ups! (Question 8)', SFSI_PLUS_DOMAIN); ?>
         <p>
-			(<?php  _e('If question 8 gets displayed in a funny way then please reload the page by pressing Control+F5(PC) or Command+R(Mac)',SFSI_PLUS_DOMAIN); ?>)
+			(<?php  //_e('If question 8 gets displayed in a funny way then please reload the page by pressing Control+F5(PC) or Command+R(Mac)',SFSI_PLUS_DOMAIN); ?>)
         </p>
-    </div>
+    </div> -->
 	<?php } ?>
     <!-- Get notification bar-->
     
@@ -76,16 +76,23 @@
     </script>
     <div class="sfsi_plus_new_notification">
         <div class="sfsi_plus_new_notification_header">
-            <h1>Time limited offer: We’ll create tailor-made icons which match your theme...</h1>
+            <h1>
+				<a href="https://www.ultimatelysocial.com/tailor-made-icons/?utm_source=usmplus_settings_page&utm_campaign=tailored_icons&utm_medium=banner" target="_blank">Time limited offer: We’ll create tailor-made icons which match your theme...
+				</a>
+			</h1>
             <div class="sfsi_plus_new_notification_cross">X</div>
         </div>
-        <div class="sfsi_plus_new_notification_body">
-            <div class="sfsi_plus_new_notification_image">
-                <img src="<?php  echo SFSI_PLUS_PLUGURL.'images/WPPlugin_V3.png';?>" id="newImg" />
-            </div>
-            <div class="sfsi_plus_new_notification_learnmore">
-                <a href="https://www.ultimatelysocial.com/usm-premium/?utm_source=usmplus_settings_page&utm_campaign=tailored_icons&utm_medium=banner" target="_blank">Learn more</a>
-            </div>
+       <div class="sfsi_plus_new_notification_body_link">
+		   <a href="https://www.ultimatelysocial.com/tailor-made-icons/?utm_source=usmplus_settings_page&utm_campaign=tailored_icons&utm_medium=banner" target="_blank">
+				<div class="sfsi_plus_new_notification_body">
+					<div class="sfsi_plus_new_notification_image">
+						<img src="<?php  echo SFSI_PLUS_PLUGURL.'images/WPPlugin_V3.png';?>" id="newImg" />
+					</div>
+					<div class="sfsi_plus_new_notification_learnmore">
+						Learn more
+					</div>
+				</div>
+			</a>
         </div>
     </div>
     <?php } ?>
