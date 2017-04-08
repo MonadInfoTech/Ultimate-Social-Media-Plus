@@ -12,7 +12,7 @@ function sfsi_plus_update_plugin()
 	}
 	
 	//Install version
-	update_option("sfsi_plus_pluginVersion", "2.57");
+	update_option("sfsi_plus_pluginVersion", "2.58");
 	
 	/* show notification on about mobile setting */
 	if(!get_option('sfsi_plus_show_Setting_mobile_notification'))
@@ -517,6 +517,15 @@ function sfsi_plus_Unistall_plugin()
 	delete_option("sfsi_plus_verificatiom_code");
 	delete_option("sfsi_plus_curlErrorNotices");
 	delete_option("sfsi_plus_curlErrorMessage");
+
+	delete_option("adding_plustags");
+	delete_option("sfsi_plus_installDate");
+	delete_option("sfsi_plus_RatingDiv");
+	delete_option("sfsi_plus_instagram_sf_count");
+	delete_option("sfsi_plus_new_show_notification");
+	delete_option("sfsi_plus_show_Setting_mobile_notification");
+	delete_option("sfsi_plus_show_premium_notification");
+	delete_option("sfsi_plus_show_notification");
 }
 /* end function */
 /* check CUrl */

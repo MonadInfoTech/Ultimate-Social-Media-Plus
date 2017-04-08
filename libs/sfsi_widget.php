@@ -222,7 +222,7 @@ function sfsi_plus_check_visiblity($isFloter=0)
 		 }
     }
 	  
-    $extra='';
+    $extra=0;
     if($sfsi_section3['sfsi_plus_shuffle_icons']=="yes")
     {
        if($sfsi_section3['sfsi_plus_shuffle_Firstload']=="yes" && $sfsi_section3['sfsi_plus_shuffle_interval']=="yes")
@@ -1472,7 +1472,7 @@ function sfsi_plus_check_posts_visiblity($isFloter=0 , $fromPost = NULL)
     /* calculate the width and icons display alignments */
     $icons_space=$sfsi_section8['sfsi_plus_post_icons_spacing'];
     $icons_size=$sfsi_section8['sfsi_plus_post_icons_size'];	  
-    $extra='';
+    $extra=0;
 
 	    
 	/* magnage the icons in saved order in admin */ 
