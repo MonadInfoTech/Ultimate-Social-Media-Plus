@@ -7,7 +7,7 @@ Author: UltimatelySocial
 Text Domain: ultimate-social-media-plus
 Domain Path: /languages
 Author URI: http://ultimatelysocial.com
-Version: 2.5.8
+Version: 2.5.9
 License: GPLv2
 */
 
@@ -37,7 +37,7 @@ register_deactivation_hook(__FILE__, 'sfsi_plus_deactivate_plugin');
 register_uninstall_hook(__FILE__, 'sfsi_plus_Unistall_plugin');
 
 /*Plugin version setup*/
-if(!get_option('sfsi_plus_pluginVersion') || get_option('sfsi_plus_pluginVersion') < 2.58)
+if(!get_option('sfsi_plus_pluginVersion') || get_option('sfsi_plus_pluginVersion') < 2.59)
 {
 	add_action("init", "sfsi_plus_update_plugin");
 }
@@ -722,7 +722,7 @@ function sfsi_plus_get_bloginfo($url)
 add_filter( 'plugin_action_links_' . plugin_basename(__FILE__), 'sfsi_plus_action_links', -10 );
 function sfsi_plus_action_links ( $mylinks )
 {
-	$mylinks[] = '<a href="https://www.ultimatelysocial.com/usm-premium/?utm_source=usmplus_manage_plugin_page&utm_campaign=upgrade_to_pro&utm_medium=banner" style="color:#FF0000;"><b>Upgrade to pro</b></a>';
+	$mylinks[] = '<a href="https://www.ultimatelysocial.com/usm-premium/?utm_source=usmplus_manage_plugin_page&utm_campaign=check_out_pro_version&utm_medium=banner" style="color:#FF0000;"><b>Check out pro version</b></a>';
 	$mylinks[] = $mylinks['deactivate'];
 	$mylinks[] = $mylinks['edit'];
 	unset ($mylinks['deactivate']);

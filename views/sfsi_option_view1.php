@@ -362,8 +362,6 @@
         <?php endif; ?>
         <!-- END Custom icon section here -->
     </ul>
-    <?php if($option1['sfsi_plus_premium_icons_box'] == 'yes'){	
-	?>
     <ul>
         <li class="sfsi_plus_premium_brdr_box">
             <div class="sfsi_plus_prem_icons_added">
@@ -389,6 +387,18 @@
                         </span>
                         <span class="sfsicls_plus_prem_text"><?php  _e( 'Yummly', SFSI_PLUS_DOMAIN); ?></span>
                     </div>
+                    <div class = "sfsi_plus_prem_cmn_rowlisting" >  
+                        <span>
+                            <img src="<?php  echo SFSI_PLUS_PLUGURL.'images/yelp.png';?>" id="CImg" />
+                        </span>
+                        <span class="sfsicls_plus_prem_text"><?php  _e( 'Yelp', SFSI_PLUS_DOMAIN); ?></span>
+                    </div>
+                     <div class = "sfsi_plus_prem_cmn_rowlisting" >  
+                        <span>
+                            <img src="<?php  echo SFSI_PLUS_PLUGURL.'images/print.png';?>" id="CImg" />
+                        </span>
+                        <span class="sfsicls_plus_prem_text"><?php  _e( 'Print', SFSI_PLUS_DOMAIN); ?></span>
+                    </div>
                 </div>
                 <div class="sfsi_plus_premium_row">
                     <div class = "sfsi_plus_prem_cmn_rowlisting" >  
@@ -404,12 +414,24 @@
                         </span>
                         <span class="sfsicls_plus_prem_text"><?php  _e( 'Skype', SFSI_PLUS_DOMAIN); ?></span>
                     </div>
-                    
                     <div class = "sfsi_plus_prem_cmn_rowlisting" >  
                         <span>
                             <img src="<?php  echo SFSI_PLUS_PLUGURL.'images/flickr.png';?>" id="CImg" />
                         </span>
                         <span class="sfsicls_plus_prem_text"><?php  _e( 'Flickr', SFSI_PLUS_DOMAIN); ?></span>
+                    </div>
+                    <div class = "sfsi_plus_prem_cmn_rowlisting" >  
+                        <span>
+                            <img src="<?php  echo SFSI_PLUS_PLUGURL.'images/vk.png';?>" id="CImg" />
+                        </span>
+                        <span class="sfsicls_plus_prem_text"><?php  _e( 'VK', SFSI_PLUS_DOMAIN); ?></span>
+                    </div>
+                    
+                    <div class = "sfsi_plus_prem_cmn_rowlisting" >  
+                        <span>
+                            <img src="<?php  echo SFSI_PLUS_PLUGURL.'images/angieslist.png';?>" id="CImg" />
+                        </span>
+                        <span class="sfsicls_plus_prem_text"><?php  _e( 'Angie’s List', SFSI_PLUS_DOMAIN); ?></span>
                     </div>
                 </div>
                 <div class="sfsi_plus_premium_row">
@@ -433,9 +455,55 @@
                         </span>
                         <span class="sfsicls_plus_prem_text"><?php  _e( 'Tumblr', SFSI_PLUS_DOMAIN); ?></span>
                     </div>
+                    <div class = "sfsi_plus_prem_cmn_rowlisting" >  
+                        <span>
+                            <img src="<?php  echo SFSI_PLUS_PLUGURL.'images/buffer.png';?>" id="CImg" />
+                        </span>
+                        <span class="sfsicls_plus_prem_text"><?php  _e( 'Buffer', SFSI_PLUS_DOMAIN); ?></span>
+                    </div>
+                    <div class = "sfsi_plus_prem_cmn_rowlisting" >  
+                        <span>
+                            <img src="<?php  echo SFSI_PLUS_PLUGURL.'images/blogger.png';?>" id="CImg" />
+                        </span>
+                        <span class="sfsicls_plus_prem_text"><?php  _e( 'Blogger', SFSI_PLUS_DOMAIN); ?></span>
+                    </div>
+                </div>
+                <div class="sfsi_plus_premium_row">
+                    <div class = "sfsi_plus_prem_cmn_rowlisting" >  
+                        <span>
+                            <img src="<?php  echo SFSI_PLUS_PLUGURL.'images/telegram.png';?>" id="CImg" />
+                        </span>
+                        <span class="sfsicls_plus_prem_text"><?php  _e( 'Telegram', SFSI_PLUS_DOMAIN); ?></span>
+                    </div>
+                    <div class = "sfsi_plus_prem_cmn_rowlisting" >  
+                        <span>
+                            <img src="<?php  echo SFSI_PLUS_PLUGURL.'images/steam.png';?>" id="CImg" />
+                        </span>
+                        <span class="sfsicls_plus_prem_text"><?php  _e( 'Steam', SFSI_PLUS_DOMAIN); ?></span>
+                    </div>
+                    
+                    <div class = "sfsi_plus_prem_cmn_rowlisting" >  
+                        <span>
+                            <img src="<?php  echo SFSI_PLUS_PLUGURL.'images/xing.png';?>" id="CImg" />
+                        </span>
+                        <span class="sfsicls_plus_prem_text"><?php  _e( 'Xing', SFSI_PLUS_DOMAIN); ?></span>
+                    </div>
+                    
+                    <div class = "sfsi_plus_prem_cmn_rowlisting" >  
+                        <span>
+                            <img src="<?php  echo SFSI_PLUS_PLUGURL.'images/amazon.png';?>" id="CImg" />
+                        </span>
+                        <span class="sfsicls_plus_prem_text"><?php  _e( 'Amazon', SFSI_PLUS_DOMAIN); ?></span>
+                    </div>
+                    <div class = "sfsi_plus_prem_cmn_rowlisting" >  
+                        <span>
+                            <img src="<?php  echo SFSI_PLUS_PLUGURL.'images/twitch.png';?>" id="CImg" />
+                        </span>
+                        <span class="sfsicls_plus_prem_text"><?php  _e( 'Twitch', SFSI_PLUS_DOMAIN); ?></span>
+                    </div>
                 </div>
                 <div class="sfsi_plus_need_another_one_link">
-                    <p><?php  _e('Need another one?', SFSI_PLUS_DOMAIN); ?><a href="https://www.ultimatelysocial.com/usm-premium#featureRequest" target="_blank"> <?php  _e( 'Tell us', SFSI_PLUS_DOMAIN); ?></a></p>
+                    <p><?php  _e('Need another one?', SFSI_PLUS_DOMAIN); ?><a href="mailto:biz@ultimatelysocial.com" target="_blank"> <?php  _e( 'Tell us', SFSI_PLUS_DOMAIN); ?></a></p>
                 </div>
                 <div class="sfsi_plus_need_another_tell_us">
                     <a href="https://www.ultimatelysocial.com/usm-premium/?utm_source=usmplus_settings_page&utm_campaign=more_platforms&utm_medium=banner" target="_blank"><?php  _e( 'See all features Premium Plugin', SFSI_PLUS_DOMAIN); ?></a>
@@ -443,7 +511,6 @@
             </div>
         </li>
     </ul>
-    <?php } ?>
     <input type="hidden" value="<?php echo SFSI_PLUS_PLUGURL ?>" id="plugin_url" />
  	<input type="hidden" value=""  id="upload_id" />
   	
