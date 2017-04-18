@@ -474,6 +474,9 @@ function sfsi_plus_update_step4()
         sfsi_plus_instagram_countsFrom:A,
         sfsi_plus_instagram_manualCounts:N,
         sfsi_plus_instagram_User:H,
+        sfsi_plus_instagram_clientid:SFSI("input[name='sfsi_plus_instagram_clientid']").val(),
+        sfsi_plus_instagram_appurl:SFSI("input[name='sfsi_plus_instagram_appurl']").val(),
+        sfsi_plus_instagram_token:SFSI("input[name='sfsi_plus_instagram_token']").val(),
         sfsi_plus_shares_countsDisplay:R,
         sfsi_plus_shares_countsFrom:W,
         sfsi_plus_shares_manualCounts:q,
@@ -1957,3 +1960,23 @@ function checkforinfoslction(ref)
 		jQuery(ref).next(".sfsiplus_right_info").children("p").children("label").show();
 	}
 }
+SFSI("body").on("click", ".sfsi_plus_tokenGenerateButton a", function(){
+    var clienId     = SFSI("input[name='sfsi_plus_instagram_clientid']").val();
+    var redirectUrl = SFSI("input[name='sfsi_plus_instagram_appurl']").val();
+    
+    var scope       = "likes+comments+basic+public_content+follower_list+relationships"; 
+    var instaUrl    = "https://www.instagram.com/oauth/authorize/?client_id=<id>&redirect_uri=<url>&response_type=token&scope="+scope;
+    
+    if(clienId !== '' && redirectUrl !== '')
+    {
+        instaUrl = instaUrl.replace('<id>', clienId);
+        instaUrl = instaUrl.replace('<url>', redirectUrl);
+        
+        window.open(instaUrl, '_blank');
+    }
+    else
+    {
+        alert("Please enter client id and redirect url first");
+    }
+        
+});

@@ -1168,3 +1168,11 @@ p.sfsi_plus_instagram_shared_premium{float: right;width: 41%;line-height: 20px;c
 .sfsi_plus_new_notification_body_link a{
      display: block;text-decoration: none;text-align: center;font-size: 20px;font-family: Arial, Helvetica, sans-serif;color: #fff;
 }
+/*Tab 4*/
+.tab4 .sfsi_plus_tokenGenerateButton { margin: 25px 0; }
+.tab4 .sfsi_plus_tokenGenerateButton p { display: inline-block; margin-bottom: 11px; vertical-align: middle;width: 100%; }
+.tab4 .sfsi_plus_tokenGenerateButton a { background-color: #12a252; color: #fff; padding: 10px 20px; text-decoration: none; }
+.tab4 .sfsi_plus_instagramInstruction { float: left; margin-bottom: 12px; width: 450px;}
+.tab4 .sfsi_plus_instagramInstruction ul { padding-left: 14px !important; }
+.tab4 .sfsi_plus_instagramInstruction ul li { font-size: 13px !important; line-height: 20px !important; list-style: outside none bullets !important;margin-top: 5px !important;padding: 0 !important;}
+ .tab4 .sfsi_instagram_follower{width: 50%;float: left;}

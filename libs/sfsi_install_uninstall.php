@@ -12,7 +12,7 @@ function sfsi_plus_update_plugin()
 	}
 	
 	//Install version
-	update_option("sfsi_plus_pluginVersion", "2.59");
+	update_option("sfsi_plus_pluginVersion", "2.61");
 	
 	/* show notification on about mobile setting */
 	if(!get_option('sfsi_plus_show_Setting_mobile_notification'))
@@ -170,6 +170,14 @@ function sfsi_plus_update_plugin()
 		$option8['sfsi_plus_show_premium_placement_box'] = 'no';
 		update_option('sfsi_plus_section8_options', serialize($option8));
 	}
+	$option4 = unserialize(get_option('sfsi_plus_section4_options',false));
+	if(isset($option4) && !empty($option4) && !isset($option4['sfsi_plus_instagram_clientid']))
+	{
+		$option4['sfsi_plus_instagram_clientid'] = '';
+		$option4['sfsi_plus_instagram_appurl'] 	 = '';
+		$option4['sfsi_plus_instagram_token']    = '';
+		update_option('sfsi_plus_section4_options', serialize($option4));
+	}
 }
 function sfsi_plus_activate_plugin()
 {
@@ -306,6 +314,9 @@ function sfsi_plus_activate_plugin()
 		'sfsi_plus_instagram_countsDisplay'=>'no',
 		'sfsi_plus_instagram_manualCounts'=>'20',
 		'sfsi_plus_instagram_User'=>'',
+		'sfsi_plus_instagram_clientid'=>'',
+		'sfsi_plus_instagram_appurl'  =>'',
+		'sfsi_plus_instagram_token'   =>'',
         'sfsi_plus_shares_countsDisplay'=>'no',
         'sfsi_plus_shares_countsFrom'=>'manual',
         'sfsi_plus_shares_manualCounts'=>'20',

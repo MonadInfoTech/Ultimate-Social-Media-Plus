@@ -302,7 +302,9 @@ function sfsi_plus_options_updater4()
     $sfsi_plus_instagram_countsFrom      = isset($_POST["sfsi_plus_instagram_countsFrom"]) ? $_POST["sfsi_plus_instagram_countsFrom"] : 'manual';
     $sfsi_plus_instagram_manualCounts    = isset($_POST["sfsi_plus_instagram_manualCounts"]) ? trim($_POST["sfsi_plus_instagram_manualCounts"]) : '';
     $sfsi_plus_instagram_User            = isset($_POST["sfsi_plus_instagram_User"]) ? $_POST["sfsi_plus_instagram_User"] : '';
-    
+    $sfsi_plus_instagram_clientid        = isset($_POST["sfsi_plus_instagram_clientid"]) ? $_POST["sfsi_plus_instagram_clientid"] : '';
+    $sfsi_plus_instagram_appurl          = isset($_POST["sfsi_plus_instagram_appurl"]) ? $_POST["sfsi_plus_instagram_appurl"] : '';
+    $sfsi_plus_instagram_token           = isset($_POST["sfsi_plus_instagram_token"]) ? $_POST["sfsi_plus_instagram_token"] : '';
     $sfsi_plus_shares_countsDisplay      = isset($_POST["sfsi_plus_shares_countsDisplay"]) ? $_POST["sfsi_plus_shares_countsDisplay"] : 'no';
     $sfsi_plus_shares_countsFrom         = isset($_POST["sfsi_plus_shares_countsFrom"]) ? $_POST["sfsi_plus_shares_countsFrom"] : 'manual';
     $sfsi_plus_shares_manualCounts       = isset($_POST["sfsi_plus_shares_manualCounts"]) ? trim($_POST["sfsi_plus_shares_manualCounts"]) : '';
@@ -366,7 +368,9 @@ function sfsi_plus_options_updater4()
 	   'sfsi_plus_instagram_countsDisplay'	=> sanitize_text_field($sfsi_plus_instagram_countsDisplay),
 	   'sfsi_plus_instagram_manualCounts' 	=> intval($sfsi_plus_instagram_manualCounts),
 	   'sfsi_plus_instagram_User' 		  	=> sanitize_text_field($sfsi_plus_instagram_User),
-	   
+	   'sfsi_plus_instagram_clientid' 		=> sanitize_text_field($sfsi_plus_instagram_clientid),
+	   'sfsi_plus_instagram_appurl' 		=> sanitize_text_field($sfsi_plus_instagram_appurl),
+	   'sfsi_plus_instagram_token' 		  	=> sanitize_text_field($sfsi_plus_instagram_token),
 	   'sfsi_plus_shares_countsDisplay'		=> sanitize_text_field($sfsi_plus_shares_countsDisplay),
 	   'sfsi_plus_shares_countsFrom'		=> sanitize_text_field($sfsi_plus_shares_countsFrom),
 	   'sfsi_plus_shares_manualCounts'		=> intval($sfsi_plus_shares_manualCounts),
