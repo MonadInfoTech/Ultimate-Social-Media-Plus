@@ -95,15 +95,15 @@
 	?>
     <p>
 		<?php
-			_e('In addition to the email- or follow-icon you can also show a subscription form which maximizes chances that people subscribe to your site. To get access to the emails who subscribe, please', SFSI_PLUS_DOMAIN);
+			_e('In addition to the email- and follow-icon you can also show a subscription form which maximizes chances that people subscribe to your site.', SFSI_PLUS_DOMAIN);
 		?>
-		<b>
-			<a class="pop-up" href="javascript:" data-id="feedClaiming-overlay">
-				<?php _e('click here.',SFSI_PLUS_DOMAIN); ?>
-			</a>
-		</b>
+	</p>
+	<p class='sfsi_plus_subscribe_popbox_link'>
+        <?php _e('To get access to the emails who subscribe, interesting statistics about your subscribers, alerts when people subscribe or unsubscribe and to tailor the sender name & the subject line of the emails, please ',SFSI_PLUS_DOMAIN); ?>
+        <a class="pop-up" href="javascript:" data-id="feedClaiming-overlay">
+            <?php _e('click here.',SFSI_PLUS_DOMAIN); ?>
+        </a>
     </p>
-	
     <div class="sfsi_plus_tab8_container">
     	<!--Section 1-->
         <div class="sfsi_plus_tab8_subcontainer">
@@ -331,7 +331,7 @@
                     <div class="sfsi_plus_field">
                         <input type="text" class="small new-inp" name="sfsi_plus_form_heading_text"
                             value="<?php echo ($option9['sfsi_plus_form_heading_text']!='')
-										? $option9['sfsi_plus_form_heading_text'] : '' ;
+										? __($option9['sfsi_plus_form_heading_text'], SFSI_PLUS_DOMAIN) : '' ;
 									?>"/>
                     </div>           
                 </div>
@@ -488,7 +488,7 @@
                     <div class="sfsi_plus_field">
                         <input type="text" class="small new-inp" name="sfsi_plus_form_button_text"
                             value="<?php echo ($option9['sfsi_plus_form_button_text']!='')
-										? $option9['sfsi_plus_form_button_text'] : '' ;
+										? __($option9['sfsi_plus_form_button_text'],SFSI_PLUS_DOMAIN) : '' ;
 									?>"/>
                     </div>           
                 </div>
@@ -656,19 +656,19 @@ function sfsi_plus_get_fontstyle($name, $value)
 	?>
 	<select name="<?php echo $name; ?>" id="<?php echo $name; ?>" class="select-same">
 		<option value="normal" <?php echo sfsi_plus_isSeletcted("normal", $value) ?> >
-        	Normal
+        	<?php  _e( 'Normal', SFSI_PLUS_DOMAIN ); ?>
         </option>
 		<option value="inherit" <?php echo sfsi_plus_isSeletcted("inherit", $value) ?> >
-        	Inherit
+        	<?php  _e( 'Inherit', SFSI_PLUS_DOMAIN ); ?>
         </option>
 		<option value="oblique" <?php echo sfsi_plus_isSeletcted("oblique", $value) ?> >
-        	Oblique
+        	<?php  _e( 'Oblique', SFSI_PLUS_DOMAIN ); ?>
         </option>
 		<option value="italic" <?php echo sfsi_plus_isSeletcted("italic", $value) ?> >
-        	Italic
+        	<?php  _e( 'Italic', SFSI_PLUS_DOMAIN ); ?>
         </option>
         <option value="bold" <?php echo sfsi_plus_isSeletcted("bold", $value) ?> >
-        	Bold
+        	<?php  _e( 'Bold', SFSI_PLUS_DOMAIN ); ?>
         </option>
 	</select>
 	<?php                     

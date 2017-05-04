@@ -129,7 +129,6 @@ function sfsi_plus_options_updater2()
 		'sfsi_rss_blogEmail'				=> '',
 		'sfsi_plus_rss_icons'				=> sanitize_text_field($sfsi_plus_rss_icons),
 		'sfsi_plus_email_url'				=> esc_url($option2['sfsi_plus_email_url']),   
-		
 		/* facebook buttons options */
 		'sfsi_plus_facebookPage_option'		=> sanitize_text_field($sfsi_plus_facebookPage_option),
 		'sfsi_plus_facebookPage_url'		=> esc_url($sfsi_plus_facebookPage_url),

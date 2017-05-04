@@ -151,7 +151,7 @@
 		
         <div class="sfsiplus_row_tab">
                     <label><?php  _e( 'Text:', SFSI_PLUS_DOMAIN ); ?></label>
-                    <input class="mkPop" name="sfsi_plus_popup_text" type="text" value="<?php echo ($option7['sfsi_plus_popup_text']!='') ?  $option7['sfsi_plus_popup_text'] : '' ;?>" />
+                    <input class="mkPop" name="sfsi_plus_popup_text" type="text" value="<?php echo ($option7['sfsi_plus_popup_text']!='') ? __($option7['sfsi_plus_popup_text'], SFSI_PLUS_DOMAIN) : '' ;?>" />
 		</div>
 		<div class="sfsiplus_row_tab">
 			<label><?php  _e( 'Font:', SFSI_PLUS_DOMAIN ); ?></label>

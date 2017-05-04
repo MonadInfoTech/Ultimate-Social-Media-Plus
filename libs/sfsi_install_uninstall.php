@@ -12,7 +12,7 @@ function sfsi_plus_update_plugin()
 	}
 	
 	//Install version
-	update_option("sfsi_plus_pluginVersion", "2.61");
+	update_option("sfsi_plus_pluginVersion", "2.62");
 	
 	/* show notification on about mobile setting */
 	if(!get_option('sfsi_plus_show_Setting_mobile_notification'))
@@ -180,6 +180,7 @@ function sfsi_plus_update_plugin()
 		$option4['sfsi_plus_instagram_token']    = '';
 		update_option('sfsi_plus_section4_options', serialize($option4));
 	}
+
 }
 function sfsi_plus_activate_plugin()
 {

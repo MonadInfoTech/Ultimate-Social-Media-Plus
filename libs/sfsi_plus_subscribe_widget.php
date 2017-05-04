@@ -137,9 +137,9 @@ function sfsi_plus_addStyleFunction()
 			{
 				font-family: <?php echo $option9['sfsi_plus_form_button_font'] ?> !important;
 				<?php if($option9['sfsi_plus_form_button_fontstyle'] != 'bold') {?>
-				font-style: <?php echo $option9['sfsi_plus_form_button_fontstyle'] ?> !important;
+				font-style: <?php echo $option9['sfsi_plus_form_button_fontstyle']; ?> !important;
 				<?php } else{ ?>
-				font-weight: <?php echo $option9['sfsi_plus_form_button_fontstyle'] ?> !important;
+				font-weight: <?php echo $option9['sfsi_plus_form_button_fontstyle']; ?> !important;
 				<?php }?>
 				color: <?php echo $option9['sfsi_plus_form_button_fontcolor'] ?> !important;
 				font-size: <?php echo $option9['sfsi_plus_form_button_fontsize']."px" ?> !important;
@@ -232,14 +232,14 @@ function sfsi_plus_get_subscriberForm()
 	$url = $url.$sfsi_plus_feediid.'/8/';	
 	$return .= '<div class="sfsi_plus_subscribe_Popinner">
 					<form method="post" onsubmit="return sfsi_plus_processfurther(this);" target="popupwindow" action="'.$url.'">
-						<h5>'.trim($option9['sfsi_plus_form_heading_text']).'</h5>
+						<h5>'.__(trim($option9['sfsi_plus_form_heading_text']),SFSI_PLUS_DOMAIN).'</h5>
 						<div class="sfsi_plus_subscription_form_field">
 							<input type="email" name="data[Widget][email]" value="" placeholder="'.trim($option9['sfsi_plus_form_field_text']).'"/>
 						</div>
 						<div class="sfsi_plus_subscription_form_field">
 							<input type="hidden" name="data[Widget][feed_id]" value="'.$sfsi_plus_feediid.'">
 							<input type="hidden" name="data[Widget][feedtype]" value="8">
-							<input type="submit" name="subscribe" value="'.$option9['sfsi_plus_form_button_text'].'" />
+							<input type="submit" name="subscribe" value="'.__($option9['sfsi_plus_form_button_text'],SFSI_PLUS_DOMAIN).'" />
 						</div>
 					</form>
 				</div>';

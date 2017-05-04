@@ -145,7 +145,7 @@ function sfsi_plus_FrontPopupDiv()
     $sfsi_section4 = unserialize(get_option('sfsi_plus_section4_options',false));
    
     /* calculate the width and icons display alignments */
-    $heading_text = (isset($sfsi_plus_section7_options['sfsi_plus_popup_text'])) ? $sfsi_plus_section7_options['sfsi_plus_popup_text']: 'Enjoy this site? Please follow and like us!';
+    $heading_text = (isset($sfsi_plus_section7_options['sfsi_plus_popup_text'])) ? __($sfsi_plus_section7_options['sfsi_plus_popup_text'],SFSI_PLUS_DOMAIN): __('Enjoy this site? Please follow and like us!',SFSI_PLUS_DOMAIN);
     $div_bgColor		= (isset($sfsi_plus_section7_options['sfsi_plus_popup_background_color'])) ? $sfsi_plus_section7_options['sfsi_plus_popup_background_color']: '#fff';
     $div_FontFamily 	= (isset($sfsi_plus_section7_options['sfsi_plus_popup_font'])) ? $sfsi_plus_section7_options['sfsi_plus_popup_font']: 'Arial';
     $div_BorderColor	= (isset($sfsi_plus_section7_options['sfsi_plus_popup_border_color'])) ? $sfsi_plus_section7_options['sfsi_plus_popup_border_color']: '#d3d3d3';

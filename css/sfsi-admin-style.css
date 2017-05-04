@@ -1082,8 +1082,7 @@ ul#adminmenu li.toplevel_page_sfsi-plus-options a.current, ul#adminmenu li.tople
 }
 .feedClaiming-overlay p {text-align:center !important; font-size: 12px !important;line-height: 23px !important;padding: 18px 0 0 !important; color:#bebebe !important; }
 .feedClaiming-overlay p a {display: inline-block;font-size: 12px;margin: 0;padding: 0;width: auto; color:#274da3 !important; }
-.feedClaiming-overlay .pop_up_box{padding: 25px 30px !important; width: 435px !important;}
-
+.feedClaiming-overlay .pop_up_box{padding: 25px 30px !important; width: 435px !important;  min-height: 220px;}
 .follows-btn{float:left;width:25%;}
 .preview-btn{float:left;width:10%;}
 .social-img-link{float:left;width:15%;}
@@ -1100,7 +1099,6 @@ ul#adminmenu li.toplevel_page_sfsi-plus-options a.current, ul#adminmenu li.tople
 }
 
 /* poonam */
-
 .sfsi_plus_premium_brdr_box{box-sizing: border-box;}
 .sf_si_plus_our_prmium_plugin-add, .sfsi_plus_prem_icons_added, .sfsi_plus_new_prmium_follw{background:#f3faf6;border:1px solid #12a252;padding: 25px 38px 35px 40px;clear: both;}
 .sf_si_plus_our_prmium_plugin-add{padding: 25px 38px 45px 44px;}
@@ -1176,3 +1174,24 @@ p.sfsi_plus_instagram_shared_premium{float: right;width: 41%;line-height: 20px;c
 .tab4 .sfsi_plus_instagramInstruction ul { padding-left: 14px !important; }
 .tab4 .sfsi_plus_instagramInstruction ul li { font-size: 13px !important; line-height: 20px !important; list-style: outside none bullets !important;margin-top: 5px !important;padding: 0 !important;}
  .tab4 .sfsi_instagram_follower{width: 50%;float: left;}
+
+ /* tab2 emailsection */
+.sfsi_plus_service_row{margin-right: -15px;margin-left: -15px;}
+.sfsi_plus_service_column{float: left;margin-bottom: 40px;margin-top: 15px;padding-left: 30px;width: 47%;}
+.sfsi_plus_service_column ul{margin-left: 11% !important;}
+.sfsi_plus_service_column ul li{padding-bottom:10px;font-size:16px;line-height: 25px; }
+.sfsi_plus_service_column ul li span{color:#12a252;}
+.sfsi_plus_service_column ul li::before {content: url(../images/tick-icon.png); position: relative; top: 0px; right: 10px; text-indent: -22px; float: left; }
+.sfsi_plus_inputbtn{clear: both;display: block;}
+.sfsi_plus_inputbtn input{width: 100%; padding: 15px 0px; text-align: center; margin-bottom: 10px; }
+ .sfsi_plus_email_services_text{clear: both;}
+ .sfsi_plus_email_services_paragraph{ width: 600px; float: left; margin-top: 10px; margin-bottom:40px;}
+ .sfsi_plus_more_services_link a{ background-color: #12a252;color: #fff !important; padding:20px 0px;text-decoration: none;text-align: center;font-size: 20px;display: block;clear: both; font-weight: bold;}
+.sfsi_plus_subscribe_popbox_link a{color: #00a0d2 !important;}
+.sfsi_plus_email_services_paragraph ul{margin-left: 11% !important;}
+.sfsi_plus_email_services_paragraph ul li{padding-bottom:10px;font-size:16px; }
+.sfsi_plus_email_services_paragraph ul li span{color:#12a252;}
+.sfsi_plus_email_services_paragraph ul li::before {content: url(../images/tick-icon.png); position: relative; top: 5px; right: 10px; text-indent: -22px; float: left; }
+.sfsi_plus_email_last_paragraph {width: 60%; text-align: center !important; margin: 20px auto ! important; font-size: 16px !important; color: #a4a9ad !important; }
+.sfsi_plus_email_last_paragraph a{color:#12a252 !important;font-family: 'helveticaneue-light' !important;}
+.pop_up_box.sfsi_pop_up.sfsi_pop_box{padding: 25px 30px 0 !important;}

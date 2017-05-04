@@ -15,7 +15,7 @@
 	$option2['sfsi_plus_email_url']				=	(isset($option2['sfsi_plus_email_url']))
 														? sanitize_text_field(	$option2['sfsi_plus_email_url'])
 														: '';
-	
+
 	$option2['sfsi_plus_facebookPage_option']	=	(isset($option2['sfsi_plus_facebookPage_option']))
 														? sanitize_text_field($option2['sfsi_plus_facebookPage_option'])
 														: '';
@@ -172,17 +172,9 @@
         </h2>
         <div class="inr_cont">
 			<p>
-				<?php _e('Sends your new posts automatically to subscribers. It`s FREE and you get full access to your subscriber`s emails and interesting statistics:', SFSI_PLUS_DOMAIN ); ?>
-				<a class="pop-up" href="javascript:" data-id="feedClaiming-overlay">
-					<?php _e('Get full access now.', SFSI_PLUS_DOMAIN ); ?>
-				</a>
-				<?php _e('It also makes sense if you already offer an email newsletter:', SFSI_PLUS_DOMAIN ); ?>
-				<a href="http://specificfeeds.com/rss" target="_new">
-					<?php _e('Learn more.', SFSI_PLUS_DOMAIN ); ?>
-				</a>
+				<?php _e('Allows your visitors to subscribe to your site (on this screen) and receive new posts automatically by email.', SFSI_PLUS_DOMAIN ); ?>
 			</p>
            	<p><?php _e( 'Please pick which icon type you want to use:', SFSI_PLUS_DOMAIN); ?></p>
-            
             <ul class="tab_2_email_sec">
                 <li>
 					<div class="sfsiplusicnsdvwrp">
@@ -215,6 +207,44 @@
                     </label>
                 </li>
             </ul>
+            <p><?php _e( 'The service offers many (more) advantages:', SFSI_PLUS_DOMAIN); ?></p>  
+            <div class='sfsi_plus_service_row'>
+            	<div class='sfsi_plus_service_column'>
+            		<ul>
+            			<li><span><?php _e( 'More people come back', SFSI_PLUS_DOMAIN); ?></span><?php _e( ' to your site', SFSI_PLUS_DOMAIN); ?></li>
+            			<li><?php _e( 'See your ', SFSI_PLUS_DOMAIN); ?><span><?php _e( 'subscribers’ emails', SFSI_PLUS_DOMAIN); ?></span><?php _e( ' & ', SFSI_PLUS_DOMAIN); ?><span><?php _e( 'interesting statistics', SFSI_PLUS_DOMAIN); ?></span></li>
+            			<li><?php _e( 'Automatically post on ', SFSI_PLUS_DOMAIN); ?><span><?php _e( 'Facebook & Twitter', SFSI_PLUS_DOMAIN); ?></span></li>
+	            	</ul>
+            	</div>
+                <div class='sfsi_plus_service_column'>
+                	<ul>
+		                <li><span><?php _e( 'Get more traffic', SFSI_PLUS_DOMAIN); ?></span><?php _e( ' by being listed in the SF directory', SFSI_PLUS_DOMAIN); ?></li>
+		                <li><span><?php _e( 'Get alerts', SFSI_PLUS_DOMAIN); ?></span><?php _e( ' when people subscribe or unsubscribe', SFSI_PLUS_DOMAIN); ?></li>
+		                <li><span><?php _e( 'Tailor the sender name & subject line', SFSI_PLUS_DOMAIN); ?></span><?php _e( ' of the emails', SFSI_PLUS_DOMAIN); ?></li>
+	                </ul> 
+	            </div>   
+               
+            </div>
+
+            <form id="calimingOptimizationForm" method="get" action="https://www.specificfeeds.com/wpclaimfeeds/getFullAccess" target="_blank">
+	            <div class="sfsi_plus_inputbtn">
+	            <input type="hidden" name="feed_id" value="<?php echo sanitize_text_field(get_option('sfsi_plus_feed_id',false)); ?>" />
+	            	<input name="sfsi_plus_admin_email" type="email" value="<?php echo bloginfo('admin_email'); ?>"  />
+	            </div>
+	           	<div class='sfsi_plus_more_services_link'>
+	                <a class="pop-up" href="javascript:" id="getMeFullAccess" title="Give me access"">
+						<?php  _e('Click here to benefit from all advantages >', SFSI_PLUS_DOMAIN ); ?>
+					</a> 
+	            </div>
+      		</form>
+
+            <p class='sfsi_plus_email_last_paragraph'>
+            	<?php _e( 'This will create your FREE account on SpecificFeeds, using above email. ', SFSI_PLUS_DOMAIN); ?><br>
+            	<?php _e( 'All data will be treated highly confidentially, see the', SFSI_PLUS_DOMAIN); ?>
+				<a href="https://www.specificfeeds.com/page/privacy-policy" target="_new">
+					<?php  _e('Privacy Policy.', SFSI_PLUS_DOMAIN ); ?>
+				</a>
+			</p>
            <?php if($option2['sfsi_plus_premium_email_box'] =='yes') { ?>
             <div class ="sfsi_plus_new_prmium_follw">
 				<p>	
@@ -224,6 +254,7 @@
             <?php } ?>
         </div>
     </div>
+
     <!-- END EMAIL ICON -->
     
     <!-- FACEBOOK ICON -->
@@ -316,7 +347,7 @@
              	<label>
              		<?php  _e( 'Tweet about my page:', SFSI_PLUS_DOMAIN ); ?>
              	</label>
-                <textarea name="sfsi_plus_twitter_aboutPageText" id="sfsi_plus_twitter_aboutPageText" type="text" class="add_txt" placeholder="Hey, check out this cool site I found: www.yourname.com #Topic via@my_twitter_name" /><?php echo ($option2['sfsi_plus_twitter_aboutPageText']!='') ?  stripslashes($option2['sfsi_plus_twitter_aboutPageText']) : 'Hey check out this cool site I found' ;?></textarea>
+                <textarea name="sfsi_plus_twitter_aboutPageText" id="sfsi_plus_twitter_aboutPageText" type="text" class="add_txt" placeholder="<?php _e( 'Hey check out this cool site I found', SFSI_PLUS_DOMAIN ) ;?>: www.yourname.com #Topic via@my_twitter_name" /><?php echo ($option2['sfsi_plus_twitter_aboutPageText']!='') ?  stripslashes($option2['sfsi_plus_twitter_aboutPageText']) : _e( 'Hey check out this cool site I found', SFSI_PLUS_DOMAIN ) ;?></textarea>
              </div>
             <?php if($option2['sfsi_plus_premium_twitter_box'] =='yes') { ?>
             <div class= "sfsi_plus_new_prmium_follw">
