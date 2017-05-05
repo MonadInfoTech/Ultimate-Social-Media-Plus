@@ -232,7 +232,7 @@
 	            	<input name="sfsi_plus_admin_email" type="email" value="<?php echo bloginfo('admin_email'); ?>"  />
 	            </div>
 	           	<div class='sfsi_plus_more_services_link'>
-	                <a class="pop-up" href="javascript:" id="getMeFullAccess" title="Give me access"">
+	                <a class="pop-up" href="javascript:" id="getMeFullAccess" title="Give me access">
 						<?php  _e('Click here to benefit from all advantages >', SFSI_PLUS_DOMAIN ); ?>
 					</a> 
 	            </div>
