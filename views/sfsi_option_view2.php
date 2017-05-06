@@ -228,8 +228,8 @@
 
             <form id="calimingOptimizationForm" method="get" action="https://www.specificfeeds.com/wpclaimfeeds/getFullAccess" target="_blank">
 	            <div class="sfsi_plus_inputbtn">
-	            <input type="hidden" name="feed_id" value="<?php echo sanitize_text_field(get_option('sfsi_plus_feed_id',false)); ?>" />
-	            	<input name="sfsi_plus_admin_email" type="email" value="<?php echo bloginfo('admin_email'); ?>"  />
+	            	<input type="hidden" name="feed_id" value="<?php echo sanitize_text_field(get_option('sfsi_plus_feed_id',false)); ?>" />
+	            	<input type="email" name="email" value="<?php echo bloginfo('admin_email'); ?>"  />
 	            </div>
 	           	<div class='sfsi_plus_more_services_link'>
 	                <a class="pop-up" href="javascript:" id="getMeFullAccess" title="Give me access">

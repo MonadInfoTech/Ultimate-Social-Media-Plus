@@ -1192,6 +1192,6 @@ p.sfsi_plus_instagram_shared_premium{float: right;width: 41%;line-height: 20px;c
 .sfsi_plus_email_services_paragraph ul li{padding-bottom:10px;font-size:16px; }
 .sfsi_plus_email_services_paragraph ul li span{color:#12a252;}
 .sfsi_plus_email_services_paragraph ul li::before {content: url(../images/tick-icon.png); position: relative; top: 5px; right: 10px; text-indent: -22px; float: left; }
-.sfsi_plus_email_last_paragraph {width: 60%; text-align: center !important; margin: 20px auto ! important; font-size: 16px !important; color: #a4a9ad !important; }
+.sfsi_plus_email_last_paragraph {width: 60%; text-align: center !important; margin: 20px auto ! important; font-size: 16px !important; color: #a4a9ad !important; padding-top: 0px!important; }
 .sfsi_plus_email_last_paragraph a{color:#12a252 !important;font-family: 'helveticaneue-light' !important;}
 .pop_up_box.sfsi_pop_up.sfsi_pop_box{padding: 25px 30px 0 !important;}
