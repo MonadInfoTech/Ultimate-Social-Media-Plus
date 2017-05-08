@@ -155,7 +155,7 @@
             <div class="sfsi_plus_html" style="display: none;">
             	<?php
 					$sfsi_plus_feediid 	= sanitize_text_field(get_option('sfsi_plus_feed_id'));
-					$url 				= "http://www.specificfeeds.com/widgets/subscribeWidget/";
+					$url 				= "https://www.specificfeeds.com/widgets/subscribeWidget/";
 					$url 				= $url.$sfsi_plus_feediid.'/8/';
 				?>
                 <div class="sfsi_plus_subscribe_Popinner" style="padding: 18px 0px;">

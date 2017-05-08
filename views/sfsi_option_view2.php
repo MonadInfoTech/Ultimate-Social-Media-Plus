@@ -165,14 +165,15 @@
     <?php
 		$feedId 		= sanitize_text_field(get_option('sfsi_plus_feed_id',false));
 		$connectToFeed 	= "http://www.specificfeeds.com/?".base64_encode("userprofile=wordpress&feed_id=".$feedId);
+		
 	?>
     <div class="row sfsiplus_email_section">
         <h2 class="sfsicls_email">
         	Email
         </h2>
         <div class="inr_cont">
-			<p>
-				<?php _e('Allows your visitors to subscribe to your site (on this screen) and receive new posts automatically by email.', SFSI_PLUS_DOMAIN ); ?>
+			<p class="sfsi_plus_specificfeedlink">
+				<?php _e('Allows your visitors to subscribe to your site (on ', SFSI_PLUS_DOMAIN ); ?><a href="http://www.specificfeeds.com/widgets/emailSubscribeEncFeed/<?php echo $feedId; ?>/<?php echo base64_encode(8); ?>" target="_new"><?php  _e( 'this screen', SFSI_PLUS_DOMAIN); ?></a><?php  _e(") and receive new posts automatically by email.", SFSI_PLUS_DOMAIN); ?>
 			</p>
            	<p><?php _e( 'Please pick which icon type you want to use:', SFSI_PLUS_DOMAIN); ?></p>
             <ul class="tab_2_email_sec">

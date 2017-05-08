@@ -5,7 +5,8 @@ function sfsi_plus_addStyleFunction()
 {
 	$option9 			= unserialize(get_option('sfsi_plus_section9_options',false));
 	$sfsi_plus_feediid 	= sanitize_text_field(get_option('sfsi_plus_feed_id'));
-	$url 				= "http://www.specificfeeds.com/widgets/subscribeWidget/";
+	$url 				= "https://www.specificfeeds.com/widgets/subscribeWidget/";
+	
 	echo $return = '';
 	?>
     	<script>
@@ -226,7 +227,7 @@ function sfsi_plus_get_subscriberForm()
 {
 	$option9 			= unserialize(get_option('sfsi_plus_section9_options',false));
 	$sfsi_plus_feediid 	= sanitize_text_field(get_option('sfsi_plus_feed_id'));
-	$url = "http://www.specificfeeds.com/widgets/subscribeWidget/";
+	$url = "https://www.specificfeeds.com/widgets/subscribeWidget/";
 	
 	$return = '';
 	$url = $url.$sfsi_plus_feediid.'/8/';	
