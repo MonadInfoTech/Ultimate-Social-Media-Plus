@@ -7,12 +7,45 @@ Author: UltimatelySocial
 Text Domain: ultimate-social-media-plus
 Domain Path: /languages
 Author URI: http://ultimatelysocial.com
-Version: 2.6.2
+Version: 2.6.3
 License: GPLv2
 */
 
 global $wpdb;
 /* define the Root for URL and Document */
+
+// Create a helper function for easy SDK access.
+function sfsi_plus_freemius() {
+    global $usmp_fs;
+
+    if ( ! isset( $usmp_fs ) ) {
+        // Include Freemius SDK.
+        require_once dirname(__FILE__) . '/freemius/start.php';
+
+        $usmp_fs = fs_dynamic_init( array(
+            'id'                  => '1046',
+            'slug'                => 'ultimate-social-media-plus',
+            'type'                => 'plugin',
+            'public_key'          => 'pk_716f722d8ecd3d70a5c60177306c1',
+            'is_premium'          => false,
+            'has_addons'          => false,
+            'has_paid_plans'      => false,
+            'menu'                => array(
+                'slug'           => 'sfsi-plus-options',
+                'account'        => false,
+                'support'        => false,
+            ),
+        ) );
+    }
+
+    return $usmp_fs;
+}
+
+// Init Freemius.
+sfsi_plus_freemius();
+
+// Signal that SDK was initiated.
+do_action('usmp_fs_loaded');
 
 define('SFSI_PLUS_DOCROOT',    dirname(__FILE__));
 define('SFSI_PLUS_PLUGURL',    plugin_dir_url(__FILE__));
@@ -37,7 +70,7 @@ register_deactivation_hook(__FILE__, 'sfsi_plus_deactivate_plugin');
 register_uninstall_hook(__FILE__, 'sfsi_plus_Unistall_plugin');
 
 /*Plugin version setup*/
-if(!get_option('sfsi_plus_pluginVersion') || get_option('sfsi_plus_pluginVersion') < 2.62)
+if(!get_option('sfsi_plus_pluginVersion') || get_option('sfsi_plus_pluginVersion') < 2.63)
 {
 	add_action("init", "sfsi_plus_update_plugin");
 }
@@ -294,6 +327,7 @@ function sfsi_plus_beforaftereposts( $content )
 }
 
 //showing before and after blog posts
+add_filter( 'the_excerpt', 'sfsi_plus_beforeafterblogposts' );
 add_filter( 'the_content', 'sfsi_plus_beforeafterblogposts' );
 function sfsi_plus_beforeafterblogposts( $content )
 {
@@ -719,14 +753,12 @@ function sfsi_plus_get_bloginfo($url)
 	return $web_url;
 }
 /* plugin action link*/
-add_filter( 'plugin_action_links_' . plugin_basename(__FILE__), 'sfsi_plus_action_links', -10 );
+add_filter( 'plugin_action_links_' . plugin_basename(__FILE__), 'sfsi_plus_action_links', 3 );
 function sfsi_plus_action_links ( $mylinks )
 {
-	$mylinks[] = '<a href="https://www.ultimatelysocial.com/usm-premium/?utm_source=usmplus_manage_plugin_page&utm_campaign=check_out_pro_version&utm_medium=banner" style="color:#FF0000;"><b>Check out pro version</b></a>';
-	$mylinks[] = @$mylinks['deactivate'];
-	$mylinks[] = @$mylinks['edit'];
-	$mylinks[] = '<a href="'.admin_url("/admin.php?page=sfsi-plus-options").'">Settings</a>';
-	unset ($mylinks['deactivate']);
+	$mylinks[] 	= '<a href="https://www.ultimatelysocial.com/usm-premium/?utm_source=usmplus_manage_plugin_page&utm_campaign=check_out_pro_version&utm_medium=banner" style="color:#FF0000;"><b>Check out pro version</b></a>';
+	$mylinks[]  = @$mylinks['edit'];
+	$mylinks[] 	= '<a href="'.admin_url("/admin.php?page=sfsi-plus-options").'">Settings</a>';
 	unset ($mylinks['edit']);
 	return $mylinks;
 }

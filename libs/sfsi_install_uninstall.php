@@ -12,7 +12,7 @@ function sfsi_plus_update_plugin()
 	}
 	
 	//Install version
-	update_option("sfsi_plus_pluginVersion", "2.62");
+	update_option("sfsi_plus_pluginVersion", "2.63");
 	
 	/* show notification on about mobile setting */
 	if(!get_option('sfsi_plus_show_Setting_mobile_notification'))

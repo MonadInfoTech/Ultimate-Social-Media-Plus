@@ -755,10 +755,15 @@ ul#adminmenu li.toplevel_page_sfsi-plus-options a.toplevel_page_sfsi-plus-option
     background: url(images/left_log_icn.png) 6px -43px no-repeat #444444;
 	color: #fafafa;
 }
-ul#adminmenu li.toplevel_page_sfsi-plus-options a.current, ul#adminmenu li.toplevel_page_sfsi-plus-options a.current:hover {
+ul#adminmenu li.toplevel_page_sfsi-plus-options a.wp-has-current-submenu, ul#adminmenu li.toplevel_page_sfsi-plus-options a.wp-has-current-submenu:hover {
     background: url(images/left_log_icn.png) 6px 15px no-repeat #000000;
     /*background: url(images/left_log_icn.png) 6px -43px no-repeat #444444;*/
 	color: #e12522;
+}
+ul#adminmenu li.toplevel_page_sfsi-plus-options a.current, ul#adminmenu li.toplevel_page_sfsi-plus-options a.current:hover {
+    background: url(images/left_log_icn.png) 6px 15px no-repeat #000000 !important;
+    /*background: url(images/left_log_icn.png) 6px -43px no-repeat #444444;*/
+    color: #e12522 !important;
 }
 /*tab 9 css*/
 .tab9 .sfsi_plus_tab8_container
@@ -1195,3 +1200,11 @@ p.sfsi_plus_instagram_shared_premium{float: right;width: 41%;line-height: 20px;c
 .sfsi_plus_email_last_paragraph {width: 60%; text-align: center !important; margin: 20px auto ! important; font-size: 16px !important; color: #a4a9ad !important; padding-top: 0px!important; }
 .sfsi_plus_email_last_paragraph a{color:#12a252 !important;font-family: 'helveticaneue-light' !important;}
 .pop_up_box.sfsi_pop_up.sfsi_pop_box{padding: 25px 30px 0 !important;}
+#adminmenu #toplevel_page_sfsi-plus-options ul .wp-first-item{
+    display: none;
+}
+ul#adminmenu li.toplevel_page_sfsi-plus-options a.current, ul#adminmenu li.toplevel_page_sfsi-plus-options a.current:hover{
+    background: none !important;
+
+}
+
