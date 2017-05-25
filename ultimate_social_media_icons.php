@@ -7,7 +7,7 @@ Author: UltimatelySocial
 Text Domain: ultimate-social-media-plus
 Domain Path: /languages
 Author URI: http://ultimatelysocial.com
-Version: 2.6.3
+Version: 2.6.4
 License: GPLv2
 */
 
@@ -70,7 +70,7 @@ register_deactivation_hook(__FILE__, 'sfsi_plus_deactivate_plugin');
 register_uninstall_hook(__FILE__, 'sfsi_plus_Unistall_plugin');
 
 /*Plugin version setup*/
-if(!get_option('sfsi_plus_pluginVersion') || get_option('sfsi_plus_pluginVersion') < 2.63)
+if(!get_option('sfsi_plus_pluginVersion') || get_option('sfsi_plus_pluginVersion') < 2.64)
 {
 	add_action("init", "sfsi_plus_update_plugin");
 }
@@ -762,4 +762,26 @@ function sfsi_plus_action_links ( $mylinks )
 	unset ($mylinks['edit']);
 	return $mylinks;
 }
+
+function sfsi_plus_getdomain($url)
+{
+	$pieces = parse_url($url);
+	$domain = isset($pieces['host']) ? $pieces['host'] : '';
+	if (preg_match('/(?P<domain>[a-z0-9][a-z0-9\-]{1,63}\.[a-z\.]{2,6})$/i', $domain, $regs)) {
+		return $regs['domain'];
+	}
+	return false;
+}
+
+/* redirect setting page hook */
+add_action('admin_init', 'sfsi_plus_plugin_redirect');
+function sfsi_plus_plugin_redirect()
+{
+    if (get_option('sfsi_plus_plugin_do_activation_redirect', false))
+    {
+        delete_option('sfsi_plus_plugin_do_activation_redirect');
+        wp_redirect(admin_url('admin.php?page=sfsi-plus-options'));
+    }
+}
+
 ?>

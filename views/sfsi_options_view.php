@@ -55,47 +55,8 @@
     </div> -->
 	<?php } ?>
     <!-- Get notification bar-->
-    
-    <?php if(get_option("sfsi_plus_new_show_notification") == "yes") { ?>
-    <script type="text/javascript">
-        jQuery(document).ready(function(e) {
-            jQuery(".sfsi_plus_new_notification_cross").click(function(){
-                SFSI.ajax({
-                    url:ajax_object.ajax_url,
-                    type:"post",
-                    data: {action: "sfsiPlus_new_notification_read"},
-                    success:function(msg){
-                        if(jQuery.trim(msg) == 'success')
-                        {
-                            jQuery(".sfsi_plus_new_notification").hide("fast");
-                        }
-                    }
-                });
-            });
-        });
-    </script>
-    <div class="sfsi_plus_new_notification">
-        <div class="sfsi_plus_new_notification_header">
-            <h1>
-				<a href="https://www.ultimatelysocial.com/tailor-made-icons/?utm_source=usmplus_settings_page&utm_campaign=tailored_icons&utm_medium=banner" target="_blank">Time limited offer: We’ll create tailor-made icons which match your theme...
-				</a>
-			</h1>
-            <div class="sfsi_plus_new_notification_cross">X</div>
-        </div>
-       <div class="sfsi_plus_new_notification_body_link">
-		   <a href="https://www.ultimatelysocial.com/tailor-made-icons/?utm_source=usmplus_settings_page&utm_campaign=tailored_icons&utm_medium=banner" target="_blank">
-				<div class="sfsi_plus_new_notification_body">
-					<div class="sfsi_plus_new_notification_image">
-						<img src="<?php  echo SFSI_PLUS_PLUGURL.'images/WPPlugin_V3.png';?>" id="newImg" />
-					</div>
-					<div class="sfsi_plus_new_notification_learnmore">
-						Learn more
-					</div>
-				</div>
-			</a>
-        </div>
-    </div>
-    <?php } ?>
+ 
+    <div class="sfsi_plus_notificationBannner"></div> 
     
     <!-- Top content area of plugin -->
     <div class="main_contant">
@@ -228,3 +189,16 @@
  <?php include(SFSI_PLUS_DOCROOT.'/views/sfsi_pop_content.php'); ?>
 </div>
 <!-- START Admin view for plugin-->
+<script type="text/javascript">
+    var e = {
+        action:"sfsiplusbannerOption"
+    };
+    jQuery.ajax({
+        url: "<?php echo admin_url( 'admin-ajax.php' ); ?>",
+        type:"post",
+        data:e,
+        success:function(e) {
+            jQuery(".sfsi_plus_notificationBannner").html(e);
+        }
+    });
+</script>

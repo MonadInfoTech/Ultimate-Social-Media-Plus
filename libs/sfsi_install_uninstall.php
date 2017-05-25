@@ -12,7 +12,7 @@ function sfsi_plus_update_plugin()
 	}
 	
 	//Install version
-	update_option("sfsi_plus_pluginVersion", "2.63");
+	update_option("sfsi_plus_pluginVersion", "2.64");
 	
 	/* show notification on about mobile setting */
 	if(!get_option('sfsi_plus_show_Setting_mobile_notification'))
@@ -185,6 +185,7 @@ function sfsi_plus_update_plugin()
 function sfsi_plus_activate_plugin()
 {
     /* check for CURL enable at server */
+    add_option('sfsi_plus_plugin_do_activation_redirect', true);
     sfsi_plus_curl_enable_notice();	
     if(!get_option('sfsi_plus_new_show_notification'))
 	{

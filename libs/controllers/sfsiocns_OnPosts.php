@@ -231,7 +231,7 @@ return $fb_like_html;
 /* create pinit button */
 function sfsi_plus_pinitpinterest($permalink,$show_count)
 {
-	$pinit_html = '<script async defer src="//assets.pinterest.com/js/pinit.js"></script><a href="https://www.pinterest.com/pin/create/button/?url=&media=&description=" data-pin-do="buttonPin" data-pin-save="true"';
+	$pinit_html = '<a href="https://www.pinterest.com/pin/create/button/?url=&media=&description=" data-pin-do="buttonPin" data-pin-save="true"';
 	if($show_count)
 	{
 		$pinit_html .= 'data-pin-count="beside"';
@@ -349,7 +349,7 @@ function sfsi_plus_footer_script()
 		$sfsi_section8['sfsi_plus_rectfbshare'] = 'no';
 	}
 	
-	if($sfsi_section1['sfsi_plus_facebook_display']=="yes" || $sfsi_section8['sfsi_plus_rectfb'] == "yes" || $sfsi_section8['sfsi_plus_rectfbshare'] = "yes")
+	if($sfsi_section1['sfsi_plus_facebook_display']=="yes" || ($sfsi_section8['sfsi_plus_rectfb'] == "yes" && $sfsi_section8['sfsi_plus_show_item_onposts'] == "yes" && $sfsi_section8['sfsi_plus_display_button_type'] == "standard_buttons") || ($sfsi_section8['sfsi_plus_rectfbshare'] = "yes" && $sfsi_section8['sfsi_plus_show_item_onposts'] == "yes" && $sfsi_section8['sfsi_plus_display_button_type'] == "standard_buttons"))
 	{?>
 		<!--facebook like and share js -->                   
 		<div id="fb-root"></div>
@@ -363,7 +363,7 @@ function sfsi_plus_footer_script()
 	<?php
 	}
 	
-	if($sfsi_section1['sfsi_plus_google_display']=="yes" || $sfsi_section1['sfsi_plus_youtube_display']=="yes" || $sfsi_section8['sfsi_plus_rectgp'] == "yes") { ?>
+	if($sfsi_section1['sfsi_plus_google_display']=="yes" || $sfsi_section1['sfsi_plus_youtube_display']=="yes" || ($sfsi_section8['sfsi_plus_rectgp'] == "yes" && $sfsi_section8['sfsi_plus_show_item_onposts'] == "yes" && $sfsi_section8['sfsi_plus_display_button_type'] == "standard_buttons")) { ?>
 		<!--google share and  like and e js -->
 		<script type="text/javascript">
 			window.___gcfg = {
@@ -399,7 +399,7 @@ function sfsi_plus_footer_script()
 	<?php
 	}
 	
-	if($sfsi_section1['sfsi_plus_share_display']=="yes" || $sfsi_section6['sfsi_plus_show_Onposts']=="yes" || $sfsi_section8['sfsi_plus_rectshr'] == "yes") { ?>		
+	if($sfsi_section1['sfsi_plus_share_display']=="yes" || $sfsi_section6['sfsi_plus_show_Onposts']=="yes" || ($sfsi_section8['sfsi_plus_rectshr'] == "yes" && $sfsi_section8['sfsi_plus_show_item_onposts'] == "yes" && $sfsi_section8['sfsi_plus_display_button_type'] == "standard_buttons")) { ?>		
 		<!-- Addthis js -->
         <script type="text/javascript" src="https://s7.addthis.com/js/300/addthis_widget.js#pubid=ra-558ac14e7f79bff7"></script>
         <script type="text/javascript">
@@ -407,12 +407,12 @@ function sfsi_plus_footer_script()
 		</script>
 	<?php
 	}
-	if($sfsi_section1['sfsi_plus_pinterest_display']=="yes" || $sfsi_section8['sfsi_plus_rectpinit'] == "yes") {?>
+	if($sfsi_section1['sfsi_plus_pinterest_display']=="yes" || ($sfsi_section8['sfsi_plus_rectpinit'] == "yes" && $sfsi_section8['sfsi_plus_show_item_onposts'] == "yes" && $sfsi_section8['sfsi_plus_display_button_type'] == "standard_buttons")) {?>
 		<!--pinit js -->
 		<script type="text/javascript" src="//assets.pinterest.com/js/pinit.js"></script>
 	<?php
 	}
-	if($sfsi_section1['sfsi_plus_twitter_display']=="yes" || $sfsi_section8['sfsi_plus_recttwtr'] == "yes") {?>
+	if($sfsi_section1['sfsi_plus_twitter_display']=="yes" || ($sfsi_section8['sfsi_plus_recttwtr'] == "yes"  && $sfsi_section8['sfsi_plus_show_item_onposts'] == "yes" && $sfsi_section8['sfsi_plus_display_button_type'] == "standard_buttons")) {?>
 		<!-- twitter JS End -->
 		<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>	
 	<?php
