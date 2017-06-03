@@ -14,6 +14,10 @@ function sfsi_plus_update_plugin()
 	//Install version
 	update_option("sfsi_plus_pluginVersion", "2.64");
 	
+	if(!get_option('sfsi_plus_serverphpVersionnotification'))
+	{
+		add_option("sfsi_plus_serverphpVersionnotification", "yes");
+	}
 	/* show notification on about mobile setting */
 	if(!get_option('sfsi_plus_show_Setting_mobile_notification'))
 	{
@@ -180,7 +184,6 @@ function sfsi_plus_update_plugin()
 		$option4['sfsi_plus_instagram_token']    = '';
 		update_option('sfsi_plus_section4_options', serialize($option4));
 	}
-
 }
 function sfsi_plus_activate_plugin()
 {
@@ -540,6 +543,7 @@ function sfsi_plus_Unistall_plugin()
 	delete_option("sfsi_plus_show_Setting_mobile_notification");
 	delete_option("sfsi_plus_show_premium_notification");
 	delete_option("sfsi_plus_show_notification");
+	delete_option('sfsi_plus_serverphpVersionnotification');
 }
 /* end function */
 /* check CUrl */
@@ -594,7 +598,6 @@ function SFSI_PLUS_getFeedUrl()
 		
 	$feed_url = stripslashes_deep($resp->redirect_url);
 	return $resp;exit;
-         
 }
 /* fetch rss url from specificfeeds on */ 
 function SFSI_PLUS_updateFeedUrl()
@@ -633,7 +636,6 @@ function sfsi_plus_setUpfeeds($feed_id)
 	));
 	$resp = curl_exec($curl);
 	curl_close($curl);	
-	
 }
 /* admin notice if wp_head is missing in active theme */
 function sfsi_plus_check_wp_head() {

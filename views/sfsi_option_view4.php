@@ -157,6 +157,11 @@
 ?>
 <!-- Section 4 "Do you want to display "counts" next to your icons?" main div Start -->
 <div class="tab4">
+
+	<div class="sfsi_plus_versionNotification">
+        <?php sfsi_plus_curl_error_notification(); ?>
+    </div>
+        
 	<p>
    		<?php  _e('It’s a psychological fact that people like to follow other people, so when they see that your site has already a good number of Facebook likes, it’s more likely that they will subscribe/like/share your site than if it had 0.', SFSI_PLUS_DOMAIN ); ?>
     </p>

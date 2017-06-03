@@ -43,7 +43,7 @@ function sfsi_plus_freemius() {
 
 // Init Freemius.
 sfsi_plus_freemius();
-
+sfsi_plus_freemius()->add_action('after_uninstall', 'sfsi_plus_Unistall_plugin'); 
 // Signal that SDK was initiated.
 do_action('usmp_fs_loaded');
 
@@ -67,7 +67,7 @@ include(SFSI_PLUS_DOCROOT.'/libs/sfsi_plus_subscribe_widget.php');
 /* plugin install and uninstall hooks */ 
 register_activation_hook(__FILE__, 'sfsi_plus_activate_plugin' );
 register_deactivation_hook(__FILE__, 'sfsi_plus_deactivate_plugin');
-register_uninstall_hook(__FILE__, 'sfsi_plus_Unistall_plugin');
+//register_uninstall_hook(__FILE__, 'sfsi_plus_Unistall_plugin');
 
 /*Plugin version setup*/
 if(!get_option('sfsi_plus_pluginVersion') || get_option('sfsi_plus_pluginVersion') < 2.64)
@@ -601,31 +601,6 @@ function sfsi_plus_admin_notice()
 	{
 		$style = "overflow: hidden;"; 
 	}
-	
-	if(get_option("sfsi_plus_curlErrorNotices") == "yes")
-	{ 
-		$url = "?sfsiPlus-dismiss-curlNotice=true";
-		?>
-		<div class="error" style="<?php echo $style; ?>">
-			<div class="alignleft" style="margin: 9px 0;">
-				<?php	_e('There seems to be an error on your website which prevents the plugin to work properly. Please check the FAQ:', SFSI_PLUS_DOMAIN ); ?>
-                <a href="http://www.ultimatelysocial.com/faq">
-					<?php _e('Click here',SFSI_PLUS_DOMAIN); ?>
-				</a>
-                <p style="text-align:left">
-                	<b><?php _e('Error', SFSI_PLUS_DOMAIN); ?>: <?php echo ucfirst(get_option("sfsi_plus_curlErrorMessage")); ?></b>
-                </p>
-			</div>
-			<p class="alignright">
-				<a href="<?php echo $url; ?>">
-                <?php
-					_e('Dismiss', SFSI_PLUS_DOMAIN);
-				?>
-                </a>
-			</p>
-		</div>
-	<?php }
-	
 	?>
 	<?php
 	if(get_option("sfsi_plus_show_premium_notification") == "yes")
@@ -708,19 +683,62 @@ function sfsi_plus_admin_notice()
 			<?php
 		}
 	}
-	
-	
+	$phpVersion = phpVersion();
+	if($phpVersion <= '5.4')
+	{
+		if(get_option("sfsi_plus_serverphpVersionnotification") == "yes")
+		{
+
+		?>
+         	<style type="text/css">
+			.sfsi_plus_show_phperror_notification {
+			   	color: #fff;
+			   	text-decoration: underline;
+			}
+			form.sfsi_plus_phperrorNoticeDismiss {
+			    display: inline-block;
+			    margin: 5px 0 0;
+			    vertical-align: middle;
+			}
+			.sfsi_plus_phperrorNoticeDismiss input[type='submit']
+			{
+				background-color: transparent;
+			    border: medium none;
+			    color: #fff;
+			    margin: 0;
+			    padding: 0;
+			    cursor: pointer;
+			}
+			.sfsi_plus_show_phperror_notification p{line-height: 22px;}
+			p.sfsi_plus_show_notifictaionpragraph{padding: 0 !important;font-size: 18px;}
+			
+		</style>
+	     <div class="updated sfsi_plus_show_phperror_notification" style="<?php echo $style; ?>background-color: #D22B2F; color: #fff; font-size: 18px; border-left-color: #D22B2F;">
+			<div class="alignleft" style="margin: 9px 0;">
+				<p class="sfsi_plus_show_notifictaionpragraph">
+					<?php _e( 'We noticed you are running your site on a PHP version older than 5.4. Please upgrade to a more recent version. This is not only important for running the Ultimate Social Media Plugin, but also for security reasons in general.', SFSI_PLUS_DOMAIN); ?>
+					<br>
+					<?php _e('If you do not know how to do the upgrade, please ask your server team or hosting company to do it for you.', SFSI_PLUS_DOMAIN); ?>
+                </p>
+		
+			</div>
+			<div class="alignright">
+				<form method="post" class="sfsi_plus_phperrorNoticeDismiss">
+					<input type="hidden" name="sfsi-plus_dismiss-phperrorNotice" value="true">
+					<input type="submit" name="dismiss" value="Dismiss" />
+				</form>
+			</div>
+		</div>      
+            
+		<?php
+		}
+	}
 }
+
 
 add_action('admin_init', 'sfsi_plus_dismiss_admin_notice');
 function sfsi_plus_dismiss_admin_notice()
 {
-	if ( isset($_REQUEST['sfsiPlus-dismiss-curlNotice']) && $_REQUEST['sfsiPlus-dismiss-curlNotice'] == 'true' )
-	{
-		update_option( 'sfsi_plus_curlErrorNotices', "no" );
-		header("Location: ".site_url()."/wp-admin/admin.php?page=sfsi-plus-options");
-	}
-	
 	if ( isset($_REQUEST['sfsi-plus_dismiss-premiumNotice']) && $_REQUEST['sfsi-plus_dismiss-premiumNotice'] == 'true' )
 	{
 		update_option( 'sfsi_plus_show_premium_notification', "no" );
@@ -731,6 +749,10 @@ function sfsi_plus_dismiss_admin_notice()
 	{
 		update_option( 'sfsi_plus_show_Setting_mobile_notification', "no" );
 		//header("Location: ".site_url()."/wp-admin/admin.php?page=sfsi-options");die;
+	}
+	if ( isset($_REQUEST['sfsi-plus_dismiss-phperrorNotice']) && $_REQUEST['sfsi-plus_dismiss-phperrorNotice'] == 'true' )
+	{
+		update_option( 'sfsi_plus_serverphpVersionnotification', "no" );
 	}
 }
 
@@ -783,5 +805,39 @@ function sfsi_plus_plugin_redirect()
         wp_redirect(admin_url('admin.php?page=sfsi-plus-options'));
     }
 }
+function sfsi_plus_curl_error_notification()
+{   
+	if(get_option("sfsi_plus_curlErrorNotices") == "yes")
+	{ 
+           
+	    ?>
+        <script type="text/javascript">
+		jQuery(document).ready(function(e) {
+            jQuery(".sfsi_plus_curlerror_cross").click(function(){
+				SFSI.ajax({
+					url:ajax_object.ajax_url,
+					type:"post",
+					data: {action: "sfsiplus_curlerrornotification"},
+					success:function(msg)
+					{   
+                        jQuery(".sfsiplus_curlerror").hide("fast");
+						
+					}
+				});
+			});
+        });
+		</script>
 
+        <div class="sfsiplus_curlerror">
+        	<?php _e('We noticed that your site returns a cURL error («Error: ', SFSI_PLUS_DOMAIN ); ?>	
+            <?php  echo ucfirst(get_option("sfsi_plus_curlErrorMessage")); ?>
+            <?php _e('»). This means that it cannot send a notification to SpecificFeeds.com when a new post is published. Therefore this email-feature doesn’t work. However there are several solutions for this, please visit our FAQ to see the solutions («Perceived bugs» => «cURL error messages»): ', SFSI_PLUS_DOMAIN ); ?>
+            <a href="https://www.ultimatelysocial.com/faq/" target="_new">
+				<?php _e('www.ultimatelysocial.com/faq', SFSI_PLUS_DOMAIN ); ?>
+			</a>
+           <div class="sfsi_plus_curlerror_cross"><?php _e('Dismiss', SFSI_PLUS_DOMAIN ); ?></div>
+        </div>
+        <?php  
+    }   
+}
 ?>

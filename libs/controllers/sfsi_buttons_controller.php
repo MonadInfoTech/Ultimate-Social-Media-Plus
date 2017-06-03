@@ -972,7 +972,13 @@ function sfsiPlusGetIconPreview()
 	echo '<img src="'.$iconname."/icon_".$iconValue.'.png" >';
 	die;
 }
-
+add_action("wp_ajax_sfsiplus_curlerrornotification", "sfsiplus_curlerrornotification");
+function sfsiplus_curlerrornotification()
+{
+    update_option("sfsi_plus_curlErrorNotices", "no");
+    echo "success";
+    die;
+}
 add_action('wp_ajax_getForm','sfsiPlusGetForm');     
 function sfsiPlusGetForm()
 {
@@ -1029,10 +1035,13 @@ if(@!function_exists("sfsi_plus_sanitize_hex_color"))
 	}
 }
 
+function sfsi_plus_returningElement($element) {return $element[0];}
 
 add_action('wp_ajax_sfsiplusbannerOption','sfsi_plus_bannerOption');
 function sfsi_plus_bannerOption()
-{ 
+{
+	error_reporting(0);
+
 	if(get_option("sfsi_plus_new_show_notification") == "yes")
     {
         $keywordFile    = SFSI_PLUS_DOCROOT."/All_english_words_better_list.csv";
@@ -1040,9 +1049,9 @@ function sfsi_plus_bannerOption()
         $keywordEnglish = array_map("str_getcsv", explode("\n", $keywordData));
 
         $keywordEnglish = array_map('array_filter', $keywordEnglish);
-        $keywordEnglish = array_filter(array_map(function($element) {return $element[0];}, $keywordEnglish));
-
-       $domainname     = sfsi_plus_getdomain(site_url());
+        $keywordEnglish = array_filter(array_map(sfsi_plus_returningElement($element), $keywordEnglish));
+        
+        $domainname     = sfsi_plus_getdomain(site_url());
         
         if(preg_match("/(cat|cattery|catrescue|recuedcat|kitten|kitty|meow)/im", $domainname))
         {
@@ -3455,4 +3464,3 @@ function sfsi_plus_bannerOption()
     die;
 }
 ?>
- 

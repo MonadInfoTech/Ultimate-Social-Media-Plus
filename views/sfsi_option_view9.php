@@ -90,6 +90,9 @@
 
 ?>
 <div class="tab9">
+	<div class="sfsi_plus_versionNotification">
+        <?php sfsi_plus_curl_error_notification(); ?>
+    </div>
 	<?php
 		$connectToFeed = "http://www.specificfeeds.com/?".base64_encode("userprofile=wordpress&feed_id=".$feedId);
 	?>

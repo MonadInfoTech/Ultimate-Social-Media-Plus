@@ -171,6 +171,9 @@
         <h2 class="sfsicls_email">
         	Email
         </h2>
+        
+        <?php sfsi_plus_curl_error_notification(); ?>
+        
         <div class="inr_cont">
 			<p class="sfsi_plus_specificfeedlink">
 				<?php _e('Allows your visitors to subscribe to your site (on ', SFSI_PLUS_DOMAIN ); ?><a href="http://www.specificfeeds.com/widgets/emailSubscribeEncFeed/<?php echo $feedId; ?>/<?php echo base64_encode(8); ?>" target="_new"><?php  _e( 'this screen', SFSI_PLUS_DOMAIN); ?></a><?php  _e(") and receive new posts automatically by email.", SFSI_PLUS_DOMAIN); ?>
