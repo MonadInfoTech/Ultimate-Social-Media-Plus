@@ -1061,19 +1061,19 @@ function sfsi_plus_bannerOption()
                 $explode    = explode(".", $domainname);
                 $domainname = @$explode[0];
             }
-
+           
             $catflag = false;
 
             if(preg_match("/(cattery|catrescue|recuedcat|kitten|kitty|meow)/im", $domainname))
             {
                 $catflag = true;
+
             }
             elseif(preg_match("/(cats)/im", $domainname))
             {
                 $explode    = explode("cats", $domainname);
                 $left       = $explode[0];
                 $right      = $explode[1];
-
                 $leftcatflag = false;
                 if(!empty($left))
                 {
@@ -3218,216 +3218,1264 @@ function sfsi_plus_bannerOption()
                 }                
             } 
         }
+        elseif(preg_match("/(travel|journey|trekking|voyage|trek|trip|hike|hiking)/im", $domainname)) 
+        {   
+            if(!empty($domainname))
+            {
+                $domainname = preg_replace('/startrek|trekstar|strip|stripper|trippy|stripping|tripwire/i', '', $domainname);
+                $explode    = explode(".", $domainname);
+                $domainname = @$explode[0];
+            }
+            $travelflag = false;
+          
+            if(preg_match("/(travel|journey|trekking|voyage|trek)/im", $domainname))
+            {
+                $travelflag = true;
+            }
+            elseif(preg_match("/(treks)/im", $domainname))
+            {   
+            	$explode    = explode("treks", $domainname);
+                $left       = $explode[0];
+                $right      = $explode[1];
+               
+                $lefttravelflag = false;
+                if(!empty($left))
+                {
+                    $left = str_split($left);
+
+                    $matchKeyword = ''; $j = 0;
+                    for($i = (count($left)-1); $i >= 0; $i--)
+                    {
+                        $matchKeyword = $left[$i].$matchKeyword;
+                        
+                        if($j > 0)
+                        {
+                            if(in_array($matchKeyword, $keywordEnglish))
+                            {
+                                $lefttravelflag = true;
+                                break;
+                            }
+                            else
+                            {
+                                continue;
+                            }
+                        }
+                        else
+                        {
+                            if(preg_match("/\.|\-|[0-9]/im", $matchKeyword))
+                            {
+                                $lefttravelflag = true;
+                                break;
+                            } 
+                        }
+
+                        $j++;
+                    }       
+                }
+
+                $righttravelflag = false;
+                if(!empty($right))
+                {
+                    $right = str_split($right);
+                    
+                    $matchKeyword = '';
+                    for($i = 0; $i < count($right); $i++)
+                    {
+                        $matchKeyword .= $right[$i];
+                        
+                        if($i > 0)
+                        {
+                            if(in_array($matchKeyword, $keywordEnglish))
+                            {
+                                $righttravelflag = true;
+                                break;
+                            }
+                            else
+                            {
+                                continue;
+                            }
+                        }
+                        else
+                        {
+                            if(preg_match("/\.|\-|[0-9]/im", $matchKeyword))
+                            {
+                                $righttravelflag = true;
+                                break;
+                            } 
+                        }
+                    }       
+                }
+
+                if(empty($left) && empty($right))
+                {
+                    $travelflag = true;
+                }
+                else
+                {
+                    if(!empty($left) && !empty($right))
+                    {
+                        if($righttravelflag && $lefttravelflag)
+                        {
+                            $travelflag = true;           
+                        }
+                    }
+                    elseif(empty($left) && !empty($right))
+                    {
+                        if($righttravelflag)
+                        {
+                            $travelflag = true;           
+                        }
+                    }
+                    elseif(!empty($left) && empty($right))
+                    {
+                        if($lefttravelflag)
+                        {
+                            $travelflag = true;           
+                        }
+                    }
+                }
+            }
+            elseif(preg_match("/(trek)/im", $domainname))
+            {
+                $explode    = explode("trek", $domainname);   
+                $left       = $explode[0];
+                $right      = $explode[1];
+
+                $lefttravelflag = false;
+                if(!empty($left))
+                {
+                    $left = str_split($left);
+                   
+                    $matchKeyword = ''; $j = 0;
+                    for($i = (count($left)-1); $i >= 0; $i--)
+                    {
+                        $matchKeyword = $left[$i].$matchKeyword;
+                        
+                        if($j > 0)
+                        {
+                            if(in_array($matchKeyword, $keywordEnglish))
+                            {
+                                $lefttravelflag = true;
+                                break;
+                            }
+                            else
+                            {
+                                continue;
+                            }
+                        }
+                        else
+                        {
+                            if(preg_match("/\.|\-|[0-9]/im", $matchKeyword))
+                            {
+                                $lefttravelflag = true;
+                                break;
+                            } 
+                        }
+
+                        $j++;
+                    }       
+                }
+
+                $righttravelflag = false;
+                if(!empty($right))
+                {
+                    $right = str_split($right);
+                    
+                    $matchKeyword = '';
+                    for($i = 0; $i < count($right); $i++)
+                    {
+                        $matchKeyword .= $right[$i];
+                        if($i > 0)
+                        {
+                            if(in_array($matchKeyword, $keywordEnglish))
+                            {
+                                $righttravelflag = true;
+                                break;
+                            }
+                            else
+                            {
+                                continue;
+                            }
+                        }
+                        else
+                        {
+                            if(preg_match("/\.|\-|[0-9]/im", $matchKeyword))
+                            {
+                                $righttravelflag = true;
+                                break;
+                            } 
+                        }
+                    }       
+                }
+
+                if(empty($left) && empty($right))
+                {
+                    $travelflag = true;
+                }
+                else
+                {
+                    if(!empty($left) && !empty($right))
+                    {
+                        if($righttravelflag && $lefttravelflag)
+                        {
+                            $travelflag = true;           
+                        }
+                    }
+                    elseif(empty($left) && !empty($right))
+                    {
+                        if($righttravelflag)
+                        {
+                            $travelflag = true;           
+                        }
+                    }
+                    elseif(!empty($left) && empty($right))
+                    {
+                        if($lefttravelflag)
+                        {
+                            $travelflag = true;           
+                        }
+                    }
+                }                
+            }
+           
+            elseif(preg_match("/(trips)/im", $domainname))
+            {
+                $explode    = explode("trips", $domainname);
+                $left       = $explode[0];
+                $right      = $explode[1];
+
+                $lefttravelflag = false;
+                if(!empty($left))
+                {
+                    $left = str_split($left);
+
+                    $matchKeyword = ''; $j = 0;
+                    for($i = (count($left)-1); $i >= 0; $i--)
+                    {
+                        $matchKeyword = $left[$i].$matchKeyword;
+                        
+                        if($j > 0)
+                        {
+                            if(in_array($matchKeyword, $keywordEnglish))
+                            {
+                                $lefttravelflag = true;
+                                break;
+                            }
+                            else
+                            {
+                                continue;
+                            }
+                        }
+                        else
+                        {
+                            if(preg_match("/\.|\-|[0-9]/im", $matchKeyword))
+                            {
+                                $lefttravelflag = true;
+                                break;
+                            } 
+                        }
+
+                        $j++;
+                    }       
+                }
+
+                $righttravelflag = false;
+                if(!empty($right))
+                {
+                    $right = str_split($right);
+                    
+                    $matchKeyword = '';
+                    for($i = 0; $i < count($right); $i++)
+                    {
+                        $matchKeyword .= $right[$i];
+                        
+                        if($i > 0)
+                        {
+                            if(in_array($matchKeyword, $keywordEnglish))
+                            {
+                                $righttravelflag = true;
+                                break;
+                            }
+                            else
+                            {
+                                continue;
+                            }
+                        }
+                        else
+                        {
+                            if(preg_match("/\.|\-|[0-9]/im", $matchKeyword))
+                            {
+                                $righttravelflag = true;
+                                break;
+                            } 
+                        }
+                    }       
+                }
+
+                if(empty($left) && empty($right))
+                {
+                    $travelflag = true;
+                }
+                else
+                {
+                    if(!empty($left) && !empty($right))
+                    {
+                        if($righttravelflag && $lefttravelflag)
+                        {
+                            $travelflag = true;           
+                        }
+                    }
+                    elseif(empty($left) && !empty($right))
+                    {
+                        if($righttravelflag)
+                        {
+                            $travelflag = true;           
+                        }
+                    }
+                    elseif(!empty($left) && empty($right))
+                    {
+                        if($lefttravelflag)
+                        {
+                            $travelflag = true;           
+                        }
+                    }
+                }
+            }
+            elseif(preg_match("/(trip)/im", $domainname))
+            {
+                $explode    = explode("trip", $domainname);   
+                $left       = $explode[0];
+                $right      = $explode[1];
+
+                $lefttravelflag = false;
+                if(!empty($left))
+                {
+                    $left = str_split($left);
+                   
+                    $matchKeyword = ''; $j = 0;
+                    for($i = (count($left)-1); $i >= 0; $i--)
+                    {
+                        $matchKeyword = $left[$i].$matchKeyword;
+                        
+                        if($j > 0)
+                        {
+                            if(in_array($matchKeyword, $keywordEnglish))
+                            {
+                                $lefttravelflag = true;
+                                break;
+                            }
+                            else
+                            {
+                                continue;
+                            }
+                        }
+                        else
+                        {
+                            if(preg_match("/\.|\-|[0-9]/im", $matchKeyword))
+                            {
+                                $lefttravelflag = true;
+                                break;
+                            } 
+                        }
+
+                        $j++;
+                    }       
+                }
+
+                $righttravelflag = false;
+                if(!empty($right))
+                {
+                    $right = str_split($right);
+                    
+                    $matchKeyword = '';
+                    for($i = 0; $i < count($right); $i++)
+                    {
+                        $matchKeyword .= $right[$i];
+                        if($i > 0)
+                        {
+                            if(in_array($matchKeyword, $keywordEnglish))
+                            {
+                                $righttravelflag = true;
+                                break;
+                            }
+                            else
+                            {
+                                continue;
+                            }
+                        }
+                        else
+                        {
+                            if(preg_match("/\.|\-|[0-9]/im", $matchKeyword))
+                            {
+                                $righttravelflag = true;
+                                break;
+                            } 
+                        }
+                    }       
+                }
+
+                if(empty($left) && empty($right))
+                {
+                    $travelflag = true;
+                }
+                else
+                {
+                    if(!empty($left) && !empty($right))
+                    {
+                        if($righttravelflag && $lefttravelflag)
+                        {
+                            $travelflag = true;           
+                        }
+                    }
+                    elseif(empty($left) && !empty($right))
+                    {
+                        if($righttravelflag)
+                        {
+                            $travelflag = true;           
+                        }
+                    }
+                    elseif(!empty($left) && empty($right))
+                    {
+                        if($lefttravelflag)
+                        {
+                            $travelflag = true;           
+                        }
+                    }
+                }                
+            }
+            elseif(preg_match("/(hike)/im", $domainname))
+            {
+                $explode    = explode("hike", $domainname);
+                $left       = $explode[0];
+                $right      = $explode[1];
+
+                $lefttravelflag = false;
+                if(!empty($left))
+                {
+                    $left = str_split($left);
+
+                    $matchKeyword = ''; $j = 0;
+                    for($i = (count($left)-1); $i >= 0; $i--)
+                    {
+                        $matchKeyword = $left[$i].$matchKeyword;
+                        
+                        if($j > 0)
+                        {
+                            if(in_array($matchKeyword, $keywordEnglish))
+                            {
+                                $lefttravelflag = true;
+                                break;
+                            }
+                            else
+                            {
+                                continue;
+                            }
+                        }
+                        else
+                        {
+                            if(preg_match("/\.|\-|[0-9]/im", $matchKeyword))
+                            {
+                                $lefttravelflag = true;
+                                break;
+                            } 
+                        }
+
+                        $j++;
+                    }       
+                }
+
+                $righttravelflag = false;
+                if(!empty($right))
+                {
+                    $right = str_split($right);
+                    
+                    $matchKeyword = '';
+                    for($i = 0; $i < count($right); $i++)
+                    {
+                        $matchKeyword .= $right[$i];
+                        
+                        if($i > 0)
+                        {
+                            if(in_array($matchKeyword, $keywordEnglish))
+                            {
+                                $righttravelflag = true;
+                                break;
+                            }
+                            else
+                            {
+                                continue;
+                            }
+                        }
+                        else
+                        {
+                            if(preg_match("/\.|\-|[0-9]/im", $matchKeyword))
+                            {
+                                $righttravelflag = true;
+                                break;
+                            } 
+                        }
+                    }       
+                }
+
+                if(empty($left) && empty($right))
+                {
+                    $travelflag = true;
+                }
+                else
+                {
+                    if(!empty($left) && !empty($right))
+                    {
+                        if($righttravelflag && $lefttravelflag)
+                        {
+                            $travelflag = true;           
+                        }
+                    }
+                    elseif(empty($left) && !empty($right))
+                    {
+                        if($righttravelflag)
+                        {
+                            $travelflag = true;           
+                        }
+                    }
+                    elseif(!empty($left) && empty($right))
+                    {
+                        if($lefttravelflag)
+                        {
+                            $travelflag = true;           
+                        }
+                    }
+                }
+            }
+            elseif(preg_match("/(hiking)/im", $domainname))
+            {
+                $explode    = explode("hiking", $domainname);   
+                $left       = $explode[0];
+                $right      = $explode[1];
+
+                $lefttravelflag = false;
+                if(!empty($left))
+                {
+                    $left = str_split($left);
+                   
+                    $matchKeyword = ''; $j = 0;
+                    for($i = (count($left)-1); $i >= 0; $i--)
+                    {
+                        $matchKeyword = $left[$i].$matchKeyword;
+                        
+                        if($j > 0)
+                        {
+                            if(in_array($matchKeyword, $keywordEnglish))
+                            {
+                                $lefttravelflag = true;
+                                break;
+                            }
+                            else
+                            {
+                                continue;
+                            }
+                        }
+                        else
+                        {
+                            if(preg_match("/\.|\-|[0-9]/im", $matchKeyword))
+                            {
+                                $lefttravelflag = true;
+                                break;
+                            } 
+                        }
+
+                        $j++;
+                    }       
+                }
+
+                $righttravelflag = false;
+                if(!empty($right))
+                {
+                    $right = str_split($right);
+                    
+                    $matchKeyword = '';
+                    for($i = 0; $i < count($right); $i++)
+                    {
+                        $matchKeyword .= $right[$i];
+                        if($i > 0)
+                        {
+                            if(in_array($matchKeyword, $keywordEnglish))
+                            {
+                                $righttravelflag = true;
+                                break;
+                            }
+                            else
+                            {
+                                continue;
+                            }
+                        }
+                        else
+                        {
+                            if(preg_match("/\.|\-|[0-9]/im", $matchKeyword))
+                            {
+                                $righttravelflag = true;
+                                break;
+                            } 
+                        }
+                    }       
+                }
+
+                if(empty($left) && empty($right))
+                {
+                    $travelflag = true;
+                }
+                else
+                {
+                    if(!empty($left) && !empty($right))
+                    {
+                        if($righttravelflag && $lefttravelflag)
+                        {
+                            $travelflag = true;           
+                        }
+                    }
+                    elseif(empty($left) && !empty($right))
+                    {
+                        if($righttravelflag)
+                        {
+                            $travelflag = true;           
+                        }
+                    }
+                    elseif(!empty($left) && empty($right))
+                    {
+                        if($lefttravelflag)
+                        {
+                            $travelflag = true;           
+                        }
+                    }
+                }                
+            }
+        }
+        elseif (preg_match("/(music|drums|sound|rhythm|guitar|singing|audio|piano|violin|cello|song)/im", $domainname))
+        {
+            if(!empty($domainname))
+            {
+                $domainname = preg_replace('/eardrums|balisong|thaisong/i', '', $domainname);
+                $explode    = explode(".", $domainname);
+                $domainname = @$explode[0];
+            }
+
+            $musicflag = false;
+
+            if(preg_match("/(music|sound|rhythm|guitar|singing|audio|piano|violin)/im", $domainname))
+            {
+                $musicflag = true;
+            }
+            elseif(preg_match("/(drums)/im", $domainname))
+            {
+                $explode    = explode("drums", $domainname);
+                $left       = $explode[0];
+                $right      = $explode[1];
+
+                $leftmusicflag = false;
+                if(!empty($left))
+                {
+                    $left = str_split($left);
+
+                    $matchKeyword = ''; $j = 0;
+                    for($i = (count($left)-1); $i >= 0; $i--)
+                    {
+                        $matchKeyword = $left[$i].$matchKeyword;
+                        
+                        if($j > 0)
+                        {
+                            if(in_array($matchKeyword, $keywordEnglish))
+                            {
+                                $leftmusicflag = true;
+                                break;
+                            }
+                            else
+                            {
+                                continue;
+                            }
+                        }
+                        else
+                        {
+                            if(preg_match("/\.|\-|[0-9]/im", $matchKeyword))
+                            {
+                                $leftmusicflag = true;
+                                break;
+                            } 
+                        }
+
+                        $j++;
+                    }       
+                }
+
+                $rightmusicflag = false;
+                if(!empty($right))
+                {
+                    $right = str_split($right);
+                    
+                    $matchKeyword = '';
+                    for($i = 0; $i < count($right); $i++)
+                    {
+                        $matchKeyword .= $right[$i];
+                        
+                        if($i > 0)
+                        {
+                            if(in_array($matchKeyword, $keywordEnglish))
+                            {
+                                $rightmusicflag = true;
+                                break;
+                            }
+                            else
+                            {
+                                continue;
+                            }
+                        }
+                        else
+                        {
+                            if(preg_match("/\.|\-|[0-9]/im", $matchKeyword))
+                            {
+                                $rightmusicflag = true;
+                                break;
+                            } 
+                        }
+                    }       
+                }
+
+                if(empty($left) && empty($right))
+                {
+                    $musicflag = true;
+                }
+                else
+                {
+                    if(!empty($left) && !empty($right))
+                    {
+                        if($rightmusicflag && $leftmusicflag)
+                        {
+                            $musicflag = true;           
+                        }
+                    }
+                    elseif(empty($left) && !empty($right))
+                    {
+                        if($rightmusicflag)
+                        {
+                            $musicflag = true;           
+                        }
+                    }
+                    elseif(!empty($left) && empty($right))
+                    {
+                        if($leftmusicflag)
+                        {
+                            $musicflag = true;           
+                        }
+                    }
+                }
+            }
+            elseif(preg_match("/(celloes)/im", $domainname))
+            {
+                $explode    = explode("celloes", $domainname);   
+                $left       = $explode[0];
+                $right      = $explode[1];
+
+                $leftmusicflag = false;
+                if(!empty($left))
+                {
+                    $left = str_split($left);
+                   
+                    $matchKeyword = ''; $j = 0;
+                    for($i = (count($left)-1); $i >= 0; $i--)
+                    {
+                        $matchKeyword = $left[$i].$matchKeyword;
+                        
+                        if($j > 0)
+                        {
+                            if(in_array($matchKeyword, $keywordEnglish))
+                            {
+                                $leftmusicflag = true;
+                                break;
+                            }
+                            else
+                            {
+                                continue;
+                            }
+                        }
+                        else
+                        {
+                            if(preg_match("/\.|\-|[0-9]/im", $matchKeyword))
+                            {
+                                $leftmusicflag = true;
+                                break;
+                            } 
+                        }
+
+                        $j++;
+                    }       
+                }
+
+                $rightmusicflag = false;
+                if(!empty($right))
+                {
+                    $right = str_split($right);
+                    
+                    $matchKeyword = '';
+                    for($i = 0; $i < count($right); $i++)
+                    {
+                        $matchKeyword .= $right[$i];
+                        if($i > 0)
+                        {
+                            if(in_array($matchKeyword, $keywordEnglish))
+                            {
+                                $rightmusicflag = true;
+                                break;
+                            }
+                            else
+                            {
+                                continue;
+                            }
+                        }
+                        else
+                        {
+                            if(preg_match("/\.|\-|[0-9]/im", $matchKeyword))
+                            {
+                                $rightmusicflag = true;
+                                break;
+                            } 
+                        }
+                    }       
+                }
+
+                if(empty($left) && empty($right))
+                {
+                    $musicflag = true;
+                }
+                else
+                {
+                    if(!empty($left) && !empty($right))
+                    {
+                        if($rightmusicflag && $leftmusicflag)
+                        {
+                            $musicflag = true;           
+                        }
+                    }
+                    elseif(empty($left) && !empty($right))
+                    {
+                        if($rightmusicflag)
+                        {
+                            $musicflag = true;           
+                        }
+                    }
+                    elseif(!empty($left) && empty($right))
+                    {
+                        if($leftmusicflag)
+                        {
+                            $musicflag = true;           
+                        }
+                    }
+                }                
+            }
+            elseif(preg_match("/(cello)/im", $domainname))
+            {
+                $explode    = explode("cello", $domainname);   
+                $left       = $explode[0];
+                $right      = $explode[1];
+
+                $leftmusicflag = false;
+                if(!empty($left))
+                {
+                    $left = str_split($left);
+                   
+                    $matchKeyword = ''; $j = 0;
+                    for($i = (count($left)-1); $i >= 0; $i--)
+                    {
+                        $matchKeyword = $left[$i].$matchKeyword;
+                        
+                        if($j > 0)
+                        {
+                            if(in_array($matchKeyword, $keywordEnglish))
+                            {
+                                $leftmusicflag = true;
+                                break;
+                            }
+                            else
+                            {
+                                continue;
+                            }
+                        }
+                        else
+                        {
+                            if(preg_match("/\.|\-|[0-9]/im", $matchKeyword))
+                            {
+                                $leftmusicflag = true;
+                                break;
+                            } 
+                        }
+
+                        $j++;
+                    }       
+                }
+
+                $rightmusicflag = false;
+                if(!empty($right))
+                {
+                    $right = str_split($right);
+                    
+                    $matchKeyword = '';
+                    for($i = 0; $i < count($right); $i++)
+                    {
+                        $matchKeyword .= $right[$i];
+                        if($i > 0)
+                        {
+                            if(in_array($matchKeyword, $keywordEnglish))
+                            {
+                                $rightmusicflag = true;
+                                break;
+                            }
+                            else
+                            {
+                                continue;
+                            }
+                        }
+                        else
+                        {
+                            if(preg_match("/\.|\-|[0-9]/im", $matchKeyword))
+                            {
+                                $rightmusicflag = true;
+                                break;
+                            } 
+                        }
+                    }       
+                }
+
+                if(empty($left) && empty($right))
+                {
+                    $musicflag = true;
+                }
+                else
+                {
+                    if(!empty($left) && !empty($right))
+                    {
+                        if($rightmusicflag && $leftmusicflag)
+                        {
+                            $musicflag = true;           
+                        }
+                    }
+                    elseif(empty($left) && !empty($right))
+                    {
+                        if($rightmusicflag)
+                        {
+                            $musicflag = true;           
+                        }
+                    }
+                    elseif(!empty($left) && empty($right))
+                    {
+                        if($leftmusicflag)
+                        {
+                            $musicflag = true;           
+                        }
+                    }
+                }                
+            }
+            elseif(preg_match("/(songs)/im", $domainname))
+            {
+                $explode    = explode("songs", $domainname);   
+                $left       = $explode[0];
+                $right      = $explode[1];
+
+                $leftmusicflag = false;
+                if(!empty($left))
+                {
+                    $left = str_split($left);
+                   
+                    $matchKeyword = ''; $j = 0;
+                    for($i = (count($left)-1); $i >= 0; $i--)
+                    {
+                        $matchKeyword = $left[$i].$matchKeyword;
+                        
+                        if($j > 0)
+                        {
+                            if(in_array($matchKeyword, $keywordEnglish))
+                            {
+                                $leftmusicflag = true;
+                                break;
+                            }
+                            else
+                            {
+                                continue;
+                            }
+                        }
+                        else
+                        {
+                            if(preg_match("/\.|\-|[0-9]/im", $matchKeyword))
+                            {
+                                $leftmusicflag = true;
+                                break;
+                            } 
+                        }
+
+                        $j++;
+                    }       
+                }
+
+                $rightmusicflag = false;
+                if(!empty($right))
+                {
+                    $right = str_split($right);
+                    
+                    $matchKeyword = '';
+                    for($i = 0; $i < count($right); $i++)
+                    {
+                        $matchKeyword .= $right[$i];
+                        if($i > 0)
+                        {
+                            if(in_array($matchKeyword, $keywordEnglish))
+                            {
+                                $rightmusicflag = true;
+                                break;
+                            }
+                            else
+                            {
+                                continue;
+                            }
+                        }
+                        else
+                        {
+                            if(preg_match("/\.|\-|[0-9]/im", $matchKeyword))
+                            {
+                                $rightmusicflag = true;
+                                break;
+                            } 
+                        }
+                    }       
+                }
+
+                if(empty($left) && empty($right))
+                {
+                    $musicflag = true;
+                }
+                else
+                {
+                    if(!empty($left) && !empty($right))
+                    {
+                        if($rightmusicflag && $leftmusicflag)
+                        {
+                            $musicflag = true;           
+                        }
+                    }
+                    elseif(empty($left) && !empty($right))
+                    {
+                        if($rightmusicflag)
+                        {
+                            $musicflag = true;           
+                        }
+                    }
+                    elseif(!empty($left) && empty($right))
+                    {
+                        if($leftmusicflag)
+                        {
+                            $musicflag = true;           
+                        }
+                    }
+                }                
+            }
+            elseif(preg_match("/(song)/im", $domainname))
+            {
+                $explode    = explode("song", $domainname);   
+                $left       = $explode[0];
+                $right      = $explode[1];
+
+                $leftmusicflag = false;
+                if(!empty($left))
+                {
+                    $left = str_split($left);
+                   
+                    $matchKeyword = ''; $j = 0;
+                    for($i = (count($left)-1); $i >= 0; $i--)
+                    {
+                        $matchKeyword = $left[$i].$matchKeyword;
+                        
+                        if($j > 0)
+                        {
+                            if(in_array($matchKeyword, $keywordEnglish))
+                            {
+                                $leftmusicflag = true;
+                                break;
+                            }
+                            else
+                            {
+                                continue;
+                            }
+                        }
+                        else
+                        {
+                            if(preg_match("/\.|\-|[0-9]/im", $matchKeyword))
+                            {
+                                $leftmusicflag = true;
+                                break;
+                            } 
+                        }
+
+                        $j++;
+                    }       
+                }
+
+                $rightmusicflag = false;
+                if(!empty($right))
+                {
+                    $right = str_split($right);
+                    
+                    $matchKeyword = '';
+                    for($i = 0; $i < count($right); $i++)
+                    {
+                        $matchKeyword .= $right[$i];
+                        if($i > 0)
+                        {
+                            if(in_array($matchKeyword, $keywordEnglish))
+                            {
+                                $rightmusicflag = true;
+                                break;
+                            }
+                            else
+                            {
+                                continue;
+                            }
+                        }
+                        else
+                        {
+                            if(preg_match("/\.|\-|[0-9]/im", $matchKeyword))
+                            {
+                                $rightmusicflag = true;
+                                break;
+                            } 
+                        }
+                    }       
+                }
+
+                if(empty($left) && empty($right))
+                {
+                    $musicflag = true;
+                }
+                else
+                {
+                    if(!empty($left) && !empty($right))
+                    {
+                        if($rightmusicflag && $leftmusicflag)
+                        {
+                            $musicflag = true;           
+                        }
+                    }
+                    elseif(empty($left) && !empty($right))
+                    {
+                        if($rightmusicflag)
+                        {
+                            $musicflag = true;           
+                        }
+                    }
+                    elseif(!empty($left) && empty($right))
+                    {
+                        if($leftmusicflag)
+                        {
+                            $musicflag = true;           
+                        }
+                    }
+                }                
+            }
+        }
+ 
  
         if($catflag)
         {
-            echo '<div class="sfsi_plus_new_notification_cat">
-                    <div class="sfsi_plus_new_notification_header_cat">
-                        <h1>Do you like cats?</h1>
-                        <h3>The <a href="https://www.ultimatelysocial.com/Cat-themed-icons/?utm_source=any_settings_page&utm_campaign=Cat_icons&utm_medium=banner" target="_blank">Premium Plugin</a> Includes these icons...</h3>
-                        <div class="sfsi_plus_new_notification_cross_cat">X</div>
-                    </div>
-                    
-                    <div class="sfsi_plus_new_notification_body_link_cat">
-                        <a href="https://www.ultimatelysocial.com/Cat-themed-icons/?utm_source=any_settings_page&utm_campaign=Cat_icons&utm_medium=banner" target="_blank">
-                            <div class="sfsi_plus_new_notification_body_cat">
-                                <div class="sfsi_plus_new_notification_image_cat">
-                                    <img src="'.SFSI_PLUS_PLUGURL.'images/cats.png" id="newImg" />
-                                </div>
-                            </div>
-                        </a>
-                        <div class="sfsiplus_bottom_text">
-                            <a href="https://www.ultimatelysocial.com/Cat-themed-icons/?utm_source=any_settings_page&utm_campaign=Cat_icons&utm_medium=banner">
-                                See all cat-themed-icons >
-                            </a>
-                        </div>    
-                    </div>
-                </div>';
+        	sfsi_plus_bannereHtml(
+        		"Do you like cats?", 
+        		"https://www.ultimatelysocial.com/Cat-themed-icons/?utm_source=any_settings_page&utm_campaign=Cat_icons&utm_medium=banner", 
+        		SFSI_PLUS_PLUGURL.'images/cats.png', 
+        		"See all cat-themed-icons"
+        	);
         }
         elseif($horseflag)
         {
-            echo '<div class="sfsi_plus_new_notification_cat">
-                    <div class="sfsi_plus_new_notification_header_cat">
-                        <h1>Do you like horses?</h1>
-                        <h3>The <a href="https://www.ultimatelysocial.com/Horse-themed-icons/?utm_source=any_settings_page&utm_campaign=Horse_icons&utm_medium=banner" target="_blank">Premium Plugin</a> Includes these icons...</h3>
-                        <div class="sfsi_plus_new_notification_cross_cat">X</div>
-                    </div>
-                    
-                    <div class="sfsi_plus_new_notification_body_link_cat">
-                        <a href="https://www.ultimatelysocial.com/Horse-themed-icons/?utm_source=any_settings_page&utm_campaign=Horse_icons&utm_medium=banner" target="_blank">
-                            <div class="sfsi_plus_new_notification_body_cat">
-                                <div class="sfsi_plus_new_notification_image_cat">
-                                       <img src="'.SFSI_PLUS_PLUGURL.'images/horses.png" id="newImg" />
-                                </div>
-                            </div>
-                        </a>
-                        <div class="sfsiplus_bottom_text">
-                            <a href="https://www.ultimatelysocial.com/Horse-themed-icons/?utm_source=any_settings_page&utm_campaign=Horse_icons&utm_medium=banner">
-                                See all horse-themed-icons >
-                            </a>
-                        </div>    
-                    </div>
-                </div>';
+        	sfsi_plus_bannereHtml(
+        		"Do you like horses?", 
+        		"https://www.ultimatelysocial.com/Horse-themed-icons/?utm_source=any_settings_page&utm_campaign=Horse_icons&utm_medium=banner", 
+        		SFSI_PLUS_PLUGURL.'images/horses.png', 
+        		"See all horse-themed-icons"
+        	);
         }
         elseif($toothflag)
         {
-            echo '<div class="sfsi_plus_new_notification_cat">
-                    <div class="sfsi_plus_new_notification_header_cat">
-                        <h1>You got a thing with teeth?</h1>
-                        <h3>The <a href="https://www.ultimatelysocial.com/Teeth-shaped-icons/?utm_source=any_settings_page&utm_campaign=Teeth_icons&utm_medium=banner" target="_blank">Premium Plugin</a> Includes these icons...</h3>
-                        <div class="sfsi_plus_new_notification_cross_cat">X</div>
-                    </div>
-                    
-                    <div class="sfsi_plus_new_notification_body_link_cat">
-                        <a href="https://www.ultimatelysocial.com/Teeth-shaped-icons/?utm_source=any_settings_page&utm_campaign=Teeth_icons&utm_medium=banner" target="_blank">
-                            <div class="sfsi_plus_new_notification_body_cat">
-                                <div class="sfsi_plus_new_notification_image_cat">
-                                       <img src="'.SFSI_PLUS_PLUGURL.'images/teeth.png" id="newImg" />
-                                </div>
-                            </div>
-                        </a>
-                        <div class="sfsiplus_bottom_text">
-                            <a href="https://www.ultimatelysocial.com/Teeth-shaped-icons/?utm_source=any_settings_page&utm_campaign=Teeth_icons&utm_medium=banner">
-                                See all teeth-themed-icons  >
-                            </a>
-                        </div>    
-                    </div>
-                </div>';
+        	sfsi_plus_bannereHtml(
+        		"You got a thing with teeth?", 
+        		"https://www.ultimatelysocial.com/Teeth-shaped-icons/?utm_source=any_settings_page&utm_campaign=Teeth_icons&utm_medium=banner",
+        		SFSI_PLUS_PLUGURL.'images/teeth.png', 
+        		"See all teeth-themed-icons"
+        	);
         }
         elseif($beerflag)
         {
-            echo '<div class="sfsi_plus_new_notification_cat">
-                    <div class="sfsi_plus_new_notification_header_cat">
-                        <h1>You like beer?</h1>
-                        <h3>The <a href="https://www.ultimatelysocial.com/Beer-themed-icons/?utm_source=any_settings_page&utm_campaign=Beer_icons&utm_medium=banner" target="_blank">Premium Plugin</a> Includes these icons...</h3>
-                        <div class="sfsi_plus_new_notification_cross_cat">X</div>
-                    </div>
-                    
-                    <div class="sfsi_plus_new_notification_body_link_cat">
-                        <a href="https://www.ultimatelysocial.com/Beer-themed-icons/?utm_source=any_settings_page&utm_campaign=Beer_icons&utm_medium=banner" target="_blank">
-                            <div class="sfsi_plus_new_notification_body_cat">
-                                <div class="sfsi_plus_new_notification_image_cat">
-                                       <img src="'.SFSI_PLUS_PLUGURL.'images/beer.png" id="newImg" />
-                                </div>
-                            </div>
-                        </a>
-                        <div class="sfsiplus_bottom_text">
-                            <a href="https://www.ultimatelysocial.com/Beer-themed-icons/?utm_source=any_settings_page&utm_campaign=Beer_icons&utm_medium=banner">
-                                See all beer-themed-icons >
-                            </a>
-                        </div>    
-                    </div>
-                </div>';
+        	sfsi_plus_bannereHtml(
+        		"You like beer?",
+        		"https://www.ultimatelysocial.com/Beer-themed-icons/?utm_source=any_settings_page&utm_campaign=Beer_icons&utm_medium=banner",
+        		SFSI_PLUS_PLUGURL.'images/beer.png', 
+        		"See all beer-themed-icons"
+        	);
         }
         elseif($cameraflag)
         {
-            echo '<div class="sfsi_plus_new_notification_cat">
-                    <div class="sfsi_plus_new_notification_header_cat">
-                        <h1>You like photography?</h1>
-                        <h3>The <a href="https://www.ultimatelysocial.com/Photography-themed-icons/?utm_source=any_settings_page&utm_campaign=Photography_icons&utm_medium=banner" target="_blank">Premium Plugin</a> Includes these icons...</h3>
-                        <div class="sfsi_plus_new_notification_cross_cat">X</div>
-                    </div>
-                    
-                    <div class="sfsi_plus_new_notification_body_link_cat">
-                        <a href="https://www.ultimatelysocial.com/Photography-themed-icons/?utm_source=any_settings_page&utm_campaign=Photography_icons&utm_medium=banner" target="_blank">
-                            <div class="sfsi_plus_new_notification_body_cat">
-                                <div class="sfsi_plus_new_notification_image_cat">
-                                       <img src="'.SFSI_PLUS_PLUGURL.'images/photo.png" id="newImg" />
-                                </div>
-                            </div>
-                        </a>
-                        <div class="sfsiplus_bottom_text">
-                            <a href="https://www.ultimatelysocial.com/Photography-themed-icons/?utm_source=any_settings_page&utm_campaign=Photography_icons&utm_medium=banner">
-                               See all photography-themed-icons >
-                            </a>
-                        </div>    
-                    </div>
-                </div>';
+        	sfsi_plus_bannereHtml(
+        		"You like photography?",
+        		"https://www.ultimatelysocial.com/Photography-themed-icons/?utm_source=any_settings_page&utm_campaign=Photography_icons&utm_medium=banner",
+        		SFSI_PLUS_PLUGURL.'images/photo.png', 
+        		"See all photography-themed-icons"
+        	);
         }
         elseif($houseflag)
         {
-            echo '<div class="sfsi_plus_new_notification_cat">
-                    <div class="sfsi_plus_new_notification_header_cat">
-                        <h1>You are into real estate?</h1>
-                        <h3>The <a href="https://www.ultimatelysocial.com/Realestate-themed-icons/?utm_source=any_settings_page&utm_campaign=Realestate_icons&utm_medium=banner" target="_blank">Premium Plugin</a> Includes these icons...</h3>
-                        <div class="sfsi_plus_new_notification_cross_cat">X</div>
-                    </div>
-                    
-                    <div class="sfsi_plus_new_notification_body_link_cat">
-                        <a href="https://www.ultimatelysocial.com/Realestate-themed-icons/?utm_source=any_settings_page&utm_campaign=Realestate_icons&utm_medium=banner" target="_blank">
-                            <div class="sfsi_plus_new_notification_body_cat">
-                                <div class="sfsi_plus_new_notification_image_cat">
-                                       <img src="'.SFSI_PLUS_PLUGURL.'images/house.png" id="newImg" />
-                                </div>
-                            </div>
-                        </a>
-                        <div class="sfsiplus_bottom_text">
-                            <a href="https://www.ultimatelysocial.com/Realestate-themed-icons/?utm_source=any_settings_page&utm_campaign=Realestate_icons&utm_medium=banner">
-                                See all real-estate-themed-icons >
-                            </a>
-                        </div>    
-                    </div>
-                </div>';
+        	sfsi_plus_bannereHtml(
+        		"You are into real estate?",
+        		"https://www.ultimatelysocial.com/Realestate-themed-icons/?utm_source=any_settings_page&utm_campaign=Realestate_icons&utm_medium=banner",
+        		SFSI_PLUS_PLUGURL.'images/house.png', 
+        		"See all real-estate-themed-icons"
+        	);
         }
         elseif($cookflag)
         {
-            echo '<div class="sfsi_plus_new_notification_cat">
-                    <div class="sfsi_plus_new_notification_header_cat">
-                        <h1>You like cooking?</h1>
-                        <h3>The <a href="https://www.ultimatelysocial.com/Cooking-themed-icons/?utm_source=any_settings_page&utm_campaign=Cooking_icons&utm_medium=banner" target="_blank">Premium Plugin</a> Includes these icons...</h3>
-                        <div class="sfsi_plus_new_notification_cross_cat">X</div>
-                    </div>
-                    
-                    <div class="sfsi_plus_new_notification_body_link_cat">
-                        <a href="https://www.ultimatelysocial.com/Cooking-themed-icons/?utm_source=any_settings_page&utm_campaign=Cooking_icons&utm_medium=banner" target="_blank">
-                            <div class="sfsi_plus_new_notification_body_cat">
-                                <div class="sfsi_plus_new_notification_image_cat">
-                                       <img src="'.SFSI_PLUS_PLUGURL.'images/cooking.png" id="newImg" />
-                                </div>
-                            </div>
-                        </a>
-                        <div class="sfsiplus_bottom_text">
-                            <a href="https://www.ultimatelysocial.com/Cooking-themed-icons/?utm_source=any_settings_page&utm_campaign=Cooking_icons&utm_medium=banner">
-                                See all cooking-themed-icons >
-                            </a>
-                        </div>    
-                    </div>
-                </div>';
+        	sfsi_plus_bannereHtml(
+        		"You like cooking?",
+        		"https://www.ultimatelysocial.com/Cooking-themed-icons/?utm_source=any_settings_page&utm_campaign=Cooking_icons&utm_medium=banner",
+        		SFSI_PLUS_PLUGURL.'images/cooking.png', 
+        		"See all cooking-themed-icons"
+        	);
         }
         elseif($drinkflag)
         {
-            echo '<div class="sfsi_plus_new_notification_cat">
-                    <div class="sfsi_plus_new_notification_header_cat">
-                        <h1>You like drinks?</h1>
-                        <h3>The <a href="https://www.ultimatelysocial.com/Drinking-themed-icons/?utm_source=any_settings_page&utm_campaign=Drinking_icons&utm_medium=banner" target="_blank">Premium Plugin</a> Includes these icons...</h3>
-                        <div class="sfsi_plus_new_notification_cross_cat">X</div>
-                    </div>
-                    
-                    <div class="sfsi_plus_new_notification_body_link_cat">
-                        <a href="https://www.ultimatelysocial.com/Drinking-themed-icons/?utm_source=any_settings_page&utm_campaign=Drinking_icons&utm_medium=banner" target="_blank">
-                            <div class="sfsi_plus_new_notification_body_cat">
-                                <div class="sfsi_plus_new_notification_image_cat">
-                                       <img src="'.SFSI_PLUS_PLUGURL.'images/beer.png" id="newImg" />
-                                </div>
-                            </div>
-                        </a>
-                        <div class="sfsiplus_bottom_text">
-                            <a href="https://www.ultimatelysocial.com/Drinking-themed-icons/?utm_source=any_settings_page&utm_campaign=Drinking_icons&utm_medium=banner">
-                                See all drinking-themed-icons >
-                            </a>
-                        </div>    
-                    </div>
-                </div>';
+        	sfsi_plus_bannereHtml(
+        		"You like drinks?",
+        		"https://www.ultimatelysocial.com/Drinking-themed-icons/?utm_source=any_settings_page&utm_campaign=Drinking_icons&utm_medium=banner",
+        		SFSI_PLUS_PLUGURL.'images/beer.png', 
+        		"See all drinking-themed-icons"
+        	);
+        }
+        elseif($travelflag)
+        {
+        	sfsi_plus_bannereHtml(
+        		"You like travelling?",
+        		"https://www.ultimatelysocial.com/Travel-themed-icons/?utm_source=any_settings_page&utm_campaign=Travel_icons&utm_medium=banner",
+        		SFSI_PLUS_PLUGURL.'images/travel.png', 
+        		"See all travel-themed-icons"
+        	);
+        }
+        elseif($musicflag)
+        {
+        	sfsi_plus_bannereHtml(
+        		"You like music?",
+        		"https://www.ultimatelysocial.com/Music-themed-icons/?utm_source=any_settings_page&utm_campaign=Music_icons&utm_medium=banner",
+        		SFSI_PLUS_PLUGURL.'images/music.png', 
+        		"See all music-themed-icons"
+        	);
         }
         else
         {
-            echo '<div class="sfsi_plus_new_notification_cat">
+        	echo '<div class="sfsi_plus_new_notification_cat">
                     <div class="sfsi_plus_new_notification_header_cat">
                         <h1>New feature: Tailored icons</h1>
                         <h3>The <a href="https://www.ultimatelysocial.com/tailor-made-icons/?utm_source=usmplus_settings_page&utm_campaign=tailored_icons&utm_medium=banner" target="_blank">Premium Plugin</a> Includes these icons...</h3>
                         <div class="sfsi_plus_new_notification_cross_cat">X</div>
                     </div>
-                    
                     <div class="sfsi_plus_new_notification_body_link_cat">
                         <a class ="sfsi_plus_tailored_icons_img" href="https://www.ultimatelysocial.com/tailor-made-icons/?utm_source=usmplus_settings_page&utm_campaign=tailored_icons&utm_medium=banner" target="_blank">
                             <div class="sfsi_plus_new_notification_body_cat">
@@ -3462,5 +4510,31 @@ function sfsi_plus_bannerOption()
         </script>';
     }
     die;
+}
+
+function sfsi_plus_bannereHtml($title, $siteLink, $bannerImage, $buttonTitle)
+{
+	echo '<div class="sfsi_plus_new_notification_cat">
+        <div class="sfsi_plus_new_notification_header_cat">
+            <h1>'.$title.'</h1>
+            <h3>The <a href="'.$siteLink.'" target="_blank">Premium Plugin</a> Includes these icons...</h3>
+            <div class="sfsi_plus_new_notification_cross_cat">X</div>
+        </div>
+        
+        <div class="sfsi_plus_new_notification_body_link_cat">
+            <a href="'.$siteLink.'" target="_blank">
+                <div class="sfsi_plus_new_notification_body_cat">
+                    <div class="sfsi_plus_new_notification_image_cat">
+                        <img src="'.$bannerImage.'" id="newImg" />
+                    </div>
+                </div>
+            </a>
+            <div class="sfsiplus_bottom_text">
+                <a href="'.$siteLink.'">
+                    '.$buttonTitle.' >
+                </a>
+            </div>    
+        </div>
+    </div>';
 }
 ?>

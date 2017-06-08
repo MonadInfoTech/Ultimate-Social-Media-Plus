@@ -63,7 +63,7 @@
             <div class="sfsiplus_right_info">
                 <p>
                     <span>
-                        <?php  _e( 'Strongly recommended:', SFSI_PLUS_DOMAIN); ?>: 
+                        <?php  _e( 'Strongly recommended:', SFSI_PLUS_DOMAIN); ?> 
                     </span> 
                     
                     <?php  _e( 'RSS is still popular, esp. among the tech-savvy crowd.', SFSI_PLUS_DOMAIN); ?>
@@ -91,7 +91,7 @@
             <div class="sfsiplus_right_info">
             	<p>
                 	<span>
-            			<?php  _e( 'Strongly recommended:', SFSI_PLUS_DOMAIN); ?>:
+            			<?php  _e( 'Strongly recommended:', SFSI_PLUS_DOMAIN); ?>
             		</span> 
             		
 					<?php  _e( 'Email is the most effective tool to build up a followership.', SFSI_PLUS_DOMAIN); ?>
