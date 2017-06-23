@@ -722,7 +722,7 @@ function sfsi_plus_rating_msg()
 	if($diff_inrval >= 30 && get_option('sfsi_plus_RatingDiv')=="no")
 	{
 	 echo '
-	 <div class="sfwp_fivestar updated">
+	 <div class="sfwp_fivestar updated notice notice-success is-dismissible">
     	<p>'.__('We noticed you\'ve been using the Ultimate Social Media PLUS Plugin for more than 30 days. If you\'re happy with it, could you please do us a BIG favor and give it a 5-star rating on Wordpress?', SFSI_PLUS_DOMAIN).'</p>
         <ul class="sfwp_fivestar_ul">
         	<li><a href="https://wordpress.org/support/plugin/ultimate-social-media-plus/reviews/" target="_new" title="Ok, you deserved it">'.__('Ok, you deserved it', SFSI_PLUS_DOMAIN).'</a></li>

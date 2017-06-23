@@ -3188,7 +3188,7 @@ label.sfsiplus_toglpstpgsbttl { float: left; margin-top: 5px !important}
 }
 .sfsibeforpstwpr iframe{max-width: none; vertical-align: middle;}
 .sfsiaftrpstwpr iframe{max-width: none; vertical-align: middle;}
-.sfwp_fivestar_ul li { display: inline-block; padding-right: 20px; }
+.sfwp_fivestar_ul li { display: block; padding-right: 20px; }
 .fb_iframe_widget iframe
 {
 	max-width: none;
