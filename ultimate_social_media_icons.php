@@ -7,7 +7,7 @@ Author: UltimatelySocial
 Text Domain: ultimate-social-media-plus
 Domain Path: /languages
 Author URI: http://ultimatelysocial.com
-Version: 2.6.5
+Version: 2.6.6
 License: GPLv2
 */
 
