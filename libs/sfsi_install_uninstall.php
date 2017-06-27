@@ -545,8 +545,8 @@ function sfsi_plus_Unistall_plugin()
 	delete_option("sfsi_plus_show_notification");
 	delete_option('sfsi_plus_serverphpVersionnotification');
 
-	delete_option('widget_sfsi_plus_widget');
-	delete_option('widget_sfsiPlus_subscriber_widget');	
+    delete_option('widget_sfsi-plus-widget');
+	delete_option('widget_sfsiplus_subscriber_widget');	
 }
 /* end function */
 /* check CUrl */
