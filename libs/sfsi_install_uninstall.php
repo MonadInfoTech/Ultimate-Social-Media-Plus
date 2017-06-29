@@ -12,7 +12,7 @@ function sfsi_plus_update_plugin()
 	}
 	
 	//Install version
-	update_option("sfsi_plus_pluginVersion", "2.66");
+	update_option("sfsi_plus_pluginVersion", "2.67");
 	
 	if(!get_option('sfsi_plus_serverphpVersionnotification'))
 	{
@@ -546,7 +546,12 @@ function sfsi_plus_Unistall_plugin()
 	delete_option('sfsi_plus_serverphpVersionnotification');
 
     delete_option('widget_sfsi-plus-widget');
-	delete_option('widget_sfsiplus_subscriber_widget');	
+	delete_option('widget_sfsiplus_subscriber_widget');
+
+	delete_option('fs_active_plugins');
+	delete_option('fs_accounts');
+	delete_option('fs_api_cache');
+	delete_option('fs_debug_mode'); 	
 }
 /* end function */
 /* check CUrl */
