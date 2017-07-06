@@ -356,7 +356,7 @@
             <?php if($option2['sfsi_plus_premium_twitter_box'] =='yes') { ?>
             <div class= "sfsi_plus_new_prmium_follw">
 				<p>
-					<b><?php  _e( 'New: ', SFSI_PLUS_DOMAIN ); ?></b><?php  _e( ' In our Premium Plugin you can also insert tags to automatically pull the title of the story, as well as the link to the story. ', SFSI_PLUS_DOMAIN ); ?><a href="https://www.ultimatelysocial.com/usm-premium/?utm_source=usmplus_settings_page&utm_campaign=better_tweets&utm_medium=banner" target="_blank"><?php  _e( 'See all features', SFSI_PLUS_DOMAIN ); ?></a>
+					<b><?php  _e( 'New: ', SFSI_PLUS_DOMAIN ); ?></b><?php  _e(  "Tweeting becomes really fun in the Premium Plugin – you can insert tags to automatically pull the title of the story & link to the story, attach pictures & snippets to the Tweets ( 'Twitter cards') and user Url-shorteners, all leading to more Tweets and traffic for your site!. ", SFSI_PLUS_DOMAIN ); ?><a href="https://www.ultimatelysocial.com/usm-premium/?utm_source=usmplus_settings_page&utm_campaign=better_tweets&utm_medium=banner" target="_blank"><?php  _e( 'See all features', SFSI_PLUS_DOMAIN ); ?></a>
 			    </p>
 			</div>
             <?php } ?>
