@@ -372,6 +372,11 @@ Plugin adalah gratis dan sangat mudah digunakan.
 
 == Changelog ==
 
+= 2.6.7 =
+* Freemus code removal
+* Hide no header error message for customizer theme
+* Text changes for premium plugin features in question 2
+
 = 2.3.4 =
 * Plugin updated for translations
 * E-NOTICE error fixed
@@ -506,5 +511,5 @@ Plugin adalah gratis dan sangat mudah digunakan.
 
 == Upgrade Notice ==
 
-= 2.3.4 =
-* Upgrade if you faced issues 
+= 2.6.7 =
+* Please Upgrade  
