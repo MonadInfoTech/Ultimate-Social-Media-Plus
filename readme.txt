@@ -512,4 +512,4 @@ Plugin adalah gratis dan sangat mudah digunakan.
 == Upgrade Notice ==
 
 = 2.6.7 =
-* Please Upgrade  
+* Please Upgrade 
