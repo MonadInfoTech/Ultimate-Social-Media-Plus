@@ -1134,7 +1134,7 @@ ul#adminmenu li.toplevel_page_sfsi-plus-options a.current, ul#adminmenu li.tople
 .sfsi_plus_need_another_one_link p a{color:#12a252 !important; text-decoration: none;}
 .sfsi_plus_need_another_one_link{padding:23px 0 20px 5px; }
 .sf_si_plus_all_features_premium a, .sfsi_plus_need_another_tell_us a{color:#12a252 !important;font-size:18.9px;font-weight:bold;border-bottom: 1px solid #12a252;text-decoration: none;}
-.sfsi_plus_need_another_tell_us a{margin-left:5px;}
+.sfsi_plus_need_another_tell_us a{margin-left:5px;padding-top: 25px;}
 .sfsi_plus_new_prmium_follw {margin-top:20px;    display: inline-block;padding:15px 75px 20px 24px;}
 .sfsi_plus_new_prmium_follw p{margin: 0 !important;}
 .sfsi_plus_new_prmium_follw p{color: #1a1d20 !important;font-size: 20px !important;font-family: helveticaregular !important;}
