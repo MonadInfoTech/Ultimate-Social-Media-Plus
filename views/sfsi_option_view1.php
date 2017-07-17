@@ -503,11 +503,12 @@
                     </div>
                 </div>
                 <div class="sfsi_plus_need_another_one_link">
-                    <p><?php  _e('Need another one?', SFSI_PLUS_DOMAIN); ?><a href="mailto:biz@ultimatelysocial.com" target="_blank"> <?php  _e( 'Tell us', SFSI_PLUS_DOMAIN); ?></a></p>
+<!--                     <p><?php  _e('Need another one?', SFSI_PLUS_DOMAIN); ?><a href="mailto:biz@ultimatelysocial.com" target="_blank"> <?php  _e( 'Tell us', SFSI_PLUS_DOMAIN); ?></a></p> -->
                 </div>
                 <div class="sfsi_plus_need_another_tell_us">
-                    <a href="https://www.ultimatelysocial.com/usm-premium/?utm_source=usmplus_settings_page&utm_campaign=more_platforms&utm_medium=banner" target="_blank"><?php  _e( 'See all features Premium Plugin', SFSI_PLUS_DOMAIN); ?></a>
-                </div>
+                    <a href="https://www.ultimatelysocial.com/all-platforms/" target="_blank"><?php  _e( 'See all features Premium Plugin', SFSI_PLUS_DOMAIN); ?></a>               
+<!--                     <a href="https://www.ultimatelysocial.com/usm-premium/?utm_source=usmplus_settings_page&utm_campaign=more_platforms&utm_medium=banner" target="_blank"><?php  _e( 'See all features Premium Plugin', SFSI_PLUS_DOMAIN); ?></a>
+ -->                </div>
             </div>
         </li>
     </ul>
