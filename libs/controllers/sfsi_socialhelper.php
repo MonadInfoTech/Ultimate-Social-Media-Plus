@@ -1,5 +1,4 @@
 <?php 
-
 /* social helper class include all function which are used to intract with  */
 class sfsi_plus_SocialHelper
 {
