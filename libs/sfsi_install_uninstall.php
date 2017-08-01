@@ -114,6 +114,13 @@ function sfsi_plus_update_plugin()
 		$option5['sfsi_plus_twitter_icons_language'] = 'Visit_us_en_US';
 		$option5['sfsi_plus_google_icons_language'] = 'Visit_us_en_US';
 		$option5['sfsi_plus_icons_language'] = 'en_US';
+
+		if(!isset($option5['sfsi_plus_premium_size_box'])){
+			$option5['sfsi_plus_premium_size_box'] = 'no';			
+		}
+		if(!isset($option5['sfsi_plus_custom_social_hide'])){
+			$option5['sfsi_plus_custom_social_hide'] = 'no';			
+		}		
 		update_option('sfsi_plus_section5_options', serialize($option5));
 	}
 	
@@ -154,13 +161,6 @@ function sfsi_plus_update_plugin()
 	{
 		$option4['sfsi_plus_premium_count_box'] = 'no';
 		update_option('sfsi_plus_section4_options', serialize($option4));
-	}
-	/* section5 */
-	$option5 = unserialize(get_option('sfsi_plus_section5_options',false));
-	if(isset($option5) && !empty($option5) && !isset($option5['sfsi_plus_premium_size_box']))
-	{
-		$option5['sfsi_plus_premium_size_box'] = 'no';
-		update_option('sfsi_plus_section5_options', serialize($option5));
 	}
 	/* section7 */
 	$option7 = unserialize(get_option('sfsi_plus_section7_options',false));
@@ -374,6 +374,7 @@ function sfsi_plus_activate_plugin()
         'sfsi_plus_share_MouseOverText'=>'Share',
         'sfsi_plus_custom_MouseOverTexts'=>'',
          'sfsi_plus_premium_size_box'=>'yes',
+         'sfsi_plus_custom_social_hide'=>'no'
         );
 	add_option('sfsi_plus_section5_options',  serialize($options5));
     

@@ -442,6 +442,9 @@ function sfsi_plus_options_updater5()
 	$sfsi_plus_google_icons_language     = 	isset($_POST["sfsi_plus_google_icons_language"])
 												? $_POST["sfsi_plus_google_icons_language"]
 												: 'Visit_us_en_US';
+
+	$sfsi_plus_custom_social_hide        = isset($_POST["sfsi_plus_custom_social_hide"]) ? $_POST["sfsi_plus_custom_social_hide"] : 'no'; 
+	
 	/* size and spacing of icons */
     $up_option5=array(
         'sfsi_plus_icons_size'				=> intval($sfsi_plus_icons_size),
@@ -483,7 +486,8 @@ function sfsi_plus_options_updater5()
         'sfsi_plus_instagramIcon_order'		=> intval($sfsi_plus_instagramIcon_order),
 		'sfsi_plus_houzzIcon_order'			=> intval($sfsi_plus_houzzIcon_order),
         'sfsi_plus_linkedinIcon_order'		=> intval($sfsi_plus_linkedinIcon_order),
-        'sfsi_plus_custom_MouseOverTexts'	=> $sfsi_plus_custom_MouseOverTexts
+        'sfsi_plus_custom_MouseOverTexts'	=> $sfsi_plus_custom_MouseOverTexts,
+        'sfsi_plus_custom_social_hide'		=> $sfsi_plus_custom_social_hide
     );
     
     update_option('sfsi_plus_section5_options',serialize($up_option5));

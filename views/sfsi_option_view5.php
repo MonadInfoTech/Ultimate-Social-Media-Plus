@@ -342,6 +342,7 @@
 	<h4>
 		<?php  _e( 'Order of your icons', SFSI_PLUS_DOMAIN ); ?>
     </h4>
+
     <!-- icon drag drop  section start here -->	
     <ul class="plus_share_icon_order" >
      <?php 
@@ -505,6 +506,53 @@
 		</div>
 		<?php } ?>
     </div>
+
+<!--*******************************************************  Sharing texts & pictures section STARTS *********************************************************************-->
+
+<div class="row sfsi_custom_social_data_setting" id="custom_social_data_setting">
+
+		<h4><?php _e("Sharing texts & pictures?",SFSI_PLUS_DOMAIN); ?></h4>
+		<p><?php _e("On the pages where you edit your posts / pages you’ll see a (new) section where you can define which pictures & text should be shared. This extra section is displayed on the following:",SFSI_PLUS_DOMAIN); ?></p>		
+
+			<?php 
+				$checkedS   = (isset($option5['sfsi_plus_custom_social_hide']) && $option5['sfsi_plus_custom_social_hide']=="yes") ? 'checked="checked"': '';	
+				$checked    = (isset($option5['sfsi_plus_custom_social_hide']) && $option5['sfsi_plus_custom_social_hide']=="yes") ? '': 'checked="checked"';
+				$checkedVal = (isset($option5['sfsi_plus_custom_social_hide'])) ? $option5['sfsi_plus_custom_social_hide']: 'no';				
+			?>
+		<div class="social_data_post_types">
+                <ul class="socialPostTypesUl">
+                	<li>
+						<div class="radio_section tb_4_ck">
+							<input type="checkbox" <?php echo $checked; ?> value="page" class="styled"  />
+							<label class="cstmdsplsub"><?php _e("Page",SFSI_PLUS_DOMAIN); ?></label>
+						</div>
+					</li>
+                	<li>
+						<div class="radio_section tb_4_ck">
+							<input type="checkbox" <?php echo $checked; ?> value="post" class="styled"  />
+							<label class="cstmdsplsub"><?php _e("Post",SFSI_PLUS_DOMAIN); ?></label>
+						</div>
+					</li>						
+                </ul>
+
+                <ul class="sfsi_show_hide_section">
+               		<li>
+						<div class="radio_section tb_4_ck">
+							<input name="sfsi_plus_custom_social_hide" type="checkbox" <?php echo $checkedS; ?> value="<?php echo $checkedVal; ?>" class="styled"  />
+							<label class="cstmdsplsub"><?php _e("Hide section for all",SFSI_PLUS_DOMAIN); ?></label>
+						</div>
+					</li>
+                </ul>
+ 		</div>
+
+		<div class="sfsi_plus_new_prmium_follw sfsi_social_sharing" style="margin-bottom: 15px;">
+			<p><?php _e("Note: This feature is currently only available in the Premium Plugin.",SFSI_PLUS_DOMAIN); ?> <a href="https://www.ultimatelysocial.com/usm-premium/?utm_source=usmplus_settings_page&utm_campaign=define_pic_and_text&utm_medium=banner" target="_blank"><?php _e("See all features",SFSI_PLUS_DOMAIN); ?></a>
+			</p>
+		</div> 		
+</div>
+
+<!--*******************************************************  Sharing texts & pictures section CLOSES *********************************************************************-->
+
 	<!-- icon's select language optins start here -->
     <div class="row">
 		<h4>

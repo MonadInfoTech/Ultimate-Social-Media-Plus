@@ -531,6 +531,9 @@ function sfsi_plus_update_step5()
     SFSI("input[name='sfsi_plus_custom_MouseOverTexts[]']").each(function() {
         O[SFSI(this).attr("file-id")] = this.value;
     });
+
+    var sfsi_plus_custom_social_hide = SFSI("input[name='sfsi_plus_custom_social_hide']").val();
+
     var T = {
         action:"plus_updateSrcn5",
         sfsi_plus_icons_size:i,
@@ -572,6 +575,7 @@ function sfsi_plus_update_step5()
 		sfsi_plus_houzzIcon_order:houzzOrder,
         sfsi_plus_linkedinIcon_order:F,
         sfsi_plus_custom_orders:h,
+        sfsi_plus_custom_social_hide:sfsi_plus_custom_social_hide,
 		nonce:nonce
     };
     SFSI.ajax({
@@ -1664,6 +1668,25 @@ SFSI(document).ready(function(s) {
         },
         revert:!0
     }),
+
+//*------------------------------- Sharing text & pcitures checkbox for showing section in Page, Post STARTS -------------------------------------//
+
+    SFSI(document).on("click", '.checkbox', function () {
+
+	var s = SFSI(this).parent().find("input:checkbox:first");
+
+	if(s.attr('name')=="sfsi_plus_custom_social_hide"){
+    	var backgroundPos = jQuery(this).css('background-position').split(" ");
+
+    	var xPos = backgroundPos[0],
+        	yPos = backgroundPos[1];
+        	var val = (yPos=="0px") ? "no":"yes";
+        	SFSI('input[name="sfsi_plus_custom_social_hide"]').val(val);        
+	}
+    });
+
+//*------------------------------- Sharing text & pcitures checkbox for showing section in Page, Post CLOSES -------------------------------------//
+
 	/*SFSI(".radio").live("click", function() {*/
 	SFSI(document).on("click", '.radio', function () {
         var s = SFSI(this).parent().find("input:radio:first");
