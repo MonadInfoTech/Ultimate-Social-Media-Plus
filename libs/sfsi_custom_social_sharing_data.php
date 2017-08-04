@@ -56,7 +56,7 @@ function sfsi_social_media_metabox( $post ) { ?>
         });
     </script>
 
-    <div class="sfsi_new_prmium_follw"><p><b><?php _e("New:",SFSI_PLUS_DOMAIN); ?></b> <?php _e("The Premium Plugin (Ultimate Social Media) allows you to define which picture, snippet text or tweet gets shared.",SFSI_PLUS_DOMAIN); ?> <a href="https://www.ultimatelysocial.com/usm-premium/?utm_source=usmplus_settings_page&utm_campaign=define_pic_and_text&utm_medium=banner"target="_blank"><?php _e("See all features",SFSI_PLUS_DOMAIN); ?></a></p><a class="sfsi_hidenotice" href="javascript:void(0)"><?php _e("Hide this notice",SFSI_PLUS_DOMAIN); ?></a></div>
+    <div class="sfsi_new_prmium_follw"><p><b><?php _e("New:",SFSI_PLUS_DOMAIN); ?></b> <?php _e("The Premium Plugin (Ultimate Social Media) allows you to define which picture, snippet text or tweet gets shared.",SFSI_PLUS_DOMAIN); ?> <a href="https://www.ultimatelysocial.com/usm-premium/?utm_source=usmplus_post_or_page&utm_campaign=define_pic_and_text&utm_medium=banner" target="_blank"><?php _e("See all features",SFSI_PLUS_DOMAIN); ?></a></p><a class="sfsi_hidenotice" href="javascript:void(0)"><?php _e("Hide this notice",SFSI_PLUS_DOMAIN); ?></a></div>
 
 <?php }
 
