@@ -4,7 +4,7 @@ Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=seb.r
 Tags: social media, facebook, instagram, youtube, twitter, share, social share, buttons, counter, pop-up, subscription, icons
 Requires at least: 3.0
 Tested up to: 4.7.5
-Stable tag: 2.6.9
+Stable tag: 2.7.0
 License: GPLv2 
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -517,5 +517,5 @@ Plugin adalah gratis dan sangat mudah digunakan.
 
 == Upgrade Notice ==
 
-= 2.6.9 =
+= 2.7.0 =
 * Please Upgrade 
