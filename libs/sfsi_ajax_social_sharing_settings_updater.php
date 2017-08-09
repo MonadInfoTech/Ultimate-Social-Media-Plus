@@ -1,7 +1,7 @@
 <?php
-add_action( 'wp_ajax_update_sharing_settings', 'update_sharing_settings' );
+add_action( 'wp_ajax_plus_update_sharing_settings', 'sfsi_plus_update_sharing_settings' );
 
-function update_sharing_settings() {
+function sfsi_plus_update_sharing_settings() {
 	$option5  = unserialize(get_option('sfsi_plus_section5_options',false));
 	$option5['sfsi_plus_custom_social_hide'] = $_POST['sfsi_plus_custom_social_hide'];
 	update_option('sfsi_plus_section5_options',serialize($option5));

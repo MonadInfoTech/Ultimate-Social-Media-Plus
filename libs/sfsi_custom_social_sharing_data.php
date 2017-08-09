@@ -1,6 +1,6 @@
 <?php
 
-function sfsi_social_media_metabox( $post ) { ?>
+function sfsi_plus_social_media_metabox( $post ) { ?>
     <style>
     .sfsi_new_prmium_follw p {
         width: 90%;
@@ -28,7 +28,7 @@ function sfsi_social_media_metabox( $post ) { ?>
         font-weight: bold;
         color: #1a1d20 !important;
     }
-    .sfsi_hidenotice{
+    .sfsi_plus_hidenotice{
         cursor: pointer;
         float: right;
         position: absolute;
@@ -41,36 +41,36 @@ function sfsi_social_media_metabox( $post ) { ?>
 
     <script type="text/javascript">
         jQuery(document).ready(function(){
-            jQuery('.sfsi_hidenotice').on('click',function(){
+            jQuery('.sfsi_plus_hidenotice').on('click',function(){
                 var data = {
-                    action:"update_sharing_settings",
+                    action:"plus_update_sharing_settings",
                     sfsi_plus_custom_social_hide:"yes"
                 };
                 jQuery.post(ajaxurl, data, function(response) {
                     if(response){
                         alert('Settings updated');
-                        jQuery('#sfsi-social-media').remove();                        
+                        jQuery('#sfsi-plus-social-media').remove();                        
                     }
                 });                                
             });
         });
     </script>
 
-    <div class="sfsi_new_prmium_follw"><p><b><?php _e("New:",SFSI_PLUS_DOMAIN); ?></b> <?php _e("The Premium Plugin (Ultimate Social Media) allows you to define which picture, snippet text or tweet gets shared.",SFSI_PLUS_DOMAIN); ?> <a href="https://www.ultimatelysocial.com/usm-premium/?utm_source=usmplus_post_or_page&utm_campaign=define_pic_and_text&utm_medium=banner" target="_blank"><?php _e("See all features",SFSI_PLUS_DOMAIN); ?></a></p><a class="sfsi_hidenotice" href="javascript:void(0)"><?php _e("Hide this notice",SFSI_PLUS_DOMAIN); ?></a></div>
+    <div class="sfsi_new_prmium_follw"><p><b><?php _e("New:",SFSI_PLUS_DOMAIN); ?></b> <?php _e("The Premium Plugin (Ultimate Social Media) allows you to define which picture, snippet text or tweet gets shared.",SFSI_PLUS_DOMAIN); ?> <a href="https://www.ultimatelysocial.com/usm-premium/?utm_source=usmplus_post_or_page&utm_campaign=define_pic_and_text&utm_medium=banner" target="_blank"><?php _e("See all features",SFSI_PLUS_DOMAIN); ?></a></p><a class="sfsi_plus_hidenotice" href="javascript:void(0)"><?php _e("Hide this notice",SFSI_PLUS_DOMAIN); ?></a></div>
 
 <?php }
 
  
-function sfsi_icons_add_meta_boxes() {
+function sfsi_plus_icons_add_meta_boxes() {
     $screen            = get_current_screen(); 
     $option5           = unserialize(get_option('sfsi_plus_section5_options',false));
     $hideSectionVal    = (isset($option5['sfsi_plus_custom_social_hide'])) ? $option5['sfsi_plus_custom_social_hide']: 'no'; 
 
     if($hideSectionVal=='no'){
         if(isset($screen->post_type) && ('page'==$screen->post_type || 'post'==$screen->post_type)){
-            add_meta_box( 'sfsi-social-media', 'Ultimate Social Media – Sharing text & pictures', 'sfsi_social_media_metabox', $screen->post_type, 'normal', 'low' );
+            add_meta_box( 'sfsi-plus-social-media', 'Ultimate Social Media – Sharing text & pictures', 'sfsi_plus_social_media_metabox', $screen->post_type, 'normal', 'low' );
         }        
     }
 }
-add_action( 'add_meta_boxes', 'sfsi_icons_add_meta_boxes' );
+add_action( 'add_meta_boxes', 'sfsi_plus_icons_add_meta_boxes' );
 ?>
