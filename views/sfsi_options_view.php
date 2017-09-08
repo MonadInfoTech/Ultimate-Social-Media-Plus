@@ -188,11 +188,13 @@
  <!-- all pops of plugin under sfsi_pop_content.php file --> 
  <?php include(SFSI_PLUS_DOCROOT.'/views/sfsi_pop_content.php'); ?>
 </div>
+
 <!-- START Admin view for plugin-->
-<script type="text/javascript">
+<script type="text/javascript">    
     var e = {
-        action:"sfsiplusbannerOption"
-    };
+        action:"sfsiplusbannerOption"             
+    };  
+
     jQuery.ajax({
         url: "<?php echo admin_url( 'admin-ajax.php' ); ?>",
         type:"post",
@@ -200,5 +202,6 @@
         success:function(e) {
             jQuery(".sfsi_plus_notificationBannner").html(e);
         }
-    });
+    });            
+              
 </script>

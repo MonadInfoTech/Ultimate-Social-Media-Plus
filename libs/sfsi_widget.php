@@ -421,7 +421,9 @@ function sfsi_plus_prepairIcons($icon_name,$is_front=0, $onpost="no", $fromPost 
     $twt_margin = "";
     $icons_space = $sfsi_plus_section5_options['sfsi_plus_icons_spacing'];
     $padding_top = '';
+
     $scheme = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off' || $_SERVER['SERVER_PORT'] == 443) ? "https" : "http";
+
 	//$current_url = $scheme.'://'.$_SERVER['SERVER_NAME'].$_SERVER['REQUEST_URI'];
 	if($fromPost == 'yes' && !empty($post))
 	{
@@ -429,7 +431,8 @@ function sfsi_plus_prepairIcons($icon_name,$is_front=0, $onpost="no", $fromPost 
 	}
 	else
 	{
-		$current_url = $scheme.'://'.$_SERVER['SERVER_NAME'].$_SERVER['REQUEST_URI'];
+		//$current_url = $scheme.'://'.$_SERVER['SERVER_NAME'].$_SERVER['REQUEST_URI'];
+		$current_url = sfsi_plus_get_current_url();
 	}
 	$url = "#";
     $cmcls='';

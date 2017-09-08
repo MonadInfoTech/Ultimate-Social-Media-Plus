@@ -7,7 +7,7 @@ Author: UltimatelySocial
 Text Domain: ultimate-social-media-plus
 Domain Path: /languages
 Author URI: http://ultimatelysocial.com
-Version: 2.7.0
+Version: 2.7.2
 License: GPLv2
 */
 
@@ -52,8 +52,26 @@ define('SFSI_PLUS_PLUGURL',    plugin_dir_url(__FILE__));
 define('SFSI_PLUS_WEBROOT',    str_replace(getcwd(), home_url(), dirname(__FILE__)));
 define('SFSI_PLUS_DOMAIN',	   'ultimate-social-media-plus');
 
+function sfsi_plus_get_current_url()
+{
+	global $post, $wp;
+
+	if (!empty($wp)) {
+		return home_url(add_query_arg(array(),$wp->request));
+	}
+	elseif(!empty($post))
+	{
+		return get_permalink($post->ID);
+	}
+	else
+	{
+		return site_url();
+	}
+}
+
 /* load all files  */
 include(SFSI_PLUS_DOCROOT.'/libs/controllers/sfsi_socialhelper.php');
+include(SFSI_PLUS_DOCROOT.'/libs/controllers/sfsi_class_theme_check.php');
 include(SFSI_PLUS_DOCROOT.'/libs/sfsi_install_uninstall.php');
 include(SFSI_PLUS_DOCROOT.'/libs/controllers/sfsi_buttons_controller.php');
 include(SFSI_PLUS_DOCROOT.'/libs/controllers/sfsi_iconsUpload_contoller.php');
@@ -72,7 +90,7 @@ register_deactivation_hook(__FILE__, 'sfsi_plus_deactivate_plugin');
 //register_uninstall_hook(__FILE__, 'sfsi_plus_Unistall_plugin');
 
 /*Plugin version setup*/
-if(!get_option('sfsi_plus_pluginVersion') || get_option('sfsi_plus_pluginVersion') < 2.70)
+if(!get_option('sfsi_plus_pluginVersion') || get_option('sfsi_plus_pluginVersion') < 2.72)
 {
 	add_action("init", "sfsi_plus_update_plugin");
 }

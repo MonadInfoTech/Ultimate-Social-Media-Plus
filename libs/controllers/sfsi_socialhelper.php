@@ -52,8 +52,12 @@ class sfsi_plus_SocialHelper
 	function sfsi_getlinkedin_follower($sfsi_plus_ln_company,$APIsettings)
 	{      
 	   require_once(SFSI_PLUS_DOCROOT.'/helpers/linkedin-api/linkedin-api.php');
-	   $scheme = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off' || $_SERVER['SERVER_PORT'] == 443) ? "https" : "http";
-	   $url = $scheme.'://'.$_SERVER['SERVER_NAME'].$_SERVER['REQUEST_URI'];
+	   
+	   // $scheme = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off' || $_SERVER['SERVER_PORT'] == 443) ? "https" : "http";
+	   // $url = $scheme.'://'.$_SERVER['SERVER_NAME'].$_SERVER['REQUEST_URI'];
+
+	   $url = sfsi_plus_get_current_url();
+
 	   $linkedin = new Plus_LinkedIn(
 			$APIsettings['sfsi_plus_ln_api_key'],
 			$APIsettings['sfsi_plus_ln_secret_key'],
@@ -179,8 +183,11 @@ class sfsi_plus_SocialHelper
 	/* get addthis counts  */
 	function sfsi_get_atthis()
 	{
-		$scheme = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off' || $_SERVER['SERVER_PORT'] == 443) ? "https" :"http";
-		$url=$scheme.'://'.$_SERVER['SERVER_NAME'].$_SERVER['REQUEST_URI'];
+		// $scheme = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off' || $_SERVER['SERVER_PORT'] == 443) ? "https" :"http";
+		// $url=$scheme.'://'.$_SERVER['SERVER_NAME'].$_SERVER['REQUEST_URI'];
+
+		$url = sfsi_plus_get_current_url();
+
 		$json_string = $this->file_get_contents_curl('http://api-public.addthis.com/url/shares.json?url='.$url);
 		$json = json_decode($json_string, true);
 		return isset($json['shares'])? $this->format_num((int) $json['shares']):0;    
