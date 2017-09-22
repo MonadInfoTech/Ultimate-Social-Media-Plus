@@ -639,41 +639,52 @@
     </div>
     <!-- HOUZZ INSTAGRAM ICON -->
     
-    <!-- Custom icon section start here -->
-    <div class="plus_custom-links sfsiplus_custom_section">
-	<?php 
-	  	$costom_links=  unserialize($option2['sfsi_plus_CustomIcon_links']);
-	  	$count = 1;
-		for($i = $first_key; $i <= $endkey; $i++) :
-		if(!empty( $icons[$i])) :
-			?>
-           	<div class="row  sfsiICON_<?php echo $i; ?> cm_lnk">
-               	<h2 class="custom">
-               		<span class="customstep2-img">
-                    	<img src="<?php echo (!empty($icons[$i])) ?  esc_url($icons[$i]) : SFSI_PLUS_PLUGURL.'images/custom.png';?>" id="CImg_<?php echo $new_element; ?>" style="border-radius:48%"  />
-                    </span>
-                    <span class="sfsiCtxt">
-               			<?php  _e( 'Custom', SFSI_PLUS_DOMAIN ); ?>
-			   			<?php echo $count; ?>
-                    </span>
-                </h2>
-               	<div class="inr_cont ">
-                   	<p>
-                	   <?php  _e( 'Where do you want this icon to link to?', SFSI_PLUS_DOMAIN ); ?>
-                   	</p> 
-                   	<p class="radio_section fb_url sfsiplus_custom_section cus_link " >
-                   		<label>
-                   			<?php  _e( 'Link:', SFSI_PLUS_DOMAIN ); ?>
-                   		</label>
-                        <input name="sfsi_plus_CustomIcon_links[]" type="text" value="<?php echo (isset($costom_links[$i]) && $costom_links[$i]!='') ?  esc_url($costom_links[$i]) : '' ;?>" placeholder="http://" class="add" file-id="<?php echo $i; ?>" />
-                    </p>
-        		</div>
-           	</div>
-	 		<?php
-			$count++;
-		endif; endfor;
-	?>
-    </div> 
+	    <!-- Custom icon section start here -->
+	    <div class="plus_custom-links sfsiplus_custom_section">
+		<?php 
+		  	$costom_links = unserialize($option2['sfsi_plus_CustomIcon_links']);
+
+		  	$bannerDisplay= "display:none;";
+		  	$count = 1;
+			for($i = $first_key; $i <= $endkey; $i++) :
+			if(!empty( $icons[$i])) :
+				
+				$bannerDisplay = "display:block;";
+				?>
+	           	<div class="row  sfsiICON_<?php echo $i; ?> cm_lnk">
+	               	<h2 class="custom">
+	               		<span class="customstep2-img">
+	                    	<img src="<?php echo (!empty($icons[$i])) ?  esc_url($icons[$i]) : SFSI_PLUS_PLUGURL.'images/custom.png';?>" id="CImg_<?php echo $new_element; ?>" style="border-radius:48%"  />
+	                    </span>
+	                    <span class="sfsiCtxt">
+	               			<?php  _e( 'Custom', SFSI_PLUS_DOMAIN ); ?>
+				   			<?php echo $count; ?>
+	                    </span>
+	                </h2>
+	               	<div class="inr_cont ">
+	                   	<p>
+	                	   <?php  _e( 'Where do you want this icon to link to?', SFSI_PLUS_DOMAIN ); ?>
+	                   	</p> 
+	                   	<p class="radio_section fb_url sfsiplus_custom_section cus_link " >
+	                   		<label>
+	                   			<?php  _e( 'Link:', SFSI_PLUS_DOMAIN ); ?>
+	                   		</label>
+	                        <input name="sfsi_plus_CustomIcon_links[]" type="text" value="<?php echo (isset($costom_links[$i]) && $costom_links[$i]!='') ?  esc_url($costom_links[$i]) : '' ;?>" placeholder="http://" class="add" file-id="<?php echo $i; ?>" />
+	                    </p>
+	        		</div>
+	           	</div>
+		 		<?php
+				$count++;
+			endif; endfor;
+		?>
+	    </div>
+
+    	<div class="banner_custom_icon sfsi_plus_new_prmium_follw" style="<?php echo $bannerDisplay;?>">
+			<p><b><?php  _e( 'New:', SFSI_PLUS_DOMAIN); ?></b>	<?php  _e( ' In the Premium Plugin you can also give custom icons the feature that
+when people click on it, they can call you, or send you an SMS). ', SFSI_PLUS_DOMAIN); ?><a href="https://www.ultimatelysocial.com/usm-premium/?utm_source=usmplus_settings_page&utm_campaign=call_or_sms_feature_custom_icons&utm_medium=banner" target="_blank"><?php  _e( 'See all features.', SFSI_PLUS_DOMAIN); ?> </a>					
+			</p>
+    	</div>
+
     <!-- END Custom icon section here -->
     <!-- SAVE BUTTON SECTION   --> 
     <div class="save_button tab_2_sav">

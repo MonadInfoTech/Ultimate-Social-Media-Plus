@@ -38,6 +38,11 @@ function sfsi_plus_delete_CusIcon(s, i)
                 SFSI("li.plus_custom:last-child").addClass("bdr_btm_non"), SFSI(".plus_custom-links").find("div." + attr).remove(), 
                 SFSI(".plus_custom_m").find("div." + attr).remove(), SFSI(".plus_share_icon_order").children("li." + attr).remove(), 
                 SFSI("ul.plus_sfsi_sample_icons").children("li." + attr).remove();
+
+                if(e.total_up==0){
+                    SFSI(".banner_custom_icon").hide();
+                }
+
                 var n = e.total_up + 1;
                 4 == e.total_up && SFSI(".plus_icn_listing").append('<li id="plus_c' + t + '" class="plus_custom bdr_btm_non"><div class="radio_section tb_4_ck"><span class="checkbox" dynamic_ele="yes" style="background-position: 0px 0px;"></span><input name="plussfsiICON_' + t + '_display"  type="checkbox" value="yes" class="styled" style="display:none;" element-type="sfsiplus-cusotm-icon" isNew="yes" /></div> <span class="plus_custom-img"><img src="' + SFSI("#plugin_url").val() + 'images/custom.png" id="plus_CImg_' + t + '"  /> </span> <span class="custom sfsiplus_custom-txt">Custom' + n + ' </span> <div class="sfsiplus_right_info"> <p><span>'+object_name1.It_depends+':</span> '+object_name1.Upload_a+'</p><div class="inputWrapper"></div></li>');
             } else sfsiplus_showErrorSuc("error", "Unkown error , please try again", 1);
@@ -879,7 +884,9 @@ function sfsiplus_afterIconSuccess(s)
         var o = SFSI("div.plus_custom_m").find("div.mouseover_field").length;
         SFSI("div.plus_custom_m").append(0 == o % 2 ? '<div class="clear"> </div> <div class="mouseover_field sfsiplus_custom_section sfsiICON_' + s.key + '"><label>Custom ' + e + ':</label><input name="sfsi_plus_custom_MouseOverTexts[]" value="" type="text" file-id="' + s.key + '" /></div>' :'<div class="cHover " ><div class="mouseover_field sfsiplus_custom_section sfsiICON_' + s.key + '"><label>Custom ' + e + ':</label><input name="sfsi_plus_custom_MouseOverTexts[]" value="" type="text" file-id="' + s.key + '" /></div>'), 
         SFSI("ul.plus_share_icon_order").append('<li class="sfsiplus_custom_iconOrder sfsiICON_' + s.key + '" data-index="" element-id="' + s.key + '" id=""><a href="#" title="Custom Icon" ><img src="' + s.img_path + '" alt="Linked In" class="sfcm"/></a></li>'), 
-        SFSI("ul.plus_sfsi_sample_icons").append('<li class="sfsiICON_' + s.key + '" element-id="' + s.key + '" ><div><img src="' + s.img_path + '" alt="Linked In" class="sfcm"/><span class="sfsi_Cdisplay">12k</span></div></li>'), 
+        SFSI("ul.plus_sfsi_sample_icons").append('<li class="sfsiICON_' + s.key + '" element-id="' + s.key + '" ><div><img src="' + s.img_path + '" alt="Linked In" class="sfcm"/><span class="sfsi_Cdisplay">12k</span></div></li>'),
+
+        SFSI('.banner_custom_icon').show(); 
         sfsi_plus_update_index(), plus_update_Sec5Iconorder(), sfsi_plus_update_step1(), sfsi_plus_update_step2(), 
         sfsi_plus_update_step5(), SFSI(".upload-overlay").css("pointer-events", "auto"), sfsi_plus_showPreviewCounts(), 
         sfsiplus_afterLoad();

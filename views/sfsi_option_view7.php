@@ -1,4 +1,4 @@
-<?php
+	<?php
 	/* unserialize all saved option for  section 7 options */
     $option7=  unserialize(get_option('sfsi_plus_section7_options',false));
 	
@@ -249,7 +249,7 @@
 		</div>
 		<div class="sfsiplus_row_tab">
 			<label>
-            	<?php  _e( 'Border Thinckness:', SFSI_PLUS_DOMAIN ); ?>
+            	<?php  _e( 'Border Thickness:', SFSI_PLUS_DOMAIN ); ?>
 			</label>
 			<div class="field">
             	<input name="sfsi_plus_popup_border_thickness" type="text" value="<?php echo ($option7['sfsi_plus_popup_border_thickness']!='') ?  $option7['sfsi_plus_popup_border_thickness'] : '' ;?>" class="small" />
@@ -368,13 +368,28 @@
         </label>
     </div> 
      <?php if($option7['sfsi_plus_premium_popup_box'] =='yes'){ ?> 
-    <div class="sfsi_plus_prem_show">
-        <p class=sfsi_plus_prem_plu_desc>
-			<b><?php  _e( 'New: ', SFSI_PLUS_DOMAIN ); ?></b>
-            <?php  _e( 'The Premium Plugin also allows you to show the pop-up when a user tries to leave your page . Also, you can limit how often the pop-up is shown to the same user (e.g. only once per day) ', SFSI_PLUS_DOMAIN ); ?>
-           <a href="https://www.ultimatelysocial.com/usm-premium/?utm_source=usmplus_settings_page&utm_campaign=more_popup_options&utm_medium=banner" target="_blank"> <?php  _e( 'Check it out', SFSI_PLUS_DOMAIN ); ?></a>
-		</p>
-    </div>  
+   
+<!-- 	    <div class="sfsi_plus_prem_show">
+	        <p class=sfsi_plus_prem_plu_desc>
+				<b><?php  _e( 'New: ', SFSI_PLUS_DOMAIN ); ?></b>
+	            <?php  _e( 'The Premium Plugin also allows you to show the pop-up when a user tries to leave your page . Also, you can limit how often the pop-up is shown to the same user (e.g. only once per day) ', SFSI_PLUS_DOMAIN ); ?>
+	           <a href="https://www.ultimatelysocial.com/usm-premium/?utm_source=usmplus_settings_page&utm_campaign=more_popup_options&utm_medium=banner" target="_blank"> <?php  _e( 'Check it out', SFSI_PLUS_DOMAIN ); ?></a>
+			</p>
+	    </div>  -->
+
+		<div class ="sfsi_plus_new_prmium_follw">
+
+			<p>
+				<b><?php  _e( 'New: ', SFSI_PLUS_DOMAIN ); ?></b>
+				<?php  _e( 'The Premium Plugin also allows you to show the pop-up when a user tries to leave your page . Also, you can limit how often the pop-up is shown to the same user (e.g. only once per day) ', SFSI_PLUS_DOMAIN ); ?>
+				<br>- &nbsp;&nbsp;<?php  _e( 'Show it when users try to leave your page', SFSI_PLUS_DOMAIN ); ?>
+				<br>- &nbsp;&nbsp;<?php  _e( 'Limit how often the pop-up is shown to the same user (e.g. only once per day)', SFSI_PLUS_DOMAIN ); ?>
+				<br>- &nbsp;&nbsp;<?php  _e( 'Select to show the subscription form in the pop-up (which you designed in question 8)', SFSI_PLUS_DOMAIN ); ?>
+				<br>
+				<a href="https://www.ultimatelysocial.com/usm-premium/?utm_source=usmplus_settings_page&utm_campaign=more_popup_options&utm_medium=banner" target="_blank"><?php  _e( 'See all features', SFSI_PLUS_DOMAIN ); ?></a>
+			</p>	        	
+		</div>
+
     <?php } ?>      
 </div>
  <!-- SAVE BUTTON SECTION   --> 

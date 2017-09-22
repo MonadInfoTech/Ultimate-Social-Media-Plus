@@ -152,18 +152,22 @@
 	 	</div>
         <p class="red_txt errorMsg" style="display:none"> </p>
         <p class="green_txt sucMsg" style="display:none"> </p>
-	 	<p style="margin-top: 30px;">
+
+        <?php include(SFSI_PLUS_DOCROOT.'/views/sfsi_section_for_premium.php'); ?>
+
+	 	<p style="margin-top: 30px;clear: both;">
         	<?php  _e('Like this plugin? Please do us a BIG favor and give us a 5 star rating here.', SFSI_PLUS_DOMAIN ); ?>
             <a href=" https://wordpress.org/support/plugin/ultimate-social-media-plus/reviews?rate=5#new-post" target="_new">
             	<?php  _e( 'here', SFSI_PLUS_DOMAIN ); ?>
             </a>
          </p>
-         <p class="bldtxtmsg">
+         
+         <!--<p class="bldtxtmsg">
          	<?php  _e( 'Need top-notch Wordpress development work at a competitive price?', SFSI_PLUS_DOMAIN ); ?>
          	<a href="https://www.ultimatelysocial.com/usm-premium/?utm_source=usmplus_settings_page&utm_campaign=footer_credit&utm_medium=banner">
         		<?php _e('Visit us on ultimatelysocial.com',SFSI_PLUS_DOMAIN); ?>
          	</a>
-         </p>
+         </p>-->
 		 <?php 
 			 /*$tra_lan = get_bloginfo( 'language' );
 			 if($tra_lan == "en-US" )

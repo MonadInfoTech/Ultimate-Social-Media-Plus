@@ -32,7 +32,7 @@
 	} ?><?php if ( ! empty( $VARS['plugin'] ) ) {
 		echo ' fs-has-title';
 	} ?>"><?php if ( ! empty( $VARS['plugin'] ) ) : ?>
-		<label class="fs-plugin-title"><?php echo $VARS['plugin'] ?></label>
+		<!--<label class="fs-plugin-title"><?php echo $VARS['plugin'] ?></label>-->
 	<?php endif ?>
 	<?php if ( ! empty( $VARS['sticky'] ) ) : ?>
 		<div class="fs-close"><i class="dashicons dashicons-no"
