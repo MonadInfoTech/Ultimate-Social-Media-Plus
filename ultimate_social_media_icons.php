@@ -659,6 +659,60 @@ function sfsi_plus_admin_notice()
 		</div> 
 		<?php
 	} 
+
+
+	if(is_ssl()){
+
+		// Check if banner is displayed by free plugin
+		 $isshowingFreePluginBanner = false;
+
+		if(!empty(get_option("show_premium_cumulative_count_notification")) && get_option("show_premium_cumulative_count_notification")=="yes"){
+			$isshowingFreePluginBanner = true;		
+		}
+
+
+		if(get_option("sfsi_plus_show_premium_cumulative_count_notification") == "yes" && !$isshowingFreePluginBanner)
+		{
+			?>
+			<style type="text/css">
+				.sfsi_plus_show_premium_cumulative_count_notification a{
+				   	color: #fff;
+				   	text-decoration: underline;
+				   	cursor: pointer;
+				}
+				form.sfsi_plus_premiumNoticeCumulativeCountDismiss {
+				    display: inline-block;
+				    margin: 5px 0 0;
+				    vertical-align: middle;
+				}
+				.sfsi_plus_premiumNoticeCumulativeCountDismiss input[type='submit']{
+					background-color: transparent;
+				    border: medium none;
+				    color: #fff;
+				    margin: 0;
+				    padding: 0;
+				    cursor: pointer;
+				}
+				
+			</style>
+		     <div class="updated sfsi_plus_show_premium_cumulative_count_notification" style="<?php echo $style; ?>background-color: #38B54A; color: #fff; font-size: 18px;">
+				<div class="alignleft" style="margin: 9px 0;">
+				<b><?php _e( 'Recently switched to https?', SFSI_PLUS_DOMAIN); ?></b> <?php _e( 'If you don’t want to lose the Facebook share &amp; like counts', SFSI_PLUS_DOMAIN); ?> <a href="https://www.ultimatelysocial.com/usm-premium/?utm_source=usmplus_settings_page&utm_campaign=https_share_counts&utm_medium=banner" target="_blank"><?php _e( 'have a look at our Premium Plugin', SFSI_PLUS_DOMAIN); ?></a><?php _e( ', we found a fix for that:', SFSI_PLUS_DOMAIN); ?> <a href="https://www.ultimatelysocial.com/usm-premium/?utm_source=usmplus_settings_page&utm_campaign=https_share_counts&utm_medium=banner" target="_blank"><?php _e( 'Check it out', SFSI_PLUS_DOMAIN); ?></a>	
+				</div>
+				<div class="alignright">
+					<form method="post" class="sfsi_plus_premiumNoticeCumulativeCountDismiss">
+						<input type="hidden" name="sfsi-plus_dismiss-premiumCumulativeCountNotice" value="true">
+						<input type="submit" name="dismiss" value="Dismiss" />
+					</form>
+				</div>
+			</div> 
+			<?php
+		}
+		
+	}
+
+
+
 	if(get_option("sfsi_plus_show_Setting_mobile_notification") == "yes")
 	{
 		$sfsi_plus_install_date = strtotime(get_option('sfsi_plus_installDate'));
@@ -765,6 +819,11 @@ function sfsi_plus_dismiss_admin_notice()
 		//header("Location: ".site_url()."/wp-admin/admin.php?page=sfsi-options");die;
 	}
 	
+	if ( isset($_REQUEST['sfsi-plus_dismiss-premiumCumulativeCountNotice']) && $_REQUEST['sfsi-plus_dismiss-premiumCumulativeCountNotice'] == 'true' )
+	{
+		update_option( 'sfsi-plus_dismiss-premiumCumulativeCountNotice', "no" );
+	}
+
 	if ( isset($_REQUEST['sfsi-plus_dismiss-settingmobileNotice']) && $_REQUEST['sfsi-plus_dismiss-settingmobileNotice'] == 'true' )
 	{
 		update_option( 'sfsi_plus_show_Setting_mobile_notification', "no" );
