@@ -7,7 +7,7 @@ Author: UltimatelySocial
 Text Domain: ultimate-social-media-plus
 Domain Path: /languages
 Author URI: http://ultimatelysocial.com
-Version: 2.7.2
+Version: 2.7.3
 License: GPLv2
 */
 
@@ -90,7 +90,7 @@ register_deactivation_hook(__FILE__, 'sfsi_plus_deactivate_plugin');
 //register_uninstall_hook(__FILE__, 'sfsi_plus_Unistall_plugin');
 
 /*Plugin version setup*/
-if(!get_option('sfsi_plus_pluginVersion') || get_option('sfsi_plus_pluginVersion') < 2.72)
+if(!get_option('sfsi_plus_pluginVersion') || get_option('sfsi_plus_pluginVersion') < 2.73)
 {
 	add_action("init", "sfsi_plus_update_plugin");
 }
@@ -821,7 +821,7 @@ function sfsi_plus_dismiss_admin_notice()
 	
 	if ( isset($_REQUEST['sfsi-plus_dismiss-premiumCumulativeCountNotice']) && $_REQUEST['sfsi-plus_dismiss-premiumCumulativeCountNotice'] == 'true' )
 	{
-		update_option( 'sfsi-plus_dismiss-premiumCumulativeCountNotice', "no" );
+		update_option( 'sfsi_plus_show_premium_cumulative_count_notification', "no" );
 	}
 
 	if ( isset($_REQUEST['sfsi-plus_dismiss-settingmobileNotice']) && $_REQUEST['sfsi-plus_dismiss-settingmobileNotice'] == 'true' )

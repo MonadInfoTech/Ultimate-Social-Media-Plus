@@ -4,7 +4,7 @@ Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=seb.r
 Tags: social media, facebook, instagram, youtube, twitter, share, social share, buttons, counter, pop-up, subscription, icons
 Requires at least: 3.0
 Tested up to: 4.7.5
-Stable tag: 2.7.2
+Stable tag: 2.7.3
 License: GPLv2 
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -372,6 +372,9 @@ Plugin adalah gratis dan sangat mudah digunakan.
 
 == Changelog ==
 
+= 2.7.3 =
+* Fixed Issue: Bar not dismissing of pointing to premium for cumulative facebook count option
+
 = 2.7.2 =
 * Fixed Issue: Vulnerability due to use of $_SERVER['SERVER_NAME']
 
@@ -526,5 +529,5 @@ Plugin adalah gratis dan sangat mudah digunakan.
 
 == Upgrade Notice ==
 
-= 2.7.2 =
+= 2.7.3 =
 * Please Upgrade 
