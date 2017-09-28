@@ -11,6 +11,8 @@ Version: 2.7.3
 License: GPLv2
 */
 
+error_reporting(0);
+
 global $wpdb;
 /* define the Root for URL and Document */
 
@@ -666,7 +668,7 @@ function sfsi_plus_admin_notice()
 		// Check if banner is displayed by free plugin
 		 $isshowingFreePluginBanner = false;
 
-		if(!empty(get_option("show_premium_cumulative_count_notification")) && get_option("show_premium_cumulative_count_notification")=="yes"){
+		if(!get_option("show_premium_cumulative_count_notification") && get_option("show_premium_cumulative_count_notification")=="yes"){
 			$isshowingFreePluginBanner = true;		
 		}
 
@@ -790,7 +792,7 @@ function sfsi_plus_admin_notice()
 	     <div class="updated sfsi_plus_show_phperror_notification" style="<?php echo $style; ?>background-color: #D22B2F; color: #fff; font-size: 18px; border-left-color: #D22B2F;">
 			<div class="alignleft" style="margin: 9px 0;">
 				<p class="sfsi_plus_show_notifictaionpragraph">
-					<?php _e( 'We noticed you are running your site on a PHP version older than 5.4. Please upgrade to a more recent version. This is not only important for running the Ultimate Social Media Plugin, but also for security reasons in general.', SFSI_PLUS_DOMAIN); ?>
+					<?php _e( 'We noticed you are running your site on a PHP version older than 5.6. Please upgrade to a more recent version. This is not only important for running the Ultimate Social Media Plugin, but also for security reasons in general.', SFSI_PLUS_DOMAIN); ?>
 					<br>
 					<?php _e('If you do not know how to do the upgrade, please ask your server team or hosting company to do it for you.', SFSI_PLUS_DOMAIN); ?>
                 </p>

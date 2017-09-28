@@ -118,12 +118,12 @@ $connectFeedLgn	= "http://www.specificfeeds.com/?".base64_encode("userprofile=wo
     
         <div class="adminTooltip" >
            <a href="javascript:">
-		   		<img width="51" class="sfsi_wicon" src="<?php echo SFSI_PLUS_PLUGURL; ?>images/facebook.png" title="facebook" alt="facebook" />
+		   		<img width="51" class="sfsi_wicon" src="<?php echo SFSI_PLUS_PLUGURL; ?>images/fb.png" title="facebook" alt="facebook" />
 		   </a>
            <div class="sfsi_plus_tool_tip_2 sfsi_plus_tool_tip_2_inr sfsi_plus_fb_tool_bdr" style="width: 59px;margin-left: -48.5px;">
                <span class="bot_arow bot_fb_arow "></span>
                <div class="sfsi_plus_inside fbb">
-                   <div class="fb_1"><img src="<?php echo $visit_iconsUrl."facebook.png"; ?>" /></div>    
+                   <div class="fb_1"><img src="<?php echo $visit_iconsUrl."fb.png"; ?>" /></div>    
                    <div class="fb_2"><img src="<?php echo $visit_iconsUrl."fblike_bck.png"; ?>" /></div>
                    <div class="fb_3"><img src="<?php echo $visit_iconsUrl."fbshare_bck.png"; ?>" /></div>
                </div>    

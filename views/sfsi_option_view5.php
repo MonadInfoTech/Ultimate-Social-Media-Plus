@@ -122,7 +122,7 @@
 		}
 		elseif($name == "sfsi_plus_facebook_icons_language")
 		{
-			$visit_icon = $visit_iconsUrl."Visit_us_facebook";
+			$visit_icon = $visit_iconsUrl."Visit_us_fb";
 		}
 		elseif($name == "sfsi_plus_twitter_icons_language")
 		{
@@ -364,7 +364,7 @@
           
 		  <?php case 'facebook' :?>
           		<li class="sfsiplus_facebook_section " data-index="<?php echo $index; ?>" id="sfsi_plus_facebookIcon_order">
-                	<a href="#" title="Facebook"><img src="<?php echo SFSI_PLUS_PLUGURL; ?>images/facebook.png" alt="Facebook" /></a>
+                	<a href="#" title="Facebook"><img src="<?php echo SFSI_PLUS_PLUGURL; ?>images/fb.png" alt="Facebook" /></a>
                 </li>
           <?php break; ?>
           
@@ -601,7 +601,7 @@
         	</div>
 			<?php
 				$facebook_icons_lang = $option5['sfsi_plus_facebook_icons_language'];
-				$visit_icon = $visit_iconsUrl."Visit_us_facebook/icon_".$facebook_icons_lang.".png";
+				$visit_icon = $visit_iconsUrl."Visit_us_fb/icon_".$facebook_icons_lang.".png";
 				if(isset($facebook_icons_lang) && !empty($facebook_icons_lang))
 				{
 					?>

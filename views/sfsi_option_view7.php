@@ -71,7 +71,7 @@
         </li>
         <li class="sfsiplus_facebook_section">
         	<div>
-            	<img src="<?php echo SFSI_PLUS_PLUGURL ?>images/facebook.png" alt="Facebook" />
+            	<img src="<?php echo SFSI_PLUS_PLUGURL ?>images/fb.png" alt="Facebook" />
                 <span class="sfsi_Cdisplay" id="sfsi_plus_facebook_countsDisplay">12k</span>
             </div>
         </li>

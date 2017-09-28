@@ -183,7 +183,7 @@
 		</li>
         <li class="sfsiplus_facebook_section">
 			<a href="#" title="Facebook">
-				<img src="<?php echo SFSI_PLUS_PLUGURL ?>images/facebook.png" alt="Facebook" />
+				<img src="<?php echo SFSI_PLUS_PLUGURL ?>images/fb.png" alt="Facebook" />
 			</a><span>12k</span>
 		</li>
         <li class="sfsiplus_google_section">
@@ -323,7 +323,7 @@
 				<ul class="like_icon">
 					<li>
 						<a title="Facebook">
-							<img src="<?php echo SFSI_PLUS_PLUGURL ?>images/facebook.png" alt="Facebook" />
+							<img src="<?php echo SFSI_PLUS_PLUGURL ?>images/fb.png" alt="Facebook" />
 							<span><?php echo $counts['fb_count']; ?></span>
 						</a>
 					</li>
