@@ -373,6 +373,7 @@ Plugin adalah gratis dan sangat mudah digunakan.
 == Changelog ==
 
 = 2.7.4 =
+* Updated keywords for showing banner according to website type
 
 = 2.7.3 =
 * Fixed Issue: Bar not dismissing of pointing to premium for cumulative facebook count option

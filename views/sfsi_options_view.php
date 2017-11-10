@@ -206,6 +206,5 @@
         success:function(e) {
             jQuery(".sfsi_plus_notificationBannner").html(e);
         }
-    });            
-              
+    });                          
 </script>
