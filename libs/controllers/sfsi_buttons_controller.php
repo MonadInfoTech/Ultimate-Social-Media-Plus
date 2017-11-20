@@ -1100,11 +1100,11 @@ function sfsi_plus_bannerOption(){
         	echo '<div class="sfsi_plus_new_notification_cat">
                     <div class="sfsi_plus_new_notification_header_cat">
                         <h1>New feature: Tailored icons</h1>
-                        <h3>The <a href="https://www.ultimatelysocial.com/tailor-made-icons/?utm_source=usmplus_settings_page&utm_campaign=tailored_icons&utm_medium=banner" target="_blank">Premium Plugin</a> Includes these icons...</h3>
+                        <h3>The <a href="https://www.ultimatelysocial.com/themed-icons-search/?utm_source=usmplus_settings_page&utm_campaign=themed_icons_search&utm_medium=banner" target="_blank">Premium Plugin</a> Includes these icons...</h3>
                         <div class="sfsi_plus_new_notification_cross_cat">X</div>
                     </div>
                     <div class="sfsi_plus_new_notification_body_link_cat">
-                        <a class ="sfsi_plus_tailored_icons_img" href="https://www.ultimatelysocial.com/tailor-made-icons/?utm_source=usmplus_settings_page&utm_campaign=tailored_icons&utm_medium=banner" target="_blank">
+                        <a class ="sfsi_plus_tailored_icons_img" href="https://www.ultimatelysocial.com/themed-icons-search/?utm_source=usmplus_settings_page&utm_campaign=themed_icons_search&utm_medium=banner" target="_blank">
                             <div class="sfsi_plus_new_notification_body_cat">
                                 <div class="sfsi_plus_new_notification_image_cat">
                                        <img src="'.SFSI_PLUS_PLUGURL.'images/WPPlugin_V3.png" id="newImg" />
@@ -1112,7 +1112,7 @@ function sfsi_plus_bannerOption(){
                             </div>
                         </a>
                         <div class="sfsiplus_bottom_text">
-                            <a href="https://www.ultimatelysocial.com/tailor-made-icons/?utm_source=usmplus_settings_page&utm_campaign=tailored_icons&utm_medium=banner">
+                            <a target="_blank" href="https://www.ultimatelysocial.com/themed-icons-search/?utm_source=usmplus_settings_page&utm_campaign=themed_icons_search&utm_medium=banner">
                                 See more-themed-icons >
                             </a>
                         </div>    
