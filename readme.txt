@@ -372,6 +372,9 @@ Plugin adalah gratis dan sangat mudah digunakan.
 
 == Changelog ==
 
+= 2.7.6 =
+* Question 5-> Promotion bar added pointing to more options for pinterest count in premium plugin 
+
 = 2.7.5 =
 * Default theme banner link updated
 
