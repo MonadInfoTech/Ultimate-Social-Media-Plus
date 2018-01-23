@@ -656,7 +656,13 @@
 						<input name="sfsi_plus_pinterest_manualCounts" type="text" class="input" value="<?php echo ($option4['sfsi_plus_pinterest_manualCounts']!='') ?  $option4['sfsi_plus_pinterest_manualCounts'] : '' ;?>" style="<?php echo ($option4['sfsi_plus_pinterest_countsFrom']=='pins') ?  'display:none;' : '' ;?>" />
 					</li>
 				</ul>
-			</div>    
+			</div>
+
+			<div class="sfsi_plus_new_prmium_follw">
+					<p>
+						<b>New: </b>In the Premium Plugin you can also automatically show the number of PINs from your Pinterest account, or of a specific board, or the number of your Pinterest followers. <a href="https://www.ultimatelysocial.com/usm-premium/?utm_source=usmplus_settings_page&utm_campaign=more_pinterest_counts&utm_medium=banner" target="_blank">See all features</a>
+					</p>
+			</div>			    
 		</div>
 		<!-- END PINIT ICON COUNT SECTION-->
         
