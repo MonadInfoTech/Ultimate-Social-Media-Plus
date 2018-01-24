@@ -347,8 +347,6 @@ Hal ini juga memungkinkan Anda untuk menawarkan langganan untuk pengunjung Anda,
 Plugin adalah gratis dan sangat mudah digunakan.
 
 
-
-
 == Screenshots ==
 
 1. After installing the plugin, you'll see this overview. You'll be taken through the easy-to-understand steps to configure your plugin 
