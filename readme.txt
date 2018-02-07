@@ -3,8 +3,8 @@ Contributors: socialdude
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=seb.richter%40gmx%2enet&lc=LI
 Tags: social media, facebook, instagram, youtube, twitter, share, social share, buttons, counter, pop-up, subscription, icons
 Requires at least: 3.0
-Tested up to: 4.7.5
-Stable tag: 2.7.6
+Tested up to: 4.9.4
+Stable tag: 2.7.7
 License: GPLv2 
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -370,6 +370,8 @@ Plugin adalah gratis dan sangat mudah digunakan.
 
 == Changelog ==
 
+= 2.7.7 =
+
 = 2.7.6 =
 * Question 5-> Promotion bar added pointing to more options for pinterest count in premium plugin 
 
@@ -536,5 +538,5 @@ Plugin adalah gratis dan sangat mudah digunakan.
 
 == Upgrade Notice ==
 
-= 2.7.6 =
+= 2.7.7 =
 * Please Upgrade 
