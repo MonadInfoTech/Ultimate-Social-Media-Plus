@@ -4,7 +4,7 @@ Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=seb.r
 Tags: social media, facebook, instagram, youtube, twitter, share, social share, buttons, counter, pop-up, subscription, icons
 Requires at least: 3.0
 Tested up to: 4.9.4
-Stable tag: 2.7.7
+Stable tag: 2.7.8
 License: GPLv2 
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -370,6 +370,8 @@ Plugin adalah gratis dan sangat mudah digunakan.
 
 == Changelog ==
 
+= 2.7.8 =
+
 = 2.7.7 =
 * Added affliate banner pointing to buying plugin on https://sellcodes.com 
 
@@ -539,5 +541,5 @@ Plugin adalah gratis dan sangat mudah digunakan.
 
 == Upgrade Notice ==
 
-= 2.7.7 =
+= 2.7.8 =
 * Please Upgrade 
