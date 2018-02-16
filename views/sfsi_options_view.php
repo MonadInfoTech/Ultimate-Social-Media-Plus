@@ -66,12 +66,9 @@
         <p>
         	<?php  _e( 'Simply answer the questions below (at least the first 3) by clicking on them - that`s it!', SFSI_PLUS_DOMAIN ); ?>
         </p>
-        <p> 
-        	<?php  _e( 'If you have questions, or something doesn`t work as it should, please read the FAQ:', SFSI_PLUS_DOMAIN ); ?>
-			<a href="https://www.ultimatelysocial.com/faq?utm_source=usmplus_settings_page&utm_campaign=top_introduction&utm_medium=banner" class="lit_txt">
-				<?php _e('Click here',SFSI_PLUS_DOMAIN); ?>
-			</a>
-       </p>
+
+        <p><?php  _e( 'Have questions? Please issue a', SFSI_PLUS_DOMAIN ); ?> <a href="https://wordpress.org/support/plugin/ultimate-social-media-icons" target="_blank"><?php  _e( 'support ticket', SFSI_PLUS_DOMAIN ); ?></a> <?php  _e( 'in the support forum, we\'ll try to respond quickly!',SFSI_PLUS_DOMAIN); ?></p>
+
     </div>
     <!-- END Top content area of plugin -->
       
