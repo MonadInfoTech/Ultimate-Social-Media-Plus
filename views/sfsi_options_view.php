@@ -153,6 +153,8 @@
         <p class="red_txt errorMsg" style="display:none"> </p>
         <p class="green_txt sucMsg" style="display:none"> </p>
 
+        <?php include(SFSI_PLUS_DOCROOT.'/views/sfsi_affiliate_banner.php'); ?>
+
         <?php include(SFSI_PLUS_DOCROOT.'/views/sfsi_section_for_premium.php'); ?>
 
 	 	<p style="margin-top: 30px;clear: both;">

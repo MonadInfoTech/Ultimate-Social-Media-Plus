@@ -16,8 +16,8 @@
 @font-face {
     font-family: helveticaneue-light;
     src: url(fonts/helveticaneue-light.eot);
-    src: url(fonts/helveticaneue-light.eot?#iefix) format('embedded-opentype'), 
-		 url(fonts/helveticaneue-light.woff) format('woff'), 
+    src: url(fonts/helveticaneue-light.eot?#iefix) format('embedded-opentype'),
+		 url(fonts/helveticaneue-light.woff) format('woff'),
 		 url(fonts/helveticaneue-light.ttf) format('truetype'),
 		 url(fonts/helveticaneue-light.svg#helveticaneue-light) format('svg');
     font-weight: 400;
@@ -977,7 +977,7 @@ ul#adminmenu li.toplevel_page_sfsi-plus-options a.current, ul#adminmenu li.tople
 	-webkit-appearance:none;
 	background-image: url(images/select-arrow.png);
 	background-repeat:no-repeat;
-	background-position:right 15px center; 
+	background-position:right 15px center;
 }
 .tab9 .sfsi_plus_same_width {
     display: inline-block;
@@ -1069,7 +1069,7 @@ ul#adminmenu li.toplevel_page_sfsi-plus-options a.current, ul#adminmenu li.tople
 .feedClaiming-overlay input[type="email"]::-moz-placeholder {  /* Firefox 19+ */
 	color: #bebebe !important;
 }
-.feedClaiming-overlay input[type="email"]:-ms-input-placeholder {  
+.feedClaiming-overlay input[type="email"]:-ms-input-placeholder {
 	color: #bebebe !important;
 }
 .feedClaiming-overlay .save_button {
@@ -1103,7 +1103,7 @@ ul#adminmenu li.toplevel_page_sfsi-plus-options a.current, ul#adminmenu li.tople
 	background-size: 51px 51px !important;
 }
 
-/* poonam */    
+/* poonam */
 .sfsi_plus_premium_brdr_box{box-sizing: border-box;}
 .sf_si_plus_our_prmium_plugin-add, .sfsi_plus_prem_icons_added, .sfsi_plus_new_prmium_follw{background:#f3faf6;border:1px solid #12a252;padding: 25px 38px 35px 40px;clear: both;}
 .banner_custom_icon{margin-left:94px !important;float: left;}

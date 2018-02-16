@@ -371,6 +371,7 @@ Plugin adalah gratis dan sangat mudah digunakan.
 == Changelog ==
 
 = 2.7.7 =
+* Added affliate banner pointing to buying plugin on https://sellcodes.com 
 
 = 2.7.6 =
 * Question 5-> Promotion bar added pointing to more options for pinterest count in premium plugin 
