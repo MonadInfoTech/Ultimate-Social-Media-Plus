@@ -67,7 +67,7 @@
         	<?php  _e( 'Simply answer the questions below (at least the first 3) by clicking on them - that`s it!', SFSI_PLUS_DOMAIN ); ?>
         </p>
 
-        <p><?php  _e( 'Have questions? Please issue a', SFSI_PLUS_DOMAIN ); ?> <a href="https://wordpress.org/support/plugin/ultimate-social-media-icons" target="_blank"><?php  _e( 'support ticket', SFSI_PLUS_DOMAIN ); ?></a> <?php  _e( 'in the support forum, we\'ll try to respond quickly!',SFSI_PLUS_DOMAIN); ?></p>
+        <p><?php  _e( 'Have questions? Please issue a', SFSI_PLUS_DOMAIN ); ?> <a href="https://wordpress.org/support/plugin/ultimate-social-media-plus" target="_blank"><?php  _e( 'support ticket', SFSI_PLUS_DOMAIN ); ?></a> <?php  _e( 'in the support forum, we\'ll try to respond quickly!',SFSI_PLUS_DOMAIN); ?></p>
 
     </div>
     <!-- END Top content area of plugin -->

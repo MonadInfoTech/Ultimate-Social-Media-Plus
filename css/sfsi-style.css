@@ -2324,6 +2324,7 @@ h2.optional {
 .sfsi_plus_Sicons .sf_subscrbe a img
 {
 	float: left;
+    	height: 20px !important;
 }
 .sfsi_plus_Sicons .sf_fb {
     position: relative;
