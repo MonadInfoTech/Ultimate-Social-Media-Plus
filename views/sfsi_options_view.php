@@ -1,11 +1,11 @@
 <!-- Loader Image section  -->
-<div id="sfpluspageLoad" >  
+<div id="sfpluspageLoad" >
     
 </div>
 <!-- END Loader Image section  -->
 
 <!-- javascript error loader  -->
-<div class="error" id="sfsi_onload_errors" style="margin-left: 60px;display: none;">  
+<div class="error" id="sfsi_onload_errors" style="margin-left: 60px;display: none;">
     <p>
     	<?php  _e('We found errors in your javascript which may cause the plugin to not work properly. Please fix the error:',SFSI_PLUS_DOMAIN ); ?>
     </p><p id="sfsi_jerrors"></p>
@@ -45,7 +45,7 @@
 		cursor: pointer;
 		text-align:center;
 	}
-	</style>	
+	</style>
 	<!-- <div class="sfsi_plus_show_notification" style="background-color: #38B54A; color: #fff; font-size: 18px;">
     	
         <?php  //_e( 'New: You can now also show a subscription form on your site, increasing sign-ups! (Question 8)', SFSI_PLUS_DOMAIN); ?>
@@ -56,18 +56,38 @@
 	<?php } ?>
     <!-- Get notification bar-->
  
-    <div class="sfsi_plus_notificationBannner"></div> 
+    <div class="sfsi_plus_notificationBannner"></div>
     
     <!-- Top content area of plugin -->
     <div class="main_contant">
         <h1>
 			<?php  _e( 'Welcome to the Ultimate Social Media Icons PLUS plugin!', SFSI_PLUS_DOMAIN ); ?>
         </h1>
-        <p>
-        	<?php  _e( 'Simply answer the questions below (at least the first 3) by clicking on them - that`s it!', SFSI_PLUS_DOMAIN ); ?>
-        </p>
+        
+        <div class="welcometext">
 
-        <p><?php  _e( 'Have questions? Please issue a', SFSI_PLUS_DOMAIN ); ?> <a href="https://wordpress.org/support/plugin/ultimate-social-media-plus" target="_blank"><?php  _e( 'support ticket', SFSI_PLUS_DOMAIN ); ?></a> <?php  _e( 'in the support forum, we\'ll try to respond quickly!',SFSI_PLUS_DOMAIN); ?></p>
+            <p><?php  _e( 'Simply answer the questions below (at least the first 3) by clicking on them - that`s it!', SFSI_PLUS_DOMAIN ); ?></p>
+           
+        </div>
+
+        <div class="supportforum">
+            <div class="support-container">
+                <div class="have-questions">
+                    <img src="<?php echo SFSI_PLUS_PLUGURL ?>images/question.png">
+                    <p class="have-quest">Have questions?</p>
+                    <p class="ask-question">Ask them in the...</p>
+                </div>
+                <div class="support-forum-green-div">
+                    <a target="_blank" href="https://wordpress.org/support/plugin/ultimate-social-media-plus" class="support-forum-green-bg">
+                        <img src="<?php echo SFSI_PLUS_PLUGURL ?>images/support.png">
+                        <p class="support-forum">Support Forum</p>
+                    </a>
+                </div>
+                <div class="respond-text">
+                    <p>We'll try to respond ASAP!</p>
+                </div>
+            </div>
+        </div>
 
     </div>
     <!-- END Top content area of plugin -->
@@ -79,7 +99,7 @@
         </h3>
         <!-- step 1 end  here -->
         <?php include(SFSI_PLUS_DOCROOT.'/views/sfsi_option_view1.php'); ?>
-        <!-- step 1 end here --> 
+        <!-- step 1 end here -->
         
         <!-- step 2 start here -->
         <h3><span>2</span>
@@ -90,7 +110,7 @@
         
         <!-- step new 3 start here -->
         <h3><span>3</span>
-            <?php  _e( 'Where shall they be displayed?', SFSI_PLUS_DOMAIN ); ?> 
+            <?php  _e( 'Where shall they be displayed?', SFSI_PLUS_DOMAIN ); ?>
         </h3>
         <?php include(SFSI_PLUS_DOCROOT.'/views/sfsi_option_view8.php'); ?>
     <!-- step new3 end here -->
@@ -167,12 +187,12 @@
         		<?php _e('Visit us on ultimatelysocial.com',SFSI_PLUS_DOMAIN); ?>
          	</a>
          </p>-->
-		 <?php 
+		 <?php
 			 /*$tra_lan = get_bloginfo( 'language' );
 			 if($tra_lan == "en-US" )
 			 {}
-			 else 
-			 { 
+			 else
+			 {
 				 ?>
 				 <p class="translatelilne">
 					<?php  _e( 'The plugin was translated by (your name). Need translation work to get done? Contact (your name) at (your email)', SFSI_PLUS_DOMAIN ); ?>
@@ -188,15 +208,15 @@
 			<?php _e('for that so that we can send you the instructions. Thank you :)', SFSI_PLUS_DOMAIN);?>
 		</p>
 	</div>
- <!-- all pops of plugin under sfsi_pop_content.php file --> 
+ <!-- all pops of plugin under sfsi_pop_content.php file -->
  <?php include(SFSI_PLUS_DOCROOT.'/views/sfsi_pop_content.php'); ?>
 </div>
 
 <!-- START Admin view for plugin-->
-<script type="text/javascript">    
+<script type="text/javascript">
     var e = {
-        action:"sfsiplusbannerOption"             
-    };  
+        action:"sfsiplusbannerOption"
+    };
 
     jQuery.ajax({
         url: "<?php echo admin_url( 'admin-ajax.php' ); ?>",
@@ -205,5 +225,5 @@
         success:function(e) {
             jQuery(".sfsi_plus_notificationBannner").html(e);
         }
-    });                          
+    });
 </script>

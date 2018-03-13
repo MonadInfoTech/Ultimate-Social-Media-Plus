@@ -1235,21 +1235,46 @@ function sfsi_plus_prepairIcons($icon_name,$is_front=0, $onpost="no", $fromPost 
                  }
 				  
                  /* fecth no of counts if active in admin section */ 
-				if(	
-					$fromPost == 'yes' && !empty($post) &&
-					$sfsi_plus_section4_options['sfsi_plus_linkedIn_countsDisplay']=="yes" &&
-					$sfsi_plus_section4_options['sfsi_plus_display_counts']=="yes"
-				)
-				{
-					$followers=$socialObj->sfsi_get_linkedin($current_url);
-					$counts=$socialObj->format_num($followers);
-					if(empty($counts))
-					{
-						$counts = (string) "0";
-					}
-				}
-				else
-				{  
+				// if(	
+				// 	$fromPost == 'yes' && !empty($post) &&
+				// 	$sfsi_plus_section4_options['sfsi_plus_linkedIn_countsDisplay']=="yes" &&
+				// 	$sfsi_plus_section4_options['sfsi_plus_display_counts']=="yes"
+				// )
+				// {
+				// 	$followers=$socialObj->sfsi_get_linkedin($current_url);
+				// 	$counts=$socialObj->format_num($followers);
+				// 	if(empty($counts))
+				// 	{
+				// 		$counts = (string) "0";
+				// 	}
+				// }
+				// else
+				// {  
+				// 	 if($sfsi_plus_section4_options['sfsi_plus_linkedIn_countsDisplay']=="yes" && $sfsi_plus_section4_options['sfsi_plus_display_counts']=="yes")
+				// 	 {
+				// 		 if($sfsi_plus_section4_options['sfsi_plus_linkedIn_countsFrom']=="manual")
+				// 		 {    
+				// 			$counts = $socialObj->format_num($sfsi_plus_section4_options['sfsi_plus_linkedIn_manualCounts']);
+				// 		 }
+				// 		 else if($sfsi_plus_section4_options['sfsi_plus_linkedIn_countsFrom']=="follower")
+				// 		 {
+				// 			 $linkedIn_compay=$sfsi_plus_section4_options['sfsi_plus_ln_company'];
+				// 			 $ln_settings	= array('sfsi_plus_ln_api_key'=>$sfsi_plus_section4_options['sfsi_plus_ln_api_key'],
+				// 							  'sfsi_plus_ln_secret_key'=>$sfsi_plus_section4_options['sfsi_plus_ln_secret_key'],
+				// 							  'sfsi_plus_ln_oAuth_user_token'=>$sfsi_plus_section4_options['sfsi_plus_ln_oAuth_user_token']);
+											  
+				// 			 $followers=$socialObj->sfsi_getlinkedin_follower($linkedIn_compay,$ln_settings);
+				// 			 (int) $followers;
+				// 			 $counts=$socialObj->format_num($followers);
+				// 			 if(empty($counts))
+				// 			 {
+				// 				$counts = (string) "0";
+				// 			 }
+				// 		 }
+				//  	}
+				// }
+
+
 					 if($sfsi_plus_section4_options['sfsi_plus_linkedIn_countsDisplay']=="yes" && $sfsi_plus_section4_options['sfsi_plus_display_counts']=="yes")
 					 {
 						 if($sfsi_plus_section4_options['sfsi_plus_linkedIn_countsFrom']=="manual")
@@ -1259,7 +1284,7 @@ function sfsi_plus_prepairIcons($icon_name,$is_front=0, $onpost="no", $fromPost 
 						 else if($sfsi_plus_section4_options['sfsi_plus_linkedIn_countsFrom']=="follower")
 						 {
 							 $linkedIn_compay=$sfsi_plus_section4_options['sfsi_plus_ln_company'];
-							 $ln_settings=array('sfsi_plus_ln_api_key'=>$sfsi_plus_section4_options['sfsi_plus_ln_api_key'],
+							 $ln_settings	= array('sfsi_plus_ln_api_key'=>$sfsi_plus_section4_options['sfsi_plus_ln_api_key'],
 											  'sfsi_plus_ln_secret_key'=>$sfsi_plus_section4_options['sfsi_plus_ln_secret_key'],
 											  'sfsi_plus_ln_oAuth_user_token'=>$sfsi_plus_section4_options['sfsi_plus_ln_oAuth_user_token']);
 											  
@@ -1272,7 +1297,7 @@ function sfsi_plus_prepairIcons($icon_name,$is_front=0, $onpost="no", $fromPost 
 							 }
 						 }
 				 	}
-				}
+
 		     	 $totwith = $width+28+$icons_space;
 		     	 $twt_margin = $totwith/2;
                  

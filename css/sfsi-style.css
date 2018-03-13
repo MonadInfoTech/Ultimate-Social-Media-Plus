@@ -1868,8 +1868,9 @@ ul.tab_3_list li span {
 h2.optional {
     font-family: helveticaregular;
     font-size: 25px;
-    margin: 14px 0 19px;
+    margin: 25px 0 19px;
     color: #5a6570;
+    float: left;
 }
 .utube_tool_bdr .utub_visit {
     margin: 9px 0 0;
