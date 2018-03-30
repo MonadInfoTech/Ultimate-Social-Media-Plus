@@ -365,7 +365,7 @@
     <ul>
         <li class="sfsi_plus_premium_brdr_box">
             <div class="sfsi_plus_prem_icons_added" style="padding: 12px 38px 6px 40px;">
-                <div class="sf_si_plus_prmium_head sfsi_plus_need_another_tell_us"><h2><?php  _e( 'New: ', SFSI_PLUS_DOMAIN); ?><span> <?php  _e( 'Need an icon for another platform? Let us know in the ', SFSI_PLUS_DOMAIN); ?><a style="font-size: 26px;" href="https://wordpress.org/support/plugin/ultimate-social-media-plus/#new-topic-0" target="_blank" href=""><?php _e('Support Forum',SFSI_PLUS_DOMAIN); ?></a>.</span></h2></div>
+                <div class="sf_si_plus_prmium_head sfsi_plus_need_another_tell_us"><h2><span> <?php  _e( 'Need an icon for another platform? Let us know in the ', SFSI_PLUS_DOMAIN); ?><a style="font-size: 26px;" href="https://wordpress.org/support/plugin/ultimate-social-media-plus/#new-topic-0" target="_blank" href=""><?php _e('Support Forum',SFSI_PLUS_DOMAIN); ?></a>.</span></h2></div>
             </div>
         </li>
     </ul>

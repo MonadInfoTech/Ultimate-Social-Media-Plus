@@ -410,7 +410,7 @@
                 <?php } ?>
           		<li>
                 	<p style="font-weight: bold; margin: 12px 0 0;">
-						<?php _e("Need icons for another theme? Let us know in the ?", SFSI_PLUS_DOMAIN); ?>
+						<?php _e("Need icons for another theme? Let us know in the", SFSI_PLUS_DOMAIN); ?>
                         <a target="_blank" href="https://wordpress.org/support/plugin/ultimate-social-media-plus/#new-topic-0" style="color:#8E81BD; text-decoration:underline;">
 							<?php _e(" Support Forum", SFSI_PLUS_DOMAIN); ?>
                         </a>
