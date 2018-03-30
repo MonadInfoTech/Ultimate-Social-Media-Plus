@@ -68,6 +68,8 @@
 
             <p><?php  _e( 'Simply answer the questions below (at least the first 3) by clicking on them - that`s it!', SFSI_PLUS_DOMAIN ); ?></p>
            
+            <p><a style="text-decoration: none;" href="javascript:void(0)"><?php _e( 'New:', SFSI_PLUS_DOMAIN ); ?> </a><?php _e('Our new Premium Plugin allows many more placement options, better sharing features (e.g. define which text &amp; images will get shared), optimization for mobile, more icon design styles, themed icons, and much more.', SFSI_PLUS_DOMAIN ); ?> <a href="https://www.ultimatelysocial.com/usm-premium/?utm_source=usmplus_settings_page&amp;utm_campaign=notification_banner&amp;utm_medium=banner" target="_blank"><?php _e('See all features', SFSI_PLUS_DOMAIN ); ?></a></p>
+
         </div>
 
         <div class="supportforum">
