@@ -70,6 +70,9 @@
            
             <p><a style="text-decoration: none;" href="javascript:void(0)"><?php _e( 'New:', SFSI_PLUS_DOMAIN ); ?> </a><?php _e('Our new Premium Plugin allows many more placement options, better sharing features (e.g. define which text &amp; images will get shared), optimization for mobile, more icon design styles, themed icons, and much more.', SFSI_PLUS_DOMAIN ); ?> <a href="https://www.ultimatelysocial.com/usm-premium/?utm_source=usmplus_settings_page&amp;utm_campaign=notification_banner&amp;utm_medium=banner" target="_blank"><?php _e('See all features', SFSI_PLUS_DOMAIN ); ?></a></p>
 
+
+            <p><?php  _e( 'Please', SFSI_PLUS_DOMAIN ); ?> <a target="_blank" style="text-decoration: underline;" href="https://wordpress.org/support/plugin/ultimate-social-media-plus/#new-topic-0"><?php  _e( 'give us feedback,', SFSI_PLUS_DOMAIN ); ?></a><?php  _e( ' and tell us how we can make the plugin better. Thank you!.', SFSI_PLUS_DOMAIN ); ?></p>
+
         </div>
 
         <div class="supportforum">
@@ -203,11 +206,11 @@
 			}*/
 		?>
         <p class="translatelilne">
-			<?php  _e( 'You speak a language different than English? Please help us translate it! Please contact us at', SFSI_PLUS_DOMAIN ); ?>
-            <a href="mailto:support@ultimatelysocial.com" target="_new">
-            	<?php  _e( 'support@ultimatelysocial.com', SFSI_PLUS_DOMAIN ); ?>
-            </a>
-			<?php _e('for that so that we can send you the instructions. Thank you :)', SFSI_PLUS_DOMAIN);?>
+            <?php  _e( 'Have questions? Need help? Ideas for new features? Please raise a ticket in the',SFSI_PLUS_DOMAIN ); ?>
+                <a href="https://wordpress.org/support/plugin/ultimate-social-media-plus/#new-topic-0" target="_new">
+                    <?php  _e( 'Support Forum', SFSI_PLUS_DOMAIN ); ?>
+                </a>            
+             <?php  _e( ' . We\'ll try to answer asap!', SFSI_PLUS_DOMAIN ); ?>
 		</p>
 	</div>
  <!-- all pops of plugin under sfsi_pop_content.php file -->

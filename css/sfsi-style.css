@@ -3196,7 +3196,7 @@ label.sfsiplus_toglpstpgsbttl { float: left; margin-top: 5px !important}
 	max-width: none;
 }
 .sfsi_mainContainer p.bldtxtmsg{float: left; font-size: 15px; /*font-weight: bold;*/ margin-top: 12px; width: 100%;}
-.sfsi_mainContainer p.translatelilne{float: left; font-size: 15px; font-weight: bold;color: black; margin-top: 12px; width: 100%;}
+.sfsi_mainContainer p.translatelilne{float: left; font-size: 15px;font-weight: bold;color: #414951; margin-top: 12px; width: 100%;}
 .sfsiplus_icn_listing8 li > div{width: auto; float: left;}
 #accordion .tab8 .sfsiplus_icn_listing8 li .sfsiplus_right_info p.cstmdisextrpdng
 {

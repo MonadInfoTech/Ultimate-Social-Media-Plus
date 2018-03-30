@@ -410,11 +410,11 @@
                 <?php } ?>
           		<li>
                 	<p style="font-weight: bold; margin: 12px 0 0;">
-						<?php _e("Are you an icon designer?", SFSI_PLUS_DOMAIN); ?>
-                        <a href="mailto:biz@ultimatelysocial.com" style="color:#8E81BD; text-decoration:none;">
-							<?php _e(" Contact us", SFSI_PLUS_DOMAIN); ?>
+						<?php _e("Need icons for another theme? Let us know in the ?", SFSI_PLUS_DOMAIN); ?>
+                        <a target="_blank" href="https://wordpress.org/support/plugin/ultimate-social-media-plus/#new-topic-0" style="color:#8E81BD; text-decoration:underline;">
+							<?php _e(" Support Forum", SFSI_PLUS_DOMAIN); ?>
                         </a>
-                        <?php _e("to offer your icons here and get a free link (& traffic) back to your site!", SFSI_PLUS_DOMAIN); ?>
+                        <?php //_e("to offer your icons here and get a free link (& traffic) back to your site!", SFSI_PLUS_DOMAIN); ?>
                     </p>
                 </li>
             </ul>
