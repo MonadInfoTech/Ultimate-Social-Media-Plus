@@ -96,8 +96,7 @@
 															: '';
 	$option4['sfsi_plus_youtube_channelId'] 		= 	(isset($option4['sfsi_plus_youtube_channelId']))
 															? sfsi_plus_sanitize_field($option4['sfsi_plus_youtube_channelId'])
-															: '';
-	
+															: '';	
 	
 	$option4['sfsi_plus_instagram_manualCounts'] 	= 	(isset($option4['sfsi_plus_instagram_manualCounts']))
 															? intval($option4['sfsi_plus_instagram_manualCounts'])

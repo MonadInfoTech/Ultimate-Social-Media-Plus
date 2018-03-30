@@ -326,12 +326,15 @@ $pin_url=($option2['sfsi_plus_pinterest_pageUrl']!='') ?  $option2['sfsi_plus_pi
 
 <div class="pop-overlay read-overlay demail-2" >
     <div class="pop_up_box sfsi_pop_up" >
+      
        <h4 class="activate">
               <?php  _e( 'Ok, fine, however for using this plugin for FREE, please tell us what you think about it (and what can be improved). It only takes a minute. Thank you!', SFSI_PLUS_DOMAIN ); ?>
        </h4>
-		<?php $nonce = wp_create_nonce("active_plusfooter");?>
+		
+      <?php $nonce = wp_create_nonce("active_plusfooter");?>
+
         <div class="button">
-            <a target="_blank" href="https://wordpress.org/support/plugin/ultimate-social-media-plus/#new-topic-0" class="sfsiplus_activate_footer activate" title="Ok, activate link" data-nonce="<?php echo $nonce;?>">
+            <a target="_blank" href="https://wordpress.org/support/plugin/ultimate-social-media-plus/#new-topic-0" class="" title="Ok, activate link" data-nonce="<?php echo $nonce;?>">
                 <?php  _e( 'Ok, give feedback', SFSI_PLUS_DOMAIN ); ?>
             </a>
         </div>
