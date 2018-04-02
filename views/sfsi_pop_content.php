@@ -331,14 +331,13 @@ $pin_url=($option2['sfsi_plus_pinterest_pageUrl']!='') ?  $option2['sfsi_plus_pi
               <?php  _e( 'Ok, fine, however for using this plugin for FREE, please tell us what you think about it (and what can be improved). It only takes a minute. Thank you!', SFSI_PLUS_DOMAIN ); ?>
        </h4>
 		
-      <?php $nonce = wp_create_nonce("active_plusfooter");?>
 
         <div class="button">
-            <a target="_blank" href="https://wordpress.org/support/plugin/ultimate-social-media-plus/#new-topic-0" class="" title="Ok, activate link" data-nonce="<?php echo $nonce;?>">
+            <a target="_blank" href="https://wordpress.org/support/plugin/ultimate-social-media-plus/#new-topic-0" class="" title="Ok, give feedback">
                 <?php  _e( 'Ok, give feedback', SFSI_PLUS_DOMAIN ); ?>
             </a>
         </div>
-        <a href="javascript:;" id="deac_email3" title="Don’t activate link">
+        <a href="javascript:;" id="deac_email3" title="Don’t give feedback">
             <?php  _e( 'Don’t give feedback', SFSI_PLUS_DOMAIN ); ?>
         </a>
   </div>
@@ -349,12 +348,15 @@ $pin_url=($option2['sfsi_plus_pinterest_pageUrl']!='') ?  $option2['sfsi_plus_pi
        <h4>
               <?php  _e( 'You’re a toughie. Last try: as a minimum, could you please support us by activating a link back to our site? ', SFSI_PLUS_DOMAIN ); ?>
        </h4>
+
+      <?php $nonce = wp_create_nonce("active_plusfooter");?>
+
         <div class="button">
-            <a href="javascript:;" target="_new" class="hideemailpop" title="Ok, activate link" >
+            <a href="javascript:;" target="_new" class="sfsiplus_activate_footer activate" data-nonce="<?php echo $nonce;?>" title="Ok, activate link" >
                 <?php  _e( 'Ok, activate link', SFSI_PLUS_DOMAIN ); ?>
             </a>
         </div>
-        <a href="javascript:;" class="hidePop" title="Don’t review and exit">
+        <a href="javascript:;" class="hidePop" title="Don’t activate and exit">
             <?php  _e( 'Don’t activate and exit', SFSI_PLUS_DOMAIN ); ?>
         </a>
       </div>
