@@ -859,14 +859,14 @@ function sfsi_plus_get_bloginfo($url)
 add_filter( 'plugin_action_links_' . plugin_basename(__FILE__), 'sfsi_plus_action_links', 3 );
 function sfsi_plus_action_links ( $mylinks )
 {
-	$linkQuestion   = '<a target="_blank" href="https://wordpress.org/support/plugin/ultimate-social-media-plus#new-topic-0" style="color:#FF0000;"><b>Ask a question</b></a>';		
+	$linkQuestion   = '<a target="_blank" href="https://wordpress.org/support/plugin/ultimate-social-media-plus#new-topic-0" style="color:#FF0000;"><b>Need help</b></a>';		
 	$linkProVersion = '<a href="https://www.ultimatelysocial.com/usm-premium/?utm_source=usmplus_manage_plugin_page&utm_campaign=check_out_pro_version&utm_medium=banner" style="color:#38B54A;"><b>Check out pro version</b></a>';
 	$mylinks[]  = @$mylinks['edit'];
 	$mylinks[] 	= '<a href="'.admin_url("/admin.php?page=sfsi-plus-options").'">Settings</a>';
 	unset ($mylinks['edit']);
 
 	array_unshift($mylinks, $linkProVersion);
-    array_unshift($mylinks, $linkQuestion);
+    	array_unshift($mylinks, $linkQuestion);
 
 	return $mylinks;
 }
