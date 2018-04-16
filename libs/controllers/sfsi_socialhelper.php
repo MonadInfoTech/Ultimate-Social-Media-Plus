@@ -467,21 +467,27 @@ class sfsi_plus_SocialHelper
 	}
 	
 	/* get instragram followers count*/
-	public function sfsi_plus_get_instagramFollowersCount($user_name)
-	{   $option4 	= unserialize(get_option('sfsi_plus_section4_options',false));
-		$token 		= $option4['sfsi_plus_instagram_token'];
+ 	public function sfsi_plus_get_instagramFollowersCount($user_name)
+	{
 		/* get instagram user id */
-    	$return_data = $this->get_content_curl('https://api.instagram.com/v1/users/search?q='.$user_name.'&access_token='.$token);
-		$json_string = preg_replace('/^receiveCount\((.*)\)$/', "\\1", $return_data);
-		$json = json_decode($json_string, true);
-		$user_id=@$json['data'][0]['id'];
-		
-		$return_data = $this->get_content_curl('https://api.instagram.com/v1/users/'.$user_id.'/?access_token='.$token);
-		$json_string = preg_replace('/^receiveCount\((.*)\)$/', "\\1", $return_data);
-		$json = json_decode($json_string, true);
-		return $this->format_num($json['data']['counts']['followed_by'],0);
+		$option4 	= unserialize(get_option('sfsi_plus_section4_options',false));
+		$token 		= $option4['sfsi_plus_instagram_token'];
+
+		$count 		= 0;
+
+		if(isset($token) && !empty($token)){
+
+			$return_data = $this->get_content_curl('https://api.instagram.com/v1/users/self/?access_token='.$token);
+			$objData 	 = json_decode($return_data);
+
+			if(isset($objData) && $objData->data && $objData->data->counts && $objData->data->counts->followed_by){
+				$count 	 = $objData->data->counts->followed_by;
+			}			
+		}
+		return $this->format_num($count,0);
 	}
- 	
+	
+
 	/* create linkedIn  follow button */
  	public function sfsi_LinkedInFollow($company_id)
  	{
