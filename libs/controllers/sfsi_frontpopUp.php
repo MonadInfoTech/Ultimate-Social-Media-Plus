@@ -37,7 +37,7 @@ function sfsi_plus_check_PopUp($content)
      /* check for pop times */
      if($sfsi_plus_section7_options['sfsi_plus_Shown_pop']=="once")
      {
-		$time_popUp = (int)$sfsi_plus_section7_options['sfsi_plus_Shown_popupOnceTime'];
+		$time_popUp = (int) $sfsi_plus_section7_options['sfsi_plus_Shown_popupOnceTime'];
 		$time_popUp = $time_popUp*1000;
 	 	ob_start();?>
         
@@ -60,7 +60,7 @@ function sfsi_plus_check_PopUp($content)
      }
      if($sfsi_plus_section7_options['sfsi_plus_Shown_pop']=="ETscroll")
      {
-		$time_popUp = $sfsi_plus_section7_options['sfsi_plus_Shown_popupOnceTime'];
+		$time_popUp = (int) $sfsi_plus_section7_options['sfsi_plus_Shown_popupOnceTime'];
 		$time_popUp = $time_popUp*1000;
 	    ob_start();
 		?>
@@ -103,8 +103,8 @@ function sfsi_plus_check_PopUp($content)
      }
      if($sfsi_plus_section7_options['sfsi_plus_Shown_pop']=="LimitPopUp")
      {
-	 	$time_popUp = $sfsi_plus_section7_options['sfsi_plus_Shown_popuplimitPerUserTime'];
-	 	$end_time = $_COOKIE['sfsi_socialPopUp']+($time_popUp*60); 
+	 	$time_popUp = (int) $sfsi_plus_section7_options['sfsi_plus_Shown_popuplimitPerUserTime'];
+	 	$end_time   = (int) $_COOKIE['sfsi_socialPopUp']+($time_popUp*60); 
 		$time_popUp = $time_popUp*1000;
      
 	 	if(!empty($end_time))

@@ -4,7 +4,7 @@
 </style>
 
 <div class="banner_support_forum">
-    <a target="_blank" href="https://wordpress.org/support/plugin/ultimate-social-media-plus#no-topic-0" class="banner-1">
+    <a target="_blank" href="https://goo.gl/MU6pTN#no-topic-0" class="banner-1">
         <img src="<?php echo SFSI_PLUGURL; ?>images/banner_support_forum.png">
     </a>
 </div>
