@@ -96,6 +96,8 @@ if(!get_option('sfsi_plus_pluginVersion') || get_option('sfsi_plus_pluginVersion
 {
 	add_action("init", "sfsi_plus_update_plugin");
 }
+
+
 //shortcode for the ultimate social icons {Monad}
 add_shortcode("DISPLAY_ULTIMATE_PLUS", "DISPLAY_ULTIMATE_PLUS");
 function DISPLAY_ULTIMATE_PLUS($args = null, $content = null)
