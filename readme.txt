@@ -430,6 +430,7 @@ The premium plugin offrs many more social buttons from other social media platfo
 9. You can also display a pop-up (designed to your liking) which asks users to like & share your site
 
 
+
 == Changelog ==
 
 = 2.8.3 =
