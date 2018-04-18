@@ -471,7 +471,7 @@
                         <input name="sfsi_plus_ytube_user" type="url" value="<?php echo (isset($option2['sfsi_plus_ytube_user']) && $option2['sfsi_plus_ytube_user']!='') ?  $option2['sfsi_plus_ytube_user'] : '' ;?>" placeholder="Youtube username" class="add" />
                     </p>
                     <div class="utbe_instruction">
-                    	<?php _e( 'To find your Username go to "My channel" in Youtube menu bar on the left & Select the "About" tab and take your user name from URL there (e.g. https://www.youtube.com/user/Tommy it is "Tommy").', SFSI_PLUS_DOMAIN ); ?>
+                    	<?php _e( 'To find your User ID/Channel ID, login to your YouTube account, click the user icon at the top right corner and select "Settings", then click "Advanced" under "Name" and you will find both your "Channel ID" and "User ID" under "Account Information".', SFSI_PLUS_DOMAIN ); ?>
                     </div>
                 </div>
                 <div class="cstmutbchnlidwpr" <?php if($sfsi_plus_youtubeusernameorid == 'id'){echo 'style="display: block"';}?>>
@@ -482,7 +482,7 @@
                         <input name="sfsi_plus_ytube_chnlid" type="url" value="<?php echo (isset($option2['sfsi_plus_ytube_chnlid']) && $option2['sfsi_plus_ytube_chnlid']!='') ?  $option2['sfsi_plus_ytube_chnlid'] : '' ;?>" placeholder="youtube_channel_id" class="add" />
                     </p>
                     <div class="utbe_instruction">
-                    	<?php  _e( 'To find your Channel name go to "My Channel" in Youtube menu bar on the left and take your channel name from there.', SFSI_PLUS_DOMAIN ); ?>
+                    	<?php  _e( 'To find your User ID/Channel ID, login to your YouTube account, click the user icon at the top right corner and select "Settings", then click "Advanced" under "Name" and you will find both your "Channel ID" and "User ID" under "Account Information".', SFSI_PLUS_DOMAIN ); ?>
                     </div>
                 </div>
             </div>
