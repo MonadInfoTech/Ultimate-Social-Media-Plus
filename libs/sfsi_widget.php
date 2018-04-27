@@ -638,7 +638,7 @@ function sfsi_plus_prepairIcons($icon_name,$is_front=0, $onpost="no", $fromPost 
 					 else if($sfsi_plus_section4_options['sfsi_plus_facebook_countsFrom']=="likes")
 					 {
 						 $fb_data=$socialObj->sfsi_get_fb($current_url);   
-						 $counts=$socialObj->format_num($fb_data['like_count']);
+						 $counts=$socialObj->format_num($fb_data);
 						 if(empty($counts))
 						 {
 						   $counts=(string) "0";
