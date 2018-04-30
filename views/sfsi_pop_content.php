@@ -308,10 +308,10 @@ $pin_url=($option2['sfsi_plus_pinterest_pageUrl']!='') ?  $option2['sfsi_plus_pi
 <div class="pop-overlay read-overlay demail-1" >
     <div class="pop_up_box sfsi_pop_up" >
        <h4>
-       		 <?php _e('Note: Also if you already offer a newsletter it makes sense to offer this option too, because it will get you more readers as explained', SFSI_PLUS_DOMAIN ); ?>
-           	(<a href="http://www.specificfeeds.com/rss" target="_new" style="color:#5A6570;display: inline;text-decoration:underline">
+           <?php _e('Note: Also if you already offer a newsletter it makes sense to offer this option too, because it will get you more readers as explained', SFSI_PLUS_DOMAIN ); ?>
+            (<a href="http://www.specificfeeds.com/rss" target="_new" style="color:#5A6570;display: inline;text-decoration:underline">
                 <?php  _e( 'learn more', SFSI_PLUS_DOMAIN ); ?>
-           	</a>). 
+            </a>). 
        </h4>
        <div class="button">
            <a href="javascript:;" class="hideemailpop" title="Ok, keep it active for the time being,I want to see how it works">
@@ -326,38 +326,33 @@ $pin_url=($option2['sfsi_plus_pinterest_pageUrl']!='') ?  $option2['sfsi_plus_pi
 
 <div class="pop-overlay read-overlay demail-2" >
     <div class="pop_up_box sfsi_pop_up" >
-      
        <h4 class="activate">
-              <?php  _e( 'Ok, fine, however for using this plugin for FREE, please tell us what you think about it (and what can be improved). It only takes a minute. Thank you!', SFSI_PLUS_DOMAIN ); ?>
+              <?php  _e( 'Ok, fine, however for using this plugin for FREE, please support us by activating a link back to our site:', SFSI_PLUS_DOMAIN ); ?>
        </h4>
-		
-
+    <?php $nonce = wp_create_nonce("active_plusfooter");?>
         <div class="button">
-            <a target="_blank" href="https://wordpress.org/support/plugin/ultimate-social-media-plus/#new-topic-0" class="" title="Ok, give feedback">
-                <?php  _e( 'Ok, give feedback', SFSI_PLUS_DOMAIN ); ?>
+            <a href="javascript:;" class="sfsiplus_activate_footer activate" title="Ok, activate link" data-nonce="<?php echo $nonce;?>">
+                <?php  _e( 'Ok, activate link', SFSI_PLUS_DOMAIN ); ?>
             </a>
         </div>
-        <a href="javascript:;" id="deac_email3" title="Don’t give feedback">
-            <?php  _e( 'Don’t give feedback', SFSI_PLUS_DOMAIN ); ?>
+        <a href="javascript:;" id="deac_email3" title="Don’t activate link">
+            <?php  _e( 'Don’t activate link', SFSI_PLUS_DOMAIN ); ?>
         </a>
   </div>
 </div>
 
-<div class="pop-overlay read-overlay demail-3">
+<div class="pop-overlay read-overlay demail-3" >
     <div class="pop_up_box sfsi_pop_up" >
        <h4>
-              <?php  _e( 'You’re a toughie. Last try: as a minimum, could you please support us by activating a link back to our site? ', SFSI_PLUS_DOMAIN ); ?>
+              <?php  _e( 'You’re a toughie. Last try: As a minimum, could you please review this plugin (with 5 stars)? It only takes a minute. Thank you!', SFSI_PLUS_DOMAIN ); ?>
        </h4>
-
-      <?php $nonce = wp_create_nonce("active_plusfooter");?>
-
         <div class="button">
-            <a href="javascript:;" target="_new" class="sfsiplus_activate_footer activate" data-nonce="<?php echo $nonce;?>" title="Ok, activate link" >
-                <?php  _e( 'Ok, activate link', SFSI_PLUS_DOMAIN ); ?>
+            <a href="https://wordpress.org/support/plugin/ultimate-social-media-plus/reviews?rate=5#new-post" target="_new" class="hidePop activate" title="Ok, Review it" >
+                <?php  _e( 'Ok, Review it', SFSI_PLUS_DOMAIN ); ?>
             </a>
         </div>
-        <a href="javascript:;" class="hidePop" title="Don’t activate and exit">
-            <?php  _e( 'Don’t activate and exit', SFSI_PLUS_DOMAIN ); ?>
+        <a href="javascript:;" class="hidePop" title="Don’t review and exit">
+            <?php  _e( 'Don’t review and exit', SFSI_PLUS_DOMAIN ); ?>
         </a>
       </div>
 </div> <!-- END email deactivate pop-ups -->

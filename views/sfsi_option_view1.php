@@ -100,7 +100,7 @@
 						<?php if(get_option('sfsi_plus_footer_sec')=="yes") { $nonce = wp_create_nonce("remove_plusfooter"); ?> <a style="font-size:13px;margin-left:30px;color:#777777;" href="javascript:;" class="sfsiplus_removeFooter" data-nonce="<?php echo $nonce;?>"><?php  _e( 'Remove credit link', SFSI_PLUS_DOMAIN); ?></a>
                      	<?php } ?>
                    </span>
-                	<label class="expanded-area" >
+                	<label class="expanded-area">
                 		<?php  _e( 'Everybody uses email – that’s why it’s much more effective than social media to make people follow you', SFSI_PLUS_DOMAIN); ?> 
                 		(<a href="http://www.entrepreneur.com/article/230949" target="_new">
                 			<?php  _e( 'learn more', SFSI_PLUS_DOMAIN); ?>
