@@ -1,13 +1,13 @@
 <?php
 /*
 Plugin Name: Ultimate Social Media PLUS
-Plugin URI: http://ultimatelysocial.com
+Plugin URI: http://socialshare.pro/
 Description: The best social media plugin on the market. And 100% FREE. Allows you to add social media & share icons to your blog (esp. Facebook, Twitter, Email, RSS, Pinterest, Instagram, Google+, LinkedIn, Share-button). It offers a wide range of design options and other features. 
-Author: UltimatelySocial
+Author: social share pro
 Text Domain: ultimate-social-media-plus
 Domain Path: /languages
-Author URI: http://ultimatelysocial.com
-Version: 2.8.5
+Author URI: http://socialshare.pro/
+Version: 2.8.6
 License: GPLv2
 */
 
@@ -92,7 +92,7 @@ register_deactivation_hook(__FILE__, 'sfsi_plus_deactivate_plugin');
 //register_uninstall_hook(__FILE__, 'sfsi_plus_Unistall_plugin');
 
 /*Plugin version setup*/
-if(!get_option('sfsi_plus_pluginVersion') || get_option('sfsi_plus_pluginVersion') < 2.85)
+if(!get_option('sfsi_plus_pluginVersion') || get_option('sfsi_plus_pluginVersion') < 2.86)
 {
 	add_action("init", "sfsi_plus_update_plugin");
 }

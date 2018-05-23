@@ -61,19 +61,19 @@ class sfsi_plus_SocialHelper
 	/* get facebook page likes */
 	function sfsi_get_fb_pagelike($url)
 	{
-		$appid = '954871214567352';
-   		$appsecret = 'a780eb3d3687a084d6e5919585cc6a12';
-		$json_url ='https://graph.facebook.com/'.$url.'?fields=fan_count&access_token='.$appid.'|'.$appsecret;
-		$json_string = $this->file_get_contents_curl($json_url);
-		$json = json_decode($json_string, true);
+		$appid 		 = '954871214567352';
+   		$appsecret   	 = 'a780eb3d3687a084d6e5919585cc6a12';
+		$json_url 	 ='https://graph.facebook.com/'.$url.'?fields=fan_count&access_token='.$appid.'|'.$appsecret;
+		$json_string 	 = $this->file_get_contents_curl($json_url);
+		$json 		 = json_decode($json_string, true);
 		return isset($json['fan_count'])? $json['fan_count']:0;
 	}
 
 	/* get google+ follwers  */
 	function sfsi_get_google($url,$google_api_key)
 	{   
-	   if(filter_var($url, FILTER_VALIDATE_URL) && !empty($google_api_key))
-	   {
+	   //if(filter_var($url, FILTER_VALIDATE_URL) && !empty($google_api_key))
+	   //{
 			$url = parse_url($url);
 			$url_path=explode('/',$url['path']);
 			if(isset($url_path))
@@ -94,11 +94,11 @@ class sfsi_plus_SocialHelper
 			{
 				return 0;
 			}    
-	   }
+	   /*}
 	   else
 	   {
 		  return 0;
-	   }
+	   }*/
 	}
 
 	/* get google+ likes */

@@ -709,7 +709,7 @@ function sfsi_plus_prepairIcons($icon_name,$is_front=0, $onpost="no", $fromPost 
 				
 				//$visit_icon = $visit_iconsUrl."google.png";
 				
-				$url = ($sfsi_plus_section2_options['sfsi_plus_google_pageURL'])?$sfsi_plus_section2_options['sfsi_plus_google_pageURL'] : 'javascript:void(0);';
+				$url = ($sfsi_plus_section2_options['sfsi_plus_google_pageURL']) ? $sfsi_plus_section2_options['sfsi_plus_google_pageURL'] : 'javascript:void(0);';
 				
 				/* check for icons to display */     
 				if($sfsi_plus_section2_options['sfsi_plus_googleLike_option']=="yes" || $sfsi_plus_section2_options['sfsi_plus_googleShare_option']=="yes")
@@ -749,9 +749,10 @@ function sfsi_plus_prepairIcons($icon_name,$is_front=0, $onpost="no", $fromPost 
 					 }
 					 else if($sfsi_plus_section4_options['sfsi_plus_google_countsFrom']=="follower")
 					 {
-						$api_key=$sfsi_plus_section4_options['sfsi_plus_google_api_key'];
-						$followers=$socialObj->sfsi_get_google($url,$api_key);
-						$counts=$followers;
+						$api_key   = $sfsi_plus_section4_options['sfsi_plus_google_api_key'];
+						$followers = $socialObj->sfsi_get_google($url,$api_key);
+						$counts    = $followers;
+						
 						if(empty($counts))
 						{
 							$counts = (string) "0";
