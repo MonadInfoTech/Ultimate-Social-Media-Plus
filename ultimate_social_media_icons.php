@@ -46,6 +46,7 @@ function sfsi_plus_freemius() {
 // Init Freemius.
 sfsi_plus_freemius();
 sfsi_plus_freemius()->add_action('after_uninstall', 'sfsi_plus_Unistall_plugin'); 
+
 // Signal that SDK was initiated.
 do_action('usmp_fs_loaded');
 
