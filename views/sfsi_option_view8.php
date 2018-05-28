@@ -271,6 +271,9 @@
                         &lt;?php echo DISPLAY_ULTIMATE_PLUS(); ?&gt;
                         
 						<?php _e('Or use the shortcode [DISPLAY_ULTIMATE_PLUS] to display them wherever you want.',SFSI_PLUS_DOMAIN); ?>
+
+						<?php _e('Need help with that? Ask us! <a style="color:#5a6570 !important;" target="_blank" href="https://wordpress.org/support/plugin/ultimate-social-media-plus#no-topic-0"><b>Click here</b></a>',SFSI_PLUS_DOMAIN); ?>
+
                     </label>
 				</p>
 			</div>

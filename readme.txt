@@ -1,8 +1,8 @@
-﻿=== Social Icons Social Buttons ===
+﻿=== Social Share Icons & Social Share Buttons ===
 Contributors: socialsharepro
 Tags: Share, sharing, share buttons, share button, share social media, share icons, social buttons, sharing buttons, sharing icons, social media icons, social share, social sharing
 Requires at least: 3.0
-Tested up to: 4.9.4
+Tested up to: 4.9.6
 Stable tag: 2.8.6
 License: GPLv2 
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -13,7 +13,13 @@ Social sharing plugin adding social buttons.
 
 This social plugin makes placing social share icons on your site REALLY easy. 
 
-Key features: 
+This free plugin has a lot to offer. Even more can be found in the Premium Plugin, please watch this short video: 
+
+[vimeo https://vimeo.com/269140798] 
+
+See [all features of the Premium plugin](https://www.ultimatelysocial.com/usm-premium/).
+
+Key features of the free plugin: 
 
 - Select from a **wide range of social share platforms** (see a list of them below)
 - Pick from **16 stylish design styles** for your social share buttons
@@ -24,6 +30,11 @@ Key features:
 - Display a **pop-up** (on all or only on selected pages) asking people to follow or share you
 - Allow visitors to **subscribe to your site** and receive new posts automatically by email 
 - Select from **many other customization features** for your social share buttons
+
+For GDPR compliance, please have a look at our [Social Media GDPR Compliance page](https://ultimatelysocial.com/gdpr/). 
+
+In case of issues or questions please ask in the [Support forum] (https://wordpress.org/support/plugin/ultimate-social-media-plus).
+
 
 The plugin takes you through eight easy-to-answer questions so that configuring your social share icons becomes a no-brainer: 
 
@@ -205,6 +216,8 @@ The free plugin already provides tons of options for social sharing (as outlined
 * Many more settings & options
 
 See [all features of the Premium Plugin](https://www.ultimatelysocial.com/usm-premium).
+
+In case of issues or questions please ask in the [Support forum] (https://wordpress.org/support/plugin/ultimate-social-media-plus).
 
 == Installation ==
 Extract the zip file and drop the contents into the wp-content/plugins/ directory of your WordPress installation. Then activate the plugin from the plugins page.
@@ -434,9 +447,13 @@ The premium plugin offrs many more social buttons from other social media platfo
 
 = 2.8.6 =
 
+
 = 2.8.5 =
+* Cookies don't get set anymore if selected to show pop-up when user scrolls to end of page (relevant for GDPR compliance)
 
 = 2.8.4 =
+* Like count issue fixed
+* Youtube subscribe issue fixed
 
 = 2.8.3 =
 * Instagram followers count issue fixed

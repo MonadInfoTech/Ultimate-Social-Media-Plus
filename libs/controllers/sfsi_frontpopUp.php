@@ -58,6 +58,7 @@ function sfsi_plus_check_PopUp($content)
      	echo ob_get_clean();
      	return $content;
      }
+     
      if($sfsi_plus_section7_options['sfsi_plus_Shown_pop']=="ETscroll")
      {
 		$time_popUp = (int) $sfsi_plus_section7_options['sfsi_plus_Shown_popupOnceTime'];
@@ -101,6 +102,7 @@ function sfsi_plus_check_PopUp($content)
      <?php 
      	echo ob_get_clean();
      }
+
      if($sfsi_plus_section7_options['sfsi_plus_Shown_pop']=="LimitPopUp")
      {
 	 	$time_popUp = (int) $sfsi_plus_section7_options['sfsi_plus_Shown_popuplimitPerUserTime'];
