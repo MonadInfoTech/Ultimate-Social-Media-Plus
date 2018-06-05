@@ -686,6 +686,11 @@ when people click on it, they can call you, or send you an SMS). ', SFSI_PLUS_DO
     	</div>
 
     <!-- END Custom icon section here -->
+
+	
+	<?php sfsi_plus_ask_for_help(2); ?>
+
+
     <!-- SAVE BUTTON SECTION   --> 
     <div class="save_button tab_2_sav">
         <img src="<?php echo SFSI_PLUS_PLUGURL; ?>images/ajax-loader.gif" class="loader-img" />

@@ -478,7 +478,11 @@
     	</div>
     </div>
     <!--Content of 4-->    
-    
+
+
+    <?php sfsi_plus_ask_for_help(3); ?>
+
+
 	<!-- SAVE BUTTON SECTION   --> 
 	<div class="save_button tab_3_sav">
 	     <img src="<?php echo SFSI_PLUS_PLUGURL ?>images/ajax-loader.gif" class="loader-img" />

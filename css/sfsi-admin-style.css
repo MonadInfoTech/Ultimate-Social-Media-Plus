@@ -1095,13 +1095,8 @@ ul#adminmenu li.toplevel_page_sfsi-plus-options a.current, ul#adminmenu li.tople
 .language-field{float:left;width:24%;}
 .language-field select{width:100%;}
 .icons_size{clear:both;}
-.plus_custom-img img, .sfsiplus_custom_section img, .sfsiplus_custom_iconOrder img, .plus_sfsi_sample_icons img{
-    width: 51px;
-}
-.cstomskins_upload span.sfsi_plus-bgimage
-{
-	background-size: 51px 51px !important;
-}
+.plus_custom-img img, .sfsiplus_custom_section img, .sfsiplus_custom_iconOrder img, .plus_sfsi_sample_icons img{width: 51px;}
+.cstomskins_upload span.sfsi_plus-bgimage{background-size: 51px 51px !important;}
 
 /* poonam */
 .sfsi_plus_premium_brdr_box{box-sizing: border-box;}
@@ -1168,11 +1163,8 @@ p.sfsi_plus_instagram_shared_premium{float: right;width: 41%;line-height: 20px;c
 .sfsi_plus_new_notification_image{margin:0 20px 0px 20px;width: 100%;text-align: center;overflow: hidden;}
 .sfsi_plus_new_notification_image img{ width:auto;}
 .sfsi_plus_new_notification_learnmore{float:right;}
-.sfsi_plus_new_notification_learnmore {background-color: #00c853; display: block;text-decoration: none;text-align: center;font-size: 20px;font-family: Arial, Helvetica, sans-serif;width: 150px; margin-bottom: -4px;margin-right: -4px; position: relative;color: #fff;padding: 70px 10px;
-}
-.sfsi_plus_new_notification_body_link a{
-     display: block;text-decoration: none;text-align: center;font-size: 20px;font-family: Arial, Helvetica, sans-serif;color: #fff;
-}
+.sfsi_plus_new_notification_learnmore {background-color: #00c853; display: block;text-decoration: none;text-align: center;font-size: 20px;font-family: Arial, Helvetica, sans-serif;width: 150px; margin-bottom: -4px;margin-right: -4px; position: relative;color: #fff;padding: 70px 10px;}
+.sfsi_plus_new_notification_body_link a{display: block;text-decoration: none;text-align: center;font-size: 20px;font-family: Arial, Helvetica, sans-serif;color: #fff;}
 /*Tab 4*/
 .tab4 .sfsi_plus_tokenGenerateButton { margin: 25px 0; }
 .tab4 .sfsi_plus_tokenGenerateButton p { display: inline-block; margin-bottom: 11px; vertical-align: middle;width: 100%; }
@@ -1263,12 +1255,7 @@ ul.sfsi_show_hide_section {float: right;width: 14%;}
 .support-forum-green-div a{text-decoration: none !important;}
 .respond-text p{margin: 10px 0 0 0px !important}
 .respond-text {margin-left: 20px;float: left;margin-bottom: 8px;}
-
-#accordion, #accordion1 {
-    float: left;
-    clear: both;
-    width: 100%;
-}
+#accordion, #accordion1 {float: left;clear: both;width: 100%;}
 
 @media (min-width: 1631px) and (max-width: 1631px){
     .premiumComponent{width: 52% !important;}
@@ -1276,3 +1263,16 @@ ul.sfsi_show_hide_section {float: right;width: 14%;}
     .premiumButtonsContainer .premiumSection2{width: 41% !important;}
     .premiumButtonsContainer .premiumSection3{width: 41% !important;}
 }
+
+/* Link to support forum for different languages */
+#sfsi_plus_langnotice { position:relative; padding: 15px 10px;margin: 0px 15px 35px 0px;}
+#sfsi_plus_langnotice .sfsi-notice-dismiss { position: absolute;right: 1px;border: none;margin: 0;padding: 9px;background: none;color: #72777c;cursor: pointer;top: 5px;}
+
+/* Link to support forum left of every Save button */
+.ui-accordion .ui-accordion-content { position: relative; }
+.sfsi_plus_askforhelp     { float: left;width: 32%;position: absolute;bottom: 30px;}
+.sfsi_plus_askforhelp img { float: left;width: 35px;height: 35px;vertical-align: middle;    }
+.sfsi_plus_askforhelp span{ float: left;margin-left: 6px;margin-top: 8px;}
+.askhelpInview2           { bottom: 25px; }
+.askhelpInview3           { bottom: 51px; }
+.askhelpInview7           { bottom: 50px; }

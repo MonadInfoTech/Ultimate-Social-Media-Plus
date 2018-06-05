@@ -1132,6 +1132,21 @@ var global_error = 0;
 SFSI(document).ready(function(s) {
     //changes done {Monad}
 	
+    SFSI(document).on("click", ".sfsi-notice-dismiss", function(){
+        
+        SFSI.ajax({
+            url:ajax_object.ajax_url,
+            type:"post",
+            data:{action: "sfsi_plus_dismiss_lang_notice"},
+            success:function(e) {
+                if(false != e){
+                    SFSI(".sfsi-notice-dismiss").parent().remove();
+                }
+            }
+        });
+    });
+
+
 	SFSI(".lanOnchange").change(function(){
 		var currentDrpdown = SFSI(this).parents(".icons_size");
 		var data = {

@@ -535,6 +535,8 @@
     </div>
     <?php } ?>
     
+	<?php sfsi_plus_ask_for_help(8); ?>
+
 	<!-- SAVE BUTTON SECTION   --> 
 	<div class="save_button">
        <img src="<?php echo SFSI_PLUS_PLUGURL ?>images/ajax-loader.gif" class="loader-img" />

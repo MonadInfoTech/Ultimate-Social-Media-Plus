@@ -7,7 +7,7 @@ Author: social share pro
 Text Domain: ultimate-social-media-plus
 Domain Path: /languages
 Author URI: http://socialshare.pro/
-Version: 2.8.6
+Version: 2.8.8
 License: GPLv2
 */
 
@@ -93,7 +93,7 @@ register_deactivation_hook(__FILE__, 'sfsi_plus_deactivate_plugin');
 //register_uninstall_hook(__FILE__, 'sfsi_plus_Unistall_plugin');
 
 /*Plugin version setup*/
-if(!get_option('sfsi_plus_pluginVersion') || get_option('sfsi_plus_pluginVersion') < 2.86)
+if(!get_option('sfsi_plus_pluginVersion') || get_option('sfsi_plus_pluginVersion') < 2.88)
 {
 	add_action("init", "sfsi_plus_update_plugin");
 }
@@ -628,6 +628,7 @@ function sfsi_plus_admin_notice()
 	}
 	?>
 	<?php
+	
 	if(get_option("sfsi_plus_show_premium_notification") == "yes")
 	{
 		?>
@@ -747,10 +748,10 @@ function sfsi_plus_admin_notice()
 				
 			</style>
 			
-			<!-- <div class="updated sfsi_plus_show_mobile_setting_notification" style="<?php echo $style; ?>background-color: #38B54A; color: #fff; font-size: 18px;">
+			<!-- <div class="updated sfsi_plus_show_mobile_setting_notification" style="<?php //echo $style; ?>background-color: #38B54A; color: #fff; font-size: 18px;">
 				<div class="alignleft" style="margin: 9px 0; width: 95%; line-height: 25px;">
-				<b><?php _e( 'Over 50% of visitors are mobile visitors:', SFSI_PLUS_DOMAIN); ?></b>	
-				<?php _e( ' Make sure your social media icons look good on mobile too, so that people like & share your site. With the premium plugin you can define the location of the icons separately on mobile: ', SFSI_PLUS_DOMAIN); ?><a href="https://www.ultimatelysocial.com/usmpremium/?utm_expid=92383224-1.TfahStjhTrSpmi_nxkXt1w.1&utm_source=usmplus_settings_page&utm_campaign=check_mobile&utm_medium=banner" target="_blank"><?php _e( 'Check it out', SFSI_PLUS_DOMAIN); ?></a>	
+				<b><?php //_e( 'Over 50% of visitors are mobile visitors:', SFSI_PLUS_DOMAIN); ?></b>	
+				<?php //_e( ' Make sure your social media icons look good on mobile too, so that people like & share your site. With the premium plugin you can define the location of the icons separately on mobile: ', SFSI_PLUS_DOMAIN); ?><a href="https://www.ultimatelysocial.com/usmpremium/?utm_expid=92383224-1.TfahStjhTrSpmi_nxkXt1w.1&utm_source=usmplus_settings_page&utm_campaign=check_mobile&utm_medium=banner" target="_blank"><?php //_e( 'Check it out', SFSI_PLUS_DOMAIN); ?></a>	
 				</div>
 				<div class="alignright">
 					<form method="post" class="sfsi_plus_mobileNoticeDismiss">
@@ -762,6 +763,7 @@ function sfsi_plus_admin_notice()
 			<?php
 		}
 	}
+	
 	$phpVersion = phpVersion();
 	if($phpVersion <= '5.4')
 	{
@@ -864,8 +866,8 @@ function sfsi_plus_action_links ( $mylinks )
 {
 	$linkQuestion   = '<a target="_blank" href="https://goo.gl/MU6pTN#new-topic-0" style="color:#FF0000;"><b>Need help?</b></a>';		
 	$linkProVersion = '<a href="https://www.ultimatelysocial.com/usm-premium/?utm_source=usmplus_manage_plugin_page&utm_campaign=check_out_pro_version&utm_medium=banner" style="color:#38B54A;"><b>Check out pro version</b></a>';
-	$mylinks[]  = @$mylinks['edit'];
-	$mylinks[] 	= '<a href="'.admin_url("/admin.php?page=sfsi-plus-options").'">Settings</a>';
+	$mylinks[]  	= @$mylinks['edit'];
+	$mylinks[] 		= '<a href="'.admin_url("/admin.php?page=sfsi-plus-options").'">Settings</a>';
 	unset ($mylinks['edit']);
 
 	array_unshift($mylinks, $linkProVersion);
@@ -929,4 +931,210 @@ function sfsi_plus_curl_error_notification()
         <?php  
     }   
 }
-?>
+
+// ********************************* Link to support forum for different languages STARTS *******************************//
+
+function sfsi_plus_get_language_notice_text(){
+
+    $currLang = get_locale();
+    $text     = '';
+
+    switch ($currLang) {
+
+        // Arabic
+        case 'ar':
+            
+            $text = "hal tatakalam alearabia? 'iidha kanat ladayk 'asyilat hawl almukawan al'iidafii l Ultimate Social Media , aitruh sualik fi muntadaa aldaem , sanuhawil alrada biallughat alearabiat: <a target='_blank' href='https://goo.gl/o42Beq'><b>'unqur huna</b></a>";
+            break;
+
+        // Chinese - simplified
+        case 'zh-Hans':
+            
+            $text = "你会说中文吗？如果您有关于Ultimate Social Media插件的问题，请在支持论坛中提出您的问题，我们将尝试用中文回复：<a target='_blank' href='https://goo.gl/o42Beq'><b>点击此处</b></a>";
+            break;
+
+        // Chinese - traditional
+        case 'zh-Hant':
+            
+            $text = "你會說中文嗎？如果您有關於Ultimate Social Media插件的問題，請在支持論壇中提出您的問題，我們將嘗試用中文回复：<a target='_blank' href='https://goo.gl/o42Beq'><b>點擊此處</b></a>";
+            break;
+
+        // Dutch, Dutch (Belgium)
+        case 'nl_NL': case 'nl_BE':                
+            $text = "Jij spreekt Nederlands? Als je vragen hebt over de Ultimate Social Media-plug-in, stel je vraag in het ondersteuningsforum, we zullen proberen in het Nederlands te antwoorden: <a target='_blank' href='https://goo.gl/o42Beq'>klik hier</a>";
+            break;
+
+        // French (Belgium), French (France)
+        case 'fr_BE': case 'fr_FR':
+            
+            $text = "Vous parlez français? Si vous avez des questions sur le plugin Ultimate Social Media, posez votre question sur le forum de support, nous essaierons de répondre en français: <a target='_blank' href='https://goo.gl/o42Beq'>Cliquez ici</a>";
+            break;
+
+        // German, German (Switzerland)
+        case 'de': case 'de_CH':
+
+            $text = "Du sprichst Deutsch? Wenn Du Fragen zum Ultimate Social Media-Plugins hast, einfach im Support Forum fragen. Wir antworten auch auf Deutsch! <a target='_blank' href='https://goo.gl/o42Beq'>Klicke hier</a>"; 
+            break;
+
+        // Greek
+        case 'el':
+            
+            $text = "Μιλάτε Ελληνικά? Αν έχετε ερωτήσεις σχετικά με το plugin Ultimate Social Media, ρωτήστε την ερώτησή σας στο φόρουμ υποστήριξης, θα προσπαθήσουμε να απαντήσουμε στα ελληνικά: <a target='_blank' href='https://goo.gl/o42Beq'>Κάντε κλικ εδώ</a>";
+            break;
+
+        // Hebrew
+        case 'he_IL':
+            
+            $text = "אתה מדבר עברית? אם יש לך שאלות על תוסף המדיה החברתית האולטימטיבית, שאל את השאלה שלך בפורום התמיכה, ננסה לענות בעברית: <a target='_blank' href='https://goo.gl/o42Beq'>לחץ כאן</a>";
+            break;
+
+        // Hindi
+        case 'hi_IN':
+            
+            $text = "आप हिंदी बोलते हो? यदि आपके पास अल्टीमेट सोशल मीडिया प्लगइन के बारे में कोई प्रश्न है, तो समर्थन फोरम में अपना प्रश्न पूछें, हम हिंदी में जवाब देने का प्रयास करेंगे: <a target='_blank' href='https://goo.gl/o42Beq'>यहां क्लिक करें</a>"; 
+            break;
+
+        // Indonesian
+        case 'id':
+            
+            $text = "Anda berbicara bahasa Indonesia? Jika Anda memiliki pertanyaan tentang plugin Ultimate Social Media, ajukan pertanyaan Anda di Forum Dukungan, kami akan mencoba menjawab dalam Bahasa Indonesia: <a target='_blank' href='https://goo.gl/o42Beq'>Klik di sini</a>";
+
+            break;
+
+        // Italian
+        case 'it_IT':
+            
+            $text = "Tu parli italiano? Se hai domande sul plugin Ultimate Social Media, fai la tua domanda nel Forum di supporto, cercheremo di rispondere in italiano: <a target='_blank' href='https://goo.gl/o42Beq'>clicca qui</a>";
+            
+            break;                   
+
+        // Japanese
+        case 'ja':
+            
+            $text = "あなたは日本語を話しますか？アルティメットソーシャルメディアのプラグインに関する質問がある場合は、サポートフォーラムで質問してください。日本語で対応しようと思っています：<a target='_blank' href='https://goo.gl/o42Beq'>ここをクリック</a>";
+
+            break;                       
+
+        // Korean
+        case 'ko_KR ':
+
+            $text = "한국어를 할 줄 아세요? 궁극적 인 소셜 미디어 플러그인에 대해 궁금한 점이 있으면 지원 포럼에서 질문하십시오. 한국어로 답변하려고합니다 : <a target='_blank' href='https://goo.gl/o42Beq'>여기를 클릭하십시오.</a>"; 
+
+            break;                       
+
+        // Persian, Persian (Afghanistan)
+        case 'fa_IR':case 'fa_AF':
+            
+            $text = "شما فارسی صحبت می کنید؟ اگر سوالی در مورد پلاگین رسانه Ultimate Social دارید، سوال خود را در انجمن پشتیبانی بپرسید، سعی خواهیم کرد به فارسی پاسخ دهید: <a target='_blank' href='https://goo.gl/o42Beq'>اینجا را کلیک کنید</a>";
+            
+            break;                       
+
+        // Polish
+
+        case 'pl_PL':
+            $text = "Mówisz po polsku? Jeśli masz pytania dotyczące wtyczki Ultimate Social Media, zadaj pytanie na Forum pomocy technicznej, postaramy się odpowiedzieć po polsku: <a target='_blank' href='https://goo.gl/o42Beq'>Kliknij tutaj</a>";
+            break;
+
+        //Portuguese (Brazil), Portuguese (Portugal)
+
+        case 'pt_BR': case 'pt_PT':
+
+            $text = "Você fala português? Se você tiver dúvidas sobre o plug-in Ultimate Social Media, faça sua pergunta no Fórum de suporte, tentaremos responder em português: <a target='_blank' href='https://goo.gl/o42Beq'>Clique aqui</a>";
+
+            break;                       
+
+        // Russian, Russian (Ukraine)
+        case 'ru_RU': case 'ru_UA': 
+
+            $text = "Ты говоришь по-русски? Если у вас есть вопросы о плагине Ultimate Social Media, задайте свой вопрос в форуме поддержки, мы постараемся ответить на русский: <a target='_blank' href='https://goo.gl/o42Beq'>Нажмите здесь</a>";
+            
+            break;                       
+        
+        /* Spanish (Argentina), Spanish (Chile), Spanish (Colombia), Spanish (Mexico),
+            Spanish (Peru), Spanish (Puerto Rico), Spanish (Spain), Spanish (Venezuela) */
+
+        case 'es_AR': case 'es_CL': case 'es_CO': case 'es_MX':case 'es_PE':case 'es_PR':
+        case 'es_ES': case 'es_VE':
+
+            $text = "¿Tu hablas español? Si tiene alguna pregunta sobre el complemento Ultimate Social Media, formule su pregunta en el foro de soporte, intentaremos responder en español: <a target='_blank' href='https://goo.gl/o42Beq'>haga clic aquí</a>";
+            break;                       
+
+        //  Swedish
+
+        case 'sv_SE':
+            
+            $text = "Pratar du svenska? Om du har frågor om programmet Ultimate Social Media, fråga din fråga i supportforumet, vi försöker svara på svenska: <a target='_blank' href='https://goo.gl/o42Beq'>Klicka här</a>";
+            break;                       
+
+        //  Turkish
+
+        case 'tr_TR':
+            $text = "Sen Türkçe konuş? Nihai Sosyal Medya eklentisi hakkında sorularınız varsa, sorunuza Destek Forumu'nda sorun, Türkçe olarak cevap vermeye çalışacağız: <a target='_blank' href='https://goo.gl/o42Beq'>Tıklayın</a>";
+            break;                       
+
+        //  Ukrainian
+
+        case 'uk':
+            $text = "Ви говорите по-українськи? Якщо у вас є запитання про плагін Ultimate Social Media, задайте своє питання на Форумі підтримки, ми спробуємо відповісти українською: <a target='_blank' href='https://goo.gl/o42Beq'>натисніть тут</a>";
+            break;                       
+
+        //  Vietnamese
+
+        case 'vi':
+            $text = "Bạn nói tiếng việt không Nếu bạn có câu hỏi về plugin Ultimate Social Media, hãy đặt câu hỏi của bạn trong Diễn đàn hỗ trợ, chúng tôi sẽ cố gắng trả lời bằng tiếng Việt: <a target='_blank' href='https://goo.gl/o42Beq'>Nhấp vào đây</a>";
+            break;    
+    }
+
+    return $text;
+}
+
+function sfsi_plus_language_notice(){
+
+    if (isset($_GET['page']) && "sfsi-plus-options" == $_GET['page']) : 
+
+        $langText    = sfsi_plus_get_language_notice_text();
+        $isDismissed = get_option('sfsi_plus_lang_notice_dismissed');
+
+        if(!empty($langText) && false == $isDismissed) { ?>
+                    
+            <div id="sfsi_plus_langnotice" class="notice notice-info">
+
+                <p><?php _e($langText,SFSI_PLUS_DOMAIN); ?></p>
+
+                <button type="button" class="sfsi-notice-dismiss notice-dismiss"></button>
+
+            </div>
+
+        <?php } ?>
+
+    <?php endif;
+}
+
+
+function sfsi_plus_dismiss_lang_notice(){
+	echo update_option('sfsi_plus_lang_notice_dismissed',true) ? "true" : "false";
+	die;
+}
+
+add_action( 'wp_ajax_sfsi_plus_dismiss_lang_notice', 'sfsi_plus_dismiss_lang_notice' );
+
+// ********************************* Link to support forum for different languages CLOSES *******************************//
+
+
+// ********************************* Link to support forum left of every Save button STARTS *******************************//
+
+function sfsi_plus_ask_for_help($viewNumber){ ?>
+
+    <div class="sfsi_plus_askforhelp askhelpInview<?php echo $viewNumber; ?>">
+	
+		<img src="<?php echo SFSI_PLUS_PLUGURL."images/questionmark.png"?>"/>
+		
+		<span>Questions? <a target="_blank" href="https://goo.gl/7TuSZX"><b>Ask us</b></a> — we will respond asap!</span>
+
+	</div>
+
+<?php }
+
+// ********************************* Link to support forum left of every Save button CLOSES *******************************//
+
+

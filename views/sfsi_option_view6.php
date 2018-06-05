@@ -104,6 +104,8 @@
 	
   </div><!-- END icons position section -->
   
+  <?php sfsi_plus_ask_for_help(6); ?>
+
      <!-- SAVE BUTTON SECTION   --> 
   <div class="save_button">
        <img src="<?php echo SFSI_PLUS_PLUGURL ?>images/ajax-loader.gif" class="loader-img" />
