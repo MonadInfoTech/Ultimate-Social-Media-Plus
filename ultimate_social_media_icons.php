@@ -134,31 +134,36 @@ function DISPLAY_ULTIMATE_PLUS($args = null, $content = null)
 		return __('Kindly go to setting page and check the option "Place them manually"', SFSI_PLUS_DOMAIN);
 	}
 }
-//adding some meta tags for facebook news feed {Monad}
+//adding some meta tags for facebook news feed
 function sfsi_plus_checkmetas()
 {
+	$adding_plustags = "yes";
+
 	if ( ! function_exists( 'get_plugins' ) )
 	{
 		require_once ABSPATH . 'wp-admin/includes/plugin.php';
 	}
+	
 	$all_plugins = get_plugins();
-	foreach($all_plugins as $key => $plugin)
-	{
-		if(is_plugin_active($key))
-		{
+
+	foreach($all_plugins as $key => $plugin):
+	
+		if(is_plugin_active($key)):
+		
 			if(preg_match("/(seo|search engine optimization|meta tag|open graph|opengraph|og tag|ogtag)/im", $plugin['Name']) || preg_match("/(seo|search engine optimization|meta tag|open graph|opengraph|og tag|ogtag)/im", $plugin['Description']))
 			{
-				update_option("adding_plustags", "no");
+				$adding_plustags = "no";
 				break;
 			}
-			else
-			{
-				update_option("adding_plustags", "yes");
-			}
-		}
-	}
+
+		endif;
+
+	endforeach;
+
+	update_option('adding_plustags',$adding_plustags);
 }
-if ( ! is_admin() )
+
+if ( is_admin() )
 {
 	sfsi_plus_checkmetas();
 }
