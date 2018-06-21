@@ -392,43 +392,45 @@ function sfsi_plus_options_updater5()
 	if ( !wp_verify_nonce( $_POST['nonce'], "update_plus_step5")) {
       echo  json_encode(array("wrong_nonce")); exit;
    	}
-	$sfsi_plus_icons_size                = isset($_POST["sfsi_plus_icons_size"]) ? $_POST["sfsi_plus_icons_size"] : '51'; 
-    $sfsi_plus_icons_spacing             = isset($_POST["sfsi_plus_icons_spacing"]) ? $_POST["sfsi_plus_icons_spacing"] : '2'; 
+	$sfsi_plus_icons_size                = isset($_POST["sfsi_plus_icons_size"]) 	  ? $_POST["sfsi_plus_icons_size"] : '51'; 
+    $sfsi_plus_icons_spacing             = isset($_POST["sfsi_plus_icons_spacing"])   ? $_POST["sfsi_plus_icons_spacing"] : '2'; 
     $sfsi_plus_icons_Alignment           = isset($_POST["sfsi_plus_icons_Alignment"]) ? $_POST["sfsi_plus_icons_Alignment"] : 'center'; 
-    $sfsi_plus_icons_perRow              = isset($_POST["sfsi_plus_icons_perRow"]) ? $_POST["sfsi_plus_icons_perRow"] : '5'; 
+    $sfsi_plus_icons_perRow              = isset($_POST["sfsi_plus_icons_perRow"]) 	  ? $_POST["sfsi_plus_icons_perRow"] : '5'; 
 	
-	$sfsi_plus_icons_language            = isset($_POST["sfsi_plus_icons_language"]) ? $_POST["sfsi_plus_icons_language"] : 'en_US'; 
+	$sfsi_plus_icons_language            = isset($_POST["sfsi_plus_icons_language"]) 	  ? $_POST["sfsi_plus_icons_language"] : 'en_US'; 
 	$sfsi_plus_icons_ClickPageOpen       = isset($_POST["sfsi_plus_icons_ClickPageOpen"]) ? $_POST["sfsi_plus_icons_ClickPageOpen"] : 'no'; 
-    $sfsi_plus_icons_float               = isset($_POST["sfsi_plus_icons_float"]) ? $_POST["sfsi_plus_icons_float"] : 'no';
-	$sfsi_plus_disable_floaticons		 = isset($_POST["sfsi_plus_disable_floaticons"]) ? $_POST["sfsi_plus_disable_floaticons"] : 'no';
-	$sfsi_plus_disable_viewport		     = isset($_POST["sfsi_plus_disable_viewport"]) ? $_POST["sfsi_plus_disable_viewport"] : 'no'; 
+    $sfsi_plus_icons_float               = isset($_POST["sfsi_plus_icons_float"]) 		  ? $_POST["sfsi_plus_icons_float"] : 'no';
+	$sfsi_plus_disable_floaticons		 = isset($_POST["sfsi_plus_disable_floaticons"])  ? $_POST["sfsi_plus_disable_floaticons"] : 'no';
+	$sfsi_plus_disable_viewport		     = isset($_POST["sfsi_plus_disable_viewport"]) 	  ? $_POST["sfsi_plus_disable_viewport"] : 'no'; 
     $sfsi_plus_icons_floatPosition       = isset($_POST["sfsi_plus_icons_floatPosition"]) ? $_POST["sfsi_plus_icons_floatPosition"] : 'center-right';
-    $sfsi_plus_icons_stick               = isset($_POST["sfsi_plus_icons_stick"]) ? $_POST["sfsi_plus_icons_stick"] : 'no';
-    $sfsi_plus_rss_MouseOverText         = isset($_POST["sfsi_plus_rss_MouseOverText"]) ? $_POST["sfsi_plus_rss_MouseOverText"] : '';
+    $sfsi_plus_icons_stick               = isset($_POST["sfsi_plus_icons_stick"]) 		  ? $_POST["sfsi_plus_icons_stick"] : 'no';
+    $sfsi_plus_rss_MouseOverText         = isset($_POST["sfsi_plus_rss_MouseOverText"])   ? $_POST["sfsi_plus_rss_MouseOverText"] : '';
     $sfsi_plus_email_MouseOverText       = isset($_POST["sfsi_plus_email_MouseOverText"]) ? $_POST["sfsi_plus_email_MouseOverText"] : '';
-    $sfsi_plus_twitter_MouseOverText     = isset($_POST["sfsi_plus_twitter_MouseOverText"]) ? $_POST["sfsi_plus_twitter_MouseOverText"] : '';
-    $sfsi_plus_facebook_MouseOverText    = isset($_POST["sfsi_plus_facebook_MouseOverText"]) ? $_POST["sfsi_plus_facebook_MouseOverText"] : '';
-    $sfsi_plus_google_MouseOverText      = isset($_POST["sfsi_plus_google_MouseOverText"]) ? $_POST["sfsi_plus_google_MouseOverText"] : '';
-    $sfsi_plus_linkedIn_MouseOverText    = isset($_POST["sfsi_plus_linkedIn_MouseOverText"]) ? $_POST["sfsi_plus_linkedIn_MouseOverText"] : '';
+
+    $sfsi_plus_twitter_MouseOverText     = isset($_POST["sfsi_plus_twitter_MouseOverText"])   ? $_POST["sfsi_plus_twitter_MouseOverText"] : '';
+    $sfsi_plus_facebook_MouseOverText    = isset($_POST["sfsi_plus_facebook_MouseOverText"])  ? $_POST["sfsi_plus_facebook_MouseOverText"] : '';
+    $sfsi_plus_google_MouseOverText      = isset($_POST["sfsi_plus_google_MouseOverText"])    ? $_POST["sfsi_plus_google_MouseOverText"] : '';
+    $sfsi_plus_linkedIn_MouseOverText    = isset($_POST["sfsi_plus_linkedIn_MouseOverText"])  ? $_POST["sfsi_plus_linkedIn_MouseOverText"] : '';
     $sfsi_plus_pinterest_MouseOverText   = isset($_POST["sfsi_plus_pinterest_MouseOverText"]) ? $_POST["sfsi_plus_pinterest_MouseOverText"] : '';
     $sfsi_plus_instagram_MouseOverText   = isset($_POST["sfsi_plus_instagram_MouseOverText"]) ? $_POST["sfsi_plus_instagram_MouseOverText"] : '';
-	$sfsi_plus_houzz_MouseOverText       = isset($_POST["sfsi_plus_houzz_MouseOverText"]) ? $_POST["sfsi_plus_houzz_MouseOverText"] : '';
-    $sfsi_plus_youtube_MouseOverText     = isset($_POST["sfsi_plus_youtube_MouseOverText"]) ? $_POST["sfsi_plus_youtube_MouseOverText"] : '';
-    $sfsi_plus_share_MouseOverText       = isset($_POST["sfsi_plus_share_MouseOverText"]) ? $_POST["sfsi_plus_share_MouseOverText"] : '';
-    $sfsi_plus_custom_orders             = isset($_POST["sfsi_plus_custom_orders"]) ? serialize($_POST["sfsi_plus_custom_orders"]) : '';
+	$sfsi_plus_houzz_MouseOverText       = isset($_POST["sfsi_plus_houzz_MouseOverText"]) 	  ? $_POST["sfsi_plus_houzz_MouseOverText"] : '';
+    $sfsi_plus_youtube_MouseOverText     = isset($_POST["sfsi_plus_youtube_MouseOverText"])   ? $_POST["sfsi_plus_youtube_MouseOverText"] : '';
+    $sfsi_plus_share_MouseOverText       = isset($_POST["sfsi_plus_share_MouseOverText"]) 	  ? $_POST["sfsi_plus_share_MouseOverText"] : '';
+    $sfsi_plus_custom_orders             = isset($_POST["sfsi_plus_custom_orders"]) 		  ? serialize($_POST["sfsi_plus_custom_orders"]) : '';
     
     
-    $sfsi_plus_rssIcon_order             = isset($_POST["sfsi_plus_rssIcon_order"]) ? $_POST["sfsi_plus_rssIcon_order"] : '1';
-    $sfsi_plus_emailIcon_order           = isset($_POST["sfsi_plus_emailIcon_order"]) ? $_POST["sfsi_plus_emailIcon_order"] : '2';
-    $sfsi_plus_facebookIcon_order        = isset($_POST["sfsi_plus_facebookIcon_order"]) ? $_POST["sfsi_plus_facebookIcon_order"] : '3';
-    $sfsi_plus_googleIcon_order          = isset($_POST["sfsi_plus_googleIcon_order"]) ? $_POST["sfsi_plus_googleIcon_order"] : '4';
-    $sfsi_plus_twitterIcon_order         = isset($_POST["sfsi_plus_twitterIcon_order"]) ? $_POST["sfsi_plus_twitterIcon_order"] : '5';
-    $sfsi_plus_shareIcon_order           = isset($_POST["sfsi_plus_shareIcon_order"]) ? $_POST["sfsi_plus_shareIcon_order"] : '6';
-    $sfsi_plus_youtubeIcon_order         = isset($_POST["sfsi_plus_youtubeIcon_order"]) ? $_POST["sfsi_plus_youtubeIcon_order"] : '7';
+    $sfsi_plus_rssIcon_order             = isset($_POST["sfsi_plus_rssIcon_order"]) 	  ? $_POST["sfsi_plus_rssIcon_order"] : '1';
+    $sfsi_plus_emailIcon_order           = isset($_POST["sfsi_plus_emailIcon_order"]) 	  ? $_POST["sfsi_plus_emailIcon_order"] : '2';
+    $sfsi_plus_facebookIcon_order        = isset($_POST["sfsi_plus_facebookIcon_order"])  ? $_POST["sfsi_plus_facebookIcon_order"] : '3';
+    $sfsi_plus_googleIcon_order          = isset($_POST["sfsi_plus_googleIcon_order"]) 	  ? $_POST["sfsi_plus_googleIcon_order"] : '4';
+    $sfsi_plus_twitterIcon_order         = isset($_POST["sfsi_plus_twitterIcon_order"])   ? $_POST["sfsi_plus_twitterIcon_order"] : '5';
+    $sfsi_plus_shareIcon_order           = isset($_POST["sfsi_plus_shareIcon_order"]) 	  ? $_POST["sfsi_plus_shareIcon_order"] : '6';
+    $sfsi_plus_youtubeIcon_order         = isset($_POST["sfsi_plus_youtubeIcon_order"])   ? $_POST["sfsi_plus_youtubeIcon_order"] : '7';
     $sfsi_plus_pinterestIcon_order       = isset($_POST["sfsi_plus_pinterestIcon_order"]) ? $_POST["sfsi_plus_pinterestIcon_order"] : '8';
-    $sfsi_plus_linkedinIcon_order        = isset($_POST["sfsi_plus_linkedinIcon_order"]) ? $_POST["sfsi_plus_linkedinIcon_order"] : '9';
+    $sfsi_plus_linkedinIcon_order        = isset($_POST["sfsi_plus_linkedinIcon_order"])  ? $_POST["sfsi_plus_linkedinIcon_order"] : '9';
 	$sfsi_plus_instagramIcon_order       = isset($_POST["sfsi_plus_instagramIcon_order"]) ? $_POST["sfsi_plus_instagramIcon_order"] : '10';
-	$sfsi_plus_houzzIcon_order         	 = isset($_POST["sfsi_plus_houzzIcon_order"]) ? $_POST["sfsi_plus_houzzIcon_order"] : '11';
+	$sfsi_plus_houzzIcon_order         	 = isset($_POST["sfsi_plus_houzzIcon_order"])     ? $_POST["sfsi_plus_houzzIcon_order"] : '11';
+
     $sfsi_plus_custom_MouseOverTexts     = isset($_POST["sfsi_plus_custom_MouseOverTexts"]) ? serialize($_POST["sfsi_plus_custom_MouseOverTexts"]):'';
     
 	$sfsi_plus_follow_icons_language     =	isset($_POST["sfsi_plus_follow_icons_language"])

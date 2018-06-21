@@ -306,6 +306,7 @@ function sfsi_plus_footer_script()
 	$sfsi_section1=  unserialize(get_option('sfsi_plus_section1_options',false));
 	$sfsi_section6=  unserialize(get_option('sfsi_plus_section6_options',false));
 	$sfsi_section8=  unserialize(get_option('sfsi_plus_section8_options',false));
+
 	$sfsi_plus_section5_options = unserialize(get_option('sfsi_plus_section5_options',false));
 	
 	if(
@@ -367,8 +368,9 @@ function sfsi_plus_footer_script()
 		<!--google share and  like and e js -->
 		<script type="text/javascript">
 			window.___gcfg = {
-			  lang: '<?php echo $icons_language;?>'
+			  lang: '<?php echo $icons_language; ?>'
 			};
+
 			(function() {
 				var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
 				po.src = 'https://apis.google.com/js/plusone.js';

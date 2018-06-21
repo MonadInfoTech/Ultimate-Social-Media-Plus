@@ -577,12 +577,12 @@ function sfsi_plus_prepairIcons($icon_name,$is_front=0, $onpost="no", $fromPost 
 			$facebook_icons_lang = $sfsi_plus_section5_options['sfsi_plus_facebook_icons_language'];
 		   	$visit_icon = SFSI_PLUS_DOCROOT.'/images/visit_icons/Visit_us_fb/icon_'.$facebook_icons_lang.'.png';
 			if(file_exists($visit_icon))
-		   {
-			$visit_icon = $visit_iconsUrl."Visit_us_fb/icon_".$facebook_icons_lang.".png";
+		    {
+				$visit_icon = $visit_iconsUrl."Visit_us_fb/icon_".$facebook_icons_lang.".png";
 		   }
 		   else
 		   {
-			$visit_icon = $visit_iconsUrl."fb.png";
+				$visit_icon = $visit_iconsUrl."fb.png";
 		   }
 			
 			//$visit_iconDefault = $visit_iconsUrl."facebook.png";

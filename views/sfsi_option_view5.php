@@ -1,8 +1,12 @@
 <?php
+	
 	/* unserialize all saved option for  section 5 options */
     $icons = ($option1['sfsi_custom_files']) ? unserialize($option1['sfsi_custom_files']) : array() ;
+	
 	$option3 =  unserialize(get_option('sfsi_plus_section3_options',false));
+	
 	$option5 =  unserialize(get_option('sfsi_plus_section5_options',false));
+
 	$custom_icons_order = unserialize($option5['sfsi_plus_CustomIcons_order']);
 	$icons_order = array(
 			$option5['sfsi_plus_rssIcon_order']			=>'rss',
@@ -90,7 +94,7 @@
 	$option5['sfsi_plus_houzz_MouseOverText']	= 	(isset($option5['sfsi_plus_houzz_MouseOverText']))
 														? sanitize_text_field($option5['sfsi_plus_houzz_MouseOverText'])
 														: '';
-    $option5['sfsi_plus_premium_size_box']	= 	(isset($option5['sfsi_plus_premium_size_box']))
+       $option5['sfsi_plus_premium_size_box']		= 	(isset($option5['sfsi_plus_premium_size_box']))
 														? sanitize_text_field($option5['sfsi_plus_premium_size_box'])
 														: 'yes';
 				
@@ -134,6 +138,7 @@
 		}
 					
 		$option5 =  unserialize(get_option('sfsi_plus_section5_options',false));
+		
 		?>
 		<select name="<?php echo $name; ?>" id="<?php echo $name; ?>" data-iconUrl="<?php echo $visit_icon; ?>" class="<?php echo $name; ?>-preview lanOnchange">
 			<option value="<?php echo $follow; ?>_ar" <?php echo ($option5[$name]== $follow.'_ar') ?  'selected="selected"' : '' ; ?>>
@@ -342,6 +347,7 @@
 	<h4>
 		<?php  _e( 'Order of your icons', SFSI_PLUS_DOMAIN ); ?>
     </h4>
+
 
     <!-- icon drag drop  section start here -->	
     <ul class="plus_share_icon_order" >

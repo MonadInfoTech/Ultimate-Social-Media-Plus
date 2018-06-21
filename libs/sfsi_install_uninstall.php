@@ -12,7 +12,7 @@ function sfsi_plus_update_plugin()
 	}
 	
 	//Install version
-	update_option("sfsi_plus_pluginVersion", "2.87");
+	update_option("sfsi_plus_pluginVersion", "2.89");
 	
 	if(!get_option('sfsi_plus_serverphpVersionnotification'))
 	{
@@ -111,13 +111,24 @@ function sfsi_plus_update_plugin()
 	
 	/*Language icons*/
 	$option5 =  unserialize(get_option('sfsi_plus_section5_options',false));
+	
 	if(isset($option5) && !empty($option5))
 	{
-		$option5['sfsi_plus_follow_icons_language'] = 'Follow_en_US';
-		$option5['sfsi_plus_facebook_icons_language'] = 'Visit_us_en_US';
-		$option5['sfsi_plus_twitter_icons_language'] = 'Visit_us_en_US';
-		$option5['sfsi_plus_google_icons_language'] = 'Visit_us_en_US';
-		$option5['sfsi_plus_icons_language'] = 'en_US';
+		if(!isset($option5['sfsi_plus_follow_icons_language'])){
+			$option5['sfsi_plus_follow_icons_language']   = 'Follow_en_US';			
+		}
+		if(!isset($option5['sfsi_plus_facebook_icons_language'])){
+			$option5['sfsi_plus_facebook_icons_language']   = 'Visit_us_en_US';			
+		}
+		if(!isset($option5['sfsi_plus_twitter_icons_language'])){
+			$option5['sfsi_plus_twitter_icons_language']   = 'Visit_us_en_US';			
+		}
+		if(!isset($option5['sfsi_plus_google_icons_language'])){
+			$option5['sfsi_plus_google_icons_language']   = 'Visit_us_en_US';			
+		}
+		if(!isset($option5['sfsi_plus_icons_language'])){
+			$option5['sfsi_plus_icons_language']   = 'en_US';			
+		}								
 
 		if(!isset($option5['sfsi_plus_premium_size_box'])){
 			$option5['sfsi_plus_premium_size_box'] = 'no';			

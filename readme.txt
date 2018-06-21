@@ -3,7 +3,7 @@ Contributors: socialsharepro
 Tags: Share, sharing, share buttons, share button, share social media, share icons, social buttons, sharing buttons, sharing icons, social media icons, social share, social sharing
 Requires at least: 3.0
 Tested up to: 4.9.6
-Stable tag: 2.8.8
+Stable tag: 2.8.9
 License: GPLv2 
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -445,12 +445,13 @@ The premium plugin offrs many more social buttons from other social media platfo
 
 == Changelog ==
 
-= 2.8.8	 =
+= 2.8.9 =
 
-= 2.8.7	 =
+= 2.8.8 =
+* Optimized code for setting value for "adding_plustags" which caused issues on some sites
 
-= 2.8.6 =
-
+= 2.8.7 =
+* Various instructions optimized 
 
 = 2.8.5 =
 * Cookies don't get set anymore if selected to show pop-up when user scrolls to end of page (relevant for GDPR compliance)
@@ -756,5 +757,5 @@ The premium plugin offrs many more social buttons from other social media platfo
 
 == Upgrade Notice ==
 
-= 2.8.7 =
+= 2.8.9 =
 * Please update
