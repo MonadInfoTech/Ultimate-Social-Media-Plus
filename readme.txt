@@ -446,6 +446,7 @@ The premium plugin offrs many more social buttons from other social media platfo
 == Changelog ==
 
 = 2.8.9 =
+* Language in Question 6 not saving issue fixed
 
 = 2.8.8 =
 * Optimized code for setting value for "adding_plustags" which caused issues on some sites
