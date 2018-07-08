@@ -12,7 +12,7 @@ function sfsi_plus_update_plugin()
 	}
 	
 	//Install version
-	update_option("sfsi_plus_pluginVersion", "2.89");
+	update_option("sfsi_plus_pluginVersion", "2.90");
 	
 	if(!get_option('sfsi_plus_serverphpVersionnotification'))
 	{
@@ -135,7 +135,21 @@ function sfsi_plus_update_plugin()
 		}
 		if(!isset($option5['sfsi_plus_custom_social_hide'])){
 			$option5['sfsi_plus_custom_social_hide'] = 'no';			
-		}		
+		}
+
+        if(!isset($option5['sfsi_icons_suppress_errors'])){
+        	
+        	$sup_errors = "no";
+        	$sup_errors_banner_dismissed = true;
+
+        	if(defined('WP_DEBUG') && false != WP_DEBUG){
+            	$sup_errors = 'yes';
+            	$sup_errors_banner_dismissed = false;
+        	}
+
+            $option5['sfsi_icons_suppress_errors'] = $sup_errors;
+            update_option('sfsi_error_reporting_notice_dismissed',$sup_errors_banner_dismissed);            
+        }				
 		update_option('sfsi_plus_section5_options', serialize($option5));
 	}
 	
@@ -395,9 +409,10 @@ function sfsi_plus_activate_plugin()
         'sfsi_plus_youtube_MouseOverText'=>'YouTube',
         'sfsi_plus_share_MouseOverText'=>'Share',
         'sfsi_plus_custom_MouseOverTexts'=>'',
-         'sfsi_plus_premium_size_box'=>'yes',
-         'sfsi_plus_custom_social_hide'=>'no'
-        );
+        'sfsi_plus_premium_size_box'=>'yes',
+        'sfsi_plus_custom_social_hide'=>'no',
+        'sfsi_pplus_icons_suppress_errors'=>'no',
+    );
 	add_option('sfsi_plus_section5_options',  serialize($options5));
     
 	/* post options */	                

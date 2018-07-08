@@ -14,8 +14,11 @@ function sfsi_plus_twitter_followers(){
 
 		$connection = new TwitterOAuth($sfsi_plus_section4_options['sfsiplus_tw_consumer_key'], $sfsi_plus_section4_options['sfsiplus_tw_consumer_secret'], $sfsi_plus_section4_options['sfsiplus_tw_oauth_access_token'], $sfsi_plus_section4_options['sfsiplus_tw_oauth_access_token_secret']);
 
-		$statuses = $connection->get('followers/ids');
-		$count = count($statuses->ids);
+		if(isset($connection) && !empty($connection)){
+			$statuses = $connection->get('followers/ids');
+			$count    = isset($statuses->ids) ? count($statuses->ids) :0;			
+		}
+		
 	}
 
 	return $count;

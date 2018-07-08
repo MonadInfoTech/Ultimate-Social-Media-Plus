@@ -7,11 +7,11 @@ Author: social share pro
 Text Domain: ultimate-social-media-plus
 Domain Path: /languages
 Author URI: http://socialshare.pro/
-Version: 2.8.9
+Version: 2.9.0
 License: GPLv2
 */
 
-error_reporting(0);
+sfsi_plus_error_reporting();
 
 global $wpdb;
 /* define the Root for URL and Document */
@@ -44,16 +44,17 @@ function sfsi_plus_freemius() {
 }
 
 // Init Freemius.
-sfsi_plus_freemius();
-sfsi_plus_freemius()->add_action('after_uninstall', 'sfsi_plus_Unistall_plugin'); 
+// sfsi_plus_freemius();
+// sfsi_plus_freemius()->add_action('after_uninstall', 'sfsi_plus_Unistall_plugin'); 
 
 // Signal that SDK was initiated.
-do_action('usmp_fs_loaded');
+//do_action('usmp_fs_loaded');
 
 define('SFSI_PLUS_DOCROOT',    dirname(__FILE__));
 define('SFSI_PLUS_PLUGURL',    plugin_dir_url(__FILE__));
 define('SFSI_PLUS_WEBROOT',    str_replace(getcwd(), home_url(), dirname(__FILE__)));
 define('SFSI_PLUS_DOMAIN',	   'ultimate-social-media-plus');
+define('SFSI_PLUS_SUPPORT_FORM','https://goo.gl/jySrSF');
 
 function sfsi_plus_get_current_url()
 {
@@ -93,11 +94,29 @@ register_deactivation_hook(__FILE__, 'sfsi_plus_deactivate_plugin');
 //register_uninstall_hook(__FILE__, 'sfsi_plus_Unistall_plugin');
 
 /*Plugin version setup*/
-if(!get_option('sfsi_plus_pluginVersion') || get_option('sfsi_plus_pluginVersion') < 2.89)
+if(!get_option('sfsi_plus_pluginVersion') || get_option('sfsi_plus_pluginVersion') < 2.90)
 {
 	add_action("init", "sfsi_plus_update_plugin");
 }
 
+
+//************************************** Setting error reporting STARTS ****************************************//
+
+function sfsi_plus_error_reporting(){
+
+	$option5 = unserialize(get_option('sfsi_plus_section5_options',false));
+
+	if(isset($option5['sfsi_pplus_icons_suppress_errors']) 
+
+		&& !empty($option5['sfsi_pplus_icons_suppress_errors'])
+
+		&& "yes" == $option5['sfsi_pplus_icons_suppress_errors']){
+		
+		error_reporting(0);			
+	}	
+}
+
+//************************************** Setting error reporting CLOSES ****************************************//
 
 //shortcode for the ultimate social icons {Monad}
 add_shortcode("DISPLAY_ULTIMATE_PLUS", "DISPLAY_ULTIMATE_PLUS");
@@ -722,8 +741,6 @@ function sfsi_plus_admin_notice()
 		
 	}
 
-
-
 	if(get_option("sfsi_plus_show_Setting_mobile_notification") == "yes")
 	{
 		$sfsi_plus_install_date = strtotime(get_option('sfsi_plus_installDate'));
@@ -819,6 +836,8 @@ function sfsi_plus_admin_notice()
 		<?php
 		}
 	}
+
+	sfsi_plus_error_reporting_notice();	
 }
 
 
@@ -871,15 +890,72 @@ function sfsi_plus_action_links ( $mylinks )
 {
 	$linkQuestion   = '<a target="_blank" href="https://goo.gl/MU6pTN#new-topic-0" style="color:#FF0000;"><b>Need help?</b></a>';		
 	$linkProVersion = '<a href="https://www.ultimatelysocial.com/usm-premium/?utm_source=usmplus_manage_plugin_page&utm_campaign=check_out_pro_version&utm_medium=banner" style="color:#38B54A;"><b>Check out pro version</b></a>';
-	$mylinks[]  	= @$mylinks['edit'];
-	$mylinks[] 		= '<a href="'.admin_url("/admin.php?page=sfsi-plus-options").'">Settings</a>';
-	unset ($mylinks['edit']);
+
+	if(isset($mylinks['edit']) && !empty($mylinks['edit'])){
+		$mylinks[]  	= @$mylinks['edit'];		
+	}
 
 	array_unshift($mylinks, $linkProVersion);
-    	array_unshift($mylinks, $linkQuestion);
+    array_unshift($mylinks, $linkQuestion);
+
+	$slug = plugin_basename(dirname(__FILE__));
+
+	$mylinks[$slug] = @$mylinks["deactivate"].'<i class="sfsi-plus-deactivate-slug"></i>';
+
+	$mylinks[] 		= '<a href="'.admin_url("/admin.php?page=sfsi-plus-options").'">Settings</a>';
+
+	unset ($mylinks['edit']);
+	unset ($mylinks['deactivate']);
 
 	return $mylinks;
 }
+
+global $pagenow;
+
+if( 'plugins.php' === $pagenow ){
+
+add_action( 'admin_footer', '_sfsi_plus_add_deactivation_feedback_dialog_box');
+
+function _sfsi_plus_add_deactivation_feedback_dialog_box(){ 
+		
+	include_once(SFSI_PLUS_DOCROOT.'/views/deactivation/sfsi_deactivation_popup.php'); ?>
+
+	<script type="text/javascript">
+		    
+		    jQuery(document).ready(function($){
+
+		    	var _plus_deactivationLink = $('.sfsi-plus-deactivate-slug').prev();
+
+				_plus_deactivationLink.parent().prev().remove();
+
+		    	$('.sfsi-plus-deactivation-reason-link').find('a').attr('href',_plus_deactivationLink.attr('href'));
+
+		        _plus_deactivationLink.on('click',function(e){
+		            e.preventDefault();
+		            $('[data-popup="plus-popup-1"]').fadeIn(350);
+		        });
+
+		        //----- CLOSE
+		        $('[data-popup-close]').on('click', function(e) {
+		            e.preventDefault();
+		            var targeted_popup_class = jQuery(this).attr('data-popup-close');
+		            $('[data-popup="' + targeted_popup_class + '"]').fadeOut(350);
+		        });
+
+		        //----- OPEN
+		        $('[data-popup-open]').on('click', function(e) {
+		            e.preventDefault();
+		            var targeted_popup_class = jQuery(this).attr('data-popup-open');
+		            $('[data-popup="' + targeted_popup_class + '"]').fadeIn(350);
+		        });
+
+		    });
+
+	</script>
+
+	<?php }
+}
+
 
 function sfsi_plus_getdomain($url)
 {
@@ -1142,4 +1218,70 @@ function sfsi_plus_ask_for_help($viewNumber){ ?>
 
 // ********************************* Link to support forum left of every Save button CLOSES *******************************//
 
+
+// ********************************* Notice for error reporting STARTS *******************************//
+
+function sfsi_plus_error_reporting_notice(){
+
+    if (is_admin()) : 
+        
+        $sfsi_error_reporting_notice_txt    = 'We noticed that you have set error reporting to "yes" in wp-config. Our plugin (Ultimate Social Media Plus) switches this to "off" so that no errors are displayed (which may also impact error messages from your theme or other plugins). If you don\'t want that, please select the respective option under question 6 (at the bottom).';
+
+        $isDismissed   =  get_option('sfsi_pplus_error_reporting_notice_dismissed',false);
+
+        $option5 = unserialize(get_option('sfsi_plus_section5_options',false));
+
+		$sfsi_pplus_icons_suppress_errors = isset($option5['sfsi_pplus_icons_suppress_errors']) && !empty($option5['sfsi_pplus_icons_suppress_errors']) ? $option5['sfsi_pplus_icons_suppress_errors']:  false;
+
+        if(isset($isDismissed) && false == $isDismissed && defined('WP_DEBUG') && false != WP_DEBUG && "yes"== $sfsi_pplus_icons_suppress_errors) { ?>
+                    
+            <div style="padding: 10px;margin-left: 0px;position: relative;" id="sfsi_error_reporting_notice" class="error notice">
+
+                <p><?php echo $sfsi_error_reporting_notice_txt; ?></p>
+
+                <button type="button" class="sfsi_pplus_error_reporting_notice-dismiss notice-dismiss"></button>
+
+            </div>
+
+            <script type="text/javascript">
+
+				if(typeof jQuery != 'undefined'){
+
+				    (function sfsi_dismiss_notice(btnClass,ajaxAction){
+				        
+				        var btnClass = "."+btnClass;
+
+						var ajaxurl = "<?php echo admin_url('admin-ajax.php'); ?>";
+
+				        jQuery(document).on("click", btnClass, function(){
+				            
+				            jQuery.ajax({
+				                url:ajaxurl,
+				                type:"post",
+				                data:{action: ajaxAction},
+				                success:function(e) {
+				                    if(false != e){
+				                        jQuery(btnClass).parent().remove();
+				                    }
+				                }
+				            });
+
+				        });
+
+				    }("sfsi_pplus_error_reporting_notice-dismiss","sfsi_pplus_dismiss_error_reporting_notice"));
+				}            	
+            </script>
+
+        <?php } ?>
+
+    <?php endif;	
+}
+
+function sfsi_pplus_dismiss_error_reporting_notice(){
+	echo (string) update_option('sfsi_pplus_error_reporting_notice_dismissed',true);
+	die;
+}
+add_action( 'wp_ajax_sfsi_pplus_dismiss_error_reporting_notice', 'sfsi_pplus_dismiss_error_reporting_notice' );
+
+// ********************************* Notice for error reporting CLOSE *******************************//
 

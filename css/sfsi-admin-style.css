@@ -1276,3 +1276,6 @@ ul.sfsi_show_hide_section {float: right;width: 14%;}
 .askhelpInview2           { bottom: 25px; }
 .askhelpInview3           { bottom: 51px; }
 .askhelpInview7           { bottom: 50px; }
+
+.ulSuppressErrors {margin-top: 20px !important;}
+.ulSuppressErrors li {float: left;}

@@ -540,6 +540,7 @@ function sfsi_plus_update_step5()
     });
 
     var sfsi_plus_custom_social_hide = SFSI("input[name='sfsi_plus_custom_social_hide']").val();
+    var se = SFSI("input[name='sfsi_pplus_icons_suppress_errors']:checked").val(); 
 
     var T = {
         action:"plus_updateSrcn5",
@@ -583,6 +584,7 @@ function sfsi_plus_update_step5()
         sfsi_plus_linkedinIcon_order:F,
         sfsi_plus_custom_orders:h,
         sfsi_plus_custom_social_hide:sfsi_plus_custom_social_hide,
+        sfsi_pplus_icons_suppress_errors:se,
 		nonce:nonce
     };
     SFSI.ajax({
@@ -1203,6 +1205,15 @@ SFSI(document).ready(function(s) {
 					s.parents(".row_tab").next(".row_tab").hide("fast");
 				sfsi_plus_create_suscriber_form()
 				break;
+            case 'sfsi_pplus_icons_suppress_errors':
+
+                SFSI('input[name="sfsi_pplus_icons_suppress_errors"]').removeAttr('checked');
+
+                if(s.val() == 'yes')
+                    SFSI('input[name="sfsi_pplus_icons_suppress_errors"][value="yes"]').prop('checked','true');
+                else
+                    SFSI('input[name="sfsi_pplus_icons_suppress_errors"][value="no"]').prop('checked','true');
+                break;                 
 			default:
 		}	
 	});

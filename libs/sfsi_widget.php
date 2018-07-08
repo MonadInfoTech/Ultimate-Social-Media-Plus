@@ -331,7 +331,11 @@ function sfsi_plus_check_visiblity($isFloter=0)
    
     $jquery.="</script>";
     $icons.='</div >';
-    $margin=$width+11;
+
+	$width = isset($width) && !empty($width) ? $width : 0;
+
+    $margin= $width+11;
+
     $icons_main.=$icons.'<div id="sfsi_holder" class="sfsi_plus_holders" style="position: relative; float: left;width:100%;z-index:-1;"></div >'.$jquery;
     /* if floating of icons is active create a floater div */
     $icons_float='';

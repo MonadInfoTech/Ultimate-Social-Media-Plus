@@ -94,9 +94,13 @@
 	$option5['sfsi_plus_houzz_MouseOverText']	= 	(isset($option5['sfsi_plus_houzz_MouseOverText']))
 														? sanitize_text_field($option5['sfsi_plus_houzz_MouseOverText'])
 														: '';
-       $option5['sfsi_plus_premium_size_box']		= 	(isset($option5['sfsi_plus_premium_size_box']))
+    $option5['sfsi_plus_premium_size_box']		= 	(isset($option5['sfsi_plus_premium_size_box']))
 														? sanitize_text_field($option5['sfsi_plus_premium_size_box'])
 														: 'yes';
+
+	$sfsi_icons_suppress_errors 				=   (isset($option5['sfsi_pplus_icons_suppress_errors']))
+														? sanitize_text_field($option5['sfsi_pplus_icons_suppress_errors'])
+														: 'no';
 				
 	$visit_iconsUrl = SFSI_PLUS_PLUGURL."images/visit_icons/";
   	if(is_array($custom_icons_order) ) 
@@ -1036,6 +1040,22 @@
 		
 	</div>
     <!-- END mouse over text section -->
+
+    <div class="row new_wind">
+		<h4>Error reporting</h4>
+		<div class="row_onl"><p>Suppress error messages?</p>
+			<ul class="enough_waffling ulSuppressErrors">
+		    	<li>
+		    		<input name="sfsi_pplus_icons_suppress_errors" <?php echo ($sfsi_icons_suppress_errors=='yes') ?  'checked="true"' : '' ;?> type="radio" value="yes" class="styled"  />
+		    		<label>Yes</label>
+		    	</li>
+				<li>
+					<input name="sfsi_pplus_icons_suppress_errors" <?php echo ($sfsi_icons_suppress_errors=='no') ?  'checked="true"' : '' ;?> type="radio" value="no" class="styled" />
+					<label>No</label>
+				</li>
+	      	</ul>
+      	</div>
+    </div>
     
 	<?php sfsi_plus_ask_for_help(5); ?>
 

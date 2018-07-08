@@ -446,8 +446,10 @@ function sfsi_plus_options_updater5()
 												? $_POST["sfsi_plus_google_icons_language"]
 												: 'Visit_us_en_US';
 
-	$sfsi_plus_custom_social_hide        = isset($_POST["sfsi_plus_custom_social_hide"]) ? $_POST["sfsi_plus_custom_social_hide"] : 'no'; 
-	
+	$sfsi_plus_custom_social_hide        = isset($_POST["sfsi_plus_custom_social_hide"]) ? $_POST["sfsi_plus_custom_social_hide"] : 'no';
+
+	$sfsi_pplus_icons_suppress_errors        = isset($_POST["sfsi_pplus_icons_suppress_errors"]) ? $_POST["sfsi_pplus_icons_suppress_errors"] : 'no'; 
+
 	/* size and spacing of icons */
     $up_option5=array(
         'sfsi_plus_icons_size'				=> intval($sfsi_plus_icons_size),
@@ -490,12 +492,14 @@ function sfsi_plus_options_updater5()
 		'sfsi_plus_houzzIcon_order'			=> intval($sfsi_plus_houzzIcon_order),
         'sfsi_plus_linkedinIcon_order'		=> intval($sfsi_plus_linkedinIcon_order),
         'sfsi_plus_custom_MouseOverTexts'	=> $sfsi_plus_custom_MouseOverTexts,
-        'sfsi_plus_custom_social_hide'		=> $sfsi_plus_custom_social_hide
-    );
+        'sfsi_plus_custom_social_hide'		=> $sfsi_plus_custom_social_hide,
+        'sfsi_pplus_icons_suppress_errors'  => sanitize_text_field($sfsi_pplus_icons_suppress_errors)
+     );
     
     update_option('sfsi_plus_section5_options',serialize($up_option5));
     header('Content-Type: application/json');
-    echo  json_encode(array("success")); exit;
+    echo  json_encode(array("success"));
+    exit;
 }
 /* save settings for section 6 */ 
 add_action('wp_ajax_plus_updateSrcn6','sfsi_plus_options_updater6');        
@@ -731,8 +735,10 @@ function sfsi_plus_options_updater9()
 function sfsi_plus_getCounts()
 {
    	$socialObj = new sfsi_plus_SocialHelper();
-   	$sfsi_plus_section4_options = unserialize(get_option('sfsi_plus_section4_options',false));
+
+   	$option4 = unserialize(get_option('sfsi_plus_section4_options',false));
    	$sfsi_plus_section2_options = unserialize(get_option('sfsi_plus_section2_options',false));
+
    	$scounts = array(
 		'rss_count'=>'',
 		'email_count'=>'',
@@ -745,12 +751,12 @@ function sfsi_plus_getCounts()
 		'share_count'=>''
 	);
    	/* get rss count */
-   	if(!empty($sfsi_plus_section4_options['sfsi_plus_rss_manualCounts']) )
+   	if(isset($option4['sfsi_plus_rss_manualCounts']) && !empty($option4['sfsi_plus_rss_manualCounts']) )
    	{
-       $scounts['rss_count']=$sfsi_plus_section4_options['sfsi_plus_rss_manualCounts'];
+       $scounts['rss_count']=  $option4['sfsi_plus_rss_manualCounts'];
    	} 
     /* get email count */
-   	if($sfsi_plus_section4_options['sfsi_plus_email_countsFrom']=="source" )
+   	if(isset($option4['sfsi_plus_email_countsFrom']) && !empty($option4['sfsi_plus_email_countsFrom']) && $option4['sfsi_plus_email_countsFrom']=="source" )
    	{
 		$feed_id		= sanitize_text_field(get_option('sfsi_plus_feed_id',false));
        	$feed_data		= $socialObj->SFSI_getFeedSubscriber($feed_id);
@@ -763,48 +769,54 @@ function sfsi_plus_getCounts()
    	}
    	else
    	{
-        $scounts['email_count']=$sfsi_plus_section4_options['sfsi_plus_email_manualCounts'];
+        $scounts['email_count']=$option4['sfsi_plus_email_manualCounts'];
         
    	}    
-   
+
+  
    	/* get fb count */
-   	if($sfsi_plus_section4_options['sfsi_plus_facebook_countsFrom']=="likes" )
-   	{
-        $url=home_url();
-        $fb_data=$socialObj->sfsi_get_fb($url);
-       
-       	$scounts['fb_count']= $socialObj->format_num($fb_data['like_count']);
-       
+   	if(isset($option4['sfsi_plus_facebook_countsFrom']) && !empty($option4['sfsi_plus_facebook_countsFrom'])){
+	
+	   	if($option4['sfsi_plus_facebook_countsFrom']=="likes" )
+	   	{
+	        $url=home_url();
+	        $fb_data=$socialObj->sfsi_get_fb($url);
+	       
+	       	$scounts['fb_count']= $socialObj->format_num($fb_data['like_count']);
+	       
+	   	}
+	   	else if($option4['sfsi_plus_facebook_countsFrom']=="followers" )
+		{
+	    	$url=home_url();
+	        $fb_data=$socialObj->sfsi_get_fb($url);
+	       	$scounts['fb_count']= format_num($fb_data['share_count']);
+	       	if(empty($scounts['fb_count']))
+	        {
+	          $scounts['fb_count']=(string) "0";
+	        }
+	   	}
+	   	else if($option4['sfsi_plus_facebook_countsFrom']=="mypage" )
+	   	{
+	       $url = $option4['sfsi_plus_facebook_mypageCounts'];
+	       $fb_data = $socialObj->sfsi_get_fb_pagelike($url);
+	       $scounts['fb_count']= $fb_data;
+	   	}
+	   	else
+	   	{
+	        $scounts['fb_count']=$option4['sfsi_plus_facebook_manualCounts'];
+	   	}
+
    	}
-   	else if($sfsi_plus_section4_options['sfsi_plus_facebook_countsFrom']=="followers" )
-	{
-    	$url=home_url();
-        $fb_data=$socialObj->sfsi_get_fb($url);
-       	$scounts['fb_count']= format_num($fb_data['share_count']);
-       	if(empty($scounts['fb_count']))
-        {
-          $scounts['fb_count']=(string) "0";
-        }
-   	}
-   	else if($sfsi_plus_section4_options['sfsi_plus_facebook_countsFrom']=="mypage" )
-   	{
-       $url = $sfsi_plus_section4_options['sfsi_plus_facebook_mypageCounts'];
-       $fb_data = $socialObj->sfsi_get_fb_pagelike($url);
-       $scounts['fb_count']= $fb_data;
-   	}
-   	else
-   	{
-        $scounts['fb_count']=$sfsi_plus_section4_options['sfsi_plus_facebook_manualCounts'];
-   	}
+
    	/* get twitter counts */
-   	if($sfsi_plus_section4_options['sfsi_plus_twitter_countsFrom']=="source")
+   	if(isset($option4['sfsi_plus_twitter_countsFrom']) && !empty($option4['sfsi_plus_twitter_countsFrom']) && $option4['sfsi_plus_twitter_countsFrom']=="source")
    	{
 		$twitter_user = $sfsi_plus_section2_options['sfsi_plus_twitter_followUserName'];
         $tw_settings = array(
-			'sfsiplus_tw_consumer_key'=>$sfsi_plus_section4_options['sfsiplus_tw_consumer_key'],
-			'sfsiplus_tw_consumer_secret'=> $sfsi_plus_section4_options['sfsiplus_tw_consumer_secret'],
-			'sfsiplus_tw_oauth_access_token'=> $sfsi_plus_section4_options['sfsiplus_tw_oauth_access_token'],
-			'sfsiplus_tw_oauth_access_token_secret'=> $sfsi_plus_section4_options['sfsiplus_tw_oauth_access_token_secret']
+			'sfsiplus_tw_consumer_key'=>$option4['sfsiplus_tw_consumer_key'],
+			'sfsiplus_tw_consumer_secret'=> $option4['sfsiplus_tw_consumer_secret'],
+			'sfsiplus_tw_oauth_access_token'=> $option4['sfsiplus_tw_oauth_access_token'],
+			'sfsiplus_tw_oauth_access_token_secret'=> $option4['sfsiplus_tw_oauth_access_token_secret']
         );         
           
        $followers=$socialObj->sfsi_get_tweets($twitter_user,$tw_settings);
@@ -812,68 +824,74 @@ function sfsi_plus_getCounts()
    	}
 	else
 	{
-        $scounts['twitter_count']=$sfsi_plus_section4_options['sfsi_plus_twitter_manualCounts'];
+        $scounts['twitter_count']=$option4['sfsi_plus_twitter_manualCounts'];
    	} 
+
    	/* get google+ counts */
-   	if($sfsi_plus_section4_options['sfsi_plus_google_countsFrom']=="follower" )
-   	{   
-      $url=$sfsi_plus_section2_options['sfsi_plus_google_pageURL'];
-        $api_key=$sfsi_plus_section4_options['sfsi_plus_google_api_key'];
-                         $followers=$socialObj->sfsi_get_google($url,$api_key);
-                         if(!is_int($followers))
-                         {
-                             $followers=0;
-                         }    
-                         $counts=$followers;
-       $scounts['google_count']= $socialObj->format_num($followers);
+   	if( isset($option4['sfsi_plus_google_countsFrom']) && !empty($option4['sfsi_plus_google_countsFrom']) ){
+	 
+	   	if($option4['sfsi_plus_google_countsFrom']=="follower" )
+	   	{   
+	      $url=$sfsi_plus_section2_options['sfsi_plus_google_pageURL'];
+	        $api_key=$option4['sfsi_plus_google_api_key'];
+	                         $followers=$socialObj->sfsi_get_google($url,$api_key);
+	                         if(!is_int($followers))
+	                         {
+	                             $followers=0;
+	                         }    
+	                         $counts=$followers;
+	       $scounts['google_count']= $socialObj->format_num($followers);
+	   	}
+	   	else if($option4['sfsi_plus_google_countsFrom']=="likes" )
+	   	{   
+	      	$url=home_url();
+	        $api_key = $option4['sfsi_plus_google_api_key'];
+			$followers=$socialObj->sfsi_get_google($url,$api_key);
+			if(!is_int($followers))
+			{
+				$followers=0;
+			}    
+			$counts=$followers;
+	       	$scounts['google_count']= $socialObj->format_num($followers);
+	   	}
+	   	else
+	   	{
+	        $scounts['google_count']=$option4['sfsi_plus_google_manualCounts'];
+	   	}	   	   		
    	}
-   	else if($sfsi_plus_section4_options['sfsi_plus_google_countsFrom']=="likes" )
-   	{   
-      	$url=home_url();
-        $api_key = $sfsi_plus_section4_options['sfsi_plus_google_api_key'];
-		$followers=$socialObj->sfsi_get_google($url,$api_key);
-		if(!is_int($followers))
-		{
-			$followers=0;
-		}    
-		$counts=$followers;
-       	$scounts['google_count']= $socialObj->format_num($followers);
-   	}
-   	else
-   	{
-        $scounts['google_count']=$sfsi_plus_section4_options['sfsi_plus_google_manualCounts'];
-   	}
+
    	
 	/* get linkedIn counts */
-   	if($sfsi_plus_section4_options['sfsi_plus_linkedIn_countsFrom']=="follower" )
+   	if(isset($option4['sfsi_plus_linkedIn_countsFrom']) && !empty($option4['sfsi_plus_linkedIn_countsFrom']) && $option4['sfsi_plus_linkedIn_countsFrom']=="follower" )
    	{   
         $linkedIn_compay=$sfsi_plus_section2_options['sfsi_plus_linkedin_followCompany']; 
-        $linkedIn_compay=$sfsi_plus_section4_options['sfsi_plus_ln_company'];
+        $linkedIn_compay=$option4['sfsi_plus_ln_company'];
         $ln_settings=array(
-			'sfsi_plus_ln_api_key'			=> $sfsi_plus_section4_options['sfsi_plus_ln_api_key'],
-			'sfsi_plus_ln_secret_key'		=> $sfsi_plus_section4_options['sfsi_plus_ln_secret_key'],
-			'sfsi_plus_ln_oAuth_user_token'	=> $sfsi_plus_section4_options['sfsi_plus_ln_oAuth_user_token']
+			'sfsi_plus_ln_api_key'			=> $option4['sfsi_plus_ln_api_key'],
+			'sfsi_plus_ln_secret_key'		=> $option4['sfsi_plus_ln_secret_key'],
+			'sfsi_plus_ln_oAuth_user_token'	=> $option4['sfsi_plus_ln_oAuth_user_token']
 		);
        $followers=$socialObj->sfsi_getlinkedin_follower($linkedIn_compay,$ln_settings);
        $scounts['linkedIn_count']= $socialObj->format_num($followers);
    	}
    	else
    	{
-        $scounts['linkedIn_count']=$sfsi_plus_section4_options['sfsi_plus_linkedIn_manualCounts'];
-   	} 
+        $scounts['linkedIn_count']=$option4['sfsi_plus_linkedIn_manualCounts'];
+   	}
+
     /* get youtube counts */
-   	if($sfsi_plus_section4_options['sfsi_plus_youtube_countsFrom']=="subscriber" )
+   	if(isset($option4['sfsi_plus_youtube_countsFrom']) && !empty($option4['sfsi_plus_youtube_countsFrom']) && $option4['sfsi_plus_youtube_countsFrom']=="subscriber" )
    	{      
        	if(
-			isset($sfsi_plus_section4_options['sfsi_plus_youtube_user'])
+			isset($option4['sfsi_plus_youtube_user'])
 		)
        	{
-        	$youtube_user = $sfsi_plus_section4_options['sfsi_plus_youtube_user'];
+        	$youtube_user = $option4['sfsi_plus_youtube_user'];
         	
 			$youtube_user = (
-				isset($sfsi_plus_section4_options['sfsi_plus_youtube_user']) &&
-				!empty($sfsi_plus_section4_options['sfsi_plus_youtube_user'])
-			) ? $sfsi_plus_section4_options['sfsi_plus_youtube_user'] : 'SpecificFeeds';
+				isset($option4['sfsi_plus_youtube_user']) &&
+				!empty($option4['sfsi_plus_youtube_user'])
+			) ? $option4['sfsi_plus_youtube_user'] : 'SpecificFeeds';
 			
 			$followers = $socialObj->sfsi_get_youtube($youtube_user);
         	$scounts['youtube_count'] = $socialObj->format_num($followers);
@@ -885,10 +903,10 @@ function sfsi_plus_getCounts()
    	} 
    	else
    	{
-         $scounts['youtube_count']=$sfsi_plus_section4_options['sfsi_plus_youtube_manualCounts'];
+         $scounts['youtube_count']=$option4['sfsi_plus_youtube_manualCounts'];
    	}
     /* get Pinterest counts */
-   	if($sfsi_plus_section4_options['sfsi_plus_pinterest_countsFrom']=="pins" )
+   	if(isset($option4['sfsi_plus_pinterest_countsFrom']) && !empty($option4['sfsi_plus_pinterest_countsFrom']) && $option4['sfsi_plus_pinterest_countsFrom']=="pins" )
    	{   
        $url=home_url();
        $pins=$socialObj->sfsi_get_pinterest($url);
@@ -896,22 +914,22 @@ function sfsi_plus_getCounts()
    	} 
    	else
    	{
-        $scounts['pin_count']=$sfsi_plus_section4_options['sfsi_plus_pinterest_manualCounts'];
+        $scounts['pin_count']=$option4['sfsi_plus_pinterest_manualCounts'];
    	}
     /* get addthis share counts */
-   	if(isset($sfsi_plus_section4_options['sfsi_plus_shares_countsFrom']) && $sfsi_plus_section4_options['sfsi_plus_shares_countsFrom']=="shares" && isset($sfsi_plus_section4_options['sfsi_share_countsDisplay']) && $sfsi_plus_section4_options['sfsi_share_countsDisplay'] =="yes")
+   	if(isset($option4['sfsi_plus_shares_countsFrom']) && $option4['sfsi_plus_shares_countsFrom']=="shares" && isset($option4['sfsi_share_countsDisplay']) && $option4['sfsi_share_countsDisplay'] =="yes")
    	{   
        $shares=$socialObj->sfsi_get_atthis();
        $scounts['share_count']= $socialObj->format_num($shares);
    	} 
    	else
    	{
-        $scounts['share_count']=$sfsi_plus_section4_options['sfsi_plus_shares_manualCounts'];
+        $scounts['share_count']=$option4['sfsi_plus_shares_manualCounts'];
    	}
     /* get instagram count */
-   	if($sfsi_plus_section4_options['sfsi_plus_instagram_countsFrom']=="followers" )
+   	if(isset($option4['sfsi_plus_instagram_countsFrom']) && !empty($option4['sfsi_plus_instagram_countsFrom']) && $option4['sfsi_plus_instagram_countsFrom']=="followers" )
    	{
-      	$iuser_name= $sfsi_plus_section4_options['sfsi_plus_instagram_User'];
+      	$iuser_name= $option4['sfsi_plus_instagram_User'];
       	$counts = $socialObj->sfsi_get_instagramFollowers($iuser_name);
 		if(empty($counts))
 		{
@@ -924,27 +942,24 @@ function sfsi_plus_getCounts()
    	}
    	else
    	{
-        $scounts['instagram_count'] = $sfsi_plus_section4_options['sfsi_plus_instagram_manualCounts'];
+        $scounts['instagram_count'] = $option4['sfsi_plus_instagram_manualCounts'];
     }
 	
 	/* get instagram count */
-   	if(
-		isset($sfsi_plus_section4_options['sfsi_plus_houzz_countsFrom']) &&
-		$sfsi_plus_section4_options['sfsi_plus_houzz_countsFrom']=="manual"
-	)
+   	if(isset($option4['sfsi_plus_houzz_countsFrom']) && !empty($option4['sfsi_plus_houzz_countsFrom']) && $option4['sfsi_plus_houzz_countsFrom']=="manual")
    	{
 		if(
-			isset($sfsi_plus_section4_options['sfsi_plus_houzz_manualCounts'])
+			isset($option4['sfsi_plus_houzz_manualCounts'])
 		)
 		{
-      		$scounts['houzz_count'] =  $sfsi_plus_section4_options['sfsi_plus_houzz_manualCounts'];
+      		$scounts['houzz_count'] =  $option4['sfsi_plus_houzz_manualCounts'];
 		}
 		else
 		{
 			$scounts['houzz_count'] = '20';
 		}
 	}
-	elseif(!isset($sfsi_plus_section4_options['sfsi_plus_houzz_countsFrom']))
+	elseif(!isset($option4['sfsi_plus_houzz_countsFrom']))
 	{
 		$scounts['houzz_count'] = '20';
 	}  
