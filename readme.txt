@@ -446,6 +446,7 @@ The premium plugin offrs many more social buttons from other social media platfo
 == Changelog ==
 
 = 2.9.0 =
+* Count Error shown for newer php versions fixed.
 
 = 2.8.9 =
 * Language in Question 6 not saving issue fixed
