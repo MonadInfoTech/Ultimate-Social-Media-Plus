@@ -352,7 +352,7 @@ function sfsi_plus_deleteIcons()
          
          end($up_icons);
          $key=(key($up_icons))? key($up_icons) :$custom_icon[1] ;
-         $total_uploads=count($up_icons);
+         $total_uploads=isset($up_icons) && is_array($up_icons) ?count($up_icons):0;
          
         update_option('sfsi_plus_section1_options',serialize($sec_options1));
         update_option('sfsi_plus_section2_options',serialize($sec_options2));

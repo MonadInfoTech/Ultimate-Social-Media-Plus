@@ -16,7 +16,7 @@ function sfsi_plus_twitter_followers(){
 
 		if(isset($connection) && !empty($connection)){
 			$statuses = $connection->get('followers/ids');
-			$count    = isset($statuses->ids) ? count($statuses->ids) :0;			
+			$count    = isset($statuses->ids) && is_array($statuses->ids) ? count($statuses->ids) :0;			
 		}
 		
 	}
