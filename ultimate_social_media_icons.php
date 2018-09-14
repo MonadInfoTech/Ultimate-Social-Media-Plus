@@ -87,6 +87,7 @@ include(SFSI_PLUS_DOCROOT.'/libs/sfsi_widget.php');
 include(SFSI_PLUS_DOCROOT.'/libs/sfsi_plus_subscribe_widget.php');
 include(SFSI_PLUS_DOCROOT.'/libs/sfsi_custom_social_sharing_data.php');
 include(SFSI_PLUS_DOCROOT.'/libs/sfsi_ajax_social_sharing_settings_updater.php');
+include(SFSI_PLUS_DOCROOT.'/libs/sfsi_gutenberg_block.php');
 
 /* plugin install and uninstall hooks */ 
 register_activation_hook(__FILE__, 'sfsi_plus_activate_plugin' );
