@@ -7,7 +7,7 @@ Author: social share pro
 Text Domain: ultimate-social-media-plus
 Domain Path: /languages
 Author URI: http://socialshare.pro/
-Version: 2.9.2
+Version: 2.9.2-dev
 License: GPLv2
 */
 
