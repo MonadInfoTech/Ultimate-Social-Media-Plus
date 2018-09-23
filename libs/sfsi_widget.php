@@ -118,7 +118,7 @@ function register_sfsi_plus_widgets()
 add_action( 'widgets_init', 'register_sfsi_plus_widgets' );
 
 /* check the icons visiblity  */
-function sfsi_plus_check_visiblity($isFloter=0)
+function sfsi_plus_check_visiblity($isFloter=0,$share_url=null)
 {
   	global $wpdb;
     /* Access the saved settings in database  */
@@ -296,24 +296,24 @@ function sfsi_plus_check_visiblity($isFloter=0)
 		} 
 		switch ($icn)
 		{
-			case 'rss' :  if($sfsi_plus_section1_options['sfsi_plus_rss_display']=='yes')  $icons.= sfsi_plus_prepairIcons('rss');  
+			case 'rss' :  if($sfsi_plus_section1_options['sfsi_plus_rss_display']=='yes')  $icons.= sfsi_plus_prepairIcons('rss',0,"no",null,$share_url);  
 			break;
-			case 'email' :   if($sfsi_plus_section1_options['sfsi_plus_email_display']=='yes')   $icons.= sfsi_plus_prepairIcons('email'); 
+			case 'email' :   if($sfsi_plus_section1_options['sfsi_plus_email_display']=='yes')   $icons.= sfsi_plus_prepairIcons('email',0,"no",null,$share_url); 
 			break;
-			case 'facebook' :  if($sfsi_plus_section1_options['sfsi_plus_facebook_display']=='yes') $icons.= sfsi_plus_prepairIcons('facebook');
+			case 'facebook' :  if($sfsi_plus_section1_options['sfsi_plus_facebook_display']=='yes') $icons.= sfsi_plus_prepairIcons('facebook',0,"no",null,$share_url);
 			break;
-			case 'google' :  if($sfsi_plus_section1_options['sfsi_plus_google_display']=='yes')    $icons.= sfsi_plus_prepairIcons('google'); ;
+			case 'google' :  if($sfsi_plus_section1_options['sfsi_plus_google_display']=='yes')    $icons.= sfsi_plus_prepairIcons('google',0,"no",null,$share_url);
 			break;
-			case 'twitter' :  if($sfsi_plus_section1_options['sfsi_plus_twitter_display']=='yes')    $icons.= sfsi_plus_prepairIcons('twitter'); 
+			case 'twitter' :  if($sfsi_plus_section1_options['sfsi_plus_twitter_display']=='yes')    $icons.= sfsi_plus_prepairIcons('twitter',0,"no",null,$share_url); 
 			break;
-			case 'share' :  if($sfsi_plus_section1_options['sfsi_plus_share_display']=='yes')    $icons.= sfsi_plus_prepairIcons('share');    break;
-			case 'youtube' :  if($sfsi_plus_section1_options['sfsi_plus_youtube_display']=='yes')     $icons.= sfsi_plus_prepairIcons('youtube'); 
+			case 'share' :  if($sfsi_plus_section1_options['sfsi_plus_share_display']=='yes')    $icons.= sfsi_plus_prepairIcons('share',0,"no",null,$share_url);    break;
+			case 'youtube' :  if($sfsi_plus_section1_options['sfsi_plus_youtube_display']=='yes')     $icons.= sfsi_plus_prepairIcons('youtube',0,"no",null,$share_url); 
 			break;
-			case 'pinterest' :   if($sfsi_plus_section1_options['sfsi_plus_pinterest_display']=='yes')     $icons.= sfsi_plus_prepairIcons('pinterest');
+			case 'pinterest' :   if($sfsi_plus_section1_options['sfsi_plus_pinterest_display']=='yes')     $icons.= sfsi_plus_prepairIcons('pinterest',0,"no",null,$share_url);
 			break;
-			case 'linkedin' :  if($sfsi_plus_section1_options['sfsi_plus_linkedin_display']=='yes')    $icons.= sfsi_plus_prepairIcons('linkedin'); 
+			case 'linkedin' :  if($sfsi_plus_section1_options['sfsi_plus_linkedin_display']=='yes')    $icons.= sfsi_plus_prepairIcons('linkedin',0,"no",null,$share_url); 
 			break;
-			case 'instagram' :  if($sfsi_plus_section1_options['sfsi_plus_instagram_display']=='yes')    $icons.= sfsi_plus_prepairIcons('instagram'); 
+			case 'instagram' :  if($sfsi_plus_section1_options['sfsi_plus_instagram_display']=='yes')    $icons.= sfsi_plus_prepairIcons('instagram',0,"no",null,$share_url); 
 			break;
 			case 'houzz' :
 				if(
@@ -321,10 +321,10 @@ function sfsi_plus_check_visiblity($isFloter=0)
 					$sfsi_plus_section1_options['sfsi_plus_houzz_display'] == 'yes'
 				)
 				{
-					$icons.= sfsi_plus_prepairIcons('houzz');
+					$icons.= sfsi_plus_prepairIcons('houzz',0,"no",null,$share_url);
 				}
 			break;	  
-			case 'custom' : $icons.= sfsi_plus_prepairIcons($icon_arry['ele']); 
+			case 'custom' : $icons.= sfsi_plus_prepairIcons($icon_arry['ele'],0,"no",null,$share_url); 
 			break;    
 	}
 	}  
@@ -377,7 +377,7 @@ function sfsi_plus_check_visiblity($isFloter=0)
     return $icons_data;
 }
 /* make all icons with saved settings in admin */
-function sfsi_plus_prepairIcons($icon_name,$is_front=0, $onpost="no", $fromPost = NULL)
+function sfsi_plus_prepairIcons($icon_name,$is_front=0, $onpost="no", $fromPost = NULL,$share_url=null)
 {  
     global $wpdb; global $socialObj; global $post;
     $mouse_hover_effect = ''; 
@@ -429,7 +429,9 @@ function sfsi_plus_prepairIcons($icon_name,$is_front=0, $onpost="no", $fromPost 
     $scheme = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off' || $_SERVER['SERVER_PORT'] == 443) ? "https" : "http";
 
 	//$current_url = $scheme.'://'.$_SERVER['SERVER_NAME'].$_SERVER['REQUEST_URI'];
-	if($fromPost == 'yes' && !empty($post))
+	if(null!==$share_url){
+		$current_url = $share_url;
+	}elseif($fromPost == 'yes' && !empty($post))
 	{
 		$current_url = get_permalink($post->ID);
 	}

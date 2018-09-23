@@ -60,7 +60,13 @@ function sfsi_plus_share_block_assets() {
 function sfsi_plus_register_icon_route(){
     register_rest_route(SFSI_PLUS_DOMAIN.'/v1','icons',array(
         'methods'=> WP_REST_Server::READABLE,
-        'callback' => 'sfsi_plus_render_shortcode'
+        'callback' => 'sfsi_plus_render_shortcode',
+        'args'=>[
+            "share_url"=>[
+                "type"=>'string',
+                "sanitize_callback" => 'sanitize_text_field'
+            ]
+        ]
     ));
 }
 
@@ -69,9 +75,9 @@ add_action( 'rest_api_init', 'sfsi_plus_register_icon_route');
 function sfsi_plus_render_shortcode(){
     ob_start();
     if(isset($_GET['ractangle_icon']) && 1==$_GET['ractangle_icon']){
-        $returndata=DISPLAY_ULTIMATE_PLUS();
+        $returndata=DISPLAY_ULTIMATE_PLUS(null,null,$_GET['share_url']);
     }else{
-        $returndata=DISPLAY_ULTIMATE_PLUS();
+        $returndata=DISPLAY_ULTIMATE_PLUS(null,null,$_GET['share_url']);
     }
     ob_clean();
     return rest_ensure_response($returndata);

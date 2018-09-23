@@ -251,7 +251,7 @@ SFSI(document).ready(function(s) {
             opacity:1,
             "z-index":1e3
         }), SFSI(this).parentsUntil("div").siblings("div.sfsi_plus_tool_tip_2").show());
-    }) :SFSI("img.sfsi_wicon").on("mouseenter", function() {
+    }) :SFSI(document).on("mouseenter","img.sfsi_wicon" ,function() {
         var s = SFSI("#sfsi_plus_floater_sec").val();
         SFSI("div.sfsi_plus_wicons").css("z-index", "0"), SFSI(this).parent().parent().parent().siblings("div.sfsi_plus_wicons").find(".sfsiplus_inerCnt").find("div.sfsi_plus_tool_tip_2").hide(), 
         SFSI(this).parent().parent().parent().parent().siblings("li").length > 0 && (SFSI(this).parent().parent().parent().parent().siblings("li").find("div.sfsi_plus_tool_tip_2").css("z-index", "0"), 
@@ -280,7 +280,7 @@ SFSI(document).ready(function(s) {
             opacity:1,
             "z-index":10
         }), SFSI(this).parentsUntil("div").siblings("div.sfsi_plus_tool_tip_2").show());
-    }), SFSI("div.sfsi_plus_wicons").on("mouseleave", function() {
+    }), SFSI(document).on("mouseleave","div.sfsi_plus_wicons", function() {
 		SFSI(this).children("div.sfsiplus_inerCnt").children("a.sficn").attr("effect") && "fade_in" == SFSI(this).children("div.sfsiplus_inerCnt").children("a.sficn").attr("effect") && SFSI(this).children("div.sfsiplus_inerCnt").find("a.sficn").css("opacity", "0.6"), 
         SFSI(this).children("div.sfsiplus_inerCnt").children("a.sficn").attr("effect") && "scale" == SFSI(this).children("div.sfsiplus_inerCnt").children("a.sficn").attr("effect") && SFSI(this).children("div.sfsiplus_inerCnt").find("a.sficn").removeClass("scale"), 
         SFSI(this).children("div.sfsiplus_inerCnt").children("a.sficn").attr("effect") && "combo" == SFSI(this).children("div.sfsiplus_inerCnt").children("a.sficn").attr("effect") && (SFSI(this).children("div.sfsiplus_inerCnt").find("a.sficn").css("opacity", "0.6"), 

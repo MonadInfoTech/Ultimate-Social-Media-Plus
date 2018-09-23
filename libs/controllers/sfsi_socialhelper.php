@@ -75,7 +75,7 @@ class sfsi_plus_SocialHelper
 	   //if(filter_var($url, FILTER_VALIDATE_URL) && !empty($google_api_key))
 	   //{
 			$url = parse_url($url);
-			$url_path=explode('/',$url['path']);
+			$url_path=explode('/',isset($url['path'])?$url['path']:'');
 			if(isset($url_path))
 			{  
 			   end($url_path);
@@ -113,7 +113,7 @@ class sfsi_plus_SocialHelper
 	  $curl_results = curl_exec ($curl);
 	  curl_close ($curl);
 	  $json = json_decode($curl_results, true);
-	  
+	  if(isset($json[0]['error'])){return 0;}
 	  return intval( $json[0]['result']['metadata']['globalCounts']['count'] );
 	}
 
@@ -298,14 +298,12 @@ class sfsi_plus_SocialHelper
 	public function sfsi_Googlelike($permalink,$icons_language="en_US")
 	{
 		$show_count=0;  
-		?>
-		<script >
-			window.___gcfg = 
-			{
-				lang:'<?php echo $icons_language; ?>',parsetags: 'onload'
-			};
-		</script>
-		<?php
+		$script="<script >".
+			'window.___gcfg ='. 
+			'{'.
+			"	lang:'".$icons_language."',parsetags: 'onload'".
+			"};".
+		"</script>";
 		$google_html = '<div class="g-plusone" data-href="' . $permalink . '" ';
 		if($show_count)
 		{
@@ -316,23 +314,21 @@ class sfsi_plus_SocialHelper
 			$google_html .= 'data-size="large" data-annotation="none" ';
 		}
 		$google_html .= '></div>';
-		return $google_html;
+		return $script.$google_html;
 	}      
   	
 	/* create on page google share option */      
   	public function sfsi_GoogleShare($permalink,$icons_language="en_US")
 	{
 		$show_count=1;
-	  	?>
-		<script >
-			window.___gcfg = 
-			{
-				lang:'<?php echo $icons_language; ?>',parsetags: 'onload'
-			};
-		</script>
-		<?php
+	  	$script="<script >".
+			'window.___gcfg ='. 
+			'{'.
+			"	lang:'".$icons_language."',parsetags: 'onload'".
+			"};".
+		"</script>";
       	$google_html = '<div class="g-plus" data-action="share" data-annotation="none" data-height="24" data-href="'.$permalink.'">'.$permalink.'</div>';
-        return $google_html;
+        return $script.$google_html;
 	}
  
  	/* create on page twitter follow option */ 

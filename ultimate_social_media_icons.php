@@ -121,7 +121,7 @@ function sfsi_plus_error_reporting(){
 
 //shortcode for the ultimate social icons {Monad}
 add_shortcode("DISPLAY_ULTIMATE_PLUS", "DISPLAY_ULTIMATE_PLUS");
-function DISPLAY_ULTIMATE_PLUS($args = null, $content = null)
+function DISPLAY_ULTIMATE_PLUS($args = null, $content = null,$share_url=null)
 {
 	$instance = array("showf" => 1, "title" => '');
 	$sfsi_plus_section8_options = get_option("sfsi_plus_section8_options");
@@ -143,7 +143,7 @@ function DISPLAY_ULTIMATE_PLUS($args = null, $content = null)
 			$return .= '<div class="sfsi_plus_widget">';
 				$return .= '<div id="sfsi_plus_wDiv"></div>';
 				/* Link the main icons function */
-				$return .= sfsi_plus_check_visiblity(0);
+				$return .= sfsi_plus_check_visiblity(0,$share_url);
 		  		$return .= '<div style="clear: both;"></div>';
 			$return .= '</div>';
 		$return .= $after_widget;
