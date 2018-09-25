@@ -768,37 +768,70 @@ function sfsi_plus_rating_msg()
 	$diff_inrval = round(($datetime2->format('U') - $datetime1->format('U')) / (60*60*24));
 
 	if($diff_inrval >= 30 && get_option('sfsi_plus_RatingDiv')=="no")
-	{
-	 echo '
-	 <div class="sfwp_fivestar updated notice notice-success is-dismissible">
-    	<p>'.__('We noticed you\'ve been using the Ultimate Social Media PLUS Plugin for more than 30 days. If you\'re happy with it, could you please do us a BIG favor and let us know what you think about it & what we can improve? It only takes a minute!?', SFSI_PLUS_DOMAIN).'</p>
+	{ ?>
+		<style type="text/css">
+        .sfsi_plus_plg-rating-dismiss:before {
+            background: none;
+            color: #72777c;
+            content: "\f153";
+            display: block;
+            font: normal 16px/20px dashicons;
+            speak: none;
+            height: 20px;
+            text-align: center;
+            width: 20px;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }      
+        .sfsi_plus_plg-rating-dismiss{
+            position: absolute;
+            top: 45px;
+            right: 15px;
+            border: none;
+            margin: 0;
+            padding: 9px;
+            background: none;
+            color: #72777c;
+            cursor: pointer;
+        }
+      </style>
+	 <div class="sfsi_plus_sfwp_fivestar notice notice-success">
+    	<p><?php echo __('We noticed you\'ve been using the Ultimate Social Media PLUS Plugin for more than 30 days. If you\'re happy with it, could you please do us a BIG favor and let us know ONE thing we can improve in it?', SFSI_PLUS_DOMAIN);?></p>
         <ul class="sfwp_fivestar_ul">
-        	<li><a href="https://wordpress.org/support/plugin/ultimate-social-media-plus#new-topic-0" target="_new" title="Yes, that\'s fair, let me give feedback!">'.__('Yes, that\'s fair, let me give feedback!', SFSI_PLUS_DOMAIN).'</a></li>
-            <li><a href="javascript:void(0);" class="sfsiHideRating" title="I already did">'.__('I already did', SFSI_PLUS_DOMAIN).'</a></li>
+        	<li><a href="https://wordpress.org/support/plugin/ultimate-social-media-plus#new-topic-0" target="_new" title="<?php echo __('Yes, let me give feedback.',SFSI_PLUS_DOMAIN); ?>"><?php echo __('Yes, let me give feedback.', SFSI_PLUS_DOMAIN); ?></a></li>
+            <li><a href="https://wordpress.org/support/plugin/ultimate-social-media-plus/reviews/?filter=5" target="_new" title="<?php echo __('No clue, let me give a 5-star rating instead',SFSI_PLUS_DOMAIN) ?>"><?php echo __('No clue, let me give a 5-star rating instead',SFSI_PLUS_DOMAIN) ?></a></li>
+            <li><a href="javascript:void(0);" class="sfsiHideRating" title="<?php echo __('I already did', SFSI_PLUS_DOMAIN)?>"> <?php echo __('I already did (don\'t show this again)', SFSI_PLUS_DOMAIN); ?> </a></li>
         </ul>
+        <button type="button" class="sfsi_plus_plg-rating-dismiss"><span class="screen-reader-text"><?php echo __('Dismiss this notice.',SFSI_PLUS_DOMAIN); ?></span></button>    
     </div>
     <script>
     jQuery( document ).ready(function( $ ) {
-    jQuery(\'.sfsiHideRating\').click(function(){
-        var data={\'action\':\'plushideRating\'}
-             jQuery.ajax({
-        
-        url: "'.admin_url( 'admin-ajax.php' ).'",
-        type: "post",
-        data: data,
-        dataType: "json",
-        async: !0,
-        success: function(e) {
-            if (e=="success") {
-               jQuery(\'.sfwp_fivestar\').slideUp(\'slow\');
-            }
-        }
-         });
-        })
-    
+    	$('.sfsi_plus_plg-rating-dismiss').css({'top':$('.sfsi_plus_sfwp_fivestar')[0].offsetTop+'px'})
+    	var sel1 = jQuery('.sfsiHideRating');
+        var sel2 = jQuery('.sfsi_plus_plg-rating-dismiss');
+		function sfsi_plus_hide_rating(element){
+		    element.on('click',function(){
+		        var data={'action':'plushideRating'};
+		        jQuery.ajax({
+		    
+			        url: "<?php echo admin_url( 'admin-ajax.php' ); ?>",
+			        type: "post",
+			        data: data,
+			        dataType: "json",
+			        async: !0,
+			        success: function(e) {
+			            if (e=="success") {
+			               jQuery('.sfsi_plus_sfwp_fivestar').slideUp('slow');
+			            }
+			        }
+		     	});
+		    });
+		}
+		sfsi_plus_hide_rating(sel1);
+        sfsi_plus_hide_rating(sel2);
     });
     </script>
-    ';
+    <?php
    }
 }
 add_action('wp_ajax_plushideRating','sfsi_plusHideRatingDiv');
