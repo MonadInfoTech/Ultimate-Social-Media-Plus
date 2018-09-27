@@ -1427,14 +1427,6 @@ ul.sfsiplus_icn_listing8 li .sfsiplus_right_info a {
     line-height: 27px;
     margin-left: 6px;
 }
-.sfsi_pop_up .addthis_toolbox {
-    width: 80px;
-    margin: 40px auto 0;
-}
-a.addthis_button_compact {
-    margin-top: 0;
-    width: auto;
-}
 .drop_lsts {
     left: 220px;
     position: relative;
@@ -2280,19 +2272,16 @@ h2.optional {
 .sfsi_plus_Sicons .sf_fb{ margin: 0 4px 0 5px; line-height: 0px;}
 .sfsi_plus_Sicons .sf_google{ margin: 0 5px 0 5px; line-height: 0px;}
 .sfsi_plus_Sicons .sf_twiter{ margin: 1px 7px 0 4px; line-height: 0px;}
-.sfsi_plus_Sicons .sf_addthis{ margin: 2px 7px 0 2px; line-height: 0px;}
 
 .sfsi_plus_Sicons.left .sf_subscrbe{ margin: 2px 8px 0 0;}
 .sfsi_plus_Sicons.left .sf_fb{ margin: 0 8px 0 0;}
 .sfsi_plus_Sicons.left .sf_google{ margin: 0 8px 0 0;}
 .sfsi_plus_Sicons.left .sf_twiter{ margin: 1px 8px 0 0;}
-.sfsi_plus_Sicons.left .sf_addthis{ margin: 2px 7px 0 0;}
 
 .sfsi_plus_Sicons.right .sf_subscrbe{ margin: 2px 0 0; }
 .sfsi_plus_Sicons.right .sf_fb{ margin: 0 0 0 7px; }
 .sfsi_plus_Sicons.right .sf_google{ margin: 0 0 0 8px; }
 .sfsi_plus_Sicons.right .sf_twiter{ margin: 1px 0 0 8px; }
-.sfsi_plus_Sicons.right .sf_addthis{ margin: 2px 0 0 8px; }
 
 .sfsi_plus_Sicons .sf_subscrbe, .sfsi_plus_Sicons .sf_twiter
 {
@@ -2342,9 +2331,6 @@ h2.optional {
     /*width: 450px!important;*/
 	float: left;
 }
-.sfsi_plus_Sicons .sf_addthis, .sfsi_plus_Sicons .sf_google {
-    position: relative;
-}
 .sf_google > div
 {
 	width: 70px !important;
@@ -2357,9 +2343,6 @@ h2.optional {
 {
 	float: left !important;
 	margin-top: 1px !important;	
-}
-.wrapper .sfsi_plus_Sicons .sf_addthis {
-    margin: 7px 0 0 4px!important;
 }
 .tab2 .utube_inn label {
     font-size: 18px;
@@ -2748,12 +2731,6 @@ ul.cstmskin_iconlist {
 	margin:5px 5px 5px 5px;
 	max-width:62px;
 	min-width:35px;
-	min-height: 20px;
-}
-.sfsi_socialwpr .sf_addthis
-{
-	float:left;
-	margin:5px 5px 5px 5px;
 	min-height: 20px;
 }
 .sfsipyplfrm

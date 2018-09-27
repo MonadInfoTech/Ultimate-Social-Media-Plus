@@ -35,7 +35,6 @@
 		<li>
         	<a href="#" title="Google Plus"><img src="<?php echo SFSI_PLUS_PLUGURL; ?>images/google_plus1.jpg" alt="Google Plus" /><span>18k</span></a>
         </li>
-		<li><a href="#" title="Share"><img src="<?php echo SFSI_PLUS_PLUGURL; ?>images/share1.jpg" alt="Share" /><span>18k</span></a></li>
 	</ul>	
 	</div><!-- icons position section -->
 	

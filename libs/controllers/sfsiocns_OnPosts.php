@@ -25,10 +25,6 @@ function sfsi_plus_social_buttons_below($content)
 	{
 		$sfsi_section8['sfsi_plus_rectgp'] = 'yes';
 	}
-	if(!isset($sfsi_section8['sfsi_plus_rectshr']))
-	{
-		$sfsi_section8['sfsi_plus_rectshr'] = 'yes';
-	}
 	if(!isset($sfsi_section8['sfsi_plus_recttwtr']))
 	{
 		$sfsi_section8['sfsi_plus_recttwtr'] = 'no';
@@ -69,7 +65,7 @@ function sfsi_plus_social_buttons_below($content)
 	$txt=(isset($sfsi_section8['sfsi_plus_textBefor_icons']))? $sfsi_section8['sfsi_plus_textBefor_icons'] : "Please follow and like us:" ;
 	//$float= $sfsi_section6['sfsi_plus_icons_alignment'];
 	$float= $sfsi_section8['sfsi_plus_icons_alignment'];
-	if($sfsi_section8['sfsi_plus_rectsub'] == 'yes' || $sfsi_section8['sfsi_plus_rectfb'] == 'yes' || $sfsi_section8['sfsi_plus_rectgp'] == 'yes' || $sfsi_section8['sfsi_plus_rectshr'] == 'yes' || $sfsi_section8['sfsi_plus_recttwtr'] == 'yes' || $sfsi_section8['sfsi_plus_rectpinit'] == 'yes' || $sfsi_section8['sfsi_plus_rectfbshare'] == 'yes')
+	if($sfsi_section8['sfsi_plus_rectsub'] == 'yes' || $sfsi_section8['sfsi_plus_rectfb'] == 'yes' || $sfsi_section8['sfsi_plus_rectgp'] == 'yes'  || $sfsi_section8['sfsi_plus_recttwtr'] == 'yes' || $sfsi_section8['sfsi_plus_rectpinit'] == 'yes' || $sfsi_section8['sfsi_plus_rectfbshare'] == 'yes')
 	{
 		$icons="<div class='sfsi_plus_Sicons ".$float."' style='float:".$float."'><div style='display: inline-block;margin-bottom: 0; margin-left: 0; margin-right: 8px; margin-top: 0; vertical-align: middle;width: auto;'><span>".$txt."</span></div>";
 	}
@@ -101,10 +97,6 @@ function sfsi_plus_social_buttons_below($content)
 	{
 		if($show_count){$sfsiLikeWithpingogl = "63px";}else{$sfsiLikeWithpingogl = "auto";}
 		$icons.="<div class='sf_google' style='display: inline-block;vertical-align: middle; width:".$sfsiLikeWithpingogl.";'>".sfsi_plus_googlePlus($permalink,$show_count)."</div>";
-	}
-	if($sfsi_section8['sfsi_plus_rectshr'] == 'yes')
-	{
-		$icons.="<div class='sf_addthis'  style='display: inline-block;vertical-align: middle;width: auto;margin-top: 6px;'>".sfsi_plus_Addthis($show_count, $permalink, $title)."</div>";
 	}
 	$icons.="</div>";
     
@@ -244,61 +236,6 @@ function sfsi_plus_pinitpinterest($permalink,$show_count)
 	
 	return $pinit_html;
 }
-
-/* create add this  button */
-function sfsi_plus_Addthis($show_count, $permalink, $post_title)
-{
-   /*$atiocn=' <script type="text/javascript">
-	var addthis_config = {
-    pubid: "YOUR-PROFILE-ID"*/
-	
-	$atiocn=' <script type="text/javascript">
-		var addthis_config = {
-			url: "'.$permalink.'",
-			title: "'.$post_title.'"
-		}
-	</script>';
-
-	if($show_count==1)
-	{
-		/*$atiocn.=' <div class="addthis_toolbox">
-              <a class="addthis_counter addthis_pill_style share_showhide"></a>
-		</div>';*/
-	    $atiocn.=' <div class="addthis_toolbox" addthis:url="'.$permalink.'" addthis:title="'.$post_title.'">
-			<a class="addthis_counter addthis_pill_style share_showhide"></a>
-		</div>';
-		return $atiocn;
-	}
-	else
-	{
-		/*$atiocn.='<div class="addthis_toolbox addthis_default_style addthis_20x20_style"><a class="addthis_button_compact " href="#">  <img src="'.SFSI_PLUS_PLUGURL.'images/sharebtn.png"  border="0" alt="Share" /></a></div>';*/
-		$atiocn.='<div class="addthis_toolbox addthis_default_style addthis_20x20_style" addthis:url="'.$permalink.'" addthis:title="'.$post_title.'"><a class="addthis_button_compact " href="#">  <img src="'.SFSI_PLUS_PLUGURL.'images/sharebtn.png"  border="0" alt="Share" /></a></div>';
-		return $atiocn; 
-    }
-}
-
-function sfsi_plus_Addthis_blogpost($show_count, $permalink, $post_title)
-{ 
-	$atiocn=' <script type="text/javascript">
-		var addthis_config = {
-			 url: "'.$permalink.'",
-			 title: "'.$post_title.'"
-		}
-	</script>';
-	
-	if($show_count==1)
-	{
-	   $atiocn.=' <div class="addthis_toolbox" addthis:url="'.$permalink.'" addthis:title="'.$post_title.'">
-              <a class="addthis_counter addthis_pill_style share_showhide"></a>
-	   </div>';
-	    return $atiocn;
-	}
-	else
-	{
-		$atiocn.='<div class="addthis_toolbox addthis_default_style addthis_20x20_style" addthis:url="'.$permalink.'" addthis:title="'.$post_title.'"><a class="addthis_button_compact " href="#">  <img src="'.SFSI_PLUS_PLUGURL.'images/sharebtn.png"  border="0" alt="Share" /></a></div>';
-		return $atiocn; 
-    }
-}
 	
 /* add all external javascript to wp_footer */        
 function sfsi_plus_footer_script()
@@ -332,10 +269,6 @@ function sfsi_plus_footer_script()
 	if(!isset($sfsi_section8['sfsi_plus_rectgp']))
 	{
 		$sfsi_section8['sfsi_plus_rectgp'] = 'yes';
-	}
-	if(!isset($sfsi_section8['sfsi_plus_rectshr']))
-	{
-		$sfsi_section8['sfsi_plus_rectshr'] = 'yes';
 	}
 	if(!isset($sfsi_section8['sfsi_plus_recttwtr']))
 	{
@@ -398,15 +331,6 @@ function sfsi_plus_footer_script()
        <!-- linkedIn share and  follow js -->
 	   
         <script src="//platform.linkedin.com/in.js" type="text/javascript">lang: <?php echo $icons_language;?></script>
-	<?php
-	}
-	
-	if($sfsi_section1['sfsi_plus_share_display']=="yes" || $sfsi_section6['sfsi_plus_show_Onposts']=="yes" || ($sfsi_section8['sfsi_plus_rectshr'] == "yes" && $sfsi_section8['sfsi_plus_show_item_onposts'] == "yes" && $sfsi_section8['sfsi_plus_display_button_type'] == "standard_buttons")) { ?>		
-		<!-- Addthis js -->
-        <script type="text/javascript" src="https://s7.addthis.com/js/300/addthis_widget.js#pubid=ra-558ac14e7f79bff7"></script>
-        <script type="text/javascript">
-			var addthis_config = {  ui_click: true  };
-		</script>
 	<?php
 	}
 	if($sfsi_section1['sfsi_plus_pinterest_display']=="yes" || ($sfsi_section8['sfsi_plus_rectpinit'] == "yes" && $sfsi_section8['sfsi_plus_show_item_onposts'] == "yes" && $sfsi_section8['sfsi_plus_display_button_type'] == "standard_buttons")) {?>

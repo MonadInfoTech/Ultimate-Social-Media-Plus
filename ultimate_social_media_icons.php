@@ -418,10 +418,6 @@ function sfsi_plus_beforeafterblogposts( $content )
 		{
 			$sfsi_section8['sfsi_plus_rectgp'] = 'yes';
 		}
-		if(!isset($sfsi_section8['sfsi_plus_rectshr']))
-		{
-			$sfsi_section8['sfsi_plus_rectshr'] = 'yes';
-		}
 		if(!isset($sfsi_section8['sfsi_plus_recttwtr']))
 		{
 			$sfsi_section8['sfsi_plus_recttwtr'] = 'no';
@@ -463,7 +459,6 @@ function sfsi_plus_beforeafterblogposts( $content )
 							$sfsi_section8['sfsi_plus_rectsub']		== 'yes' ||
 							$sfsi_section8['sfsi_plus_rectfb']		== 'yes' ||
 							$sfsi_section8['sfsi_plus_rectgp']		== 'yes' ||
-							$sfsi_section8['sfsi_plus_rectshr'] 	== 'yes' ||
 							$sfsi_section8['sfsi_plus_recttwtr'] 	== 'yes' ||
 							$sfsi_section8['sfsi_plus_rectpinit'] 	== 'yes' ||
 							$sfsi_section8['sfsi_plus_rectfbshare'] == 'yes' 
@@ -506,10 +501,6 @@ function sfsi_plus_beforeafterblogposts( $content )
 							if($show_count){$sfsiLikeWithpingogl = "63px";}else{$sfsiLikeWithpingogl = "auto";}
 							$icons_before .= "<div class='sf_google'  style='display: inline-block;vertical-align: middle;width: ".$sfsiLikeWithpingogl.";'>".sfsi_plus_googlePlus($permalink,$show_count)."</div>";
 						}
-						if($sfsi_section8['sfsi_plus_rectshr'] == 'yes')
-						{
-							$icons_before .= "<div class='sf_addthis'  style='display: inline-block;vertical-align: middle;width: auto;margin-top: 6px;'>".sfsi_plus_Addthis_blogpost($show_count, $permalink, $post_title)."</div>";
-						}
 					}
 					else
 					{
@@ -540,7 +531,6 @@ function sfsi_plus_beforeafterblogposts( $content )
 							$sfsi_section8['sfsi_plus_rectsub'] 	== 'yes' ||
 							$sfsi_section8['sfsi_plus_rectfb'] 		== 'yes' ||
 							$sfsi_section8['sfsi_plus_rectgp'] 		== 'yes' ||
-							$sfsi_section8['sfsi_plus_rectshr'] 	== 'yes' ||
 							$sfsi_section8['sfsi_plus_recttwtr'] 	== 'yes' ||
 							$sfsi_section8['sfsi_plus_rectpinit'] 	== 'yes' ||
 							$sfsi_section8['sfsi_plus_rectfbshare'] == 'yes' 
@@ -582,10 +572,6 @@ function sfsi_plus_beforeafterblogposts( $content )
 						{
 							if($show_count){$sfsiLikeWithpingogl = "63px";}else{$sfsiLikeWithpingogl = "auto";}
 							$icons_after .= "<div class='sf_google' style='display: inline-block;vertical-align: middle;width: ".$sfsiLikeWithpingogl.";'>".sfsi_plus_googlePlus($permalink,$show_count)."</div>";
-						}
-						if($sfsi_section8['sfsi_plus_rectshr'] == 'yes')
-						{
-							$icons_after .= "<div class='sf_addthis'  style='display: inline-block;vertical-align: middle;width: auto;margin-top: 6px;'>".sfsi_plus_Addthis_blogpost($show_count, $permalink, $post_title)."</div>";
 						}
 					}
 					else
@@ -1286,3 +1272,36 @@ add_action( 'wp_ajax_sfsi_pplus_dismiss_error_reporting_notice', 'sfsi_pplus_dis
 
 // ********************************* Notice for error reporting CLOSE *******************************//
 
+// ********************************* Notice for removal of AddThis option STARTS *******************************//
+function sfsi_plus_addThis_removal_notice(){
+
+    if (isset($_GET['page']) && "sfsi-plus-options" == $_GET['page']) : 
+        
+        $sfsi_plus_addThis_removalText    = "We removed Addthis from the plugin due to issues with GDPR, the new EU data protection regulation.";
+
+        $isDismissed   =  get_option('sfsi_plus_addThis_icon_removal_notice_dismissed',false);
+
+        if( false == $isDismissed) { ?>
+                    
+            <div id="sfsi_plus_addThis_removal_notice" class="notice notice-info">
+
+                <p><?php echo $sfsi_plus_addThis_removalText; ?></p>
+
+                <button type="button" class="sfsi_plus-AddThis-notice-dismiss notice-dismiss"></button>
+
+            </div>
+
+        <?php } ?>
+
+    <?php endif;
+}
+
+function sfsi_plus_dismiss_addthhis_removal_notice(){
+       echo update_option('sfsi_plus_addThis_icon_removal_notice_dismissed',true) ? get_option('sfsi_plus_addThis_icon_removal_notice_dismissed',false) :
+ "false";
+       die;
+}
+
+add_action( 'wp_ajax_sfsi_plus_dismiss_addThis_icon_notice', 'sfsi_plus_dismiss_addthhis_removal_notice' );
+
+// ********************************* Notice for removal of AddThis option CLOSES *******************************//

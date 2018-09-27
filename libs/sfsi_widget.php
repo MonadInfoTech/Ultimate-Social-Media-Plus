@@ -253,7 +253,6 @@ function sfsi_plus_check_visiblity($isFloter=0,$share_url=null)
                      $sfsi_section5['sfsi_plus_facebookIcon_order']=>'facebook',
                      $sfsi_section5['sfsi_plus_googleIcon_order']=>'google',
                      $sfsi_section5['sfsi_plus_twitterIcon_order']=>'twitter',
-                     $sfsi_section5['sfsi_plus_shareIcon_order']=>'share',
                      $sfsi_section5['sfsi_plus_youtubeIcon_order']=>'youtube',
                      $sfsi_section5['sfsi_plus_pinterestIcon_order']=>'pinterest',
                      $sfsi_section5['sfsi_plus_linkedinIcon_order']=>'linkedin',
@@ -306,7 +305,6 @@ function sfsi_plus_check_visiblity($isFloter=0,$share_url=null)
 			break;
 			case 'twitter' :  if($sfsi_plus_section1_options['sfsi_plus_twitter_display']=='yes')    $icons.= sfsi_plus_prepairIcons('twitter',0,"no",null,$share_url); 
 			break;
-			case 'share' :  if($sfsi_plus_section1_options['sfsi_plus_share_display']=='yes')    $icons.= sfsi_plus_prepairIcons('share',0,"no",null,$share_url);    break;
 			case 'youtube' :  if($sfsi_plus_section1_options['sfsi_plus_youtube_display']=='yes')     $icons.= sfsi_plus_prepairIcons('youtube',0,"no",null,$share_url); 
 			break;
 			case 'pinterest' :   if($sfsi_plus_section1_options['sfsi_plus_pinterest_display']=='yes')     $icons.= sfsi_plus_prepairIcons('pinterest',0,"no",null,$share_url);
@@ -888,59 +886,6 @@ function sfsi_plus_prepairIcons($icon_name,$is_front=0, $onpost="no", $fromPost 
 				}
         break;
         
-		case "share" :
-				$socialObj = new sfsi_plus_SocialHelper();
-				$url = "http://www.addthis.com/bookmark.php?v=250";
-				$class = "addthis_button";
-				
-				/*fecth no of counts if active in admin section */
-		      	if($sfsi_plus_section4_options['sfsi_plus_shares_countsDisplay']=="yes" && $sfsi_plus_section4_options['sfsi_plus_display_counts']=="yes")
-                {
-					  if($sfsi_plus_section4_options['sfsi_plus_shares_countsFrom']=="manual")
-					  {    
-						 $counts = $socialObj->format_num($sfsi_plus_section4_options['sfsi_plus_shares_manualCounts']);
-					  }
-					  else if($sfsi_plus_section4_options['sfsi_plus_shares_countsFrom']=="shares")
-					  {
-						 $shares=$socialObj->sfsi_get_atthis();
-						 $counts=$socialObj->format_num($shares);
-						 if(empty($counts))
-						 {
-							$counts=(string) "0";
-						 }
-					   } 
-                 }  
-                 
-				 //Giving alternative text to image
-				 if(!empty($sfsi_plus_section5_options['sfsi_plus_share_MouseOverText']))
-				 {	
-				 	$alt_text = $sfsi_plus_section5_options['sfsi_plus_share_MouseOverText'];
-				 }
-				 else
-				 {
-					 $alt_text = "SHARE";
-				 }
-				 
-				//Custom Skin Support {Monad}	 
-				if($active_theme == 'custom_support')
-				{
-					 if(get_option("plus_share_skin"))
-					 {
-						$icon = get_option("plus_share_skin");
-					 }
-					 else
-					 {
-						$active_theme = 'default';
-						$icons_baseUrl = SFSI_PLUS_PLUGURL."images/icons_theme/default/";
-						$icon=$icons_baseUrl.$active_theme."_share.png";
-					 }
-				}
-				else
-				{
-					$icon=$icons_baseUrl.$active_theme."_share.png";
-				}	  
-		break;
-        
 		case "youtube" :
 				$socialObj = new sfsi_plus_SocialHelper();
 				$toolClass = "utube_tool_bdr";
@@ -1520,7 +1465,6 @@ function sfsi_plus_check_posts_visiblity($isFloter=0 , $fromPost = NULL)
 					 $sfsi_section5['sfsi_plus_facebookIcon_order']=>'facebook',
 					 $sfsi_section5['sfsi_plus_googleIcon_order']=>'google',
 					 $sfsi_section5['sfsi_plus_twitterIcon_order']=>'twitter',
-					 $sfsi_section5['sfsi_plus_shareIcon_order']=>'share',
 					 $sfsi_section5['sfsi_plus_youtubeIcon_order']=>'youtube',
 					 $sfsi_section5['sfsi_plus_pinterestIcon_order']=>'pinterest',
 					 $sfsi_section5['sfsi_plus_linkedinIcon_order']=>'linkedin',
@@ -1581,12 +1525,6 @@ function sfsi_plus_check_posts_visiblity($isFloter=0 , $fromPost = NULL)
 				if($sfsi_plus_section1_options['sfsi_plus_twitter_display']=='yes')
 				{
 					$icons.= sfsi_plus_prepairIcons('twitter', 0, "no", $fromPost);
-				}
-			break;
-			case 'share' :
-				if($sfsi_plus_section1_options['sfsi_plus_share_display']=='yes')
-				{
-					$icons.= sfsi_plus_prepairIcons('share');
 				}
 			break;
 			case 'youtube' :

@@ -14,7 +14,6 @@
 			$option5['sfsi_plus_facebookIcon_order']	=>'facebook',
 			$option5['sfsi_plus_googleIcon_order']		=>'google',
 			$option5['sfsi_plus_twitterIcon_order']		=>'twitter',
-			$option5['sfsi_plus_shareIcon_order']		=>'share',
 			$option5['sfsi_plus_youtubeIcon_order']		=>'youtube',
 			$option5['sfsi_plus_pinterestIcon_order']	=>'pinterest',
 			$option5['sfsi_plus_linkedinIcon_order']	=>'linkedin',
@@ -84,9 +83,6 @@
 														: '';
 	$option5['sfsi_plus_youtube_MouseOverText'] = 	(isset($option5['sfsi_plus_youtube_MouseOverText']))
 														? sanitize_text_field($option5['sfsi_plus_youtube_MouseOverText'])
-														: '';
-	$option5['sfsi_plus_share_MouseOverText'] 	= 	(isset($option5['sfsi_plus_share_MouseOverText']))
-														? sanitize_text_field($option5['sfsi_plus_share_MouseOverText'])
 														: '';
 	$option5['sfsi_plus_instagram_MouseOverText']= 	(isset($option5['sfsi_plus_instagram_MouseOverText']))
 														? sanitize_text_field($option5['sfsi_plus_instagram_MouseOverText'])
@@ -387,12 +383,6 @@
           <?php case 'twitter' :?>
           		<li class="sfsiplus_twitter_section " data-index="<?php echo $index; ?>" id="sfsi_plus_twitterIcon_order">
                 	<a href="#" title="Twitter" ><img src="<?php echo SFSI_PLUS_PLUGURL; ?>images/twitter.png" alt="Twitter" /></a>
-                </li>
-          <?php break; ?>
-          
-          <?php case 'share' : ?>
-          		<li class="sfsiplus_share_section " data-index="<?php echo $index; ?>"  id="sfsi_plus_shareIcon_order">
-                	<a href="#" title="Share" ><img src="<?php echo SFSI_PLUS_PLUGURL; ?>images/share.png" alt="Share" /></a>
                 </li>
           <?php break; ?>
           

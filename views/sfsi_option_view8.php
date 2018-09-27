@@ -13,10 +13,6 @@
 	{
 		$option8['sfsi_plus_rectgp'] = 'yes';
 	}
-	if(!isset($option8['sfsi_plus_rectshr']))
-	{
-		$option8['sfsi_plus_rectshr'] = 'yes';
-	}
 	if(!isset($option8['sfsi_plus_recttwtr']))
 	{
 		$option8['sfsi_plus_recttwtr'] = 'no';
@@ -87,9 +83,6 @@
 															: '';
 	$option8['sfsi_plus_rectgp'] 					= 	(isset($option8['sfsi_plus_rectgp']))
 															? sanitize_text_field($option8['sfsi_plus_rectgp'])
-															: '';
-	$option8['sfsi_plus_rectshr'] 					= 	(isset($option8['sfsi_plus_rectshr']))
-															? sanitize_text_field($option8['sfsi_plus_rectshr'])
 															: '';
 	$option8['sfsi_plus_recttwtr'] 					= 	(isset($option8['sfsi_plus_recttwtr']))
 															? sanitize_text_field($option8['sfsi_plus_recttwtr'])
@@ -363,19 +356,6 @@
                                         <a href="#" title="Google Plus" class="cstmdsplggpls">
                                             <img src="<?php echo SFSI_PLUS_PLUGURL; ?>images/google_plus1.jpg" alt="Google Plus" /><span style="display: none;">18k</span>
                                         </a>
-                                    </li>
-                                    <li>
-										<div class="radio_section tb_4_ck">
-                                        	<input name="sfsi_plus_rectshr" <?php echo ($option8['sfsi_plus_rectshr']=='yes') ?  'checked="true"' : '' ;?>  id="sfsi_plus_rectshr" type="checkbox" value="yes" class="styled"  />
-                                        </div>
-                                        <a href="#" title="Share" class="cstmdsplshr">
-                                            <img src="<?php echo SFSI_PLUS_PLUGURL; ?>images/share1.jpg" alt="Share" />
-                                            <span style="display: none;">18k</span>
-                                        </a>
-                                        <p style="width:auto;float:left;padding: 0px!important;border:0px !important;">
-                                        	
-                                           (<?php  _e( 'may impact loading speed', SFSI_PLUS_DOMAIN ); ?>)
-                                        </p>
                                     </li>
                                     
 								</ul>	

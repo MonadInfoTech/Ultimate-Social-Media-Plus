@@ -20,9 +20,6 @@
 	$option1['sfsi_plus_google_display'] 	=	(isset($option1['sfsi_plus_google_display']))
 													? sanitize_text_field($option1['sfsi_plus_google_display'])
 													: '';
-	$option1['sfsi_plus_share_display'] 	=	(isset($option1['sfsi_plus_share_display']))
-													? sanitize_text_field($option1['sfsi_plus_share_display'])
-													: '';
 	$option1['sfsi_plus_youtube_display'] 	=	(isset($option1['sfsi_plus_youtube_display']))
 													? sanitize_text_field($option1['sfsi_plus_youtube_display'])
 													: '';
@@ -241,38 +238,6 @@
             </div>
         </li>
         <!-- END INSTAGRAM ICON -->
-        
-        <!-- SHARE ICON --> 
-        <li>
-            <div class="radio_section tb_4_ck">
-            	<input name="sfsi_plus_share_display" <?php echo ($option1['sfsi_plus_share_display']=='yes') ?  'checked="true"' : '' ;?> id=="sfsi_plus_share_display" type="checkbox" value="yes" class="styled"  />
-            </div>
-            <span class="sfsicls_share">
-            	Share
-            </span> 
-            <div class="sfsiplus_right_info">
-            	<p>
-                	<span><?php  _e( 'It depends:', SFSI_PLUS_DOMAIN); ?></span> 
-					<?php _e('Third-party service AddThis allows your visitors to share via many other social networks, however it may also slow down your site a bit.', SFSI_PLUS_DOMAIN); ?>
-                
-                	<label class="expanded-area" >
-                		<?php  _e( 'Everybody uses email – that’s why it’s', SFSI_PLUS_DOMAIN); ?>
-                
-                		<a href="http://www.entrepreneur.com/article/230949" target="_new">
-                			<?php  _e( 'much more effective than social media', SFSI_PLUS_DOMAIN); ?>
-               			</a> 
-                
-                		<?php  _e( 'to make people follow you. Not offering an email subscription option means losing out on future traffic to your site.', SFSI_PLUS_DOMAIN); ?>
-               		</label>
-                    <?php  _e( 'Check out their reviews:', SFSI_PLUS_DOMAIN); ?>
-                    <a href="https://wordpress.org/support/view/plugin-reviews/addthis" target="_blank">
-                    	<?php  _e( 'Click here', SFSI_PLUS_DOMAIN); ?>
-                    </a>.
-                	
-            	</p>
-            </div>
-       </li>
-       <!-- END SHARE ICON -->
        
        <!-- Houzz ICON -->
        <li>

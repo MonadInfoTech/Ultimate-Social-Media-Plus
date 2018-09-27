@@ -36,7 +36,7 @@ function sfsi_plus_delete_CusIcon(s, i)
 				attr = attr.replace('plus', '');
 				SFSI("#plus_total_cusotm_icons").val(e.total_up), SFSI(s).closest(".plus_custom").remove(), 
                 SFSI("li.plus_custom:last-child").addClass("bdr_btm_non"), SFSI(".plus_custom-links").find("div." + attr).remove(), 
-                SFSI(".plus_custom_m").find("div." + attr).remove(), SFSI(".plus_share_icon_order").children("li." + attr).remove(), 
+                SFSI(".plus_custom_m").find("div." + attr).remove(), 
                 SFSI("ul.plus_sfsi_sample_icons").children("li." + attr).remove();
 
                 if(e.total_up==0){
@@ -130,7 +130,6 @@ function sfsi_plus_depened_sections()
     SFSI("input[name='sfsi_plus_facebook_display']").prop("checked") ? sfsi_plus_section_Display("sfsiplus_facebook_section", "show") :sfsi_plus_section_Display("sfsiplus_facebook_section", "hide"), 
     SFSI("input[name='sfsi_plus_twitter_display']").prop("checked") ? sfsi_plus_section_Display("sfsiplus_twitter_section", "show") :sfsi_plus_section_Display("sfsiplus_twitter_section", "hide"), 
     SFSI("input[name='sfsi_plus_google_display']").prop("checked") ? sfsi_plus_section_Display("sfsiplus_google_section", "show") :sfsi_plus_section_Display("sfsiplus_google_section", "hide"), 
-    SFSI("input[name='sfsi_plus_share_display']").prop("checked") ? sfsi_plus_section_Display("sfsiplus_share_section", "show") :sfsi_plus_section_Display("sfsiplus_share_section", "hide"), 
     SFSI("input[name='sfsi_plus_youtube_display']").prop("checked") ? sfsi_plus_section_Display("sfsiplus_youtube_section", "show") :sfsi_plus_section_Display("sfsiplus_youtube_section", "hide"), 
     SFSI("input[name='sfsi_plus_pinterest_display']").prop("checked") ? sfsi_plus_section_Display("sfsiplus_pinterest_section", "show") :sfsi_plus_section_Display("sfsiplus_pinterest_section", "hide"), 
     SFSI("input[name='sfsi_plus_instagram_display']").prop("checked") ? sfsi_plus_section_Display("sfsiplus_instagram_section", "show") :sfsi_plus_section_Display("sfsiplus_instagram_section", "hide"), 
@@ -208,7 +207,7 @@ function SFSI_plus_done()
         data:e,
         success:function(msg) {
 			  jQuery("li.cstomskins_upload").children(".sfsiplus_icns_tab_3").html(msg);
-			  SFSI("input[name='sfsi_plus_rss_display']").prop("checked") ? sfsi_plus_section_Display("sfsiplus_rss_section", "show") :sfsi_plus_section_Display("sfsiplus_rss_section", "hide"),SFSI("input[name='sfsi_plus_email_display']").prop("checked") ? sfsi_plus_section_Display("sfsiplus_email_section", "show") :sfsi_plus_section_Display("sfsiplus_email_section", "hide"),SFSI("input[name='sfsi_plus_facebook_display']").prop("checked") ? sfsi_plus_section_Display("sfsiplus_facebook_section", "show") :sfsi_plus_section_Display("sfsiplus_facebook_section", "hide"), SFSI("input[name='sfsi_plus_twitter_display']").prop("checked") ? sfsi_plus_section_Display("sfsiplus_twitter_section", "show") :sfsi_plus_section_Display("sfsiplus_twitter_section", "hide"),SFSI("input[name='sfsi_plus_google_display']").prop("checked") ? sfsi_plus_section_Display("sfsiplus_google_section", "show") :sfsi_plus_section_Display("sfsiplus_google_section", "hide"), SFSI("input[name='sfsi_plus_share_display']").prop("checked") ? sfsi_plus_section_Display("sfsiplus_share_section", "show") :sfsi_plus_section_Display("sfsiplus_share_section", "hide"), SFSI("input[name='sfsi_plus_youtube_display']").prop("checked") ? sfsi_plus_section_Display("sfsiplus_youtube_section", "show") :sfsi_plus_section_Display("sfsiplus_youtube_section", "hide"), SFSI("input[name='sfsi_plus_pinterest_display']").prop("checked") ? sfsi_plus_section_Display("sfsiplus_pinterest_section", "show") :sfsi_plus_section_Display("sfsiplus_pinterest_section", "hide"), SFSI("input[name='sfsi_plus_instagram_display']").prop("checked") ? sfsi_plus_section_Display("sfsiplus_instagram_section", "show") :sfsi_plus_section_Display("sfsiplus_instagram_section", "hide"), SFSI("input[name='sfsi_plus_houzz_display']").prop("checked") ? sfsi_plus_section_Display("sfsiplus_houzz_section", "show") :sfsi_plus_section_Display("sfsiplus_houzz_section", "hide"), SFSI("input[name='sfsi_plus_linkedin_display']").prop("checked") ? sfsi_plus_section_Display("sfsiplus_linkedin_section", "show") :sfsi_plus_section_Display("sfsiplus_linkedin_section", "hide"), SFSI("input[element-type='sfsiplus-cusotm-icon']").prop("checked") ? sfsi_plus_section_Display("sfsiplus_custom_section", "show") :sfsi_plus_section_Display("sfsiplus_custom_section", "hide");
+			  SFSI("input[name='sfsi_plus_rss_display']").prop("checked") ? sfsi_plus_section_Display("sfsiplus_rss_section", "show") :sfsi_plus_section_Display("sfsiplus_rss_section", "hide"),SFSI("input[name='sfsi_plus_email_display']").prop("checked") ? sfsi_plus_section_Display("sfsiplus_email_section", "show") :sfsi_plus_section_Display("sfsiplus_email_section", "hide"),SFSI("input[name='sfsi_plus_facebook_display']").prop("checked") ? sfsi_plus_section_Display("sfsiplus_facebook_section", "show") :sfsi_plus_section_Display("sfsiplus_facebook_section", "hide"), SFSI("input[name='sfsi_plus_twitter_display']").prop("checked") ? sfsi_plus_section_Display("sfsiplus_twitter_section", "show") :sfsi_plus_section_Display("sfsiplus_twitter_section", "hide"),SFSI("input[name='sfsi_plus_google_display']").prop("checked") ? sfsi_plus_section_Display("sfsiplus_google_section", "show") :sfsi_plus_section_Display("sfsiplus_google_section", "hide"), SFSI("input[name='sfsi_plus_youtube_display']").prop("checked") ? sfsi_plus_section_Display("sfsiplus_youtube_section", "show") :sfsi_plus_section_Display("sfsiplus_youtube_section", "hide"), SFSI("input[name='sfsi_plus_pinterest_display']").prop("checked") ? sfsi_plus_section_Display("sfsiplus_pinterest_section", "show") :sfsi_plus_section_Display("sfsiplus_pinterest_section", "hide"), SFSI("input[name='sfsi_plus_instagram_display']").prop("checked") ? sfsi_plus_section_Display("sfsiplus_instagram_section", "show") :sfsi_plus_section_Display("sfsiplus_instagram_section", "hide"), SFSI("input[name='sfsi_plus_houzz_display']").prop("checked") ? sfsi_plus_section_Display("sfsiplus_houzz_section", "show") :sfsi_plus_section_Display("sfsiplus_houzz_section", "hide"), SFSI("input[name='sfsi_plus_linkedin_display']").prop("checked") ? sfsi_plus_section_Display("sfsiplus_linkedin_section", "show") :sfsi_plus_section_Display("sfsiplus_linkedin_section", "hide"), SFSI("input[element-type='sfsiplus-cusotm-icon']").prop("checked") ? sfsi_plus_section_Display("sfsiplus_custom_section", "show") :sfsi_plus_section_Display("sfsiplus_custom_section", "hide");
         	  SFSI(".cstmskins-overlay").hide("slow");
 			  sfsi_plus_update_step3() && sfsipluscollapse(this);
 		}
@@ -245,14 +244,13 @@ function sfsi_plus_update_step1()
 {
 	var nonce = SFSI("#sfsi_plus_save1").attr("data-nonce");
     global_error = 0, sfsiplus_beForeLoad(), sfsi_plus_depened_sections();
-    var s = !1, i = SFSI("input[name='sfsi_plus_rss_display']:checked").val(), e = SFSI("input[name='sfsi_plus_email_display']:checked").val(), t = SFSI("input[name='sfsi_plus_facebook_display']:checked").val(), n = SFSI("input[name='sfsi_plus_twitter_display']:checked").val(), o = SFSI("input[name='sfsi_plus_google_display']:checked").val(), a = SFSI("input[name='sfsi_plus_share_display']:checked").val(), r = SFSI("input[name='sfsi_plus_youtube_display']:checked").val(), c = SFSI("input[name='sfsi_plus_pinterest_display']:checked").val(), p = SFSI("input[name='sfsi_plus_linkedin_display']:checked").val(), _ = SFSI("input[name='sfsi_plus_instagram_display']:checked").val(), houzz = SFSI("input[name='sfsi_plus_houzz_display']:checked").val(), l = SFSI("input[name='sfsi_custom1_display']:checked").val(), S = SFSI("input[name='sfsi_custom2_display']:checked").val(), u = SFSI("input[name='sfsi_custom3_display']:checked").val(), f = SFSI("input[name='sfsi_custom4_display']:checked").val(), d = SFSI("input[name='sfsi_custom5_display']:checked").val(), I = {
+    var s = !1, i = SFSI("input[name='sfsi_plus_rss_display']:checked").val(), e = SFSI("input[name='sfsi_plus_email_display']:checked").val(), t = SFSI("input[name='sfsi_plus_facebook_display']:checked").val(), n = SFSI("input[name='sfsi_plus_twitter_display']:checked").val(), o = SFSI("input[name='sfsi_plus_google_display']:checked").val(), r = SFSI("input[name='sfsi_plus_youtube_display']:checked").val(), c = SFSI("input[name='sfsi_plus_pinterest_display']:checked").val(), p = SFSI("input[name='sfsi_plus_linkedin_display']:checked").val(), _ = SFSI("input[name='sfsi_plus_instagram_display']:checked").val(), houzz = SFSI("input[name='sfsi_plus_houzz_display']:checked").val(), l = SFSI("input[name='sfsi_custom1_display']:checked").val(), S = SFSI("input[name='sfsi_custom2_display']:checked").val(), u = SFSI("input[name='sfsi_custom3_display']:checked").val(), f = SFSI("input[name='sfsi_custom4_display']:checked").val(), d = SFSI("input[name='sfsi_custom5_display']:checked").val(), I = {
         action:"plus_updateSrcn1",
         sfsi_plus_rss_display:i,
         sfsi_plus_email_display:e,
         sfsi_plus_facebook_display:t,
         sfsi_plus_twitter_display:n,
         sfsi_plus_google_display:o,
-        sfsi_plus_share_display:a,
         sfsi_plus_youtube_display:r,
         sfsi_plus_pinterest_display:c,
         sfsi_plus_linkedin_display:p,
@@ -420,8 +418,7 @@ function sfsi_plus_showPreviewCounts()
     s = 1) :SFSI("#sfsi_plus_google_countsDisplay").css("opacity", 0), 1 == SFSI("input[name='sfsi_plus_linkedIn_countsDisplay']").prop("checked") ? (SFSI("#sfsi_plus_linkedIn_countsDisplay").css("opacity", 1), 
     s = 1) :SFSI("#sfsi_plus_linkedIn_countsDisplay").css("opacity", 0), 1 == SFSI("input[name='sfsi_plus_youtube_countsDisplay']").prop("checked") ? (SFSI("#sfsi_plus_youtube_countsDisplay").css("opacity", 1), 
     s = 1) :SFSI("#sfsi_plus_youtube_countsDisplay").css("opacity", 0), 1 == SFSI("input[name='sfsi_plus_pinterest_countsDisplay']").prop("checked") ? (SFSI("#sfsi_plus_pinterest_countsDisplay").css("opacity", 1), 
-    s = 1) :SFSI("#sfsi_plus_pinterest_countsDisplay").css("opacity", 0), 1 == SFSI("input[name='sfsi_plus_shares_countsDisplay']").prop("checked") ? (SFSI("#sfsi_plus_shares_countsDisplay").css("opacity", 1), 
-    s = 1) :SFSI("#sfsi_plus_shares_countsDisplay").css("opacity", 0), 1 == SFSI("input[name='sfsi_plus_instagram_countsDisplay']").prop("checked") ? (SFSI("#sfsi_plus_instagram_countsDisplay").css("opacity", 1), 
+    s = 1) :SFSI("#sfsi_plus_pinterest_countsDisplay").css("opacity", 0), 1 == SFSI("input[name='sfsi_plus_instagram_countsDisplay']").prop("checked") ? (SFSI("#sfsi_plus_instagram_countsDisplay").css("opacity", 1), 
     s = 1) :SFSI("#sfsi_plus_instagram_countsDisplay").css("opacity", 0), 1 == SFSI("input[name='sfsi_plus_houzz_countsDisplay']").prop("checked") ? (SFSI("#sfsi_plus_houzz_countsDisplay").css("opacity", 1), 
     s = 1) :SFSI("#sfsi_plus_houzz_countsDisplay").css("opacity", 0), 0 == s || "no" == SFSI("input[name='sfsi_plus_display_counts']:checked").val() ? SFSI(".sfsi_Cdisplay").hide() :SFSI(".sfsi_Cdisplay").show();
 }
@@ -435,7 +432,7 @@ function sfsi_plus_update_step4()
     var s = !1, i = sfsi_plus_validationStep4();
     if (!i) return global_error = 1, !1;
     sfsiplus_beForeLoad();
-    var e = SFSI("input[name='sfsi_plus_display_counts']:checked").val(), t = 1 == SFSI("input[name='sfsi_plus_email_countsDisplay']").prop("disabled") ? "" :SFSI("input[name='sfsi_plus_email_countsDisplay']:checked").val(), n = 1 == SFSI("input[name='sfsi_plus_email_countsFrom']").prop("disabled") ? "" :SFSI("input[name='sfsi_plus_email_countsFrom']:checked").val(), o = SFSI("input[name='sfsi_plus_email_manualCounts']").val(), a = SFSI("input[name='sfsi_plus_google_api_key']").val(), r = 1 == SFSI("input[name='sfsi_plus_rss_countsDisplay']").prop("disabled") ? "" :SFSI("input[name='sfsi_plus_rss_countsDisplay']:checked").val(), c = SFSI("input[name='sfsi_plus_rss_manualCounts']").val(), p = 1 == SFSI("input[name='sfsi_plus_facebook_countsDisplay']").prop("disabled") ? "" :SFSI("input[name='sfsi_plus_facebook_countsDisplay']:checked").val(), _ = 1 == SFSI("input[name='sfsi_plus_facebook_countsFrom']").prop("disabled") ? "" :SFSI("input[name='sfsi_plus_facebook_countsFrom']:checked").val(), mp = SFSI("input[name='sfsi_plus_facebook_mypageCounts']").val(), l = SFSI("input[name='sfsi_plus_facebook_manualCounts']").val(), S = 1 == SFSI("input[name='sfsi_plus_twitter_countsDisplay']").prop("disabled") ? "" :SFSI("input[name='sfsi_plus_twitter_countsDisplay']:checked").val(), u = 1 == SFSI("input[name='sfsi_plus_twitter_countsFrom']").prop("disabled") ? "" :SFSI("input[name='sfsi_plus_twitter_countsFrom']:checked").val(), f = SFSI("input[name='sfsi_plus_twitter_manualCounts']").val(), d = SFSI("input[name='sfsiplus_tw_consumer_key']").val(), I = SFSI("input[name='sfsiplus_tw_consumer_secret']").val(), m = SFSI("input[name='sfsiplus_tw_oauth_access_token']").val(), F = SFSI("input[name='sfsiplus_tw_oauth_access_token_secret']").val(), h = 1 == SFSI("input[name='sfsi_plus_google_countsDisplay']").prop("disabled") ? "" :SFSI("input[name='sfsi_plus_google_countsDisplay']:checked").val(), v = 1 == SFSI("input[name='sfsi_plus_google_countsFrom']").prop("disabled") ? "" :SFSI("input[name='sfsi_plus_google_countsFrom']:checked").val(), g = SFSI("input[name='sfsi_plus_google_manualCounts']").val(), k = 1 == SFSI("input[name='sfsi_plus_linkedIn_countsFrom']").prop("disabled") ? "" :SFSI("input[name='sfsi_plus_linkedIn_countsFrom']:checked").val(), y = SFSI("input[name='sfsi_plus_linkedIn_manualCounts']").val(), b = SFSI("input[name='sfsi_plus_ln_company']").val(), w = SFSI("input[name='sfsi_plus_ln_api_key']").val(), x = SFSI("input[name='sfsi_plus_ln_secret_key']").val(), C = SFSI("input[name='sfsi_plus_ln_oAuth_user_token']").val(), D = 1 == SFSI("input[name='sfsi_plus_linkedIn_countsDisplay']").prop("disabled") ? "" :SFSI("input[name='sfsi_plus_linkedIn_countsDisplay']:checked").val(), k = 1 == SFSI("input[name='sfsi_plus_linkedIn_countsFrom']").prop("disabled") ? "" :SFSI("input[name='sfsi_plus_linkedIn_countsFrom']:checked").val(), y = SFSI("input[name='sfsi_plus_linkedIn_manualCounts']").val(), U = 1 == SFSI("input[name='sfsi_plus_youtube_countsDisplay']").prop("disabled") ? "" :SFSI("input[name='sfsi_plus_youtube_countsDisplay']:checked").val(), O = 1 == SFSI("input[name='sfsi_plus_youtube_countsFrom']").prop("disabled") ? "" :SFSI("input[name='sfsi_plus_youtube_countsFrom']:checked").val(), T = SFSI("input[name='sfsi_plus_youtube_manualCounts']").val(), j = SFSI("input[name='sfsi_plus_youtube_user']").val(), P = 1 == SFSI("input[name='sfsi_plus_pinterest_countsDisplay']").prop("disabled") ? "" :SFSI("input[name='sfsi_plus_pinterest_countsDisplay']:checked").val(), M = 1 == SFSI("input[name='sfsi_plus_pinterest_countsFrom']").prop("disabled") ? "" :SFSI("input[name='sfsi_plus_pinterest_countsFrom']:checked").val(), L = SFSI("input[name='sfsi_plus_pinterest_manualCounts']").val(), B = SFSI("input[name='sfsi_plus_pinterest_user']").val(), E = SFSI("input[name='sfsi_plus_pinterest_board']").val(), z = 1 == SFSI("input[name='sfsi_plus_instagram_countsDisplay']").prop("disabled") ? "" :SFSI("input[name='sfsi_plus_instagram_countsDisplay']:checked").val(), A = 1 == SFSI("input[name='sfsi_plus_instagram_countsFrom']").prop("disabled") ? "" :SFSI("input[name='sfsi_plus_instagram_countsFrom']:checked").val(), N = SFSI("input[name='sfsi_plus_instagram_manualCounts']").val(), H = SFSI("input[name='sfsi_plus_instagram_User']").val(), R = 1 == SFSI("input[name='sfsi_plus_shares_countsDisplay']").prop("disabled") ? "" :SFSI("input[name='sfsi_plus_shares_countsDisplay']:checked").val(), W = 1 == SFSI("input[name='sfsi_plus_shares_countsFrom']").prop("disabled") ? "" :SFSI("input[name='sfsi_plus_shares_countsFrom']:checked").val(), q = SFSI("input[name='sfsi_plus_shares_manualCounts']").val(), houzzDisplay = 1 == SFSI("input[name='sfsi_plus_houzz_countsDisplay']").prop("disabled") ? "" :SFSI("input[name='sfsi_plus_houzz_countsDisplay']:checked").val(), houzzFrom = 1 == SFSI("input[name='sfsi_plus_houzz_countsFrom']").prop("disabled") ? "" :SFSI("input[name='sfsi_plus_houzz_countsFrom']:checked").val(), houzzCount = SFSI("input[name='sfsi_plus_houzz_manualCounts']").val(), $ = {
+    var e = SFSI("input[name='sfsi_plus_display_counts']:checked").val(), t = 1 == SFSI("input[name='sfsi_plus_email_countsDisplay']").prop("disabled") ? "" :SFSI("input[name='sfsi_plus_email_countsDisplay']:checked").val(), n = 1 == SFSI("input[name='sfsi_plus_email_countsFrom']").prop("disabled") ? "" :SFSI("input[name='sfsi_plus_email_countsFrom']:checked").val(), o = SFSI("input[name='sfsi_plus_email_manualCounts']").val(), a = SFSI("input[name='sfsi_plus_google_api_key']").val(), r = 1 == SFSI("input[name='sfsi_plus_rss_countsDisplay']").prop("disabled") ? "" :SFSI("input[name='sfsi_plus_rss_countsDisplay']:checked").val(), c = SFSI("input[name='sfsi_plus_rss_manualCounts']").val(), p = 1 == SFSI("input[name='sfsi_plus_facebook_countsDisplay']").prop("disabled") ? "" :SFSI("input[name='sfsi_plus_facebook_countsDisplay']:checked").val(), _ = 1 == SFSI("input[name='sfsi_plus_facebook_countsFrom']").prop("disabled") ? "" :SFSI("input[name='sfsi_plus_facebook_countsFrom']:checked").val(), mp = SFSI("input[name='sfsi_plus_facebook_mypageCounts']").val(), l = SFSI("input[name='sfsi_plus_facebook_manualCounts']").val(), S = 1 == SFSI("input[name='sfsi_plus_twitter_countsDisplay']").prop("disabled") ? "" :SFSI("input[name='sfsi_plus_twitter_countsDisplay']:checked").val(), u = 1 == SFSI("input[name='sfsi_plus_twitter_countsFrom']").prop("disabled") ? "" :SFSI("input[name='sfsi_plus_twitter_countsFrom']:checked").val(), f = SFSI("input[name='sfsi_plus_twitter_manualCounts']").val(), d = SFSI("input[name='sfsiplus_tw_consumer_key']").val(), I = SFSI("input[name='sfsiplus_tw_consumer_secret']").val(), m = SFSI("input[name='sfsiplus_tw_oauth_access_token']").val(), F = SFSI("input[name='sfsiplus_tw_oauth_access_token_secret']").val(), h = 1 == SFSI("input[name='sfsi_plus_google_countsDisplay']").prop("disabled") ? "" :SFSI("input[name='sfsi_plus_google_countsDisplay']:checked").val(), v = 1 == SFSI("input[name='sfsi_plus_google_countsFrom']").prop("disabled") ? "" :SFSI("input[name='sfsi_plus_google_countsFrom']:checked").val(), g = SFSI("input[name='sfsi_plus_google_manualCounts']").val(), k = 1 == SFSI("input[name='sfsi_plus_linkedIn_countsFrom']").prop("disabled") ? "" :SFSI("input[name='sfsi_plus_linkedIn_countsFrom']:checked").val(), y = SFSI("input[name='sfsi_plus_linkedIn_manualCounts']").val(), b = SFSI("input[name='sfsi_plus_ln_company']").val(), w = SFSI("input[name='sfsi_plus_ln_api_key']").val(), x = SFSI("input[name='sfsi_plus_ln_secret_key']").val(), C = SFSI("input[name='sfsi_plus_ln_oAuth_user_token']").val(), D = 1 == SFSI("input[name='sfsi_plus_linkedIn_countsDisplay']").prop("disabled") ? "" :SFSI("input[name='sfsi_plus_linkedIn_countsDisplay']:checked").val(), k = 1 == SFSI("input[name='sfsi_plus_linkedIn_countsFrom']").prop("disabled") ? "" :SFSI("input[name='sfsi_plus_linkedIn_countsFrom']:checked").val(), y = SFSI("input[name='sfsi_plus_linkedIn_manualCounts']").val(), U = 1 == SFSI("input[name='sfsi_plus_youtube_countsDisplay']").prop("disabled") ? "" :SFSI("input[name='sfsi_plus_youtube_countsDisplay']:checked").val(), O = 1 == SFSI("input[name='sfsi_plus_youtube_countsFrom']").prop("disabled") ? "" :SFSI("input[name='sfsi_plus_youtube_countsFrom']:checked").val(), T = SFSI("input[name='sfsi_plus_youtube_manualCounts']").val(), j = SFSI("input[name='sfsi_plus_youtube_user']").val(), P = 1 == SFSI("input[name='sfsi_plus_pinterest_countsDisplay']").prop("disabled") ? "" :SFSI("input[name='sfsi_plus_pinterest_countsDisplay']:checked").val(), M = 1 == SFSI("input[name='sfsi_plus_pinterest_countsFrom']").prop("disabled") ? "" :SFSI("input[name='sfsi_plus_pinterest_countsFrom']:checked").val(), L = SFSI("input[name='sfsi_plus_pinterest_manualCounts']").val(), B = SFSI("input[name='sfsi_plus_pinterest_user']").val(), E = SFSI("input[name='sfsi_plus_pinterest_board']").val(), z = 1 == SFSI("input[name='sfsi_plus_instagram_countsDisplay']").prop("disabled") ? "" :SFSI("input[name='sfsi_plus_instagram_countsDisplay']:checked").val(), A = 1 == SFSI("input[name='sfsi_plus_instagram_countsFrom']").prop("disabled") ? "" :SFSI("input[name='sfsi_plus_instagram_countsFrom']:checked").val(), N = SFSI("input[name='sfsi_plus_instagram_manualCounts']").val(), H = SFSI("input[name='sfsi_plus_instagram_User']").val(), houzzDisplay = 1 == SFSI("input[name='sfsi_plus_houzz_countsDisplay']").prop("disabled") ? "" :SFSI("input[name='sfsi_plus_houzz_countsDisplay']:checked").val(), houzzFrom = 1 == SFSI("input[name='sfsi_plus_houzz_countsFrom']").prop("disabled") ? "" :SFSI("input[name='sfsi_plus_houzz_countsFrom']:checked").val(), houzzCount = SFSI("input[name='sfsi_plus_houzz_manualCounts']").val(), $ = {
         action:"plus_updateSrcn4",
         sfsi_plus_display_counts:e,
         sfsi_plus_email_countsDisplay:t,
@@ -482,9 +479,6 @@ function sfsi_plus_update_step4()
         sfsi_plus_instagram_clientid:SFSI("input[name='sfsi_plus_instagram_clientid']").val(),
         sfsi_plus_instagram_appurl:SFSI("input[name='sfsi_plus_instagram_appurl']").val(),
         sfsi_plus_instagram_token:SFSI("input[name='sfsi_plus_instagram_token']").val(),
-        sfsi_plus_shares_countsDisplay:R,
-        sfsi_plus_shares_countsFrom:W,
-        sfsi_plus_shares_manualCounts:q,
 		sfsi_plus_houzz_countsDisplay:houzzDisplay,
         sfsi_plus_houzz_countsFrom:houzzFrom,
         sfsi_plus_houzz_manualCounts:houzzCount,
@@ -525,7 +519,7 @@ function sfsi_plus_update_step5()
 	twittericon = SFSI("#sfsi_plus_twitter_icons_language").val(),
 	googleicon = SFSI("#sfsi_plus_google_icons_language").val(),
 	
-    lang = SFSI("#sfsi_plus_icons_language").val(), o = SFSI("input[name='sfsi_plus_icons_ClickPageOpen']:checked").val(), a = SFSI("input[name='sfsi_plus_icons_float']:checked").val(), dsb = SFSI("input[name='sfsi_plus_disable_floaticons']:checked").val(), dsbv = SFSI("input[name='sfsi_plus_disable_viewport']:checked").val(), r = SFSI("#sfsi_plus_icons_floatPosition").val(), c = SFSI("input[name='sfsi_plus_icons_stick']:checked").val(), p = SFSI("#sfsi_plus_rssIcon_order").attr("data-index"), _ = SFSI("#sfsi_plus_emailIcon_order").attr("data-index"), l = SFSI("#sfsi_plus_googleIcon_order").attr("data-index"), S = SFSI("#sfsi_plus_facebookIcon_order").attr("data-index"), u = SFSI("#sfsi_plus_twitterIcon_order").attr("data-index"), f = SFSI("#sfsi_plus_youtubeIcon_order").attr("data-index"), d = SFSI("#sfsi_plus_pinterestIcon_order").attr("data-index"), I = SFSI("#sfsi_plus_instagramIcon_order").attr("data-index"), m = SFSI("#sfsi_plus_shareIcon_order").attr("data-index"), F = SFSI("#sfsi_plus_linkedinIcon_order").attr("data-index"), houzzOrder = SFSI("#sfsi_plus_houzzIcon_order").attr("data-index"), h = new Array();
+    lang = SFSI("#sfsi_plus_icons_language").val(), o = SFSI("input[name='sfsi_plus_icons_ClickPageOpen']:checked").val(), a = SFSI("input[name='sfsi_plus_icons_float']:checked").val(), dsb = SFSI("input[name='sfsi_plus_disable_floaticons']:checked").val(), dsbv = SFSI("input[name='sfsi_plus_disable_viewport']:checked").val(), r = SFSI("#sfsi_plus_icons_floatPosition").val(), c = SFSI("input[name='sfsi_plus_icons_stick']:checked").val(), p = SFSI("#sfsi_plus_rssIcon_order").attr("data-index"), _ = SFSI("#sfsi_plus_emailIcon_order").attr("data-index"), l = SFSI("#sfsi_plus_googleIcon_order").attr("data-index"), S = SFSI("#sfsi_plus_facebookIcon_order").attr("data-index"), u = SFSI("#sfsi_plus_twitterIcon_order").attr("data-index"), f = SFSI("#sfsi_plus_youtubeIcon_order").attr("data-index"), d = SFSI("#sfsi_plus_pinterestIcon_order").attr("data-index"), I = SFSI("#sfsi_plus_instagramIcon_order").attr("data-index"), F = SFSI("#sfsi_plus_linkedinIcon_order").attr("data-index"), houzzOrder = SFSI("#sfsi_plus_houzzIcon_order").attr("data-index"), h = new Array();
     
     SFSI(".sfsiplus_custom_iconOrder").each(function()
 	{
@@ -534,7 +528,7 @@ function sfsi_plus_update_step5()
             ele:SFSI(this).attr("element-id")
         });
     });
-    var v = 1 == SFSI("input[name='sfsi_plus_rss_MouseOverText']").prop("disabled") ? "" :SFSI("input[name='sfsi_plus_rss_MouseOverText']").val(), g = 1 == SFSI("input[name='sfsi_plus_email_MouseOverText']").prop("disabled") ? "" :SFSI("input[name='sfsi_plus_email_MouseOverText']").val(), k = 1 == SFSI("input[name='sfsi_plus_twitter_MouseOverText']").prop("disabled") ? "" :SFSI("input[name='sfsi_plus_twitter_MouseOverText']").val(), y = 1 == SFSI("input[name='sfsi_plus_facebook_MouseOverText']").prop("disabled") ? "" :SFSI("input[name='sfsi_plus_facebook_MouseOverText']").val(), b = 1 == SFSI("input[name='sfsi_plus_google_MouseOverText']").prop("disabled") ? "" :SFSI("input[name='sfsi_plus_google_MouseOverText']").val(), w = 1 == SFSI("input[name='sfsi_plus_linkedIn_MouseOverText']").prop("disabled") ? "" :SFSI("input[name='sfsi_plus_linkedIn_MouseOverText']").val(), x = 1 == SFSI("input[name='sfsi_plus_youtube_MouseOverText']").prop("disabled") ? "" :SFSI("input[name='sfsi_plus_youtube_MouseOverText']").val(), C = 1 == SFSI("input[name='sfsi_plus_pinterest_MouseOverText']").prop("disabled") ? "" :SFSI("input[name='sfsi_plus_pinterest_MouseOverText']").val(), insD = 1 == SFSI("input[name='sfsi_plus_instagram_MouseOverText']").prop("disabled") ? "" :SFSI("input[name='sfsi_plus_instagram_MouseOverText']").val(), D = 1 == SFSI("input[name='sfsi_plus_houzz_MouseOverText']").prop("disabled") ? "" :SFSI("input[name='sfsi_plus_houzz_MouseOverText']").val(), U = 1 == SFSI("input[name='sfsi_plus_share_MouseOverText']").prop("disabled") ? "" :SFSI("input[name='sfsi_plus_share_MouseOverText']").val(), O = {};
+    var v = 1 == SFSI("input[name='sfsi_plus_rss_MouseOverText']").prop("disabled") ? "" :SFSI("input[name='sfsi_plus_rss_MouseOverText']").val(), g = 1 == SFSI("input[name='sfsi_plus_email_MouseOverText']").prop("disabled") ? "" :SFSI("input[name='sfsi_plus_email_MouseOverText']").val(), k = 1 == SFSI("input[name='sfsi_plus_twitter_MouseOverText']").prop("disabled") ? "" :SFSI("input[name='sfsi_plus_twitter_MouseOverText']").val(), y = 1 == SFSI("input[name='sfsi_plus_facebook_MouseOverText']").prop("disabled") ? "" :SFSI("input[name='sfsi_plus_facebook_MouseOverText']").val(), b = 1 == SFSI("input[name='sfsi_plus_google_MouseOverText']").prop("disabled") ? "" :SFSI("input[name='sfsi_plus_google_MouseOverText']").val(), w = 1 == SFSI("input[name='sfsi_plus_linkedIn_MouseOverText']").prop("disabled") ? "" :SFSI("input[name='sfsi_plus_linkedIn_MouseOverText']").val(), x = 1 == SFSI("input[name='sfsi_plus_youtube_MouseOverText']").prop("disabled") ? "" :SFSI("input[name='sfsi_plus_youtube_MouseOverText']").val(), C = 1 == SFSI("input[name='sfsi_plus_pinterest_MouseOverText']").prop("disabled") ? "" :SFSI("input[name='sfsi_plus_pinterest_MouseOverText']").val(), insD = 1 == SFSI("input[name='sfsi_plus_instagram_MouseOverText']").prop("disabled") ? "" :SFSI("input[name='sfsi_plus_instagram_MouseOverText']").val(), D = 1 == SFSI("input[name='sfsi_plus_houzz_MouseOverText']").prop("disabled") ? "" :SFSI("input[name='sfsi_plus_houzz_MouseOverText']").val(), O = {};
     SFSI("input[name='sfsi_plus_custom_MouseOverTexts[]']").each(function() {
         O[SFSI(this).attr("file-id")] = this.value;
     });
@@ -567,7 +561,6 @@ function sfsi_plus_update_step5()
         sfsi_plus_youtube_MouseOverText:x,
         sfsi_plus_linkedIn_MouseOverText:w,
         sfsi_plus_pinterest_MouseOverText:C,
-        sfsi_plus_share_MouseOverText:U,
         sfsi_plus_instagram_MouseOverText:insD,
 		sfsi_plus_houzz_MouseOverText:D,
         sfsi_plus_custom_MouseOverTexts:O,
@@ -578,7 +571,6 @@ function sfsi_plus_update_step5()
         sfsi_plus_googleIcon_order:l,
         sfsi_plus_youtubeIcon_order:f,
         sfsi_plus_pinterestIcon_order:d,
-        sfsi_plus_shareIcon_order:m,
         sfsi_plus_instagramIcon_order:I,
 		sfsi_plus_houzzIcon_order:houzzOrder,
         sfsi_plus_linkedinIcon_order:F,
@@ -717,7 +709,6 @@ function sfsi_plus_update_step8()
 		rsub = SFSI("input[name='sfsi_plus_rectsub']:checked").val(),
 		rfb = SFSI("input[name='sfsi_plus_rectfb']:checked").val(),
 		rgp = SFSI("input[name='sfsi_plus_rectgp']:checked").val(),
-		rshr = SFSI("input[name='sfsi_plus_rectshr']:checked").val(),
 		rtwr = SFSI("input[name='sfsi_plus_recttwtr']:checked").val(),
 		rpin = SFSI("input[name='sfsi_plus_rectpinit']:checked").val(),
 		rfbshare = SFSI("input[name='sfsi_plus_rectfbshare']:checked").val(),
@@ -754,7 +745,6 @@ function sfsi_plus_update_step8()
 			sfsi_plus_rectsub: rsub,
 			sfsi_plus_rectfb: rfb,
 			sfsi_plus_rectgp: rgp,
-			sfsi_plus_rectshr: rshr,
 			sfsi_plus_recttwtr: rtwr,
 			sfsi_plus_rectpinit: rpin,
 			sfsi_plus_rectfbshare: rfbshare,
@@ -1434,13 +1424,6 @@ SFSI(document).ready(function(s) {
         var i = SFSI(".sfsi_plus_FrntInner"), e = SFSI(".sfsi_plus_wDiv"), t = SFSI("#at15s");
         i.is(s.target) || 0 !== i.has(s.target).length || e.is(s.target) || 0 !== e.has(s.target).length || t.is(s.target) || 0 !== t.has(s.target).length || i.fadeOut();
     }),
-	SFSI(".sfsi_plus_outr_div").find(".addthis_button").mousemove(function() {
-        var s = SFSI(".sfsi_plus_outr_div").find(".addthis_button").offset().top + 10;
-        SFSI("#at15s").css({
-            top:s + "px",
-            left:SFSI(".sfsi_plus_outr_div").find(".addthis_button").offset().left + "px"
-        });
-    }),
 	
 	//pooja 28-12-2015
 		SFSI('#sfsi_plus_popup_background_color').wpColorPicker({
@@ -1774,9 +1757,7 @@ SFSI(document).ready(function(s) {
         SFSI('input[name="sfsi_plus_instagram_countsDisplay"]').parent().find("span.checkbox").attr("style", "background-position:0px -36px;"), 
         "manual" == SFSI("input[name='sfsi_plus_instagram_countsFrom']:checked").val() ? (SFSI("input[name='sfsi_plus_instagram_manualCounts']").slideDown(), 
         SFSI(".instagram_userLi").slideUp()) :(SFSI("input[name='sfsi_plus_instagram_manualCounts']").slideUp(), 
-        SFSI(".instagram_userLi").slideDown())), "sfsi_plus_shares_countsFrom" == s.attr("name") && (SFSI('input[name="sfsi_plus_shares_countsDisplay"]').prop("checked", !0), 
-        SFSI('input[name="sfsi_plus_shares_countsDisplay"]').parent().find("span.checkbox").attr("style", "background-position:0px -36px;"), 
-        "manual" == SFSI("input[name='sfsi_plus_shares_countsFrom']:checked").val() ? SFSI("input[name='sfsi_plus_shares_manualCounts']").slideDown() :SFSI("input[name='sfsi_plus_shares_manualCounts']").slideUp());
+        SFSI(".instagram_userLi").slideDown()))
     }), sfsi_plus_make_popBox(), SFSI('input[name="sfsi_plus_popup_text"] ,input[name="sfsi_plus_popup_background_color"],input[name="sfsi_plus_popup_border_color"],input[name="sfsi_plus_popup_border_thickness"],input[name="sfsi_plus_popup_fontSize"],input[name="sfsi_plus_popup_fontColor"]').on("keyup", sfsi_plus_make_popBox), 
     SFSI('input[name="sfsi_plus_popup_text"] ,input[name="sfsi_plus_popup_background_color"],input[name="sfsi_plus_popup_border_color"],input[name="sfsi_plus_popup_border_thickness"],input[name="sfsi_plus_popup_fontSize"],input[name="sfsi_plus_popup_fontColor"]').on("focus", sfsi_plus_make_popBox), 
     SFSI("#sfsi_plus_popup_font ,#sfsi_plus_popup_fontStyle").on("change", sfsi_plus_make_popBox), 
@@ -1950,6 +1931,19 @@ SFSI(document).ready(function(s) {
         SFSI('input[name="sfsi_plus_float_on_page"][value="yes"]').parent().find("span.checkbox").attr("style", "background-position:0px -0px;"),
 		jQuery(a).children(".checkbox").css("background-position", "0px 0px" ), sfsiplus_toggleflotpage(a));
     });*/
+    SFSI(document).on("click", ".sfsi_plus-AddThis-notice-dismiss", function(){    
+        SFSI.ajax({
+            url:ajax_object.ajax_url,
+            type:"post",
+            data:{action: "sfsi_plus_dismiss_addThis_icon_notice"},
+            success:function(e) {
+                if(false != e){
+                    SFSI(".sfsi_plus-AddThis-notice-dismiss").parent().remove();
+                }
+            }
+        });
+    });
+
 });
 
 //for utube channel name and id

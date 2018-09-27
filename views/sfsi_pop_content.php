@@ -133,27 +133,6 @@ $connectFeedLgn	= "http://www.specificfeeds.com/?".base64_encode("userprofile=wo
     </div>
 </div><!-- END Facebook  example pop up -->
 
-<!-- adthis example pop up -->
-<div class="pop-overlay read-overlay athis-s1" >
-    <div class="pop_up_box sfsi_pop_up adPopWidth"  >
-        <img src="<?php echo SFSI_PLUS_PLUGURL; ?>images/close.jpg" id="close_popup" class="sfsicloseBtn" />
-    	<h4 id="readmore_text">
-        	<?php
-				_e( 'Move over the “+ icon” to see the sharing options',SFSI_PLUS_DOMAIN );
-			?>
-        </h4>
-    	<div style="margin: 0px auto;">
-			<script type="text/javascript">
-				var addthis_config = {pubid: "YOUR-PROFILE-ID"}
-			</script>
-			<a href="http://www.addthis.com/bookmark.php?v=250" class="addthis_button">
-            	<img width="51" class="sfsi_wicon" src="<?php echo $icons_baseUrl."/".$active_theme; ?>_share.png" title="share" alt="share" />
-            </a>
-    		<?php //echo sfsi_plus_Addthis(1); ?>
-    	</div>
-    </div>
-</div><!-- END adthis example pop up -->
-
 <?php
 	  $twit_tolCls = "100";
 	  $twt_margin = "63";  
@@ -288,19 +267,6 @@ $pin_url=($option2['sfsi_plus_pinterest_pageUrl']!='') ?  $option2['sfsi_plus_pi
    		</div>
   </div>
 </div> <!-- END LinkedIn  example pop up -->
-
-<!-- ADDTHIS ICON POP-UP -->
-<div class="pop-overlay read-overlay share-s2" >
-    <div class="pop_up_box sfsi_pop_up adPopWidth" >
-        <img src="<?php echo SFSI_PLUS_PLUGURL; ?>images/close.jpg" id="close_popup" class="sfsicloseBtn" />
-    	<h4 id="readmore_text">
-        	<?php _e('Move over the “+ icon” to see the sharing options',SFSI_PLUS_DOMAIN);?>
-        </h4>
- 	    <div style="float: right;opacity: 1;position: relative;right: 215px;top: 10px;width: 52px; text-align: center;" ><a alt="share"  href="http://www.addthis.com/bookmark.php?v=250"  effect="" class="addthis_button"><img width="51" class="sfsi_wicon" src="<?php echo SFSI_PLUS_PLUGURL; ?>images/share.png" title="share" alt="share" /></a>
-    </div>
-  </div>
-</div><!-- END ADDTHIS ICON POP-UP -->
-
 
 
 <!-- email deactivate pop-ups -->

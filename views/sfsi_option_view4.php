@@ -129,9 +129,6 @@
 	$option4['sfsi_plus_pinterest_manualCounts'] 	= 	(isset($option4['sfsi_plus_pinterest_manualCounts']))
 															? intval($option4['sfsi_plus_pinterest_manualCounts'])
 															: '';
-	$option4['sfsi_plus_shares_manualCounts'] 		= 	(isset($option4['sfsi_plus_shares_manualCounts']))
-															? intval($option4['sfsi_plus_shares_manualCounts'])
-															: '';
     $option4['sfsi_plus_premium_count_box'] 		= 	(isset($option4['sfsi_plus_premium_count_box']))
 															? sanitize_text_field($option4['sfsi_plus_premium_count_box'])
 															: 'yes';
@@ -193,11 +190,6 @@
         <li class="sfsiplus_twitter_section">
 			<a href="#" title="Twitter">
 				<img src="<?php echo SFSI_PLUS_PLUGURL ?>images/twitter.png" alt="Twitter" />
-			</a><span>12k</span>
-		</li>
-        <li class="sfsiplus_share_section">
-			<a href="#" title="Share">
-				<img src="<?php echo SFSI_PLUS_PLUGURL ?>images/share.png" alt="Share" />
 			</a><span>12k</span>
 		</li>
         <li class="sfsiplus_youtube_section">
@@ -744,39 +736,6 @@
 		   </div>    
 		</div>
 		<!-- END INSTAGRAM ICON COUNT SECTION-->
-        
-		<!-- ADDTHIS ICON COUNT SECTION-->
-		<div class="sfsiplus_specify_counts sfsiplus_share_section">
-			<div class="radio_section">
-				<input name="sfsi_plus_shares_countsDisplay" <?php echo ($option4['sfsi_plus_shares_countsDisplay']=='yes') ?  'checked="true"' : '' ;?>  type="checkbox" value="yes" class="styled"  />
-			</div>
-			<div class="social_icon_like">
-				<ul class="like_icon">
-					<li>
-						<a title="Share">
-							<img src="<?php echo SFSI_PLUS_PLUGURL ?>images/share.png" alt="Share" />
-							<span><?php echo $counts['share_count']; ?></span>
-						</a>
-					</li>
-				</ul>
-			</div>
-			<div class="listing">
-				<ul>
-					<li>
-						<input name="sfsi_plus_shares_countsFrom" <?php echo ($option4['sfsi_plus_shares_countsFrom']=='shares') ?  'checked="true"' : '' ;?>  type="radio" value="shares" class="styled" />
-						<?php  _e( 'Retrieve the number of shares', SFSI_PLUS_DOMAIN ); ?>
-					</li>
-					<li>
-						<input name="sfsi_plus_shares_countsFrom" <?php echo ($option4['sfsi_plus_shares_countsFrom']=='manual') ?  'checked="true"' : '' ;?>  type="radio" value="manual" class="styled" />
-						<label class="high_prb">
-							 <?php  _e( 'Enter the figure manually', SFSI_PLUS_DOMAIN ); ?>
-						</label>
-						<input name="sfsi_plus_shares_manualCounts" type="text" class="input" value="<?php echo ($option4['sfsi_plus_shares_manualCounts']!='') ?  $option4['sfsi_plus_shares_manualCounts'] : '' ;?>" style="<?php echo ($option4['sfsi_plus_shares_countsFrom']=='shares') ?  'display:none;' : '' ;?>" />
-					</li>
-				</ul>
-			</div>    
-		</div>
-		<!-- END ADDTHIS ICON COUNT SECTION-->
         
 		<!-- HOUZZ ICON COUNT SECTION-->
 		<div class="sfsiplus_specify_counts sfsiplus_houzz_section">

@@ -13,7 +13,6 @@ function sfsi_plus_options_updater1()
     $sfsi_plus_facebook_display = isset($_POST["sfsi_plus_facebook_display"]) ? $_POST["sfsi_plus_facebook_display"] : 'no'; 
     $sfsi_plus_twitter_display  = isset($_POST["sfsi_plus_twitter_display"]) ? $_POST["sfsi_plus_twitter_display"] : 'no'; 
     $sfsi_plus_google_display   = isset($_POST["sfsi_plus_google_display"]) ? $_POST["sfsi_plus_google_display"] : 'no'; 
-    $sfsi_plus_share_display    = isset($_POST["sfsi_plus_share_display"]) ? $_POST["sfsi_plus_share_display"] : 'no'; 
     $sfsi_plus_youtube_display  = isset($_POST["sfsi_plus_youtube_display"]) ? $_POST["sfsi_plus_youtube_display"] : 'no'; 
     $sfsi_plus_pinterest_display= isset($_POST["sfsi_plus_pinterest_display"]) ? $_POST["sfsi_plus_pinterest_display"] : 'no';
     $sfsi_plus_instagram_display= isset($_POST["sfsi_plus_instagram_display"]) ? $_POST["sfsi_plus_instagram_display"] : 'no';
@@ -26,7 +25,6 @@ function sfsi_plus_options_updater1()
         'sfsi_plus_facebook_display'	=> sanitize_text_field($sfsi_plus_facebook_display),
         'sfsi_plus_twitter_display'		=> sanitize_text_field($sfsi_plus_twitter_display),
         'sfsi_plus_google_display'		=> sanitize_text_field($sfsi_plus_google_display),
-        'sfsi_plus_share_display'		=> sanitize_text_field($sfsi_plus_share_display),
         'sfsi_plus_youtube_display'		=> sanitize_text_field($sfsi_plus_youtube_display),
         'sfsi_plus_pinterest_display'	=> sanitize_text_field($sfsi_plus_pinterest_display),
         'sfsi_plus_linkedin_display'	=> sanitize_text_field($sfsi_plus_linkedin_display),
@@ -305,9 +303,6 @@ function sfsi_plus_options_updater4()
     $sfsi_plus_instagram_clientid        = isset($_POST["sfsi_plus_instagram_clientid"]) ? $_POST["sfsi_plus_instagram_clientid"] : '';
     $sfsi_plus_instagram_appurl          = isset($_POST["sfsi_plus_instagram_appurl"]) ? $_POST["sfsi_plus_instagram_appurl"] : '';
     $sfsi_plus_instagram_token           = isset($_POST["sfsi_plus_instagram_token"]) ? $_POST["sfsi_plus_instagram_token"] : '';
-    $sfsi_plus_shares_countsDisplay      = isset($_POST["sfsi_plus_shares_countsDisplay"]) ? $_POST["sfsi_plus_shares_countsDisplay"] : 'no';
-    $sfsi_plus_shares_countsFrom         = isset($_POST["sfsi_plus_shares_countsFrom"]) ? $_POST["sfsi_plus_shares_countsFrom"] : 'manual';
-    $sfsi_plus_shares_manualCounts       = isset($_POST["sfsi_plus_shares_manualCounts"]) ? trim($_POST["sfsi_plus_shares_manualCounts"]) : '';
 	
 	$sfsi_plus_houzz_countsDisplay       = isset($_POST["sfsi_plus_houzz_countsDisplay"]) ? $_POST["sfsi_plus_houzz_countsDisplay"] : 'no';
     $sfsi_plus_houzz_countsFrom          = isset($_POST["sfsi_plus_houzz_countsFrom"]) ? $_POST["sfsi_plus_houzz_countsFrom"] : 'manual';
@@ -371,9 +366,6 @@ function sfsi_plus_options_updater4()
 	   'sfsi_plus_instagram_clientid' 		=> sanitize_text_field($sfsi_plus_instagram_clientid),
 	   'sfsi_plus_instagram_appurl' 		=> sanitize_text_field($sfsi_plus_instagram_appurl),
 	   'sfsi_plus_instagram_token' 		  	=> sanitize_text_field($sfsi_plus_instagram_token),
-	   'sfsi_plus_shares_countsDisplay'		=> sanitize_text_field($sfsi_plus_shares_countsDisplay),
-	   'sfsi_plus_shares_countsFrom'		=> sanitize_text_field($sfsi_plus_shares_countsFrom),
-	   'sfsi_plus_shares_manualCounts'		=> intval($sfsi_plus_shares_manualCounts),
 	   
 	   'sfsi_plus_houzz_countsDisplay'		=> sanitize_text_field($sfsi_plus_houzz_countsDisplay),
 	   'sfsi_plus_houzz_countsFrom'			=> sanitize_text_field($sfsi_plus_houzz_countsFrom),
@@ -415,7 +407,6 @@ function sfsi_plus_options_updater5()
     $sfsi_plus_instagram_MouseOverText   = isset($_POST["sfsi_plus_instagram_MouseOverText"]) ? $_POST["sfsi_plus_instagram_MouseOverText"] : '';
 	$sfsi_plus_houzz_MouseOverText       = isset($_POST["sfsi_plus_houzz_MouseOverText"]) 	  ? $_POST["sfsi_plus_houzz_MouseOverText"] : '';
     $sfsi_plus_youtube_MouseOverText     = isset($_POST["sfsi_plus_youtube_MouseOverText"])   ? $_POST["sfsi_plus_youtube_MouseOverText"] : '';
-    $sfsi_plus_share_MouseOverText       = isset($_POST["sfsi_plus_share_MouseOverText"]) 	  ? $_POST["sfsi_plus_share_MouseOverText"] : '';
     $sfsi_plus_custom_orders             = isset($_POST["sfsi_plus_custom_orders"]) 		  ? serialize($_POST["sfsi_plus_custom_orders"]) : '';
     
     
@@ -424,7 +415,6 @@ function sfsi_plus_options_updater5()
     $sfsi_plus_facebookIcon_order        = isset($_POST["sfsi_plus_facebookIcon_order"])  ? $_POST["sfsi_plus_facebookIcon_order"] : '3';
     $sfsi_plus_googleIcon_order          = isset($_POST["sfsi_plus_googleIcon_order"]) 	  ? $_POST["sfsi_plus_googleIcon_order"] : '4';
     $sfsi_plus_twitterIcon_order         = isset($_POST["sfsi_plus_twitterIcon_order"])   ? $_POST["sfsi_plus_twitterIcon_order"] : '5';
-    $sfsi_plus_shareIcon_order           = isset($_POST["sfsi_plus_shareIcon_order"]) 	  ? $_POST["sfsi_plus_shareIcon_order"] : '6';
     $sfsi_plus_youtubeIcon_order         = isset($_POST["sfsi_plus_youtubeIcon_order"])   ? $_POST["sfsi_plus_youtubeIcon_order"] : '7';
     $sfsi_plus_pinterestIcon_order       = isset($_POST["sfsi_plus_pinterestIcon_order"]) ? $_POST["sfsi_plus_pinterestIcon_order"] : '8';
     $sfsi_plus_linkedinIcon_order        = isset($_POST["sfsi_plus_linkedinIcon_order"])  ? $_POST["sfsi_plus_linkedinIcon_order"] : '9';
@@ -476,7 +466,6 @@ function sfsi_plus_options_updater5()
         'sfsi_plus_linkedIn_MouseOverText'	=> sanitize_text_field($sfsi_plus_linkedIn_MouseOverText),
         'sfsi_plus_pinterest_MouseOverText'	=> sanitize_text_field($sfsi_plus_pinterest_MouseOverText),
         'sfsi_plus_youtube_MouseOverText'	=> sanitize_text_field($sfsi_plus_youtube_MouseOverText),
-        'sfsi_plus_share_MouseOverText'		=> sanitize_text_field($sfsi_plus_share_MouseOverText),
         'sfsi_plus_instagram_MouseOverText'	=> sanitize_text_field($sfsi_plus_instagram_MouseOverText),
 		'sfsi_plus_houzz_MouseOverText'		=> sanitize_text_field($sfsi_plus_houzz_MouseOverText),
         'sfsi_plus_CustomIcons_order'		=> $sfsi_plus_custom_orders,
@@ -485,7 +474,6 @@ function sfsi_plus_options_updater5()
         'sfsi_plus_facebookIcon_order'		=> intval($sfsi_plus_facebookIcon_order),
         'sfsi_plus_googleIcon_order'		=> intval($sfsi_plus_googleIcon_order),
         'sfsi_plus_twitterIcon_order'		=> intval($sfsi_plus_twitterIcon_order),
-        'sfsi_plus_shareIcon_order'			=> intval($sfsi_plus_shareIcon_order),
         'sfsi_plus_youtubeIcon_order'		=> intval($sfsi_plus_youtubeIcon_order),
         'sfsi_plus_pinterestIcon_order'		=> intval($sfsi_plus_pinterestIcon_order),
         'sfsi_plus_instagramIcon_order'		=> intval($sfsi_plus_instagramIcon_order),
@@ -612,7 +600,6 @@ function sfsi_plus_options_updater8()
 	$sfsi_plus_rectsub    				= isset($_POST["sfsi_plus_rectsub"]) ? $_POST["sfsi_plus_rectsub"] : 'no';
 	$sfsi_plus_rectfb    				= isset($_POST["sfsi_plus_rectfb"]) ? $_POST["sfsi_plus_rectfb"] : 'no';
 	$sfsi_plus_rectgp    				= isset($_POST["sfsi_plus_rectgp"]) ? $_POST["sfsi_plus_rectgp"] : 'no';
-	$sfsi_plus_rectshr    				= isset($_POST["sfsi_plus_rectshr"]) ? $_POST["sfsi_plus_rectshr"] : 'no';
 	$sfsi_plus_recttwtr    				= isset($_POST["sfsi_plus_recttwtr"]) ? $_POST["sfsi_plus_recttwtr"] : 'no';
 	$sfsi_plus_rectpinit    			= isset($_POST["sfsi_plus_rectpinit"]) ? $_POST["sfsi_plus_rectpinit"] : 'no';
 	$sfsi_plus_rectfbshare    			= isset($_POST["sfsi_plus_rectfbshare"]) ? $_POST["sfsi_plus_rectfbshare"] : 'no';
@@ -645,7 +632,6 @@ function sfsi_plus_options_updater8()
 		'sfsi_plus_rectsub'					=> sanitize_text_field($sfsi_plus_rectsub),
 		'sfsi_plus_rectfb'					=> sanitize_text_field($sfsi_plus_rectfb),
 		'sfsi_plus_rectgp'					=> sanitize_text_field($sfsi_plus_rectgp),
-		'sfsi_plus_rectshr'					=> sanitize_text_field($sfsi_plus_rectshr),
 		'sfsi_plus_recttwtr'				=> sanitize_text_field($sfsi_plus_recttwtr),
 		'sfsi_plus_rectpinit'				=> sanitize_text_field($sfsi_plus_rectpinit),
 		'sfsi_plus_rectfbshare'				=> sanitize_text_field($sfsi_plus_rectfbshare)
@@ -915,16 +901,6 @@ function sfsi_plus_getCounts()
    	else
    	{
         $scounts['pin_count']=$option4['sfsi_plus_pinterest_manualCounts'];
-   	}
-    /* get addthis share counts */
-   	if(isset($option4['sfsi_plus_shares_countsFrom']) && $option4['sfsi_plus_shares_countsFrom']=="shares" && isset($option4['sfsi_share_countsDisplay']) && $option4['sfsi_share_countsDisplay'] =="yes")
-   	{   
-       $shares=$socialObj->sfsi_get_atthis();
-       $scounts['share_count']= $socialObj->format_num($shares);
-   	} 
-   	else
-   	{
-        $scounts['share_count']=$option4['sfsi_plus_shares_manualCounts'];
    	}
     /* get instagram count */
    	if(isset($option4['sfsi_plus_instagram_countsFrom']) && !empty($option4['sfsi_plus_instagram_countsFrom']) && $option4['sfsi_plus_instagram_countsFrom']=="followers" )

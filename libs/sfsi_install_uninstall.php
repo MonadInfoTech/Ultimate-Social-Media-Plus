@@ -213,6 +213,9 @@ function sfsi_plus_update_plugin()
 		$option4['sfsi_plus_instagram_token']    = '';
 		update_option('sfsi_plus_section4_options', serialize($option4));
 	}
+
+    // Add this removed in version 2.9.3, removing values from section 1 & section 6 & setting notice display value
+    sfsi_plus_was_displaying_addthis();
 }
 function sfsi_plus_activate_plugin()
 {
@@ -236,7 +239,6 @@ function sfsi_plus_activate_plugin()
           'sfsi_plus_facebook_display'=>'yes',
           'sfsi_plus_twitter_display'=>'yes',
           'sfsi_plus_google_display'=>'yes',
-          'sfsi_plus_share_display'=>'no',
           'sfsi_plus_pinterest_display'=>'no',
 	  	  'sfsi_plus_instagram_display'=>'no',
           'sfsi_plus_linkedin_display'=>'no',
@@ -360,9 +362,6 @@ function sfsi_plus_activate_plugin()
 		'sfsi_plus_instagram_clientid'=>'',
 		'sfsi_plus_instagram_appurl'  =>'',
 		'sfsi_plus_instagram_token'   =>'',
-        'sfsi_plus_shares_countsDisplay'=>'no',
-        'sfsi_plus_shares_countsFrom'=>'manual',
-        'sfsi_plus_shares_manualCounts'=>'20',
 		'sfsi_plus_houzz_countsDisplay'=>'no',
         'sfsi_plus_houzz_countsFrom'=>'manual',
         'sfsi_plus_houzz_manualCounts'=>'20',
@@ -390,7 +389,6 @@ function sfsi_plus_activate_plugin()
         'sfsi_plus_facebookIcon_order'=>'3',
         'sfsi_plus_googleIcon_order'=>'4',
         'sfsi_plus_twitterIcon_order'=>'5',
-        'sfsi_plus_shareIcon_order'=>'6',
         'sfsi_plus_youtubeIcon_order'=>'7',
         'sfsi_plus_pinterestIcon_order'=>'8',
         'sfsi_plus_linkedinIcon_order'=>'9',
@@ -407,7 +405,6 @@ function sfsi_plus_activate_plugin()
 		'sfsi_plus_instagram_MouseOverText'=>'Instagram',
 		'sfsi_plus_houzz_MouseOverText'=>'Houzz',
         'sfsi_plus_youtube_MouseOverText'=>'YouTube',
-        'sfsi_plus_share_MouseOverText'=>'Share',
         'sfsi_plus_custom_MouseOverTexts'=>'',
         'sfsi_plus_premium_size_box'=>'yes',
         'sfsi_plus_custom_social_hide'=>'no',
@@ -490,7 +487,6 @@ function sfsi_plus_activate_plugin()
 		'sfsi_plus_rectsub'=>'yes',
 		'sfsi_plus_rectfb'=>'yes',
 		'sfsi_plus_rectgp'=>'yes',
-		'sfsi_plus_rectshr'=>'no',
 		'sfsi_plus_recttwtr'=>'yes',
 		'sfsi_plus_rectpinit'=>'yes',
 		'sfsi_plus_rectfbshare'=>'yes',
@@ -511,6 +507,12 @@ function sfsi_plus_activate_plugin()
 	$get_option2['sfsi_plus_email_url'] = $sffeeds->redirect_url;
 	update_option('sfsi_plus_section2_options', serialize($get_option2));
 	
+	$addThisDismissed = get_option('sfsi_addThis_icon_removal_notice_dismissed',false);
+
+    if(!isset($addThisDismissed)){
+        update_option('sfsi_addThis_icon_removal_notice_dismissed',true);
+    }
+
 	/*Activation Setup for (specificfeed)*/
 	sfsi_plus_setUpfeeds($sffeeds->feed_id);
 	sfsi_plus_updateFeedPing('N',$sffeeds->feed_id);
@@ -583,7 +585,9 @@ function sfsi_plus_Unistall_plugin()
 	delete_option("sfsi_plus_show_notification");
 	delete_option('sfsi_plus_serverphpVersionnotification');
 	delete_option("sfsi_plus_show_premium_cumulative_count_notification");
-    	delete_option('widget_sfsi-plus-widget');
+    
+    delete_option("sfsi_addThis_icon_removal_notice_dismissed");
+    delete_option('widget_sfsi-plus-widget');
 	delete_option('widget_sfsiplus_subscriber_widget');
 
 	delete_option('fs_active_plugins');
@@ -898,5 +902,33 @@ function sfsi_plus_pingVendor( $post_id )
 		return true;
     endif;
 }
-add_action( 'save_post', 'sfsi_plus_pingVendor' );			
+add_action( 'save_post', 'sfsi_plus_pingVendor' );
+
+function sfsi_plus_was_displaying_addthis(){
+
+    $isDismissed   =  true;
+    $sfsi_plus_section1 =  unserialize(get_option('sfsi_plus_section1_options',false));
+    $sfsi_plus_section8 =  unserialize(get_option('sfsi_plus_section8_options',false));
+    $sfsi_plus_addThiswasDisplayed_section1 = isset($sfsi_plus_section1['sfsi_plus_share_display']) && 'yes'== sanitize_text_field($sfsi_plus_section1['sfsi_plus_share_display']);
+
+    $sfsi_plus_addThiswasDisplayed_section8 = isset($sfsi_plus_section8['sfsi_plus_rectshr']) && 'yes'== sanitize_text_field($sfsi_plus_section8['sfsi_plus_rectshr']);
+
+    $isDisplayed = $sfsi_plus_addThiswasDisplayed_section1 || $sfsi_plus_addThiswasDisplayed_section8;
+
+    // If icon was displayed
+    $isDismissed = false != $isDisplayed ? false : true;
+
+    update_option('sfsi_plus_addThis_icon_removal_notice_dismissed',$isDismissed);
+
+    if($sfsi_plus_addThiswasDisplayed_section1){
+        unset($sfsi_plus_section1['sfsi_plus_share_display']);
+        update_option('sfsi_plus_section1_options', serialize($sfsi_plus_section1) );
+    }
+
+    if($sfsi_plus_addThiswasDisplayed_section8){
+        unset($sfsi_plus_section8['sfsi_plus_rectshr']);
+        update_option('sfsi_plus_section8_options', serialize($sfsi_plus_section8) );
+    }
+}
+
 ?>

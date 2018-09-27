@@ -604,22 +604,6 @@
     </div>
     <!-- END LINKEDIN ICON -->
     
-    <!-- share button -->
-    <div class="row sfsiplus_share_section">
-   		<h2 class="sfsicls_share">
-        	Share
-        </h2>
-        <div class="inr_cont">
-        	<p>
-            	<?php  _e( 'Nothing needs to be done here – your visitors to share your site via «all the other» social media sites.', SFSI_PLUS_DOMAIN ); ?>
-            	<a class="rit_link pop-up" href="javascript:;"  data-id="share-s2">
-            		(<?php  _e( 'see an example', SFSI_PLUS_DOMAIN ); ?>).
-            	</a>
-            </p> 
-        </div>
-    </div>
-    <!-- share end -->
-    
     <!-- HOUZZ ICON -->
     <div class="row sfsiplus_houzz_section">
     	<h2 class="sfsicls_houzz">

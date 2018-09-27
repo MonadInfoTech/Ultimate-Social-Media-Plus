@@ -1279,3 +1279,5 @@ ul.sfsi_show_hide_section {float: right;width: 14%;}
 
 .ulSuppressErrors {margin-top: 20px !important;}
 .ulSuppressErrors li {float: left;}
+div#sfsi_plus_addThis_removal_notice {padding: 10px;margin-left: 0px; position: relative;}
+div#sfsi_plus_langnotice {padding: 10px;margin-left: 0px;position: relative;}

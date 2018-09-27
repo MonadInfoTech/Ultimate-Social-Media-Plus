@@ -167,15 +167,6 @@ function sfsi_plus_Iamdone()
 		$return .= '<span class="sfsiplus_row_17_5 sfsiplus_twitter_section" style="background-position:-235px 0;"></span>';
 	 }
 	 
-	 if(get_option("plus_share_skin"))
-	 {
-		$icon = get_option("plus_share_skin");
-		$return .= '<span class="sfsiplus_row_17_6 sfsiplus_share_section sfsi_plus-bgimage" style="background: url('.$icon.') no-repeat;"></span>';
-	 }else
-	 {
-		$return .= '<span class="sfsiplus_row_17_6 sfsiplus_share_section" style="background-position:-293px 0;"></span>';
-	 }
-	 
 	 if(get_option("plus_youtube_skin"))
 	 {
 		$icon = get_option("plus_youtube_skin");

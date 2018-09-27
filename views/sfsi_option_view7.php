@@ -87,12 +87,6 @@
                 <span class="sfsi_Cdisplay" id="sfsi_plus_twitter_countsDisplay">12k</span>
             </div>
         </li>
-        <li class="sfsiplus_share_section">
-        	<div>
-            	<img src="<?php echo SFSI_PLUS_PLUGURL ?>images/share.png" alt="Share" />
-                <span class="sfsi_Cdisplay" id="sfsi_plus_shares_countsDisplay">12k</span>
-            </div>
-        </li>
         <li class="sfsiplus_youtube_section">
         	<div>
             	<img src="<?php echo SFSI_PLUS_PLUGURL ?>images/youtube.png" alt="YouTube" />

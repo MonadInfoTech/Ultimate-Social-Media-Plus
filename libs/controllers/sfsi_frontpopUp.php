@@ -136,7 +136,7 @@ function sfsi_plus_FrontPopupDiv()
     /* get all settings for icons saved in admin */
     $sfsi_plus_section1_options = unserialize(get_option('sfsi_plus_section1_options',false));
     $custom_i = unserialize($sfsi_plus_section1_options['sfsi_custom_files']);
-    if($sfsi_plus_section1_options['sfsi_plus_rss_display']=='no' &&  $sfsi_plus_section1_options['sfsi_plus_email_display']=='no' && $sfsi_plus_section1_options['sfsi_plus_facebook_display']=='no' && $sfsi_plus_section1_options['sfsi_plus_twitter_display']=='no' &&  $sfsi_plus_section1_options['sfsi_plus_google_display']=='no' && $sfsi_plus_section1_options['sfsi_plus_share_display']=='no' && $sfsi_plus_section1_options['sfsi_plus_youtube_display']=='no' && $sfsi_plus_section1_options['sfsi_plus_pinterest_display']=='no' && $sfsi_plus_section1_options['sfsi_plus_linkedin_display']=='no' && empty($custom_i)) 
+    if($sfsi_plus_section1_options['sfsi_plus_rss_display']=='no' &&  $sfsi_plus_section1_options['sfsi_plus_email_display']=='no' && $sfsi_plus_section1_options['sfsi_plus_facebook_display']=='no' && $sfsi_plus_section1_options['sfsi_plus_twitter_display']=='no' &&  $sfsi_plus_section1_options['sfsi_plus_google_display']=='no' && $sfsi_plus_section1_options['sfsi_plus_youtube_display']=='no' && $sfsi_plus_section1_options['sfsi_plus_pinterest_display']=='no' && $sfsi_plus_section1_options['sfsi_plus_linkedin_display']=='no' && empty($custom_i)) 
     {
      	$icons='';
 		return $icons;
@@ -171,7 +171,6 @@ function sfsi_plus_FrontPopupDiv()
                      $sfsi_section5['sfsi_plus_facebookIcon_order']	=>'facebook',
                      $sfsi_section5['sfsi_plus_googleIcon_order']	=>'google',
                      $sfsi_section5['sfsi_plus_twitterIcon_order']	=>'twitter',
-                     $sfsi_section5['sfsi_plus_shareIcon_order']	=>'share',
                      $sfsi_section5['sfsi_plus_youtubeIcon_order']	=>'youtube',
                      $sfsi_section5['sfsi_plus_pinterestIcon_order']=>'pinterest',
                      $sfsi_section5['sfsi_plus_linkedinIcon_order']	=>'linkedin',
@@ -241,9 +240,6 @@ function sfsi_plus_FrontPopupDiv()
     case 'twitter' :
 		if($sfsi_plus_section1_options['sfsi_plus_twitter_display']=='yes')    $icons.= "<li>".sfsi_plus_prepairIcons('twitter',1)."</li>"; 
     break;
-    case 'share' :
-		if($sfsi_plus_section1_options['sfsi_plus_share_display']=='yes')    $icons.= "<li id='SFshareIcon'>".sfsi_plus_prepairIcons('share',1)."</li>";
-	break;
     case 'youtube' :
 		if($sfsi_plus_section1_options['sfsi_plus_youtube_display']=='yes')     $icons.= "<li>".sfsi_plus_prepairIcons('youtube',1)."</li>"; 
     break;
