@@ -1277,7 +1277,7 @@ function sfsi_plus_addThis_removal_notice(){
 
     if (isset($_GET['page']) && "sfsi-plus-options" == $_GET['page']) : 
         
-        $sfsi_plus_addThis_removalText    = "We removed Addthis from the plugin due to issues with GDPR, the new EU data protection regulation.";
+        $sfsi_plus_addThis_removalText    = __("We removed Addthis from the plugin due to issues with GDPR, the new EU data protection regulation.", SFSI_PLUS_DOMAIN);
 
         $isDismissed   =  get_option('sfsi_plus_addThis_icon_removal_notice_dismissed',false);
 

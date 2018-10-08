@@ -61,12 +61,12 @@ function sfsi_plus_register_icon_route(){
     register_rest_route(SFSI_PLUS_DOMAIN.'/v1','icons',array(
         'methods'=> WP_REST_Server::READABLE,
         'callback' => 'sfsi_plus_render_shortcode',
-        'args'=>[
-            "share_url"=>[
+        'args'=>array(
+            "share_url"=>array(
                 "type"=>'string',
                 "sanitize_callback" => 'sanitize_text_field'
-            ]
-        ]
+            )
+        )
     ));
 }
 
