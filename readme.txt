@@ -446,6 +446,8 @@ The premium plugin offrs many more social buttons from other social media platfo
 == Changelog ==
 
 = 2.9.3 =
+* Removed AddThis due to non complience with GDPR.
+* Fiexed Issue: on gutenburg plugin for older version of PHP.
 
 = 2.9.2 =
 * New Feature: Gutenberg block for share implemented.
