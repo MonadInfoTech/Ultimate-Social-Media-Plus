@@ -65,9 +65,27 @@ function sfsi_plus_register_icon_route(){
             "share_url"=>array(
                 "type"=>'string',
                 "sanitize_callback" => 'sanitize_text_field'
+            ),
+            "admin_refereal" => array(
+                "type"  =>  'string',
+                "sanitize_callback" =>  'sanitize_text_field'
+            ),
+            "ractangle_icon" => array(
+                "type"  =>  'string',
+                "sanitize_callback" =>  'sanitize_text_field'
             )
         )
     ));
+    // register_rest_route(SFSI_PLUS_DOMAIN.'/v1','settings',array(
+    //     'methods'=> WP_REST_Server::READABLE,
+    //     'callback' => 'sfsi_plus_fetch_settings',
+    //     // 'args'=>array(
+    //         // "share_url"=>array(
+    //             // "type"=>'string',
+    //             // "sanitize_callback" => 'sanitize_text_field'
+    //         // )
+    //     // )
+    // ));
 }
 
 add_action( 'rest_api_init', 'sfsi_plus_register_icon_route');
@@ -77,8 +95,84 @@ function sfsi_plus_render_shortcode(){
     if(isset($_GET['ractangle_icon']) && 1==$_GET['ractangle_icon']){
         $returndata=DISPLAY_ULTIMATE_PLUS(null,null,$_GET['share_url']);
     }else{
-        $returndata=DISPLAY_ULTIMATE_PLUS(null,null,$_GET['share_url']);
+        $returndata=sfsi_plus_render_gutenberg_round(null,null,$_GET['share_url'],$_GET['admin_refereal']);
     }
     ob_clean();
     return rest_ensure_response($returndata);
 }
+
+
+function sfsi_plus_render_gutenberg_round($args = null, $content = null,$share_url=null, $is_admin){
+    $instance = array("showf" => 1, "title" => '');
+    $sfsi_plus_section8_options = get_option("sfsi_plus_section8_options");
+    $sfsi_plus_section8_options = unserialize($sfsi_plus_section8_options);
+    $sfsi_plus_place_item_gutenbery = $sfsi_plus_section8_options['sfsi_plus_place_item_gutenberg'];
+    if($sfsi_plus_place_item_gutenberg == "yes")
+    {
+        $return = '';
+        if(!isset($before_widget)): $before_widget =''; endif;
+        if(!isset($after_widget)): $after_widget =''; endif;
+        
+        /*Our variables from the widget settings. */
+        $title = apply_filters('widget_title', $instance['title'] );
+        $show_info = isset( $instance['show_info'] ) ? $instance['show_info'] : false;
+        global $is_floter;        
+        $return.= $before_widget;
+            /* Display the widget title */
+            if ( $title ) $return .= $before_title . $title . $after_title;
+            $return .= '<div class="sfsi_plus_widget">';
+                $return .= '<div id="sfsi_plus_wDiv"></div>';
+                /* Link the main icons function */
+                $return .= sfsi_plus_check_visiblity(0,$share_url);
+                $return .= '<div style="clear: both;"></div>';
+            $return .= '</div>';
+        $return .= $after_widget;
+        return $return;
+    }else{
+        if($is_admin){
+            return __('Kindly go to setting page and check the option " "', SFSI_PLUS_DOMAIN);
+        }
+    }
+}
+
+// function sfsi_plus_fetch_settings(){
+//     ob_start();
+//     $option8=  unserialize(get_option('sfsi_plus_section8_options',false));
+//     // $returndata = $option8;
+//     $returndata=array(
+//         'textBeforeShare'=>isset($option8['sfsi_plus_textBefor_icons'])?$option8['sfsi_plus_textBefor_icons']:'',
+//         'iconType'=>isset($option8['sfsi_plus_display_button_type'])?($option8['sfsi_plus_display_button_type']):'';
+//         'iconAlignemt'=>isset()
+//     );
+//     ob_clean();
+//     return rest_ensure_response($returndata);
+// }
+
+
+// function sfsi_plus_gutenberg_share_block_init(){
+//     $post_types = get_post_types(array('public'=>true,'_builtin'=>true));
+//     register_meta($post_types,'sfsi_plus_gutenberg_text_before_share',array(
+//         'show_in_rest' => true,
+//         'single'    =>  true,
+//         // 'type'      =>  'string'
+//     ));
+//     register_meta($post_types,'sfsi_plus_gutenberg_icon_type',array(
+//         'show_in_rest' => true,
+//         'single'    =>  true,
+//         // 'type'      =>  'string'
+//     ));
+//     register_meta($post_types,'sfsi_plus_gutenberg_icon_alignemt',array(
+//         'show_in_rest' => true,
+//         'single'    =>  true,
+//         // 'type'      =>  'string'
+//     ));
+//     register_meta($post_types,'sfsi_plus_gutenberg_max_per_row',array(
+//         'show_in_rest' => true,
+//         'single'    =>  true,
+//         // 'type'      =>  'string'
+//     ));
+// }
+
+// add_action( 'init','sfsi_plus_gutenberg_share_block_init' );
+
+?>
