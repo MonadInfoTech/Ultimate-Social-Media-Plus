@@ -882,17 +882,17 @@ function sfsi_plus_action_links ( $mylinks )
 		$mylinks[]  	= @$mylinks['edit'];		
 	}
 
-	array_unshift($mylinks, $linkProVersion);
-    array_unshift($mylinks, $linkQuestion);
+	//array_unshift($mylinks, $linkProVersion);
+    	array_unshift($mylinks, $linkQuestion);
 
 	$slug = plugin_basename(dirname(__FILE__));
 
-	$mylinks[$slug] = @$mylinks["deactivate"].'<i class="sfsi-plus-deactivate-slug"></i>';
+	//$mylinks[$slug] = @$mylinks["deactivate"].'<i class="sfsi-plus-deactivate-slug"></i>';
 
 	$mylinks[] 		= '<a href="'.admin_url("/admin.php?page=sfsi-plus-options").'">Settings</a>';
 
 	unset ($mylinks['edit']);
-	unset ($mylinks['deactivate']);
+	//unset ($mylinks['deactivate']);
 
 	return $mylinks;
 }

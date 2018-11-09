@@ -776,5 +776,5 @@ The premium plugin offrs many more social buttons from other social media platfo
 
 == Upgrade Notice ==
 
-= 2.9.3 =
+= 2.9.5 =
 * Please update

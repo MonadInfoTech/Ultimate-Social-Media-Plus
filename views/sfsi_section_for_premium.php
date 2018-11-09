@@ -2,7 +2,7 @@
     .sfsi-footer-container {
         margin: 0 auto;
         text-align: center;
-        width: 75%;
+        width: 90%;
     }
     .sfsi-footer-pointing-to-premium-plugin{
         float: left;
