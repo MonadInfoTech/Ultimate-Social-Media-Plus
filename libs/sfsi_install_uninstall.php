@@ -179,9 +179,19 @@ function sfsi_plus_update_plugin()
 	}
 	/* section3 */
 	$option3 = unserialize(get_option('sfsi_plus_section3_options',false));
-	if(isset($option3) && !empty($option3) && !isset($option3['sfsi_plus_premium_icons_design_box']))
-	{
-		$option3['sfsi_plus_premium_icons_design_box'] = 'no';
+	if(isset($option3) && !empty($option3))
+	{		
+		if(!isset($option3['sfsi_plus_mouseover_effect_type'])){
+			$option3['sfsi_plus_mouseover_effect_type'] = 'same_icons';			
+		}
+		if(!isset($option3['mouseover_other_icons_transition_effect'])){
+			$option3['mouseover_other_icons_transition_effect'] = 'flip';			
+		}
+
+		if(!isset($option3['sfsi_plus_premium_icons_design_box'])){
+			$option3['sfsi_plus_premium_icons_design_box'] = 'no';			
+		}
+
 		update_option('sfsi_plus_section3_options', serialize($option3));
 	}
 	/* section4 */
@@ -308,16 +318,19 @@ function sfsi_plus_activate_plugin()
 	add_option('sfsi_plus_section2_options',  serialize($options2));
     
 	/* Design and animation option  */
-	$options3=array('sfsi_plus_mouseOver'=>'no',
-        'sfsi_plus_mouseOver_effect'=>'fade_in',
-        'sfsi_plus_shuffle_icons'=>'no',
-        'sfsi_plus_shuffle_Firstload'=>'no',
-        'sfsi_plus_shuffle_interval'=>'no',
-        'sfsi_plus_shuffle_intervalTime'=>'',                              
-        'sfsi_plus_actvite_theme'=>'default',
-        'sfsi_plus_premium_icons_design_box'=>'yes',
-        
+	$options3= array(
+		'sfsi_plus_mouseOver'				=>'no',
+        'sfsi_plus_mouseOver_effect'		=>'fade_in',
+		'sfsi_plus_mouseover_effect_type' 	=> 'same_icons',			
+		'mouseover_other_icons_transition_effect' => 'flip',
+        'sfsi_plus_shuffle_icons'			=>'no',
+        'sfsi_plus_shuffle_Firstload'		=>'no',
+        'sfsi_plus_shuffle_interval'		=>'no',
+        'sfsi_plus_shuffle_intervalTime'	=>'',                              
+        'sfsi_plus_actvite_theme'			=>'default',
+        'sfsi_plus_premium_icons_design_box'=>'yes',        
         );
+
 	add_option('sfsi_plus_section3_options',  serialize($options3));
 	
 	/* display counts options */         

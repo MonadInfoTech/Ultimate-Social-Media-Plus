@@ -360,16 +360,23 @@ function sfsi_plus_update_step2()
 function sfsi_plus_update_step3()
 {
 	var nonce = SFSI("#sfsi_plus_save3").attr("data-nonce");
-    var s = sfsi_plus_validationStep3();
+    var s     = sfsi_plus_validationStep3();
+
     if (!s) return global_error = 1, !1;
     sfsiplus_beForeLoad();
-    var i = SFSI("input[name='sfsi_plus_actvite_theme']:checked").val(), e = SFSI("input[name='sfsi_plus_mouseOver']:checked").val(), t = SFSI("input[name='sfsi_plus_shuffle_icons']:checked").val(), n = SFSI("input[name='sfsi_plus_shuffle_Firstload']:checked").val(), o = SFSI("#sfsi_plus_mouseOver_effect option:selected").val(), a = SFSI("input[name='sfsi_plus_shuffle_interval']:checked").val(), r = SFSI("input[name='sfsi_plus_shuffle_intervalTime']").val(), c = SFSI("input[name='sfsi_plus_specialIcon_animation']:checked").val(), p = SFSI("input[name='sfsi_plus_specialIcon_MouseOver']:checked").val(), _ = SFSI("input[name='sfsi_plus_specialIcon_Firstload']:checked").val(), l = SFSI("#sfsi_plus_specialIcon_Firstload_Icons option:selected").val(), S = SFSI("input[name='sfsi_plus_specialIcon_interval']:checked").val(), u = SFSI("input[name='sfsi_plus_specialIcon_intervalTime']").val(), f = SFSI("#sfsi_plus_specialIcon_intervalIcons option:selected").val(), d = {
+
+    var i = SFSI("input[name='sfsi_plus_actvite_theme']:checked").val(), e = SFSI("input[name='sfsi_plus_mouseOver']:checked").val(), t = SFSI("input[name='sfsi_plus_shuffle_icons']:checked").val(), n = SFSI("input[name='sfsi_plus_shuffle_Firstload']:checked").val(),a = SFSI("input[name='sfsi_plus_shuffle_interval']:checked").val(), r = SFSI("input[name='sfsi_plus_shuffle_intervalTime']").val(), c = SFSI("input[name='sfsi_plus_specialIcon_animation']:checked").val(), p = SFSI("input[name='sfsi_plus_specialIcon_MouseOver']:checked").val(), _ = SFSI("input[name='sfsi_plus_specialIcon_Firstload']:checked").val(), l = SFSI("#sfsi_plus_specialIcon_Firstload_Icons option:selected").val(), S = SFSI("input[name='sfsi_plus_specialIcon_interval']:checked").val(), u = SFSI("input[name='sfsi_plus_specialIcon_intervalTime']").val(), f = SFSI("#sfsi_plus_specialIcon_intervalIcons option:selected").val(),o = SFSI("input[name='sfsi_plus_same_icons_mouseOver_effect']:checked").val();
+
+    var mouseover_effect_type = 'same_icons';//SFSI("input[name='sfsi_plus_mouseOver_effect_type']:checked").val();
+
+    var d = {
         action:"plus_updateSrcn3",
         sfsi_plus_actvite_theme:i,
         sfsi_plus_mouseOver:e,
         sfsi_plus_shuffle_icons:t,
         sfsi_plus_shuffle_Firstload:n,
         sfsi_plus_mouseOver_effect:o,
+        sfsi_plus_mouseover_effect_type: mouseover_effect_type,
         sfsi_plus_shuffle_interval:a,
         sfsi_plus_shuffle_intervalTime:r,
         sfsi_plus_specialIcon_animation:c,
@@ -1705,16 +1712,40 @@ SFSI(document).ready(function(s) {
 
     SFSI(document).on("click", '.checkbox', function () {
 
-	var s = SFSI(this).parent().find("input:checkbox:first");
+    	var s = SFSI(this).parent().find("input:checkbox:first");
 
-	if(s.attr('name')=="sfsi_plus_custom_social_hide"){
-    	var backgroundPos = jQuery(this).css('background-position').split(" ");
+        var inputName    = s.attr('name');
+        var inputChecked = s.attr("checked");
 
-    	var xPos = backgroundPos[0],
-        	yPos = backgroundPos[1];
-        	var val = (yPos=="0px") ? "no":"yes";
-        	SFSI('input[name="sfsi_plus_custom_social_hide"]').val(val);        
-	}
+        switch(inputName){
+
+            case "sfsi_custom_social_hide":
+
+            var backgroundPos = jQuery(this).css('background-position').split(" ");
+
+            var xPos = backgroundPos[0],
+                yPos = backgroundPos[1];
+                var val = (yPos=="0px") ? "no":"yes";
+                SFSI('input[name="sfsi_plus_custom_social_hide"]').val(val);        
+ 
+            break;
+
+            case 'sfsi_plus_mouseOver':
+
+                var elem = SFSI('input[name="'+inputName+'"]');
+
+                var togglelem = SFSI('.mouse-over-effects');
+                
+                if(inputChecked){
+                    togglelem.removeClass('hide').addClass('show');
+                }
+                else{
+                    togglelem.removeClass('show').addClass('hide');
+                }
+
+            break;
+       	}
+
     });
 
 //*------------------------------- Sharing text & pcitures checkbox for showing section in Page, Post CLOSES -------------------------------------//
@@ -2045,4 +2076,29 @@ SFSI("body").on("click", ".sfsi_plus_tokenGenerateButton a", function(){
         alert("Please enter client id and redirect url first");
     }
         
+});
+
+SFSI(document).on("click", '.radio', function () {
+
+    var s = SFSI(this).parent().find("input:radio:first");
+
+    switch(s.attr("name")){
+
+        case 'sfsi_plus_mouseOver_effect_type':
+
+            var _val  = s.val();
+            var _name = s.attr("name");
+
+            if('same_icons' == _val){
+                SFSI('.same_icons_effects').removeClass('hide').addClass('show');
+                SFSI('.other_icons_effects_options').removeClass('show').addClass('hide');
+            }
+            else if('other_icons' == _val){
+                SFSI('.same_icons_effects').removeClass('show').addClass('hide');
+                SFSI('.other_icons_effects_options').removeClass('hide').addClass('show');
+            }
+
+        break;
+    }
+
 });

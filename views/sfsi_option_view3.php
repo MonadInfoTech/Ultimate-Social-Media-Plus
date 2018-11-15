@@ -29,6 +29,9 @@
     $option3['sfsi_plus_premium_icons_design_box'] 	=	(isset($option3['sfsi_plus_premium_icons_design_box']))
 														? intval($option3['sfsi_plus_premium_icons_design_box'])
 														: 'yes';
+    $option3['sfsi_plus_mouseOver_effect_type'] = (isset($option3['sfsi_plus_mouseOver_effect_type'])) ? sanitize_text_field($option3['sfsi_plus_mouseOver_effect_type']) : 'same_icons';
+
+    $mouseover_other_icons_transition_effect = (isset($option3['mouseover_other_icons_transition_effect'])) ? sanitize_text_field($option3['mouseover_other_icons_transition_effect']) : 'flip';
 ?>
 <!-- Section 3 "What design & animation do you want to give your icons?" main div Start -->
 <div class="tab3">
@@ -409,61 +412,8 @@
                 </li>
             </ul>
             <!--icon themes section start -->
-              
-            <!--icon Animation section   start -->
-            <div class="sub_row stand sec_new" style="margin-left: 0px;">
-            	<h3>
-                	<?php  _e( 'Animate them (your main icons)', SFSI_PLUS_DOMAIN ); ?>
-                </h3>
-                
-                <p class="radio_section tab_3_option">
-                	<input name="sfsi_plus_mouseOver" <?php echo ( $option3['sfsi_plus_mouseOver']=='yes') ?  'checked="true"' : '' ;?>  type="checkbox" value="yes" class="styled"  />
-                    <label>
-                    	<?php  _e( 'Mouse-Over effects', SFSI_PLUS_DOMAIN ); ?>
-                    </label>
-                    <div class="drop_lsts">
-                    	<select name="sfsi_plus_mouseOver_effect"  id="sfsi_plus_mouseOver_effect" class="styled"> 
-                        	<option value="fade_in" <?php echo ( $option3['sfsi_plus_mouseOver_effect']=='fade_in') ?  'selected="true"' : '' ;?>>
-                        		<?php  _e( 'Fade In', SFSI_PLUS_DOMAIN ); ?>
-                        	</option>
-                            <option value="scale" <?php echo ( $option3['sfsi_plus_mouseOver_effect']=='scale') ?  'selected="true"' : '' ;?>>
-								<?php  _e( 'Scale', SFSI_PLUS_DOMAIN ); ?>
-							</option>
-							<option value="combo" <?php echo ( $option3['sfsi_plus_mouseOver_effect']=='combo') ?  'selected="true"' : '' ;?>>
-                        		<?php  _e( 'Combo', SFSI_PLUS_DOMAIN ); ?>
-                        	</option>
-                    	</select>
-                    </div>
-                </p>
-                
-                <div class="Shuffle_auto">
-                	<p class="radio_section tab_3_option">
-                    	<input name="sfsi_plus_shuffle_icons" <?php echo ( $option3['sfsi_plus_shuffle_icons']=='yes') ?  'checked="true"' : '' ;?>  type="checkbox" value="yes" class="styled"  />
-                        <label>
-                        	<?php  _e( 'Shuffle them automatically', SFSI_PLUS_DOMAIN ); ?>
-                        </label>
-                    </p>
-                	<div class="sub_sub_box shuffle_sub"  >
-                		<p class="radio_section tab_3_option">
-                        	<input name="sfsi_plus_shuffle_Firstload" <?php echo ( $option3['sfsi_plus_shuffle_Firstload']=='yes') ?  'checked="true"' : '' ;?>  type="checkbox" value="yes" class="styled"  />
-                            <label>
-                            	<?php  _e( 'When site is first loaded', SFSI_PLUS_DOMAIN ); ?>
-                            </label>
-                        </p>
-                		<p class="radio_section tab_3_option">
-                        	<input name="sfsi_plus_shuffle_interval" <?php echo ( $option3['sfsi_plus_shuffle_interval']=='yes') ?  'checked="true"' : '' ;?>  type="checkbox" value="yes" class="styled"  />
-                            <label>
-                            	<?php  _e( 'Every', SFSI_PLUS_DOMAIN ); ?>
-                            </label>
-                            <input class="smal_inpt" type="text" name="sfsi_plus_shuffle_intervalTime" value="<?php echo ( $option3['sfsi_plus_shuffle_intervalTime']!='') ?   $option3['sfsi_plus_shuffle_intervalTime'] : '' ;?>">
-                            <label>
-                            	<?php  _e( 'seconds', SFSI_PLUS_DOMAIN ); ?>
-                            </label>
-                        </p>
-                	</div>
-                </div>
-            </div>
-            <!--END icon Animation section   start -->
+
+            <?php include_once(SFSI_PLUS_DOCROOT.'/views/subviews/que4/animatethem.php'); ?>
                       
     	</div>
     </div>

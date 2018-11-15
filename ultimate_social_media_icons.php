@@ -56,6 +56,13 @@ define('SFSI_PLUS_WEBROOT',    str_replace(getcwd(), home_url(), dirname(__FILE_
 define('SFSI_PLUS_DOMAIN',	   'ultimate-social-media-plus');
 define('SFSI_PLUS_SUPPORT_FORM','https://goo.gl/jySrSF');
 
+$wp_upload_dir = wp_upload_dir();
+define('SFSI_PLUS_UPLOAD_DIR_BASEURL', trailingslashit($wp_upload_dir['baseurl']));
+
+
+define('SFSI_PLUS_ALLICONS',serialize(array("rss","email","facebook","twitter","google","youtube","linkedin",
+	"pinterest","instagram","houzz")));
+
 function sfsi_plus_get_current_url()
 {
 	global $post, $wp;
@@ -74,6 +81,7 @@ function sfsi_plus_get_current_url()
 }
 
 /* load all files  */
+include(SFSI_PLUS_DOCROOT.'/helpers/common_helper.php');
 include(SFSI_PLUS_DOCROOT.'/libs/controllers/sfsi_socialhelper.php');
 include(SFSI_PLUS_DOCROOT.'/libs/controllers/sfsi_class_theme_check.php');
 include(SFSI_PLUS_DOCROOT.'/libs/sfsi_install_uninstall.php');

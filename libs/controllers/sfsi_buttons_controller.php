@@ -195,7 +195,11 @@ function sfsi_plus_options_updater3()
    	}
     $sfsi_plus_actvite_theme             = isset($_POST["sfsi_plus_actvite_theme"]) ? $_POST["sfsi_plus_actvite_theme"] : 'no'; 
     $sfsi_plus_mouseOver                 = isset($_POST["sfsi_plus_mouseOver"]) ? $_POST["sfsi_plus_mouseOver"] : 'no'; 
+
     $sfsi_plus_mouseOver_effect          = isset($_POST["sfsi_plus_mouseOver_effect"]) ? $_POST["sfsi_plus_mouseOver_effect"] : 'fade_in'; 
+
+    $sfsi_plus_mouseover_effect_type     = isset($_POST["sfsi_plus_mouseover_effect_type"]) ? $_POST["sfsi_plus_mouseover_effect_type"] : 'same_icons'; 
+
     $sfsi_plus_shuffle_icons             = isset($_POST["sfsi_plus_shuffle_icons"]) ? $_POST["sfsi_plus_shuffle_icons"] : 'no'; 
     $sfsi_plus_shuffle_Firstload         = isset($_POST["sfsi_plus_shuffle_Firstload"]) ? $_POST["sfsi_plus_shuffle_Firstload"] : 'no'; 
     $sfsi_plus_shuffle_interval          = isset($_POST["sfsi_plus_shuffle_interval"]) ? $_POST["sfsi_plus_shuffle_interval"] : 'no'; 
@@ -223,6 +227,7 @@ function sfsi_plus_options_updater3()
 		/* animations options */
 		'sfsi_plus_mouseOver'					=> sanitize_text_field($sfsi_plus_mouseOver),
 		'sfsi_plus_mouseOver_effect'			=> sanitize_text_field($sfsi_plus_mouseOver_effect),
+		'sfsi_plus_mouseover_effect_type'		=> sanitize_text_field($sfsi_plus_mouseover_effect_type),
 		'sfsi_plus_shuffle_icons'				=> sanitize_text_field($sfsi_plus_shuffle_icons),
 		'sfsi_plus_shuffle_Firstload'			=> sanitize_text_field($sfsi_plus_shuffle_Firstload),
 		'sfsi_plus_shuffle_interval'			=> sanitize_text_field($sfsi_plus_shuffle_interval),
