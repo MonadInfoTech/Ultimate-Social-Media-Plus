@@ -304,103 +304,14 @@
                         
                     </div>
                	</li>
+
                 <?php if($option3['sfsi_plus_premium_icons_design_box'] =='yes'){ ?>
                 <li>
-        			<div class="sf_si_plus_our_prmium_plugin-add">
-        			    <div class="sf_si_plus_prmium_head"><h2><?php _e("New: ", SFSI_PLUS_DOMAIN); ?><span><?php _e("In our Premium Plugin we added:", SFSI_PLUS_DOMAIN); ?></span></h2></div>
-        			    <div class="sf_si_plus_default_design">
-        					<ul>
-                                 <li>
-                                     <h4><?php _e("A) More default design styles", SFSI_PLUS_DOMAIN); ?></h4>
-                                    </li>
-                                 <li>
-                                        <div class="sfsi_plus_row_table">
-                                            <div class="sfsi_plus_first_icon_field sfsi_plus_cool_font_weight">
-                                             <h2><?php _e("Cool style", SFSI_PLUS_DOMAIN); ?></h2>  
-                                            </div>
-                                            <div class="sfsi_plus_second_icon_img">
-                                                <img src="<?php  echo SFSI_PLUS_PLUGURL; ?>images/sfsi_cool_icon_spread.png" />
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="sfsi_plus_row_table">
-                                            <div class="sfsi_plus_first_icon_field sfsi_plus_cool_font_weight">
-                                                <h2><?php _e("Waxed Wood", SFSI_PLUS_DOMAIN); ?></h2>
-                                            </div>
-                                            <div class="sfsi_plus_second_icon_img">
-                                                <img src="<?php  echo SFSI_PLUS_PLUGURL; ?>images/sfsi_vaxwoodi_icon_spread.png" />
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="sfsi_plus_row_table">
-                                            <div class="sfsi_plus_first_icon_field sfsi_plus_cool_font_weight">
-                                                <h2><?php _e("Black Grunge", SFSI_PLUS_DOMAIN); ?></h2>
-                                            </div>
-                                            <div class="sfsi_plus_second_icon_img">
-                                                <img src="<?php  echo SFSI_PLUS_PLUGURL; ?>images/sfsi_black_icon_spread.png" />
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="sfsi_plus_row_table">
-                                            <div class="sfsi_plus_first_icon_more">
-                                                <h2><?php _e("(and many more)", SFSI_PLUS_DOMAIN); ?></h2>
-                                            </div>
-                                        </div>
-                                    </li>
-                                 <li>
-                                     <h4 class="sfsi_plus_second_themedTitle"><?php _e("B) Themed styles", SFSI_PLUS_DOMAIN); ?><span><?php _e(" (to match the content of your site)", SFSI_PLUS_DOMAIN); ?></span></h4>
-                                    </li>
-                                 <li>
-                                        <div class="sfsi_plus_row_table">
-                                            <div class="sfsi_plus_first_icon_field">
-                                                <h2><?php _e("Lovehearts", SFSI_PLUS_DOMAIN); ?></h2>
-                                                <p><?php _e("(e.g. for girly sites or just sites with a heart)", SFSI_PLUS_DOMAIN); ?></p>
-                                            </div>
-                                            <div class="sfsi_plus_second_icon_img">
-                                                <img src="<?php  echo SFSI_PLUS_PLUGURL; ?>images/sfsi_loveheart_icon_spread.png" />
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="sfsi_plus_row_table">
-                                            <div class="sfsi_plus_first_icon_field">
-                                                <h2><?php _e("Computers", SFSI_PLUS_DOMAIN); ?></h2>
-                                                <p><?php _e("(e.g. for IT/tech sites)", SFSI_PLUS_DOMAIN); ?></p>
-                                            </div>
-                                            <div class="sfsi_plus_second_icon_img">
-                                                <img src="<?php  echo SFSI_PLUS_PLUGURL; ?>images/sfsi_computer_icon_spread.png" />
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="sfsi_plus_row_table">
-                                            <div class="sfsi_plus_first_icon_field">
-                                                <h2><?php _e("Dogs", SFSI_PLUS_DOMAIN); ?></h2>
-                                                <p><?php _e("(e.g. for dog/pet sites)", SFSI_PLUS_DOMAIN); ?></p>
-                                            </div>
-                                            <div class="sfsi_plus_second_icon_img">
-                                                <img src="<?php  echo SFSI_PLUS_PLUGURL; ?>images/sfsi_dogi_icon_spread.png" />
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="sfsi_plus_row_table">
-                                            <div class="sfsi_plus_first_icon_more">
-                                                <h2><?php _e("(and many more)", SFSI_PLUS_DOMAIN); ?></h2>
-                                            </div>
-                                        </div>
-                                    </li>
-                            </ul>
-        			    </div>
-        				<div class="sf_si_plus_all_features_premium">
-        					<a  href="https://www.ultimatelysocial.com/usm-premium/?utm_source=usmplus_settings_page&utm_campaign=more_icons_designs&utm_medium=banner" target="_blank"><?php _e("See all features Premium Plugin", SFSI_PLUS_DOMAIN); ?></a>
-        				</div>
-        		    </div>
+                    <?php include_once(SFSI_PLUS_DOCROOT.'/views/subviews/que4/banner.php'); ?>
+
                 </li>
                 <?php } ?>
+
           		<li>
                 	<p style="font-weight: bold; margin: 12px 0 0;">
 						<?php _e("Need icons for another theme? Let us know in the", SFSI_PLUS_DOMAIN); ?>

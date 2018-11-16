@@ -1,8 +1,8 @@
-<style>
+    <style>
     .sfsi-footer-container {
         margin: 0 auto;
         text-align: center;
-        width: 90%;
+        width: 72%;
     }
     .sfsi-footer-pointing-to-premium-plugin{
         float: left;
