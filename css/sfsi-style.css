@@ -1177,15 +1177,10 @@ ul.sfsiplus_tab_3_icns li .sfsiplus_icns_tab_3, ul.sfsiplus_tab_3_icns li .radio
 .tab3 .sub_row {
     float: left;
     margin: 35px 0 0 4%;
-    width: 90%}
+    width: 90%
+}
 .tab3 .sub_row h4 {
     color: #a4a9ad!important;
-}
-.tab3 .sub_row label {
-    float: left;
-    margin: 0 20px;
-    line-height: 36px;
-    font-size: 18px;
 }
 .tab3 .sub_row p {
     padding-top: 18px!important;

@@ -1270,7 +1270,7 @@ ul.sfsi_show_hide_section {float: right;width: 14%;}
 
 /* Link to support forum left of every Save button */
 .ui-accordion .ui-accordion-content { position: relative; }
-.sfsi_plus_askforhelp     { float: left;width: 32%;position: absolute;bottom: 30px;}
+.sfsi_plus_askforhelp     { float: left;width: auto;position: absolute;bottom: 30px;}
 .sfsi_plus_askforhelp img { float: left;width: 35px;height: 35px;vertical-align: middle;    }
 .sfsi_plus_askforhelp span{ float: left;margin-left: 6px;margin-top: 8px;}
 .askhelpInview2           { bottom: 25px; }
@@ -1375,6 +1375,7 @@ div#sfsi_plus_langnotice {padding: 10px;margin-left: 0px;position: relative;}
 .mouseover-premium-notice{
 }
 .mouseover-premium-notice label{
+    width: auto !important;
     margin: 0 !important; 
 }
 .mouseover-premium-notice a{
@@ -1426,7 +1427,21 @@ div#sfsi_plus_langnotice {padding: 10px;margin-left: 0px;position: relative;}
         margin-bottom:0px !important;
     }    
 }
-@media (min-width:768px) and (max-width: 1024px){
+
+@media (min-width:1024px) and (max-width: 1366px) and (orientation:portrait) {
+
+}
+
+@media (min-width:1024px) and (max-width: 1366px) and (orientation:landscape) {
+    .tab3 .sub_row .effectName{
+        width:40%;
+    }
+    .tab3 .sub_row label{
+        width: 75%;
+    }    
+}
+
+@media (min-width:768px) and (max-width: 1024px) and (orientation:portrait) {
     .tab3 .sub_row{
         width: 100%;
     }
@@ -1437,6 +1452,9 @@ div#sfsi_plus_langnotice {padding: 10px;margin-left: 0px;position: relative;}
     .tab3 .sub_row .effectName{
         width: 50%;
     }
+    .tab3 .sub_row label{
+        width: 77%;
+    }    
 }
 
 /*  */

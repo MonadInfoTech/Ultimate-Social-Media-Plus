@@ -47,10 +47,19 @@ h4.bannerTitle span{ font-size: 16px;font-weight: 500;}
         padding: 25px 11px 35px 26px;
     }    
 }
-@media (min-width:786px) and (max-width: 1024px) and (orientation:landscape) {
+
+@media (min-width:768px) and (max-width: 1024px) and (orientation:portrait){
+    h4.bannerTitle {
+        min-height: 30px;
+    }      
+} 
+@media (min-width:768px) and (max-width: 1024px) and (orientation:landscape) {
     .sf_si_our_prmium_plugin-add {
         width: 97%;
         padding: 25px 11px 35px 8px;
+    }
+    h4.bannerTitle {
+        min-height: 70px;
     }  
 }
 </style>
