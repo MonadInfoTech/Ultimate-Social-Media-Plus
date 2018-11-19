@@ -1053,28 +1053,28 @@ function sfsi_plus_get_keywordEnglish(){
 add_action('wp_ajax_sfsiplusbannerOption','sfsi_plus_bannerOption');
 
 function sfsi_plus_bannerOption(){
+
 	error_reporting(0);
 
 	if(get_option("sfsi_plus_new_show_notification") == "yes"){
 
-	  $objThemeCheck = new sfsi_plus_ThemeCheck();
+	  $objThemeCheck  = new sfsi_plus_ThemeCheck();
 		
 	  $domainname     = $objThemeCheck->sfsi_plus_getdomain(get_bloginfo('url'));
 
 	  // Get all themes data which incudes nobrainer 
-	  $themeDataArr	= $objThemeCheck->sfsi_plus_get_themeData();
+	  $themeDataArr	  = $objThemeCheck->sfsi_plus_get_themeData();
+	  $matchFound  	  = false;
 
-	  $matchFound = false;
+	  foreach ($themeDataArr as $themeDataObj):
 
-	  foreach ($themeDataArr as $themeDataObj) {
-
-		    if(isset($themeDataObj->themeName) && strlen($themeDataObj->themeName)>0){
-	
-		    	$themeName 			= $themeDataObj->themeName;
-		    	$noBrainerKeywords  = $themeDataObj->noBrainerKeywords;
-		    	$separateKeywords   = $themeDataObj->separateKeywords;
-		    	$negativeKeywords   = $themeDataObj->negativeKeywords;
-		    	$noBrainerAndSeparateKeywords = array_merge($noBrainerKeywords,$separateKeywords);
+		if(isset($themeDataObj->themeName) && strlen($themeDataObj->themeName)>0)
+		{	
+	    	$themeName 			= $themeDataObj->themeName;
+	    	$noBrainerKeywords  = $themeDataObj->noBrainerKeywords;
+	    	$separateKeywords   = $themeDataObj->separateKeywords;
+	    	$negativeKeywords   = $themeDataObj->negativeKeywords;
+	    	$noBrainerAndSeparateKeywords = array_merge($noBrainerKeywords,$separateKeywords);
 		    			    			    
 	      		if($objThemeCheck->sfsi_plus_check_type_of_websiteWithNoBrainerAndSeparateAndNegativeKeywords($themeName,$noBrainerKeywords,$separateKeywords,$noBrainerAndSeparateKeywords,$negativeKeywords,$domainname)==$themeName)
 	        {
@@ -1092,32 +1092,32 @@ function sfsi_plus_bannerOption(){
 	        	break;
 		    }
 		}
-	  }
 
+	  endforeach;
 
-	  if(!$matchFound){
-        	echo '<div class="sfsi_plus_new_notification_cat">
-                    <div class="sfsi_plus_new_notification_header_cat">
-                        <h1>New feature: Tailored icons</h1>
-                        <h3>The <a href="https://www.ultimatelysocial.com/themed-icons-search/?utm_source=usmplus_settings_page&utm_campaign=themed_icons_search&utm_medium=banner" target="_blank">Premium Plugin</a> Includes these icons...</h3>
-                        <div class="sfsi_plus_new_notification_cross_cat">X</div>
-                    </div>
-                    <div class="sfsi_plus_new_notification_body_link_cat">
-                        <a class ="sfsi_plus_tailored_icons_img" href="https://www.ultimatelysocial.com/themed-icons-search/?utm_source=usmplus_settings_page&utm_campaign=themed_icons_search&utm_medium=banner" target="_blank">
-                            <div class="sfsi_plus_new_notification_body_cat">
-                                <div class="sfsi_plus_new_notification_image_cat">
-                                       <img src="'.SFSI_PLUS_PLUGURL.'images/WPPlugin_V3.png" id="newImg" />
-                                </div>
-                            </div>
-                        </a>
-                        <div class="sfsiplus_bottom_text">
-                            <a target="_blank" href="https://www.ultimatelysocial.com/themed-icons-search/?utm_source=usmplus_settings_page&utm_campaign=themed_icons_search&utm_medium=banner">
-                                See more-themed-icons >
-                            </a>
-                        </div>    
-                    </div>
-                </div>';	  	
-	  }
+	  // if(!$matchFound){
+   //      	echo '<div class="sfsi_plus_new_notification_cat">
+   //                  <div class="sfsi_plus_new_notification_header_cat">
+   //                      <h1>New feature: Tailored icons</h1>
+   //                      <h3>The <a href="https://www.ultimatelysocial.com/themed-icons-search/?utm_source=usmplus_settings_page&utm_campaign=themed_icons_search&utm_medium=banner" target="_blank">Premium Plugin</a> Includes these icons...</h3>
+   //                      <div class="sfsi_plus_new_notification_cross_cat">X</div>
+   //                  </div>
+   //                  <div class="sfsi_plus_new_notification_body_link_cat">
+   //                      <a class ="sfsi_plus_tailored_icons_img" href="https://www.ultimatelysocial.com/themed-icons-search/?utm_source=usmplus_settings_page&utm_campaign=themed_icons_search&utm_medium=banner" target="_blank">
+   //                          <div class="sfsi_plus_new_notification_body_cat">
+   //                              <div class="sfsi_plus_new_notification_image_cat">
+   //                                     <img src="'.SFSI_PLUS_PLUGURL.'images/WPPlugin_V3.png" id="newImg" />
+   //                              </div>
+   //                          </div>
+   //                      </a>
+   //                      <div class="sfsiplus_bottom_text">
+   //                          <a target="_blank" href="https://www.ultimatelysocial.com/themed-icons-search/?utm_source=usmplus_settings_page&utm_campaign=themed_icons_search&utm_medium=banner">
+   //                              See more-themed-icons >
+   //                          </a>
+   //                      </div>    
+   //                  </div>
+   //              </div>';	  	
+	  // }
         
         echo '<script type="text/javascript">
                 jQuery("body").on("click", ".sfsi_plus_new_notification_cross_cat", function(){

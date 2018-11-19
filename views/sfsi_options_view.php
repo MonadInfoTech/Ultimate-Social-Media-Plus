@@ -7,56 +7,56 @@
 <!-- javascript error loader  -->
 <div class="error" id="sfsi_onload_errors" style="margin-left: 60px;display: none;">
     <p>
-        <?php  _e('We found errors in your javascript which may cause the plugin to not work properly. Please fix the error:',SFSI_PLUS_DOMAIN ); ?>
+    	<?php  _e('We found errors in your javascript which may cause the plugin to not work properly. Please fix the error:',SFSI_PLUS_DOMAIN ); ?>
     </p><p id="sfsi_jerrors"></p>
 </div>
 <!-- END javascript error loader  -->
 
 <!-- START Admin view for plugin-->
 <div class="wapper sfsi_mainContainer">
-    
+	
     <?php sfsi_plus_language_notice();?>
     <?php sfsi_plus_addThis_removal_notice(); ?>
      <!-- Get notification bar-->
-     <?php if(get_option("sfsi_plus_show_notification") == "yes") { ?>
+	 <?php if(get_option("sfsi_plus_show_notification") == "yes") { ?>
 
     <script type="text/javascript">
-        jQuery(document).ready(function(e) {
+		jQuery(document).ready(function(e) {
             jQuery(".sfsi_plus_show_notification").click(function(){
-                SFSI.ajax({
-                    url:ajax_object.ajax_url,
-                    type:"post",
-                    data: {action: "sfsiPlus_notification_read"},
-                    success:function(msg){
-                        if(msg == 'success')
-                        {
-                            jQuery(".sfsi_plus_show_notification").hide("fast");
-                        }
-                    }
-                });
-            });
+				SFSI.ajax({
+					url:ajax_object.ajax_url,
+					type:"post",
+					data: {action: "sfsiPlus_notification_read"},
+					success:function(msg){
+						if(msg == 'success')
+						{
+							jQuery(".sfsi_plus_show_notification").hide("fast");
+						}
+					}
+				});
+			});
         });
-    </script>
+	</script>
     <style type="text/css">
-    .sfsi_plus_show_notification {
-        margin-bottom: 45px;
-        padding: 12px 13px;
-        width: 98%;
-        background-image: url(<?php echo SFSI_PLUS_PLUGURL ?>images/notification-close.png);
-        background-position: right 20px center;
-        background-repeat: no-repeat;
-        cursor: pointer;
-        text-align:center;
-    }
-    </style>
-    <!-- <div class="sfsi_plus_show_notification" style="background-color: #38B54A; color: #fff; font-size: 18px;">
-        
+	.sfsi_plus_show_notification {
+		margin-bottom: 45px;
+		padding: 12px 13px;
+		width: 98%;
+		background-image: url(<?php echo SFSI_PLUS_PLUGURL ?>images/notification-close.png);
+		background-position: right 20px center;
+    	background-repeat: no-repeat;
+		cursor: pointer;
+		text-align:center;
+	}
+	</style>
+	<!-- <div class="sfsi_plus_show_notification" style="background-color: #38B54A; color: #fff; font-size: 18px;">
+    	
         <?php  //_e( 'New: You can now also show a subscription form on your site, increasing sign-ups! (Question 8)', SFSI_PLUS_DOMAIN); ?>
         <p>
-            (<?php  //_e('If question 8 gets displayed in a funny way then please reload the page by pressing Control+F5(PC) or Command+R(Mac)',SFSI_PLUS_DOMAIN); ?>)
+			(<?php  //_e('If question 8 gets displayed in a funny way then please reload the page by pressing Control+F5(PC) or Command+R(Mac)',SFSI_PLUS_DOMAIN); ?>)
         </p>
     </div> -->
-    <?php } ?>
+	<?php } ?>
     <!-- Get notification bar-->
  
     <div class="sfsi_plus_notificationBannner"></div>
@@ -122,12 +122,12 @@
         </h3>
         <?php include(SFSI_PLUS_DOCROOT.'/views/sfsi_option_view8.php'); ?>
     <!-- step new3 end here -->
-    </div>
-    <h2 class="optional">
-        <?php  _e( 'Optional', SFSI_PLUS_DOMAIN ); ?>
-    </h2>
-    <div id="accordion1">
-    <!-- step old 3 start here -->
+   	</div>
+   	<h2 class="optional">
+   		<?php  _e( 'Optional', SFSI_PLUS_DOMAIN ); ?>
+   	</h2>
+	<div id="accordion1">
+	<!-- step old 3 start here -->
         <h3><span>4</span>
             <?php  _e( 'What design and animation do you want to give your icons?', SFSI_PLUS_DOMAIN ); ?>
         </h3>
@@ -169,12 +169,12 @@
     
     </div>
     <div class="tab10">
-        <div class="save_button">
-            <img src="<?php echo SFSI_PLUS_PLUGURL; ?>images/ajax-loader.gif" class="loader-img" />
+    	<div class="save_button">
+		 	<img src="<?php echo SFSI_PLUS_PLUGURL; ?>images/ajax-loader.gif" class="loader-img" />
             <a href="javascript:;" id="save_plus_all_settings" title="Save All Settings">
                 <?php  _e( 'Save All Settings', SFSI_PLUS_DOMAIN ); ?>
             </a>
-        </div>
+	 </div>
         <p class="red_txt errorMsg" style="display:none"> </p>
         <p class="green_txt sucMsg" style="display:none"> </p>
 
@@ -190,10 +190,10 @@
          </p>
          
          <!--<p class="bldtxtmsg">
-            <?php  _e( 'Need top-notch Wordpress development work at a competitive price?', SFSI_PLUS_DOMAIN ); ?>
-            <a href="https://www.ultimatelysocial.com/usm-premium/?utm_source=usmplus_settings_page&utm_campaign=footer_credit&utm_medium=banner">
-                <?php _e('Visit us on ultimatelysocial.com',SFSI_PLUS_DOMAIN); ?>
-            </a>
+         	<?php  _e( 'Need top-notch Wordpress development work at a competitive price?', SFSI_PLUS_DOMAIN ); ?>
+         	<a href="https://www.ultimatelysocial.com/usm-premium/?utm_source=usmplus_settings_page&utm_campaign=footer_credit&utm_medium=banner">
+        		<?php _e('Visit us on ultimatelysocial.com',SFSI_PLUS_DOMAIN); ?>
+         	</a>
          </p>-->
          <?php
              /*$tra_lan = get_bloginfo( 'language' );
