@@ -111,7 +111,18 @@ if(!function_exists('sfsi_plus_get_icon_image')){
                 }
                 else
                 {
-                    $iconImgName = false != $iconImgName ? $iconImgName: $icon_name;
+                    switch (strtolower($icon_name)) {
+
+                        case 'facebook':
+                            $custom_icon_name = "fb";
+                            break;
+                        
+                        default:
+                            $custom_icon_name = $icon_name;
+                            break;
+                    }                    
+
+                    $iconImgName = false != $iconImgName ? $iconImgName: $custom_icon_name;
                     $icon = $icons_baseUrl.$active_theme."_".$iconImgName.".png";
                 }
 
