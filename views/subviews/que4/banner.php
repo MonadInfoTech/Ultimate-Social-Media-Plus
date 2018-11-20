@@ -100,7 +100,7 @@ h4.bannerTitle span{ font-size: 16px;font-weight: 500;}
 
         <?php 
 
-        $imgBasePath = SFSI_PLUGURL."images/banner/";
+        $imgBasePath = SFSI_PLUS_PLUGURL."images/banner/";
         $arrImages   = array_chunk($arrImages, 3);
 
         foreach ($arrImages as $key => $arrImg) : ?>

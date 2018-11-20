@@ -61,8 +61,8 @@ if(!function_exists('sfsi_plus_get_icon_image')){
 
             $active_theme = $option3['sfsi_plus_actvite_theme'];
 
-            $icons_baseUrl  = SFSI_PLUGURL."images/icons_theme/".$active_theme."/";
-            $visit_iconsUrl = SFSI_PLUGURL."images/visit_icons/";  
+            $icons_baseUrl  = SFSI_PLUS_PLUGURL."images/icons_theme/".$active_theme."/";
+            $visit_iconsUrl = SFSI_PLUS_PLUGURL."images/visit_icons/";  
 
             if(isset($icon_name) && !empty($icon_name)):
 
@@ -103,7 +103,7 @@ if(!function_exists('sfsi_plus_get_icon_image')){
                     else
                     {
                         $active_theme = 'default';
-                        $icons_baseUrl = SFSI_PLUGURL."images/icons_theme/default/";
+                        $icons_baseUrl = SFSI_PLUS_PLUGURL."images/icons_theme/default/";
 
                         $iconImgName = false != $iconImgName ? $iconImgName: $icon_name; 
                         $icon = $icons_baseUrl.$active_theme."_".$iconImgName.".png";
@@ -166,7 +166,7 @@ if(!function_exists('sfsi_plus_generate_other_icon_effect_admin_html')){
                     $displayIconClass = "show";
                 }
 
-                $activeIconImgUrl   = sfsi_icon_get_icon_image($iconName); 
+                $activeIconImgUrl   = sfsi_plus_get_icon_image($iconName); 
 
                 $iconNameStr = $iconName;
             }

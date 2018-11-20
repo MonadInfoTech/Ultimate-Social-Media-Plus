@@ -95,7 +95,7 @@
                                                                     
                             <?php 
 
-                                $arrDefaultIcons        = unserialize(SFSI_ALLICONS);
+                                $arrDefaultIcons        = unserialize(SFSI_PLUS_ALLICONS);
 
                                 $arrActiveStdDesktopIcons    = sfsi_plus_get_displayed_std_desktop_icons($option1);
 
