@@ -303,8 +303,91 @@ SFSI(document).ready(function(s) {
 		});
 		SFSI(".sfsi_plus_widget").css("min-height", "auto");
     }, 200);
+    jQuery(document).find('.wp-block-ultimate-social-media-plus-sfsi-plus-share-block').each(function(index,target){
+        console.log('gutenberg',target);
+        var actual_target= jQuery(target).find('.sfsi_plus_block');
+        var align= jQuery(actual_target).attr('data-align');
+        var maxPerRow= jQuery(actual_target).attr('data-count');
+        var iconType= jQuery(actual_target).attr('data-icon-type');
+        // console.log(iconType);
+            jQuery.ajax({
+                'url': '/wp-json/ultimate-social-media-plus/v1/icons/?url='+window.location.href+'&ractangle_icon='+('round'==iconType?0:1),
+                'method':'GET'
+                // 'data':{'is_admin':true,'share_url':'/'}
+            }).done((response)=>{
+                jQuery(actual_target).html(response);
+                if(iconType=='round'){
+                    sfsi_plus_changeIconWidth(maxPerRow,target,align);
+                }else{
+                    if('center'===align){
+                        jQuery(target).find('.sfsi_plus_block_text_before_icon').css({'display':'inherit'});
+                    }
+                    jQuery(target).css({'text-align':align});
+                }
+                if(window.gapi){
+                    window.gapi.plusone.go();window.gapi.plus.go();window.gapi.ytsubscribe.go();
+                };
+                if(window.twttr){
+                    window.twttr.widgets.load();
+                };
+                if(window.IN && window.IN.parse){
+                    window.IN.parse();
+                };
+                if(window.addthis){
+                    if(window.addthis.toolbox){
+                        window.addthis.toolbox('.addthis_button.sficn');
+                    }else{
+                        window.addthis.init();window.addthis.toolbox('.addthis_button.sficn');
+                    }
+                };
+                if(window.PinUtils){
+                    window.PinUtils.build();
+                };
+                if(window.FB){
+                    if(window.FB.XFBML){
+                        window.FB.XFBML.parse();
+                    }
+                };
+            }).fail((response)=>{
+                // console.log(response,$('.sfsi_plus_block'));
+                jQuery(actual_target).html(response.responseText.replace('/\\/g',''));
+            });
+    });
+    // sfsi_plus_update_iconcount();
 });
 
+function sfsi_plus_update_iconcount(){
+    SFSI(".wp-block-ultimate-social-media-plus-sfsi-plus-share-block").each(function(){
+        var icon_count = SFSI(this).find(".sfsi_plus_block").attr('data-count');
+        var icon_align = SFSI(this).find(".sfsi_plus_block").attr('data-align');
+        // console.log(icon_count,icon_align,this,jQuery(this),jQuery(this).find('.sfsiplus_norm_row'));
+        // sfsi_plus_changeIconWidth(icon_count,this);
+        if(jQuery(this).find('.sfsiplus_norm_row').length<1){
+            setTimeout(function(){
+                // console.log(icon_count);
+                sfsi_plus_changeIconWidth(icon_count,this,icon_align);
+            },1000);
+        }else{
+             sfsi_plus_changeIconWidth(icon_count,this,icon_align);
+        }
+    });
+}
+
+function sfsi_plus_changeIconWidth(per_row=null,target,icon_align){
+    var iconWidth = parseInt(jQuery(target).find('.sfsiplus_norm_row div').css('width'))||40;
+    console.log('iconwidth',iconWidth,jQuery(target).find('.sfsiplus_norm_row'),jQuery(target).find('.sfsiplus_norm_row div').css('width'));
+
+    var iconMargin = parseInt(jQuery(target).find('.sfsiplus_norm_row div').css('margin-left'))||0;  
+    
+    var wrapperWidth = (iconWidth+iconMargin)*per_row;
+    jQuery(target).find('.sfsiplus_norm_row').css({'width':wrapperWidth+'px'});
+    jQuery(target).find('.sfsi_plus_block').css({'width':wrapperWidth+'px'});
+        jQuery(target).find('.sfsi_plus_block_text_before_icon').css({'padding-top':'12px'});
+    if('center'===icon_align){
+        jQuery(target).find('.sfsi_plus_block_text_before_icon').css({'display':'inherit'});
+    }
+    jQuery(target).css({'text-align':icon_align});
+}
 //hiding popup on close button
 function sfsiplushidemepopup()
 {
@@ -312,3 +395,4 @@ function sfsiplushidemepopup()
 }
 
 var sfsiplus_initTop = new Array();
+

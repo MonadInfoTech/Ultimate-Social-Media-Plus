@@ -735,6 +735,7 @@ function sfsi_plus_update_step8()
 			sfsi_plus_icons_floatMargin_left:msl,
 			sfsi_plus_icons_floatMargin_right:msr,
 			sfsi_plus_place_item_manually: n,
+            sfsi_plus_place_item_gutenberg:SFSI("input[name='sfsi_plus_place_item_gutenberg']:checked").val(),
             sfsi_plus_show_item_onposts: o,
             sfsi_plus_display_button_type: a,
             sfsi_plus_post_icons_size: r,

@@ -585,6 +585,7 @@ function sfsi_plus_options_updater8()
 	$sfsi_plus_icons_floatMargin_right   = isset($_POST["sfsi_plus_icons_floatMargin_right"]) ? $_POST["sfsi_plus_icons_floatMargin_right"]:''; 
 	
     $sfsi_plus_place_item_manually	= isset($_POST["sfsi_plus_place_item_manually"]) ? $_POST["sfsi_plus_place_item_manually"] : 'no';
+    $sfsi_plus_place_item_gutenberg	= isset($_POST["sfsi_plus_place_item_gutenberg"]) ? $_POST["sfsi_plus_place_item_gutenberg"] : 'no';
 	$sfsi_plus_show_item_onposts	= isset($_POST["sfsi_plus_show_item_onposts"]) ? $_POST["sfsi_plus_show_item_onposts"] : 'no';
 	$sfsi_plus_display_button_type	= isset($_POST["sfsi_plus_display_button_type"]) ? $_POST["sfsi_plus_display_button_type"] : 'no';
 	
@@ -618,6 +619,7 @@ function sfsi_plus_options_updater8()
 		'sfsi_plus_icons_floatMargin_left'	=> intval($sfsi_plus_icons_floatMargin_left),
 		'sfsi_plus_icons_floatMargin_right'	=> intval($sfsi_plus_icons_floatMargin_right),
 		'sfsi_plus_place_item_manually'		=> sanitize_text_field($sfsi_plus_place_item_manually),
+		'sfsi_plus_place_item_gutenberg'		=> sanitize_text_field($sfsi_plus_place_item_gutenberg),
 		'sfsi_plus_show_item_onposts'		=> sanitize_text_field($sfsi_plus_show_item_onposts),
 		'sfsi_plus_display_button_type'		=> sanitize_text_field($sfsi_plus_display_button_type),
 		'sfsi_plus_post_icons_size'			=> intval($sfsi_plus_post_icons_size),

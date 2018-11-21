@@ -245,7 +245,8 @@ function sfsi_plus_check_visiblity($isFloter=0,$share_url=null)
 	    
    /* magnage the icons in saved order in admin */ 
    $custom_icons_order = unserialize($sfsi_section5['sfsi_plus_CustomIcons_order']);
-   $icons = unserialize($sfsi_plus_section1_options['sfsi_custom_files']);
+   // var_dump($sfsi_plus_section1_options['sfsi_custom_files']); die();
+   $icons = (isset($sfsi_plus_section1_options['sfsi_custom_files']))?(!is_string($sfsi_plus_section1_options['sfsi_custom_files'])?unserialize($sfsi_plus_section1_options['sfsi_custom_files'],false):$sfsi_plus_section1_options['sfsi_custom_files']):(array());
    $icons_order = array(
    					 '0' => '',
 					 $sfsi_section5['sfsi_plus_rssIcon_order']=>'rss',
