@@ -446,7 +446,7 @@ The premium plugin offrs many more social buttons from other social media platfo
 == Changelog ==
 
 = 2.9.7 =
-
+* New Feature: Direct chat added to the plugins settings page.
 
 = 2.9.6 =
 * Image not showing error fixed for banner in animation section in Question 4 added 
