@@ -1975,14 +1975,16 @@ SFSI(document).ready(function(s) {
             }
         });
     });
-    if(window.location.pathname==="/wp-admin/admin.php" && window.location.search==="?page=sfsi-plus-options"){
+    if( undefined !==window.location.hash){
         switch(window.location.hash){
-            case '#ui-id-1':SFSI('#ui-id-1').removeClass('ui-corner-all').addClass('accordion-header-active ui-state-active ui-corner-top');SFSI('#ui-id-2').css({'display':'block'});window.scroll(0,30);break;
-            case '#ui-id-5':SFSI('#ui-id-5').removeClass('ui-corner-all').addClass('accordion-header-active ui-state-active ui-corner-top');SFSI('#ui-id-6').css({'display':'block'});window.scroll(0,30);break;
+            case '#ui-id-5' : jQuery('#ui-id-5').click();break;
+                               var target= jQuery('input#sfsi_plus_show_item_onposts');
+                               if(target.length>0){
+                                    window.scroll(getElementPosition(target[0])+50);
+                               }
+            case '#ui-id-1' : jQuery('#ui-id-1').click();break;
         }
-
     }
-
 });
 
 //for utube channel name and id
@@ -2085,7 +2087,6 @@ SFSI("body").on("click", ".sfsi_plus_tokenGenerateButton a", function(){
     }
         
 });
-
 SFSI(document).on("click", '.radio', function () {
 
     var s = SFSI(this).parent().find("input:radio:first");
@@ -2110,3 +2111,15 @@ SFSI(document).on("click", '.radio', function () {
     }
 
 });
+function getElementPosition(element) {
+    var xPosition = 0;
+    var yPosition = 0;
+
+    while(element) {
+        xPosition += (element.offsetLeft - element.scrollLeft + element.clientLeft);
+        yPosition += (element.offsetTop - element.scrollTop + element.clientTop);
+        element = element.offsetParent;
+    }
+
+    return { x: xPosition, y: yPosition };
+}

@@ -353,6 +353,12 @@ SFSI(document).ready(function(s) {
                 jQuery(actual_target).html(response.responseText.replace('/\\/g',''));
             });
     });
+    if( undefined !==window.location.hash){
+        switch(window.location.hash){
+            case '#ui-id-3' : jQuery('#ui-id-3').click();
+            case '#ui-id-1' : jQuery('#ui-id-1').click();
+        }
+    }
     // sfsi_plus_update_iconcount();
 });
 
