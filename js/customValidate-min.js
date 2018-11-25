@@ -61,6 +61,7 @@ function sfsi_plus_validationStep4() {
         if ("manual" == SFSI('input[name="sfsi_plus_instagram_countsFrom"]:checked').val() && !sfsi_validator(SFSI('input[name="sfsi_plus_instagram_manualCounts"]'), "blank")) return sfsiplus_showErrorSuc("error", "Error : Please Enter Instagram manual counts ", 4), SFSI('input[name="sfsi_plus_instagram_manualCounts"]').addClass("inputError"), !1;
         if ("followers" == SFSI('input[name="sfsi_plus_instagram_countsFrom"]:checked').val() && !sfsi_validator(SFSI('input[name="sfsi_plus_instagram_User"]'), "blank")) return sfsiplus_showErrorSuc("error", "Error : Please Enter a instagram user name", 4), SFSI('input[name="sfsi_plus_instagram_User"]').addClass("inputError"), !1
     }
+    return 1;
 }
 
 function sfsi_plus_validationStep5() {
