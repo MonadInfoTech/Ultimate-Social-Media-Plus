@@ -446,6 +446,7 @@ The premium plugin offrs many more social buttons from other social media platfo
 == Changelog ==
 
 = 2.9.8 =
+* Update: Display counts can’t be manually updated
 
 = 2.9.7 =
 * New Feature: Direct chat added to the plugins settings page.
