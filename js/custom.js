@@ -113,7 +113,7 @@ function sfsi_plus_float_widget(s) {
 	}
 	else if ("bottom" == s)
 	{
-		var t = window.innerHeight - SFSI("#sfsi_plus_floater").height();
+		var t = window.innerHeight - ( SFSI("#sfsi_plus_floater").height() + parseInt(SFSI('#sfsi_plus_floater').css('margin-bottom')));
 	}
 	else
 	{
