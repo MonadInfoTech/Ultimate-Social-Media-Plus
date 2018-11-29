@@ -5,11 +5,16 @@ var sfsi_jivo_init=function(){ var widget_id = 'heGfAHWfsn';var d=document;var w
 var sfsi_dummy_chat_icon={};
 sfsi_dummy_chat_icon.element=document.createElement('div');
 sfsi_dummy_chat_icon.element.id="sfsi_dummy_chat_icon";
-sfsi_dummy_chat_icon.element.style="position:fixed; bottom:10px;right:10px;width:250px;height:60px;box-shadow: 0 0 8px 0px black;; border-radius:8px;background-color:rgba(255,255,255,.75);cursor:pointer";
+sfsi_dummy_chat_icon.element.style="position:fixed; bottom:10px;right:10px;width:250px;height:60px;box-shadow: 0 0 8px 0px black; border-radius:8px;background-color:rgba(255,255,255,.75);cursor:pointer";
 sfsi_dummy_chat_icon.element.onclick=function(){
 	sfsi_jivo_init();
+	// jQuery(sfsi_dummy_chat_icon.element).html("<p style='text-align: center;font-size: 18px;'>Loading...</p>");
 	jQuery(sfsi_dummy_chat_icon.element).hide();
 }
+var jivo_onLoadCallback = function(){
+	jivo_api.showProactiveInvitation('How can I help you?');
+	// jQuery(sfsi_dummy_chat_icon.element).hide();
+};
 sfsi_dummy_chat_icon.heading= document.createElement('p');
 sfsi_dummy_chat_icon.warning= document.createElement('p');
 sfsi_dummy_chat_icon.heading.style="margin: 0;text-align: center;font-size: 18px;margin-top: 5px;"
