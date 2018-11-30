@@ -983,9 +983,11 @@ ul#adminmenu li.toplevel_page_sfsi-plus-options a.current, ul#adminmenu li.tople
     display: inline-block;
     width: 100px !important;
 }
-.sfsi_plus_subscribe_Popinner .sfsi_plus_highlight {
-    border: 3px solid red !important;
+
+.disabled_checkbox .sfsiplus_right_info .sfsiplus_toglepstpgspn{
+    color:rgba(0,0,0,.3);
 }
+
 .sfsi_plus_subscription_html xmp {
     display: block;
     padding: 0 10px;
