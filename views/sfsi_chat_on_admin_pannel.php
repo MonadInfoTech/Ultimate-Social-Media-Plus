@@ -1,18 +1,83 @@
+<div id="sfsi_jivo_offline_chat" style="display:none">
+	<a href="" style="float:right;font-size:20px;margin-right:5px"  onclick="sfsi_close_offline_chat(event)">X</a>
+	<p style="text-align:center" class="heading-text">No chat agent are available, However <a target="_blank" href="https://goo.gl/MU6pTN#no-topic-0" >we'll still respond quickly</a></p>
+	<ul class="tab-changer">
+		<li class="tab-link active"><p style="text-align:center"><a href="#sfsi_technical"></a>Technical question</p></li>
+		<li class="tab-link"><p style="text-align:center"><a href="#sfsi_sales"></a>Pre-sales question</p></li>
+	</ul>
+	<div class="clear"></div>
+	<div class="tabs">
+		<div id="sfsi_technical" class="tab-content" style="text-align:center;display:block">
+			<p>Please ask your question in the...</p>
+			<div class="support-forum-green-div">
+				<a target="_blank" href="https://goo.gl/MU6pTN#no-topic-0" class="support-forum-green-bg">
+	                <img src="<?php echo SFSI_PLUS_PLUGURL ?>images/support.png">
+	                <p class="support-forum">Support Forum</p>
+	            </a>
+	        </div>
+			<p>We‘ll respond quickly!</p>
+		</div>
+		<div id="sfsi_sales" class="tab-content" style="display:none">
+			
+			<div style="display:block" class="before_message_sent">
+				<p class="right-message">Please also check the <a href="">FAQ</a></p>	
+				<form action="" method="POST" >
+					<div>
+						<label for="question">Your question: </label>
+						<textarea id="question" name="question"></textarea>
+					</div>
+					<div>
+						<div style="width:70%;float:left">
+							<label for="email">Your email:</label>
+							<input type="email" name="email">
+						</div>
+						<div style="width:25%;float:right">
+							<input type="submit" value="Send message">
+						</div>
+						<div class="clear"></div>
+					</div>
+				</form>
+			</div>
+			<div style="display:none" class="after_message_sent">
+				<h2>Thank you!</h2>
+				<h3>We‘ll get back to you ASAP.</h3>
+				<button class="chat_btn" onclick="sfsi_close_offline_chat(event)">Close window</button>
+			</div>
+		</div>
+	</div>
+
+</div>
 <!-- Start jivo chat code -->
 
 <script type='text/javascript'>
-var sfsi_jivo_init=function(){ var widget_id = 'heGfAHWfsn';var d=document;var w=window;function l(){var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true;s.src = '//code.jivosite.com/script/widget/'+widget_id; var ss = document.getElementsByTagName('script')[0]; ss.parentNode.insertBefore(s, ss);}if(d.readyState=='complete'){l();}else{if(w.attachEvent){w.attachEvent('onload',l);}else{w.addEventListener('load',l,false);}}};
+var sfsi_jivo_init=function(){ var widget_id =window.sfsi_plus_jivo_widget_id= 'heGfAHWfsn';var d=document;var w=window;function l(){var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true;s.src = '//code.jivosite.com/script/widget/'+widget_id; var ss = document.getElementsByTagName('script')[0]; ss.parentNode.insertBefore(s, ss);}if(d.readyState=='complete'){l();}else{if(w.attachEvent){w.attachEvent('onload',l);}else{w.addEventListener('load',l,false);}}};
 var sfsi_dummy_chat_icon={};
 sfsi_dummy_chat_icon.element=document.createElement('div');
 sfsi_dummy_chat_icon.element.id="sfsi_dummy_chat_icon";
-sfsi_dummy_chat_icon.element.style="position:fixed; bottom:0;right:10px;width:350px;height:74px;cursor:pointer;background:url('<?php echo SFSI_PLUS_PLUGURL.'images/Chat_with_us_bar_dark_green.png' ?>')";
+sfsi_dummy_chat_icon.element.style="position:fixed; bottom:0;right:10px;width:350px;height:74px;cursor:pointer;background:url('<?php echo SFSI_PLUS_PLUGURL.'images/Chat_with_us_bar_light_green.png' ?>')";
 sfsi_dummy_chat_icon.element.onclick=function(){
-	sfsi_jivo_init();
+	if(window.jivo_api){
+		if( window.jivo_api.chatMode()==='online'){
+			sfsi_jivo_init();
+		}else{
+			jQuery('#jivo-iframe-container').remove();
+			jQuery('script[src="//code.jivosite.com/script/widget/'+sfsi_plus_jivo_widget_id+'"]').remove();
+			jQuery('#sfsi_jivo_offline_chat').show();
+		}
+	}else{
+		sfsi_jivo_init();
+	}
 	// jQuery(sfsi_dummy_chat_icon.element).html("<p style='text-align: center;font-size: 18px;'>Loading...</p>");
 	jQuery(sfsi_dummy_chat_icon.element).hide();
 }
 var jivo_onLoadCallback = function(){
-	jivo_api.showProactiveInvitation('How can I help you?');
+	if(jivo_api.chatMode()==='online'){
+		jivo_api.showProactiveInvitation('How can I help you?');
+	}else{
+		jQuery('#jivo-iframe-container').remove();
+		jQuery('script[src="//code.jivosite.com/script/widget/'+sfsi_plus_jivo_widget_id+'"]').remove();
+		jQuery('#sfsi_jivo_offline_chat').show();
+	}
 	// jQuery(sfsi_dummy_chat_icon.element).hide();
 };
 // sfsi_dummy_chat_icon.heading= document.createElement('p');
