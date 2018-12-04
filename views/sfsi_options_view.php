@@ -83,17 +83,17 @@
                 <div class="have-questions">
                     <img src="<?php echo SFSI_PLUS_PLUGURL ?>images/question.png">
                     <p class="have-quest">Have questions?</p>
-                    <p class="ask-question">Ask them in the...</p>
+                    <!-- <p class="ask-question">Ask them in the...</p> -->
                 </div>
                 <div class="support-forum-green-div">
-                    <a target="_blank" href="https://goo.gl/MU6pTN#no-topic-0" class="support-forum-green-bg">
+                    <a target="_blank" href="#" onclick="event.preventDefault();sfsi_open_chat(event)" class="support-forum-green-bg">
                         <img src="<?php echo SFSI_PLUS_PLUGURL ?>images/support.png">
-                        <p class="support-forum">Support Forum</p>
+                        <p class="support-forum">Chat with us!</p>
                     </a>
                 </div>
-                <div class="respond-text">
+                <!-- <div class="respond-text">
                     <p>We'll try to respond ASAP!</p>
-                </div>
+                </div> -->
             </div>
         </div>
 

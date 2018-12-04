@@ -1510,6 +1510,7 @@ div#sfsi_plus_langnotice {padding: 10px;margin-left: 0px;position: relative;}
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
     font-size: 25px;
+    cursor:pointer;
 }
 #sfsi_jivo_offline_chat .tab-changer .tab-link.active p {
     background: #24497B;
@@ -1576,6 +1577,7 @@ div#sfsi_plus_langnotice {padding: 10px;margin-left: 0px;position: relative;}
     width: 100%;
     font-size: 16px;
     border-radius: 4px;
+    cursor:pointer;
 }
 #sfsi_jivo_offline_chat .tabs #sfsi_sales .after_message_sent{
     text-align:center;

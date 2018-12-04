@@ -2116,7 +2116,6 @@ SFSI(document).on("click", '.radio', function () {
 
         break;
     }
-
 });
 function getElementPosition(element) {
     var xPosition = 0;
@@ -2140,6 +2139,13 @@ SFSI(document).ready(function(){
             SFSI('#sfsi_jivo_offline_chat .tabs').children().hide();
             SFSI(target).show();
         }        
+    });
+    SFSI('#sfsi_jivo_offline_chat #sfsi_sales form').submit(function(event){
+        event&event.preventDefault();
+        // console.log(event);
+        var target=SFSI(this).parents('.tab-content');
+        target.find('.before_message_sent').hide();
+        target.find('.after_message_sent').show();
     })
 });
 function sfsi_close_offline_chat(e){

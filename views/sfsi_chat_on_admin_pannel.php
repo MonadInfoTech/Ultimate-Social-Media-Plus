@@ -1,3 +1,9 @@
+<?php 
+global $current_user;
+get_currentuserinfo();
+
+$email = $current_user->user_email;
+?>
 <div id="sfsi_jivo_offline_chat" style="display:none">
 	<a href="" style="float:right;font-size:20px;margin-right:5px"  onclick="sfsi_close_offline_chat(event)">X</a>
 	<p style="text-align:center" class="heading-text">No chat agent are available, However <a target="_blank" href="https://goo.gl/MU6pTN#no-topic-0" >we'll still respond quickly</a></p>
@@ -21,7 +27,7 @@
 			
 			<div style="display:block" class="before_message_sent">
 				<p class="right-message">Please also check the <a href="">FAQ</a></p>	
-				<form action="" method="POST" >
+				<form action="#" method="POST" >
 					<div>
 						<label for="question">Your question: </label>
 						<textarea id="question" name="question"></textarea>
@@ -29,7 +35,7 @@
 					<div>
 						<div style="width:70%;float:left">
 							<label for="email">Your email:</label>
-							<input type="email" name="email">
+							<input type="email" name="email" value="<?php echo $email; ?>">
 						</div>
 						<div style="width:25%;float:right">
 							<input type="submit" value="Send message">
@@ -55,7 +61,7 @@ var sfsi_dummy_chat_icon={};
 sfsi_dummy_chat_icon.element=document.createElement('div');
 sfsi_dummy_chat_icon.element.id="sfsi_dummy_chat_icon";
 sfsi_dummy_chat_icon.element.style="position:fixed; bottom:0;right:10px;width:350px;height:74px;cursor:pointer;background:url('<?php echo SFSI_PLUS_PLUGURL.'images/Chat_with_us_bar_light_green.png' ?>')";
-sfsi_dummy_chat_icon.element.onclick=function(){
+function sfsi_open_chat(){
 	if(window.jivo_api){
 		if( window.jivo_api.chatMode()==='online'){
 			sfsi_jivo_init();
@@ -70,6 +76,7 @@ sfsi_dummy_chat_icon.element.onclick=function(){
 	// jQuery(sfsi_dummy_chat_icon.element).html("<p style='text-align: center;font-size: 18px;'>Loading...</p>");
 	jQuery(sfsi_dummy_chat_icon.element).hide();
 }
+sfsi_dummy_chat_icon.element.onclick=sfsi_open_chat;
 var jivo_onLoadCallback = function(){
 	if(jivo_api.chatMode()==='online'){
 		jivo_api.showProactiveInvitation('How can I help you?');
