@@ -1008,7 +1008,7 @@ function sfsfi_plus_getCookie(s)
 }
 function sfsi_plus_hideFooter() {}
 
-window.onerror = function() {}, SFSI = jQuery.noConflict(), SFSI(window).load(function() {
+window.onerror = function() {}, SFSI = jQuery.noConflict(), SFSI(window).on('load',function() {
     SFSI("#sfpluspageLoad").fadeOut(2e3);
 });
 
@@ -1868,7 +1868,7 @@ SFSI(document).ready(function(s) {
 	SFSI("body").on("click", function() {
         SFSI(".sfsiplus_inerCnt").find("div.sfsi_plus_tool_tip_2").hide();
     }),
-	SFSI(".adminTooltip >a").on("hover", function() {
+	SFSI(".adminTooltip >a").on("mouseenter", function() {
         SFSI(this).offset().top, SFSI(this).parent("div").find("div.sfsi_plus_tool_tip_2_inr").css("opacity", "1"), 
         SFSI(this).parent("div").find("div.sfsi_plus_tool_tip_2_inr").show();
     }),
