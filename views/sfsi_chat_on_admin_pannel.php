@@ -21,23 +21,23 @@ $email = $current_user->user_email;
 	                <p class="support-forum">Support Forum</p>
 	            </a>
 	        </div>
-			<p>We‘ll respond quickly!</p>
+			<p>We‘ll respond <span style="text-decoration: underline;font-weight:500">quickly!</span></p>
 		</div>
 		<div id="sfsi_sales" class="tab-content" style="display:none">
 			
 			<div style="display:block" class="before_message_sent">
-				<p class="right-message">Please also check the <a href="">FAQ</a></p>	
+				<p class="right-message" style="display:none">Please also check the <a href="">FAQ</a></p>	
 				<form action="#" method="POST" >
 					<div>
 						<label for="question">Your question: </label>
 						<textarea id="question" name="question"></textarea>
 					</div>
 					<div>
-						<div style="width:70%;float:left">
+						<div style="width:60%;float:left">
 							<label for="email">Your email:</label>
 							<input type="email" name="email" value="<?php echo $email; ?>">
 						</div>
-						<div style="width:25%;float:right">
+						<div style="width:35%;float:right">
 							<input type="submit" value="Send message">
 						</div>
 						<div class="clear"></div>

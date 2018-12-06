@@ -2144,11 +2144,23 @@ SFSI(document).ready(function(){
         event&event.preventDefault();
         // console.log(event);
         var target=SFSI(this).parents('.tab-content');
-        target.find('.before_message_sent').hide();
-        target.find('.after_message_sent').show();
+        SFSI.ajax({
+            url:ajax_object.ajax_url,
+            type:"post",
+            data:{
+                action: "sfsiplusOfflineChatMessage",
+                message: SFSI(this).find('textarea[name="question"]').val(),
+                email:   SFSI(this).find('input[name="email"]').val(),
+            }
+        }).done(function(){
+            target.find('.before_message_sent').hide();
+            target.find('.after_message_sent').show();
+        });
     })
 });
 function sfsi_close_offline_chat(e){
     e&&e.preventDefault();
-    SFSI('#sfsi_jivo_offline_chat').hide();jQuery('#sfsi_dummy_chat_icon').show();
+
+    SFSI('#sfsi_jivo_offline_chat').hide();
+    SFSI('#sfsi_dummy_chat_icon').show();
 }

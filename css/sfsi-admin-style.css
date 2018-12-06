@@ -1494,19 +1494,27 @@ div#sfsi_plus_langnotice {padding: 10px;margin-left: 0px;position: relative;}
     color:#999;
 }
 #sfsi_jivo_offline_chat .tab-changer{
-    width:100%;
+    /*width:100%;*/
+    padding:0 15px;
 
 }
 #sfsi_jivo_offline_chat .tab-changer .tab-link {
     float: left;
     width: 50%;
     text-align: center;
-    /* background: #879; */
+    background: #ddd;
+    border-bottom: 5px solid #24497B;
+}
+#sfsi_jivo_offline_chat .tab-changer .tab-link:first-child {
+    border-top-left-radius:8px;
+}
+#sfsi_jivo_offline_chat .tab-changer .tab-link:last-child {
+    border-top-right-radius:8px;
 }
 #sfsi_jivo_offline_chat .tab-changer .tab-link p {
     background: #ddd;
     padding: 5px 0;
-    margin: 0px 15px;
+    margin: 0;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
     font-size: 25px;
@@ -1517,7 +1525,8 @@ div#sfsi_plus_langnotice {padding: 10px;margin-left: 0px;position: relative;}
     color: #fff;
 }
 #sfsi_jivo_offline_chat .tabs {
-    background: #dbeef4;
+    /*background: #dbeef4;*/
+    background: #ddd;
     margin: -6px 15px 0 15px;
     min-height:250px;
 }
@@ -1529,7 +1538,8 @@ div#sfsi_plus_langnotice {padding: 10px;margin-left: 0px;position: relative;}
 }
 #sfsi_jivo_offline_chat .tabs .support-forum-green-div a {
     padding:20px 26px 18px 25px;
-    width:245;
+    width:245px;
+    margin:0;
 }
 #sfsi_jivo_offline_chat .tabs .support-forum-green-div a img {
     margin-top:11px;
