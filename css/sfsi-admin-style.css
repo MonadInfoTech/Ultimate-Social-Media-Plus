@@ -1604,3 +1604,21 @@ div#sfsi_plus_langnotice {padding: 10px;margin-left: 0px;position: relative;}
     margin-top:0;
     padding:10px;
 }
+#sfsi_jivo_offline_chat #sfsi_technical .sfsi-button-right-side {
+    font-size: 13px!important;
+    font-weight: 900;
+    float: right;
+    text-align: right;
+    margin-top: -40px!important;
+}
+#sfsi_jivo_offline_chat #sfsi_technical .sfsi-button-right-side .sfsi-button-right-side-icon{
+    background-image: url('images/select-arrow.png');
+    width:15px;
+    height:9px;
+    display:inline-block;
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    transform: rotate(90deg);
+}

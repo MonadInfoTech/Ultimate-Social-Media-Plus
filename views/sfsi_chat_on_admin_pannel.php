@@ -21,6 +21,7 @@ $email = $current_user->user_email;
 	                <p class="support-forum">Support Forum</p>
 	            </a>
 	        </div>
+	        <p class="sfsi-button-right-side" ><span class="sfsi-button-right-side-icon"></span>Click here</p>
 			<p>We‘ll respond <span style="text-decoration: underline;font-weight:500">quickly!</span></p>
 		</div>
 		<div id="sfsi_sales" class="tab-content" style="display:none">
