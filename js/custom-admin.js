@@ -1974,6 +1974,13 @@ SFSI(document).ready(function(s) {
             }
         });
     });
+    if(window.location.pathname==="/wp-admin/admin.php" && window.location.search==="?page=sfsi-plus-options"){
+        switch(window.location.hash){
+            case '#ui-id-1':SFSI('#ui-id-1').removeClass('ui-corner-all').addClass('accordion-header-active ui-state-active ui-corner-top');SFSI('#ui-id-2').css({'display':'block'});window.scroll(0,30);break;
+            case '#ui-id-5':SFSI('#ui-id-5').removeClass('ui-corner-all').addClass('accordion-header-active ui-state-active ui-corner-top');SFSI('#ui-id-6').css({'display':'block'});window.scroll(0,30);break;
+        }
+
+    }
 
 });
 
