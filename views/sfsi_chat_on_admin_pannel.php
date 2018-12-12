@@ -5,11 +5,13 @@ $current_user=wp_get_current_user();
 $email = $current_user->user_email;
 ?>
 <div id="sfsi_jivo_offline_chat" style="display:none">
-	<a href="" style="float:right;font-size:20px;margin-right:5px"  onclick="sfsi_close_offline_chat(event)">X</a>
-	<p style="text-align:center" class="heading-text">No chat agent are available, However <a target="_blank" href="https://goo.gl/MU6pTN#no-topic-0" >we'll still respond quickly</a></p>
+	<a href="" style="float:right;font-size:20px;margin-right:5px;color:#888;text-decoration: none;"  onclick="sfsi_close_offline_chat(event)">X</a>
+	<p style="text-align:center" class="heading-text">No chat agent are available, However we'll still respond quickly.
+		<!-- <a target="_blank" href="https://goo.gl/MU6pTN#no-topic-0" >we'll still respond quickly</a> -->
+	</p>
 	<ul class="tab-changer">
-		<li class="tab-link active"><p style="text-align:center"><a href="#sfsi_technical"></a>Technical question</p></li>
-		<li class="tab-link"><p style="text-align:center"><a href="#sfsi_sales"></a>Pre-sales question</p></li>
+		<li class="tab-link active"><p style="text-align:center"><a href="#sfsi_technical"></a>Technical question<br><span>(for the free plugin)</span></span></p></li>
+		<li class="tab-link"><p style="text-align:center"><a href="#sfsi_sales"></a>Pre-sales question<br><span>(for the Premium plugin)</span></p></li>
 	</ul>
 	<div class="clear"></div>
 	<div class="tabs">
@@ -61,7 +63,7 @@ var sfsi_jivo_init=function(){ var widget_id =window.sfsi_plus_jivo_widget_id= '
 var sfsi_dummy_chat_icon={};
 sfsi_dummy_chat_icon.element=document.createElement('div');
 sfsi_dummy_chat_icon.element.id="sfsi_dummy_chat_icon";
-sfsi_dummy_chat_icon.element.style="position:fixed; bottom:0;right:10px;width:350px;height:74px;cursor:pointer;background:url('<?php echo SFSI_PLUS_PLUGURL.'images/Chat_with_us_bar_light_green.png' ?>')";
+sfsi_dummy_chat_icon.element.style="position:fixed; bottom:0;right:10px;width:350px;height:74px;cursor:pointer;background-image:url('<?php echo SFSI_PLUS_PLUGURL.'images/Chat_with_us_bar_light_green.png' ?>');background-position: -12.5px -11.5px;background-size: 374px 101px;border-top-left-radius: 8px;border-top-right-radius: 8px;";
 function sfsi_open_chat(){
 	if(window.jivo_api){
 		if( window.jivo_api.chatMode()==='online'){

@@ -1474,13 +1474,13 @@ div#sfsi_plus_langnotice {padding: 10px;margin-left: 0px;position: relative;}
     position:fixed;
     bottom:0;
     right:30px;
-    height:300px;
-    min-width:33%;
+    height:350px;
+    min-width:45%;
     background:#fff;
     border-top-left-radius:30px;
     border-top-right-radius:30px;
     padding:10px;
-    border: 1px solid #999;
+    border: 3px solid #ddd;
     border-bottom: 0;
 }
 #sfsi_jivo_offline_chat .heading-text{
@@ -1502,7 +1502,7 @@ div#sfsi_plus_langnotice {padding: 10px;margin-left: 0px;position: relative;}
     float: left;
     width: 50%;
     text-align: center;
-    background: #ddd;
+    background: #eee;
     border-bottom: 5px solid #24497B;
 }
 #sfsi_jivo_offline_chat .tab-changer .tab-link:first-child {
@@ -1512,13 +1512,17 @@ div#sfsi_plus_langnotice {padding: 10px;margin-left: 0px;position: relative;}
     border-top-right-radius:8px;
 }
 #sfsi_jivo_offline_chat .tab-changer .tab-link p {
-    background: #ddd;
+    background: #eee;
     padding: 5px 0;
     margin: 0;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
     font-size: 25px;
     cursor:pointer;
+    line-height:1;
+}
+#sfsi_jivo_offline_chat .tab-changer .tab-link p span {
+    font-size: 15px;
 }
 #sfsi_jivo_offline_chat .tab-changer .tab-link.active p {
     background: #24497B;
@@ -1571,6 +1575,8 @@ div#sfsi_plus_langnotice {padding: 10px;margin-left: 0px;position: relative;}
 #sfsi_jivo_offline_chat .tabs #sfsi_sales input , #sfsi_jivo_offline_chat .tabs #sfsi_sales textarea{
     margin-top:5px;
     width:100%;
+    border:0;
+    box-shadow: 0 0 5px 0 #888;
 }
 #sfsi_jivo_offline_chat .tabs #sfsi_sales input{
     height:40px;
@@ -1588,6 +1594,7 @@ div#sfsi_plus_langnotice {padding: 10px;margin-left: 0px;position: relative;}
     font-size: 16px;
     border-radius: 4px;
     cursor:pointer;
+    box-shadow: none;
 }
 #sfsi_jivo_offline_chat .tabs #sfsi_sales .after_message_sent{
     text-align:center;
@@ -1624,6 +1631,6 @@ div#sfsi_plus_langnotice {padding: 10px;margin-left: 0px;position: relative;}
 }
 @media (max-width: 543px){
     #sfsi_jivo_offline_chat{
-        width:367px;
+        width:400px;
     }
 }
