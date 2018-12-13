@@ -486,12 +486,12 @@ function sfsi_plus_beforeafterblogposts( $content )
 							if(!isset($sfsiLikeWithfb)){$sfsiLikeWithfb = $sfsiLikeWith;}
 							$icons_before .= "<div class='sf_fb' style='display: inline-block; vertical-align: middle;width: auto;'>".sfsi_plus_FBlike($permalink,$show_count)."</div>";
 						}
-						/*if($sfsi_section8['sfsi_plus_rectfbshare'] == 'yes')
+						if($sfsi_section8['sfsi_plus_rectfbshare'] == 'yes')
 						{
 							if($show_count){}else{$sfsiLikeWithfbshare = "48px";}
 							if(!isset($sfsiLikeWithfbshare)){$sfsiLikeWithfbshare = $sfsiLikeWith;}
-							$icons_before .= "<div class='sf_fbshare' style='display: inline-block; vertical-align: middle;width: auto;'>".sfsi_plus_FBlike($permalink,$show_count)."</div>";
-						}*/
+							$icons_before .= "<div class='sf_fb' style='display: inline-block; vertical-align: middle;width: auto;'>".sfsi_plus_FBshare($permalink,$show_count)."</div>";
+						}
 						if($sfsi_section8['sfsi_plus_recttwtr'] == 'yes')
 						{
 							if($show_count){$sfsiLikeWithtwtr = "77px";}else{$sfsiLikeWithtwtr = "56px";}
@@ -558,12 +558,12 @@ function sfsi_plus_beforeafterblogposts( $content )
 							if(!isset($sfsiLikeWithfb)){$sfsiLikeWithfb = $sfsiLikeWith;}
 							$icons_after .= "<div class='sf_fb' style='display: inline-block; vertical-align: middle;width: auto;'>".sfsi_plus_FBlike($permalink,$show_count)."</div>";
 						}
-						/*if($sfsi_section8['sfsi_plus_rectfbshare'] == 'yes')
+						if($sfsi_section8['sfsi_plus_rectfbshare'] == 'yes')
 						{
 							if($show_count){}else{$sfsiLikeWithfbshare = "48px";}
 							if(!isset($sfsiLikeWithfbshare)){$sfsiLikeWithfbshare = $sfsiLikeWith;}
-							$icons_before .= "<div class='sf_fbshare' style='display: inline-block; vertical-align: middle;width: auto;'>".sfsi_plus_FBlike($permalink,$show_count)."</div>";
-						}*/
+							$icons_after .= "<div class='sf_fb' style='display: inline-block; vertical-align: middle;width: auto;'>".sfsi_plus_FBshare($permalink,$show_count)."</div>";
+						}
 						if($sfsi_section8['sfsi_plus_recttwtr'] == 'yes')
 						{
 							if($show_count){$sfsiLikeWithtwtr = "77px";}else{$sfsiLikeWithtwtr = "56px";}
@@ -1205,7 +1205,7 @@ function sfsi_plus_ask_for_help($viewNumber){ ?>
 	
 		<img src="<?php echo SFSI_PLUS_PLUGURL."images/questionmark.png"?>"/>
 		
-		<span>Questions? <a target="_blank" href="https://goo.gl/7TuSZX"><b>Ask us</b></a> — we will respond asap!</span>
+		<span>Questions? <a target="_blank" href="#" onclick="event.preventDefault();sfsi_open_chat(event);"><b>Ask us</b></a></span>
 
 	</div>
 
