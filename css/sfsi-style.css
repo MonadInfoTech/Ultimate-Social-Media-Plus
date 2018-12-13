@@ -3235,11 +3235,9 @@ label.sfsiplus_toglpstpgsbttl { float: left; margin-top: 5px !important}
     margin-bottom: 0;
     vertical-align: bottom!important;
 }
-<<<<<<< HEAD
 .sfsi_plus_Sicons .sf_pinit{
         margin:0 0 0 10px;
 }
-=======
 .wp-block-ultimate-social-media-plus-sfsi-plus-share-block .sfsi_plus_block_text_before_icon{
     display:inline-block;
     vertical-align:top;
@@ -3247,4 +3245,3 @@ label.sfsiplus_toglpstpgsbttl { float: left; margin-top: 5px !important}
 .wp-block-ultimate-social-media-plus-sfsi-plus-share-block .sfsi_plus_block{
     display:inline-block
 }
->>>>>>> changes to the gutenberg to make it less dependent on the block code

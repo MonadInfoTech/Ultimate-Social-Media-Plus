@@ -276,7 +276,7 @@
 		</li>
         
         <!--Fourth Section-->
-		<li class="">
+		<li class="sfsiplusbeforeafterpostselector">
 			<div class="radio_section tb_4_ck" onclick="sfsiplus_toggleflotpage(this);"><input name="sfsi_plus_show_item_onposts" <?php echo ($option8['sfsi_plus_show_item_onposts']=='yes') ?  'checked="true"' : '' ;?>  id="sfsi_plus_show_item_onposts" type="checkbox" value="yes" class="styled"  /></div>
 			<div class="sfsiplus_right_info">
 				<p>
@@ -509,22 +509,9 @@
 				</ul>	
 			</div>
 		</li>
-		<!-- pinterest on image over icon -->
-        <li class="row sfsiplus_show_via_onhover  disabled_checkbox">
-	
-			<div class="radio_section tb_4_ck">
-				<span class="checkbox" style="background-position:0px 0px!important;width:31px"></span>
-				<input name="" type="checkbox" disable value="" class="hide" style="display:none;"  /></div>
-			
-			<div class="sfsiplus_right_info">
-				
-                <p style="display:block">
-					<span class="sfsiplus_toglepstpgspn" style="width:50%;display:inline-block" >Show a Pinterest icon over images on mouse-over </span> <span><a href="https://www.ultimatelysocial.com/usm-premium/?utm_source=usmi_settings_page&utm_campaign=pinterest_icon_mouse_over&utm_medium=link" target="_blank" style="font-weight:800;color:#777">Premium feature</a></span>
-				</p>
-				
-			</div>
+		
 		 <!--Fifth Section-->
-		<li class="sfsiplusplacethemanulywpr">
+		<li class="sfsiplusplaceusinggutenberg">
 			<div class="radio_section tb_4_ck" onclick="checkforinfoslction(this);"><input name="sfsi_plus_place_item_gutenberg" <?php echo ($option8['sfsi_plus_place_item_gutenberg']=='yes') ?  'checked="true"' : '' ;?>  id="sfsi_plus_place_item_gutenberg" type="checkbox" value="yes" class="styled"  /></div>
 			<div class="sfsiplus_right_info">
 				<p>
@@ -547,6 +534,21 @@
                     </label>
 				</p>
 			</div> 
+		</li>
+		<!-- pinterest on image over icon -->
+        <li class="row sfsiplus_show_via_onhover  disabled_checkbox">
+	
+			<div class="radio_section tb_4_ck">
+				<span class="checkbox" style="background-position:0px 0px!important;width:31px"></span>
+				<input name="" type="checkbox" disable value="" class="hide" style="display:none;"  /></div>
+			
+			<div class="sfsiplus_right_info">
+				
+                <p style="display:block">
+					<span class="sfsiplus_toglepstpgspn" style="width:50%;display:inline-block" >Show a Pinterest icon over images on mouse-over </span> <span><a href="https://www.ultimatelysocial.com/usm-premium/?utm_source=usmi_settings_page&utm_campaign=pinterest_icon_mouse_over&utm_medium=link" target="_blank" style="font-weight:800;color:#777">Premium feature</a></span>
+				</p>
+				
+			</div>
 		</li>
 	</ul>
 	<?php if($option8['sfsi_plus_show_premium_placement_box'] == 'yes'){ ?>

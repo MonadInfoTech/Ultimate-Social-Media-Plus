@@ -94,7 +94,7 @@ add_action( 'rest_api_init', 'sfsi_plus_register_icon_route');
 function sfsi_plus_render_shortcode(){
     ob_start();
     if(isset($_GET['ractangle_icon']) && 1==$_GET['ractangle_icon']){
-        $returndata=sfsi_plus_render_gutenberg_rectangle(null,null,$_GET['share_url']);
+        $returndata=sfsi_plus_render_gutenberg_rectangle(null,null,isset($_GET['share_url'])?$_GET['share_url']:home_url());
     }else{
         $returndata=sfsi_plus_render_gutenberg_round(null,null,isset($_GET['share_url'])?$_GET['share_url']:null,isset($_GET['admin_refereal'])?$_GET['admin_refereal']:null );
     }
@@ -122,9 +122,9 @@ function sfsi_plus_render_gutenberg_round($args = null, $content = null,$share_u
             /* Display the widget title */
             if ( $title ) $return .= $before_title . $title . $after_title;
             $return .= '<div class="sfsi_plus_widget">';
-                $return .= '<div id="sfsi_plus_wDiv"></div>';
+                // $return .= '<div id="sfsi_plus_wDiv"></div>';
                 /* Link the main icons function */
-                $return .= sfsi_plus_check_visiblity(0,$share_url);
+                $return .= sfsi_plus_check_visiblity(0,$share_url,'static');
                 $return .= '<div style="clear: both;"></div>';
             $return .= '</div>';
         $return .= $after_widget;
@@ -137,7 +137,7 @@ function sfsi_plus_render_gutenberg_round($args = null, $content = null,$share_u
     }
 }
 
-function sfsi_plus_render_gutenberg_rectangle($args = null, $content = null,$share_url=null, $is_admin){
+function sfsi_plus_render_gutenberg_rectangle($args = null, $content = null,$share_url=null){
     if($share_url===null){
         $share_url=home_url();
     }
@@ -242,30 +242,30 @@ function sfsi_plus_render_gutenberg_rectangle($args = null, $content = null,$sha
     {
         if($show_count){$sfsiLikeWithsub = "93px";}else{$sfsiLikeWithsub = "64px";}
         if(!isset($sfsiLikeWithsub)){$sfsiLikeWithsub = $sfsiLikeWith;}
-        $icons.="<div class='sf_subscrbe' style='display: inline-block;vertical-align: middle;width: auto;'>".sfsi_plus_Subscribelike($permalink,$show_count)."</div>";
+        $icons.="<div class='sf_subscrbe' style='display: inline-block;vertical-align: top;width: auto;'>".sfsi_plus_Subscribelike($permalink,$show_count)."</div>";
     }
     if($sfsi_section8['sfsi_plus_rectfb'] == 'yes' || $sfsi_section8['sfsi_plus_rectfbshare'] == 'yes')
     {
         if($show_count){}else{$sfsiLikeWithfb = "48px";}
         if(!isset($sfsiLikeWithfb)){$sfsiLikeWithfb = $sfsiLikeWith;}
-        $icons.="<div class='sf_fb' style='display: inline-block;vertical-align: middle;width: auto;'>".sfsi_plus_FBlike($permalink,$show_count)."</div>";
+        $icons.="<div class='sf_fb' style='display: inline-block;vertical-align: top;width: auto;'>".sfsi_plus_FBlike($permalink,$show_count)."</div>";
     }
     
     if($sfsi_section8['sfsi_plus_recttwtr'] == 'yes')
     {
         if($show_count){$sfsiLikeWithtwtr = "77px";}else{$sfsiLikeWithtwtr = "56px";}
         if(!isset($sfsiLikeWithtwtr)){$sfsiLikeWithtwtr = $sfsiLikeWith;}
-        $icons.="<div class='sf_twiter' style='display: inline-block;vertical-align: middle;width: auto;'>".sfsi_plus_twitterlike($permalink,$show_count)."</div>";
+        $icons.="<div class='sf_twiter' style='display: inline-block;vertical-align: top;width: auto;'>".sfsi_plus_twitterlike($permalink,$show_count)."</div>";
     }
     if($sfsi_section8['sfsi_plus_rectpinit'] == 'yes')
     {
         if($show_count){$sfsiLikeWithpinit = "100px";}else{$sfsiLikeWithpinit = "auto";}
-        $icons.="<div class='sf_pinit' style='display: inline-block;text-align:left;vertical-align: middle;width: ".$sfsiLikeWithpinit.";'>".sfsi_plus_pinitpinterest($permalink,$show_count)."</div>";
+        $icons.="<div class='sf_pinit' style='display: inline-block;text-align:left;vertical-align: top;width: ".$sfsiLikeWithpinit.";'>".sfsi_plus_pinitpinterest($permalink,$show_count)."</div>";
     }
     if($sfsi_section8['sfsi_plus_rectgp'] == 'yes')
     {
         if($show_count){$sfsiLikeWithpingogl = "63px";}else{$sfsiLikeWithpingogl = "auto";}
-        $icons.="<div class='sf_google' style='display: inline-block;vertical-align: middle; width:".$sfsiLikeWithpingogl.";'>".sfsi_plus_googlePlus($permalink,$show_count)."</div>";
+        $icons.="<div class='sf_google' style='display: inline-block;vertical-align: top; width:".$sfsiLikeWithpingogl.";'>".sfsi_plus_googlePlus($permalink,$show_count)."</div>";
     }
     $icons.="</div>";
     return $icons;

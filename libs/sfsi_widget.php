@@ -118,7 +118,7 @@ function register_sfsi_plus_widgets()
 add_action( 'widgets_init', 'register_sfsi_plus_widgets' );
 
 /* check the icons visiblity  */
-function sfsi_plus_check_visiblity($isFloter=0,$share_url=null)
+function sfsi_plus_check_visiblity($isFloter=0,$share_url=null,$container_position='absolute')
 {
   	global $wpdb;
     /* Access the saved settings in database  */
@@ -136,7 +136,7 @@ function sfsi_plus_check_visiblity($isFloter=0,$share_url=null)
     
     $icons_alignment = $sfsi_section5['sfsi_plus_icons_Alignment'];
 	$position = 'position:absolute;';
-    $position1 = 'position:absolute;';
+    $position1 = 'position:'.$container_position.';';
     $jquery='<script>';
 	
 	$jquery .= 'jQuery(".sfsi_plus_widget").each(function( index ) {
