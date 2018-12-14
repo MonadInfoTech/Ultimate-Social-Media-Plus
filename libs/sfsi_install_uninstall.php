@@ -552,7 +552,7 @@ function sfsi_plus_updateFeedPing($status,$feed_id)
      
     curl_setopt_array($curl, array(
         CURLOPT_RETURNTRANSFER => 1,
-        CURLOPT_URL => 'http://www.specificfeeds.com/wordpress/pingfeed',
+        CURLOPT_URL => 'https://www.specificfeeds.com/wordpress/pingfeed',
         CURLOPT_USERAGENT => 'sf rss request',
         CURLOPT_POST => 1,
         CURLOPT_POSTFIELDS => array(
@@ -639,7 +639,7 @@ function SFSI_PLUS_getFeedUrl()
      
     curl_setopt_array($curl, array(
         CURLOPT_RETURNTRANSFER => 1,
-        CURLOPT_URL => 'http://www.specificfeeds.com/wordpress/plugin_setup',
+        CURLOPT_URL => 'https://www.specificfeeds.com/wordpress/plugin_setup',
         CURLOPT_USERAGENT => 'sf rss request',
         CURLOPT_POST => 1,
         CURLOPT_POSTFIELDS => array(
@@ -669,7 +669,7 @@ function SFSI_PLUS_updateFeedUrl()
      
     curl_setopt_array($curl, array(
         CURLOPT_RETURNTRANSFER => 1,
-        CURLOPT_URL => 'http://www.specificfeeds.com/wordpress/updateFeedPlugin',
+        CURLOPT_URL => 'https://www.specificfeeds.com/wordpress/updateFeedPlugin',
         CURLOPT_USERAGENT => 'sf rss request',
         CURLOPT_POST => 1,
         CURLOPT_POSTFIELDS => array(
@@ -693,7 +693,7 @@ function sfsi_plus_setUpfeeds($feed_id)
 	$curl = curl_init();  
 	curl_setopt_array($curl, array(
         CURLOPT_RETURNTRANSFER => 1,
-        CURLOPT_URL => 'http://www.specificfeeds.com/rssegtcrons/download_rssmorefeed_data_single/'.$feed_id."/Y",
+        CURLOPT_URL => 'https//www.specificfeeds.com/rssegtcrons/download_rssmorefeed_data_single/'.$feed_id."/Y",
         CURLOPT_USERAGENT => 'sf rss request',
         CURLOPT_POST => 0      
 	));
@@ -903,7 +903,7 @@ function sfsi_plus_pingVendor( $post_id )
 		$curl = curl_init();  
 		curl_setopt_array($curl, array(
 			CURLOPT_RETURNTRANSFER => 1,
-			CURLOPT_URL => 'http://www.specificfeeds.com/wordpress/addpostdata ',
+			CURLOPT_URL => 'https://www.specificfeeds.com/wordpress/addpostdata ',
 			CURLOPT_USERAGENT => 'sf rss request',
 			CURLOPT_POST => 1,
 			CURLOPT_POSTFIELDS => $postto_array

@@ -9,8 +9,8 @@ define('ress_readmore_button', $ress_readmore_button);
 define('rss_readmore_text2', $rss_readmore_text2);
 
 $feedId 		= sanitize_text_field(get_option('sfsi_plus_feed_id',false));
-$connectToFeed 	= "http://www.specificfeeds.com/?".base64_encode("userprofile=wordpress&feed_id=".$feedId);
-$connectFeedLgn	= "http://www.specificfeeds.com/?".base64_encode("userprofile=wordpress&feed_id=".$feedId."&logintype=login");
+$connectToFeed 	= "https://www.specificfeeds.com/?".base64_encode("userprofile=wordpress&feed_id=".$feedId);
+$connectFeedLgn	= "https://www.specificfeeds.com/?".base64_encode("userprofile=wordpress&feed_id=".$feedId."&logintype=login");
 ?>
 
 <div class="pop-overlay read-overlay feedClaiming-overlay" >
@@ -104,7 +104,7 @@ $connectFeedLgn	= "http://www.specificfeeds.com/?".base64_encode("userprofile=wo
      $icons_baseUrl=SFSI_PLUS_PLUGURL."/images/icons_theme/".$active_theme."/";
      $visit_iconsUrl= SFSI_PLUS_PLUGURL."/images/visit_icons/";
      $soicalObj=new sfsi_plus_SocialHelper();
-     $twitetr_share=($option2['sfsi_plus_twitter_followUserName']!='') ?  "https://twitter.com/".$option2['sfsi_plus_twitter_followUserName'] : 'http://specificfeeds.com';
+     $twitetr_share=($option2['sfsi_plus_twitter_followUserName']!='') ?  "https://twitter.com/".$option2['sfsi_plus_twitter_followUserName'] : 'https://specificfeeds.com';
      $twitter_text=($option2['sfsi_plus_twitter_followUserName']!='') ?  $option2['sfsi_plus_twitter_aboutPageText'] : 'Create Your Perfect Newspaper for free';
 ?>
 
@@ -275,7 +275,7 @@ $pin_url=($option2['sfsi_plus_pinterest_pageUrl']!='') ?  $option2['sfsi_plus_pi
     <div class="pop_up_box sfsi_pop_up" >
        <h4>
        		 <?php _e('Note: Also if you already offer a newsletter it makes sense to offer this option too, because it will get you more readers as explained', SFSI_PLUS_DOMAIN ); ?>
-           	(<a href="http://www.specificfeeds.com/rss" target="_new" style="color:#5A6570;display: inline;text-decoration:underline">
+           	(<a href="https://www.specificfeeds.com/rss" target="_new" style="color:#5A6570;display: inline;text-decoration:underline">
                 <?php  _e( 'learn more', SFSI_PLUS_DOMAIN ); ?>
            	</a>). 
        </h4>
