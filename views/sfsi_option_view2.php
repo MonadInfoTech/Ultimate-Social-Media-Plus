@@ -54,9 +54,9 @@
 	$option2['sfsi_plus_google_pageURL'] 		=	(isset($option2['sfsi_plus_google_pageURL']))
 														? esc_url($option2['sfsi_plus_google_pageURL'])
 														: '';
-	$option2['sfsi_plus_googleLike_option'] 	=	(isset($option2['sfsi_plus_googleLike_option']))
-														? sanitize_text_field($option2['sfsi_plus_googleLike_option'])
-														: '';
+	// $option2['sfsi_plus_googleLike_option'] 	=	(isset($option2['sfsi_plus_googleLike_option']))
+	// 													? sanitize_text_field($option2['sfsi_plus_googleLike_option'])
+	// 													: '';
 	$option2['sfsi_plus_googleShare_option'] 	=	(isset($option2['sfsi_plus_googleShare_option']))
 														? sanitize_text_field($option2['sfsi_plus_googleShare_option'])
 														: '';
@@ -387,12 +387,14 @@
                 <input name="sfsi_plus_google_pageURL" type="url" placeholder="http://" value="<?php echo ($option2['sfsi_plus_google_pageURL']!='') ?  $option2['sfsi_plus_google_pageURL'] : '' ;?>" class="add" />
             
             </p>
-            <p class="radio_section fb_url">
-            	<input name="sfsi_plus_googleLike_option" <?php echo ($option2['sfsi_plus_googleLike_option']=='yes') ?  'checked="true"' : '' ;?> type="checkbox" value="yes" class="styled"  />
+
+            <!--<p class="radio_section fb_url">
+            	<input name="sfsi_plus_googleLike_option" <?php //echo ($option2['sfsi_plus_googleLike_option']=='yes') ?  'checked="true"' : '' ;?> type="checkbox" value="yes" class="styled"  />
             	<label>
-            		<?php  _e( 'Like my blog on Google+ (+1)', SFSI_PLUS_DOMAIN ); ?>
+            		<?php  //_e( 'Like my blog on Google+ (+1)', SFSI_PLUS_DOMAIN ); ?>
             	</label>
-            </p> 
+            </p>--> 
+
             <p class="radio_section fb_url">
             	<input name="sfsi_plus_googleShare_option" <?php echo ($option2['sfsi_plus_googleShare_option']=='yes') ?  'checked="true"' : '' ;?> type="checkbox" value="yes" class="styled"  />
             	

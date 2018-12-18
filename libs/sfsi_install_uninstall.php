@@ -287,7 +287,7 @@ function sfsi_plus_activate_plugin()
         'sfsi_plus_twitter_aboutPageText'=>'Hey, check out this cool site I found: www.yourname.com #Topic via@my_twitter_name',
         'sfsi_plus_google_page'=>'no',
         'sfsi_plus_google_pageURL'=>'',
-        'sfsi_plus_googleLike_option'=>'yes',
+        /*'sfsi_plus_googleLike_option'=>'yes',*/
         'sfsi_plus_googleShare_option'=>'yes',
         'sfsi_plus_youtube_pageUrl'=>'',
         'sfsi_plus_youtube_page'=>'no',

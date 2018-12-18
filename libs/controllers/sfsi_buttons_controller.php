@@ -63,7 +63,7 @@ function sfsi_plus_options_updater2()
     
     $sfsi_plus_google_page         	= isset($_POST["sfsi_plus_google_page"]) ? $_POST["sfsi_plus_google_page"] : 'no';
     $sfsi_plus_google_pageURL      	= isset($_POST["sfsi_plus_google_pageURL"]) ? trim($_POST["sfsi_plus_google_pageURL"]) : '';
-    $sfsi_plus_googleLike_option   	= isset($_POST["sfsi_plus_googleLike_option"]) ? $_POST["sfsi_plus_googleLike_option"] : 'no';
+    // $sfsi_plus_googleLike_option   	= isset($_POST["sfsi_plus_googleLike_option"]) ? $_POST["sfsi_plus_googleLike_option"] : 'no';
     $sfsi_plus_googleShare_option  	= isset($_POST["sfsi_plus_googleShare_option"]) ? $_POST["sfsi_plus_googleShare_option"] : 'no';
     
     $sfsi_plus_youtube_pageUrl     	= isset($_POST["sfsi_plus_youtube_pageUrl"]) ? trim($_POST["sfsi_plus_youtube_pageUrl"]) : '';
@@ -145,7 +145,7 @@ function sfsi_plus_options_updater2()
 		/* google + options */
 		'sfsi_plus_google_page'				=> sanitize_text_field($sfsi_plus_google_page),
 		'sfsi_plus_google_pageURL'			=> esc_url($sfsi_plus_google_pageURL),
-		'sfsi_plus_googleLike_option'		=> sanitize_text_field($sfsi_plus_googleLike_option),
+		// 'sfsi_plus_googleLike_option'		=> sanitize_text_field($sfsi_plus_googleLike_option),
 		'sfsi_plus_googleShare_option'		=> sanitize_text_field($sfsi_plus_googleShare_option),
 		
 		/* youtube options */

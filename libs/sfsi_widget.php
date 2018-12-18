@@ -716,21 +716,26 @@ function sfsi_plus_prepairIcons($icon_name,$is_front=0, $onpost="no", $fromPost 
 				$url = ($sfsi_plus_section2_options['sfsi_plus_google_pageURL']) ? $sfsi_plus_section2_options['sfsi_plus_google_pageURL'] : 'javascript:void(0);';
 				
 				/* check for icons to display */     
-				if($sfsi_plus_section2_options['sfsi_plus_googleLike_option']=="yes" || $sfsi_plus_section2_options['sfsi_plus_googleShare_option']=="yes")
+				// if($sfsi_plus_section2_options['sfsi_plus_googleLike_option']=="yes" 
+				// 	|| $sfsi_plus_section2_options['sfsi_plus_googleShare_option']=="yes")
+				// {
+				
+				if($sfsi_plus_section2_options['sfsi_plus_googleShare_option']=="yes")
 				{
-					 $hoverSHow=1;
-					 $hoverdiv='';
+					 $hoverSHow = 1;
+					 $hoverdiv 	= '';
+
 					 if($sfsi_plus_section2_options['sfsi_plus_google_page']=="yes")
 					 {
 						  $hoverdiv.="<div  class='icon1'><a href='".$url."' ".sfsi_plus_checkNewWindow($url)."><img alt='".$alt_text."' title='".$alt_text."' src='".$visit_icon."'  /></a></div>";  
 					 } 
-					 if($sfsi_plus_section2_options['sfsi_plus_googleLike_option']=="yes")
-					 {
-						 $hoverdiv.="<div  class='icon2'>".$socialObj->sfsi_Googlelike($current_url,$icons_language)."</div>";  
-					 }    
+					 // if($sfsi_plus_section2_options['sfsi_plus_googleLike_option']=="yes")
+					 // {
+						//  $hoverdiv.="<div  class='icon2'>".$socialObj->sfsi_Googlelike($current_url,$icons_language)."</div>";  
+					 // }    
 					 if($sfsi_plus_section2_options['sfsi_plus_googleShare_option']=="yes")
 					 {
-						 $hoverdiv.="<div  class='icon3'>".$socialObj->sfsi_GoogleShare($current_url,$icons_language)."</div>"; 
+						 $hoverdiv.="<div  class='icon2'>".$socialObj->sfsi_GoogleShare($current_url,$icons_language)."</div>"; 
 					 }                          
 				 }
 
