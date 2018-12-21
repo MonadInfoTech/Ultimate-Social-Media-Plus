@@ -444,7 +444,13 @@ The premium plugin offrs many more social buttons from other social media platfo
 
 
 == Changelog ==
+
 = 2.9.9 =
+* Duplicate IDs removed from icon's link
+* Facebook share counts (rectangle icons) do not show
+* specificfeeds.com links changed to https
+* Remove google like
+* Click on G+ in firefox opens a new window
 
 = 2.9.8 =
 * Update: Display counts can’t be manually updated
