@@ -1370,25 +1370,26 @@ function sfsi_plus_prepairIcons($icon_name,$is_front=0, $onpost="no", $fromPost 
 	if($toolClass=="rss_tool_bdr" || $toolClass=='email_tool_bdr' || $toolClass=="custom_lkn" ||   $toolClass=="instagram_tool_bdr" )
     {
     	$new_window = sfsi_plus_checkNewWindow();
-     	$url = $url;
     }
     else if($hoverSHow)
     {
 		if(!wp_is_mobile())
 		{
 			$new_window = sfsi_plus_checkNewWindow();
-			$url = $url;
 		}
 		else
 		{
 			$new_window = '';
-			$url = "javascript:void(0)";
+			$url = "javascript:void(0);";
 		}
 	}
     else
     {
 	 	$new_window = sfsi_plus_checkNewWindow();
-	 	$url = $url;
+    }
+
+    if("javascript:void(0);" == $url){
+    	$new_window = "";
     }
     
 	$margin_bot="5px;";
