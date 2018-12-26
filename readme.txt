@@ -445,6 +445,9 @@ The premium plugin offrs many more social buttons from other social media platfo
 
 == Changelog ==
 = 3.0.0 =
+* Update: Updated gutenberg block to incorporate current changes. Added support for multiple controls on block inspector controls.
+* update: In-admin-pannel chat updated for more user friendly features. 
+
 
 = 2.9.9 =
 * Duplicate IDs removed from icon's link
