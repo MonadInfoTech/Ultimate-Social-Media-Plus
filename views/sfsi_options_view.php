@@ -86,7 +86,7 @@
                     <!-- <p class="ask-question">Ask them in the...</p> -->
                 </div>
                 <div class="support-forum-green-div">
-                    <a target="_blank" href="#" onclick="event.preventDefault();sfsi_open_chat(event)" class="support-forum-green-bg">
+                    <a target="_blank" href="#" onclick="event.preventDefault();sfsi_plus_open_chat(event)" class="support-forum-green-bg">
                         <img src="<?php echo SFSI_PLUS_PLUGURL ?>images/support.png">
                         <p class="support-forum">Chat with us!</p>
                     </a>

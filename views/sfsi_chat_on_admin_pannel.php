@@ -64,10 +64,13 @@ var sfsi_dummy_chat_icon={};
 sfsi_dummy_chat_icon.element=document.createElement('div');
 sfsi_dummy_chat_icon.element.id="sfsi_dummy_chat_icon";
 sfsi_dummy_chat_icon.element.style="position:fixed; bottom:0;right:10px;width:350px;height:74px;cursor:pointer;background-image:url('<?php echo SFSI_PLUS_PLUGURL.'images/Chat_with_us_bar_light_green.png' ?>');background-position: -12.5px -11.5px;background-size: 374px 101px;border-top-left-radius: 8px;border-top-right-radius: 8px;";
-function sfsi_open_chat(){
+function sfsi_plus_open_chat(){
+	// console.log('window.jivo_api',window.jivo_api);
 	if(window.jivo_api){
+		// console.log('window.jivo_api.chatMode',window.jivo_api.chatMode());
 		if( window.jivo_api.chatMode()==='online'){
-			sfsi_plus_jivo_init();
+			// console.log('window.jivo_api.showProactiveInvitation',window.jivo_api.showProactiveInvitation('How can I help you?'));
+			window.jivo_api.open();
 		}else{
 			jQuery('#jivo-iframe-container').remove();
 			jQuery('script[src="//code.jivosite.com/script/widget/'+sfsi_plus_jivo_widget_id+'"]').remove();
@@ -79,7 +82,7 @@ function sfsi_open_chat(){
 	// jQuery(sfsi_dummy_chat_icon.element).html("<p style='text-align: center;font-size: 18px;'>Loading...</p>");
 	jQuery(sfsi_dummy_chat_icon.element).hide();
 }
-sfsi_dummy_chat_icon.element.onclick=sfsi_open_chat;
+sfsi_dummy_chat_icon.element.onclick=sfsi_plus_open_chat;
 var jivo_onLoadCallback = function(){
 	if(jivo_api.chatMode()==='online'){
 		jivo_api.showProactiveInvitation('How can I help you?');

@@ -1205,7 +1205,7 @@ function sfsi_plus_ask_for_help($viewNumber){ ?>
 	
 		<img src="<?php echo SFSI_PLUS_PLUGURL."images/questionmark.png"?>"/>
 		
-		<span>Questions? <a target="_blank" href="#" onclick="event.preventDefault();sfsi_open_chat(event)"><b>Ask us</b></a></span>
+		<span>Questions? <a target="_blank" href="#" onclick="event.preventDefault();sfsi_plus_open_chat(event)"><b>Ask us</b></a></span>
 
 	</div>
 
