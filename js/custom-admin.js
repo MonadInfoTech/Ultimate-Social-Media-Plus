@@ -2130,17 +2130,17 @@ function getElementPosition(element) {
     return { x: xPosition, y: yPosition };
 }
 SFSI(document).ready(function(){
-    SFSI('#sfsi_jivo_offline_chat .tab-link').click(function(){
+    SFSI('#sfsi_plus_jivo_offline_chat .tab-link').click(function(){
         var cur=SFSI(this);
         if(!cur.hasClass('active')){
             var target=cur.find('a').attr('href');
             cur.parent().children().removeClass('active');
             cur.addClass('active');
-            SFSI('#sfsi_jivo_offline_chat .tabs').children().hide();
+            SFSI('#sfsi_plus_jivo_offline_chat .tabs').children().hide();
             SFSI(target).show();
         }        
     });
-    SFSI('#sfsi_jivo_offline_chat #sfsi_sales form').submit(function(event){
+    SFSI('#sfsi_plus_jivo_offline_chat #sfsi_sales form').submit(function(event){
         event&event.preventDefault();
         // console.log(event);
         var target=SFSI(this).parents('.tab-content');
@@ -2161,6 +2161,6 @@ SFSI(document).ready(function(){
 function sfsi_close_offline_chat(e){
     e&&e.preventDefault();
 
-    SFSI('#sfsi_jivo_offline_chat').hide();
+    SFSI('#sfsi_plus_jivo_offline_chat').hide();
     SFSI('#sfsi_dummy_chat_icon').show();
 }

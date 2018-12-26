@@ -4,7 +4,7 @@ $current_user=wp_get_current_user();
 
 $email = $current_user->user_email;
 ?>
-<div id="sfsi_jivo_offline_chat" style="display:none">
+<div id="sfsi_plus_jivo_offline_chat" style="display:none">
 	<a href="" style="float:right;font-size:20px;margin-right:5px;color:#888;text-decoration: none;"  onclick="sfsi_close_offline_chat(event)">X</a>
 	<p style="text-align:center" class="heading-text">No chat agent are available, However we'll still respond quickly.
 		<!-- <a target="_blank" href="https://goo.gl/MU6pTN#no-topic-0" >we'll still respond quickly</a> -->
@@ -59,7 +59,7 @@ $email = $current_user->user_email;
 <!-- Start jivo chat code -->
 
 <script type='text/javascript'>
-var sfsi_jivo_init=function(){ var widget_id =window.sfsi_plus_jivo_widget_id= 'heGfAHWfsn';var d=document;var w=window;function l(){var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true;s.src = '//code.jivosite.com/script/widget/'+widget_id; var ss = document.getElementsByTagName('script')[0]; ss.parentNode.insertBefore(s, ss);}if(d.readyState=='complete'){l();}else{if(w.attachEvent){w.attachEvent('onload',l);}else{w.addEventListener('load',l,false);}}};
+var sfsi_plus_jivo_init=function(){ var widget_id =window.sfsi_plus_jivo_widget_id= 'heGfAHWfsn';var d=document;var w=window;function l(){var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true;s.src = '//code.jivosite.com/script/widget/'+widget_id; var ss = document.getElementsByTagName('script')[0]; ss.parentNode.insertBefore(s, ss);}if(d.readyState=='complete'){l();}else{if(w.attachEvent){w.attachEvent('onload',l);}else{w.addEventListener('load',l,false);}}};
 var sfsi_dummy_chat_icon={};
 sfsi_dummy_chat_icon.element=document.createElement('div');
 sfsi_dummy_chat_icon.element.id="sfsi_dummy_chat_icon";
@@ -67,14 +67,14 @@ sfsi_dummy_chat_icon.element.style="position:fixed; bottom:0;right:10px;width:35
 function sfsi_open_chat(){
 	if(window.jivo_api){
 		if( window.jivo_api.chatMode()==='online'){
-			sfsi_jivo_init();
+			sfsi_plus_jivo_init();
 		}else{
 			jQuery('#jivo-iframe-container').remove();
 			jQuery('script[src="//code.jivosite.com/script/widget/'+sfsi_plus_jivo_widget_id+'"]').remove();
-			jQuery('#sfsi_jivo_offline_chat').show();
+			jQuery('#sfsi_plus_jivo_offline_chat').show();
 		}
 	}else{
-		sfsi_jivo_init();
+		sfsi_plus_jivo_init();
 	}
 	// jQuery(sfsi_dummy_chat_icon.element).html("<p style='text-align: center;font-size: 18px;'>Loading...</p>");
 	jQuery(sfsi_dummy_chat_icon.element).hide();
@@ -86,7 +86,7 @@ var jivo_onLoadCallback = function(){
 	}else{
 		jQuery('#jivo-iframe-container').remove();
 		jQuery('script[src="//code.jivosite.com/script/widget/'+sfsi_plus_jivo_widget_id+'"]').remove();
-		jQuery('#sfsi_jivo_offline_chat').show();
+		jQuery('#sfsi_plus_jivo_offline_chat').show();
 	}
 	// jQuery(sfsi_dummy_chat_icon.element).hide();
 };
