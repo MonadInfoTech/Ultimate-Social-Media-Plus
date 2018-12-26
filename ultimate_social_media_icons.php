@@ -103,7 +103,7 @@ register_deactivation_hook(__FILE__, 'sfsi_plus_deactivate_plugin');
 //register_uninstall_hook(__FILE__, 'sfsi_plus_Unistall_plugin');
 
 /*Plugin version setup*/
-if(!get_option('sfsi_plus_pluginVersion') || get_option('sfsi_plus_pluginVersion') < 3.00)
+if(!get_option('sfsi_plus_pluginVersion') || get_option('sfsi_plus_pluginVersion') < 3.01)
 {
 	add_action("init", "sfsi_plus_update_plugin");
 }
