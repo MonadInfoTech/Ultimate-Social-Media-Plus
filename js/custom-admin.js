@@ -2164,3 +2164,8 @@ function sfsi_close_offline_chat(e){
     SFSI('#sfsi_plus_jivo_offline_chat').hide();
     SFSI('#sfsi_dummy_chat_icon').show();
 }
+if(undefined == window.sfsi_plus_float_widget){
+    function sfsi_plus_float_widget(data=null,data2=null,data3=null){
+        return true;
+    }
+}

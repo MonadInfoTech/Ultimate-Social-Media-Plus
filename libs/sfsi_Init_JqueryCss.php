@@ -65,6 +65,8 @@ function sfsiplus_plugin_back_enqueue_script()
 			/* initilaize the ajax url in javascript */
 			wp_localize_script( 'SFSIPLUSCustomJs', 'ajax_object', array( 'ajax_url' => admin_url( 'admin-ajax.php' ) ) );
 			wp_localize_script( 'SFSIPLUSCustomValidateJs', 'ajax_object', array( 'ajax_url' => admin_url( 'admin-ajax.php' ),'plugin_url'=> SFSI_PLUS_PLUGURL) );
+			wp_localize_script( 'SFSIPLUSCustomJs', 'sfsi_plus_links', array( 'admin_url' => admin_url('/'),'plugin_dir_url'=> SFSI_PLUS_PLUGURL) );
+			wp_localize_script( 'SFSIPLUSCustomValidateJs', 'sfsi_plus_links', array( 'admin_url' => admin_url('/'),'plugin_dir_url'=> SFSI_PLUS_PLUGURL) );
 		}
 	}
 }
@@ -98,6 +100,7 @@ function sfsiplus_plugin_front_enqueue_script()
 		
 		/* initilaize the ajax url in javascript */
 		wp_localize_script( 'SFSIPLUSCustomJs', 'ajax_object', array( 'ajax_url' => admin_url( 'admin-ajax.php' ),'plugin_url'=> SFSI_PLUS_PLUGURL) );
+		wp_localize_script( 'SFSIPLUSCustomJs', 'sfsi_plus_links', array( 'admin_url' => admin_url('/'),'plugin_dir_url'=> SFSI_PLUS_PLUGURL) );
 }
 add_action( 'wp_enqueue_scripts', 'sfsiplus_plugin_front_enqueue_script' );		
 ?>

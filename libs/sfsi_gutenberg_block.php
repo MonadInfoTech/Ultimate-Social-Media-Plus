@@ -28,7 +28,7 @@ function sfsi_plus_share_block_editor_assets() {
         '1'
         // filemtime( plugin_dir_path( 'js/block.js', __FILE__ ) )
     );
-
+    wp_localize_script( 'sfsi-plus-share-block', 'sfsi_plus_links', array( 'admin_url' => admin_url('/'),'plugin_dir_url'=> SFSI_PLUS_PLUGURL) );
     wp_enqueue_style(
         'sfsi-plus-share-block-editor', // Handle.
         plugins_url( 'dist/blocks.editor.build.css', dirname( __FILE__ ) ), // Block editor CSS.
@@ -298,5 +298,4 @@ function sfsi_plus_gutenberg_share_block_init(){
 }
 
 add_action( 'init','sfsi_plus_gutenberg_share_block_init' );
-
 ?>
