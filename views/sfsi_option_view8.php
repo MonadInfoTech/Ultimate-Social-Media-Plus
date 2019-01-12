@@ -55,7 +55,7 @@
 															: '';
 	$option8['sfsi_plus_place_item_gutenberg'] 		= 	(isset($option8['sfsi_plus_place_item_gutenberg']))
 															? sanitize_text_field($option8['sfsi_plus_place_item_gutenberg'])
-															: 'no';
+															: 'yes';
 	$option8['sfsi_plus_display_button_type'] 		= 	(isset($option8['sfsi_plus_display_button_type']))
 															? sanitize_text_field($option8['sfsi_plus_display_button_type'])
 															: '';

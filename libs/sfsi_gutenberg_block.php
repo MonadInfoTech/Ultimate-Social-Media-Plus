@@ -107,7 +107,7 @@ function sfsi_plus_render_gutenberg_round($args = null, $content = null,$share_u
     $instance = array("showf" => 1, "title" => '');
     $sfsi_plus_section8_options = get_option("sfsi_plus_section8_options");
     $sfsi_plus_section8_options = unserialize($sfsi_plus_section8_options);
-    $sfsi_plus_place_item_gutenberg = isset($sfsi_plus_section8_options['sfsi_plus_place_item_gutenberg'])?$sfsi_plus_section8_options['sfsi_plus_place_item_gutenberg']:'no';
+    $sfsi_plus_place_item_gutenberg = isset($sfsi_plus_section8_options['sfsi_plus_place_item_gutenberg'])?$sfsi_plus_section8_options['sfsi_plus_place_item_gutenberg']:'yes';
     if($sfsi_plus_place_item_gutenberg == "yes")
     {
         $return = ''; 

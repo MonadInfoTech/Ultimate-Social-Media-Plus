@@ -658,7 +658,7 @@ function SFSI_PLUS_getFeedUrl()
 	   $resp = json_decode($resp['body']);
 	}
 	$feed_url = stripslashes_deep($resp->redirect_url);
-	return $resp['body'];exit;
+	return $resp;exit;
 }
 /* fetch rss url from specificfeeds on */ 
 function SFSI_PLUS_updateFeedUrl()
