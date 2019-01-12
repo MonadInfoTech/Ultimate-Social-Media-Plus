@@ -65,6 +65,8 @@ class sfsi_plus_SocialHelper
    		$appsecret   	 = 'a780eb3d3687a084d6e5919585cc6a12';
 		$json_url 	 ='https://graph.facebook.com/'.$url.'?fields=fan_count&access_token='.$appid.'|'.$appsecret;
 		$json_string 	 = $this->file_get_contents_curl($json_url);
+		// return $json_string;
+		// var_dump($json_string);die();
 		$json 		 = json_decode($json_string, true);
 		return isset($json['fan_count'])? $json['fan_count']:0;
 	}
@@ -104,17 +106,53 @@ class sfsi_plus_SocialHelper
 	/* get google+ likes */
 	function sfsi_getPlus1($url)
 	{
-	  $curl = curl_init();
-	  curl_setopt($curl, CURLOPT_URL, "https://clients6.google.com/rpc");
-	  curl_setopt($curl, CURLOPT_POST, 1);
-	  curl_setopt($curl, CURLOPT_POSTFIELDS, '[{"method":"pos.plusones.get","id":"p","params":{"nolog":true,"id":"' . $url . '","source":"widget","userId":"@viewer","groupId":"@self"},"jsonrpc":"2.0","key":"p","apiVersion":"v1"}]');
-	  curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
-	  curl_setopt($curl, CURLOPT_HTTPHEADER, array('Content-type: application/json'));
-	  $curl_results = curl_exec ($curl);
-	  curl_close ($curl);
-	  $json = json_decode($curl_results, true);
-	  if(isset($json[0]['error'])){return 0;}
+	  // $body= array(
+	  // 	array(
+	  // 		"method"=>"pos.plusones.get",
+	  // 		"id"=>"p",
+	  // 		"params"=>array(
+	  // 			"nolog"=>true,
+	  // 			"id"=>$url,
+	  // 			"source"=>"widget",
+	  // 			"userId"=>"@viewer",
+	  // 			"groupId"=>"@self"
+	  // 		),
+	  // 		"jsonrpc"=>"2.0",
+	  // 		"key"=>"p",
+	  // 		"apiVersion"=>"v1"
+	  // 	)
+	  // );
+	  $body = '[{"method":"pos.plusones.get","id":"p","params":{"nolog":true,"id":"' . $url . '","source":"widget","userId":"@viewer","groupId":"@self"},"jsonrpc":"2.0","key":"p","apiVersion":"v1"}]';
+	  $args = array(
+	    'body' => $body,
+	    'blocking' => true,
+	    'header'	=> array('Content-type: application/json'),
+	    'sslverify' => true
+	);
+	// var_dump($args);
+	$resp = wp_remote_post( "https://clients6.google.com/rpc", $args );
+	if ( is_wp_error( $resp ) ) {
+		var_dump($resp->get_error_message());
+		return 0;
+	} else{
+	   $json = json_decode($resp['body'], true);
+	   // var_dump($resp);
+	   if(isset($json[0]['error'])){return 0;}
 	  return intval( $json[0]['result']['metadata']['globalCounts']['count'] );
+	}
+	exit;
+	  // $curl = curl_init();
+	  // curl_setopt($curl, CURLOPT_URL, "https://clients6.google.com/rpc");
+	  // curl_setopt($curl, CURLOPT_POST, 1);
+	  // curl_setopt($curl, CURLOPT_POSTFIELDS, '[{"method":"pos.plusones.get","id":"p","params":{"nolog":true,"id":"' . $url . '","source":"widget","userId":"@viewer","groupId":"@self"},"jsonrpc":"2.0","key":"p","apiVersion":"v1"}]');
+	  // curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
+	  // curl_setopt($curl, CURLOPT_HTTPHEADER, array('Content-type: application/json'));
+	  // $curl_results = curl_exec ($curl);
+	  // curl_close ($curl);
+	  // var_dump($curl_results);
+	  // $json = json_decode($curl_results, true);
+	  // if(isset($json[0]['error'])){return 0;}
+	  // return intval( $json[0]['result']['metadata']['globalCounts']['count'] );
 	}
 
 	/* get youtube subscribers  */
@@ -190,40 +228,44 @@ class sfsi_plus_SocialHelper
 	/* send curl request   */
 	private function file_get_contents_curl($url)
 	{
-		$ch=curl_init();
-		curl_setopt($ch, CURLOPT_URL, $url);
-		curl_setopt($ch, CURLOPT_USERAGENT, $_SERVER['HTTP_USER_AGENT']);
-		curl_setopt($ch, CURLOPT_FAILONERROR, 1);
-		curl_setopt($ch, CURLOPT_FOLLOWLOCATION, false);
-		curl_setopt($ch, CURLOPT_RETURNTRANSFER,1);
-		curl_setopt($ch, CURLOPT_TIMEOUT, $this->timeout);
-		curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
-		$cont = curl_exec($ch);
-	
-		if(curl_error($ch))
-		{
-			//die(curl_error($ch));
+		if ( ! ini_get( 'safe_mode' ) ){
+	    	set_time_limit( $this->timeout + 10 );
 		}
-		return $cont;
+		$args = array(
+		    'blocking' 	=> true,
+		    'user-agent'=> $_SERVER['HTTP_USER_AGENT'],
+		    'timeout' 	=>  $this->timeout,
+		    'header'	=> array("Content-Type"=>"application/x-www-form-urlencoded"),
+		    'sslverify' => false
+		);
+		$resp = wp_remote_get( $url, $args );
+		if ( is_wp_error( $resp ) ) {
+			update_option("sfsi_plus_curlErrorNotices", "yes");
+			update_option("sfsi_plus_curlErrorMessage", $resp->get_error_message());
+			return null;
+		} else {
+			// var_dump($resp['body']);
+			return $resp['body'];	
+		}
 	}
 
 	private function get_content_curl($url)
 	{
-		$curl = curl_init();
-		curl_setopt($curl, CURLOPT_HEADER, false);
-		curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
-		curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, false);
-		curl_setopt($curl, CURLOPT_HTTPGET, 1);
-		curl_setopt($curl, CURLOPT_URL, $url );
-		curl_setopt($curl, CURLOPT_DNS_USE_GLOBAL_CACHE, false );
-		curl_setopt($curl, CURLOPT_DNS_CACHE_TIMEOUT, 2 );
-		$cont = curl_exec($curl);
-	
-		if(curl_error($curl))
-		{
-			//die(curl_error($ch));
+		$args = array(
+		    'body' => $postto_array,
+		    'blocking' => true,
+		    'user-agent' => 'sf rss request',
+		    'header'	=> array("Content-Type"=>"application/x-www-form-urlencoded"),
+		    'sslverify' => false
+		);
+		$resp = wp_remote_get( $url, $args );
+		if ( is_wp_error( $resp ) ) {
+			update_option("sfsi_plus_curlErrorNotices", "yes");
+			update_option("sfsi_plus_curlErrorMessage", $resp->get_error_message());
+			return null;
+		} else {
+			return $resp['body'];	
 		}
-		return $cont;
 	}
 
 	/* convert no. to 2K,3M format   */
@@ -520,31 +562,25 @@ class sfsi_plus_SocialHelper
 	/* get no of subscribers from specificfeeds for current blog count*/
 	public function  sfsi_plus_getFeedSubscriberCount($feedid)
 	{
-		$curl = curl_init();  
-		 
-		curl_setopt_array($curl, array(
-			CURLOPT_RETURNTRANSFER => 1,
-			CURLOPT_URL => 'https://www.specificfeeds.com/wordpress/wpCountSubscriber',
-			CURLOPT_USERAGENT => 'sf rss request',
-			CURLOPT_POST => 1,
-			CURLOPT_TIMEOUT 	    => 30,
-			CURLOPT_POSTFIELDS => array(
-				'feed_id' => $feedid,
-				'v' => 'newplugincount'
-			)
-		));
-		/* Send the request & save response to $resp */
-		$resp = curl_exec($curl);
+		$postto_array = array(
+			'feed_id' => $feedid,
+			'v' => 'newplugincount'
+		);
+		$args = array(
+		    'body' => $postto_array,
+		    'blocking' => true,
+		    'user-agent' => 'sf rss request',
+		    'header'	=> array("Content-Type"=>"application/x-www-form-urlencoded"),
+		    'sslverify' => true
+		);
+		$resp = wp_remote_post( 'https://www.specificfeeds.com/wordpress/wpCountSubscriber', $args );
+		$httpcode = wp_remote_retrieve_response_code($resp);
 		
-		$httpcode = curl_getinfo($curl, CURLINFO_HTTP_CODE);
-
 		if($httpcode == 200){
 			
 			if(!empty($resp))
 			{
 				$resp     = json_decode($resp);
-				
-				curl_close($curl);
 
 				$feeddata = stripslashes_deep($resp->subscriber_count);
 			}

@@ -302,22 +302,24 @@ if(is_admin())
 function sfsi_plus_getverification_code()
 {
 	$feed_id = sanitize_text_field(get_option('sfsi_plus_feed_id'));
-	$curl = curl_init();  
-    curl_setopt_array($curl, array(
-        CURLOPT_RETURNTRANSFER => 1,
-        CURLOPT_URL => 'https://www.specificfeeds.com/wordpress/getVerifiedCode_plugin',
-        CURLOPT_USERAGENT => 'sf get verification',
-        CURLOPT_POST => 1,
-        CURLOPT_POSTFIELDS => array(
-            'feed_id' => $feed_id
-        )
-    ));
-    
-	// Send the request & save response to $resp
-	$resp = curl_exec($curl);
-	$resp = json_decode($resp);
-	update_option('sfsi_plus_verificatiom_code', $resp->code);
-	curl_close($curl);
+	$url = $http_url = 'https://www.specificfeeds.com/wordpress/getVerifiedCode_plugin';
+	
+	$args = array(
+		'timeout' => 15,
+		'body'    => array(
+			'feed_id'  =>  $feed_id
+		)
+	);
+
+	$request = wp_remote_post( $url, $args );
+
+	if ( is_wp_error( $request ) ) {
+		update_option("sfsi_plus_curlErrorNotices", "yes");
+		update_option("sfsi_plus_curlErrorMessage", $request->get_error_message());
+	}else{
+		$resp = json_decode($request['body']);
+		update_option('sfsi_plus_verificatiom_code', $resp->code);
+	}
 }
 
 //functionality for before and after single posts
