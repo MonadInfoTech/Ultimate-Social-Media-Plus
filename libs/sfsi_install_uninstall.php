@@ -548,23 +548,23 @@ function sfsi_plus_deactivate_plugin()
 } /* end function  */
 function sfsi_plus_updateFeedPing($status,$feed_id)
 {
-    $curl = curl_init();  
-     
-    curl_setopt_array($curl, array(
-        CURLOPT_RETURNTRANSFER => 1,
-        CURLOPT_URL => 'https://www.specificfeeds.com/wordpress/pingfeed',
-        CURLOPT_USERAGENT => 'sf rss request',
-        CURLOPT_POST => 1,
-        CURLOPT_POSTFIELDS => array(
-            'feed_id' => $feed_id,
-            'status' => $status
-        )
-    ));
-     // Send the request & save response to $resp
-        $resp = curl_exec($curl);
-        $resp=json_decode($resp);
-        curl_close($curl);
-        
+    $body = array(
+	    'feed_id' => $feed_id,
+	    'status' => $status
+	);
+	 
+	$args = array(
+	    'body' => $body,
+	    'timeout' => '5',
+	    'redirection' => '5',
+	    'httpversion' => '1.0',
+	    'blocking' => true,
+	    'headers' => array(),
+	    'cookies' => array()
+	);
+	 
+	$resp = wp_remote_post( 'https://www.specificfeeds.com/wordpress/pingfeed', $args );
+	return $resp;
 }
 /* unistall plugin function */	
 function sfsi_plus_Unistall_plugin()
@@ -632,73 +632,76 @@ function sfsi_plus_about_page(){ include SFSI_PLUS_DOCROOT . '/views/sfsi_aboutu
 if ( is_admin() ){
     add_action('admin_menu', 'sfsi_plus_admin_menu');
 }
+
 /* fetch rss url from specificfeeds */ 
 function SFSI_PLUS_getFeedUrl()
 {
-    $curl = curl_init();  
-     
-    curl_setopt_array($curl, array(
-        CURLOPT_RETURNTRANSFER => 1,
-        CURLOPT_URL => 'https://www.specificfeeds.com/wordpress/plugin_setup',
-        CURLOPT_USERAGENT => 'sf rss request',
-        CURLOPT_POST => 1,
-        CURLOPT_POSTFIELDS => array(
+	$body = array(
             'web_url'	=> get_bloginfo('url'),
             'feed_url'	=> sfsi_plus_get_bloginfo('rss2_url'),
             'email'		=> '',
 			'subscriber_type' => 'PLWP'
-        )
-    ));
-    // Send the request & save response to $resp
-	$resp = curl_exec($curl);
-	if(curl_errno($curl))
-	{
+        );
+	 
+	$args = array(
+	    'body' => $body,
+	    'blocking' => true,
+	    'user-agent' => 'sf rss request',
+	    'header'	=> array("Content-Type"=>"application/x-www-form-urlencoded"),
+	    'sslverify' => true
+	);
+	$resp = wp_remote_post( 'https://www.specificfeeds.com/wordpress/plugin_setup', $args );
+	if ( is_wp_error( $resp ) ) {
 		update_option("sfsi_plus_curlErrorNotices", "yes");
-		update_option("sfsi_plus_curlErrorMessage", curl_errno($curl));
+		update_option("sfsi_plus_curlErrorMessage", $resp->get_error_message());
+	} else {
+	   $resp = json_decode($resp['body']);
 	}
-	$resp = json_decode($resp);
-	curl_close($curl);
-		
 	$feed_url = stripslashes_deep($resp->redirect_url);
-	return $resp;exit;
+	return $resp['body'];exit;
 }
 /* fetch rss url from specificfeeds on */ 
 function SFSI_PLUS_updateFeedUrl()
 {
-    $curl = curl_init();  
-     
-    curl_setopt_array($curl, array(
-        CURLOPT_RETURNTRANSFER => 1,
-        CURLOPT_URL => 'https://www.specificfeeds.com/wordpress/updateFeedPlugin',
-        CURLOPT_USERAGENT => 'sf rss request',
-        CURLOPT_POST => 1,
-        CURLOPT_POSTFIELDS => array(
-			'feed_id' 	=> sanitize_text_field(get_option('sfsi_plus_feed_id')),
+    $body = array(
+            'feed_id' 	=> sanitize_text_field(get_option('sfsi_plus_feed_id')),
             'web_url' 	=> get_bloginfo('url'),
             'feed_url' 	=> sfsi_plus_get_bloginfo('rss2_url'),
             'email'		=> ''
-        )
-    ));
- 	// Send the request & save response to $resp
-	$resp = curl_exec($curl);
-	$resp = json_decode($resp);
-	curl_close($curl);
-	
+        );
+	 
+	$args = array(
+	    'body' => $body,
+	    'blocking' => true,
+	    'user-agent' => 'sf rss request',
+	    'header'	=> array("Content-Type"=>"application/x-www-form-urlencoded"),
+	    'sslverify' => true
+	);
+	$resp = wp_remote_post( 'https://www.specificfeeds.com/wordpress/updateFeedPlugin', $args );
+	if ( is_wp_error( $resp ) ) {
+		update_option("sfsi_plus_curlErrorNotices", "yes");
+		update_option("sfsi_plus_curlErrorMessage", $resp->get_error_message());
+	} else {
+	   $resp = json_decode($resp['body']);
+	}
+
 	$feed_url = stripslashes_deep($resp->redirect_url);
 	return $resp;exit;
 }
 /* add sf tags */
 function sfsi_plus_setUpfeeds($feed_id)
 {
-	$curl = curl_init();  
-	curl_setopt_array($curl, array(
-        CURLOPT_RETURNTRANSFER => 1,
-        CURLOPT_URL => 'https//www.specificfeeds.com/rssegtcrons/download_rssmorefeed_data_single/'.$feed_id."/Y",
-        CURLOPT_USERAGENT => 'sf rss request',
-        CURLOPT_POST => 0      
-	));
-	$resp = curl_exec($curl);
-	curl_close($curl);	
+	$args = array(
+	    'blocking' => true,
+	    'user-agent' => 'sf rss request',
+	    'header'	=> array("Content-Type"=>"application/json"),
+	    'sslverify' => true
+	);
+	$resp = wp_remote_get( 'https//www.specificfeeds.com/rssegtcrons/download_rssmorefeed_data_single/'.$feed_id."/Y", $args );
+	if ( is_wp_error( $resp ) ) {
+		update_option("sfsi_plus_curlErrorNotices", "yes");
+		update_option("sfsi_plus_curlErrorMessage", $resp->get_error_message());
+	}
 }
 /* admin notice if wp_head is missing in active theme */
 function sfsi_plus_check_wp_head() {
@@ -889,6 +892,7 @@ function sfsi_plus_pingVendor( $post_id )
 			}
 			$count++;	
 		}
+
 		$postto_array = array(
 			'feed_id'	=> sanitize_text_field(get_option('sfsi_plus_feed_id')),
 			'title'		=> $post_data['post_title'],
@@ -899,20 +903,22 @@ function sfsi_plus_pingVendor( $post_id )
 			'pubDate'	=> $post_data['post_modified'],
 			'rssurl'	=> sfsi_plus_get_bloginfo('rss2_url')
 		);
-		
-		$curl = curl_init();  
-		curl_setopt_array($curl, array(
-			CURLOPT_RETURNTRANSFER => 1,
-			CURLOPT_URL => 'https://www.specificfeeds.com/wordpress/addpostdata ',
-			CURLOPT_USERAGENT => 'sf rss request',
-			CURLOPT_POST => 1,
-			CURLOPT_POSTFIELDS => $postto_array
-		));
-		// Send the request & save response to $resp
-		$resp = curl_exec($curl);
-		$resp=json_decode($resp);
-		curl_close($curl);
-		return true;
+		$args = array(
+		    'body' => $postto_array,
+		    'blocking' => true,
+		    'user-agent' => 'sf rss request',
+		    'header'	=> array("Content-Type"=>"application/x-www-form-urlencoded"),
+		    'sslverify' => true
+		);
+		$resp = wp_remote_post( 'https://www.specificfeeds.com/wordpress/updateFeedPlugin', $args );
+		if ( is_wp_error( $resp ) ) {
+			update_option("sfsi_plus_curlErrorNotices", "yes");
+			update_option("sfsi_plus_curlErrorMessage", $resp->get_error_message());
+			return  false;
+		} else {
+			$resp = json_decode($resp['body']);
+			return true;
+		}
     endif;
 }
 add_action( 'save_post', 'sfsi_plus_pingVendor' );
