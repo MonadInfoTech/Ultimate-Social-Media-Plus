@@ -578,9 +578,9 @@ class sfsi_plus_SocialHelper
 		
 		if($httpcode == 200){
 			
-			if(!empty($resp))
+			if(!empty($resp["body"]))
 			{
-				$resp     = json_decode($resp);
+				$resp     = json_decode($resp["body"]);
 
 				$feeddata = stripslashes_deep($resp->subscriber_count);
 			}
